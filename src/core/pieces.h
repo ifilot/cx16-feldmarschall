@@ -40,6 +40,7 @@
 #define PIECE_BOMB          10
 #define PIECE_FLAG          11
 #define PIECE_TYPES         12
+#define PIECE_UNKNOWN       12      // in a player's view: an enemy piece not yet seen
 
 #define ARMY_SIZE           40
 

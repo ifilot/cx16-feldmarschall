@@ -20,7 +20,6 @@
 
 #include <cbm.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <ascii_charmap.h>
 #pragma static-locals (on)
 
@@ -29,6 +28,7 @@
 #include "menu.h"
 #include "deploy.h"
 #include "play.h"
+#include "random.h"
 
 // KERNAL mouse_get stores the pointer position in r0 (x) and r1 (y)
 #define MOUSE_X     (*(volatile int16_t*)0x02)
@@ -72,7 +72,7 @@ static void enter(uint8_t next) {
     video_sprite_hide(SPRITE_DRAG);
     video_sprite_hide(SPRITE_FALL);
     video_clear_layer1();
-    srand(input.frame);             // the player's timing seeds the dice
+    random_seed(input.frame);       // the player's timing seeds the dice
     scene = next;
     switch(scene) {
         case SCENE_DEPLOY: deploy_enter(); break;

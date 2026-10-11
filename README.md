@@ -73,7 +73,8 @@ the computer deploys Blue at random, with its flag on the back row guarded
 by bombs.
 
 * Drag one of your pieces to move it. Gold dots mark the empty squares it
-  can reach, and the brackets appear only over a legal destination.
+  can reach (the two-squares rule may take one away), and the brackets
+  appear only over a legal destination.
   Dropping it on an enemy piece attacks.
 * In a battle both pieces turn face up: the attacker stands against the
   defender while the message bar names the outcome. Then the loser is
@@ -99,13 +100,17 @@ move any distance in a straight line and may strike at the end of it (the
 modern rule). Bombs and flags never move. In a battle the lower rank number
 wins and equal ranks both fall. A miner defuses a bomb, which defeats every
 other attacker; the spy defeats the marshal when it attacks, and loses every
-other battle. The rule against moving back and forth is not enforced yet.
+other battle. A piece may not move more than five times in a row between
+the same two squares, whatever the opponent does (the two-squares rule of
+the International Stratego Federation; attacks count too). A piece that has
+reached the limit simply shows no dot on the square it would return to.
 
 #### The computer
 
-Blue looks one move ahead and only uses what it may know: its own pieces,
-the red pieces that have been revealed, and how many pieces of each rank
-Red still hides (the starting army minus those revealed or captured). An
+Blue looks one move ahead and only uses what it may know. The game hands
+it a *view* of the board in which every red piece it has not seen is
+unknown; it counts how many pieces of each rank Red still hides from the
+starting army, the pieces captured and those revealed. An
 attack on a hidden piece is weighed over every rank it could be; a piece
 that has moved is no bomb or flag. Quiet moves advance, flee squares next
 to a known stronger piece, and avoid stepping into danger. A little
@@ -207,7 +212,8 @@ src/
     setup       random setups; the player's deployment, kept between scenes
     presets     ten built-in deployments
     store       the player's named deployments, saved in DEPLOY.DAT
-    ai          the computer player
+    ai          the computer player, working from one army's view
+    random      the game's own random numbers (the same on the X16 and the PC)
   ui/           everything on screen
     video       VERA: layers, text, tokens, sprites, the mouse pointer
     boardview   drawing the board and finding the square under the pointer
@@ -215,6 +221,8 @@ src/
     drag        a token lifted on the drag sprite
     dialog      plates floating over the board
     button      raised buttons, made of plate tiles
+  native/       the computer player as a PC program (docs/protocol.md)
+  bridge/       the computer player alone on the X16, for the parity test
   scenes/       the screens of the game
     menu        the select screen
     deploy      building a setup, with its button bar
@@ -230,6 +238,42 @@ Escape returns to the menu, unless a dialog is open.
 Game state that outlives a scene (the player's deployment) lives in
 `core/`.
 
+## Testing and rating the computer player
+
+The computer player in `src/core` also builds as a PC program,
+`build/stratego-engine` (`make native`), which speaks a line-based
+protocol on standard input and output (see [docs/protocol.md](docs/protocol.md)).
+A referee holds the true position and tells each engine only what its army
+may know, so other Stratego programs can join in.
+
+* `tools/arena.py` plays matches between any engines. Each pairing plays
+  the same two deployments twice with the sides swapped (built-in presets,
+  random ones, or a mix), checks every move, and ends a game when a flag
+  falls, when the side to move is stuck, or as a draw after 1000 plies.
+* `tools/bots.py` provides two baseline opponents, `random` (any legal
+  move) and `greedy` (takes what it knows it beats, probes with cheap
+  pieces, otherwise advances), written in Python against the protocol.
+* `tools/rating.py` turns the results into Elo ratings with a
+  Bradley–Terry fit, anchored at the random bot.
+* `tools/parity.py` checks that the X16 and the PC choose the same moves:
+  it runs `BRIDGE.PRG` (`src/bridge`) in the emulator and the native
+  engine side by side on hundreds of positions, with the same random seed.
+
+`make rating` plays 600 games in about half a minute:
+
+| Engine | Elo | 95% | Score |
+| --- | ---: | ---: | ---: |
+| ai (the game's computer player) | 494 | ±50 | 86% |
+| greedy | 286 | ±43 | 54% |
+| random | 0 | ±55 | 11% |
+
+Ratings only compare engines within the pool that played; on this scale
+a 100-point gap means the stronger engine scores about 64%. The parity
+test found a cc65 quirk that made the X16 mis-score attacks on hidden
+pieces (cc65 divides a negative `long` by an `unsigned char` as unsigned);
+both builds now agree on every tested position, and the X16 needs at most
+a tenth of a second per move.
+
 ## Building
 
 Requires **cc65**, GNU make 4.3+, and **Python 3** with **Pillow** and **NumPy**.
@@ -237,14 +281,26 @@ Requires **cc65**, GNU make 4.3+, and **Python 3** with **Pillow** and **NumPy**
 ```sh
 make              # build src/STRATEGO.PRG and its graphics
 make run          # start it in ../x16-emulator
+make dist         # package the runtime files in build/dist/STRATEGO.ZIP
+make test-dist    # boot that package through AUTOBOOT.X16 and check it
 make screenshot   # drive it in the AgentBridge emulator, save the screenshots in docs/
-make check        # check that the built-in deployments are legal armies
+make check        # check the built-in deployments and the rules (tests/)
+make native       # build the computer player as a PC program (needs gcc)
+make rating       # rate it against the baseline bots
+make parity       # check that the X16 and the PC choose the same moves
 make autoplay     # play 150 turns of random red moves against the computer
 ```
 
 `tools/autoplay.py` plays the game through the emulator: it reads the board
 from memory, drags a random legal red piece each turn, and checks that
 every turn changes the board.
+
+`make dist` collects only what the game needs: `STRATEGO.PRG`, a copy named
+`AUTOBOOT.X16` that the X16 starts on power-up, the `.BIN` files it loads
+(read from the `load_vram` calls in `src/ui/video.c`), a `README.TXT`, the
+license and `HASHES.TXT` with SHA-256 sums. Copy the contents of
+`build/dist/STRATEGO` to the root of an SD card to boot straight into the
+game. The ZIP has fixed dates, so the same sources give the same archive.
 
 `assets/scripts/build_graphics.py` writes the VRAM resources and `src/gfx.h`.
 It also writes previews of layer 0 and the token sheet to `build/preview`.

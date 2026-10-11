@@ -28,8 +28,13 @@ def centre(sq):
     return 16 + (sq % 10) * 40 + 20, 16 + (sq // 10) * 40 + 20
 
 
-def red_moves(board):
-    """Legal red moves (from, to), following src/core/rules.c."""
+def red_moves(board, shuttle=(None, None, 0)):
+    """Legal red moves (from, to), following src/core/rules.c.
+
+    shuttle is Red's last move and how often in a row it went back and
+    forth: a further move back is barred by the two-squares rule.
+    """
+    last_src, last_dst, count = shuttle
     moves = []
     for sq, cell in enumerate(board):
         if cell >= LAKE or cell & BLUE or cell & 15 in (BOMB, FLAG):
@@ -41,11 +46,13 @@ def red_moves(board):
                 if not (0 <= c < 10 and 0 <= r < 10):
                     break
                 other = board[r * 10 + c]
+                banned = sq == last_dst and count >= 5 and r * 10 + c == last_src
                 if other == EMPTY:
-                    moves.append((sq, r * 10 + c))
+                    if not banned:
+                        moves.append((sq, r * 10 + c))
                     if cell & 15 == SCOUT:
                         continue
-                elif other < LAKE and other & BLUE:
+                elif other < LAKE and other & BLUE and not banned:
                     moves.append((sq, r * 10 + c))
                 break
     return moves
@@ -80,14 +87,18 @@ def main():
         session.emu.advance(240)
         session.press('2')
         session.emu.advance(20)
+        shuttle = (None, None, 0)
         for turn in range(1, args.turns + 1):
             board = session.emu.read_memory(address, 100)
-            moves = red_moves(board)
+            moves = red_moves(board, shuttle)
             if not moves:
                 print(f'turn {turn}: Red has no moves')
                 break
             attacks = [m for m in moves if board[m[1]] != EMPTY]
             move = random.choice(attacks if attacks and random.random() < 0.5 else moves)
+            last_src, last_dst, count = shuttle
+            count = count + 1 if count and move == (last_dst, last_src) else 1
+            shuttle = (move[0], move[1], count)
             (x0, y0), (x1, y1) = centre(move[0]), centre(move[1])
             session.run([f'drag:{x0},{y0},{x1},{y1}'])
             session.emu.advance(320)    # battles and falls, Blue's thinking and its move

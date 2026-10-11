@@ -77,6 +77,30 @@ typedef struct {
 static flight_t flights[2];
 static uint8_t flight_count;
 
+static uint8_t truth[SQUARES];      // the board, while Blue looks at its view
+static uint8_t red_lost[PIECE_TYPES];
+
+/**
+ * @brief Let Blue choose a move from what Blue knows
+ *
+ * Red's pieces that Blue has not seen become PIECE_UNKNOWN for the length
+ * of the call; Red's captured pieces are public knowledge.
+ */
+static void blue_think(void) {
+    uint8_t sq, cell, type;
+
+    for(type=0; type<PIECE_TYPES; type++) red_lost[type] = piece_counts[type] - board_count(type, 0);
+    memcpy(truth, board, SQUARES);
+    for(sq=0; sq<SQUARES; sq++) {
+        cell = board[sq];
+        if(IS_PIECE(cell) && !(cell & (CELL_BLUE | CELL_REVEALED))) {
+            board[sq] = (cell & ~CELL_TYPE) | PIECE_UNKNOWN;
+        }
+    }
+    ai_move(CELL_BLUE, red_lost, &move_from, &move_to);
+    memcpy(board, truth, SQUARES);
+}
+
 static void mark(uint8_t sq) {
     if(sq == marked) return;
     marked = sq;
@@ -235,6 +259,8 @@ static void complete(void) {
     uint8_t a = board[move_from], d = board[move_to];
     int8_t rows, cols;
 
+    rules_record(move_from, move_to);
+
     if(d == CELL_EMPTY) {
         rows = SQUARE_ROW(move_from) - SQUARE_ROW(move_to);
         cols = SQUARE_COL(move_from) - SQUARE_COL(move_to);
@@ -381,6 +407,8 @@ void play_enter(void) {
     panel_selected(CELL_EMPTY);
     winner = NOBODY;
     target_count = 0;
+    ai_reset();
+    rules_reset();
     turn = 1;
     blue = 0;
     marked = STALE;
@@ -399,7 +427,7 @@ uint8_t play_update(void) {
             break;
         case BLUE_THINK:
             if(--timer == 0) {
-                ai_move(&move_from, &move_to);
+                blue_think();
                 view_empty(move_from);
                 drag_begin(view_token(board[move_from]), ARMY_BLUE,
                            view_x(move_from), view_y(move_from), 0, 0);

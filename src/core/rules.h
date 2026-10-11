@@ -25,6 +25,13 @@
 
 #define MAX_TARGETS         20      // a scout reaches at most 18 squares
 
+/*
+ * The two-squares rule (ISF): a piece may not move more than TWO_SQUARES
+ * times in a row between the same two squares, whatever the opponent does;
+ * attacks count too. Some box rules allow only three.
+ */
+#define TWO_SQUARES         5
+
 // battle outcomes
 #define BATTLE_ATTACKER     0       // the attacker wins and takes the square
 #define BATTLE_DEFENDER     1       // the attacker is removed
@@ -36,11 +43,23 @@
  * Pieces move one square up, down, left or right; scouts any distance in a
  * straight line, and may strike at the end of that line. Bombs and flags
  * never move. Lakes and pieces block a move; an enemy piece can be attacked.
+ * A move that would break the two-squares rule is left out.
  *
  * @param out room for MAX_TARGETS squares
  * @return number of squares in `out`
  */
 uint8_t rules_targets(uint8_t sq, uint8_t* out);
+
+/**
+ * @brief Forget the moves made so far (at the start of a game)
+ */
+void rules_reset(void);
+
+/**
+ * @brief Note a move for the two-squares rule; call it for every move,
+ *        quiet or attack, while the piece still stands on `from`
+ */
+void rules_record(uint8_t from, uint8_t to);
 
 /**
  * @brief Whether an army has any legal move left

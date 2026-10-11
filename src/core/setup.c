@@ -18,12 +18,12 @@
  *                                                                        *
  **************************************************************************/
 
-#include <stdlib.h>
 #include <string.h>
 #pragma static-locals (on)
 
 #include "setup.h"
 #include "board.h"
+#include "random.h"
 
 static uint8_t saved[ARMY_SIZE];    // Red's home rows, top row first
 static uint8_t saved_valid;
@@ -47,7 +47,7 @@ void setup_random(uint8_t blue) {
     for(i=0; i<ARMY_SIZE; i++) board[first + i] = CELL_EMPTY;
 
     // the flag on the back row, guarded by bombs
-    flag = (blue ? 0 : (BOARD_SIZE - 1) * BOARD_SIZE) + rand() % BOARD_SIZE;
+    flag = (blue ? 0 : (BOARD_SIZE - 1) * BOARD_SIZE) + random_next() % BOARD_SIZE;
     board[flag] = PIECE_FLAG | army;
     if(SQUARE_COL(flag) > 0) bombs += bomb(flag - 1, army);
     if(SQUARE_COL(flag) < BOARD_SIZE - 1) bombs += bomb(flag + 1, army);
@@ -62,7 +62,7 @@ void setup_random(uint8_t blue) {
         while(k--) pool[n++] = type;
     }
     for(i=n-1; i>0; i--) {
-        j = rand() % (i + 1);
+        j = random_next() % (i + 1);
         k = pool[i];
         pool[i] = pool[j];
         pool[j] = k;

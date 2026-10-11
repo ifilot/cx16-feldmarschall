@@ -26,12 +26,35 @@
 static const int8_t step_col[4] = {0, 1, 0, -1};
 static const int8_t step_row[4] = {-1, 0, 1, 0};
 
+// per army (0 Red, 1 Blue): its last move and how often in a row its piece
+// has gone back and forth between those two squares
+static uint8_t shuttle_from[2], shuttle_to[2], shuttle_count[2];
+
+void rules_reset(void) {
+    shuttle_count[0] = shuttle_count[1] = 0;
+}
+
+void rules_record(uint8_t from, uint8_t to) {
+    uint8_t army = (board[from] & CELL_BLUE) ? 1 : 0;
+
+    if(shuttle_count[army] && from == shuttle_to[army] && to == shuttle_from[army]) {
+        shuttle_count[army]++;
+    } else {
+        shuttle_count[army] = 1;
+    }
+    shuttle_from[army] = from;
+    shuttle_to[army] = to;
+}
+
 uint8_t rules_targets(uint8_t sq, uint8_t* out) {
-    uint8_t cell = board[sq], type, dir, col, row, to, other, n = 0;
+    uint8_t cell = board[sq], type, dir, col, row, to, other, army, banned = NOWHERE, n = 0;
 
     if(!IS_PIECE(cell)) return 0;
     type = PIECE_TYPE(cell);
     if(type == PIECE_BOMB || type == PIECE_FLAG) return 0;
+    // the two-squares rule: this piece may not go back once more
+    army = (cell & CELL_BLUE) ? 1 : 0;
+    if(sq == shuttle_to[army] && shuttle_count[army] >= TWO_SQUARES) banned = shuttle_from[army];
     for(dir=0; dir<4; dir++) {
         col = SQUARE_COL(sq);
         row = SQUARE_ROW(sq);
@@ -42,9 +65,9 @@ uint8_t rules_targets(uint8_t sq, uint8_t* out) {
             to = row * BOARD_SIZE + col;
             other = board[to];
             if(other == CELL_EMPTY) {
-                out[n++] = to;
+                if(to != banned) out[n++] = to;
                 if(type == PIECE_SCOUT) continue;
-            } else if(IS_PIECE(other) && ((other ^ cell) & CELL_BLUE)) {
+            } else if(IS_PIECE(other) && ((other ^ cell) & CELL_BLUE) && to != banned) {
                 out[n++] = to;                  // an enemy: attack it
             }
             break;

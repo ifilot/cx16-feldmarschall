@@ -18,7 +18,9 @@
  *                                                                        *
  **************************************************************************/
 
-#include <ascii_charmap.h>
+#ifdef __CC65__
+#include <ascii_charmap.h>              // strings in ASCII, as the font expects
+#endif
 
 #include "pieces.h"
 

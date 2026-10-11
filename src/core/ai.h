@@ -24,17 +24,33 @@
 #include <stdint.h>
 
 /**
- * @brief Choose Blue's move
+ * @brief Choose a move for one army, from what that army knows
  *
- * A one-move lookahead that only uses what Blue may know: its own pieces,
- * the red pieces that have been revealed, and how many pieces of each rank
- * Red still has hidden. Attacks on a hidden piece are weighed over every
- * rank it could be (a piece that has moved is no bomb or flag). Quiet moves
- * advance, flee threatened squares and avoid stepping next to known danger.
+ * The board must hold the army's view: its own pieces, and the enemy's
+ * pieces with their true type only once revealed (CELL_REVEALED); every
+ * other enemy piece has type PIECE_UNKNOWN. The caller keeps the truth.
  *
+ * A one-move lookahead. Attacks on a hidden piece are weighed over every
+ * rank it could be: the starting army, minus the pieces captured (`lost`)
+ * and those revealed on the board. A piece that has moved is no bomb or
+ * flag. Quiet moves advance, flee threatened squares and avoid stepping
+ * next to known danger; a little randomness (random.h) breaks ties.
+ *
+ * @param army CELL_BLUE for Blue, 0 for Red
+ * @param lost the enemy's captured pieces, per type
  * @param from set to the square of the piece to move (NOWHERE if none)
  * @param to   set to its destination
  */
-void ai_move(uint8_t* from, uint8_t* to);
+void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to);
+
+/**
+ * @brief Forget the previous move (at the start of a game)
+ */
+void ai_reset(void);
+
+#ifdef AI_TRACE
+/* supplied by a test build: called with the score of every candidate move */
+void ai_trace(uint8_t from, uint8_t to, int16_t score);
+#endif
 
 #endif
