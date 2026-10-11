@@ -57,16 +57,22 @@ static uint8_t load_vram(const char* name, uint32_t addr) {
 /**
  * @brief Enable the KERNAL mouse driver for the 640x480 screen
  *
- * screen_mode with carry set returns the text size (80x60) in X/Y, which
- * mouse_config uses as the pointer range in 8 pixel units. The driver
- * writes its own pointer image to VRAM; the graphics loaded afterwards may
- * overwrite it, so video_init points sprite 0 at our pointer instead.
+ * The game may be started from any screen mode, e.g. 40x30 text after a
+ * SCREEN command. screen_mode switches the KERNAL to mode 0 first (80x60
+ * text on a 640x480 screen) so that its state matches the game's screen;
+ * mouse_config then gets the pointer range explicitly, in 8 pixel units.
+ * The driver writes its own pointer image to VRAM; the graphics loaded
+ * afterwards may overwrite it, so video_init points sprite 0 at our
+ * pointer instead.
  */
 static void mouse_init(void) {
-    asm("sec");
-    asm("jsr $FF5F");
-    asm("lda #1");
-    asm("jsr $FF68");
+    asm("lda #0");                  // mode 0: 80x60 text, 640x480
+    asm("clc");                     // set the mode
+    asm("jsr $FF5F");               // screen_mode
+    asm("lda #1");                  // show the pointer
+    asm("ldx #80");                 // range: 80 x 60 cells of 8 pixels
+    asm("ldy #60");
+    asm("jsr $FF68");               // mouse_config
 }
 
 uint8_t video_init(void) {
