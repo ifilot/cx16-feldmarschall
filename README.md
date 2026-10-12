@@ -152,13 +152,15 @@ pieces, one per tray compartment.
 Every token is a 40 × 40 square: a bevelled rim in army colours and a
 30 × 30 portrait. Ranked figures sit right of centre, which leaves the
 top-left corner free for the rank. Bombs and flags show no rank and are
-centred. Pieces Red hasn't identified show their back, a gold shield.
+centred. Pieces Red hasn't identified show their back, the black cross pattée of the
+Iron Cross with a gold rim.
 
 The portraits are heads only, in ink, cream and the army colour, which
 gives the faces most of the window. They come from
 `assets/pieces/prussian.png`, twelve 30 × 30 portraits in rank order, in
-the shared palette. Five pieces wear Prussian headgear over the original
-faces; the others keep theirs:
+the shared palette. Six pieces wear new headgear over the original
+faces and the spy has traded his top hat for a slouch hat; the others,
+the bomb and the flag keep their original art:
 
 | Rank | Headgear | Insignia |
 | --- | --- | --- |
@@ -170,12 +172,13 @@ faces; the others keep theirs:
 | 6 Lieutenant | Black Hussar's mirliton with the death's head | one pip |
 | 7 Sergeant | grenadier's mitre cap | chevron |
 | 8 Miner | spiked helmet | pick |
-| 9 Scout | crested helmet | hunting horn |
-| S Spy | top hat | none |
+| 9 Scout | plain round helmet | double chevron (») |
+| S Spy | slouch hat pulled low (*Schlapphut*) | none |
 
 The gold insignia in the bottom-left corner follow the German shoulder
 boards: braid for generals and staff officers, pips for company officers,
-and the badges of the pioneers and Jäger. They are drawn with an ink
+the pioneers' pick, and a double chevron for the scout, who moves any
+distance. They are drawn with an ink
 outline over the portrait, like the rank, from `INSIGNIA` in
 `assets/scripts/pieces.py`.
 

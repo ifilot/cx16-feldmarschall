@@ -172,8 +172,8 @@ def token(face=None, rank=None):
 
 # Rank insignia in the window's bottom-left corner, after the German
 # shoulder boards: braid for generals and staff officers, pips for the
-# company officers, a chevron for the sergeant and the badges of the
-# pioneers and Jäger. A spy wears none.
+# company officers, a chevron for the sergeant, the pioneers' pick and a
+# double chevron for the scout, who moves any distance. A spy wears none.
 INSIGNIA = {
     '1': [                          # crossed field marshal's batons
         'xx...xx',
@@ -225,12 +225,12 @@ INSIGNIA = {
         '...x...',
         '...x...',
     ],
-    '9': [                          # hunting horn
-        '.xxxx..',
-        'x....x.',
-        'x.xx.x.',
-        'x....xx',
-        '.xxxx.x',
+    '9': [                          # double chevron: the scout runs far
+        'x..x...',
+        '.x..x..',
+        '..x..x.',
+        '.x..x..',
+        'x..x...',
     ],
 }
 
@@ -248,38 +248,41 @@ def draw_insignia(sq, rows):
     sq[y:y + h, x:x + w][mark] = GOLD
 
 
+# the cross pattee of the Iron Cross: ink, with a gold rim
 CREST = [
-    '...........',
-    '.#########.',
-    '.#ooooooo#.',
-    '.#ooo#ooo#.',
-    '.#oo###oo#.',
-    '.#ooo#ooo#.',
-    '.#o#####o#.',
-    '.#ooo#ooo#.',
-    '.#ooo#ooo#.',
-    '..#oo#oo#..',
-    '...#ooo#...',
-    '....#o#....',
-    '.....#.....',
+    '...ggggggggg...',
+    '....g#####g....',
+    '....g#####g....',
+    'g....g###g....g',
+    'ggg..g###g..ggg',
+    'g##gg.g#g.gg##g',
+    'g####g###g####g',
+    'g#############g',
+    'g####g###g####g',
+    'g##gg.g#g.gg##g',
+    'ggg..g###g..ggg',
+    'g....g###g....g',
+    '....g#####g....',
+    '....g#####g....',
+    '...ggggggggg...',
 ]
 
 
 def draw_crest(sq):
-    """Token back: a gold-rimmed shield with a cross, centred in the window."""
+    """Token back: a gold-rimmed black cross, centred in the window."""
     h, w = len(CREST), len(CREST[0])
     y0 = (WINDOW0 + WINDOW1 + 1 - h) // 2
     x0 = (WINDOW0 + WINDOW1 + 1 - w) // 2
     for y, line in enumerate(CREST):
         for x, ch in enumerate(line):
-            if ch == '#':
+            if ch == 'g':
                 sq[y0 + y, x0 + x] = GOLD
-            elif ch == 'o':
-                sq[y0 + y, x0 + x] = RED
-    # a faint frame of studs around the shield
+            elif ch == '#':
+                sq[y0 + y, x0 + x] = INK
+    # a frame of studs in the army colour around the cross
     for i in range(WINDOW0 + 2, WINDOW1 - 1, 4):
         for a, b in ((WINDOW0 + 2, i), (WINDOW1 - 2, i), (i, WINDOW0 + 2), (i, WINDOW1 - 2)):
-            sq[a, b] = BROWN
+            sq[a, b] = RED
 
 
 def build_tokens():
