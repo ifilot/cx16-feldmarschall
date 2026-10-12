@@ -9,6 +9,7 @@ writes to OUTDIR
     SPRITES.BIN   64x64 selection cursor, 4 bpp
     PALETTE.BIN   256 VERA palette entries
     gfx.h         geometry, VRAM map and tile numbers for the C code
+    color_profiles.h  selectable field and army palettes for the C code
 and, with PREVIEWDIR, PNG previews of layer 0 and of the token sheet.
 
 All files are headerless: the game loads them with cbm_k_load into VRAM.
@@ -25,6 +26,9 @@ from palette import (BROWN, CREAM, DEEP_RED, GOLD, INK, LIGHT, STONE,
                      pil_palette, vera_palette)
 from pieces import build_tokens
 from terrain import generate
+from splash import build_splash
+from game_menu_art import background as menu_background, MENU_PALETTE, MENU_PALETTE_ROW, palette_bytes as menu_palette
+from color_profiles import c_header as profiles_header
 
 W, H = 640, 480
 MAP_W = 128                         # map entries per row in VRAM
@@ -153,12 +157,12 @@ def draw_panel(img):
             img[sy + p0 + 1:sy + p1 + 1, sx + p1] = CREAM
 
 
-def build_layer0(seed=1990):
+def build_layer0(seed=1990, style=0):
     img = np.full((H, W), INK, np.uint8)    # dark margins around the slabs
     draw_frame(img)
     draw_bar(img)
     draw_panel(img)
-    terrain = generate(seed)
+    terrain = generate(seed, style)
     img[L.BOARD_Y:L.BOARD_Y + L.BOARD_PX, L.BOARD_X:L.BOARD_X + L.BOARD_PX] = terrain
     return img
 
@@ -171,7 +175,7 @@ def split_tiles(img):
     return img.reshape(h // 8, 8, w // 8, 8).swapaxes(1, 2).reshape(h // 8, w // 8, 64)
 
 
-def quantise_tiles(tiles, k, rng, iterations=12):
+def quantise_tiles(tiles, k, rng, iterations=12, palette=None):
     """Replace a set of tiles by at most k of its members (k-means medoids).
 
     Tiles are compared as RGB images. Each cluster is represented by the
@@ -182,7 +186,8 @@ def quantise_tiles(tiles, k, rng, iterations=12):
     inverse = inverse.ravel()
     if len(unique) <= k:
         return unique[inverse]
-    lut = np.array([pil_palette()[i * 3:i * 3 + 3] for i in range(16)], np.float32)
+    colors = pil_palette() if palette is None else palette
+    lut = np.array([colors[i * 3:i * 3 + 3] for i in range(16)], np.float32)
     vec = lut[unique].reshape(len(unique), -1)
     weight = np.bincount(inverse, minlength=len(unique)).astype(np.float32)
     # k-means++ seeding
@@ -236,9 +241,12 @@ def tile_bytes(tiles):
 def map_bytes(tilemap):
     """128-column map rows of (tile low, tile high | palette offset) entries."""
     out = bytearray()
-    for row in tilemap:
+    for y, row in enumerate(tilemap):
         entries = np.zeros(MAP_W, np.uint16)
         entries[:len(row)] = row
+        if L.BOARD_Y // 8 <= y < (L.BOARD_Y + L.BOARD_PX) // 8:
+            first = L.BOARD_X // 8
+            entries[first:first + L.BOARD_PX // 8] |= L.FIELD_PALETTE << 12
         out += entries.astype('<u2').tobytes()
     return bytes(out)
 
@@ -381,6 +389,7 @@ def build_sprites(tokens):
 def c_header(layer0_count, layer1_count):
     consts = [
         ('BOARD_X', L.BOARD_X), ('BOARD_Y', L.BOARD_Y), ('SQUARE', L.SQUARE),
+        ('PALETTE_FIELD', L.FIELD_PALETTE),
         ('SQUARE_TILES', L.SQUARE_TILES),
         ('INFO_ROW0', L.INFO_ROWS[0]), ('INFO_ROW1', L.INFO_ROWS[1]),
         ('INFO_ROW2', L.INFO_ROWS[2]), ('INFO_ROW3', L.INFO_ROWS[3]),
@@ -443,10 +452,55 @@ def main():
         'SPRITES.BIN': (L.VRAM_SPRITES, build_sprites(tokens)),
         'PALETTE.BIN': (L.VRAM_PALETTE, vera_palette()),
     }
+    files.update(build_splash())
+    menu = menu_background()
+    menu_flat = split_tiles(menu).reshape(-1, 64)
+    unique, inverse, counts = np.unique(menu_flat, axis=0, return_inverse=True, return_counts=True)
+    # Preserve every artwork tile exactly. The menu does not need piece tokens,
+    # so layer 1 can use the remaining space after its fonts and widgets.
+    menu_capacity = 1024 + (1024 - L.L1_PIECES)
+    if len(unique) > menu_capacity:
+        raise ValueError(f'menu needs {len(unique)} exact tiles; the two layers allow {menu_capacity}')
+    order = np.argsort(-counts, kind='stable')
+    primary, overlay = order[:1024], order[1024:]
+    primary_lookup = np.full(len(unique), -1, np.int32)
+    primary_lookup[primary] = np.arange(len(primary))
+    overlay_lookup = np.zeros(len(unique), np.uint16)
+    overlay_lookup[overlay] = np.arange(len(overlay)) + L.L1_PIECES
+    blank_id = np.flatnonzero((unique == LIGHT).all(axis=1))[0]
+    blank_tile = primary_lookup[blank_id]
+    assert blank_tile >= 0, 'blank UI surface must be in layer 0'
+    menu_map = np.full((MAP_ROWS, MAP_W), blank_tile | (MENU_PALETTE_ROW << 12), np.uint16)
+    menu_overlay = np.zeros((MAP_ROWS, MAP_W), np.uint16)
+    in_primary = primary_lookup[inverse] >= 0
+    menu_map[:, :W // 8] = np.where(in_primary, primary_lookup[inverse], blank_tile).reshape(MAP_ROWS, W // 8) | (MENU_PALETTE_ROW << 12)
+    menu_overlay[:, :W // 8] = np.where(in_primary, 0, overlay_lookup[inverse] | (MENU_PALETTE_ROW << 12)).reshape(MAP_ROWS, W // 8)
+    menu_l1_tiles = np.concatenate((l1_tiles[:L.L1_PIECES], unique[overlay]))
+    assert len(primary) <= 1024 and len(menu_l1_tiles) <= 1024
+    files['MNTILES.BIN'] = (L.VRAM_L0_TILES, tile_bytes(unique[primary]))
+    files['MNMAP.BIN'] = (L.VRAM_L0_MAP, menu_map.astype('<u2').tobytes())
+    files['MNL1TIL.BIN'] = (L.VRAM_L1_TILES, tile_bytes(menu_l1_tiles))
+    files['MN1MAP.BIN'] = (L.VRAM_L1_MAP, menu_overlay.astype('<u2').tobytes())
+    files['MNPAL.BIN'] = (L.VRAM_PALETTE + MENU_PALETTE_ROW * 32, menu_palette())
+    print(f'campaign menu: {len(unique)} exact artwork tiles; layer 0 {len(primary)}/1024, layer 1 {len(menu_l1_tiles)}/1024')
+    if preview:
+        preview.mkdir(parents=True, exist_ok=True)
+        menu_preview = Image.fromarray(menu, 'P')
+        menu_preview.putpalette(pil_palette(MENU_PALETTE))
+        menu_preview.save(preview / 'new-game-art.png')
+    for style in (1, 3):
+        field_tiles, field_map, field_preview = pack_layer0(
+            build_layer0(style=style), np.random.default_rng(16))
+        files[f'F{style}TILES.BIN'] = (L.VRAM_L0_TILES, tile_bytes(field_tiles))
+        files[f'F{style}MAP.BIN'] = (L.VRAM_L0_MAP, map_bytes(field_map))
+        if preview:
+            preview.mkdir(parents=True, exist_ok=True)
+            save_png(preview / f'field-art-{style}.png', field_preview)
     for name, (addr, data) in files.items():
         check_end(name, addr, len(data))
         (out / name).write_bytes(data)
     (out / 'gfx.h').write_text(c_header(len(l0_tiles), len(l1_tiles)))
+    (out / 'color_profiles.h').write_text(profiles_header())
     print(f'layer 0: {len(l0_tiles)} tiles, layer 1: {len(l1_tiles)} tiles')
 
     if preview:

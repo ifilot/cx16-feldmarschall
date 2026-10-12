@@ -49,10 +49,11 @@
 #define BUTTON_COL0     2
 #define BUTTON_GAP      2
 
-static const char* const labels[BUTTONS] = {"NEW", "LOAD", "SAVE", "RANDOM", "START"};
+static const char* labels[BUTTONS] = {"NEW", "LOAD", "SAVE", "RANDOM", "START"};
 static const uint8_t keys[BUTTONS] = {'N', 'L', 'S', 'R', KEY_RETURN};
 
 static uint8_t in_dialog;          // the button whose dialog is open, or 0
+static uint8_t for_play;           // deployment before a match, rather than setup management
 static uint8_t held;                // the piece being dragged, or CELL_EMPTY
 static uint8_t from;                // the spot it was picked up from
 static uint8_t marked;              // the spot the brackets mark
@@ -114,6 +115,7 @@ static uint8_t complete(void) {
 }
 
 static uint8_t enabled(uint8_t button) {
+    if(button == BUTTON_START && !for_play) return 1; // Back never needs a complete army
     return (button != BUTTON_SAVE && button != BUTTON_START) || complete();
 }
 
@@ -152,9 +154,9 @@ static void status(void) {
     if(n) {
         strcpy(line, panel_number(n));
         strcat(line, " TO PLACE");
-        panel_info("RED DEPLOYS", TEXT_DEEP_RED, line);
+        panel_info(for_play ? "DEPLOY YOUR ARMY" : "MANAGE SETUPS", TEXT_DEEP_RED, line);
     } else {
-        panel_info("RED IS READY", TEXT_DEEP_RED,
+        panel_info(for_play ? "READY TO PLAY" : "SETUP COMPLETE", TEXT_DEEP_RED,
                    deployment_name[0] ? deployment_name : "ALL 40 PLACED");
     }
 }
@@ -249,7 +251,7 @@ static uint8_t act(uint8_t button) {
             else dialog_save_open();
             break;
         case BUTTON_START:
-            return SCENE_PLAY;
+            return for_play ? SCENE_PLAY : SCENE_MENU;
     }
     return SCENE_STAY;
 }
@@ -261,15 +263,17 @@ static void close_dialog(uint8_t result) {
     hovered = NOWHERE;
     show();                                         // the plate covered Blue's half
     if(saved) {
-        if(dialog_saved) panel_info("DEPLOYMENT SAVED", TEXT_DEEP_RED, deployment_name);
+        if(dialog_saved) panel_info("SETUP SAVED", TEXT_DEEP_RED, deployment_name);
         else panel_info("SAVING FAILED", TEXT_DEEP_RED, "CHECK THE DISK");
     }
 }
 
-void deploy_enter(void) {
+void deploy_enter(uint8_t playing) {
+    for_play = playing;
+    labels[BUTTON_START] = for_play ? "START" : "BACK";
     view_show_all = 0;
     board_clear();
-    setup_random(1);                // Blue's army, shown face down
+    if(for_play) setup_random(1);   // show the opponent only when preparing a match
     setup_load();                   // and whatever the player deployed before
     store_read();                   // the player's saved deployments
     held = CELL_EMPTY;
@@ -298,7 +302,7 @@ uint8_t deploy_update(void) {
         return SCENE_STAY;
     }
 
-    if(key == KEY_ESCAPE) return SCENE_MENU;
+    if(key == KEY_ESCAPE) return for_play ? SCENE_GAME_SETTINGS : SCENE_MENU;
     if(key >= 0xC1 && key <= 0xDA) key -= 0x80;    // shifted letters
     for(button=0; button<BUTTONS; button++) {
         if(key && key == keys[button]) return act(button);

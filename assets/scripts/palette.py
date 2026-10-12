@@ -6,9 +6,8 @@ VERA shows colour 0 itself. Layer 0 therefore paints the neutral stone of the
 frame and panel with index 0, while pieces and text (layer 1) can't use it.
 That is why the drawable ink lives at index 1.
 
-The portraits are drawn in the red army's colours. The blue army reuses the
-same tiles through palette row 1, which swaps RED/DEEP_RED for the blue pair;
-the screen therefore never shows more than these sixteen colours.
+The UI uses classic palette row 0, armies use rows 1 and 2, text uses rows
+3-5, and the board uses row 6. Field choices never recolor the UI.
 """
 
 STONE = 0          # frame and panel (layer 0 only: index 0 is transparent)
@@ -48,7 +47,7 @@ RGB12 = [
 ]
 
 # palette row used to draw red-army artwork in blue
-BLUE_ROW = 1
+BLUE_ROW = 2
 
 
 def rgb(index, colors=RGB12):
@@ -65,26 +64,28 @@ def pil_palette(colors=RGB12):
     return flat + [0] * (768 - len(flat))
 
 
-def row_colors(row):
-    """The 16 colours of VERA palette row `row`.
-
-    Row 0 is the base palette. Row 1 is the base palette with the red pair
-    replaced by the blue pair (blue army). Every other row k replaces INK by
-    colour k, so 1-bit text glyphs drawn in INK take colour k when their
-    tilemap entry selects palette offset k.
-    """
-    colors = RGB12.copy()
-    if row == BLUE_ROW:
-        colors[RED], colors[DEEP_RED] = RGB12[BLUE], RGB12[DEEP_BLUE]
-    elif row > 1:
-        colors[INK] = RGB12[row]
+def row_colors(row, field=None, pieces=None):
+    """Classic UI row 0, armies 1-2, text 3-5, selected field row 6."""
+    field = RGB12 if field is None else field
+    pieces = RGB12 if pieces is None else pieces
+    colors = (pieces if row in (1, 2) else field if row == 6 else RGB12).copy()
+    if row == 2:
+        colors[RED], colors[DEEP_RED] = pieces[BLUE], pieces[DEEP_BLUE]
+    elif row == 3:
+        colors[INK] = RGB12[BROWN]
+    elif row == 4:
+        colors[INK] = pieces[DEEP_RED]
+    elif row == 5:
+        colors[INK] = pieces[DEEP_BLUE]
+    elif row == 8:
+        colors[INK] = RGB12[DEEP_RED]
     return colors
 
 
-def vera_palette():
+def vera_palette(field=None, pieces=None):
     """All 256 VERA palette entries (512 bytes, little-endian GGGGBBBB/----RRRR)."""
     out = bytearray()
     for row in range(16):
-        for value in row_colors(row):
+        for value in row_colors(row, field, pieces):
             out += bytes([value & 0xFF, value >> 8])
     return bytes(out)

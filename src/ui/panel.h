@@ -30,7 +30,7 @@
 extern uint8_t tray[TRAY_SLOTS];
 
 /**
- * @brief Status lines of the info plate, e.g. "RED TO MOVE" and "TURN 23"
+ * @brief Status lines of the info plate, e.g. "YOUR TURN" and "TURN 23"
  */
 void panel_info(const char* status, uint8_t color, const char* detail);
 
@@ -113,7 +113,7 @@ void panel_bar(const char* line0, const char* line1);
 /**
  * @brief A battle in the message bar: both tokens and the outcome
  *
- * @param heading    e.g. "RED ATTACKS"
+ * @param heading    e.g. "YOU ATTACK"
  * @param red_piece  piece type of the red combatant
  * @param blue_piece piece type of the blue combatant
  */

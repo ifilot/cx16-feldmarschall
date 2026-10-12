@@ -165,11 +165,11 @@ void dialog_load_open(void) {
     saving = 0;
     choice = NOWHERE;
     memcpy(original, board + RED_HOME0, ARMY_SIZE);
-    plate("LOAD A DEPLOYMENT");
+    plate("LOAD A SETUP");
     video_text_plate(LIST_LEFT, LIST_HEAD_ROW, "CLASSIC", TEXT_BROWN);
     video_text_plate(LIST_RIGHT, LIST_HEAD_ROW, "YOURS", TEXT_BROWN);
     for(i=0; i<ENTRIES; i++) draw_list_entry(i);
-    panel_bar("POINT AT A DEPLOYMENT TO TRY IT, CLICK TO TAKE IT",
+    panel_bar("POINT AT A SETUP TO TRY IT, CLICK TO TAKE IT",
               "ESCAPE OR A CLICK OUTSIDE: CANCEL");
 }
 
@@ -266,7 +266,7 @@ void dialog_save_open(void) {
         if(!store_used(slot)) choice = slot;
     }
     if(choice == NOWHERE) choice = 0;
-    plate("SAVE THIS DEPLOYMENT");
+    plate("SAVE THIS SETUP");
     video_text_plate(LIST_LEFT, NAME_ROW, "NAME", TEXT_BROWN);
     video_text_plate(LIST_LEFT, SLOT_HEAD_ROW, "SLOT", TEXT_BROWN);
     draw_name();
@@ -279,7 +279,7 @@ static uint8_t save(void) {
     uint8_t n;
 
     if(!name[0]) {                              // an unnamed deployment
-        strcpy(name, "DEPLOYMENT ");
+        strcpy(name, "SETUP ");
         n = strlen(name);
         if(choice == 9) name[n++] = '1';
         name[n++] = choice == 9 ? '0' : '1' + choice;

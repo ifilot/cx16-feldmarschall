@@ -34,11 +34,12 @@
  *
  * The buttons in the message bar (or their keys) start a blank deployment
  * (N), load one of ten built-in or ten saved deployments (L), save the
- * deployment under a name (S), deploy at random (R) and start the game
- * (Return). Saving and starting need all 40 pieces on the board. The
+ * setup under a name (S), and deploy at random (R). In pre-game deployment,
+ * Start (Return) begins the match once all 40 pieces are placed. In Manage
+ * Setups, Back (Return) returns to the menu. Saving needs all 40 pieces. The
  * deployment is kept when leaving the scene; Escape returns to the menu.
  */
-void deploy_enter(void);
+void deploy_enter(uint8_t playing);
 
 uint8_t deploy_update(void);
 

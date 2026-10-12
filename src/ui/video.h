@@ -24,15 +24,16 @@
 #include <stdint.h>
 #include "gfx.h"
 
-// text colours: palette rows that turn the glyph ink into palette colour k
+// Palette offsets: classic UI 0, armies 1-2, text 3-5, field 6.
 #define TEXT_INK            0
-#define TEXT_BROWN          5
-#define TEXT_DEEP_RED       13
-#define TEXT_DEEP_BLUE      15
+#define TEXT_BROWN          3
+#define TEXT_DEEP_RED       4
+#define TEXT_DEEP_BLUE      5
+#define TEXT_UI_RED         8       // fixed classic deep red, independent of armies
 
 // token palettes
-#define ARMY_RED            0
-#define ARMY_BLUE           1
+#define ARMY_RED            1
+#define ARMY_BLUE           2
 
 /**
  * @brief Load all graphics into VRAM and configure both tile layers
@@ -43,6 +44,12 @@
  * @return 1 on success, 0 when a resource could not be loaded
  */
 uint8_t video_init(void);
+
+/* Show the full-screen four-color startup bitmap, with no mouse pointer. */
+uint8_t video_splash(void);
+uint8_t video_field(uint8_t artwork);
+uint8_t video_campaign_menu(void);
+uint8_t video_restore_game_tiles(void);
 
 void video_show(void);
 

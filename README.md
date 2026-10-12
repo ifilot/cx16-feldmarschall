@@ -1,22 +1,56 @@
 # CX16-FELDMARSCHALL
 
 Feldmarschall is a game of hidden armies for the **Commander X16**, played
-by the rules of Stratego: 640x480 and sixteen colours, laid out after the
+by the rules of Stratego: 640x480 with 16-color tiles and selectable field
+and army palettes, laid out after the
 1990 Accolade Stratego. A terrain map of sand, grass, forest and a
 river runs under a thin grid inside a plain stone frame; the panel and
 message bar are stone with light grey plates. Beside it, a tray
 holds an army of 40 tokens, five across and eight down.
 
-The game is built from **scenes**, one on screen at a time. For now a simple
-select screen opens the two that exist; **Escape** returns to it from
-anywhere.
+The game opens with a four-color charcoal panorama. Press **Enter** to
+continue to the menu.
+
+![Splash screen](assets/splash/feldmarschall.png)
+
+The main menu offers **Manage setups**, **Play against the computer**, and
+**Options**, and **About**. Playing begins with game settings, followed by
+army preparation: arrange or load your army, then choose **Start**.
 
 ![Select screen](docs/menu.png)
 
-### Deploy your army
+Choose **4 ABOUT** for the program name, author, GitHub repository, version,
+and compilation date. The version identifies the Git revision (or release
+tag); the date is generated at build time. Enter, Escape, or Back returns
+to the menu.
 
-Blue's army is in place and Red's pieces wait in the tray. Drag them with
-the mouse onto Red's home rows:
+Choose **3 OPTIONS** to select independent field styles and army colors in
+the right-hand tray area. Click a profile to preview it on the board, or
+use **Tab** to switch groups and **Up/Down** or the number keys to select.
+**Enter**, **Escape**, or **Back** returns to the menu and saves the choices
+in `COLORS.DAT`. **Summer Campaign** and **Muted Campaign** retain the original
+terrain with its classic and charcoal/brass palettes. **Ivory Paper** offers
+a plain board surface; **Polished Tiles** adds raised ceramic squares with
+bright glazed edges, shaded bevels, and grout channels. Both use hatched blocked areas
+at the same game coordinates. Army colors are
+**Classic Red/Blue**, **Teal/Copper**, **Forest/Ivory**, **Amber/Violet**,
+**Mint/Rose**, and **Cyan/Orange**. The last three draw inspiration from
+syntax-highlighting colors. All pieces use
+the original square frames and portraits.
+
+Field selections affect only the board surface and its grid. The frame,
+coordinates, sidebar, tray, dialogs, and controls keep the classic UI style.
+
+![Color options](docs/options.png)
+
+### Manage setups and deploy your army
+
+**Manage setups** lets you create, load, and save army arrangements. Its
+**Back** button returns to the menu. **Play against the computer** opens the
+same editor as a pre-game deployment screen, with **Start** in place of Back.
+The opponent's hidden army appears only in pre-game deployment.
+
+Your pieces wait in the tray. Drag them onto your four home rows:
 
 * Hovering over a piece you can move marks it with gold brackets and names
   it in the info plate.
@@ -28,8 +62,9 @@ the mouse onto Red's home rows:
 * Deployed pieces can be dragged again to rearrange them, or dropped on the
   tray to return them. Released anywhere else, a piece goes back where it
   came from.
-* Once all 40 pieces are placed, the info plate reads **RED IS READY**,
-  with the deployment's name if it has one.
+* Once all 40 pieces are placed, the info plate reads **SETUP COMPLETE** in
+  setup management, or **READY TO PLAY** before a match, with the setup's
+  name if it has one.
 
 The buttons in the message bar (or their keys) work on the whole
 deployment:
@@ -40,10 +75,12 @@ deployment:
 | LOAD | L | choose one of ten built-in deployments or your saved ones |
 | SAVE | S | keep the deployment under a name, in one of ten slots |
 | RANDOM | R | deploy the whole army at random |
-| START | Return | play against the computer with this deployment |
+| BACK | Return | return to the menu from Manage setups |
+| START | Return | begin the match from pre-game deployment |
 
-SAVE and START need all 40 pieces on the board. The deployment is kept
-when you leave the scene; Escape returns to the menu.
+SAVE and START need all 40 pieces on the board; BACK also works with an
+unfinished setup. The arrangement is kept when you leave, so a setup built
+in Manage setups is available when you choose Play. Escape returns to the menu.
 
 **LOAD** opens a list over Blue's half of the board: ten classic
 deployments on the left (Corner Fortress, Centre Keep, Lake Shadow, Scout
@@ -59,7 +96,7 @@ one. Return or the SAVE button stores it, replacing whatever was in that
 slot. Saved deployments live in `DEPLOY.DAT` on the SD card (or in `src/`
 in the emulator) and are there the next time you play.
 
-![Deployment](docs/board-layout.png)
+![Manage setups](docs/manage-setups.png)
 
 ![Dragging a piece](docs/deploy-drag.png)
 
@@ -69,9 +106,24 @@ in the emulator) and are there the next time you play.
 
 ### Play against the computer
 
-Red uses the setup from the deployment, or a random one if it is incomplete;
-the computer deploys Blue at random, with its flag on the back row guarded
-by bombs.
+Choose Play to open a dedicated full-screen menu for the optional Masters
+rules before every match. The **Marshal’s Orders** artwork pairs a Fraktur **New game** masthead
+with Prussian officer portraits and a command-table battle plan.
+Select a rule to read its explanation beside the list.
+All six options start disabled; choices are remembered for the current session.
+Click a rule or press **1–6** to toggle it; **Up/Down** and **Space** also work.
+**Classic Rules** (or **C**) disables every variant. **Continue** or **Return**
+opens army preparation; **Back** or **Escape** returns to the menu.
+
+![Game settings](docs/game-settings.png)
+
+Then review or edit your army. You can load a
+saved or built-in setup, place the pieces yourself, or choose Random. Start
+is enabled once all 40 pieces are placed, and the match uses that exact
+arrangement. The computer deploys its army at random, with its flag on the
+back row guarded by bombs.
+
+![Pre-game deployment](docs/prepare-play.png)
 
 * Drag one of your pieces to move it. Gold dots mark the empty squares it
   can reach (the two-squares rule may take one away), and the brackets
@@ -90,7 +142,7 @@ by bombs.
   lands face up in its compartment, so the empty ones are what Blue has
   left.
 * Capture the flag, or leave the opponent without a move, to win. Blue's
-  army is then revealed; **Return** plays again.
+  army is then revealed; **Return** opens game settings for a new game.
 
 ![Playing against the computer](docs/play.png)
 
@@ -106,6 +158,26 @@ the same two squares, whatever the opponent does (the two-squares rule of
 the International Stratego Federation; attacks count too). A piece that has
 reached the limit simply shows no dot on the square it would return to.
 
+The Game Settings screen offers these variants from the
+[Stratego Masters rulebook](https://www.playmonster.com/wp-content/uploads/2018/06/StrategoMasters_Rules.pdf):
+
+| Option | Effect |
+| --- | --- |
+| Attacker's Advantage | The attacker survives a battle between equal ranks. |
+| Silent Defense | The defender's rank stays secret unless a Scout attacks. Previously disclosed ranks remain known. Hidden enemy casualties use blank tokens and sequential tray slots. |
+| Exploding Bombs | A non-Miner and the Bomb both fall; a Miner still survives. |
+| Moving Bombs | Bombs can move one square but cannot attack. Enables Exploding Bombs; disabling explosions also disables moving bombs. |
+| Moving Flag | The Flag can move one square but cannot attack. Reaching the enemy back row also wins. |
+| Rescue | An eligible piece reaching the enemy back row can restore one captured piece to an empty home square. Two rescues per army, once per rescuing piece; Scouts cannot rescue and Bombs cannot be restored. |
+
+During a player rescue, the tray temporarily shows your eligible casualties.
+Click a casualty (or press **1–9** / **S**), then an empty square in your
+first four rows. **Return** or **Escape** skips the optional rescue.
+The computer chooses its own reinforcement and return square. A rescued
+piece retains disclosure only if its captured rank was known.
+
+![Rescue a captured piece](docs/rescue.png)
+
 #### The computer
 
 Blue looks one move ahead and only uses what it may know. The game hands
@@ -113,7 +185,9 @@ it a *view* of the board in which every red piece it has not seen is
 unknown; it counts how many pieces of each rank Red still hides from the
 starting army, the pieces captured and those revealed. An
 attack on a hidden piece is weighed over every rank it could be; a piece
-that has moved is no bomb or flag. Quiet moves advance, flee squares next
+that has moved excludes stationary Bombs and Flags only when their movement
+variants are disabled. Silent Defense withholds undisclosed casualty ranks
+from the computer as well. Quiet moves advance, flee squares next
 to a known stronger piece, and avoid stepping into danger. A little
 randomness keeps games apart.
 
@@ -201,11 +275,25 @@ bitmap would need 150 KB, more than VERA's 128 KB of VRAM.
   its own square's grid edge and replaces that square's grid tiles, so the
   terrain tiles stay free of lines. Plates and their text (a second copy of
   the font on the plate's light grey) use it too. Layer 1 uses 531 tiles.
-* **Blue tokens** reuse the red tiles through palette row 1, which swaps the
-  red pair for the blue pair.
+  The illustrated New Game menu temporarily uses both tile layers and fixed
+  palette row 7. Its 1,832 artwork tiles are stored exactly: 1,024 in layer 0,
+  and 808 after the 206 font/widget tiles in layer 1. The build fails if the
+  artwork exceeds this budget; it never substitutes similar tiles. Leaving
+  the menu restores the game tiles, selected field and palette.
+* **Palettes**: row 0 holds the fixed classic UI colors; row 6 holds the
+  selected board colors. Layer-0 board tiles and layer-1 grid tiles select
+  row 6, while the surrounding frame and panels select row 0.
+  Rows 1 and 2 hold the two
+  armies; both reuse the same token tiles, with row 2 replacing the uniform
+  pair at indices 12 and 13 by the second army's colors. Dragged and animated
+  tokens use the same army palette offsets as their board tiles.
 * **Text** uses the native 8 × 8 Kakuro font. Glyphs are drawn in ink, and
-  palette row *k* replaces ink by colour *k*. No palette row introduces a new
-  colour, so the screen shows exactly the 16 base colours.
+  palette rows 3–5 replace ink by the field's secondary text color and the
+  two army text colors. Their plate backgrounds retain the classic UI colors.
+  Independent field and army choices can show more than sixteen distinct
+  colors across the screen. Field artwork loads into the same layer-0 VRAM
+  space when the style changes. Profile definitions live in
+  `assets/scripts/color_profiles.py` and are compiled into the game.
 * **Stone** is palette entry 0. Index 0 is transparent on every layer, and
   VERA shows colour 0 wherever nothing opaque is left. The frame and panel
   can use it on layer 0, though pieces and text can't. The screen margins
@@ -218,6 +306,8 @@ bitmap would need 150 KB, more than VERA's 128 KB of VRAM.
   dithered shadow. Picking up a piece only changes sprite 1's image
   address; the same sprites carry Blue's moves across the board and the
   losers of a battle off it.
+
+The original profile uses the following base colors:
 
 | # | Colour | Use | # | Colour | Use |
 | -: | --- | --- | -: | --- | --- |
@@ -319,6 +409,7 @@ make run          # start it in ../x16-emulator
 make dist         # package the runtime files in build/dist/FELDMARSCHALL.ZIP
 make test-dist    # boot that package through AUTOBOOT.X16 and check it
 make screenshot   # drive it in the AgentBridge emulator, save the screenshots in docs/
+make test-variants # emulator checks of Masters variants and hidden information
 make check        # check the built-in deployments and the rules (tests/)
 make native       # build the computer player as a PC program (needs gcc)
 make rating       # rate it against the baseline bots
@@ -345,9 +436,11 @@ receives through the generated `gfx.h`.
 ## Credits
 
 * `assets/font/kakuro-ui.png`: the 8 × 8 font of cx16-kakuro.
-* `assets/font/masthead.png`: rendered from
+* `assets/font/masthead.png` and `assets/font/new-game.png`: rendered from
   [UnifrakturMaguntia](https://github.com/google/fonts/tree/main/ofl/unifrakturmaguntia)
   (SIL Open Font License).
+* `assets/menu/marshals-orders.png`: AI-generated artwork adapted from the
+  selected Marshal’s Orders concept, using the built-in image-generation tool.
 * Terrain and panel design inspired by Stratego (Accolade, 1990).
 
 ## License

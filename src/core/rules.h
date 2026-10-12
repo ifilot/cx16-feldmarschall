@@ -22,6 +22,19 @@
 #define _RULES_H
 
 #include <stdint.h>
+#include "pieces.h"
+
+/* Optional Masters rules, all off for a classic game. */
+#define RULE_ATTACKER_WINS  0x01
+#define RULE_SILENT         0x02
+#define RULE_EXPLODING      0x04
+#define RULE_MOVING_BOMBS   0x08
+#define RULE_MOVING_FLAG    0x10
+#define RULE_RESCUE         0x20
+extern uint8_t game_rules;
+extern uint8_t rules_lost[2][PIECE_TYPES];
+extern uint8_t rules_known_lost[2][PIECE_TYPES];
+extern uint8_t rules_rescues[2];
 
 #define MAX_TARGETS         20      // a scout reaches at most 18 squares
 
@@ -42,7 +55,8 @@
  *
  * Pieces move one square up, down, left or right; scouts any distance in a
  * straight line, and may strike at the end of that line. Bombs and flags
- * never move. Lakes and pieces block a move; an enemy piece can be attacked.
+ * move only when their variants are enabled, and cannot attack. Lakes and
+ * pieces block a move; other pieces may attack an enemy.
  * A move that would break the two-squares rule is left out.
  *
  * @param out room for MAX_TARGETS squares
@@ -51,7 +65,7 @@
 uint8_t rules_targets(uint8_t sq, uint8_t* out);
 
 /**
- * @brief Forget the moves made so far (at the start of a game)
+ * @brief Reset move history, casualties and rescue limits, preserving options
  */
 void rules_reset(void);
 
@@ -69,11 +83,25 @@ uint8_t rules_has_move(uint8_t blue);
 /**
  * @brief Who wins when a piece of one type attacks a piece of another
  *
- * The lower rank number wins and equal ranks both fall. A miner defuses a
- * bomb, which defeats every other attacker. The spy defeats the marshal
+ * The lower rank number wins; ties follow the selected option. A miner defuses a
+ * bomb; other attackers die and may also destroy it. The spy defeats the marshal
  * when it attacks, and loses every other battle. Any attacker captures
  * the flag.
  */
 uint8_t rules_battle(uint8_t attacker, uint8_t defender);
+
+/* Reveal only information allowed by the selected rules. */
+uint8_t rules_reveal_defender(uint8_t attacker);
+void rules_reveal_battle(uint8_t from, uint8_t to);
+
+/* Apply a legal move, including captures and rescue identity tracking.
+ * Returns a battle outcome, or BATTLE_QUIET. */
+#define BATTLE_QUIET 3
+uint8_t rules_apply(uint8_t from, uint8_t to);
+/* A moving flag has reached the enemy's back row. */
+uint8_t rules_flag_arrived(uint8_t sq);
+/* Rescue is optional, once per arriving piece and twice per army. */
+uint8_t rules_can_rescue(uint8_t sq);
+uint8_t rules_rescue(uint8_t sq, uint8_t type, uint8_t destination);
 
 #endif

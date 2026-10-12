@@ -118,3 +118,6 @@ SPRITE_FALL = 3                      # a second token, for a defender that falls
 
 # terrain tiles kept after vector quantisation of the board artwork
 TERRAIN_TILES = 720
+
+# The UI stays in classic palette row 0; only board tiles use this row.
+FIELD_PALETTE = 6

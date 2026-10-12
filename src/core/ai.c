@@ -71,10 +71,11 @@ static void survey(const uint8_t* lost) {
     hidden_mobile = 0;
     for(t=0; t<PIECE_TYPES; t++) {
         hidden[t] = piece_counts[t] > lost[t] + seen[t] ? piece_counts[t] - lost[t] - seen[t] : 0;
-        if(t < PIECE_BOMB) hidden_mobile += hidden[t];
+        if(t < PIECE_BOMB || (t == PIECE_BOMB && (game_rules & RULE_MOVING_BOMBS)) ||
+           (t == PIECE_FLAG && (game_rules & RULE_MOVING_FLAG))) hidden_mobile += hidden[t];
     }
     // a hidden enemy piece next to our piece a may attack it
-    for(a=0; a<PIECE_BOMB; a++) {
+    for(a=0; a<PIECE_TYPES; a++) {
         loss = 0;
         for(t=0; t<PIECE_BOMB; t++) {
             if(rules_battle(t, a) != BATTLE_DEFENDER) loss += (int32_t)hidden[t] * value[a];
@@ -88,9 +89,11 @@ static void survey(const uint8_t* lost) {
  */
 static int16_t expected(uint8_t a, uint8_t moved) {
     int32_t sum = 0;
-    uint8_t t, n = 0, last = moved ? PIECE_BOMB : PIECE_TYPES;
+    uint8_t t, n = 0;
 
-    for(t=0; t<last; t++) {
+    for(t=0; t<PIECE_TYPES; t++) {
+        if(moved && t == PIECE_BOMB && !(game_rules & RULE_MOVING_BOMBS)) continue;
+        if(moved && t == PIECE_FLAG && !(game_rules & RULE_MOVING_FLAG)) continue;
         sum += (int32_t)hidden[t] * gain(a, t);
         n += hidden[t];
     }
@@ -114,6 +117,7 @@ static int16_t threat(uint8_t sq, uint8_t a) {
         if(!enemy(cell)) continue;
         if(cell & CELL_REVEALED) {
             t = PIECE_TYPE(cell);
+            if(t == PIECE_BOMB || t == PIECE_FLAG) continue;
             switch(rules_battle(t, a)) {
                 case BATTLE_ATTACKER: loss = value[a]; break;
                 case BATTLE_BOTH:     loss = value[a] - value[t]; break;
@@ -142,6 +146,20 @@ static int16_t score(uint8_t from, uint8_t to) {
         s = gain(a, PIECE_TYPE(target)) - (threat(to, a) >> 1);
     } else {
         s = expected(a, target & CELL_MOVED) - (threat(to, a) >> 1);
+    }
+    if(a == PIECE_FLAG && (game_rules & RULE_MOVING_FLAG)) {
+        if(SQUARE_ROW(to) == (own ? BOARD_SIZE - 1 : 0)) s += FLAG_VALUE;
+        else s += ((int16_t)SQUARE_ROW(to) - SQUARE_ROW(from)) * (own ? 12 : -12);
+    }
+    if((game_rules & RULE_RESCUE) && a < PIECE_BOMB && a != PIECE_SCOUT && rules_rescues[own ? 1 : 0] < 2) {
+        uint8_t t;
+        for(t=0; t<PIECE_BOMB; t++) {
+            if(rules_lost[own ? 1 : 0][t]) {
+                s += ((int16_t)SQUARE_ROW(to) - SQUARE_ROW(from)) * (own ? 8 : -8);
+                if(SQUARE_ROW(to) == (own ? BOARD_SIZE - 1 : 0)) s += value[t];
+                break;
+            }
+        }
     }
     if(from == last_to && to == last_from) s -= BACKTRACK;
     return s + (random_next() & 7);

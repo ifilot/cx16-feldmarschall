@@ -31,19 +31,21 @@
 
 // the plate, in tiles, centred over the board
 #define PLATE_W         34
-#define PLATE_H         14
+#define PLATE_H         20
 #define PLATE_COL       ((BOARD_X + BOARD_SIZE * SQUARE / 2) / 8 - PLATE_W / 2)
 #define PLATE_ROW       ((BOARD_Y + BOARD_SIZE * SQUARE / 2) / 8 - PLATE_H / 2)
 #define ENTRY_COL       (PLATE_COL + 4)
 #define ENTRY_ROW0      (PLATE_ROW + 6)
 #define ENTRY_PITCH     3
-#define ENTRIES         2
+#define ENTRIES         4
 
 static const char* const entries[ENTRIES] = {
-    "1  DEPLOY YOUR ARMY",
+    "1  MANAGE SETUPS",
     "2  PLAY AGAINST THE COMPUTER",
+    "3  OPTIONS",
+    "4  ABOUT",
 };
-static const uint8_t scenes[ENTRIES] = {SCENE_DEPLOY, SCENE_PLAY};
+static const uint8_t scenes[ENTRIES] = {SCENE_DEPLOY, SCENE_GAME_SETTINGS, SCENE_OPTIONS, SCENE_ABOUT};
 
 static uint8_t choice;
 
@@ -76,13 +78,13 @@ void menu_enter(void) {
     board_clear();
     view_board();
     dialog_plate(PLATE_COL, PLATE_ROW, PLATE_W, PLATE_H);
-    dialog_centred(PLATE_COL, PLATE_W, PLATE_ROW + 3, "CHOOSE A SCENE", TEXT_BROWN);
+    dialog_centred(PLATE_COL, PLATE_W, PLATE_ROW + 3, "MAIN MENU", TEXT_UI_RED);
     draw_entries();
     panel_tray_clear();
     panel_tray_draw();
     panel_info("WELCOME", TEXT_DEEP_RED, "MAIN MENU");
     panel_clear_selected();
-    panel_bar("CLICK A SCENE, OR PRESS 1 OR 2", "ESCAPE RETURNS HERE FROM ANY SCENE");
+    panel_bar("CLICK AN OPTION, OR PRESS 1, 2, 3 OR 4", "ESCAPE: RETURN TO MENU");
 }
 
 uint8_t menu_update(void) {
@@ -95,6 +97,8 @@ uint8_t menu_update(void) {
     switch(input.key) {
         case '1':        return scenes[0];
         case '2':        return scenes[1];
+        case '3':        return scenes[2];
+        case '4':        return scenes[3];
         case KEY_RETURN: return scenes[choice];
         case KEY_UP:     if(choice > 0) choice--; break;
         case KEY_DOWN:   if(choice < ENTRIES - 1) choice++; break;

@@ -14,7 +14,7 @@ and the rank in the top-left corner (not on bombs and flags). Tokens have no
 grid edge; the board tiles add it (see build_graphics.py), the drag sprites
 do not.
 
-All tokens are drawn in red; palette row 1 shows the same tiles in blue.
+All tokens are drawn in red; palette rows 1 and 2 show the same tiles in the two army colors.
 """
 from pathlib import Path
 

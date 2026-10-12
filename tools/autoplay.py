@@ -3,7 +3,8 @@
 Usage:
   python3 tools/autoplay.py [--turns 100] [--seed 1] [--out build/autoplay.png]
 
-Starts "Play against the computer" from the menu, then for every turn picks
+Starts "Play against the computer", randomizes and confirms deployment,
+then for every turn picks
 a legal red move (an attack half of the time, when one exists) and drags the
 piece there like a player would. It reads the board from emulator memory
 (the _board symbol), checks that each turn changes it, and prints the final
@@ -85,7 +86,15 @@ def main():
     session = Session(args.emu, args.rom)
     try:
         session.emu.advance(240)
+        session.press('Return')
+        session.emu.advance(120)
         session.press('2')
+        session.emu.advance(20)
+        session.press('Return')
+        session.emu.advance(20)
+        session.press('R')
+        session.emu.advance(20)
+        session.press('Return')
         session.emu.advance(20)
         shuttle = (None, None, 0)
         for turn in range(1, args.turns + 1):

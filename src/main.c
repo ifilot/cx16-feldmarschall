@@ -28,6 +28,10 @@
 #include "menu.h"
 #include "deploy.h"
 #include "play.h"
+#include "options.h"
+#include "about.h"
+#include "game_settings.h"
+#include "colors.h"
 #include "random.h"
 
 // KERNAL mouse_get stores the pointer position in r0 (x) and r1 (y)
@@ -72,17 +76,31 @@ static void enter(uint8_t next) {
     video_sprite_hide(SPRITE_DRAG);
     video_sprite_hide(SPRITE_FALL);
     video_clear_layer1();
+    if(scene == SCENE_GAME_SETTINGS && next != SCENE_GAME_SETTINGS) colors_restore_field();
     random_seed(input.frame);       // the player's timing seeds the dice
     scene = next;
     switch(scene) {
-        case SCENE_DEPLOY: deploy_enter(); break;
+        case SCENE_DEPLOY: deploy_enter(0); break;
+        case SCENE_PREPARE: deploy_enter(1); break;
         case SCENE_PLAY:   play_enter(); break;
+        case SCENE_OPTIONS: options_enter(); break;
+        case SCENE_ABOUT: about_enter(); break;
+        case SCENE_GAME_SETTINGS: game_settings_enter(); break;
         default:           menu_enter(); break;
     }
 }
 
 void main(void) {
     uint8_t next;
+
+    if(!video_splash()) {
+        puts("could not load the splash screen");
+        return;
+    }
+    do {
+        wait_frame();
+        read_input();
+    } while(input.key != KEY_RETURN);
 
     if(!video_init()) {
         puts("could not load the graphics");
@@ -96,7 +114,11 @@ void main(void) {
         read_input();
         switch(scene) {
             case SCENE_DEPLOY: next = deploy_update(); break;
+            case SCENE_PREPARE: next = deploy_update(); break;
             case SCENE_PLAY:   next = play_update(); break;
+            case SCENE_OPTIONS: next = options_update(); break;
+            case SCENE_ABOUT: next = about_update(); break;
+            case SCENE_GAME_SETTINGS: next = game_settings_update(); break;
             default:           next = menu_update(); break;
         }
         if(next != SCENE_STAY) enter(next);

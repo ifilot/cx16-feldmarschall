@@ -24,6 +24,7 @@
 #pragma static-locals (on)
 
 #include "video.h"
+#include "colors.h"
 
 #define SPRITE_ATTR     0xFC00      // in VRAM bank 1
 #define SPRITE_16X16    0x50        // size byte: height and width codes
@@ -54,6 +55,41 @@ static uint8_t load_vram(const char* name, uint32_t addr) {
     return cbm_k_load(2 + (uint8_t)(addr >> 16), (uint16_t)addr) != 0;
 }
 
+uint8_t video_field(uint8_t artwork) {
+    uint8_t display, ok;
+    VERA.control = 0;
+    display = VERA.display.video;
+    VERA.display.video &= ~0x10;
+    switch(artwork) {
+        case 1: ok = load_vram("F1TILES.BIN", VRAM_L0_TILES) && load_vram("F1MAP.BIN", VRAM_L0_MAP); break;
+        case 3: ok = load_vram("F3TILES.BIN", VRAM_L0_TILES) && load_vram("F3MAP.BIN", VRAM_L0_MAP); break;
+        default: ok = load_vram("L0TILES.BIN", VRAM_L0_TILES) && load_vram("L0MAP.BIN", VRAM_L0_MAP); break;
+    }
+    VERA.control = 0;
+    VERA.display.video = display;
+    return ok;
+}
+
+/* A dedicated illustrated backdrop; text and controls stay on layer 1. */
+uint8_t video_campaign_menu(void) {
+    uint8_t display, ok;
+    VERA.control = 0;
+    display = VERA.display.video;
+    VERA.display.video &= ~0x10;
+    ok = load_vram("MNTILES.BIN", VRAM_L0_TILES) &&
+         load_vram("MNMAP.BIN", VRAM_L0_MAP) &&
+         load_vram("MNL1TIL.BIN", VRAM_L1_TILES) &&
+         load_vram("MN1MAP.BIN", VRAM_L1_MAP) &&
+         load_vram("MNPAL.BIN", VRAM_PALETTE + 7 * 32);
+    VERA.control = 0;
+    VERA.display.video = display;
+    return ok;
+}
+
+uint8_t video_restore_game_tiles(void) {
+    return load_vram("L1TILES.BIN", VRAM_L1_TILES);
+}
+
 /**
  * @brief Enable the KERNAL mouse driver for the 640x480 screen
  *
@@ -73,6 +109,25 @@ static void mouse_init(void) {
     asm("ldx #80");                 // range: 80 x 60 cells of 8 pixels
     asm("ldy #60");
     asm("jsr $FF68");               // mouse_config
+}
+
+uint8_t video_splash(void) {
+    mouse_init();
+    VERA.control = 0;
+    VERA.display.video &= 0x8F;
+    VERA.display.hscale = 128;
+    VERA.display.vscale = 128;
+    VERA.display.border = 0;
+    if(!load_vram("SPLASH0.BIN", 0x00000UL) ||
+       !load_vram("SPLASH1.BIN", 0x09600UL) ||
+       !load_vram("SPLPAL.BIN", VRAM_PALETTE)) return 0;
+
+    VERA.layer0.config = 0x05;      // bitmap mode, 2 bits per pixel
+    VERA.layer0.tilebase = 0x01;    // base $00000, 640 pixels per row
+    VERA.layer0.hscroll = 0;
+    VERA.layer0.vscroll = 0;        // palette offset 0
+    VERA.display.video |= 0x10;    // layer 0 only
+    return 1;
 }
 
 uint8_t video_init(void) {
@@ -111,7 +166,7 @@ uint8_t video_init(void) {
     video_sprite_hide(SPRITE_FALL);
 
     video_clear_layer1();
-    return 1;
+    return colors_init();
 }
 
 void video_show(void) {
@@ -195,15 +250,15 @@ void video_empty_square(uint8_t bx, uint8_t by) {
 
     map_address(VRAM_L1_MAP, col, row);
     VERA.data0 = L1_GRID_CORNER;
-    VERA.data0 = 0;
+    VERA.data0 = PALETTE_FIELD << 4;
     for(x=1; x<SQUARE_TILES; x++) {
         VERA.data0 = L1_GRID_TOP;
-        VERA.data0 = 0;
+        VERA.data0 = PALETTE_FIELD << 4;
     }
     for(y=1; y<SQUARE_TILES; y++) {
         map_address(VRAM_L1_MAP, col, row + y);
         VERA.data0 = L1_GRID_LEFT;
-        VERA.data0 = 0;
+        VERA.data0 = PALETTE_FIELD << 4;
         for(x=1; x<SQUARE_TILES; x++) {
             VERA.data0 = L1_EMPTY;
             VERA.data0 = 0;

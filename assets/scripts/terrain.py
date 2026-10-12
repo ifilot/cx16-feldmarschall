@@ -12,7 +12,7 @@ import numpy as np
 from PIL import Image
 
 from layout import BOARD_PX, LAKES, SQUARE
-from palette import (BLUE, BROWN, CREAM, DEEP, FOREST, KHAKI, OLIVE, SAND,
+from palette import (BLUE, BROWN, CREAM, DEEP, FOREST, GOLD, KHAKI, OLIVE, SAND,
                      WATER_LIGHT)
 
 BAYER4 = np.array([[0, 8, 2, 10],
@@ -67,7 +67,9 @@ def water_mask(rng, size):
     return water
 
 
-def generate(seed=1990):
+def generate(seed=1990, style=0):
+    if style:
+        return alternate(seed, style)
     rng = np.random.default_rng(seed)
     size = BOARD_PX
     yy, xx = np.mgrid[0:size, 0:size].astype(np.float32)
@@ -128,4 +130,41 @@ def generate(seed=1990):
     ripples = water & ~shallows & (rng.random((size, size)) < 0.02)
     for y, x in zip(*np.nonzero(ripples)):
         out[y, x:x + 3][water[y, x:x + 3] & ~shallows[y, x:x + 3]] = WATER_LIGHT
+    return out
+
+
+def alternate(seed, style):
+    """Plain ivory paper or raised ceramic tiles with polished bevels."""
+    if style not in (1, 3):
+        raise ValueError(f'unknown board style {style}')
+    rng = np.random.default_rng(seed + style * 271)
+    size = BOARD_PX
+    yy, xx = np.mgrid[:size, :size]
+    out = np.full((size, size), SAND, np.uint8)
+    if style == 1:
+        tx, ty = xx % SQUARE, yy % SQUARE
+        out[:] = BROWN  # two-pixel grout channels between actual raised tiles
+        face = (tx >= 2) & (tx <= 37) & (ty >= 2) & (ty <= 37)
+        out[face] = SAND
+        # Crisp one-pixel highlight and shadow rims, with a flat tile face.
+        out[face & ((ty == 2) | (tx == 2))] = GOLD
+        out[face & ((ty == 37) | (tx == 37))] = DEEP
+        # Keep the glint on that same rim instead of widening the bevel.
+        out[(ty == 2) & (tx >= 2) & (tx <= 12)] = CREAM
+        out[(tx == 2) & (ty >= 2) & (ty <= 8)] = CREAM
+    else:
+        # Preserve the existing ivory paper artwork exactly.
+        out[rng.random((size, size)) < 0.0015] = CREAM
+    for col, row in LAKES:
+        x0, y0 = col * SQUARE, row * SQUARE
+        region = (xx >= x0) & (xx < x0 + 2 * SQUARE) & (yy >= y0) & (yy < y0 + 2 * SQUARE)
+        out[region] = WATER_LIGHT
+        # Simple diagonal hatching distinguishes blocked areas from playable cells.
+        hatch = region & ((xx + yy) % 12 == 0)
+        out[hatch] = BLUE
+        # Leave a clean inset rule around each complete blocked area.
+        out[y0 + 2, x0 + 2:x0 + 2 * SQUARE - 2] = BLUE
+        out[y0 + 2 * SQUARE - 3, x0 + 2:x0 + 2 * SQUARE - 2] = BLUE
+        out[y0 + 2:y0 + 2 * SQUARE - 2, x0 + 2] = BLUE
+        out[y0 + 2:y0 + 2 * SQUARE - 2, x0 + 2 * SQUARE - 3] = BLUE
     return out

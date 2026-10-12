@@ -7,4 +7,7 @@ src/**/*.o
 src/*.map
 src/*.sym
 src/gfx.h
+src/color_profiles.h
+src/app_info.h
+src/COLORS.DAT
 src/DEPLOY.DAT

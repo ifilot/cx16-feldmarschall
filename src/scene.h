@@ -34,6 +34,10 @@
 #define SCENE_MENU      0
 #define SCENE_DEPLOY    1
 #define SCENE_PLAY      2
+#define SCENE_OPTIONS   3
+#define SCENE_PREPARE   4
+#define SCENE_ABOUT     5
+#define SCENE_GAME_SETTINGS 6
 #define SCENE_STAY      0xFF
 
 #define BUTTON_LEFT     0x01

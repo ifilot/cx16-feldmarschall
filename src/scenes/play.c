@@ -40,6 +40,7 @@
 #define BLUE_SLIDE      3           // Blue's piece slides to its destination
 #define BATTLE          4           // both combatants are shown face up
 #define FALLING         5           // the loser flies off: Blue's to the tray
+#define RESCUE          7
 #define GAME_OVER       6
 
 #define THINK_FRAMES    20
@@ -78,18 +79,20 @@ static flight_t flights[2];
 static uint8_t flight_count;
 
 static uint8_t truth[SQUARES];      // the board, while Blue looks at its view
-static uint8_t red_lost[PIECE_TYPES];
+static uint8_t saved_tray[TRAY_SLOTS];
+static uint8_t arrival = NOWHERE, rescue_type;
+static void finish_turn(void);
 
 /**
  * @brief Let Blue choose a move from what Blue knows
  *
  * Red's pieces that Blue has not seen become PIECE_UNKNOWN for the length
- * of the call; Red's captured pieces are public knowledge.
+ * of the call; only disclosed casualty ranks are passed to the AI.
  */
 static void blue_think(void) {
-    uint8_t sq, cell, type;
+    uint8_t sq, cell;
 
-    for(type=0; type<PIECE_TYPES; type++) red_lost[type] = piece_counts[type] - board_count(type, 0);
+
     memcpy(truth, board, SQUARES);
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq];
@@ -97,7 +100,7 @@ static void blue_think(void) {
             board[sq] = (cell & ~CELL_TYPE) | PIECE_UNKNOWN;
         }
     }
-    ai_move(CELL_BLUE, red_lost, &move_from, &move_to);
+    ai_move(CELL_BLUE, rules_known_lost[0], &move_from, &move_to);
     memcpy(board, truth, SQUARES);
 }
 
@@ -111,8 +114,8 @@ static void mark(uint8_t sq) {
 static void show_turn(void) {
     strcpy(line, "TURN ");
     strcat(line, panel_number(turn));
-    if(blue) panel_info("BLUE IS THINKING", TEXT_DEEP_BLUE, line);
-    else panel_info("RED TO MOVE", TEXT_DEEP_RED, line);
+    if(blue) panel_info("OPPONENT IS THINKING", TEXT_DEEP_BLUE, line);
+    else panel_info("YOUR TURN", TEXT_DEEP_RED, line);
 }
 
 /**
@@ -140,6 +143,12 @@ static void clear_markers(void) {
 }
 
 static void battle_text(uint8_t a, uint8_t d, uint8_t outcome) {
+    if(d == PIECE_UNKNOWN) {
+        strcpy(line, piece_names[a]);
+        strcat(line, outcome == BATTLE_ATTACKER ? " DEFEATS THE DEFENDER" :
+                     outcome == BATTLE_DEFENDER ? " FALLS TO THE DEFENDER" : " AND THE DEFENDER FALL");
+        return;
+    }
     if(d == PIECE_FLAG) {
         strcpy(line, piece_names[a]);
         strcat(line, " CAPTURES THE FLAG");
@@ -166,10 +175,10 @@ static void game_over(void) {
     view_board();
     strcpy(line, "TURN ");
     strcat(line, panel_number(turn));
-    if(winner == RED_WINS) panel_info("RED WINS", TEXT_DEEP_RED, line);
-    else panel_info("BLUE WINS", TEXT_DEEP_BLUE, line);
+    if(winner == RED_WINS) panel_info("YOU WIN", TEXT_DEEP_RED, line);
+    else panel_info("OPPONENT WINS", TEXT_DEEP_BLUE, line);
     panel_clear_selected();
-    panel_bar(reason, "RETURN: PLAY AGAIN   ESCAPE: MENU");
+    panel_bar(reason, "RETURN: NEW GAME   ESCAPE: MENU");
 }
 
 static void next_turn(void) {
@@ -181,7 +190,7 @@ static void next_turn(void) {
     if(!blue) turn++;
     if(!rules_has_move(blue)) {
         winner = blue ? RED_WINS : BLUE_WINS;
-        reason = blue ? "BLUE HAS NO MOVES LEFT" : "YOU HAVE NO MOVES LEFT";
+        reason = blue ? "OPPONENT HAS NO MOVES LEFT" : "YOU HAVE NO MOVES LEFT";
         game_over();
         return;
     }
@@ -210,7 +219,9 @@ static void fall(uint8_t sprite, uint8_t cell, int16_t x, int16_t y) {
     f->x0 = x;
     f->y0 = y;
     if(cell & CELL_BLUE) {
-        f->slot = panel_tray_home(cell);
+        if(game_rules & RULE_SILENT) {
+            for(f->slot=0; f->slot<TRAY_SLOTS && tray[f->slot] != CELL_EMPTY; f->slot++);
+        } else f->slot = panel_tray_home(cell);
         f->x1 = panel_slot_x(f->slot);
         f->y1 = panel_slot_y(f->slot);
     } else {
@@ -218,7 +229,7 @@ static void fall(uint8_t sprite, uint8_t cell, int16_t x, int16_t y) {
         f->x1 = x;
         f->y1 = BELOW_SCREEN;
     }
-    video_sprite_token(sprite, PIECE_TYPE(cell), (cell & CELL_BLUE) ? ARMY_BLUE : ARMY_RED);
+    video_sprite_token(sprite, ((cell & CELL_BLUE) && !(cell & CELL_REVEALED)) ? TOKEN_HIDDEN : PIECE_TYPE(cell), (cell & CELL_BLUE) ? ARMY_BLUE : ARMY_RED);
     video_sprite_move(sprite, x, y);
 }
 
@@ -242,11 +253,11 @@ static void falling(void) {
         f = &flights[i];
         video_sprite_hide(f->sprite);
         if(f->slot != NOWHERE) {
-            tray[f->slot] = PIECE_TYPE(f->cell) | CELL_BLUE;
+            tray[f->slot] = ((f->cell & CELL_REVEALED) ? PIECE_TYPE(f->cell) : PIECE_UNKNOWN) | CELL_BLUE;
             panel_tray_slot(f->slot);
         }
     }
-    next_turn();
+    finish_turn();
 }
 
 /**
@@ -257,40 +268,34 @@ static void falling(void) {
  */
 static void complete(void) {
     uint8_t a = board[move_from], d = board[move_to];
-    int8_t rows, cols;
+    uint8_t outcome = rules_apply(move_from, move_to);
 
-    rules_record(move_from, move_to);
-
-    if(d == CELL_EMPTY) {
-        rows = SQUARE_ROW(move_from) - SQUARE_ROW(move_to);
-        cols = SQUARE_COL(move_from) - SQUARE_COL(move_to);
-        if(rows > 1 || rows < -1 || cols > 1 || cols < -1) a |= CELL_REVEALED;  // only a scout goes further
-        board[move_to] = a | CELL_MOVED;
-        board[move_from] = CELL_EMPTY;
+    arrival = (outcome == BATTLE_QUIET || outcome == BATTLE_ATTACKER) ? move_to : NOWHERE;
+    if(rules_flag_arrived(move_to)) {
+        winner = (a & CELL_BLUE) ? BLUE_WINS : RED_WINS;
+        reason = winner == RED_WINS ? "YOUR FLAG REACHED THE ENEMY BACK ROW" : "ENEMY FLAG REACHED YOUR BACK ROW";
+    }
+    if(outcome == BATTLE_QUIET) {
         drag_end();
         view_square(move_from);
         view_square(move_to);
-        next_turn();
+        finish_turn();
         return;
     }
     if(PIECE_TYPE(d) == PIECE_FLAG) {
         winner = (a & CELL_BLUE) ? BLUE_WINS : RED_WINS;
-        reason = winner == RED_WINS ? "YOU CAPTURED THE BLUE FLAG" : "BLUE CAPTURED YOUR FLAG";
+        reason = winner == RED_WINS ? "YOU CAPTURED THE ENEMY FLAG" : "OPPONENT CAPTURED YOUR FLAG";
     }
     flight_count = 0;
-    switch(rules_battle(PIECE_TYPE(a), PIECE_TYPE(d))) {
+    switch(outcome) {
         case BATTLE_ATTACKER:
-            board[move_to] = a | CELL_MOVED;
-            board[move_from] = CELL_EMPTY;
             drag_end();
             fall(SPRITE_FALL, d, view_x(move_to), view_y(move_to));
             break;
         case BATTLE_DEFENDER:
-            board[move_from] = CELL_EMPTY;
             fall(SPRITE_DRAG, a, clash_x, clash_y);
             break;
         default:
-            board[move_from] = board[move_to] = CELL_EMPTY;
             fall(SPRITE_DRAG, a, clash_x, clash_y);
             fall(SPRITE_FALL, d, view_x(move_to), view_y(move_to));
     }
@@ -312,7 +317,7 @@ static int16_t clash(uint8_t from, uint8_t to) {
 /**
  * @brief Start the move of the lifted piece on move_from to `to`
  *
- * A quiet move completes at once. An attack reveals both pieces: the
+ * A quiet move completes at once. An attack reveals allowed ranks: the
  * attacker stands against the defender while the message bar tells the
  * outcome.
  */
@@ -325,8 +330,7 @@ static void start_move(uint8_t to) {
         complete();
         return;
     }
-    board[move_from] |= CELL_REVEALED;
-    board[to] |= CELL_REVEALED;
+    rules_reveal_battle(move_from, to);
     a = board[move_from];
     d = board[to];
     // the attacker, face up, stands against the defender on its side
@@ -334,11 +338,12 @@ static void start_move(uint8_t to) {
     clash_y = view_y(to) + clash(SQUARE_ROW(move_from), SQUARE_ROW(to));
     video_sprite_token(SPRITE_DRAG, PIECE_TYPE(a), (a & CELL_BLUE) ? ARMY_BLUE : ARMY_RED);
     drag_place(clash_x, clash_y);
-    view_square_open(to);
+    if(!(d & CELL_BLUE) || (d & CELL_REVEALED)) view_square_open(to);
+    else view_square(to);
     outcome = rules_battle(PIECE_TYPE(a), PIECE_TYPE(d));
-    battle_text(PIECE_TYPE(a), PIECE_TYPE(d), outcome);
-    if(a & CELL_BLUE) panel_battle("BLUE ATTACKS", PIECE_TYPE(d), PIECE_TYPE(a), line);
-    else panel_battle("RED ATTACKS", PIECE_TYPE(a), PIECE_TYPE(d), line);
+    battle_text(PIECE_TYPE(a), ((d & CELL_BLUE) && !(d & CELL_REVEALED)) ? PIECE_UNKNOWN : PIECE_TYPE(d), outcome);
+    if(a & CELL_BLUE) panel_battle("OPPONENT ATTACKS", PIECE_TYPE(d), PIECE_TYPE(a), line);
+    else panel_battle("YOU ATTACK", PIECE_TYPE(a), (d & CELL_REVEALED) ? PIECE_TYPE(d) : TOKEN_HIDDEN, line);
     state = BATTLE;
     timer = BATTLE_FRAMES;
 }
@@ -394,11 +399,84 @@ static void blue_slide(void) {
     if(timer == SLIDE_FRAMES) start_move(move_to);
 }
 
+/* Temporarily use the tray for the player's casualties during a rescue. */
+static void rescue_close(void) {
+    uint8_t sq;
+    for(sq=0; sq<SQUARES; sq++) if(board_home(sq, 0)) view_square(sq);
+    memcpy(tray, saved_tray, sizeof(saved_tray));
+    panel_tray_draw();
+    panel_bar("YOUR MOVE: DRAG ONE OF YOUR PIECES", "ESCAPE: MENU");
+    next_turn();
+}
+
+static void rescue_update(void) {
+    uint8_t slot, sq, type;
+    if(input.key == KEY_RETURN || input.key == KEY_ESCAPE) { rescue_close(); return; }
+    if(input.key >= '1' && input.key <= '9') {
+        type = input.key - '1';
+        if(rules_lost[0][type]) rescue_type = type;
+    }
+    if((input.key == 'S' || input.key == 's') && rules_lost[0][PIECE_SPY]) rescue_type = PIECE_SPY;
+    if(input.pressed & BUTTON_LEFT) {
+        slot = panel_slot_at(input.x, input.y);
+        if(slot != NOWHERE && IS_PIECE(tray[slot]) && PIECE_TYPE(tray[slot]) < PIECE_BOMB) rescue_type = PIECE_TYPE(tray[slot]);
+        sq = view_at(input.x, input.y);
+        if(rescue_type != NOWHERE && sq != NOWHERE && rules_rescue(arrival, rescue_type, sq)) {
+            view_square(sq);
+            rescue_close();
+            return;
+        }
+    }
+    if(rescue_type != NOWHERE) {
+        panel_selected(rescue_type);
+        panel_bar("CHOOSE AN EMPTY SQUARE IN YOUR FIRST FOUR ROWS", "CLICK ANOTHER CASUALTY TO CHANGE  ENTER: SKIP RESCUE");
+    }
+}
+
+static void finish_turn(void) {
+    uint8_t type, sq, i, k, known;
+    if(winner != NOBODY || arrival == NOWHERE || !rules_can_rescue(arrival)) { next_turn(); return; }
+    if(blue) {
+        /* Restore the strongest available casualty near the front. */
+        for(type=0; type<PIECE_BOMB && !rules_lost[1][type]; type++);
+        for(sq=ARMY_SIZE; sq>0; sq--) {
+            if(board[sq-1] != CELL_EMPTY) continue;
+            known = rules_known_lost[1][type] != 0;
+            if(rules_rescue(arrival, type, sq-1)) {
+                for(i=0; i<TRAY_SLOTS; i++) {
+                    if(tray[i] == ((known ? type : PIECE_UNKNOWN) | CELL_BLUE)) {
+                        tray[i] = CELL_EMPTY;
+                        panel_tray_slot(i);
+                        break;
+                    }
+                }
+                view_square(sq-1);
+                panel_bar("OPPONENT RESCUES A CAPTURED PIECE", "A REINFORCEMENT RETURNS TO THE ENEMY HOME ROWS");
+            }
+            break;
+        }
+        next_turn();
+        return;
+    }
+    memcpy(saved_tray, tray, sizeof(saved_tray));
+    panel_tray_clear();
+    i = 0;
+    for(type=0; type<PIECE_TYPES; type++) {
+        for(k=0; k<piece_counts[type]; k++) tray[i++] = (type < PIECE_BOMB && k < rules_lost[0][type]) ? type : CELL_EMPTY;
+    }
+    panel_tray_draw();
+    for(sq=RED_HOME0; sq<SQUARES; sq++) if(board[sq] == CELL_EMPTY) view_marker(sq);
+    panel_info("RESCUE A PIECE", TEXT_DEEP_RED, "OPTIONAL REINFORCEMENT");
+    panel_clear_selected();
+    panel_bar("CLICK A CASUALTY, THEN AN EMPTY HOME SQUARE", "1-9 / S: SELECT RANK  ENTER OR ESCAPE: SKIP");
+    rescue_type = NOWHERE;
+    state = RESCUE;
+}
+
 void play_enter(void) {
     board_clear();
     setup_random(1);
-    if(setup_complete()) setup_load();
-    else setup_random(0);
+    setup_load();                  // Start accepts only a complete, player-approved setup
     view_show_all = 0;
     view_board();
     panel_tray_fallen(1);
@@ -406,6 +484,7 @@ void play_enter(void) {
     panel_bar("YOUR MOVE: DRAG ONE OF YOUR PIECES", "ESCAPE: MENU");
     panel_selected(CELL_EMPTY);
     winner = NOBODY;
+    arrival = NOWHERE;
     target_count = 0;
     ai_reset();
     rules_reset();
@@ -417,8 +496,11 @@ void play_enter(void) {
 }
 
 uint8_t play_update(void) {
-    if(input.key == KEY_ESCAPE) return SCENE_MENU;
+    if(input.key == KEY_ESCAPE && state != RESCUE) return SCENE_MENU;
     switch(state) {
+        case RESCUE:
+            rescue_update();
+            break;
         case RED_TURN:
             red_turn();
             break;
@@ -444,7 +526,7 @@ uint8_t play_update(void) {
             falling();
             break;
         default:
-            if(input.key == KEY_RETURN) return SCENE_PLAY;
+            if(input.key == KEY_RETURN) return SCENE_GAME_SETTINGS;
     }
     return SCENE_STAY;
 }
