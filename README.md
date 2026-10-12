@@ -1,7 +1,8 @@
-# CX16-STRATEGO
+# CX16-FELDMARSCHALL
 
-Stratego for the **Commander X16**: 640x480 and sixteen colours, laid out
-after the 1990 Accolade Stratego. A terrain map of sand, grass, forest and a
+Feldmarschall is a game of hidden armies for the **Commander X16**, played
+by the rules of Stratego: 640x480 and sixteen colours, laid out after the
+1990 Accolade Stratego. A terrain map of sand, grass, forest and a
 river runs under a thin grid inside a plain stone frame; the panel and
 message bar are stone with light grey plates. Beside it, a tray
 holds an army of 40 tokens, five across and eight down.
@@ -132,6 +133,10 @@ The ranks use the classic European numbering, from **1** Marshal to
 **9** Scout, plus **S** Spy, **B** Bomb and **F** Flag. Each army has 40
 pieces, one per tray compartment.
 
+* **Title plate**: the masthead *Feldmarschall* in Fraktur, in the deep red
+  of the red text and engraved like the frame's lettering, from
+  `assets/font/masthead.png`. `assets/scripts/masthead.py` renders it from
+  a font file; the build only reads the PNG.
 * **Info plate**: whose turn it is (or that Red is deploying), the turn
   number or pieces left to place, and the name of the piece under the
   pointer.
@@ -145,13 +150,40 @@ pieces, one per tray compartment.
 ### Pieces
 
 Every token is a 40 × 40 square: a bevelled rim in army colours and a
-30 × 30 portrait. Each figure fills the window's height. Its centre of mass
-sits right of centre, which leaves the top-left corner free for the rank.
-Bombs and flags show no rank and are centred. Pieces Red hasn't identified
-show their back, a gold shield. The portraits come from
-`assets/pieces/red-sheet.png`. The build separates the card ground from the
-black outlines at full resolution, then reduces each card by majority vote
-to the shared palette.
+30 × 30 portrait. Ranked figures sit right of centre, which leaves the
+top-left corner free for the rank. Bombs and flags show no rank and are
+centred. Pieces Red hasn't identified show their back, a gold shield.
+
+The portraits are heads only, in ink, cream and the army colour, which
+gives the faces most of the window. They come from
+`assets/pieces/prussian.png`, twelve 30 × 30 portraits in rank order, in
+the shared palette. Five pieces wear Prussian headgear over the original
+faces; the others keep theirs:
+
+| Rank | Headgear | Insignia |
+| --- | --- | --- |
+| 1 Marshal | bicorne worn fore and aft, with a white plume | crossed batons |
+| 2 General | bicorne trimmed with white feathers, as Prussian generals wore it | zigzag general's braid |
+| 3 Colonel | hussar's fur cap with plume and bag | two pips on twisted braid |
+| 4 Major | laced tricorne | twisted braid |
+| 5 Captain | crested cavalry helmet | two pips |
+| 6 Lieutenant | Black Hussar's mirliton with the death's head | one pip |
+| 7 Sergeant | grenadier's mitre cap | chevron |
+| 8 Miner | spiked helmet | pick |
+| 9 Scout | crested helmet | hunting horn |
+| S Spy | top hat | none |
+
+The gold insignia in the bottom-left corner follow the German shoulder
+boards: braid for generals and staff officers, pips for company officers,
+and the badges of the pioneers and Jäger. They are drawn with an ink
+outline over the portrait, like the rank, from `INSIGNIA` in
+`assets/scripts/pieces.py`.
+
+The original Napoleonic set is kept in `assets/pieces/napoleonic-sheet.png`;
+`PORTRAITS = 'napoleonic'` in `assets/scripts/pieces.py` builds the game
+with it. The build then separates the card ground from the black outlines
+at full resolution and reduces each card by majority vote to the shared
+palette.
 
 ## Graphics on VERA
 
@@ -161,7 +193,7 @@ bitmap would need 150 KB, more than VERA's 128 KB of VRAM.
 * **Layer 0** holds the static art: terrain, frame and panel. The procedural
   terrain (`assets/scripts/terrain.py`) has a unique tile at almost every
   position. k-means vector quantisation reduces it to 720 tiles, each a real
-  tile taken from the artwork. Layer 0 uses 859 of its 1024 tiles.
+  tile taken from the artwork. Layer 0 uses 906 of its 1024 tiles.
 * **Layer 1** holds the grid, pieces, move dots and text. Each token carries
   its own square's grid edge and replaces that square's grid tiles, so the
   terrain tiles stay free of lines. Plates and their text (a second copy of
@@ -241,10 +273,10 @@ Game state that outlives a scene (the player's deployment) lives in
 ## Testing and rating the computer player
 
 The computer player in `src/core` also builds as a PC program,
-`build/stratego-engine` (`make native`), which speaks a line-based
+`build/feldmarschall-engine` (`make native`), which speaks a line-based
 protocol on standard input and output (see [docs/protocol.md](docs/protocol.md)).
 A referee holds the true position and tells each engine only what its army
-may know, so other Stratego programs can join in.
+may know, so other programs can join in.
 
 * `tools/arena.py` plays matches between any engines. Each pairing plays
   the same two deployments twice with the sides swapped (built-in presets,
@@ -279,9 +311,9 @@ a tenth of a second per move.
 Requires **cc65**, GNU make 4.3+, and **Python 3** with **Pillow** and **NumPy**.
 
 ```sh
-make              # build src/STRATEGO.PRG and its graphics
+make              # build src/FELDMARS.PRG and its graphics
 make run          # start it in ../x16-emulator
-make dist         # package the runtime files in build/dist/STRATEGO.ZIP
+make dist         # package the runtime files in build/dist/FELDMARSCHALL.ZIP
 make test-dist    # boot that package through AUTOBOOT.X16 and check it
 make screenshot   # drive it in the AgentBridge emulator, save the screenshots in docs/
 make check        # check the built-in deployments and the rules (tests/)
@@ -295,11 +327,11 @@ make autoplay     # play 150 turns of random red moves against the computer
 from memory, drags a random legal red piece each turn, and checks that
 every turn changes the board.
 
-`make dist` collects only what the game needs: `STRATEGO.PRG`, a copy named
+`make dist` collects only what the game needs: `FELDMARS.PRG`, a copy named
 `AUTOBOOT.X16` that the X16 starts on power-up, the `.BIN` files it loads
 (read from the `load_vram` calls in `src/ui/video.c`), a `README.TXT`, the
 license and `HASHES.TXT` with SHA-256 sums. Copy the contents of
-`build/dist/STRATEGO` to the root of an SD card to boot straight into the
+`build/dist/FELDMARSCHALL` to the root of an SD card to boot straight into the
 game. The ZIP has fixed dates, so the same sources give the same archive.
 
 `assets/scripts/build_graphics.py` writes the VRAM resources and `src/gfx.h`.
@@ -310,6 +342,9 @@ receives through the generated `gfx.h`.
 ## Credits
 
 * `assets/font/kakuro-ui.png`: the 8 × 8 font of cx16-kakuro.
+* `assets/font/masthead.png`: rendered from
+  [UnifrakturMaguntia](https://github.com/google/fonts/tree/main/ofl/unifrakturmaguntia)
+  (SIL Open Font License).
 * Terrain and panel design inspired by Stratego (Accolade, 1990).
 
 ## License

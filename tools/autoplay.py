@@ -79,7 +79,7 @@ def main():
     parser.add_argument('--out', default=str(ROOT / 'build/autoplay.png'))
     args = parser.parse_args()
 
-    symbols = (ROOT / 'src/STRATEGO.sym').read_text()
+    symbols = (ROOT / 'src/FELDMARS.sym').read_text()
     address = int(re.search(r'al ([0-9A-F]+) \._board\b', symbols).group(1), 16)
     random.seed(args.seed)
     session = Session(args.emu, args.rom)

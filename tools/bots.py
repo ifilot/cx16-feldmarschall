@@ -12,7 +12,7 @@ another program can join the arena.
 import random
 import sys
 
-from stratego import (BLUE, RED, SCOUT, UNKNOWN, VALUES, Position, battle, parse_square,
+from feldmarschall import (BLUE, RED, SCOUT, UNKNOWN, VALUES, Position, battle, parse_square,
                       random_setup, square_name)
 
 CHEAP = {6, 7, SCOUT}                     # sergeants, miners and scouts probe the enemy
@@ -60,8 +60,8 @@ class Bot:
             if not words:
                 continue
             command, args = words[0], words[1:]
-            if command == 'stratego':
-                self.reply(f'id name {self.kind}-bot', 'id author cx16-stratego tools', 'ok')
+            if command == 'feldmarschall':
+                self.reply(f'id name {self.kind}-bot', 'id author cx16-feldmarschall tools', 'ok')
             elif command == 'isready':
                 self.reply('readyok')
             elif command == 'seed':

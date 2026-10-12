@@ -14,7 +14,7 @@ import json
 import math
 from collections import defaultdict
 
-from stratego import ROOT
+from feldmarschall import ROOT
 
 ELO = 400 / math.log(10)
 

@@ -12,15 +12,15 @@ SRC=$(wildcard *.c core/*.c ui/*.c scenes/*.c)
 BRIDGE_SRC=bridge/bridge.c $(filter-out core/store.c core/presets.c,$(wildcard core/*.c))
 HDR=$(filter-out gfx.h,$(wildcard *.h core/*.h ui/*.h scenes/*.h))
 
-all: STRATEGO.PRG BRIDGE.PRG
+all: FELDMARS.PRG BRIDGE.PRG
 
-STRATEGO.PRG: $(SRC) $(HDR) $(GFX_ASSETS)
-	$(CC) $(CFLAGS) -o $@ -m STRATEGO.map -Ln STRATEGO.sym $(SRC)
+FELDMARS.PRG: $(SRC) $(HDR) $(GFX_ASSETS)
+	$(CC) $(CFLAGS) -o $@ -m FELDMARS.map -Ln FELDMARS.sym $(SRC)
 
 BRIDGE.PRG: $(BRIDGE_SRC) $(wildcard core/*.h)
 	$(CC) -O -t cx16 -I core -o $@ $(BRIDGE_SRC)
 
-# every graphics resource derives from the portrait sheet, the font and the scripts
+# every graphics resource derives from the portraits, the font and the scripts
 $(GFX_ASSETS) &: $(wildcard $(SCRIPTS)/*.py) $(wildcard ../assets/pieces/*.png) $(wildcard ../assets/font/*.png)
 	$(PYTHON) $(SCRIPTS)/build_graphics.py . ../build/preview
 

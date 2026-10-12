@@ -3,10 +3,10 @@
 The referee (`tools/arena.py`) plays games between programs that speak this
 protocol. A program reads one command per line on standard input and writes
 its replies on standard output, one per line, flushing after each. The
-game's own computer player speaks it as `build/stratego-engine` (`make
+game's own computer player speaks it as `build/feldmarschall-engine` (`make
 native`); `tools/bots.py` shows how a program in another language joins in.
 
-Stratego is a game of hidden information, so the referee keeps the true
+Feldmarschall is a game of hidden information, so the referee keeps the true
 position. An engine only learns what its army may know: its own pieces,
 the moves of both armies, and the ranks revealed in battles.
 
@@ -26,7 +26,7 @@ the moves of both armies, and the ranks revealed in battles.
 
 | Command | Reply | Meaning |
 | --- | --- | --- |
-| `stratego` | `id name …`, `id author …`, `ok` | Sent once at start; the referee waits for `ok`. |
+| `feldmarschall` | `id name …`, `id author …`, `ok` | Sent once at start; the referee waits for `ok`. |
 | `isready` | `readyok` | Synchronise. |
 | `seed <n>` | | Seed the engine's random choices (for reproducible games). |
 | `new red` / `new blue` | | Start a game playing this army. The enemy's 40 pieces stand unknown on its home rows. |
@@ -74,8 +74,8 @@ The "more-squares rule" against chasing a piece endlessly is not enforced.
 ## An example
 
 ```
-> stratego
-< id name cx16-stratego
+> feldmarschall
+< id name cx16-feldmarschall
 < id author Ivo Filot
 < ok
 > seed 7
@@ -96,11 +96,11 @@ from i4 to i5 and later defeats a Blue Miner on i6.
 
 ## Testing commands
 
-`build/stratego-engine` also answers `think <army> <seed> <lost> <view>`:
+`build/feldmarschall-engine` also answers `think <army> <seed> <lost> <view>`:
 the move it would choose from a raw position, given as hexadecimal bytes in
 the encoding of `src/core` (`board.h`, `pieces.h`), with fresh random state.
 It replies `best <from> <to>` as square numbers 0–99 (rank 10 first). The
 parity test (`tools/parity.py`) sends the same positions to `BRIDGE.PRG`
 on the X16 and checks that both builds choose the same moves. With the
-environment variable `STRATEGO_TRACE` set, and the engine compiled with
+environment variable `FELDMARSCHALL_TRACE` set, and the engine compiled with
 `-DAI_TRACE`, `think` first lists every candidate move with its score.

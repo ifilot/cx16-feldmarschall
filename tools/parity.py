@@ -5,7 +5,7 @@ Usage:
 
 Plays random games to collect positions, turns each into one army's view
 (enemy pieces it has not seen become unknown), and asks both builds for a
-move with the same random seed: the native engine (build/stratego-engine,
+move with the same random seed: the native engine (build/feldmarschall-engine,
 "think") and BRIDGE.PRG running in the AgentBridge emulator (src/bridge).
 Every move must be identical. Requires `make` and `make native`.
 """
@@ -14,7 +14,7 @@ import random
 import sys
 from pathlib import Path
 
-from stratego import (BLUE, COUNTS, LAKES, RED, ROOT, UNKNOWN, Engine, Position, random_setup)
+from feldmarschall import (BLUE, COUNTS, LAKES, RED, ROOT, UNKNOWN, Engine, Position, random_setup)
 
 sys.path.insert(0, str(ROOT.parent / 'x16-emulator/api/python'))
 from x16agent import X16Agent  # noqa: E402
@@ -82,7 +82,7 @@ def main():
 
     rng = random.Random(args.seed)
     tests = positions(args.positions, rng)
-    native = Engine(str(ROOT / 'build/stratego-engine'), 'native')
+    native = Engine(str(ROOT / 'build/feldmarschall-engine'), 'native')
     emu = X16Agent(args.emu, args.rom, fsroot=ROOT / 'src', options=['-prg', str(ROOT / 'src/BRIDGE.PRG'), '-run'])
     mismatches, slowest = 0, 0
     try:

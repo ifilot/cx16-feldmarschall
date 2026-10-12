@@ -7,7 +7,7 @@ EMU_FLAGS ?= -scale 2
 all:
 	$(MAKE) -C src
 
-# build/dist/STRATEGO.ZIP: the runtime files only, ready for an SD card
+# build/dist/FELDMARSCHALL.ZIP: the runtime files only, ready for an SD card
 dist: all
 	python3 tools/distribute.py
 
@@ -16,7 +16,7 @@ test-dist: dist
 	python3 tools/test_dist.py
 
 run: all
-	cd src && "$(EMU)" -rom "$(ROM)" -prg STRATEGO.PRG -run $(EMU_FLAGS)
+	cd src && "$(EMU)" -rom "$(ROM)" -prg FELDMARS.PRG -run $(EMU_FLAGS)
 
 screenshot: all
 	python3 tools/screenshot.py --emu "$(EMU)" --rom "$(ROM)" --keys "move:150,236 wait:3 shot:docs/menu.png 1 wait:20 N wait:5 shot:docs/board-layout.png drag:452,172,196,356 drag:492,172,236,356 move:533,412 down move:300,322 wait:3 shot:docs/deploy-drag.png up wait:3 L wait:5 move:96,108 wait:5 shot:docs/deploy-load.png down wait:2 up wait:5 S wait:5 $(foreach i,1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16,Backspace) M Y Space F O R T wait:3 shot:docs/deploy-save.png Escape wait:5" --out build/screenshot.png
@@ -26,9 +26,9 @@ screenshot: all
 HOSTCC ?= gcc
 CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai.c)
 
-native: build/stratego-engine
+native: build/feldmarschall-engine
 
-build/stratego-engine: src/native/engine.c $(CORE_NATIVE) $(wildcard src/core/*.h)
+build/feldmarschall-engine: src/native/engine.c $(CORE_NATIVE) $(wildcard src/core/*.h)
 	mkdir -p build
 	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core -o $@ src/native/engine.c $(CORE_NATIVE)
 
@@ -36,7 +36,7 @@ build/stratego-engine: src/native/engine.c $(CORE_NATIVE) $(wildcard src/core/*.
 ROUNDS ?= 100
 rating: native
 	rm -f build/results.jsonl
-	python3 tools/arena.py --rounds $(ROUNDS) --engine ai=build/stratego-engine \
+	python3 tools/arena.py --rounds $(ROUNDS) --engine ai=build/feldmarschall-engine \
 		--engine greedy="python3 tools/bots.py greedy" --engine random="python3 tools/bots.py random"
 	python3 tools/rating.py
 

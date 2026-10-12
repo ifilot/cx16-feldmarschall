@@ -1,4 +1,4 @@
-"""Stratego rules, positions and engine processes for the test tools.
+"""Feldmarschall rules, positions and engine processes for the test tools.
 
 Follows src/core (rules.c, pieces.c, board.c): the same board numbering
 (square 0 is a10, square 99 is j1), the same piece types and the same
@@ -163,7 +163,7 @@ class Engine:
         self.name = name or command
         self.process = subprocess.Popen(command, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                         text=True, bufsize=1, cwd=ROOT)
-        self.send('stratego')
+        self.send('feldmarschall')
         while self.read() != 'ok':
             pass
 

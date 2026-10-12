@@ -1,7 +1,14 @@
-"""Piece tokens (40x40, one board square) built from the portrait sheet.
+"""Piece tokens (40x40, one board square) built from 30-pixel portraits.
 
-Each card of `assets/pieces/red-sheet.png` is reduced to a 30-pixel portrait
-in the shared palette and set into a token seen from above: an ink outline,
+Two sets of portraits exist; PORTRAITS picks the one the game uses.
+
+* 'prussian': `assets/pieces/prussian.png`, Frederick the Great's army,
+  drawn pixel by pixel in the shared palette. The strip holds twelve
+  30x30 portraits in PIECES order; transparent pixels show the ground.
+* 'napoleonic': the original set. Each card of
+  `assets/pieces/napoleonic-sheet.png` is reduced to a 30-pixel portrait.
+
+Each portrait is set into a token seen from above: an ink outline,
 a bevelled army-coloured rim, the portrait on a deep army-coloured ground,
 and the rank in the top-left corner (not on bombs and flags). Tokens have no
 grid edge; the board tiles add it (see build_graphics.py), the drag sprites
@@ -21,11 +28,13 @@ from palette import (BROWN, CREAM, DEEP_RED, GOLD, INK, KHAKI, RED, SAND,
                      rgb)
 
 ASSETS = Path(__file__).resolve().parents[1]
+PORTRAITS = 'prussian'              # or 'napoleonic'
 
 # token geometry inside the square (inclusive pixel bounds)
 TOKEN0, TOKEN1 = 2, 37              # ink outline
 WINDOW0, WINDOW1 = 5, 34            # portrait window, 30 x 30
 RANK_X, RANK_Y = 6, 4               # 8x8 rank glyph cell (glyph rows 1-7)
+BADGE_X, BADGE_Y1 = 6, 33           # insignia: left column and bottom row
 FIGURE_SHIFT = 4                    # ranked figures sit right of centre
 
 # portrait colours: the sheet's own tones mapped onto the palette
@@ -35,7 +44,7 @@ CARD_GROUND = np.array([26, 27, 26])
 
 def load_cards():
     """Return {label: RGB array} for the twelve cards of the sheet."""
-    with Image.open(ASSETS / 'pieces/red-sheet.png') as sheet:
+    with Image.open(ASSETS / 'pieces/napoleonic-sheet.png') as sheet:
         rgb_sheet = np.asarray(sheet.convert("RGB")).astype(np.int32)
     cards = {}
     for i, label in enumerate(SHEET_ORDER):
@@ -111,6 +120,23 @@ def portrait(card, shift):
     return out
 
 
+def load_portraits():
+    """Return the twelve 30x30 portraits of the Prussian strip, in PIECES order."""
+    size = WINDOW1 - WINDOW0 + 1
+    with Image.open(ASSETS / 'pieces/prussian.png') as strip:
+        rgba = np.asarray(strip.convert('RGBA')).astype(np.int32)
+    if rgba.shape[:2] != (size, size * len(PIECES)):
+        raise ValueError(f'prussian.png must hold {len(PIECES)} portraits of {size}x{size}')
+    colors = {rgb(i): i for i in range(16)}
+    out = np.full(rgba.shape[:2], -1, np.int16)
+    for y, x in zip(*np.nonzero(rgba[:, :, 3] > 127)):
+        colour = tuple(rgba[y, x, :3].tolist())
+        if colour not in colors:
+            raise ValueError(f'prussian.png: {colour} at ({x}, {y}) is not a palette colour')
+        out[y, x] = colors[colour]
+    return [out[:, i * size:(i + 1) * size] for i in range(len(PIECES))]
+
+
 def token(face=None, rank=None):
     """A 40x40 square (palette indices, 0 = transparent) with a token on it.
 
@@ -139,7 +165,87 @@ def token(face=None, rank=None):
         x, y = RANK_X, RANK_Y
         sq[y + 1:y + 9, x + 1:x + 9][glyph] = INK
         sq[y:y + 8, x:x + 8][glyph] = CREAM
+        if rank in INSIGNIA:
+            draw_insignia(sq, INSIGNIA[rank])
     return sq
+
+
+# Rank insignia in the window's bottom-left corner, after the German
+# shoulder boards: braid for generals and staff officers, pips for the
+# company officers, a chevron for the sergeant and the badges of the
+# pioneers and Jäger. A spy wears none.
+INSIGNIA = {
+    '1': [                          # crossed field marshal's batons
+        'xx...xx',
+        'xx...xx',
+        '..x.x..',
+        '...x...',
+        '..x.x..',
+        'xx...xx',
+        'xx...xx',
+    ],
+    '2': [                          # general's zigzag braid
+        'x...x..',
+        'xx.xxx.',
+        '.xxx.xx',
+        '..x...x',
+    ],
+    '3': [                          # two pips on twisted braid
+        '.x...x.',
+        'xxx.xxx',
+        '.x...x.',
+        '.......',
+        'xxxxxxx',
+        'x.x.x.x',
+    ],
+    '4': [                          # twisted braid
+        'xxxxxxx',
+        'x.x.x.x',
+    ],
+    '5': [                          # two pips
+        '.x...x.',
+        'xxx.xxx',
+        '.x...x.',
+    ],
+    '6': [                          # one pip
+        '.x.',
+        'xxx',
+        '.x.',
+    ],
+    '7': [                          # chevron
+        '...x...',
+        '..x.x..',
+        '.x...x.',
+        'x.....x',
+    ],
+    '8': [                          # pick
+        '.xxxxx.',
+        'x..x..x',
+        '...x...',
+        '...x...',
+        '...x...',
+    ],
+    '9': [                          # hunting horn
+        '.xxxx..',
+        'x....x.',
+        'x.xx.x.',
+        'x....xx',
+        '.xxxx.x',
+    ],
+}
+
+
+def draw_insignia(sq, rows):
+    """Gold insignia with an ink outline, standing on the bottom row BADGE_Y1."""
+    mark = np.array([[ch == 'x' for ch in row] for row in rows])
+    h, w = mark.shape
+    x, y = BADGE_X, BADGE_Y1 - h + 1
+    outline = np.zeros((h + 2, w + 2), bool)
+    for dy in range(3):
+        for dx in range(3):
+            outline[dy:dy + h, dx:dx + w] |= mark
+    sq[y - 1:y + h + 1, x - 1:x + w + 1][outline] = INK
+    sq[y:y + h, x:x + w][mark] = GOLD
 
 
 CREST = [
@@ -178,11 +284,17 @@ def draw_crest(sq):
 
 def build_tokens():
     """Return the 13 token squares: the twelve ranks in PIECES order, then the back."""
-    cards = load_cards()
+    if PORTRAITS == 'prussian':
+        faces = load_portraits()
+    else:
+        cards = load_cards()
     tokens = []
-    for label, rank, _, _ in PIECES:
+    for i, (label, rank, _, _) in enumerate(PIECES):
         ranked = rank.isdigit() or rank == 'S'      # bombs and flags show no rank
-        face = portrait(cards[label], FIGURE_SHIFT if ranked else 0)
+        if PORTRAITS == 'prussian':
+            face = faces[i]
+        else:
+            face = portrait(cards[label], FIGURE_SHIFT if ranked else 0)
         tokens.append(token(face, rank if ranked else None))
     tokens.append(token())
     return tokens

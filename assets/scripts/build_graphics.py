@@ -20,8 +20,8 @@ import numpy as np
 from PIL import Image
 
 import layout as L
-from bitmap_font import draw_text, glyph8, text_width
-from palette import (BROWN, CREAM, GOLD, INK, LIGHT, STONE,
+from bitmap_font import draw_text, glyph8
+from palette import (BROWN, CREAM, DEEP_RED, GOLD, INK, LIGHT, STONE,
                      pil_palette, vera_palette)
 from pieces import build_tokens
 from terrain import generate
@@ -29,6 +29,10 @@ from terrain import generate
 W, H = 640, 480
 MAP_W = 128                         # map entries per row in VRAM
 MAP_ROWS = H // 8
+
+# the title plate's masthead (see masthead.py), True where the letters are
+with Image.open(Path(__file__).resolve().parents[1] / 'font/masthead.png') as source:
+    MASTHEAD = np.asarray(source.convert('1'))
 
 
 # ---------------------------------------------------------------- layer 0
@@ -121,11 +125,13 @@ def draw_panel(img):
     for y0, y1 in L.PLATES.values():
         recessed(img, x0, y0, x1, y1)
 
+    # the Fraktur masthead in the deep red of red text, cut into the plate
+    # like the engraved lettering: a lit edge to the lower right
     ty0, ty1 = L.PLATES['title']
-    title = 'STRATEGO'
-    tx = (x0 + x1 + 1 - text_width(title, 2)) // 2
-    ty = (ty0 + ty1 + 1) // 2 - 9                   # glyph rows 1..7 of 8, doubled
-    engrave(img, tx, ty, title, scale=2)
+    h, w = MASTHEAD.shape
+    tx, ty = (x0 + x1 + 1 - w) // 2, (ty0 + ty1 + 1 - h) // 2
+    img[ty + 1:ty + 1 + h, tx + 1:tx + 1 + w][MASTHEAD] = CREAM
+    img[ty:ty + h, tx:tx + w][MASTHEAD] = DEEP_RED
 
     # a rule between the status lines and the selected piece
     iy0, _ = L.PLATES['info']

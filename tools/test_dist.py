@@ -3,7 +3,7 @@
 Usage:
   python3 tools/test_dist.py          (or: make test-dist, after make dist)
 
-Starts the emulator on build/dist/STRATEGO without -prg, so the ROM finds
+Starts the emulator on build/dist/FELDMARSCHALL without -prg, so the ROM finds
 and runs AUTOBOOT.X16, then checks that the palette and the layer-0 map in
 VRAM are those of the shipped files, and saves build/dist-boot.png.
 """
@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT.parent / 'x16-emulator/api/python'))
 from x16agent import X16Agent  # noqa: E402
 
-DIST = ROOT / 'build/dist/STRATEGO'
+DIST = ROOT / 'build/dist/FELDMARSCHALL'
 CHECKS = (('PALETTE.BIN', 0x1FA00), ('L0MAP.BIN', 0x08000))
 
 

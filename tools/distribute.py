@@ -3,7 +3,7 @@
 Usage:
   python3 tools/distribute.py          (or: make dist)
 
-Writes build/dist/STRATEGO/ and build/dist/STRATEGO.ZIP. The runtime files
+Writes build/dist/FELDMARSCHALL/ and build/dist/FELDMARSCHALL.ZIP. The runtime files
 are the game itself, a copy named AUTOBOOT.X16 that the X16 starts on
 power-up, and every file the game loads into VRAM (found in the load_vram
 calls of src/ui/video.c, so a new resource cannot be forgotten). The test
@@ -17,36 +17,37 @@ from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
-NAME = 'STRATEGO'
+NAME = 'FELDMARSCHALL'
 
 
 def runtime_files():
     video = (ROOT / 'src/ui/video.c').read_text()
     resources = re.findall(r'load_vram\("([A-Z0-9]+\.[A-Z0-9]+)"', video)
     assert resources, 'no load_vram calls found in src/ui/video.c'
-    return ['STRATEGO.PRG'] + resources
+    return ['FELDMARS.PRG'] + resources
 
 
-README = '''CX16 Stratego
+README = '''CX16 Feldmarschall
 
-Stratego for the Commander X16, at 640x480 in sixteen colours.
+A game of hidden armies for the Commander X16, at 640x480 in sixteen
+colours.
 
 Keep all files in this directory together on your X16 SD card. Copy them
 to the root of the card to boot the game automatically: AUTOBOOT.X16 is a
-copy of STRATEGO.PRG and starts the game on power-up. Otherwise load
-STRATEGO.PRG and run it.
+copy of FELDMARS.PRG and starts the game on power-up. Otherwise load
+FELDMARS.PRG and run it.
 
-Emulator: x16emu -prg STRATEGO.PRG -run
+Emulator: x16emu -prg FELDMARS.PRG -run
 
 The game is played with the mouse. Deploy your army by dragging pieces
 from the tray onto your four home rows, or load one of ten classic
 deployments; then play against the computer. Escape returns to the menu.
 Deployments you save go into DEPLOY.DAT, which the game creates here.
 
-STRATEGO.PRG is the game; the .BIN files hold its graphics and palette.
+FELDMARS.PRG is the game; the .BIN files hold its graphics and palette.
 
 Source, license (GPL-3.0-or-later) and credits:
-https://github.com/ifilot/cx16-stratego
+https://github.com/ifilot/cx16-feldmarschall
 '''
 
 
@@ -63,7 +64,7 @@ def main():
         source = ROOT / 'src' / name
         assert source.exists(), f'{source} is missing: run make first'
         shutil.copyfile(source, destination / name)
-    shutil.copyfile(ROOT / 'src/STRATEGO.PRG', destination / 'AUTOBOOT.X16')
+    shutil.copyfile(ROOT / 'src/FELDMARS.PRG', destination / 'AUTOBOOT.X16')
     (destination / 'README.TXT').write_text(README)
     shutil.copyfile(ROOT / 'LICENSE', destination / 'LICENSE.TXT')
 

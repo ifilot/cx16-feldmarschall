@@ -1,7 +1,7 @@
 """Referee: play matches between programs that speak the engine protocol.
 
 Usage:
-  python3 tools/arena.py --engine ai=build/stratego-engine \\
+  python3 tools/arena.py --engine ai=build/feldmarschall-engine \\
                          --engine greedy="python3 tools/bots.py greedy" \\
                          [--rounds 20] [--setups mixed] [--jobs 8] [--out build/results.jsonl]
 
@@ -22,7 +22,7 @@ import sys
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
-from stratego import (BLUE, FLAG, GLYPHS, RED, ROOT, Engine, Position, new_rng, parse_square,
+from feldmarschall import (BLUE, FLAG, GLYPHS, RED, ROOT, Engine, Position, new_rng, parse_square,
                       presets, random_setup, square_name, valid_setup)
 
 

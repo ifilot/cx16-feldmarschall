@@ -61,7 +61,7 @@ TRAY_X, TRAY_Y = INNER_X0, 152
 TRAY_COLS, TRAY_ROWS = 5, 8
 
 # Pieces, strongest first (classic European numbering: 1 = Marshal).
-# (file label in the portrait sheet, rank glyph, name, count per army)
+# (file label in the Napoleonic sheet, rank glyph, name, count per army)
 # The token numbers follow this order, which src/core/pieces.h repeats.
 PIECES = [
     ('red1', '1', 'MARSHAL', 1),
@@ -80,7 +80,7 @@ PIECES = [
 TOKEN_HIDDEN = len(PIECES)           # token back, shown for unknown pieces
 TOKENS = TOKEN_HIDDEN + 1
 
-# The portrait sheet: two rows of six framed cards. Card interiors, inset
+# The Napoleonic portrait sheet: two rows of six framed cards. Card interiors, inset
 # by two pixels from the grey frames: column x0 values, one width, and per
 # row (y0, height).
 SHEET_ORDER = ['red1', 'red2', 'red3', 'red4', 'red5', 'red6',

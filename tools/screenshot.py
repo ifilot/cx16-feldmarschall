@@ -1,4 +1,4 @@
-"""Boot STRATEGO.PRG in the X16 AgentBridge emulator and capture screenshots.
+"""Boot FELDMARS.PRG in the X16 AgentBridge emulator and capture screenshots.
 
 Usage:
   python3 tools/screenshot.py [--out build/screenshot.png] [--keys "Tab ..."]
@@ -23,7 +23,7 @@ class Session:
     def __init__(self, emu, rom):
         fsroot = ROOT / 'src'
         self.emu = X16Agent(emu, rom, fsroot=fsroot,
-                            options=['-prg', str(fsroot / 'STRATEGO.PRG'), '-run'])
+                            options=['-prg', str(fsroot / 'FELDMARS.PRG'), '-run'])
         self.buttons = 0
 
     def press(self, key):
