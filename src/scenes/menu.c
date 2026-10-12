@@ -27,25 +27,27 @@
 #include "boardview.h"
 #include "dialog.h"
 #include "panel.h"
+#include "play.h"
 #include "video.h"
 
 // the plate, in tiles, centred over the board
 #define PLATE_W         34
-#define PLATE_H         20
+#define PLATE_H         23
 #define PLATE_COL       ((BOARD_X + BOARD_SIZE * SQUARE / 2) / 8 - PLATE_W / 2)
 #define PLATE_ROW       ((BOARD_Y + BOARD_SIZE * SQUARE / 2) / 8 - PLATE_H / 2)
 #define ENTRY_COL       (PLATE_COL + 4)
 #define ENTRY_ROW0      (PLATE_ROW + 6)
 #define ENTRY_PITCH     3
-#define ENTRIES         4
+#define ENTRIES         5
 
 static const char* const entries[ENTRIES] = {
     "1  MANAGE SETUPS",
     "2  PLAY AGAINST THE COMPUTER",
-    "3  OPTIONS",
-    "4  ABOUT",
+    "3  CONTINUE SAVED GAME",
+    "4  OPTIONS",
+    "5  ABOUT",
 };
-static const uint8_t scenes[ENTRIES] = {SCENE_DEPLOY, SCENE_GAME_SETTINGS, SCENE_OPTIONS, SCENE_ABOUT};
+static const uint8_t scenes[ENTRIES] = {SCENE_DEPLOY, SCENE_GAME_SETTINGS, SCENE_RESUME, SCENE_OPTIONS, SCENE_ABOUT};
 
 static uint8_t choice;
 
@@ -84,7 +86,16 @@ void menu_enter(void) {
     panel_tray_draw();
     panel_info("WELCOME", TEXT_DEEP_RED, "MAIN MENU");
     panel_clear_selected();
-    panel_bar("CLICK AN OPTION, OR PRESS 1, 2, 3 OR 4", "ESCAPE: RETURN TO MENU");
+    panel_bar("CLICK AN OPTION, OR PRESS 1 TO 5", "ESCAPE: RETURN TO MENU");
+}
+
+/**
+ * @brief The scene of an entry; a saved game must be read first
+ */
+static uint8_t entry_scene(uint8_t entry) {
+    if(scenes[entry] != SCENE_RESUME || play_load()) return scenes[entry];
+    panel_info("NO SAVED GAME", TEXT_DEEP_RED, "SAVE FROM THE GAME MENU");
+    return SCENE_STAY;
 }
 
 uint8_t menu_update(void) {
@@ -92,17 +103,14 @@ uint8_t menu_update(void) {
 
     if(hover < ENTRIES) {
         choice = hover;
-        if(input.pressed & BUTTON_LEFT) return scenes[choice];
+        if(input.pressed & BUTTON_LEFT) return entry_scene(choice);
     }
     switch(input.key) {
-        case '1':        return scenes[0];
-        case '2':        return scenes[1];
-        case '3':        return scenes[2];
-        case '4':        return scenes[3];
-        case KEY_RETURN: return scenes[choice];
+        case KEY_RETURN: return entry_scene(choice);
         case KEY_UP:     if(choice > 0) choice--; break;
         case KEY_DOWN:   if(choice < ENTRIES - 1) choice++; break;
     }
+    if(input.key >= '1' && input.key < '1' + ENTRIES) return entry_scene(input.key - '1');
     if(choice != old) draw_entries();
     return SCENE_STAY;
 }

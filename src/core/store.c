@@ -25,6 +25,7 @@
 
 #include "store.h"
 #include "board.h"
+#include "rules.h"
 
 /*
  * DEPLOY.DAT: an 8-byte header, then per slot a name of NAME_LENGTH bytes
@@ -38,17 +39,29 @@
 #define FILE_SIZE       (BODY + 2)
 #define CHANNEL         3
 
+/*
+ * GAME.DAT: an 8-byte header, the board, the rules' state, the play
+ * scene's bytes, then a 16-bit checksum.
+ */
+#define GAME_MAGIC      "STRGAM01"
+#define GAME_BOARD      HEADER
+#define GAME_RULES      (GAME_BOARD + SQUARES)
+#define GAME_SCENE      (GAME_RULES + RULES_STATE_SIZE)
+#define GAME_BODY       (GAME_SCENE + GAME_EXTRA)
+#define GAME_SIZE       (GAME_BODY + 2)
+
 static uint8_t file[FILE_SIZE];
+static uint8_t game[GAME_SIZE];
 static char name[NAME_LENGTH + 1];
 
 static uint8_t* slot_data(uint8_t slot) {
     return file + HEADER + slot * SLOT_SIZE;
 }
 
-static uint16_t checksum(void) {
+static uint16_t checksum(const uint8_t* data, uint16_t size) {
     uint16_t value = 0x5713, i;
 
-    for(i=0; i<BODY; i++) value = (value << 5) ^ (value >> 11) ^ file[i];
+    for(i=0; i<size; i++) value = (value << 5) ^ (value >> 11) ^ data[i];
     return value;
 }
 
@@ -68,39 +81,57 @@ static uint8_t drive_ok(void) {
     return ok;
 }
 
-uint8_t store_read(void) {
+/**
+ * @brief Read a whole file with a header and a checksum after `body` bytes
+ *
+ * @return 1 if the file has the size, the header and the checksum expected
+ */
+static uint8_t read_file(const char* path, const char* magic, uint8_t* data, uint16_t body) {
     uint16_t total = 0;
     int got;
-    uint8_t ok;
 
-    if(!cbm_open(CHANNEL, 8, CHANNEL, "DEPLOY.DAT,S,R")) {
-        while(total < FILE_SIZE && (got = cbm_read(CHANNEL, file + total, FILE_SIZE - total)) > 0) {
+    if(!cbm_open(CHANNEL, 8, CHANNEL, path)) {
+        while(total < body + 2 && (got = cbm_read(CHANNEL, data + total, body + 2 - total)) > 0) {
             total += got;
         }
     }
     cbm_close(CHANNEL);
     drive_ok();                                 // clears "file not found"
-    ok = total == FILE_SIZE && !memcmp(file, MAGIC, HEADER) &&
-         checksum() == (file[BODY] | (file[BODY + 1] << 8));
+    return total == body + 2 && !memcmp(data, magic, HEADER) &&
+           checksum(data, body) == (data[body] | (data[body + 1] << 8));
+}
+
+/**
+ * @brief Write a header, `body` bytes and their checksum to a file
+ *
+ * @return 1 if the drive reports success
+ */
+static uint8_t write_file(const char* path, const char* magic, uint8_t* data, uint16_t body) {
+    uint16_t sum;
+    uint8_t ok;
+
+    memcpy(data, magic, HEADER);
+    sum = checksum(data, body);
+    data[body] = (uint8_t)sum;
+    data[body + 1] = sum >> 8;
+    if(cbm_open(CHANNEL, 8, CHANNEL, path)) {
+        cbm_close(CHANNEL);
+        return 0;
+    }
+    ok = cbm_write(CHANNEL, data, body + 2) == body + 2;
+    cbm_close(CHANNEL);
+    return drive_ok() && ok;
+}
+
+uint8_t store_read(void) {
+    uint8_t ok = read_file("DEPLOY.DAT,S,R", MAGIC, file, BODY);
+
     if(!ok) memset(file, 0, FILE_SIZE);
     return ok;
 }
 
 uint8_t store_write(void) {
-    uint16_t sum;
-    uint8_t ok;
-
-    memcpy(file, MAGIC, HEADER);
-    sum = checksum();
-    file[BODY] = (uint8_t)sum;
-    file[BODY + 1] = sum >> 8;
-    if(cbm_open(CHANNEL, 8, CHANNEL, "@:DEPLOY.DAT,S,W")) {
-        cbm_close(CHANNEL);
-        return 0;
-    }
-    ok = cbm_write(CHANNEL, file, FILE_SIZE) == FILE_SIZE;
-    cbm_close(CHANNEL);
-    return drive_ok() && ok;
+    return write_file("@:DEPLOY.DAT,S,W", MAGIC, file, BODY);
 }
 
 uint8_t store_used(uint8_t slot) {
@@ -123,4 +154,19 @@ void store_save(uint8_t slot, const char* text) {
     memset(data, 0, NAME_LENGTH);
     strncpy((char*)data, text, NAME_LENGTH);
     memcpy(data + NAME_LENGTH, board + RED_HOME0, ARMY_SIZE);
+}
+
+uint8_t store_game_write(const uint8_t* extra) {
+    memcpy(game + GAME_BOARD, board, SQUARES);
+    rules_state_save(game + GAME_RULES);
+    memcpy(game + GAME_SCENE, extra, GAME_EXTRA);
+    return write_file("@:GAME.DAT,S,W", GAME_MAGIC, game, GAME_BODY);
+}
+
+uint8_t store_game_read(uint8_t* extra) {
+    if(!read_file("GAME.DAT,S,R", GAME_MAGIC, game, GAME_BODY)) return 0;
+    memcpy(board, game + GAME_BOARD, SQUARES);
+    rules_state_load(game + GAME_RULES);
+    memcpy(extra, game + GAME_SCENE, GAME_EXTRA);
+    return 1;
 }

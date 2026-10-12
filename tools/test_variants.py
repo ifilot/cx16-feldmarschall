@@ -50,7 +50,8 @@ def drag(session, source, destination, wait=320):
 
 
 def new_match(session, keys):
-    choose(session, 'Escape')
+    choose(session, 'Escape')       # the game menu, or the main menu after a game
+    choose(session, '3')            # quit to the main menu (there: no saved game)
     choose(session, '2')
     choose(session, 'C')
     for key in keys:
@@ -157,7 +158,8 @@ def main():
             assert any(c & 15 == 0 and c & 0x10 for c in board(session)[:40] if c < 0xFE)
             # A non-default field and army palette must survive the illustrated menu.
             choose(session, 'Escape')
-            choose(session, '3')
+            choose(session, '3')  # Quit to the main menu.
+            choose(session, '4')
             choose(session, '4')  # Ivory Paper.
             choose(session, 'Tab')
             choose(session, '3')  # Forest / Ivory armies.

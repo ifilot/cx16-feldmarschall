@@ -83,6 +83,7 @@ static void enter(uint8_t next) {
         case SCENE_DEPLOY: deploy_enter(0); break;
         case SCENE_PREPARE: deploy_enter(1); break;
         case SCENE_PLAY:   play_enter(); break;
+        case SCENE_RESUME: play_resume(); break;
         case SCENE_OPTIONS: options_enter(); break;
         case SCENE_ABOUT: about_enter(); break;
         case SCENE_GAME_SETTINGS: game_settings_enter(); break;
@@ -116,6 +117,7 @@ void main(void) {
             case SCENE_DEPLOY: next = deploy_update(); break;
             case SCENE_PREPARE: next = deploy_update(); break;
             case SCENE_PLAY:   next = play_update(); break;
+            case SCENE_RESUME: next = play_update(); break;
             case SCENE_OPTIONS: next = options_update(); break;
             case SCENE_ABOUT: next = about_update(); break;
             case SCENE_GAME_SETTINGS: next = game_settings_update(); break;

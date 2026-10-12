@@ -38,6 +38,7 @@
 #define SCENE_PREPARE   4
 #define SCENE_ABOUT     5
 #define SCENE_GAME_SETTINGS 6
+#define SCENE_RESUME    7       // the play scene, continuing the saved game
 #define SCENE_STAY      0xFF
 
 #define BUTTON_LEFT     0x01

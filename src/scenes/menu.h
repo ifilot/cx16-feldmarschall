@@ -25,7 +25,7 @@
 
 /**
  * @brief A simple select screen: a plate over the empty board that lists
- *        the scenes, chosen with the mouse or the keys 1 and 2
+ *        the scenes, chosen with the mouse or the keys 1 to 5
  */
 void menu_enter(void);
 

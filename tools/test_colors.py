@@ -99,7 +99,7 @@ def main():
         session = start(directory)
         try:
             assert palette(session) == expected(0, 0)
-            choose(session, '3')
+            choose(session, '4')
             original = palette(session)
             fonts = read_vram(session, 0x10000, 206 * 32)
             for field in range(len(FIELDS)):
@@ -129,16 +129,24 @@ def main():
             choose(session, '7')
             assert palette(session) == expected(last_field, len(ARMIES) - 1)
             click(session, 500, 224)  # Polished tiles: fourth field
-            click(session, 500, 360)  # Mint / rose: fifth army scheme
+            click(session, 500, 328)  # Mint / rose: fifth army scheme
             assert palette(session) == expected(3, 4)
             check_art(session, 3)
             blue_attr = read_vram(session, 0x0C000 + 2 * 256 + 2 * 2 + 1, 1)[0]
             red_attr = read_vram(session, 0x0C000 + 42 * 256 + 2 * 2 + 1, 1)[0]
             assert blue_attr >> 4 == 2 and red_attr >> 4 == 1
+            # Modern rank numbers replace only the tokens, on the board and as sprites.
+            choose(session, 'Tab')
+            choose(session, '2')
+            check_resource(session, 'RANKTIL.BIN', 0x10000 + 206 * 32)
+            check_resource(session, 'RANKSPR.BIN', 0x18000)
+            assert read_vram(session, 0x10000, 206 * 32) == fonts
+            click(session, 500, 384)  # Classic numbering
+            check_art(session, 3)
             session.move_mouse(420, 420)
             session.shot(ROOT / 'docs/options.png')
             click(session, 476, 440)
-            assert (directory / 'COLORS.DAT').read_bytes() == b'CLR5\x03\x04\xa2'
+            assert (directory / 'COLORS.DAT').read_bytes() == b'CLR6\x03\x04\x00\xa2'
             choose(session, '1')
             session.move_mouse(452, 172)
             session.button(True)
@@ -197,6 +205,22 @@ def main():
                 check_art(session, migrated)
             finally:
                 session.close()
+        # The modern numbering survives a restart.
+        (directory / 'COLORS.DAT').write_bytes(b'CLR6\x01\x02\x01' + bytes([0xA5 ^ 1 ^ 2 ^ 1]))
+        session = start(directory)
+        try:
+            assert palette(session) == expected(1, 2)
+            check_resource(session, 'RANKTIL.BIN', 0x10000 + 206 * 32)
+            check_resource(session, 'RANKSPR.BIN', 0x18000)
+        finally:
+            session.close()
+        (directory / 'COLORS.DAT').write_bytes(b'CLR5\x01\x02\xa6')
+        session = start(directory)
+        try:
+            assert palette(session) == expected(1, 2), 'CLR5 preferences did not migrate'
+            check_art(session, 1)
+        finally:
+            session.close()
         (directory / 'COLORS.DAT').write_bytes(b'CLR5\xff\x02\x58')
         session = start(directory)
         try:

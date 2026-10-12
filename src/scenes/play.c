@@ -28,10 +28,16 @@
 #include "rules.h"
 #include "setup.h"
 #include "ai.h"
+#include "store.h"
 #include "boardview.h"
+#include "dialog.h"
 #include "drag.h"
 #include "panel.h"
 #include "video.h"
+
+#if TRAY_SLOTS != ARMY_SIZE
+#error A saved game keeps one tray byte per piece of an army
+#endif
 
 // states of a turn
 #define RED_TURN        0           // waiting for the player to pick up a piece
@@ -42,6 +48,7 @@
 #define FALLING         5           // the loser flies off: Blue's to the tray
 #define RESCUE          7
 #define GAME_OVER       6
+#define PAUSED          8           // the game menu covers the board
 
 #define THINK_FRAMES    20
 #define SLIDE_FRAMES    18
@@ -56,6 +63,20 @@
 #define BLUE_WINS       2
 
 #define STALE           0xFE        // forces the next mark() to redraw
+
+// the game menu: a plate centred over the board
+#define PAUSE_W         34
+#define PAUSE_H         19
+#define PAUSE_COL       ((BOARD_X + BOARD_SIZE * SQUARE / 2) / 8 - PAUSE_W / 2)
+#define PAUSE_ROW       ((BOARD_Y + BOARD_SIZE * SQUARE / 2) / 8 - PAUSE_H / 2)
+#define PAUSE_ENTRY_COL (PAUSE_COL + 8)
+#define PAUSE_ENTRY_ROW (PAUSE_ROW + 6)
+#define PAUSE_PITCH     3
+#define PAUSE_ENTRIES   3
+#define PAUSE_STATUS    (PAUSE_ROW + 15)
+#define PAUSE_RESUME    0
+#define PAUSE_SAVE      1
+#define PAUSE_QUIT      2
 
 static uint8_t state, timer, winner;
 static uint8_t blue;                // Blue is to move
@@ -82,6 +103,16 @@ static uint8_t truth[SQUARES];      // the board, while Blue looks at its view
 static uint8_t saved_tray[TRAY_SLOTS];
 static uint8_t arrival = NOWHERE, rescue_type;
 static void finish_turn(void);
+
+static uint8_t menu_wanted;         // Escape was pressed; open the menu when the turn allows
+static uint8_t paused_state, pause_choice;
+static uint8_t saved[GAME_EXTRA];   // the scene's part of a saved game: tray, turn, side
+
+static const char* const pause_entries[PAUSE_ENTRIES] = {
+    "1  RESUME",
+    "2  SAVE GAME",
+    "3  QUIT TO MENU",
+};
 
 /**
  * @brief Let Blue choose a move from what Blue knows
@@ -166,6 +197,10 @@ static void battle_text(uint8_t a, uint8_t d, uint8_t outcome) {
         strcat(line, piece_names[d]);
         if(outcome == BATTLE_BOTH) strcat(line, " FALL");
     }
+}
+
+static void move_bar(void) {
+    panel_bar("YOUR MOVE: DRAG ONE OF YOUR PIECES", "ESCAPE: GAME MENU");
 }
 
 static void game_over(void) {
@@ -370,6 +405,17 @@ static void red_turn(void) {
     }
 }
 
+/**
+ * @brief Return the lifted piece to its square; Red picks again
+ */
+static void put_back(void) {
+    drag_end();
+    view_square(move_from);
+    mark(NOWHERE);
+    marked = STALE;
+    state = RED_TURN;
+}
+
 static void red_drag(void) {
     uint8_t sq;
 
@@ -379,15 +425,8 @@ static void red_drag(void) {
     mark(sq);
     if(input.buttons & BUTTON_LEFT) return;
     clear_markers();
-    if(sq == NOWHERE) {             // not a legal move: put the piece back
-        drag_end();
-        view_square(move_from);
-        mark(NOWHERE);
-        marked = STALE;
-        state = RED_TURN;
-    } else {
-        start_move(sq);
-    }
+    if(sq == NOWHERE) put_back();   // not a legal move
+    else start_move(sq);
 }
 
 static void blue_slide(void) {
@@ -405,18 +444,15 @@ static void rescue_close(void) {
     for(sq=0; sq<SQUARES; sq++) if(board_home(sq, 0)) view_square(sq);
     memcpy(tray, saved_tray, sizeof(saved_tray));
     panel_tray_draw();
-    panel_bar("YOUR MOVE: DRAG ONE OF YOUR PIECES", "ESCAPE: MENU");
+    move_bar();
     next_turn();
 }
 
 static void rescue_update(void) {
     uint8_t slot, sq, type;
     if(input.key == KEY_RETURN || input.key == KEY_ESCAPE) { rescue_close(); return; }
-    if(input.key >= '1' && input.key <= '9') {
-        type = input.key - '1';
-        if(rules_lost[0][type]) rescue_type = type;
-    }
-    if((input.key == 'S' || input.key == 's') && rules_lost[0][PIECE_SPY]) rescue_type = PIECE_SPY;
+    type = piece_rank_key(input.key);
+    if(type < PIECE_TYPES && rules_lost[0][type]) rescue_type = type;
     if(input.pressed & BUTTON_LEFT) {
         slot = panel_slot_at(input.x, input.y);
         if(slot != NOWHERE && IS_PIECE(tray[slot]) && PIECE_TYPE(tray[slot]) < PIECE_BOMB) rescue_type = PIECE_TYPE(tray[slot]);
@@ -468,35 +504,166 @@ static void finish_turn(void) {
     for(sq=RED_HOME0; sq<SQUARES; sq++) if(board[sq] == CELL_EMPTY) view_marker(sq);
     panel_info("RESCUE A PIECE", TEXT_DEEP_RED, "OPTIONAL REINFORCEMENT");
     panel_clear_selected();
-    panel_bar("CLICK A CASUALTY, THEN AN EMPTY HOME SQUARE", "1-9 / S: SELECT RANK  ENTER OR ESCAPE: SKIP");
+    panel_bar("CLICK A CASUALTY, THEN AN EMPTY HOME SQUARE",
+              piece_ranking == RANKING_MODERN ? "0-9: SELECT RANK  ENTER OR ESCAPE: SKIP"
+                                              : "1-9 / S: SELECT RANK  ENTER OR ESCAPE: SKIP");
     rescue_type = NOWHERE;
     state = RESCUE;
+}
+
+/* ------------------------------------------------------------ game menu */
+
+static void pause_draw(void) {
+    uint8_t i, row;
+
+    for(i=0; i<PAUSE_ENTRIES; i++) {
+        row = PAUSE_ENTRY_ROW + i * PAUSE_PITCH;
+        video_text_plate(PAUSE_ENTRY_COL - 2, row, i == pause_choice ? ">" : " ", TEXT_DEEP_RED);
+        video_text_plate(PAUSE_ENTRY_COL, row, pause_entries[i], i == pause_choice ? TEXT_DEEP_RED : TEXT_INK);
+    }
+}
+
+/**
+ * @brief The entry under the pointer, or PAUSE_ENTRIES if none
+ */
+static uint8_t pause_entry_at(int16_t x, int16_t y) {
+    uint8_t i;
+    int16_t top;
+
+    if(x < PAUSE_COL * 8 || x >= (PAUSE_COL + PAUSE_W) * 8) return PAUSE_ENTRIES;
+    for(i=0; i<PAUSE_ENTRIES; i++) {
+        top = (PAUSE_ENTRY_ROW + i * PAUSE_PITCH) * 8;
+        if(y >= top - 8 && y < top + 16) return i;
+    }
+    return PAUSE_ENTRIES;
+}
+
+/**
+ * @brief Open the game menu; the game stands still until it closes
+ *
+ * Only between turns (Red to pick a piece, or Blue about to think), so a
+ * saved game never holds a move half done.
+ */
+static void pause_open(void) {
+    menu_wanted = 0;
+    paused_state = state;
+    state = PAUSED;
+    pause_choice = PAUSE_RESUME;
+    mark(NOWHERE);
+    dialog_plate(PAUSE_COL, PAUSE_ROW, PAUSE_W, PAUSE_H);
+    dialog_centred(PAUSE_COL, PAUSE_W, PAUSE_ROW + 3, "GAME MENU", TEXT_UI_RED);
+    pause_draw();
+    panel_bar("GAME PAUSED: CLICK AN OPTION, OR PRESS 1, 2 OR 3", "ESCAPE: RESUME THE GAME");
+}
+
+static void pause_close(void) {
+    view_board();                   // the plate covered part of the board
+    state = paused_state;
+    marked = STALE;
+    move_bar();
+}
+
+static void pause_save(void) {
+    memcpy(saved, tray, TRAY_SLOTS);
+    saved[TRAY_SLOTS] = (uint8_t)turn;
+    saved[TRAY_SLOTS + 1] = turn >> 8;
+    saved[TRAY_SLOTS + 2] = blue;
+    video_text_plate(PAUSE_COL + 1, PAUSE_STATUS, "                                ", TEXT_INK);
+    if(store_game_write(saved)) {
+        dialog_centred(PAUSE_COL, PAUSE_W, PAUSE_STATUS, "GAME SAVED", TEXT_BROWN);
+    } else {
+        dialog_centred(PAUSE_COL, PAUSE_W, PAUSE_STATUS, "SAVING FAILED: CHECK THE DISK", TEXT_DEEP_RED);
+    }
+}
+
+static uint8_t pause_update(void) {
+    uint8_t hover = pause_entry_at(input.x, input.y), old = pause_choice, pick = PAUSE_ENTRIES;
+
+    if(hover < PAUSE_ENTRIES) {
+        pause_choice = hover;
+        if(input.pressed & BUTTON_LEFT) pick = hover;
+    }
+    switch(input.key) {
+        case '1':        pick = PAUSE_RESUME; break;
+        case '2':        pick = PAUSE_SAVE; break;
+        case '3':        pick = PAUSE_QUIT; break;
+        case KEY_ESCAPE: pick = PAUSE_RESUME; break;
+        case KEY_RETURN: pick = pause_choice; break;
+        case KEY_UP:     if(pause_choice > 0) pause_choice--; break;
+        case KEY_DOWN:   if(pause_choice < PAUSE_ENTRIES - 1) pause_choice++; break;
+    }
+    if(pick < PAUSE_ENTRIES) pause_choice = pick;
+    if(pause_choice != old) pause_draw();
+    switch(pick) {
+        case PAUSE_RESUME: pause_close(); break;
+        case PAUSE_SAVE:   pause_save(); break;
+        case PAUSE_QUIT:   return SCENE_MENU;
+    }
+    return SCENE_STAY;
+}
+
+/* ------------------------------------------------------------ scene */
+
+/**
+ * @brief Show the board and start the turn of the side to move
+ */
+static void begin(void) {
+    view_show_all = 0;
+    view_board();
+    panel_tray_draw();
+    move_bar();
+    panel_selected(CELL_EMPTY);
+    winner = NOBODY;
+    arrival = NOWHERE;
+    target_count = 0;
+    menu_wanted = 0;
+    ai_reset();
+    marked = STALE;
+    if(blue) {
+        state = BLUE_THINK;
+        timer = THINK_FRAMES;
+    } else {
+        state = RED_TURN;
+    }
+    show_turn();
 }
 
 void play_enter(void) {
     board_clear();
     setup_random(1);
     setup_load();                  // Start accepts only a complete, player-approved setup
-    view_show_all = 0;
-    view_board();
     panel_tray_fallen(1);
-    panel_tray_draw();
-    panel_bar("YOUR MOVE: DRAG ONE OF YOUR PIECES", "ESCAPE: MENU");
-    panel_selected(CELL_EMPTY);
-    winner = NOBODY;
-    arrival = NOWHERE;
-    target_count = 0;
-    ai_reset();
     rules_reset();
     turn = 1;
     blue = 0;
-    marked = STALE;
-    state = RED_TURN;
-    show_turn();
+    begin();
+}
+
+uint8_t play_load(void) {
+    return store_game_read(saved);
+}
+
+void play_resume(void) {
+    memcpy(tray, saved, TRAY_SLOTS);
+    turn = saved[TRAY_SLOTS] | (saved[TRAY_SLOTS + 1] << 8);
+    blue = saved[TRAY_SLOTS + 2];
+    begin();
 }
 
 uint8_t play_update(void) {
-    if(input.key == KEY_ESCAPE && state != RESCUE) return SCENE_MENU;
+    if(state == PAUSED) return pause_update();
+    if(input.key == KEY_ESCAPE) {
+        if(state == GAME_OVER) return SCENE_MENU;
+        if(state == RED_DRAG) {
+            clear_markers();
+            put_back();
+        }
+        if(state != RESCUE) menu_wanted = 1;   // there, Escape skips the rescue
+    }
+    if(menu_wanted && (state == RED_TURN || state == BLUE_THINK)) {
+        pause_open();
+        return SCENE_STAY;
+    }
     switch(state) {
         case RESCUE:
             rescue_update();

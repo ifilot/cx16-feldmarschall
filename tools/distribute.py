@@ -7,8 +7,8 @@ Writes build/dist/FELDMARSCHALL/ and build/dist/FELDMARSCHALL.ZIP. The runtime f
 are the game itself, a copy named AUTOBOOT.X16 that the X16 starts on
 power-up, and every file the game loads into VRAM (found in the load_vram
 calls of src/ui/video.c, so a new resource cannot be forgotten). The test
-programs (BRIDGE.PRG), saved deployments (DEPLOY.DAT), and color preferences
-(COLORS.DAT) stay out. Entries carry a fixed date, so the same build gives the same ZIP.
+programs (BRIDGE.PRG), saved deployments (DEPLOY.DAT), the saved game
+(GAME.DAT) and appearance preferences (COLORS.DAT) stay out. Entries carry a fixed date, so the same build gives the same ZIP.
 """
 import hashlib
 import re
@@ -43,13 +43,16 @@ Press Enter at the splash screen to open the menu.
 Choose 1 MANAGE SETUPS to create, load or save army arrangements; Back
 returns to the menu. Choose 2 PLAY AGAINST THE COMPUTER to deploy your
 game rules, then deploy your army before a match. Start is enabled when all 40 pieces are on the board.
-Choose 3 OPTIONS to select field styles and army colors independently.
-Choose 4 ABOUT for the author, repository, version, and compilation date.
+Choose 3 CONTINUE SAVED GAME to resume the game saved in GAME.DAT.
+Choose 4 OPTIONS to select field styles, army colors and rank numbers
+(classic: 1 = Marshal, S = Spy; modern: 1 = Spy, 10 = Marshal).
+Choose 5 ABOUT for the author, repository, version, and compilation date.
 Click for a live preview. Tab switches groups; Up/Down or numbers select.
 Enter, Escape or Back saves the choices in COLORS.DAT and opens the menu.
 The game is played with the mouse. Deploy your army by dragging pieces
 from the tray onto your four home rows, or load one of ten classic
-deployments; then play against the computer. Escape returns to the menu.
+deployments; then play against the computer. Escape opens the game menu:
+resume, save the game to GAME.DAT, or quit to the main menu.
 Deployments you save go into DEPLOY.DAT, which the game creates here.
 
 FELDMARS.PRG is the game; the .BIN files hold its graphics and palette.

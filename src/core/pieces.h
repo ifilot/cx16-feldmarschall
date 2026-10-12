@@ -58,8 +58,29 @@
 #define IS_PIECE(cell)      ((cell) < CELL_LAKE)
 #define PIECE_TYPE(cell)    ((cell) & CELL_TYPE)
 
+/*
+ * How ranks are numbered on screen. Classic: 1 = Marshal ... 9 = Scout,
+ * S = Spy. Modern: 1 = Spy, 2 = Scout ... 10 = Marshal. Bombs and flags
+ * carry no number. The piece types themselves never change.
+ */
+#define RANKING_CLASSIC     0
+#define RANKING_MODERN      1
+
 extern const uint8_t piece_counts[PIECE_TYPES];
-extern const char piece_glyphs[PIECE_TYPES + 1];
+extern const char piece_glyphs[PIECE_TYPES + 1];   // classic, for files and protocols
 extern const char* const piece_names[PIECE_TYPES];
+extern uint8_t piece_ranking;
+
+/**
+ * @brief The rank of a piece type as shown, e.g. "10"; "" for bombs and flags
+ */
+const char* piece_rank(uint8_t type);
+
+/**
+ * @brief The piece type a key selects in the current numbering
+ *
+ * @return a piece type below PIECE_BOMB, or PIECE_TYPES for no rank
+ */
+uint8_t piece_rank_key(uint8_t key);
 
 #endif

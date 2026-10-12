@@ -22,9 +22,11 @@
 #define _STORE_H
 
 #include <stdint.h>
+#include "pieces.h"
 
 #define STORE_SLOTS         10
 #define NAME_LENGTH         16
+#define GAME_EXTRA          (ARMY_SIZE + 3)     // the play scene's: tray, turn, side to move
 
 /**
  * @brief Read the player's deployments from DEPLOY.DAT
@@ -58,5 +60,24 @@ void store_load(uint8_t slot);
  * @brief Keep Red's home rows in a slot under a name (in memory; see store_write)
  */
 void store_save(uint8_t slot, const char* name);
+
+/**
+ * @brief Write the game in progress to GAME.DAT, replacing the file
+ *
+ * The file keeps the board, the rules' state and GAME_EXTRA bytes of the
+ * play scene.
+ *
+ * @return 1 if the drive reports success
+ */
+uint8_t store_game_write(const uint8_t* extra);
+
+/**
+ * @brief Read GAME.DAT back: the board, the rules' state and the scene's bytes
+ *
+ * Nothing changes when the file is missing or damaged.
+ *
+ * @return 1 if a saved game was restored
+ */
+uint8_t store_game_read(uint8_t* extra);
 
 #endif

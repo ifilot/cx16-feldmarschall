@@ -10,7 +10,9 @@ Two sets of portraits exist; PORTRAITS picks the one the game uses.
 
 Each portrait is set into a token seen from above: an ink outline,
 a bevelled army-coloured rim, the portrait on a deep army-coloured ground,
-and the rank in the top-left corner (not on bombs and flags). Tokens have no
+and the rank in the top-left corner (not on bombs and flags). The rank
+follows one of two numberings (RANKINGS): classic, 1 = Marshal to 9 =
+Scout and S = Spy, or modern, 1 = Spy to 10 = Marshal. Tokens have no
 grid edge; the board tiles add it (see build_graphics.py), the drag sprites
 do not.
 
@@ -137,10 +139,34 @@ def load_portraits():
     return [out[:, i * size:(i + 1) * size] for i in range(len(PIECES))]
 
 
-def token(face=None, rank=None):
+# The marshal's modern "10" in one 8-pixel-high cell: a narrow one
+# beside the font's zero, 11 pixels wide, clear of the portrait.
+NARROW_ONE = [
+    '........',
+    '###.....',
+    '.##.....',
+    '.##.....',
+    '.##.....',
+    '.##.....',
+    '.##.....',
+    '###.....',
+]
+
+
+def rank_mask(rank):
+    """Boolean mask of a rank label: one font glyph, or the compact "10"."""
+    if rank == '10':
+        one = np.array([[ch == '#' for ch in row] for row in NARROW_ONE])
+        return np.hstack((one[:, :4], glyph8(ord('0')) != 0))
+    return glyph8(ord(rank)) != 0
+
+
+def token(face=None, rank=None, insignia=None):
     """A 40x40 square (palette indices, 0 = transparent) with a token on it.
 
     `face` is a 30x30 portrait; without one the token shows its back.
+    `rank` is the label in the top-left corner and `insignia` the classic
+    rank whose shoulder board is drawn (see INSIGNIA).
     """
     sq = np.zeros((SQUARE, SQUARE), np.uint8)
     t0, t1 = TOKEN0, TOKEN1
@@ -161,16 +187,18 @@ def token(face=None, rank=None):
         window[face >= 0] = face[face >= 0]
     if rank is not None:
         # cream rank with an ink shadow in the window's free top-left corner
-        glyph = glyph8(ord(rank)) != 0
+        glyph = rank_mask(rank)
+        h, w = glyph.shape
         x, y = RANK_X, RANK_Y
-        sq[y + 1:y + 9, x + 1:x + 9][glyph] = INK
-        sq[y:y + 8, x:x + 8][glyph] = CREAM
-        if rank in INSIGNIA:
-            draw_insignia(sq, INSIGNIA[rank])
+        sq[y + 1:y + h + 1, x + 1:x + w + 1][glyph] = INK
+        sq[y:y + h, x:x + w][glyph] = CREAM
+    if insignia in INSIGNIA:
+        draw_insignia(sq, INSIGNIA[insignia])
     return sq
 
 
-# Rank insignia in the window's bottom-left corner, after the German
+# Rank insignia in the window's bottom-left corner, keyed by classic rank
+# whatever the numbering, after the German
 # shoulder boards: braid for generals and staff officers, pips for the
 # company officers, a chevron for the sergeant, the pioneers' pick and a
 # double chevron for the scout, who moves any distance. A spy wears none.
@@ -285,19 +313,28 @@ def draw_crest(sq):
             sq[a, b] = RED
 
 
-def build_tokens():
+# The label of each ranked piece, in PIECES order, per numbering;
+# src/core/pieces.c (piece_rank) repeats them.
+RANKINGS = {
+    'classic': [rank for _, rank, _, _ in PIECES[:10]],
+    'modern': [str(10 - i) for i in range(10)],
+}
+
+
+def build_tokens(ranking='classic'):
     """Return the 13 token squares: the twelve ranks in PIECES order, then the back."""
     if PORTRAITS == 'prussian':
         faces = load_portraits()
     else:
         cards = load_cards()
+    labels = RANKINGS[ranking]
     tokens = []
     for i, (label, rank, _, _) in enumerate(PIECES):
-        ranked = rank.isdigit() or rank == 'S'      # bombs and flags show no rank
+        ranked = i < len(labels)                    # bombs and flags show no rank
         if PORTRAITS == 'prussian':
             face = faces[i]
         else:
             face = portrait(cards[label], FIGURE_SHIFT if ranked else 0)
-        tokens.append(token(face, rank if ranked else None))
+        tokens.append(token(face, labels[i] if ranked else None, rank))
     tokens.append(token())
     return tokens

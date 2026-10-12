@@ -13,19 +13,23 @@ continue to the menu.
 
 ![Splash screen](assets/splash/feldmarschall.png)
 
-The main menu offers **Manage setups**, **Play against the computer**, and
-**Options**, and **About**. Playing begins with game settings, followed by
-army preparation: arrange or load your army, then choose **Start**.
+The main menu offers **Manage setups**, **Play against the computer**,
+**Continue saved game**, **Options**, and **About**. Playing begins with
+game settings, followed by army preparation: arrange or load your army,
+then choose **Start**.
 
 ![Select screen](docs/menu.png)
 
-Choose **4 ABOUT** for the program name, author, GitHub repository, version,
-and compilation date. The version identifies the Git revision (or release
-tag); the date is generated at build time. Enter, Escape, or Back returns
-to the menu.
+Choose **5 ABOUT** for the program name, author, GitHub repository, version,
+and compilation date. The version (currently **v0.1.0**) is set in
+`tools/build_info.py`; the date is generated at build time. Enter, Escape,
+or Back returns to the menu.
 
-Choose **3 OPTIONS** to select independent field styles and army colors in
-the right-hand tray area. Click a profile to preview it on the board, or
+Choose **3 CONTINUE SAVED GAME** to pick up the game saved from the game
+menu (see below). Without a saved game the info plate says so.
+
+Choose **4 OPTIONS** to select independent field styles, army colors and
+rank numbers in the right-hand tray area. Click a profile to preview it on the board, or
 use **Tab** to switch groups and **Up/Down** or the number keys to select.
 **Enter**, **Escape**, or **Back** returns to the menu and saves the choices
 in `COLORS.DAT`. **Summer Campaign** and **Muted Campaign** retain the original
@@ -37,6 +41,11 @@ at the same game coordinates. Army colors are
 **Mint/Rose**, and **Cyan/Orange**. The last three draw inspiration from
 syntax-highlighting colors. All pieces use
 the original square frames and portraits.
+
+**Rank numbers** chooses how the tokens, the info plate and the rescue keys
+number the ranks: **Classic** counts down from **1** Marshal to **9** Scout
+with **S** for the Spy; **Modern** counts up from **1** Spy and **2** Scout
+to **10** Marshal. Bombs and flags carry no number in either.
 
 Field selections affect only the board surface and its grid. The frame,
 coordinates, sidebar, tray, dialogs, and controls keep the classic UI style.
@@ -143,6 +152,16 @@ back row guarded by bombs.
   left.
 * Capture the flag, or leave the opponent without a move, to win. Blue's
   army is then revealed; **Return** opens game settings for a new game.
+* **Escape** opens the game menu over the board and pauses the game:
+  **1 Resume** (or Escape again), **2 Save game**, which writes the game
+  to `GAME.DAT` and keeps the menu open, and **3 Quit to menu**. Pressed
+  during the computer's move or a battle, the menu opens as soon as that
+  move is over, so a saved game never holds half a move. A saved game
+  keeps the board, both armies' casualties, the variants in play and the
+  turn; **3 Continue saved game** in the main menu resumes it. Once a game
+  is over, Escape returns straight to the main menu.
+
+![Game menu](docs/game-menu.png)
 
 ![Playing against the computer](docs/play.png)
 
@@ -150,8 +169,8 @@ back row guarded by bombs.
 
 Pieces move one square up, down, left or right, never into a lake. Scouts
 move any distance in a straight line and may strike at the end of it (the
-modern rule). Bombs and flags never move. In a battle the lower rank number
-wins and equal ranks both fall. A miner defuses a bomb, which defeats every
+modern rule). Bombs and flags never move. In a battle the higher rank wins
+(the lower number in the classic numbering) and equal ranks both fall. A miner defuses a bomb, which defeats every
 other attacker; the spy defeats the marshal when it attacks, and loses every
 other battle. A piece may not move more than five times in a row between
 the same two squares, whatever the opponent does (the two-squares rule of
@@ -171,7 +190,8 @@ The Game Settings screen offers these variants from the
 | Rescue | An eligible piece reaching the enemy back row can restore one captured piece to an empty home square. Two rescues per army, once per rescuing piece; Scouts cannot rescue and Bombs cannot be restored. |
 
 During a player rescue, the tray temporarily shows your eligible casualties.
-Click a casualty (or press **1–9** / **S**), then an empty square in your
+Click a casualty (or press its rank: **1–9** / **S**, or **0–9** with
+modern numbers, 0 for the Marshal), then an empty square in your
 first four rows. **Return** or **Escape** skips the optional rescue.
 The computer chooses its own reinforcement and return square. A rescued
 piece retains disclosure only if its captured rank was known.
@@ -204,7 +224,8 @@ randomness keeps games apart.
 
 Red (the player) sets up on rows 1–4 at the bottom and Blue on rows 7–10.
 The ranks use the classic European numbering, from **1** Marshal to
-**9** Scout, plus **S** Spy, **B** Bomb and **F** Flag. Each army has 40
+**9** Scout, plus **S** Spy, **B** Bomb and **F** Flag, unless Options
+selects the modern one (1 Spy to 10 Marshal). Each army has 40
 pieces, one per tray compartment.
 
 * **Title plate**: the masthead *Feldmarschall* in Fraktur, in the deep red
@@ -226,7 +247,11 @@ pieces, one per tray compartment.
 Every token is a 40 × 40 square: a bevelled rim in army colours and a
 30 × 30 portrait. Ranked figures sit right of centre, which leaves the
 top-left corner free for the rank. Bombs and flags show no rank and are
-centred. Pieces Red hasn't identified show their back, the black cross pattée of the
+centred. The build draws every token twice: `L1TILES.BIN` and
+`SPRITES.BIN` carry the classic numbers, `RANKTIL.BIN` and `RANKSPR.BIN`
+the modern ones, which the game loads over them when that numbering is
+selected. The Marshal's modern **10** squeezes a narrow one beside the
+zero to stay clear of the portrait. Pieces Red hasn't identified show their back, the black cross pattée of the
 Iron Cross with a gold rim.
 
 The portraits are heads only, in ink, cream and the army colour, which
@@ -336,7 +361,7 @@ src/
     rules       legal moves and battles
     setup       random setups; the player's deployment, kept between scenes
     presets     ten built-in deployments
-    store       the player's named deployments, saved in DEPLOY.DAT
+    store       the player's named deployments (DEPLOY.DAT) and the saved game (GAME.DAT)
     ai          the computer player, working from one army's view
     random      the game's own random numbers (the same on the X16 and the PC)
   ui/           everything on screen
@@ -359,7 +384,8 @@ A scene has an `enter` function, which draws it from scratch, and an
 `update` function, which `main()` calls once per frame. `update` returns
 the scene to switch to, or `SCENE_STAY`. Before entering a scene, `main()`
 clears layer 1 and hides the sprites; layer 0 is shared by all scenes.
-Escape returns to the menu, unless a dialog is open.
+Escape returns to the menu, unless a dialog is open; in a game it opens
+the game menu.
 Game state that outlives a scene (the player's deployment) lives in
 `core/`.
 

@@ -189,3 +189,33 @@ uint8_t rules_rescue(uint8_t sq, uint8_t type, uint8_t destination) {
     rules_rescues[army]++;
     return 1;
 }
+
+void rules_state_save(uint8_t* out) {
+    *out++ = game_rules;
+    memcpy(out, rules_lost, sizeof(rules_lost));
+    out += sizeof(rules_lost);
+    memcpy(out, rules_known_lost, sizeof(rules_known_lost));
+    out += sizeof(rules_known_lost);
+    memcpy(out, rules_rescues, sizeof(rules_rescues));
+    out += sizeof(rules_rescues);
+    memcpy(out, rescued, sizeof(rescued));
+    out += sizeof(rescued);
+    memcpy(out, shuttle_from, 2);
+    memcpy(out + 2, shuttle_to, 2);
+    memcpy(out + 4, shuttle_count, 2);
+}
+
+void rules_state_load(const uint8_t* in) {
+    game_rules = *in++;
+    memcpy(rules_lost, in, sizeof(rules_lost));
+    in += sizeof(rules_lost);
+    memcpy(rules_known_lost, in, sizeof(rules_known_lost));
+    in += sizeof(rules_known_lost);
+    memcpy(rules_rescues, in, sizeof(rules_rescues));
+    in += sizeof(rules_rescues);
+    memcpy(rescued, in, sizeof(rescued));
+    in += sizeof(rescued);
+    memcpy(shuttle_from, in, 2);
+    memcpy(shuttle_to, in + 2, 2);
+    memcpy(shuttle_count, in + 4, 2);
+}

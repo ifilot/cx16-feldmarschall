@@ -36,8 +36,23 @@
  * compartment of the tray, which thus shows what Blue has lost, and Red's
  * below the screen. Blue's moves slide across the board. Capturing the
  * flag, or leaving the opponent without a move, wins. Return plays again.
+ *
+ * Escape opens the game menu over the board, between turns: resume, save
+ * the game to GAME.DAT, or quit to the main menu.
  */
 void play_enter(void);
+
+/**
+ * @brief Read the saved game; on success SCENE_RESUME continues it
+ *
+ * @return 0 if there is no saved game, or it is damaged
+ */
+uint8_t play_load(void);
+
+/**
+ * @brief Continue the game read by play_load
+ */
+void play_resume(void);
 
 uint8_t play_update(void);
 

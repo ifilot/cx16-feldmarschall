@@ -7,6 +7,8 @@ writes to OUTDIR
     L0MAP.BIN     layer-0 map, 128 x 60 entries
     L1TILES.BIN   layer-1 tiles (grid, marker, font, piece tokens), 4 bpp
     SPRITES.BIN   64x64 selection cursor, 4 bpp
+    RANKTIL.BIN   the token tiles of L1TILES.BIN with modern rank numbers
+    RANKSPR.BIN   the lifted tokens of SPRITES.BIN with modern rank numbers
     PALETTE.BIN   256 VERA palette entries
     gfx.h         geometry, VRAM map and tile numbers for the C code
     color_profiles.h  selectable field and army palettes for the C code
@@ -286,6 +288,17 @@ def plate_tile(row, col):
     return t
 
 
+def token_tiles(tokens):
+    """The tiles of the tokens, 25 each; a token on the board carries its grid edge."""
+    tiles = []
+    for square in tokens:
+        square = square.copy()
+        square[0, :] = INK
+        square[:, 0] = INK
+        tiles += square_tiles(square)
+    return tiles
+
+
 def build_layer1(tokens):
     tiles = [np.zeros(64, np.uint8)]                    # L1_EMPTY
     corner = np.zeros((8, 8), np.uint8)
@@ -310,11 +323,7 @@ def build_layer1(tokens):
     assert len(tiles) == L.L1_FONT_PLATE
     tiles += [np.where(glyph8(code) != 0, INK, LIGHT).ravel() for code in range(32, 128)]
     assert len(tiles) == L.L1_PIECES
-    for square in tokens:
-        square = square.copy()          # a token on the board carries its grid edge
-        square[0, :] = INK
-        square[:, 0] = INK
-        tiles += square_tiles(square)
+    tiles += token_tiles(tokens)
     if len(tiles) > 1024:
         raise ValueError(f'layer 1 needs {len(tiles)} tiles; VERA allows 1024')
     return np.array(tiles)
@@ -375,9 +384,13 @@ def build_pointer():
                     np.uint8)
 
 
+def token_sprites(tokens):
+    return b''.join(tile_bytes(lifted(square)) for square in tokens)
+
+
 def build_sprites(tokens):
     """SPRITES.BIN: the lifted tokens, the brackets and the pointer, back to back."""
-    data = b''.join(tile_bytes(lifted(square)) for square in tokens)
+    data = token_sprites(tokens)
     assert L.VRAM_TOKEN_SPRITES + len(data) == L.VRAM_CURSOR
     data += tile_bytes(build_cursor())
     assert L.VRAM_SPRITES + len(data) == L.VRAM_POINTER
@@ -444,12 +457,15 @@ def main():
     layer0 = build_layer0()
     l0_tiles, l0_map, rebuilt = pack_layer0(layer0, rng)
     tokens = build_tokens()
+    modern = build_tokens('modern')
     l1_tiles = build_layer1(tokens)
     files = {
         'L0TILES.BIN': (L.VRAM_L0_TILES, tile_bytes(l0_tiles)),
         'L0MAP.BIN': (L.VRAM_L0_MAP, map_bytes(l0_map)),
         'L1TILES.BIN': (L.VRAM_L1_TILES, tile_bytes(l1_tiles)),
         'SPRITES.BIN': (L.VRAM_SPRITES, build_sprites(tokens)),
+        'RANKTIL.BIN': (L.VRAM_L1_TILES + L.L1_PIECES * 32, tile_bytes(token_tiles(modern))),
+        'RANKSPR.BIN': (L.VRAM_TOKEN_SPRITES, token_sprites(modern)),
         'PALETTE.BIN': (L.VRAM_PALETTE, vera_palette()),
     }
     files.update(build_splash())
@@ -507,8 +523,8 @@ def main():
         preview.mkdir(parents=True, exist_ok=True)
         save_png(preview / 'layer0.png', rebuilt)
         save_png(preview / 'layer0-exact.png', layer0)
-        sheet = np.hstack(tokens)
-        save_png(preview / 'tokens.png', sheet)
+        save_png(preview / 'tokens.png', np.hstack(tokens))
+        save_png(preview / 'tokens-modern.png', np.hstack(modern))
 
 
 if __name__ == '__main__':

@@ -7,6 +7,7 @@
 #include "colors.h"
 #include "color_profiles.h"
 #include "gfx.h"
+#include "pieces.h"
 #include "video.h"
 
 #if FIELD_PROFILE_COUNT != FIELD_PROFILES || ARMY_PROFILE_COUNT != ARMY_PROFILES
@@ -16,6 +17,10 @@
 uint8_t colors_field;
 uint8_t colors_armies;
 static uint8_t settings[8];
+
+static const char* const ranking_names[RANKING_COUNT] = {
+    "CLASSIC (MARSHAL 1)", "MODERN (MARSHAL 10)",
+};
 
 static uint8_t drive_ok(void) {
     uint8_t status[2], ok;
@@ -31,22 +36,36 @@ static uint8_t drive_ok(void) {
 
 const char* colors_name(uint8_t group, uint8_t profile) {
     if(group == 0) return field_names[profile];
-    return army_names[profile];
+    if(group == 1) return army_names[profile];
+    return ranking_names[profile];
 }
 
 uint8_t colors_count(uint8_t group) {
     if(group == 0) return FIELD_PROFILES;
-    return ARMY_PROFILES;
+    if(group == 1) return ARMY_PROFILES;
+    return RANKING_COUNT;
 }
 
 uint8_t colors_current(uint8_t group) {
     if(group == 0) return colors_field;
-    return colors_armies;
+    if(group == 1) return colors_armies;
+    return piece_ranking;
 }
 
 uint8_t colors_select(uint8_t group, uint8_t profile) {
-    if(group > 1 || profile >= colors_count(group)) return 0;
+    uint8_t old;
+
+    if(group >= GROUPS || profile >= colors_count(group)) return 0;
     if(profile == colors_current(group)) return 1;
+    if(group == 2) {
+        // the tokens carry their numbers: load the artwork of the other numbering
+        old = piece_ranking;
+        piece_ranking = profile;
+        if(video_ranks()) return 1;
+        piece_ranking = old;
+        video_ranks();
+        return 0;
+    }
     if(group == 0) {
         if(field_art[profile] != field_art[colors_field] && !video_field(field_art[profile])) {
             video_field(field_art[colors_field]);
@@ -97,6 +116,7 @@ uint8_t colors_init(void) {
     uint8_t total = 0;
     int got;
     colors_field = colors_armies = 0;
+    piece_ranking = RANKING_CLASSIC;
     // Startup can leave this logical channel open; reclaim it before reading.
     cbm_close(4);
     if(!cbm_open(4, 8, 4, "COLORS.DAT,S,R")) {
@@ -105,7 +125,13 @@ uint8_t colors_init(void) {
     }
     cbm_close(4);
     drive_ok();
-    if(total == 7 && !memcmp(settings, "CLR5", 4) &&
+    if(total == 8 && !memcmp(settings, "CLR6", 4) &&
+       settings[4] < FIELD_PROFILES && settings[5] < ARMY_PROFILES && settings[6] < RANKING_COUNT &&
+       settings[7] == (uint8_t)(0xA5 ^ settings[4] ^ settings[5] ^ settings[6])) {
+        colors_field = settings[4];
+        colors_armies = settings[5];
+        piece_ranking = settings[6];
+    } else if(total == 7 && !memcmp(settings, "CLR5", 4) &&
        settings[4] < FIELD_PROFILES && settings[5] < ARMY_PROFILES &&
        settings[6] == (uint8_t)(0xA5 ^ settings[4] ^ settings[5])) {
         colors_field = settings[4];
@@ -137,22 +163,24 @@ uint8_t colors_init(void) {
         else if(settings[5] == 2) colors_armies = 2;
     }
     if(field_art[colors_field] && !video_field(field_art[colors_field])) return 0;
+    if(piece_ranking != RANKING_CLASSIC && !video_ranks()) return 0;
     colors_apply();
     return 1;
 }
 
 uint8_t colors_save(void) {
     uint8_t ok;
-    memcpy(settings, "CLR5", 4);
+    memcpy(settings, "CLR6", 4);
     settings[4] = colors_field;
     settings[5] = colors_armies;
-    settings[6] = 0xA5 ^ colors_field ^ colors_armies;
+    settings[6] = piece_ranking;
+    settings[7] = 0xA5 ^ colors_field ^ colors_armies ^ piece_ranking;
     if(cbm_open(4, 8, 4, "@:COLORS.DAT,S,W")) {
         cbm_close(4);
         drive_ok();
         return 0;
     }
-    ok = cbm_write(4, settings, 7) == 7;
+    ok = cbm_write(4, settings, 8) == 8;
     cbm_close(4);
     return drive_ok() && ok;
 }

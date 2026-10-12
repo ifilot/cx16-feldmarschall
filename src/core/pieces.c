@@ -32,3 +32,25 @@ const char* const piece_names[PIECE_TYPES] = {
     "MARSHAL", "GENERAL", "COLONEL", "MAJOR", "CAPTAIN", "LIEUTENANT",
     "SERGEANT", "MINER", "SCOUT", "SPY", "BOMB", "FLAG",
 };
+
+uint8_t piece_ranking;
+
+static const char* const numbers[10] = {"10", "9", "8", "7", "6", "5", "4", "3", "2", "1"};
+
+const char* piece_rank(uint8_t type) {
+    if(type >= PIECE_BOMB) return "";
+    if(piece_ranking == RANKING_MODERN) return numbers[type];
+    if(type == PIECE_SPY) return "S";
+    return numbers[9 - type];
+}
+
+uint8_t piece_rank_key(uint8_t key) {
+    if(key == 'S' || key == 's' || key == 0xD3) return PIECE_SPY;
+    if(piece_ranking == RANKING_MODERN) {
+        if(key == '0') return PIECE_MARSHAL;
+        if(key >= '1' && key <= '9') return '0' + 10 - key;
+    } else if(key >= '1' && key <= '9') {
+        return key - '1';
+    }
+    return PIECE_TYPES;
+}

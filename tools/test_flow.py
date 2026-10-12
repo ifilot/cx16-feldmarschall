@@ -54,6 +54,8 @@ def main():
             session.shot(ROOT / 'docs/menu.png')
             field_map = read_vram(session, 0x8000, 60 * 256)
             palette = read_vram(session, 0x1FA00, 512)
+            choose(session, '3')
+            assert text(session, 9) == 'NO SAVED GAME', 'Continue needs GAME.DAT'
             choose(session, '2')
             assert text(session, 20, 12, 24) == "1  ATTACKER'S ADVANTAGE"
             assert read_vram(session, 0x8000, 60 * 256) == (ROOT / 'src/MNMAP.BIN').read_bytes()
@@ -116,6 +118,23 @@ def main():
             choose(session, 'Return')
             assert text(session, 9) == 'YOUR TURN'
             assert board(session)[60:] == original, 'match must use the approved arrangement'
+            # Escape opens the game menu; a saved game continues from the main menu.
+            choose(session, 'Escape')
+            assert text(session, 21, 10, 34) == 'GAME MENU'
+            session.shot(ROOT / 'docs/game-menu.png')
+            position = board(session)
+            choose(session, '2')
+            assert text(session, 33, 10, 34) == 'GAME SAVED'
+            assert (directory / 'GAME.DAT').read_bytes()[:8] == b'STRGAM01'
+            choose(session, 'Escape')
+            assert text(session, 21, 10, 34) == '', 'Escape resumes the game'
+            assert text(session, 9) == 'YOUR TURN'
+            choose(session, 'Escape')
+            choose(session, '3')
+            assert text(session, 11) == 'MAIN MENU'
+            choose(session, '3')
+            assert text(session, 9) == 'YOUR TURN'
+            assert board(session) == position, 'the saved game must continue where it was saved'
             # Reduced legal position: a marshal can capture the adjacent enemy flag.
             # This exercises the real battle/game-over path without playing a long match.
             position = bytearray([0xFF] * 100)

@@ -1,23 +1,16 @@
 """Generate About metadata; keep the header unchanged when metadata is unchanged."""
 import json
 import os
-import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-ROOT = Path(__file__).resolve().parents[1]
+VERSION = 'v0.1.0'
 
 
 def main():
     target = Path(sys.argv[1])
-    try:
-        version = subprocess.check_output(
-            ['git', 'describe', '--tags', '--always', '--dirty'],
-            cwd=ROOT, stderr=subprocess.DEVNULL, text=True).strip()
-    except (OSError, subprocess.CalledProcessError):
-        version = 'development'
     timezone = ZoneInfo('Europe/Amsterdam')
     epoch = os.environ.get('SOURCE_DATE_EPOCH')
     date = datetime.fromtimestamp(int(epoch), timezone) if epoch else datetime.now(timezone)
@@ -25,7 +18,7 @@ def main():
         'APP_NAME': 'FELDMARSCHALL',
         'APP_AUTHOR': 'Ivo Filot',
         'APP_REPOSITORY': 'https://github.com/ifilot/cx16-feldmarschall',
-        'APP_VERSION': version,
+        'APP_VERSION': VERSION,
         'APP_COMPILED': date.strftime('%Y-%m-%d'),
     }
     content = '\n'.join([

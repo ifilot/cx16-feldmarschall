@@ -68,9 +68,9 @@ void panel_selected(uint8_t cell) {
         text_centred(INFO_ROW3, "UNKNOWN", TEXT_DEEP_BLUE);
     } else {
         if(type < PIECE_BOMB) {             // "9  SCOUT"; bombs and flags have no rank
-            buffer[0] = piece_glyphs[type];
-            buffer[1] = buffer[2] = ' ';
-            strcpy(buffer + 3, piece_names[type]);
+            strcpy(buffer, piece_rank(type));
+            strcat(buffer, "  ");
+            strcat(buffer, piece_names[type]);
         } else {
             strcpy(buffer, piece_names[type]);
         }

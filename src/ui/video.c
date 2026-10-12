@@ -25,12 +25,14 @@
 
 #include "video.h"
 #include "colors.h"
+#include "pieces.h"
 
 #define SPRITE_ATTR     0xFC00      // in VRAM bank 1
 #define SPRITE_16X16    0x50        // size byte: height and width codes
 #define SPRITE_64X64    0xF0
 #define AUTO_INC_1      0x10
 #define LAYER_CONFIG    0x62        // 128x64 map, 4 bpp tiles
+#define VRAM_PIECE_TILES (VRAM_L1_TILES + L1_PIECES * 32UL)
 #define BOARD_COL0      (BOARD_X / 8)
 #define BOARD_ROW0      (BOARD_Y / 8)
 
@@ -87,7 +89,19 @@ uint8_t video_campaign_menu(void) {
 }
 
 uint8_t video_restore_game_tiles(void) {
-    return load_vram("L1TILES.BIN", VRAM_L1_TILES);
+    return load_vram("L1TILES.BIN", VRAM_L1_TILES) &&
+           (piece_ranking == RANKING_CLASSIC || load_vram("RANKTIL.BIN", VRAM_PIECE_TILES));
+}
+
+/* L1TILES.BIN and SPRITES.BIN carry the classic numbers; RANKTIL.BIN and
+ * RANKSPR.BIN replace just their tokens with modern ones. */
+uint8_t video_ranks(void) {
+    if(piece_ranking == RANKING_MODERN) {
+        return load_vram("RANKTIL.BIN", VRAM_PIECE_TILES) &&
+               load_vram("RANKSPR.BIN", VRAM_TOKEN_SPRITES);
+    }
+    return load_vram("L1TILES.BIN", VRAM_L1_TILES) &&
+           load_vram("SPRITES.BIN", VRAM_SPRITES);
 }
 
 /**

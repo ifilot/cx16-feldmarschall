@@ -11,3 +11,4 @@ src/color_profiles.h
 src/app_info.h
 src/COLORS.DAT
 src/DEPLOY.DAT
+src/GAME.DAT

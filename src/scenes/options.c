@@ -13,19 +13,20 @@
 
 #define COL (TRAY_COL0 + 3)
 #define FIELD_ROW (TRAY_ROW0 + 3)
-#define ARMY_ROW (TRAY_ROW0 + 18)
-#define BACK_ROW (TRAY_ROW0 + 35)
+#define ARMY_ROW (TRAY_ROW0 + 14)
+#define RANK_ROW (TRAY_ROW0 + 29)
+#define BACK_ROW (TRAY_ROW0 + 34)
 #define KEY_TAB 0x09
 
 static uint8_t focus, dirty, back_hover;
 static int16_t last_x, last_y;
 
-static const uint8_t rows[2] = {FIELD_ROW, ARMY_ROW};
-static const char* const headings[2] = {"FIELD", "ARMY COLORS"};
+static const uint8_t rows[GROUPS] = {FIELD_ROW, ARMY_ROW, RANK_ROW};
+static const char* const headings[GROUPS] = {"FIELD", "ARMY COLORS", "RANK NUMBERS"};
 
 static void draw_profiles(void) {
     uint8_t group, i, row, selected;
-    for(group=0; group<2; group++) {
+    for(group=0; group<GROUPS; group++) {
         video_text_plate(COL - 2, rows[group] - 2, focus == group ? ">" : " ", TEXT_BROWN);
         video_text_plate(COL, rows[group] - 2, headings[group], TEXT_BROWN);
         selected = colors_current(group);
@@ -79,7 +80,7 @@ uint8_t options_update(void) {
     uint8_t group, i, row, selected, hover, old_focus = focus;
     if(input.x != last_x || input.y != last_y || input.pressed) {
         if(input.x >= (COL - 2) * 8 && input.x < (TRAY_COL0 + TRAY_COLS * SQUARE_TILES - 1) * 8) {
-            for(group=0; group<2; group++) {
+            for(group=0; group<GROUPS; group++) {
                 for(i=0; i<colors_count(group); i++) {
                     row = rows[group] + i * 2;
                     if(input.y >= row * 8 - 4 && input.y < row * 8 + 12) {
@@ -99,7 +100,7 @@ uint8_t options_update(void) {
     }
     selected = colors_current(focus);
     switch(input.key) {
-        case KEY_TAB: focus ^= 1; break;
+        case KEY_TAB: focus = (focus + 1) % GROUPS; break;
         case KEY_UP: if(selected > 0) select_profile(selected - 1); break;
         case KEY_DOWN: if(selected + 1 < colors_count(focus)) select_profile(selected + 1); break;
         default:

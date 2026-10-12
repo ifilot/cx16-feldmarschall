@@ -5,6 +5,13 @@
 
 #define FIELD_PROFILE_COUNT 4
 #define ARMY_PROFILE_COUNT 6
+#define RANKING_COUNT 2
+
+/*
+ * The appearance settings, kept in COLORS.DAT. Group 0 is the field,
+ * group 1 the army colors, group 2 the rank numbering (piece_ranking).
+ */
+#define GROUPS 3
 
 extern uint8_t colors_field;
 extern uint8_t colors_armies;

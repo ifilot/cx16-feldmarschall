@@ -22,7 +22,7 @@
 #define _RULES_H
 
 #include <stdint.h>
-#include "pieces.h"
+#include "board.h"
 
 /* Optional Masters rules, all off for a classic game. */
 #define RULE_ATTACKER_WINS  0x01
@@ -103,5 +103,13 @@ uint8_t rules_flag_arrived(uint8_t sq);
 /* Rescue is optional, once per arriving piece and twice per army. */
 uint8_t rules_can_rescue(uint8_t sq);
 uint8_t rules_rescue(uint8_t sq, uint8_t type, uint8_t destination);
+
+/*
+ * Everything the rules keep about a game in progress, for a saved game:
+ * the options, casualties, rescues and the two-squares history.
+ */
+#define RULES_STATE_SIZE    (1 + 4 * PIECE_TYPES + 2 + SQUARES + 6)
+void rules_state_save(uint8_t* out);
+void rules_state_load(const uint8_t* in);
 
 #endif

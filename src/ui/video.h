@@ -51,6 +51,12 @@ uint8_t video_field(uint8_t artwork);
 uint8_t video_campaign_menu(void);
 uint8_t video_restore_game_tiles(void);
 
+/**
+ * @brief Load the token artwork (tiles and lifted sprites) whose rank
+ *        numbers follow piece_ranking
+ */
+uint8_t video_ranks(void);
+
 void video_show(void);
 
 void video_clear_layer1(void);
