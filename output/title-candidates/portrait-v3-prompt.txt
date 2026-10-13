@@ -1,9 +1,0 @@
-Mode: built-in image_gen edit of the installed portrait title screen.
-Export: 640x480 fixed-palette conversion. Outside the two standing collar panels, map to ink/slate/gold only; inside the panels allow the four-color palette. The binary collar mask and conversion are reproduced by export.sh. verify.py checks every red pixel against the collar mask, dimensions, opacity, exact palette and VERA precision.
-
-Use case: precise-object-edit. Edit the supplied installed FELDMARSCHALL title screen. Preserve the officer's face, pose, hat silhouette, composition, exact gold blackletter title FELDMARSCHALL, left crowned single-headed Prussian eagle and crossed sabres, distant infantry landscape, gold frame, footer ENTER to continue, and retro pixel engraving/crosshatching. Correct unwanted red coloring only.
-Red is allowed ONLY in the two upright standing collar panels directly under the officer's jaw/neck. Keep those narrow standing collar panels red so the image still uses four colors.
-Remove red from BOTH broad folded lapels below the standing collar: replace their red fabric with dark ink/slate coat fabric, keeping their shape and thin GOLD piping. The lapels must look like the same dark uniform as the chest.
-Remove EVERY red pixel/tint from the left eagle: it must be entirely gold with dark ink/slate detail. Its heraldic beak and talons must also be gold, not red.
-Remove incidental red stipple from hat edging, epaulettes, buttons, sword hilts, eagle ornaments, decorative border, and any other gold detail. Gold highlights must be gold without red speckling. Use ink/slate crosshatching to shade gold.
-EXACT palette: ink #111111, slate #445555, gold #DDBB66, red #BB3322. Red confined to the standing collar. No orange or warm-red substitute for gold. No added insignia. Only change these colors, no redesign. Landscape 4:3 intended final 640x480, fully opaque, exactly four colors.

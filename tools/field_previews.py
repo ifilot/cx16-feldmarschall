@@ -12,7 +12,7 @@ from palette import pil_palette, rgb  # noqa: E402
 
 
 def main():
-    out = ROOT / 'output/style-studies'
+    out = ROOT / 'build/preview/style-studies'
     out.mkdir(parents=True, exist_ok=True)
     font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 17)
     columns = 2 if len(FIELDS) <= 4 else 3

@@ -1,0 +1,93 @@
+type: song
+title: Sturmangriff (in game 1)
+description: >
+  Cavalry charge in E minor, a galloping 6/8 (120 strides a minute): the
+  strings hammer a "da-di-di-da" gallop on the roots and an upper pedal,
+  snare and timpani ride with them, and the horns sound a heroic theme in
+  octaves over trombone chords. B: the trumpet leads a fanfare through
+  G, D, Em, C, Am, D to B. A2: trumpet and horns together with crashes.
+  B ends on B, which throws the loop back into E minor.
+instruments: ../instruments.yaml
+tempo: 180           # quarter = 20 ticks, eighth = 10, sixteenth = 5, dotted quarter = 30
+meter: 6/8
+budget: 32768
+
+parts:
+  trumpet: {instrument: trumpet, voices: [0], level: 0.9}
+  horn1:   {instrument: horn, voices: [1], level: 1.2, pan: L}
+  horn2:   {instrument: horn, voices: [2], octave: -1, level: 1.0, pan: R}
+  bones:   {instrument: trombone, voices: [3, 4], level: 0.85}
+  hi:      {instrument: spiccato, voices: [5], level: 0.7, pan: R}
+  lo:      {instrument: spiccato, voices: [6], level: 0.9, pan: L}
+  timp:    {instrument: timpani, voices: [7], level: 0.7}
+  snare:   {voices: [8], level: 0.65, pan: R, kit: {s: {instrument: snare, note: C6}}}
+  drums:   {voices: [9], level: 0.6, kit: {b: {instrument: bassdrum, note: D2}, c: {instrument: cymbal, note: C7}}}
+
+patterns:
+  # gallop: eighth, two sixteenths, eighth (twice a bar)
+  gE3: "E3/8> E3/16 E3/16 E3/8 E3/8> E3/16 E3/16 E3/8"
+  gC3: "C3/8> C3/16 C3/16 C3/8 C3/8> C3/16 C3/16 C3/8"
+  gD3: "D3/8> D3/16 D3/16 D3/8 D3/8> D3/16 D3/16 D3/8"
+  gB2: "B2/8> B2/16 B2/16 B2/8 B2/8> B2/16 B2/16 B2/8"
+  gG2: "G2/8> G2/16 G2/16 G2/8 G2/8> G2/16 G2/16 G2/8"
+  gA2: "A2/8> A2/16 A2/16 A2/8 A2/8> A2/16 A2/16 A2/8"
+  gE4: "E4/8> E4/16 E4/16 E4/8 E4/8> E4/16 E4/16 E4/8"
+  gD4: "D4/8> D4/16 D4/16 D4/8 D4/8> D4/16 D4/16 D4/8"
+  gDs4: "D#4/8> D#4/16 D#4/16 D#4/8 D#4/8> D#4/16 D#4/16 D#4/8"
+  sGallop: "s/8> v=0.5 s/16 s/16 v=0.8 s/8 v=1 s/8> v=0.5 s/16 s/16 v=0.8 s/8 v=1"
+  sRoll: "v=0.5 s/16 s s s s s v=0.8 s s s s v=1 s/8>"
+  snare8: "| @sGallop | @sGallop | @sGallop | @sGallop | @sGallop | @sGallop | @sGallop | @sRoll |"
+  ride: "b/4. b/4."
+  hit:  "c/4. b/4."
+  drums8: "| @hit | @ride | @ride | @ride | @hit | @ride | @ride | @ride |"
+
+  theme: "| B4/4. E5/4. | G5/4 F#5/8 E5/4 B4/8 | C5/4. E5/4 G5/8 | F#5/4. D5/4.
+          | B4/4. E5/4. | G5/4 A5/8 B5/4 E5/8 | C5/4 B4/8 A4/4 G4/8 | F#4/2. |"
+  hiA:   "| @gE4 | @gE4 | @gE4 | @gD4 | @gE4 | @gE4 | @gE4 | @gDs4 |"
+  loA:   "| @gE3 | @gE3 | @gC3 | @gD3 | @gE3 | @gE3 | @gC3 | @gB2 |"
+  bonesA: "| [E3 B3]/2. | [E3 B3]/2. | [E3 C4]/2. | [D3 A3]/2. | [E3 B3]/2. | [E3 B3]/2. | [E3 C4]/2. | [D#3 B3]/2. |"
+  timpA: "| E3/4. B2/4. | E3/4. B2/4. | C3/4. G2/4. | D3/4. A2/4. | E3/4. B2/4. | E3/4. B2/4. | C3/4. G2/4. | B2/4. F#2/4. |"
+
+sections:
+  intro:
+    lo:    "| @gE3 | @gE3 |"
+    timp:  "| v=0.4 E3/16 E3 E3 E3 E3 E3 v=0.55 E3 E3 E3 E3 E3 E3 | v=0.7 E3 E3 E3 E3 E3 E3 v=0.9 E3 E3 E3 E3 E3 E3 |"
+    snare: "| @sGallop | @sRoll |"
+    drums: "| @ride | @ride |"
+
+  A:
+    horn1: "@theme"
+    horn2: "@theme"
+    bones: "@bonesA"
+    hi:    "@hiA"
+    lo:    "@loA"
+    timp:  "@timpA"
+    snare: "@snare8"
+    drums: "@drums8"
+
+  B:
+    trumpet: "| D5/4 B4/8 G4/4 B4/8 | A4/4. F#4/4. | G4/4 B4/8 E5/4 B4/8 | C5/4. E5/4.
+              | C5/4 A4/8 E4/4 A4/8 | F#4/4 A4/8 D5/4 F#5/8 | D#5/4 F#5/8 B5/4 A5/8 | F#5/2. |"
+    horn1:   "| B4/2. | A4/2. | B4/2. | G4/2. | A4/2. | A4/2. | B4/2. | B4/2. |"
+    horn2:   "| B4/2. | A4/2. | B4/2. | G4/2. | A4/2. | A4/2. | B4/2. | B4/2. |"
+    bones:   "| [D3 B3]/2. | [D3 A3]/2. | [E3 B3]/2. | [E3 C4]/2. | [E3 C4]/2. | [D3 A3]/2. | [D#3 B3]/2. | [D#3 A3]/2. |"
+    hi:      "| @gD4 | @gD4 | @gE4 | @gE4 | @gE4 | @gD4 | @gDs4 | @gDs4 |"
+    lo:      "| @gG2 | @gD3 | @gE3 | @gC3 | @gA2 | @gD3 | @gB2 | @gB2 |"
+    timp:    "| G2/4. D3/4. | D3/4. A2/4. | E3/4. B2/4. | C3/4. G2/4. | A2/4. E3/4. | D3/4. A2/4. | B2/4. F#2/4.
+              | v=0.5 B2/16 B2 B2 B2 B2 B2 v=0.8 B2 B2 B2 B2 B2 B2 |"
+    snare:   "@snare8"
+    drums:   "@drums8"
+
+  A2:
+    trumpet: "@theme"
+    horn1:   "@theme"
+    horn2:   "@theme"
+    bones:   "@bonesA"
+    hi:      "@hiA"
+    lo:      "@loA"
+    timp:    "@timpA"
+    snare:   "@snare8"
+    drums:   "| @hit | @ride | @hit | @ride | @hit | @ride | @hit | @ride |"
+
+arrangement: [intro, A, B, A2, B]
+loop: A

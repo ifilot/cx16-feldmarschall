@@ -10,6 +10,7 @@
 #include "dialog.h"
 #include "panel.h"
 #include "video.h"
+#include "sound.h"
 
 #define COL (TRAY_COL0 + 3)
 #define FIELD_ROW (TRAY_ROW0 + 3)
@@ -19,7 +20,6 @@
 #define KEY_TAB 0x09
 
 static uint8_t focus, dirty, back_hover;
-static int16_t last_x, last_y;
 
 static const uint8_t rows[GROUPS] = {FIELD_ROW, ARMY_ROW, RANK_ROW};
 static const char* const headings[GROUPS] = {"FIELD", "ARMY COLORS", "RANK NUMBERS"};
@@ -46,7 +46,9 @@ static void draw_profiles(void) {
 static void select_profile(uint8_t profile) {
     uint8_t old = colors_current(focus);
     if(old != profile) {
+        sound_sfx(SFX_MENU_SELECT);
         if(!colors_select(focus, profile)) {
+            sound_sfx(SFX_ERROR);
             panel_info("ARTWORK LOAD FAILED", TEXT_BROWN, "CHECK THE DISK");
             return;
         }
@@ -66,19 +68,18 @@ void options_enter(void) {
         video_token(col, BOARD_Y / 8 + (8 + i / BOARD_SIZE) * SQUARE_TILES, i, ARMY_RED);
     }
     focus = dirty = back_hover = 0;
-    last_x = input.x;
-    last_y = input.y;
     panel_tray_clear();
     dialog_plate(TRAY_COL0, TRAY_ROW0, TRAY_COLS * SQUARE_TILES, TRAY_ROWS * SQUARE_TILES);
     panel_info("APPEARANCE OPTIONS", TEXT_BROWN, "LIVE PREVIEW");
     draw_profiles();
     button_draw(COL, BACK_ROW, "BACK", BUTTON_NORMAL);
-    panel_bar("CLICK A PROFILE TO PREVIEW", "TAB: GROUP  UP/DOWN OR 1-6: SELECT  ENTER: BACK");
+    panel_bar("", "");
+    video_text_plate(2, 55, "CLICK A PROFILE TO PREVIEW", TEXT_INK);
 }
 
 uint8_t options_update(void) {
     uint8_t group, i, row, selected, hover, old_focus = focus;
-    if(input.x != last_x || input.y != last_y || input.pressed) {
+    if(input.pointer_active) {
         if(input.x >= (COL - 2) * 8 && input.x < (TRAY_COL0 + TRAY_COLS * SQUARE_TILES - 1) * 8) {
             for(group=0; group<GROUPS; group++) {
                 for(i=0; i<colors_count(group); i++) {
@@ -91,8 +92,6 @@ uint8_t options_update(void) {
             }
         }
     }
-    last_x = input.x;
-    last_y = input.y;
     hover = button_hit(COL, BACK_ROW, "BACK", input.x, input.y);
     if(hover != back_hover) {
         back_hover = hover;
@@ -108,11 +107,13 @@ uint8_t options_update(void) {
             break;
     }
     if(focus != old_focus) draw_profiles();
-    if(input.key == KEY_RETURN || input.key == KEY_ESCAPE || (hover && (input.pressed & BUTTON_LEFT))) {
+    if(focus != old_focus) sound_sfx(SFX_MENU_MOVE);
+    if(input.key == KEY_RETURN || input.key == KEY_ESCAPE || (input.pointer_active && hover && (input.pressed & BUTTON_LEFT))) {
+        sound_sfx(SFX_MENU_BACK);
         if(dirty && !colors_save()) {
             dirty = 0;
             panel_info("SAVING FAILED", TEXT_BROWN, "ACTIVE THIS SESSION");
-            panel_bar("SETTINGS COULD NOT BE SAVED TO DISK", "ENTER OR ESCAPE: RETURN TO MENU");
+            panel_bar("SETTINGS COULD NOT BE SAVED TO DISK", "CHANGES ARE ACTIVE THIS SESSION");
             return SCENE_STAY;
         }
         return SCENE_MENU;

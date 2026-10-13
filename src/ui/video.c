@@ -72,25 +72,35 @@ uint8_t video_field(uint8_t artwork) {
     return ok;
 }
 
-/* A dedicated illustrated backdrop; text and controls stay on layer 1. */
-uint8_t video_campaign_menu(void) {
-    uint8_t display, ok;
-    VERA.control = 0;
-    display = VERA.display.video;
-    VERA.display.video &= ~0x10;
-    ok = load_vram("MNTILES.BIN", VRAM_L0_TILES) &&
-         load_vram("MNMAP.BIN", VRAM_L0_MAP) &&
-         load_vram("MNL1TIL.BIN", VRAM_L1_TILES) &&
-         load_vram("MN1MAP.BIN", VRAM_L1_MAP) &&
-         load_vram("MNPAL.BIN", VRAM_PALETTE + 7 * 32);
-    VERA.control = 0;
-    VERA.display.video = display;
-    return ok;
-}
-
 uint8_t video_restore_game_tiles(void) {
     return load_vram("L1TILES.BIN", VRAM_L1_TILES) &&
            (piece_ranking == RANKING_CLASSIC || load_vram("RANKTIL.BIN", VRAM_PIECE_TILES));
+}
+
+uint8_t video_result(uint8_t outcome) {
+    uint8_t ok;
+    VERA.control = 0;
+    VERA.display.video &= ~0x30;
+    video_clear_layer1();
+    switch(outcome) {
+        case 1: ok = load_vram("WINTIL.BIN", VRAM_L0_TILES) && load_vram("WINMAP.BIN", VRAM_L0_MAP); break;
+        case 2: ok = load_vram("LOSSTIL.BIN", VRAM_L0_TILES) && load_vram("LOSSMAP.BIN", VRAM_L0_MAP); break;
+        default: ok = load_vram("DRAWTIL.BIN", VRAM_L0_TILES) && load_vram("DRAWMAP.BIN", VRAM_L0_MAP); break;
+    }
+    ok = ok && load_vram("ENDPAL.BIN", VRAM_PALETTE + 9 * 32);
+    VERA.control = 0;
+    VERA.address = (uint16_t)VRAM_PALETTE;
+    VERA.address_hi = 0x11;
+    VERA.data0 = 0;                 // transparent tiles show a true black backdrop
+    VERA.data0 = 0;
+    return ok;
+}
+
+uint8_t video_result_restore(void) {
+    VERA.control = 0;
+    VERA.display.video &= ~0x30;
+    video_clear_layer1();
+    return colors_restore_field();
 }
 
 /* L1TILES.BIN and SPRITES.BIN carry the classic numbers; RANKTIL.BIN and
@@ -132,12 +142,13 @@ uint8_t video_splash(void) {
     VERA.display.hscale = 128;
     VERA.display.vscale = 128;
     VERA.display.border = 0;
-    if(!load_vram("SPLASH0.BIN", 0x00000UL) ||
-       !load_vram("SPLASH1.BIN", 0x09600UL) ||
+    if(!load_vram("SPLTIL.BIN", VRAM_L0_TILES) ||
+       !load_vram("SPLMAP.BIN", VRAM_L0_MAP) ||
        !load_vram("SPLPAL.BIN", VRAM_PALETTE)) return 0;
 
-    VERA.layer0.config = 0x05;      // bitmap mode, 2 bits per pixel
-    VERA.layer0.tilebase = 0x01;    // base $00000, 640 pixels per row
+    VERA.layer0.config = LAYER_CONFIG;
+    VERA.layer0.mapbase = VRAM_L0_MAP >> 9;
+    VERA.layer0.tilebase = VRAM_L0_TILES >> 9;
     VERA.layer0.hscroll = 0;
     VERA.layer0.vscroll = 0;        // palette offset 0
     VERA.display.video |= 0x10;    // layer 0 only
@@ -244,8 +255,7 @@ void video_tile(uint8_t col, uint8_t row, uint16_t tile) {
     VERA.data0 = (uint8_t)(tile >> 8);
 }
 
-void video_token(uint8_t col, uint8_t row, uint8_t piece, uint8_t army) {
-    uint16_t tile = L1_PIECES + piece * (SQUARE_TILES * SQUARE_TILES);
+static void token(uint8_t col, uint8_t row, uint16_t tile, uint8_t army) {
     uint8_t x, y, attr;
 
     for(y=0; y<SQUARE_TILES; y++) {
@@ -257,6 +267,14 @@ void video_token(uint8_t col, uint8_t row, uint8_t piece, uint8_t army) {
             tile++;
         }
     }
+}
+
+void video_token(uint8_t col, uint8_t row, uint8_t piece, uint8_t army) {
+    token(col, row, L1_PIECES + piece * (SQUARE_TILES * SQUARE_TILES), army);
+}
+
+void video_token_plain(uint8_t col, uint8_t row, uint8_t piece, uint8_t army) {
+    token(col, row, L1_UI_PIECES + piece * (SQUARE_TILES * SQUARE_TILES), army);
 }
 
 void video_empty_square(uint8_t bx, uint8_t by) {

@@ -1,0 +1,10 @@
+type: sfx
+title: dialog
+description: >
+  A plate (load or save dialog) opens over the board: a short paper rustle.
+instruments: ../instruments.yaml
+parts:
+  paper: {instrument: rustle, voices: [12], level: 1.0}
+sections:
+  main:
+    paper: "E6~A6/8t"

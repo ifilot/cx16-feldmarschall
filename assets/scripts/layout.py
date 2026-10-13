@@ -98,7 +98,17 @@ L1_MARKER = 4                        # move target dot (centre tile of a square)
 L1_PLATE = 5                         # 9 tiles of a floating plate: corners, edges, fill
 L1_FONT = L1_PLATE + 9               # ASCII 32..127, one tile per glyph, transparent
 L1_FONT_PLATE = L1_FONT + 96         # the same glyphs on the plate's light grey
+L1_UI_PIECES = L1_FONT_PLATE + 96 + TOKENS * SQUARE_TILES * SQUARE_TILES
 L1_PIECES = L1_FONT_PLATE + 96       # 13 tokens x 25 tiles
+
+L1_BUTTON_HOVER = L1_UI_PIECES + TOKENS * SQUARE_TILES * SQUARE_TILES
+L1_BUTTON_PRESSED = L1_BUTTON_HOVER + 9
+L1_MENU_TITLE = L1_BUTTON_PRESSED + 9
+L1_NEW_TITLE = L1_MENU_TITLE + 18 * 3
+L1_MENU_RULE = L1_NEW_TITLE + 18 * 3
+L1_TOGGLE_OFF = L1_MENU_RULE + 1
+L1_TOGGLE_ON = L1_TOGGLE_OFF + 15
+TOGGLE_PALETTE = 7
 
 # VRAM map. No loaded file may end exactly on a 64 KB boundary: cbm_k_load
 # then returns end address $0000, which cannot be told from a failed load.

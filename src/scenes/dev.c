@@ -40,12 +40,12 @@
 #define BLUE_FLAG       0, 0x1B, 1, 0x1A, 10, 0x1A
 
 const char* const dev_names[DEV_SCENARIOS] = {
-    "1  LOSE: LAST PIECE TAKEN",
-    "2  WIN: LAST ENEMY TAKEN",
-    "3  DRAW: NO ONE CAN MOVE",
-    "4  WIN: CAPTURE THE FLAG",
-    "5  LOSE: FLAG CAPTURED",
-    "6  RESCUE A PIECE",
+    "LOSE: LAST PIECE TAKEN",
+    "WIN: LAST ENEMY TAKEN",
+    "DRAW: NO ONE CAN MOVE",
+    "WIN: CAPTURE THE FLAG",
+    "LOSE: FLAG CAPTURED",
+    "RESCUE A PIECE",
 };
 
 // Blue's marshal on e5 takes the known sergeant on e4, Red's last mover

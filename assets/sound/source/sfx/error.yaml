@@ -1,0 +1,10 @@
+type: sfx
+title: error
+description: >
+  Refused: an illegal drop, SAVE or START with pieces missing. Two dull low knocks.
+instruments: ../instruments.yaml
+parts:
+  thud: {instrument: thud, voices: [12], level: 0.9}
+sections:
+  main:
+    thud: "C4/6t r/4t C4/8t"

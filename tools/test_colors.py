@@ -91,7 +91,7 @@ def check_field_offsets(session):
 
 
 def main():
-    output = ROOT / 'output/style-studies'
+    output = ROOT / 'build/test-shots/appearance-profiles'
     output.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='feldmarschall-appearance-') as tmp:
         directory = Path(tmp)

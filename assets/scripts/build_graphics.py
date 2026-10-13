@@ -1,6 +1,7 @@
 """Build every graphics resource of the playing field.
 
-    python3 build_graphics.py OUTDIR [PREVIEWDIR]
+    python3 tools/build_info.py OUTDIR/app_info.h
+    python3 assets/scripts/build_graphics.py OUTDIR [PREVIEWDIR]
 
 writes to OUTDIR
     L0TILES.BIN   layer-0 tiles (terrain, frame, panel), 4 bpp
@@ -17,6 +18,7 @@ and, with PREVIEWDIR, PNG previews of layer 0 and of the token sheet.
 All files are headerless: the game loads them with cbm_k_load into VRAM.
 """
 import sys
+import re
 from pathlib import Path
 
 import numpy as np
@@ -24,12 +26,12 @@ from PIL import Image
 
 import layout as L
 from bitmap_font import draw_text, glyph8
-from palette import (BROWN, CREAM, DEEP_RED, GOLD, INK, LIGHT, STONE,
+from palette import (BROWN, CREAM, DEEP_RED, GOLD, INK, LIGHT, OLIVE, RED, STONE,
                      pil_palette, vera_palette)
 from pieces import build_tokens
 from terrain import generate
-from splash import build_splash
-from game_menu_art import background as menu_background, MENU_PALETTE, MENU_PALETTE_ROW, palette_bytes as menu_palette
+from splash import build_splash, save_preview as splash_preview
+from endings import build_endings, save_previews as ending_previews
 from color_profiles import c_header as profiles_header
 
 W, H = 640, 480
@@ -288,13 +290,14 @@ def plate_tile(row, col):
     return t
 
 
-def token_tiles(tokens):
+def token_tiles(tokens, grid=True):
     """The tiles of the tokens, 25 each; a token on the board carries its grid edge."""
     tiles = []
     for square in tokens:
         square = square.copy()
-        square[0, :] = INK
-        square[:, 0] = INK
+        if grid:
+            square[0, :] = INK
+            square[:, 0] = INK
         tiles += square_tiles(square)
     return tiles
 
@@ -324,6 +327,57 @@ def build_layer1(tokens):
     tiles += [np.where(glyph8(code) != 0, INK, LIGHT).ravel() for code in range(32, 128)]
     assert len(tiles) == L.L1_PIECES
     tiles += token_tiles(tokens)
+    assert len(tiles) == L.L1_UI_PIECES
+    tiles += token_tiles(tokens, grid=False)
+    for pressed in (False, True):
+        for i in range(9):
+            t = plate_tile(i // 3, i % 3)
+            if pressed:
+                t = np.where(t == CREAM, BROWN, np.where(t == BROWN, CREAM, t))
+            tiles.append(t.ravel())
+    titles = []
+    for name in ('main-menu', 'new-game-title', 'game-menu'):
+        with Image.open(Path(__file__).resolve().parents[1] / 'font' / f'{name}.png') as source:
+            mask = np.asarray(source.convert('1'))
+        title = np.full((24, 144), LIGHT, np.uint8)
+        title[1:, 1:][mask[:-1, :-1]] = CREAM
+        title[mask] = DEEP_RED
+        titles += list(split_tiles(title).reshape(-1, 64))
+    # Share identical heading tiles; all menu artwork stays exact in 4 bpp.
+    global TITLE_MAPS
+    unique, inverse = np.unique(np.asarray(titles), axis=0, return_inverse=True)
+    assert len(unique) < 256
+    TITLE_MAPS = inverse.reshape(3, 54)
+    L.L1_TITLE_TILES = len(tiles)
+    L.L1_MENU_TITLE, L.L1_NEW_TITLE, L.L1_GAME_TITLE = [len(tiles)+int(m[0]) for m in TITLE_MAPS]
+    tiles += list(unique)
+    L.L1_MENU_RULE = len(tiles)
+    L.L1_TOGGLE_OFF = len(tiles)+1
+    L.L1_TOGGLE_ON = len(tiles)+16
+    rule = np.full((8, 8), LIGHT, np.uint8)
+    rule[4, :] = DEEP_RED
+    tiles.append(rule.ravel())
+    for enabled in (False, True):
+        switch = np.full((24, 40), LIGHT, np.uint8)
+        # A clipped, recessed socket: shadow above/left, light below/right.
+        switch[2, 3:37] = switch[3, 1:39] = BROWN
+        switch[4:20, 0] = BROWN
+        switch[21, 3:37] = switch[20, 1:39] = CREAM
+        switch[4:20, 39] = CREAM
+        switch[4:20, 1:39] = INK
+        switch[5:19, 2:38] = OLIVE if enabled else RED
+        switch[4:6, 1:3] = switch[4:6, 37:39] = LIGHT
+        switch[18:20, 1:3] = switch[18:20, 37:39] = LIGHT
+        knob = 25 if enabled else 3
+        switch[6:18, knob:knob+12] = LIGHT
+        switch[6, knob:knob+12] = switch[6:18, knob] = CREAM
+        switch[17, knob:knob+12] = switch[6:18, knob+11] = BROWN
+        # Two tiny grip grooves on the raised sliding knob.
+        for groove in (4, 7):
+            switch[9:15, knob+groove] = BROWN
+            switch[9:15, knob+groove+1] = CREAM
+        draw_text(switch, 4 if enabled else 15, 8, 'ON' if enabled else 'OFF', CREAM)
+        tiles += list(split_tiles(switch).reshape(-1, 64))
     if len(tiles) > 1024:
         raise ValueError(f'layer 1 needs {len(tiles)} tiles; VERA allows 1024')
     return np.array(tiles)
@@ -418,6 +472,13 @@ def c_header(layer0_count, layer1_count):
         ('L1_GRID_TOP', L.L1_GRID_TOP), ('L1_GRID_LEFT', L.L1_GRID_LEFT),
         ('L1_MARKER', L.L1_MARKER), ('L1_PLATE', L.L1_PLATE), ('L1_FONT', L.L1_FONT),
         ('L1_FONT_PLATE', L.L1_FONT_PLATE), ('L1_PIECES', L.L1_PIECES),
+        ('L1_UI_PIECES', L.L1_UI_PIECES),
+        ('L1_BUTTON_HOVER', L.L1_BUTTON_HOVER), ('L1_BUTTON_PRESSED', L.L1_BUTTON_PRESSED),
+        ('L1_MENU_TITLE', L.L1_MENU_TITLE), ('L1_NEW_TITLE', L.L1_NEW_TITLE),
+        ('L1_MENU_RULE', L.L1_MENU_RULE),
+        ('L1_TITLE_TILES', L.L1_TITLE_TILES), ('L1_GAME_TITLE', L.L1_GAME_TITLE),
+        ('L1_TOGGLE_OFF', L.L1_TOGGLE_OFF), ('L1_TOGGLE_ON', L.L1_TOGGLE_ON),
+        ('TOGGLE_PALETTE', L.TOGGLE_PALETTE),
         ('TOKENS', L.TOKENS), ('TOKEN_HIDDEN', L.TOKEN_HIDDEN),
         ('L0_TILE_COUNT', layer0_count), ('L1_TILE_COUNT', layer1_count),
         ('CURSOR_OFFSET', 12),
@@ -433,7 +494,10 @@ def c_header(layer0_count, layer1_count):
              '#ifndef _GFX_H', '#define _GFX_H', '']
     lines += [f'#define {name:<20} {value}' for name, value in consts]
     lines += [f'#define {name:<20} 0x{value:05X}UL' for name, value in vram]
-    lines += ['', '#endif', '']
+    lines += ['']
+    lines += ['#ifdef MENU_TITLE_MAPS', 'static const uint8_t menu_title_tiles[3][54] = {']
+    lines += ['    {' + ','.join(str(int(v)) for v in row) + '},' for row in TITLE_MAPS]
+    lines += ['};', '#endif', '#endif']
     return '\n'.join(lines)
 
 
@@ -452,6 +516,9 @@ def main():
     out = Path(sys.argv[1])
     preview = Path(sys.argv[2]) if len(sys.argv) > 2 else None
     out.mkdir(parents=True, exist_ok=True)
+    metadata = (out / 'app_info.h').read_text()
+    version = re.search(r'^#define APP_VERSION "([^"]+)"', metadata, re.M).group(1)
+    compiled = re.search(r'^#define APP_COMPILED "([^"]+)"', metadata, re.M).group(1)
     rng = np.random.default_rng(16)
 
     layer0 = build_layer0()
@@ -464,46 +531,12 @@ def main():
         'L0MAP.BIN': (L.VRAM_L0_MAP, map_bytes(l0_map)),
         'L1TILES.BIN': (L.VRAM_L1_TILES, tile_bytes(l1_tiles)),
         'SPRITES.BIN': (L.VRAM_SPRITES, build_sprites(tokens)),
-        'RANKTIL.BIN': (L.VRAM_L1_TILES + L.L1_PIECES * 32, tile_bytes(token_tiles(modern))),
+        'RANKTIL.BIN': (L.VRAM_L1_TILES + L.L1_PIECES * 32, tile_bytes(token_tiles(modern) + token_tiles(modern, grid=False))),
         'RANKSPR.BIN': (L.VRAM_TOKEN_SPRITES, token_sprites(modern)),
         'PALETTE.BIN': (L.VRAM_PALETTE, vera_palette()),
     }
-    files.update(build_splash())
-    menu = menu_background()
-    menu_flat = split_tiles(menu).reshape(-1, 64)
-    unique, inverse, counts = np.unique(menu_flat, axis=0, return_inverse=True, return_counts=True)
-    # Preserve every artwork tile exactly. The menu does not need piece tokens,
-    # so layer 1 can use the remaining space after its fonts and widgets.
-    menu_capacity = 1024 + (1024 - L.L1_PIECES)
-    if len(unique) > menu_capacity:
-        raise ValueError(f'menu needs {len(unique)} exact tiles; the two layers allow {menu_capacity}')
-    order = np.argsort(-counts, kind='stable')
-    primary, overlay = order[:1024], order[1024:]
-    primary_lookup = np.full(len(unique), -1, np.int32)
-    primary_lookup[primary] = np.arange(len(primary))
-    overlay_lookup = np.zeros(len(unique), np.uint16)
-    overlay_lookup[overlay] = np.arange(len(overlay)) + L.L1_PIECES
-    blank_id = np.flatnonzero((unique == LIGHT).all(axis=1))[0]
-    blank_tile = primary_lookup[blank_id]
-    assert blank_tile >= 0, 'blank UI surface must be in layer 0'
-    menu_map = np.full((MAP_ROWS, MAP_W), blank_tile | (MENU_PALETTE_ROW << 12), np.uint16)
-    menu_overlay = np.zeros((MAP_ROWS, MAP_W), np.uint16)
-    in_primary = primary_lookup[inverse] >= 0
-    menu_map[:, :W // 8] = np.where(in_primary, primary_lookup[inverse], blank_tile).reshape(MAP_ROWS, W // 8) | (MENU_PALETTE_ROW << 12)
-    menu_overlay[:, :W // 8] = np.where(in_primary, 0, overlay_lookup[inverse] | (MENU_PALETTE_ROW << 12)).reshape(MAP_ROWS, W // 8)
-    menu_l1_tiles = np.concatenate((l1_tiles[:L.L1_PIECES], unique[overlay]))
-    assert len(primary) <= 1024 and len(menu_l1_tiles) <= 1024
-    files['MNTILES.BIN'] = (L.VRAM_L0_TILES, tile_bytes(unique[primary]))
-    files['MNMAP.BIN'] = (L.VRAM_L0_MAP, menu_map.astype('<u2').tobytes())
-    files['MNL1TIL.BIN'] = (L.VRAM_L1_TILES, tile_bytes(menu_l1_tiles))
-    files['MN1MAP.BIN'] = (L.VRAM_L1_MAP, menu_overlay.astype('<u2').tobytes())
-    files['MNPAL.BIN'] = (L.VRAM_PALETTE + MENU_PALETTE_ROW * 32, menu_palette())
-    print(f'campaign menu: {len(unique)} exact artwork tiles; layer 0 {len(primary)}/1024, layer 1 {len(menu_l1_tiles)}/1024')
-    if preview:
-        preview.mkdir(parents=True, exist_ok=True)
-        menu_preview = Image.fromarray(menu, 'P')
-        menu_preview.putpalette(pil_palette(MENU_PALETTE))
-        menu_preview.save(preview / 'new-game-art.png')
+    files.update(build_splash(version, compiled))
+    files.update(build_endings())
     for style in (1, 3):
         field_tiles, field_map, field_preview = pack_layer0(
             build_layer0(style=style), np.random.default_rng(16))
@@ -521,6 +554,8 @@ def main():
 
     if preview:
         preview.mkdir(parents=True, exist_ok=True)
+        ending_previews(preview)
+        splash_preview(preview / 'splash.png', version, compiled)
         save_png(preview / 'layer0.png', rebuilt)
         save_png(preview / 'layer0-exact.png', layer0)
         save_png(preview / 'tokens.png', np.hstack(tokens))

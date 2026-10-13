@@ -57,16 +57,13 @@ def main():
             choose(session, '3')
             assert text(session, 9) == 'NO SAVED GAME', 'Continue needs GAME.DAT'
             choose(session, '2')
-            assert text(session, 20, 12, 24) == "1  ATTACKER'S ADVANTAGE"
-            assert read_vram(session, 0x8000, 60 * 256) == (ROOT / 'src/MNMAP.BIN').read_bytes()
-            assert read_vram(session, 0x1FAE0, 32) == (ROOT / 'src/MNPAL.BIN').read_bytes()
+            assert text(session, 20, 12, 24) == "ATTACKER'S ADVANTAGE"
+            assert read_vram(session, 0x8000, 60 * 256) == field_map, 'rules must keep the battlefield backdrop'
+            assert read_vram(session, 0x1FA00, 512) == palette, 'rules must keep the active palette'
             session.shot(ROOT / 'build/test-shots/game-settings.png')
-            # Artwork must render pixel-for-pixel, without tile approximations.
-            with Image.open(ROOT / 'build/test-shots/game-settings.png') as shot, Image.open(ROOT / 'build/preview/new-game-art.png') as art:
-                for region in ((32, 8, 608, 136), (8, 340, 632, 416)):
-                    assert shot.convert('RGB').crop(region).tobytes() == art.convert('RGB').crop(region).tobytes(), 'menu artwork differs from the exact asset'
-            menu_tiles = (ROOT / 'src/MNL1TIL.BIN').read_bytes()
-            assert read_vram(session, 0x10000, len(menu_tiles)) == menu_tiles
+            with Image.open(ROOT / 'build/test-shots/game-settings.png') as rules, Image.open(ROOT / 'build/test-shots/menu.png') as menu:
+                for region in ((0, 16, 48, 416), (0, 392, 416, 428)):
+                    assert rules.convert('RGB').crop(region).tobytes() == menu.convert('RGB').crop(region).tobytes(), 'battlefield outside floating menu changed'
 
             choose(session, 'Return')
             assert read_vram(session, 0x8000, 60 * 256) == field_map, 'leaving settings must restore field artwork'
@@ -80,14 +77,14 @@ def main():
             assert text(session, 9) == 'DEPLOY YOUR ARMY', 'incomplete Start must be disabled'
             assert counts(session) == (0, 40)
             choose(session, 'Escape')
-            assert text(session, 20, 12, 24) == "1  ATTACKER'S ADVANTAGE"
+            assert text(session, 20, 12, 24) == "ATTACKER'S ADVANTAGE"
             choose(session, 'Escape')
             choose(session, '1')
             assert text(session, 9) == 'MANAGE SETUPS'
             assert counts(session) == (0, 0)
             assert 'BACK' in text(session, 56, 0, 53) and 'START' not in text(session, 56, 0, 53)
             choose(session, 'Return')
-            assert text(session, 11) == 'MAIN MENU', 'Back must work with an incomplete setup'
+            assert text(session, 55, 0, 53) == 'CHOOSE AN OPTION', 'Back must work with an incomplete setup'
             choose(session, '1')
             choose(session, 'R')
             assert text(session, 9) == 'SETUP COMPLETE'
@@ -106,11 +103,11 @@ def main():
             assert board(session)[60:] == original
             assert text(session, 9) == 'SETUP COMPLETE'
             choose(session, 'Return')
-            assert text(session, 11) == 'MAIN MENU', 'setup management must not start a match'
+            assert text(session, 55, 0, 53) == 'CHOOSE AN OPTION', 'setup management must not start a match'
             # Mouse entry into Play also goes through deployment, even for a complete setup.
-            click(session, 160, 208)
-            assert text(session, 20, 12, 24) == "1  ATTACKER'S ADVANTAGE"
-            click(session, 490, 426)
+            click(session, 160, 188)
+            assert text(session, 20, 12, 24) == "ATTACKER'S ADVANTAGE"
+            click(session, 310, 364)
             assert text(session, 9) == 'READY TO PLAY'
             assert board(session)[60:] == original and counts(session) == (40, 40)
             session.move_mouse(10, 10)
@@ -120,18 +117,18 @@ def main():
             assert board(session)[60:] == original, 'match must use the approved arrangement'
             # Escape opens the game menu; a saved game continues from the main menu.
             choose(session, 'Escape')
-            assert text(session, 21, 10, 34) == 'GAME MENU'
+            assert text(session, 55, 0, 53) == 'GAME PAUSED'
             session.shot(ROOT / 'build/test-shots/game-menu.png')
             position = board(session)
             choose(session, '2')
-            assert text(session, 33, 10, 34) == 'GAME SAVED'
+            assert text(session, 40, 10, 34) == 'GAME SAVED'
             assert (directory / 'GAME.DAT').read_bytes()[:8] == b'STRGAM01'
             choose(session, 'Escape')
             assert text(session, 21, 10, 34) == '', 'Escape resumes the game'
             assert text(session, 9) == 'YOUR TURN'
             choose(session, 'Escape')
             choose(session, '3')
-            assert text(session, 11) == 'MAIN MENU'
+            assert text(session, 55, 0, 53) == 'CHOOSE AN OPTION'
             choose(session, '3')
             assert text(session, 9) == 'YOUR TURN'
             assert board(session) == position, 'the saved game must continue where it was saved'
@@ -144,16 +141,16 @@ def main():
             session.emu.write_memory(symbol('board'), position)
             session.run(['drag:76,196,76,156'])
             session.emu.advance(320)
-            assert text(session, 9) == 'YOU WIN'
+            assert text(session, 42, 20, 40) == 'YOU CAPTURED THE ENEMY FLAG'
             choose(session, 'Return')
-            assert text(session, 20, 12, 24) == "1  ATTACKER'S ADVANTAGE", 'new games must return to rules settings'
+            assert text(session, 20, 12, 24) == "ATTACKER'S ADVANTAGE", 'new games must return to rules settings'
             choose(session, 'Return')
             assert text(session, 9) == 'READY TO PLAY'
             assert board(session)[60:] == original
             choose(session, 'Escape')
-            assert text(session, 20, 12, 24) == "1  ATTACKER'S ADVANTAGE"
+            assert text(session, 20, 12, 24) == "ATTACKER'S ADVANTAGE"
             choose(session, 'Escape')
-            assert text(session, 11) == 'MAIN MENU'
+            assert text(session, 55, 0, 53) == 'CHOOSE AN OPTION'
         finally:
             session.close()
         session = start(directory)

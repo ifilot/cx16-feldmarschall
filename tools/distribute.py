@@ -5,8 +5,8 @@ Usage:
 
 Writes build/dist/FELDMARSCHALL/ and build/dist/FELDMARSCHALL.ZIP. The runtime files
 are the game itself, a copy named AUTOBOOT.X16 that the X16 starts on
-power-up, and every file the game loads into VRAM (found in the load_vram
-calls of src/ui/video.c, so a new resource cannot be forgotten). The test
+power-up, every file loaded into VRAM, and the banked code/music/effects
+declared in src/ui/sound.c. The test
 programs (BRIDGE.PRG), saved deployments (DEPLOY.DAT), the saved game
 (GAME.DAT) and appearance preferences (COLORS.DAT) stay out. Entries carry a fixed date, so the same build gives the same ZIP.
 """
@@ -23,6 +23,8 @@ NAME = 'FELDMARSCHALL'
 def runtime_files():
     video = (ROOT / 'src/ui/video.c').read_text()
     resources = re.findall(r'load_vram\("([A-Z0-9]+\.[A-Z0-9]+)"', video)
+    sound = (ROOT / 'src/ui/sound.c').read_text()
+    resources += re.findall(r'"([A-Z0-9]+\.(?:BIN|ZSM))"', sound)
     assert resources, 'no load_vram calls found in src/ui/video.c'
     return ['FELDMARS.PRG'] + list(dict.fromkeys(resources))
 
@@ -40,10 +42,13 @@ FELDMARS.PRG and run it.
 Emulator: x16emu -prg FELDMARS.PRG -run
 
 Press Enter at the splash screen to open the menu.
-Choose 1 MANAGE SETUPS to create, load or save army arrangements; Back
-returns to the menu. Choose 2 PLAY AGAINST THE COMPUTER to deploy your
+Choose 1 SETUPS to create, load or save army arrangements; Back
+returns to the menu. Choose 2 SKIRMISH to deploy your
 game rules, then deploy your army before a match. Start is enabled when all 40 pieces are on the board.
-Choose 3 CONTINUE SAVED GAME to resume the game saved in GAME.DAT.
+Choose 3 LOAD GAME to resume the game saved in GAME.DAT.
+Choose DEMO to watch two computer armies battle with random deployments
+and the current rules. Menu pauses and offers separate music/effects toggles; demos cannot save.
+New game at the result starts another demo.
 Choose 4 OPTIONS to select field styles, army colors and rank numbers
 (classic: 1 = Marshal, S = Spy; modern: 1 = Spy, 10 = Marshal).
 Choose 5 ABOUT for the author, repository, version, and compilation date.

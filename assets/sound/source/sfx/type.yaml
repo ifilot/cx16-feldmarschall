@@ -1,0 +1,10 @@
+type: sfx
+title: type
+description: >
+  A key typed in the SAVE name field: a tiny tick.
+instruments: ../instruments.yaml
+parts:
+  tick: {instrument: tick, voices: [12], level: 0.5}
+sections:
+  main:
+    tick: "A5/3t"

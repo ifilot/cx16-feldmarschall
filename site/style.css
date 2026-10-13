@@ -122,18 +122,14 @@ footer p { line-height: 1.8; }
 canvas { display: block; width: 640px; height: 480px; image-rendering: crisp-edges; image-rendering: pixelated; outline-offset: -5px; touch-action: none; }
 .cover { position: absolute; inset: 0; }
 .cover img { display: block; width: 100%; height: 100%; image-rendering: crisp-edges; image-rendering: pixelated; }
-.mobile-hint, .touch-keys { display: none; }
-.touch-keys { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; padding: 8px 0; }
-.touch-keys button { min-height: 44px; border: 1px solid var(--line); border-radius: 4px; color: var(--ink); background: var(--paper); font: inherit; font-size: 14px; }
+.mobile-hint { display: none; }
 .mobile-hint { font-size: 11px; line-height: 1.5; margin: 10px 0 0; color: var(--muted); }
 .player:fullscreen { width: 100%; height: 100%; display: flex; flex-direction: column; background: var(--ink); }
 .player:fullscreen .game-viewport { max-width: none; flex: 1; min-height: 0; border-radius: 0; }
 .player:fullscreen .screen { border: 0; }
 .player:fullscreen .mobile-hint { margin: 0; padding: 5px 12px; background: var(--paper); }
-.player:fullscreen .touch-keys { padding: 6px 12px max(6px, env(safe-area-inset-bottom)); background: var(--paper); }
 @media (max-width: 700px), (pointer: coarse) {
   .mobile-hint { display: block; }
-  .touch-keys { display: grid; }
 }
 #exit-fullscreen { display: none; font: inherit; padding: 4px 8px; margin-left: 8px; color: var(--ink); background: var(--paper); border: 1px solid var(--red); border-radius: 3px; }
 .player:fullscreen #exit-fullscreen { display: inline-block; }

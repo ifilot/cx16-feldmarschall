@@ -1,0 +1,24 @@
+type: song
+title: Defeat (jingle)
+description: >
+  About 6 s D-minor lament for losing the flag (or having no move left).
+  A lone horn falls to the tonic over a muffled field drum, a bassoon
+  sinking a semitone and a soft string chord. Plays once (music priority 0).
+instruments: ../instruments.yaml
+tempo: 75            # quarter = 48 ticks, sixteenth = 12: exact grid
+meter: 4/4
+parts:
+  horn:    {instrument: horn, voices: [0], level: 1.2}
+  strings: {instrument: strings, voices: [1, 2, 3], level: 1.4}
+  bassoon: {instrument: bassoon, voices: [4], level: 1.3}
+  timp:    {instrument: timpani, voices: [5], level: 0.6}
+  drum:    {voices: [6], level: 1.0, pan: L, kit: {d: {instrument: muffled, note: C5}}}
+sections:
+  main:
+    horn:    "| A4/4. G4/8 F4/4 E4/4 | D4/1 |"
+    strings: "| [D4 F4]/2 [C#4 E4 G4]/2 | [A3 D4 F4]/1 |"
+    bassoon: "| D3/2 C#3/2 | D2/1 |"
+    timp:    "| D3/4 r/4 A2/4 r/4 | D3/2 r/2 |"
+    drum:    "| d/8. v=0.6 d/16 v=1 d/4 d/8. v=0.6 d/16 v=1 d/4 | d/4 r/2. |"
+arrangement: [main]
+loop: false

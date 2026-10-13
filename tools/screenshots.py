@@ -65,8 +65,6 @@ def start(emu, rom, directory):
     session.emu = X16Agent(emu, rom, fsroot=directory, options=['-prg', str(directory / 'FELDMARS.PRG'), '-run'])
     session.buttons = 0
     session.emu.advance(360)
-    session.press('Return')
-    session.emu.advance(180)
     return session
 
 
@@ -117,9 +115,12 @@ def main():
         session = start(args.emu, args.rom, directory)
         shot = Shots(session, scratch, out)
         try:
+            shot('title.png')
+            session.press('Return')
+            session.emu.advance(180)
             # The main menu and About.
             session.move_mouse(10, 10)
-            shot('menu.png', row=(11, 54, 25, 'MAIN MENU'))
+            shot('menu.png', row=(55, 0, 53, 'CHOOSE AN OPTION'))
             choose(session, '5')
             shot('about.png')
             choose(session, 'Escape')
@@ -156,7 +157,7 @@ def main():
 
             # Play: rules, the approved setup, a few moves and the game menu.
             choose(session, '2')
-            shot('game-settings.png', row=(20, 12, 24, "1  ATTACKER'S ADVANTAGE"))
+            shot('game-settings.png', row=(20, 12, 24, "ATTACKER'S ADVANTAGE"))
             choose(session, 'Return')
             session.move_mouse(10, 10)
             shot('prepare-play.png', info='READY TO PLAY')
@@ -165,7 +166,7 @@ def main():
             play(session, args.turns, args.seed)
             shot('play.png', info='YOUR TURN')
             choose(session, 'Escape')
-            shot('game-menu.png', row=(21, 10, 34, 'GAME MENU'))
+            shot('game-menu.png', row=(55, 0, 53, 'GAME PAUSED'))
             choose(session, '1')
 
             # Rescue: a captured Marshal, and a Major on Blue's back row.
@@ -187,9 +188,18 @@ def main():
             choose(session, '1')
             session.emu.advance(400)
             session.move_mouse(330, 300)
-            shot('game-over.png', info='OPPONENT WINS')
+            shot('game-over.png', row=(42, 20, 40, 'YOU HAVE NO MOVES LEFT'))
             choose(session, 'Escape')       # the scenarios
             choose(session, 'Escape')       # the main menu
+
+            # Both computer armies are face up for spectators.
+            write(session, 'game_rules', [0])
+            pin_dice(session, 1000)
+            choose(session, '6')
+            session.move_mouse(420, 420)
+            shot('demo.png')
+            choose(session, 'Escape')
+            choose(session, '4')
 
             # Options last, since they change the colors of every other screen.
             choose(session, '4')

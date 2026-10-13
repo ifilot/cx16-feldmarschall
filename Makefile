@@ -1,8 +1,8 @@
 EMU ?= $(abspath ../x16-emulator/build/x16emu)
 ROM ?= $(abspath $(firstword $(wildcard ../emulator/rom.bin ../emulator-win/rom.bin) ../emulator/rom.bin))
-EMU_FLAGS ?= -scale 2
+EMU_FLAGS ?= -scale 2 -joy1
 
-.PHONY: all run dist site test-dist test-colors test-flow test-variants test-endings screenshots check autoplay native rating parity clean
+.PHONY: all run dist site test-dist test-colors test-flow test-variants test-endings test-sound test-controls test-demo test-panel test-menus screenshots check autoplay native rating parity clean
 
 all:
 	$(MAKE) -C src
@@ -31,6 +31,21 @@ test-variants: all
 # every way a game ends, through the developer scenarios (type DEV at the menu)
 test-endings: all
 	python3 tools/test_endings.py
+
+test-sound: all
+	python3 tools/test_sound.py
+
+test-menus: all
+	python3 tools/test_menus.py
+
+test-panel: all
+	python3 tools/test_panel.py
+
+test-demo: all
+	python3 tools/test_demo.py
+
+test-controls: all
+	python3 tools/test_controls.py
 
 run: all
 	cd src && "$(EMU)" -rom "$(ROM)" -prg FELDMARS.PRG -run $(EMU_FLAGS)

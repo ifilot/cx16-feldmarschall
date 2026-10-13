@@ -13,7 +13,7 @@ from pieces import build_tokens  # noqa: E402
 
 
 def main():
-    out = ROOT / 'output/style-studies'
+    out = ROOT / 'build/preview/style-studies'
     out.mkdir(parents=True, exist_ok=True)
     template = Image.fromarray(np.hstack(build_tokens()), 'P')
     width = template.width

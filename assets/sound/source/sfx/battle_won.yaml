@@ -1,0 +1,12 @@
+type: sfx
+title: battle_won
+description: >
+  Your piece wins the battle (or Blue's attacker falls): a short rising bugle call.
+instruments: ../instruments.yaml
+parts:
+  call: {instrument: bugle, voices: [12], level: 1.5}
+  drum: {instrument: snare, voices: [13], level: 0.8}
+sections:
+  main:
+    call: "D5/5t F#5/5t A5/14t"
+    drum: "C6/5t r/5t C6/5t r/9t"

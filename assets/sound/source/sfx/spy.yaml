@@ -1,0 +1,14 @@
+type: sfx
+title: spy
+description: >
+  The spy strikes down the marshal: a quick falling swish, then a thin stab and a low thud.
+instruments: ../instruments.yaml
+parts:
+  swish: {instrument: whoosh, voices: [12], level: 1.0}
+  stab:  {instrument: steel, voices: [13], level: 0.8}
+  thump: {instrument: thump, voices: [14], level: 0.9}
+sections:
+  main:
+    swish: "C8~C6/6t r/12t"
+    stab:  "r/6t F#6/12t"
+    thump: "r/6t C3/10t r/2t"

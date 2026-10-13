@@ -1,0 +1,14 @@
+type: sfx
+title: bomb
+description: >
+  An attacker hits a bomb: a powder blast whose noise sinks into a low rumble (about 0.7 s, the longest effect).
+instruments: ../instruments.yaml
+parts:
+  blast:  {instrument: powder, voices: [12], level: 0.85}
+  rumble: {instrument: rumble, voices: [13], level: 0.75}
+  crack:  {instrument: clack, voices: [14], level: 1.0}
+sections:
+  main:
+    blast:  "C6~C3/40t"
+    rumble: "G2~C2/40t"
+    crack:  "C7/3t r/37t"

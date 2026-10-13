@@ -26,6 +26,7 @@
 #define BUTTON_NORMAL       0
 #define BUTTON_HOVER        1
 #define BUTTON_DISABLED     2
+#define BUTTON_PRESSED      3
 
 #define BUTTON_HEIGHT       3       // tiles
 
@@ -38,10 +39,16 @@ uint8_t button_width(const char* label);
  * @brief Draw a raised button: a small plate with its label
  */
 void button_draw(uint8_t col, uint8_t row, const char* label, uint8_t state);
+/* A left-aligned label in a fixed-width button, for aligned menu lists. */
+void button_draw_width(uint8_t col, uint8_t row, uint8_t width,
+                       const char* label, uint8_t state);
 
 /**
  * @brief Whether a screen pixel lies on the button
  */
+/* Red/off or green/on switch, with a knob and an explicit state label. */
+void button_toggle(uint8_t col, uint8_t row, uint8_t enabled);
+
 uint8_t button_hit(uint8_t col, uint8_t row, const char* label, int16_t x, int16_t y);
 
 #endif

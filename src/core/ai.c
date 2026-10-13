@@ -25,6 +25,13 @@
 #include "random.h"
 #include "rules.h"
 
+#ifdef BANKED_AI
+#pragma code-name ("AICODE")
+#pragma rodata-name ("AIRODATA")
+#define ai_move ai_move_banked
+#define ai_reset ai_reset_banked
+#endif
+
 #define FLAG_VALUE      2000
 #define BACKTRACK       20          // penalty for undoing the previous move
 
@@ -37,7 +44,7 @@ static uint8_t own;                     // CELL_BLUE or 0: the army to move
 static uint8_t hidden[PIECE_TYPES];     // the enemy's unrevealed pieces per rank
 static uint8_t hidden_mobile;
 static int16_t risk[PIECE_TYPES];       // expected loss next to a hidden enemy piece
-static uint8_t last_from = NOWHERE, last_to = NOWHERE;
+static uint8_t last_from[2], last_to[2]; // independent history for each army
 static uint8_t targets[MAX_TARGETS];
 
 /**
@@ -161,12 +168,12 @@ static int16_t score(uint8_t from, uint8_t to) {
             }
         }
     }
-    if(from == last_to && to == last_from) s -= BACKTRACK;
+    if(from == last_to[own ? 1 : 0] && to == last_from[own ? 1 : 0]) s -= BACKTRACK;
     return s + (random_next() & 7);
 }
 
 void ai_reset(void) {
-    last_from = last_to = NOWHERE;
+    last_from[0] = last_from[1] = last_to[0] = last_to[1] = NOWHERE;
 }
 
 void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
@@ -192,6 +199,6 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
             }
         }
     }
-    last_from = *from;
-    last_to = *to;
+    last_from[own ? 1 : 0] = *from;
+    last_to[own ? 1 : 0] = *to;
 }

@@ -1,0 +1,10 @@
+type: sfx
+title: load
+description: >
+  LOAD: a map unfolds, two short paper rustles.
+instruments: ../instruments.yaml
+parts:
+  paper: {instrument: rustle, voices: [12], level: 1.1}
+sections:
+  main:
+    paper: "C6~G6/8t r/4t G5~C6/8t"

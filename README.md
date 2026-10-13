@@ -16,25 +16,47 @@ river runs under a thin grid inside a plain stone frame; the panel and
 message bar are stone with light grey plates. Beside it, a tray
 holds an army of 40 tokens, five across and eight down.
 
-The game opens with a four-color Prussian marshal portrait in ink, slate,
-gold, and red. Press **Enter** to
-continue to the menu.
+The game opens with a sixteen-color Prussian marshal portrait in a beveled
+gold frame on black, with the version and compilation date below.
+Press **Enter** to continue to the menu.
 
-![Splash screen](assets/splash/feldmarschall.png)
+Mouse, keyboard and SNES-compatible gamepads can be used together. Menus
+follow pointer movement or a fresh click; a stationary mouse no longer
+overrides keyboard selection. When events arrive in the same frame, the
+keyboard takes precedence. Keyboard shortcuts remain available, with hints
+kept off the game screen except the title prompt.
 
-The main menu offers **Manage setups**, **Play against the computer**,
-**Continue saved game**, **Options**, and **About**. Playing begins with
+A connected controller on ports 1–4 uses **D-pad** to move the shared pointer,
+**A** to click (hold while moving to drag), **B** or **Select** to go back,
+and **Start** to confirm. **X** gives fine positioning and **Y** faster travel.
+Releasing the pad leaves the pointer in place; moving the mouse takes over
+from there. `make run` enables emulator controller port 1 with `-joy1`; add
+`-joy2` through `-joy4` for other ports. Controller support uses the KERNAL
+`joystick_get` and `mouse_set_position` APIs (ROM R47+).
+
+The supplied Feldmarschall soundtrack plays through VERA PSG: a title theme,
+deployment music, four battle tracks that rotate on new games, and one-shot
+victory/defeat cues. Draws use the supplied neutral battle-tie effect. Pieces,
+battles, bombs, defusing, menus, deployment and saving have matching effects.
+In the in-game **Menu** (Escape), select **Music On/Off** and **Sound Effects On/Off**
+to mute or re-enable each independently for the current session. Missing audio files leave gameplay
+usable without sound.
+
+![Splash screen](docs/title.png)
+
+The main menu offers **Setups**, **Skirmish**,
+**Load game**, **Options**, **About**, and **Demo**. Playing begins with
 game settings, followed by army preparation: arrange or load your army,
 then choose **Start**.
 
 ![Select screen](docs/menu.png)
 
 Choose **5 ABOUT** for the program name, author, GitHub repository, version,
-and compilation date. The version (currently **v0.1.0**) is set in
+and compilation date. The version (currently **v0.2.0**) is set in
 `tools/build_info.py`; the date is generated at build time. Enter, Escape,
 or Back returns to the menu.
 
-Choose **3 CONTINUE SAVED GAME** to pick up the game saved from the game
+Choose **3 LOAD GAME** to pick up the game saved from the game
 menu (see below). Without a saved game the info plate says so.
 
 Choose **4 OPTIONS** to select independent field styles, army colors and
@@ -61,10 +83,10 @@ coordinates, sidebar, tray, dialogs, and controls keep the classic UI style.
 
 ![Color options](docs/options.png)
 
-### Manage setups and deploy your army
+### Setups and deploy your army
 
-**Manage setups** lets you create, load, and save army arrangements. Its
-**Back** button returns to the menu. **Play against the computer** opens the
+**Setups** lets you create, load, and save army arrangements. Its
+**Back** button returns to the menu. **Skirmish** opens the
 same editor as a pre-game deployment screen, with **Start** in place of Back.
 The opponent's hidden army appears only in pre-game deployment.
 
@@ -93,12 +115,12 @@ deployment:
 | LOAD | L | choose one of ten built-in deployments or your saved ones |
 | SAVE | S | keep the deployment under a name, in one of ten slots |
 | RANDOM | R | deploy the whole army at random |
-| BACK | Return | return to the menu from Manage setups |
+| BACK | Return | return to the menu from Setups |
 | START | Return | begin the match from pre-game deployment |
 
 SAVE and START need all 40 pieces on the board; BACK also works with an
 unfinished setup. The arrangement is kept when you leave, so a setup built
-in Manage setups is available when you choose Play. Escape returns to the menu.
+in Setups is available when you choose Skirmish. Escape returns to the menu.
 
 **LOAD** opens a list over Blue's half of the board: ten classic
 deployments on the left (Corner Fortress, Centre Keep, Lake Shadow, Scout
@@ -114,7 +136,7 @@ one. Return or the SAVE button stores it, replacing whatever was in that
 slot. Saved deployments live in `DEPLOY.DAT` on the SD card (or in `src/`
 in the emulator) and are there the next time you play.
 
-![Manage setups](docs/manage-setups.png)
+![Setups](docs/manage-setups.png)
 
 ![Dragging a piece](docs/deploy-drag.png)
 
@@ -122,9 +144,9 @@ in the emulator) and are there the next time you play.
 
 ![Saving a deployment](docs/deploy-save.png)
 
-### Play against the computer
+### Skirmish
 
-Choose Play to open a dedicated full-screen menu for the optional Masters
+Choose Skirmish to open a floating menu over the battlefield for the optional Masters
 rules before every match. The **Marshal’s Orders** artwork pairs a Fraktur **New game** masthead
 with Prussian officer portraits and a command-table battle plan.
 Select a rule to read its explanation beside the list.
@@ -161,17 +183,22 @@ back row guarded by bombs.
   left.
 * Capture the flag, or leave the opponent without a move, to win. If a
   battle leaves neither army able to move, the game is a draw. Blue's army
-  is then revealed, and a plate names the result and why: **1 New game**
-  (or Return) opens game settings, **2 View the board** puts the plate
-  away to study the revealed armies (Space or a click brings it back), and
-  **3 Main menu** (or Escape).
-* **Escape** opens the game menu over the board and pauses the game:
-  **1 Resume** (or Escape again), **2 Save game**, which writes the game
-  to `GAME.DAT` and keeps the menu open, and **3 Quit to menu**. Pressed
+  is then revealed. A black result screen shows a framed 320 × 192
+  illustration in sixteen colors, the outcome, turn and reason:
+  **New game** opens game settings, **View the board** restores the
+  revealed armies (Space or a click brings the result back), and
+  **Main menu** (or Escape).
+  Up/Down selects an option and Return confirms it; the choices also accept
+  numbers and mouse clicks. Each outcome loads independently into layer 0,
+  and leaving the result restores the selected field and army palettes.
+* **Menu** opens the game menu over the board and pauses the game; Escape
+  or the gamepad's B does the same. **Resume**, **Save game**, which writes
+  the game to `GAME.DAT` and keeps the menu open, **Quit to menu**, and
+  **Music on/off**, and **Sound effects on/off**. Pressed
   during the computer's move or a battle, the menu opens as soon as that
   move is over, so a saved game never holds half a move. A saved game
   keeps the board, both armies' casualties, the variants in play and the
-  turn; **3 Continue saved game** in the main menu resumes it.
+  turn; **3 Load game** in the main menu resumes it.
 
 ![Game menu](docs/game-menu.png)
 
@@ -211,6 +238,21 @@ The computer chooses its own reinforcement and return square. A rescued
 piece retains disclosure only if its captured rank was known.
 
 ![Rescue a captured piece](docs/rescue.png)
+
+### Demo
+
+Choose **Demo** from the main menu to watch two computer armies battle.
+Both deploy at random and use the current game rules. Both armies are face up
+for spectators; each AI still sees only enemy ranks revealed in battle and
+keeps its own move history. Moves, battles and rescues run automatically.
+
+**Menu** (or Escape / gamepad B) pauses between moves. You can resume, toggle music and effects independently,
+or quit. Saving is disabled in demo mode, so it cannot overwrite a saved
+player game. **New game**
+on a demo's result screen starts another computer battle. Watching a demo
+preserves your prepared army and saved deployment slots.
+
+![Two computer armies battling in demo mode](docs/demo.png)
 
 #### The computer
 
@@ -313,12 +355,15 @@ bitmap would need 150 KB, more than VERA's 128 KB of VRAM.
 * **Layer 1** holds the grid, pieces, move dots and text. Each token carries
   its own square's grid edge and replaces that square's grid tiles, so the
   terrain tiles stay free of lines. Plates and their text (a second copy of
-  the font on the plate's light grey) use it too. Layer 1 uses 531 tiles.
-  The illustrated New Game menu temporarily uses both tile layers and fixed
-  palette row 7. Its 1,832 artwork tiles are stored exactly: 1,024 in layer 0,
-  and 808 after the 206 font/widget tiles in layer 1. The build fails if the
-  artwork exceeds this budget; it never substitutes similar tiles. Leaving
-  the menu restores the game tiles, selected field and palette.
+  the font on the plate's light grey) use it too. The battle panel uses
+  separate tokens without grid edges. Layer 1 uses 1,015 tiles, including
+  both token sets, button states, and serif headings. Main Menu, New Game, and the in-game pause menu
+  use serif headings with a single red underline and left-aligned buttons with a
+  red selection text and a brief recessed press animation. New Game
+  keeps the chosen battlefield and palettes visible behind its floating
+  rule labels and red/off or green/on toggle switches. Knob position and
+  ON/OFF labels also show the state. Descriptions appear in the right-hand panel.
+
 * **Palettes**: row 0 holds the fixed classic UI colors; row 6 holds the
   selected board colors. Layer-0 board tiles and layer-1 grid tiles select
   row 6, while the surrounding frame and panels select row 0.
@@ -380,6 +425,7 @@ src/
     random      the game's own random numbers (the same on the X16 and the PC)
   ui/           everything on screen
     video       VERA: layers, text, tokens, sprites, the mouse pointer
+    sound       banked ZSMKit music and effects, scene changes and mute
     boardview   drawing the board and finding the square under the pointer
     panel       info plate, tray and message bar
     drag        a token lifted on the drag sprite
@@ -422,7 +468,7 @@ everything else already captured:
 A scenario is a few bytes: the variants, who moves first, and the pieces as
 (square, cell) pairs; `play_position()` counts the missing pieces as fallen.
 `make test-endings` plays them all through the emulator and checks the
-result plates. The game stays on the scenario list until you leave it.
+illustrated results, exact artwork and board/palette restoration. The game stays on the scenario list until you leave it.
 
 ### Memory
 
@@ -482,6 +528,11 @@ make site         # the website with the game in the browser, in build/site
 make screenshots  # regenerate every screenshot in docs/ in the AgentBridge emulator
 make test-variants # emulator checks of Masters variants and hidden information
 make test-endings # every way a game ends, through the developer scenarios
+make test-sound   # actual PSG playback, music loop, effects, mute and bank loading
+make test-menus    # menu highlight/press states and floating rule backdrop
+make test-panel    # clean battle-panel edges in classic and modern ranks
+make test-demo     # computer-vs-computer, pause/no-save/resume and rescues
+make test-controls # keyboard/pointer arbitration and simulated gamepad actions
 make check        # check the built-in deployments and the rules (tests/)
 make native       # build the computer player as a PC program (needs gcc)
 make rating       # rate it against the baseline bots
@@ -494,8 +545,8 @@ from memory, drags a random legal red piece each turn, and checks that
 every turn changes the board.
 
 `make dist` collects only what the game needs: `FELDMARS.PRG`, a copy named
-`AUTOBOOT.X16` that the X16 starts on power-up, the `.BIN` files it loads
-(read from the `load_vram` calls in `src/ui/video.c`), a `README.TXT`, the
+`AUTOBOOT.X16` that the X16 starts on power-up, the graphics, banked game code
+and sound files declared in `src/ui/video.c` and `src/ui/sound.c`, a `README.TXT`, the
 license and `HASHES.TXT` with SHA-256 sums. Copy the contents of
 `build/dist/FELDMARSCHALL` to the root of an SD card to boot straight into the
 game. The ZIP has fixed dates, so the same sources give the same archive.
@@ -537,21 +588,69 @@ It also writes previews of layer 0 and the token sheet to `build/preview`.
 `assets/scripts/layout.py` holds the screen geometry, which the C code
 receives through the generated `gfx.h`.
 
+Sound assets from `../cx16-sound-generator` are included in
+`assets/sound/psg/`, with their YAML sources in `assets/sound/source/`.
+To regenerate with that tool:
+
+```sh
+../cx16-sound-generator/bin/chipscore project assets/sound/source/project.yaml
+cp build/sound/psg/*.ZSM build/sound/psg/SFX.BIN build/sound/psg/music.h build/sound/psg/sfx.h assets/sound/psg/
+make test-sound
+```
+
+ZSMKit v1 runs music on PSG voices 0–11 and effects on 12–15. Playback is
+interrupt-driven from RAM, so AI searches and disk loads do not starve it.
+RAM bank 1 holds ZSMKit state, 2 the effects, and 3–21 the music; 22 and 23
+hold the play-scene and AI code. Their data stays in main RAM, and assembly
+gateways restore the caller's bank. `PLAY.BIN` and `AI.BIN` are required
+runtime files. The native engine and `BRIDGE.PRG` keep their ordinary AI code.
+`src/feldmarschall.cfg` checks bank sizes, and the sound build refuses music
+that would overlap the code banks. Music resumes its current track across
+in-session pauses; loading a saved game after restarting uses the first
+battle track. The result cue plays once, and studying the final board leaves
+background music silent.
+
+## Asset layout
+
+`assets/` contains the inputs used by the current game: native artwork,
+fonts, palettes, sound sources, and compiled sound data. `assets/artwork-source/`
+keeps only the four selected high-resolution illustrations and their generation
+prompts. `python3 assets/scripts/prepare_artwork.py --check` verifies that their
+320 × 192 exports match the installed assets; omit `--check` to regenerate them.
+
+Build resources, review captures, and palette/field previews go under ignored
+`build/`. `docs/` contains the screenshots used in this README, regenerated with
+`make screenshots`. The obsolete four-color title studies and illustrated
+New Game candidates and exporters have been removed; current floating menus
+are drawn by the game.
+
 ## Credits
 
 * `assets/font/kakuro-ui.png`: the 8 × 8 font of cx16-kakuro.
-* `assets/font/masthead.png` and `assets/font/new-game.png`: rendered from
+* `assets/font/masthead.png`: rendered from
   [UnifrakturMaguntia](https://github.com/google/fonts/tree/main/ofl/unifrakturmaguntia)
   (SIL Open Font License).
-* `assets/splash/feldmarschall.png`: AI-generated Prussian marshal portrait,
-  exported at 640 × 480 with exactly four VERA-compatible colors.
-* `assets/menu/marshals-orders.png`: AI-generated artwork adapted from the
-  selected Marshal’s Orders concept, with revised Prussian iconography,
-  using the built-in image-generation tool. The 640 × 480 artwork uses
-  15 distinct colors from the existing 16-entry palette, with a fixed
-  `#BBBBAA` background behind the live controls.
+* `assets/splash/marshal.png`: AI-generated Prussian marshal portrait, with
+  a black-and-ivory cockade, exported at 320 × 192 in sixteen VERA-compatible
+  colors. `assets/scripts/splash.py` adds pixel-aligned gold frames, lettering
+  and the current version/compilation date from `app_info.h`. The complete
+  640 × 480 startup screen uses one exact 4-bpp tile layer rather than a
+  full-screen bitmap; `docs/title.png` is its review preview.
 * Terrain and panel design inspired by Stratego (Accolade, 1990).
+* `assets/sound/`: the Feldmarschall compositions and effects from
+  [chipscore](https://github.com/ifilot/chipscore).
+* `src/vendor/zsmkit.lib` and `zsmkit.inc`: ZSMKit v1 by mooinglemur, under
+  the MIT license reproduced in the include file, copied from the Kakuro
+  integration. [ZSMKit](https://github.com/mooinglemur/zsmkit).
+* `assets/endings/`: AI-generated victory, defeat and draw illustrations,
+  selected as win 3, loss 2, and tie 1, exported at
+  320 × 192 in a shared sixteen-color VERA-compatible palette. Frames and
+  headings are generated by `assets/scripts/endings.py`.
 
 ## License
 
 GPL-3.0-or-later; see [LICENSE](LICENSE).
+
+The menu-heading bitmaps use Caladea Bold (Carolina Giovagnoli, Andres Torresi
+and Huerta Tipografia, SIL Open Font License 1.1). To regenerate them, run
+`assets/scripts/menu_headings.py` with a local `Caladea-Bold.ttf` path.

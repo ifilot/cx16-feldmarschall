@@ -23,7 +23,7 @@
 
 #include <stdint.h>
 
-/* when set, Blue's pieces are drawn face up (at the end of a game) */
+/* when set, Blue's pieces are drawn face up (in a demo or at the end of a game) */
 extern uint8_t view_show_all;
 
 /**

@@ -44,6 +44,9 @@
  */
 void play_enter(void);
 
+/* Start a spectator game with two random, computer-controlled armies. */
+void play_demo(void);
+
 /**
  * @brief Read the saved game; on success SCENE_RESUME continues it
  *

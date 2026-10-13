@@ -26,7 +26,7 @@
 
 #define STORE_SLOTS         10
 #define NAME_LENGTH         16
-#define GAME_EXTRA          (ARMY_SIZE + 3)     // the play scene's: tray, turn, side to move
+#define GAME_EXTRA          (ARMY_SIZE + 3)     // the play scene's: tray, turn, side to move (bit 7: demo)
 
 /**
  * @brief Read the player's deployments from DEPLOY.DAT

@@ -1,0 +1,12 @@
+type: sfx
+title: tray
+description: >
+  A token goes back into the tray: a lower, hollower tock.
+instruments: ../instruments.yaml
+parts:
+  body:  {instrument: knock, voices: [12], level: 0.75}
+  click: {instrument: clack, voices: [13], level: 0.6}
+sections:
+  main:
+    body:  "B3/8t"
+    click: "G5/6t r/2t"

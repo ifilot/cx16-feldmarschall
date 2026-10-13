@@ -31,6 +31,7 @@
 #include "dialog.h"
 #include "panel.h"
 #include "video.h"
+#include "sound.h"
 
 // the plate covers Blue's half of the board, so Red's rows stay in view
 #define PLATE_COL       3
@@ -147,6 +148,7 @@ static void list_choose(uint8_t i) {
 
     if(i == choice || !list_usable(i)) return;
     choice = i;
+    sound_sfx(SFX_MENU_MOVE);
     if(old != NOWHERE) draw_list_entry(old);
     draw_list_entry(i);
     if(i < PRESETS) {
@@ -162,6 +164,7 @@ static void list_choose(uint8_t i) {
 void dialog_load_open(void) {
     uint8_t i;
 
+    sound_sfx(SFX_DIALOG);
     saving = 0;
     choice = NOWHERE;
     memcpy(original, board + RED_HOME0, ARMY_SIZE);
@@ -169,21 +172,21 @@ void dialog_load_open(void) {
     video_text_plate(LIST_LEFT, LIST_HEAD_ROW, "CLASSIC", TEXT_BROWN);
     video_text_plate(LIST_RIGHT, LIST_HEAD_ROW, "YOURS", TEXT_BROWN);
     for(i=0; i<ENTRIES; i++) draw_list_entry(i);
-    panel_bar("POINT AT A SETUP TO TRY IT, CLICK TO TAKE IT",
-              "ESCAPE OR A CLICK OUTSIDE: CANCEL");
+    panel_bar("PREVIEW A SETUP AND SELECT IT TO LOAD", "SELECT OUTSIDE THE PANEL TO CANCEL");
 }
 
 static uint8_t list_update(void) {
     uint8_t i = entry_at(LIST_ROW0, PRESETS, LIST_LEFT, LIST_RIGHT);
 
-    if(i != NOWHERE) list_choose(i);
-    if(input.pressed & BUTTON_LEFT) {
+    if(input.pointer_active && i != NOWHERE) list_choose(i);
+    if(input.pointer_active && (input.pressed & BUTTON_LEFT)) {
         if(i != NOWHERE && list_usable(i)) input.key = KEY_RETURN;
         else if(!inside_plate(input.x, input.y)) input.key = KEY_ESCAPE;
     }
     switch(input.key) {
         case KEY_RETURN:
             if(choice == NOWHERE) break;
+            sound_sfx(SFX_LOAD);
             if(choice < PRESETS) {
                 strcpy(deployment_name, preset_names[choice]);
                 deployment_slot = NOWHERE;
@@ -193,6 +196,7 @@ static uint8_t list_update(void) {
             }
             return DIALOG_DONE;
         case KEY_ESCAPE:
+            sound_sfx(SFX_MENU_BACK);
             memcpy(board + RED_HOME0, original, ARMY_SIZE);
             show_red_rows();
             return DIALOG_CANCELLED;
@@ -257,6 +261,7 @@ static void slot_choose(uint8_t slot) {
 void dialog_save_open(void) {
     uint8_t slot;
 
+    sound_sfx(SFX_DIALOG);
     saving = 1;
     hover_button = NOWHERE;
     strcpy(name, deployment_name);
@@ -272,7 +277,7 @@ void dialog_save_open(void) {
     draw_name();
     for(slot=0; slot<STORE_SLOTS; slot++) draw_slot(slot);
     draw_save_buttons();
-    panel_bar("TYPE A NAME AND CHOOSE A SLOT", "RETURN: SAVE   ESCAPE: CANCEL");
+    panel_bar("NAME YOUR SETUP AND CHOOSE A SLOT", "");
 }
 
 static uint8_t save(void) {
@@ -287,6 +292,7 @@ static uint8_t save(void) {
     }
     store_save(choice, name);
     dialog_saved = store_write();
+    sound_sfx(dialog_saved ? SFX_SAVE : SFX_ERROR);
     strcpy(deployment_name, name);
     deployment_slot = choice;
     return DIALOG_DONE;
@@ -302,7 +308,7 @@ static uint8_t save_update(void) {
         hover_button = button;
         draw_save_buttons();
     }
-    if(input.pressed & BUTTON_LEFT) {
+    if(input.pointer_active && (input.pressed & BUTTON_LEFT)) {
         if(slot != NOWHERE) slot_choose(slot);
         else if(button == 0) c = KEY_RETURN;
         else if(button == 1 || !inside_plate(input.x, input.y)) c = KEY_ESCAPE;
@@ -315,6 +321,7 @@ static uint8_t save_update(void) {
         draw_name();
     } else if(n < NAME_LENGTH && ((c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ||
                                   c == ' ' || c == '-')) {
+        sound_sfx(SFX_TYPE);
         name[n] = c;
         name[n + 1] = 0;
         draw_name();
