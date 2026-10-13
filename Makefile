@@ -2,7 +2,7 @@ EMU ?= $(abspath ../x16-emulator/build/x16emu)
 ROM ?= $(abspath $(firstword $(wildcard ../emulator/rom.bin ../emulator-win/rom.bin) ../emulator/rom.bin))
 EMU_FLAGS ?= -scale 2
 
-.PHONY: all run dist test-dist test-colors test-flow test-variants screenshot check autoplay native rating parity clean
+.PHONY: all run dist site test-dist test-colors test-flow test-variants screenshot check autoplay native rating parity clean
 
 all:
 	$(MAKE) -C src
@@ -10,6 +10,10 @@ all:
 # build/dist/FELDMARSCHALL.ZIP: the runtime files only, ready for an SD card
 dist: all
 	python3 tools/distribute.py
+
+# build/site: the game in the browser, as published on GitHub Pages
+site: dist
+	python3 tools/build_site.py
 
 # boot the distribution through AUTOBOOT.X16 and check that it loaded
 test-dist: dist

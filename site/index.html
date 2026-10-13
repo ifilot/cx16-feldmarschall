@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1b1a17">
+<meta name="description" content="Play CX16 Feldmarschall in your browser: a game of hidden armies for the Commander X16, played by the rules of Stratego, with downloads and instructions.">
+<title>CX16 Feldmarschall</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap">
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="topbar"><a class="wordmark" href="./" aria-label="Feldmarschall home"><span aria-hidden="true">✠</span> CX16 FELDMARSCHALL</a><a href="https://github.com/ifilot/cx16-feldmarschall">View source <span aria-hidden="true">↗</span></a></header>
+<main>
+<section class="intro"><p class="eyebrow">A GAME OF HIDDEN ARMIES FOR THE COMMANDER X16</p><h1>Feldmarschall</h1><p class="lead">Deploy forty pieces, hide your flag, and outwit the computer by the rules of Stratego.<br>Play it here on a Commander X16 emulator, or download it for real hardware.</p></section>
+<section class="play-section" aria-label="Play Feldmarschall">
+<div class="game-heading"><div><span class="live-dot" aria-hidden="true"></span><span id="status" role="status" aria-live="polite">Ready to start</span></div><span class="spec">640 × 480 · 16-COLOR TILES</span></div>
+<div class="player" id="player">
+<div class="game-viewport" id="game-viewport">
+<div class="screen" id="screen">
+<canvas id="canvas" width="640" height="480" tabindex="0" aria-label="Feldmarschall game. Press Enter at the splash screen, then play with the mouse." hidden></canvas>
+<div class="cover" id="cover"><img src="splash.png" width="640" height="480" alt="A charcoal panorama of Prussian infantry marching across a battlefield"><div class="cover-action"><button id="play" class="primary" type="button">Start game <span aria-hidden="true">→</span></button><p>Mouse &amp; keyboard, or touch with the keys below</p></div></div>
+</div>
+</div>
+<p class="mobile-hint">Drag with one finger to move the pointer and pieces; lift to drop. Landscape or fullscreen gives you more room. <button type="button" id="exit-fullscreen">Exit fullscreen</button></p>
+<div class="touch-keys" id="touch-keys" aria-label="Game keyboard">
+<button type="button" data-key="Enter" disabled>Enter</button><button type="button" data-key="Escape" disabled>Esc</button><button type="button" data-key="Tab" disabled>Tab</button><button type="button" data-key="ArrowUp" disabled aria-label="Up">↑</button><button type="button" data-key="ArrowDown" disabled aria-label="Down">↓</button><button type="button" data-key=" " disabled>Space</button>
+<button type="button" data-key="1" disabled>1</button><button type="button" data-key="2" disabled>2</button><button type="button" data-key="3" disabled>3</button><button type="button" data-key="4" disabled>4</button><button type="button" data-key="5" disabled>5</button><button type="button" data-key="6" disabled>6</button>
+<button type="button" data-key="n" disabled>New</button><button type="button" data-key="l" disabled>Load</button><button type="button" data-key="s" disabled>Save</button><button type="button" data-key="r" disabled>Rand.</button><button type="button" data-key="c" disabled>C</button><button type="button" data-key="Backspace" disabled>Del</button>
+</div>
+</div>
+<div class="toolbar"><p>Click the game to focus it. <kbd>Enter</kbd> leaves the splash screen; <kbd>Esc</kbd> opens the game menu.</p><div class="tools"><button id="fullscreen" type="button" disabled>Fullscreen ↗</button><button id="restart" type="button" disabled>Restart</button></div></div>
+<noscript><p>Please enable JavaScript to play, or download the game below.</p></noscript>
+<p id="error" class="error" role="alert" hidden></p>
+</section>
+<section class="notes" aria-label="How to play"><div class="note-title"><p class="eyebrow">HOW TO PLAY</p><h2>Deploy, advance, capture the flag</h2></div><div class="note"><span class="note-number">01</span><h3>Deploy your army</h3><p>Drag your forty pieces from the tray onto your four home rows, or press <kbd>L</kbd> to load one of ten classic deployments and <kbd>R</kbd> for a random one. <b>Start</b> lights up once every piece is placed.</p></div><div class="note"><span class="note-number">02</span><h3>Move &amp; attack</h3><p>Drag a piece one square; gold dots mark where it can go. Scouts run any distance. Drop onto an enemy to attack: both pieces turn face up and the higher rank wins.</p></div><div class="note"><span class="note-number">03</span><h3>Remember</h3><p>Blue's survivors turn face down again. Miners defuse bombs, the spy defeats the marshal when it strikes first. Capture the flag, or leave Blue without a move, to win.</p></div></section>
+<section class="gallery" aria-label="Screenshots">
+<figure><a class="shot" href="screens/prepare-play.png"><img src="screens/prepare-play.png" width="640" height="480" loading="lazy" alt="Red's army deployed on the bottom four rows before a match"></a><figcaption>Prepare your army</figcaption></figure>
+<figure><a class="shot" href="screens/play.png"><img src="screens/play.png" width="640" height="480" loading="lazy" alt="A game in progress against the computer"></a><figcaption>Battle the computer</figcaption></figure>
+<figure><a class="shot" href="screens/game-settings.png"><img src="screens/game-settings.png" width="640" height="480" loading="lazy" alt="The New Game menu with six optional Stratego Masters rules"></a><figcaption>Six Masters variants</figcaption></figure>
+<figure><a class="shot" href="screens/options.png"><img src="screens/options.png" width="640" height="480" loading="lazy" alt="Options screen with field styles and army colors"></a><figcaption>Fields &amp; army colors</figcaption></figure>
+</section>
+<dialog class="viewer" id="viewer" aria-label="Screenshot">
+<figure><img id="viewer-image" src="" width="640" height="480" alt=""><figcaption><span id="viewer-caption"></span><span class="viewer-tools"><button type="button" id="viewer-previous" aria-label="Previous screenshot">←</button><button type="button" id="viewer-next" aria-label="Next screenshot">→</button><button type="button" id="viewer-close" aria-label="Close">✕</button></span></figcaption></figure>
+</dialog>
+<section class="download"><div><p class="eyebrow">DOWNLOAD &amp; TECHNICAL DETAILS</p><h2>CX16 Feldmarschall</h2><p>640×480 tile graphics on VERA, a computer player that looks one move ahead using only what it may know, and saved setups and games on the SD card. Copy the ZIP's contents to the root of an SD card to boot straight into the game, or run <code>FELDMARS.PRG</code> in a desktop emulator. In the browser, saved setups and games last until you reload.</p></div><a class="download-link" href="FELDMARSCHALL.ZIP" download>Download ZIP ↓</a></section>
+</main>
+<footer><p>Made by <a href="https://github.com/ifilot">Ivo Filot</a> · <span id="version">CX16 Feldmarschall</span> · GPL-3.0-or-later</p><p>Powered by the <a href="https://github.com/X16Community/x16-emulator/releases/tag/r49">Commander X16 emulator r49</a> · <a href="emulator-license.txt">Emulator license</a> · <a href="rom-license.txt">ROM notices</a></p></footer>
+</body>
+</html>

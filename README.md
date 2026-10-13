@@ -1,5 +1,13 @@
 # CX16-FELDMARSCHALL
 
+[![build](https://github.com/ifilot/cx16-feldmarschall/actions/workflows/build.yml/badge.svg)](https://github.com/ifilot/cx16-feldmarschall/actions/workflows/build.yml)
+[![GitHub Pages](https://github.com/ifilot/cx16-feldmarschall/actions/workflows/pages.yml/badge.svg)](https://ifilot.github.io/cx16-feldmarschall/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+**[Play it in your browser](https://ifilot.github.io/cx16-feldmarschall/)**, or
+download `FELDMARSCHALL.ZIP` from the
+[releases](https://github.com/ifilot/cx16-feldmarschall/releases).
+
 Feldmarschall is a game of hidden armies for the **Commander X16**, played
 by the rules of Stratego: 640x480 with 16-color tiles and selectable field
 and army palettes, laid out after the
@@ -434,6 +442,7 @@ make              # build src/FELDMARS.PRG and its graphics
 make run          # start it in ../x16-emulator
 make dist         # package the runtime files in build/dist/FELDMARSCHALL.ZIP
 make test-dist    # boot that package through AUTOBOOT.X16 and check it
+make site         # the website with the game in the browser, in build/site
 make screenshot   # drive it in the AgentBridge emulator, save the screenshots in docs/
 make test-variants # emulator checks of Masters variants and hidden information
 make check        # check the built-in deployments and the rules (tests/)
@@ -453,6 +462,21 @@ every turn changes the board.
 license and `HASHES.TXT` with SHA-256 sums. Copy the contents of
 `build/dist/FELDMARSCHALL` to the root of an SD card to boot straight into the
 game. The ZIP has fixed dates, so the same sources give the same archive.
+
+`make site` builds the website from `site/`: it adds the official
+WebAssembly build of the X16 emulator (r49, downloaded once and checked
+against its SHA-256), the runtime files of the distribution, the ZIP and a
+few screenshots from `docs/`. `tests/check_site.cjs` drives it in headless
+Chromium (see the comment at its top for the Playwright setup): it checks
+the splash screen pixel by pixel, the menus by keyboard and mouse, dragging
+a piece onto the board, whole-pixel fullscreen, and touch dragging on a
+phone-sized screen.
+
+GitHub Actions builds the game, runs `make check` and a short `make rating`,
+and packages it on every push and pull request (`.github/workflows/build.yml`);
+pushing a `v*` tag attaches the ZIP to a release. Every push to `master`
+builds, checks and deploys the website to GitHub Pages
+(`.github/workflows/pages.yml`).
 
 `assets/scripts/build_graphics.py` writes the VRAM resources and `src/gfx.h`.
 It also writes previews of layer 0 and the token sheet to `build/preview`.
