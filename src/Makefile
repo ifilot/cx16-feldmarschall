@@ -1,5 +1,8 @@
 CC=cl65
 CFLAGS?=-O -t cx16 -I . -I core -I ui -I scenes
+# cc65's default C stack is 2 KB; with static locals the game needs a few
+# dozen bytes (measured: 36 in a long game), so 1 KB leaves room for code
+LDFLAGS=-Wl -D,__STACKSIZE__=0x0400
 PYTHON=python3
 SCRIPTS=../assets/scripts
 GFX_ASSETS=L0TILES.BIN L0MAP.BIN L1TILES.BIN SPRITES.BIN RANKTIL.BIN RANKSPR.BIN PALETTE.BIN MNTILES.BIN MNMAP.BIN MNL1TIL.BIN MN1MAP.BIN MNPAL.BIN SPLASH0.BIN SPLASH1.BIN SPLPAL.BIN gfx.h color_profiles.h
@@ -16,7 +19,7 @@ HDR=$(filter-out gfx.h color_profiles.h app_info.h,$(wildcard *.h core/*.h ui/*.
 all: FELDMARS.PRG BRIDGE.PRG
 
 FELDMARS.PRG: $(SRC) $(HDR) $(GFX_ASSETS) app_info.h
-	$(CC) $(CFLAGS) -o $@ -m FELDMARS.map -Ln FELDMARS.sym $(SRC)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ -m FELDMARS.map -Ln FELDMARS.sym $(SRC)
 
 BRIDGE.PRG: $(BRIDGE_SRC) $(wildcard core/*.h)
 	$(CC) -O -t cx16 -I core -o $@ $(BRIDGE_SRC)

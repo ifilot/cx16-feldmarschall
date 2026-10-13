@@ -38,7 +38,9 @@
  * flag, or leaving the opponent without a move, wins. Return plays again.
  *
  * Escape opens the game menu over the board, between turns: resume, save
- * the game to GAME.DAT, or quit to the main menu.
+ * the game to GAME.DAT, or quit to the main menu. When the game is over,
+ * a plate names the winner (or a draw, when neither army can move) and
+ * offers a new game, a look at the revealed board, or the main menu.
  */
 void play_enter(void);
 
@@ -50,7 +52,17 @@ void play_enter(void);
 uint8_t play_load(void);
 
 /**
- * @brief Continue the game read by play_load
+ * @brief Make the position on the board a game to continue with SCENE_RESUME
+ *
+ * For the developer scenarios: the pieces missing from the board count as
+ * fallen, and their ranks as known to the other side. Keeps game_rules.
+ *
+ * @param blue_moves whether Blue (the computer) moves first
+ */
+void play_position(uint8_t blue_moves);
+
+/**
+ * @brief Continue the game read by play_load, or set up by play_position
  */
 void play_resume(void);
 

@@ -22,6 +22,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential cc65 python3 python3-numpy python3-pil
+      - uses: ./.github/actions/agent-emulator
+      - name: Regenerate screenshots
+        # the website always shows the game as it is in this commit
+        run: make screenshots
       - name: Build website
         run: make site
       - name: Check browser game

@@ -1,8 +1,14 @@
 # Marshal’s Orders production background
 
-Generated using the built-in image-generation tool, with `output/new-game-options/04-marshals-orders.png` as the edit target. Source saved as `assets/menu/marshals-orders.png`.
+Generated using the built-in image-generation tool, with `output/new-game-options/04-marshals-orders.png` as the original edit target. The incorporated Prussian revision is `output/new-game-review/marshals-orders-prussian-v2.png`, copied to `assets/menu/marshals-orders.png`.
 
-## Final image prompt
+## Incorporated Prussian revision
+
+The revision retains the ivory, charcoal, gold, ochre, and slate scheme while replacing ambiguous hat ornaments with simpler campaign headgear and clearer single-headed Prussian eagles. The general and still-life hats have no oversized plume or ambiguous badge. The central eagle carries a sword and thunderbolt; miniature banners use a simplified version with spearhead finials. This is stylized Prussian-inspired artwork rather than an exact reconstruction of a particular regiment.
+
+The complete built-in edit prompt is preserved in `assets/menu/prussian-revision-prompt.txt`. Exporting fits the complete header into y=0–135, maps the artwork to the existing menu palette, and restores the exact flat `#BBBBAA` center (y=136–335) and footer (y=416–479). The final 640×480 image is opaque and uses 15 distinct colors; palette indices 0 and 11 duplicate the background color for VERA transparency handling.
+
+## Original production background prompt
 
 Use case: precise-object-edit. Edit the supplied APPROVED Marshal's orders game menu concept into its production BACKGROUND ART ONLY. Preserve exactly the officer portrait cameos, the Prussian marching infantry and smoky charcoal header, the central Fraktur 'New game' title, its eagle-and-brass flourish, and the bottom still-life of cannon, ammunition, folded battle map, compass, brass telescope and plumed hat. Preserve their illustration style and composition; do not redesign the portraits or military ornament. Remove EVERY rule list entry, every OFF label, the selection arrow, the rectangular explanation panel and all its contents, the three bottom buttons, and the keyboard hint. Replace all those removed UI regions with ONE uniform flat opaque light grey-beige color #BBBBAA. The center must become completely empty and clean for programmatically drawn live text. No paper texture or gradient in the empty center. Composition for a 4:3 640x480 production game background: retain the ornamental header in the top 136 pixels (top 28%); keep the center from y=136 through y=336 empty; retain the detailed command-table still-life between y=340 and y=410, spanning almost the entire width; leave the bottom y=412 through y=480 empty flat #BBBBAA for live buttons and hints. Keep only the text 'New game' in the prominent top-center Fraktur masthead. No other text anywhere. Pixel art, crisp retro engraved and dithered styling suitable for Commander X16; ivory, charcoal, brass and muted slate, no red-blue uniform scheme. Single full-screen background artwork, straight-on, no external frame, no mockup surroundings.
 

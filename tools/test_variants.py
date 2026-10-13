@@ -141,7 +141,7 @@ def main():
             write(session, 'rules_lost', lost)
             drag(session, 10, 0)
             assert text(session, 9) == 'RESCUE A PIECE'
-            session.shot(ROOT / 'docs/rescue.png')
+            session.shot(ROOT / 'build/test-shots/rescue.png')
             click(session, 452, 172)  # Captured Marshal.
             click(session, *centre(60))
             assert board(session)[60] & 15 == 0 and not board(session)[60] & 0x10

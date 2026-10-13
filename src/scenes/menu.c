@@ -22,6 +22,7 @@
 #pragma static-locals (on)
 
 #include "menu.h"
+#include "dev.h"
 #include "scene.h"
 #include "board.h"
 #include "boardview.h"
@@ -51,13 +52,19 @@ static const uint8_t scenes[ENTRIES] = {SCENE_DEPLOY, SCENE_GAME_SETTINGS, SCENE
 
 static uint8_t choice;
 
+// typing DEV swaps the entries for the developer scenarios (dev.h)
+static const char secret[] = "DEV";
+static uint8_t typed, dev;
+static const char* const* list = entries;
+static uint8_t count = ENTRIES;
+
 static void draw_entries(void) {
     uint8_t i, row;
 
-    for(i=0; i<ENTRIES; i++) {
+    for(i=0; i<count; i++) {
         row = ENTRY_ROW0 + i * ENTRY_PITCH;
         video_text_plate(ENTRY_COL - 2, row, i == choice ? ">" : " ", TEXT_DEEP_RED);
-        video_text_plate(ENTRY_COL, row, entries[i], i == choice ? TEXT_DEEP_RED : TEXT_INK);
+        video_text_plate(ENTRY_COL, row, list[i], i == choice ? TEXT_DEEP_RED : TEXT_INK);
     }
 }
 
@@ -68,49 +75,72 @@ static uint8_t entry_at(int16_t x, int16_t y) {
     uint8_t i;
     int16_t top;
 
-    if(x < PLATE_COL * 8 || x >= (PLATE_COL + PLATE_W) * 8) return ENTRIES;
-    for(i=0; i<ENTRIES; i++) {
+    if(x < PLATE_COL * 8 || x >= (PLATE_COL + PLATE_W) * 8) return count;
+    for(i=0; i<count; i++) {
         top = (ENTRY_ROW0 + i * ENTRY_PITCH) * 8;
         if(y >= top - 8 && y < top + 16) return i;
     }
-    return ENTRIES;
+    return count;
 }
 
 void menu_enter(void) {
+    list = dev ? dev_names : entries;
+    count = dev ? DEV_SCENARIOS : ENTRIES;
+    if(choice >= count) choice = 0;
     board_clear();
     view_board();
     dialog_plate(PLATE_COL, PLATE_ROW, PLATE_W, PLATE_H);
-    dialog_centred(PLATE_COL, PLATE_W, PLATE_ROW + 3, "MAIN MENU", TEXT_UI_RED);
+    dialog_centred(PLATE_COL, PLATE_W, PLATE_ROW + 3, dev ? "DEVELOPER SCENARIOS" : "MAIN MENU", TEXT_UI_RED);
     draw_entries();
     panel_tray_clear();
     panel_tray_draw();
-    panel_info("WELCOME", TEXT_DEEP_RED, "MAIN MENU");
     panel_clear_selected();
-    panel_bar("CLICK AN OPTION, OR PRESS 1 TO 5", "ESCAPE: RETURN TO MENU");
+    if(dev) {
+        panel_info("DEVELOPER", TEXT_DEEP_RED, "TEST SCENARIOS");
+        panel_bar("CLICK A SCENARIO, OR PRESS 1 TO 6", "ESCAPE: MAIN MENU");
+    } else {
+        panel_info("WELCOME", TEXT_DEEP_RED, "MAIN MENU");
+        panel_bar("CLICK AN OPTION, OR PRESS 1 TO 5", "ESCAPE: RETURN TO MENU");
+    }
 }
 
 /**
  * @brief The scene of an entry; a saved game must be read first
  */
 static uint8_t entry_scene(uint8_t entry) {
+    if(dev) return dev_start(entry);
     if(scenes[entry] != SCENE_RESUME || play_load()) return scenes[entry];
     panel_info("NO SAVED GAME", TEXT_DEEP_RED, "SAVE FROM THE GAME MENU");
     return SCENE_STAY;
 }
 
 uint8_t menu_update(void) {
-    uint8_t hover = entry_at(input.x, input.y), old = choice;
+    uint8_t hover = entry_at(input.x, input.y), old = choice, key = input.key;
 
-    if(hover < ENTRIES) {
+    if(key >= 0xC1 && key <= 0xDA) key -= 0x80;    // shifted letters
+    if(key == secret[typed]) {
+        if(++typed == sizeof(secret) - 1) {
+            typed = 0;
+            dev ^= 1;
+            menu_enter();
+            return SCENE_STAY;
+        }
+    } else if(key) typed = key == secret[0];
+    if(key == KEY_ESCAPE && dev) {
+        dev = 0;
+        menu_enter();
+        return SCENE_STAY;
+    }
+    if(hover < count) {
         choice = hover;
         if(input.pressed & BUTTON_LEFT) return entry_scene(choice);
     }
-    switch(input.key) {
+    switch(key) {
         case KEY_RETURN: return entry_scene(choice);
         case KEY_UP:     if(choice > 0) choice--; break;
-        case KEY_DOWN:   if(choice < ENTRIES - 1) choice++; break;
+        case KEY_DOWN:   if(choice < count - 1) choice++; break;
     }
-    if(input.key >= '1' && input.key < '1' + ENTRIES) return entry_scene(input.key - '1');
+    if(key >= '1' && key < '1' + count) return entry_scene(key - '1');
     if(choice != old) draw_entries();
     return SCENE_STAY;
 }

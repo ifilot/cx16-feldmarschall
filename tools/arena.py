@@ -43,7 +43,11 @@ def play(job):
         while True:
             legal = truth.moves(side)
             if not legal:
-                winner, reason = 1 - side, 'no moves'
+                # the side to move loses, unless neither can move (play.c: stuck)
+                if truth.moves(1 - side):
+                    winner, reason = 1 - side, 'no moves'
+                else:
+                    reason = 'neither can move'
                 break
             if plies >= max_plies:
                 reason = 'ply limit'

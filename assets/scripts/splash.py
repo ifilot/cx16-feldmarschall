@@ -8,6 +8,9 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+SPLASH_COLORS = np.array([(17, 17, 17), (68, 85, 85),
+                          (221, 187, 102), (187, 51, 34)], dtype=np.uint8)
+
 
 def build_splash():
     source = Path(__file__).resolve().parents[1] / 'splash/feldmarschall.png'
@@ -15,11 +18,10 @@ def build_splash():
         if image.size != (640, 480):
             raise ValueError('splash must be 640x480')
         pixels = np.asarray(image.convert('RGB'))
-    colors = np.array([(17, 17, 17), (68, 85, 85),
-                       (153, 170, 170), (238, 238, 204)], dtype=np.uint8)
+    colors = SPLASH_COLORS
     matches = (pixels[:, :, None, :] == colors).all(axis=3)
     if not matches.any(axis=2).all() or len(np.unique(pixels.reshape(-1, 3), axis=0)) != 4:
-        raise ValueError('splash must use exactly the four charcoal palette colors')
+        raise ValueError('splash must use exactly the four ink/slate/gold/red palette colors')
     indices = matches.argmax(axis=2).astype(np.uint8).reshape(-1, 4)
     packed = ((indices[:, 0] << 6) | (indices[:, 1] << 4) |
               (indices[:, 2] << 2) | indices[:, 3]).tobytes()

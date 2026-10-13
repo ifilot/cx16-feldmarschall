@@ -1,0 +1,49 @@
+{
+  "scope": "All five original New game concepts and the active Marshal's Orders production background",
+  "revision_scope": "A non-destructive revised Marshal's Orders background; original concepts and active game asset retained",
+  "historical_direction": "Predominantly Prussian, Napoleonic campaign setting circa 1813–1815; simplified pixel-art heraldry, not an exact regiment reconstruction",
+  "observations": [
+    {
+      "image": "01-flanking-maneuver.png",
+      "assessment": "Tactical-map imagery is broadly European. The central eagle's silhouette suggests two heads; it should be replaced by a clearly single-headed Prussian eagle before use. Miniature troop uniforms cannot be assigned confidently at this scale."
+    },
+    {
+      "image": "02-battle-panorama.png",
+      "assessment": "Pale eagle flag suggests Prussian intent, but the eagle and shako plates are generic. Cross-belts, tall shakos, smoke and decorative crosses alone do not identify nationality."
+    },
+    {
+      "image": "03-campaign-map.png",
+      "assessment": "German place labels reinforce the intended setting but do not prove uniform accuracy. Maps, compasses and troop arrows are neutral. Eagle silhouettes require the same single-head consistency check."
+    },
+    {
+      "image": "04-marshals-orders.png / assets/menu/marshals-orders.png",
+      "assessment": "Paired portraits expose ambiguous generated hat badges, elaborate plume/cockade details and inconsistent miniature eagles. The right shako badge is not clear enough to call it French or Prussian. This is the selected scene to revise."
+    },
+    {
+      "image": "05-lines-of-battle.png",
+      "assessment": "White eagle banners provide a Prussian cue, but the tiny eagles and generic shako decorations remain ambiguous. Artillery, cavalry and cross-belts are period military scenery shared by multiple armies."
+    }
+  ],
+  "revision_requirements": [
+    "One clearly single-headed crowned Prussian eagle in the central ornament and a consistent simplified eagle on the flags",
+    "Plain campaign bicorne on the general; no ambiguous leafy badge, giant plume or invented awards",
+    "Simpler dark infantry shako, brass trim and black/ivory cockade; remove stacked diamond and leaf/grenade ornaments",
+    "Simple spearhead flagpole finials rather than French imperial eagle sculptures",
+    "Remove the plume and ambiguous rosette on the lower still-life hat",
+    "Retain the existing ivory/charcoal/ochre/gold/slate palette and flat #BBBBAA background"
+  ],
+  "references": [
+    {
+      "url": "https://magazin.stadtmuseum-muenster.de/ereignisse/1813-infanterie-regiment-nr-13",
+      "supports": "Prussian 1813–1815 regiment history, period uniform variation, and crowned Prussian eagle with sword on 1815 flags"
+    },
+    {
+      "url": "https://www.deutsche-digitale-bibliothek.de/item/NHQCM5JVSV3HVOYCWPJU5HJKYFY44EOR",
+      "supports": "DHM Prussian shako, probably 1813–1836, black leather/wool/felt and brass chinscales"
+    },
+    {
+      "url": "https://www.armeemuseum.de/de/1578-objekt-preussische-infanteriefahne.html",
+      "supports": "Earlier Prussian infantry eagle flag with sword and thunderbolts; general heraldic reference, not a claimed exact 1815 regimental flag"
+    }
+  ]
+}

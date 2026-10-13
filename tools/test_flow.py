@@ -51,7 +51,7 @@ def main():
         session = start(directory)
         try:
             session.move_mouse(10, 10)
-            session.shot(ROOT / 'docs/menu.png')
+            session.shot(ROOT / 'build/test-shots/menu.png')
             field_map = read_vram(session, 0x8000, 60 * 256)
             palette = read_vram(session, 0x1FA00, 512)
             choose(session, '3')
@@ -60,9 +60,9 @@ def main():
             assert text(session, 20, 12, 24) == "1  ATTACKER'S ADVANTAGE"
             assert read_vram(session, 0x8000, 60 * 256) == (ROOT / 'src/MNMAP.BIN').read_bytes()
             assert read_vram(session, 0x1FAE0, 32) == (ROOT / 'src/MNPAL.BIN').read_bytes()
-            session.shot(ROOT / 'docs/game-settings.png')
+            session.shot(ROOT / 'build/test-shots/game-settings.png')
             # Artwork must render pixel-for-pixel, without tile approximations.
-            with Image.open(ROOT / 'docs/game-settings.png') as shot, Image.open(ROOT / 'build/preview/new-game-art.png') as art:
+            with Image.open(ROOT / 'build/test-shots/game-settings.png') as shot, Image.open(ROOT / 'build/preview/new-game-art.png') as art:
                 for region in ((32, 8, 608, 136), (8, 340, 632, 416)):
                     assert shot.convert('RGB').crop(region).tobytes() == art.convert('RGB').crop(region).tobytes(), 'menu artwork differs from the exact asset'
             menu_tiles = (ROOT / 'src/MNL1TIL.BIN').read_bytes()
@@ -98,7 +98,7 @@ def main():
             assert text(session, 9) == 'SETUP SAVED'
             saved = (directory / 'DEPLOY.DAT').read_bytes()
             assert saved[:8] == b'STRDEP01' and saved[24:64] == original
-            session.shot(ROOT / 'docs/manage-setups.png')
+            session.shot(ROOT / 'build/test-shots/manage-setups.png')
             choose(session, 'N')
             assert counts(session) == (0, 0)
             choose(session, 'L')
@@ -114,14 +114,14 @@ def main():
             assert text(session, 9) == 'READY TO PLAY'
             assert board(session)[60:] == original and counts(session) == (40, 40)
             session.move_mouse(10, 10)
-            session.shot(ROOT / 'docs/prepare-play.png')
+            session.shot(ROOT / 'build/test-shots/prepare-play.png')
             choose(session, 'Return')
             assert text(session, 9) == 'YOUR TURN'
             assert board(session)[60:] == original, 'match must use the approved arrangement'
             # Escape opens the game menu; a saved game continues from the main menu.
             choose(session, 'Escape')
             assert text(session, 21, 10, 34) == 'GAME MENU'
-            session.shot(ROOT / 'docs/game-menu.png')
+            session.shot(ROOT / 'build/test-shots/game-menu.png')
             position = board(session)
             choose(session, '2')
             assert text(session, 33, 10, 34) == 'GAME SAVED'

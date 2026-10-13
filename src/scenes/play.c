@@ -61,22 +61,26 @@
 #define NOBODY          0
 #define RED_WINS        1
 #define BLUE_WINS       2
+#define DRAWN           3           // neither army can move
 
 #define STALE           0xFE        // forces the next mark() to redraw
 
-// the game menu: a plate centred over the board
-#define PAUSE_W         34
+// the game menu and the result of a game: a plate centred over the board
+#define PAUSE_W         40
 #define PAUSE_H         19
 #define PAUSE_COL       ((BOARD_X + BOARD_SIZE * SQUARE / 2) / 8 - PAUSE_W / 2)
 #define PAUSE_ROW       ((BOARD_Y + BOARD_SIZE * SQUARE / 2) / 8 - PAUSE_H / 2)
-#define PAUSE_ENTRY_COL (PAUSE_COL + 8)
-#define PAUSE_ENTRY_ROW (PAUSE_ROW + 6)
+#define PAUSE_ENTRY_COL (PAUSE_COL + 11)
+#define PAUSE_ENTRY_ROW (PAUSE_ROW + 7)
 #define PAUSE_PITCH     3
 #define PAUSE_ENTRIES   3
 #define PAUSE_STATUS    (PAUSE_ROW + 15)
 #define PAUSE_RESUME    0
 #define PAUSE_SAVE      1
 #define PAUSE_QUIT      2
+#define OVER_NEW        0
+#define OVER_BOARD      1
+#define OVER_MENU       2
 
 static uint8_t state, timer, winner;
 static uint8_t blue;                // Blue is to move
@@ -106,6 +110,7 @@ static void finish_turn(void);
 
 static uint8_t menu_wanted;         // Escape was pressed; open the menu when the turn allows
 static uint8_t paused_state, pause_choice;
+static uint8_t result_shown;        // the result plate covers the board
 static uint8_t saved[GAME_EXTRA];   // the scene's part of a saved game: tray, turn, side
 
 static const char* const pause_entries[PAUSE_ENTRIES] = {
@@ -113,6 +118,12 @@ static const char* const pause_entries[PAUSE_ENTRIES] = {
     "2  SAVE GAME",
     "3  QUIT TO MENU",
 };
+static const char* const over_entries[PAUSE_ENTRIES] = {
+    "1  NEW GAME",
+    "2  VIEW THE BOARD",
+    "3  MAIN MENU",
+};
+static const char* const* entries = pause_entries;
 
 /**
  * @brief Let Blue choose a move from what Blue knows
@@ -203,6 +214,8 @@ static void move_bar(void) {
     panel_bar("YOUR MOVE: DRAG ONE OF YOUR PIECES", "ESCAPE: GAME MENU");
 }
 
+static void result_open(void);
+
 static void game_over(void) {
     state = GAME_OVER;
     mark(NOWHERE);
@@ -211,9 +224,28 @@ static void game_over(void) {
     strcpy(line, "TURN ");
     strcat(line, panel_number(turn));
     if(winner == RED_WINS) panel_info("YOU WIN", TEXT_DEEP_RED, line);
-    else panel_info("OPPONENT WINS", TEXT_DEEP_BLUE, line);
+    else if(winner == BLUE_WINS) panel_info("OPPONENT WINS", TEXT_DEEP_BLUE, line);
+    else panel_info("DRAW", TEXT_BROWN, line);
     panel_clear_selected();
-    panel_bar(reason, "RETURN: NEW GAME   ESCAPE: MENU");
+    result_open();
+}
+
+/**
+ * @brief End the game if the side to move cannot move
+ *
+ * It loses, unless the other side cannot move either: then it is a draw.
+ */
+static uint8_t stuck(void) {
+    if(rules_has_move(blue)) return 0;
+    if(!rules_has_move(!blue)) {
+        winner = DRAWN;
+        reason = "NEITHER ARMY CAN MOVE";
+    } else {
+        winner = blue ? RED_WINS : BLUE_WINS;
+        reason = blue ? "OPPONENT HAS NO MOVES LEFT" : "YOU HAVE NO MOVES LEFT";
+    }
+    game_over();
+    return 1;
 }
 
 static void next_turn(void) {
@@ -223,12 +255,7 @@ static void next_turn(void) {
     }
     blue ^= 1;
     if(!blue) turn++;
-    if(!rules_has_move(blue)) {
-        winner = blue ? RED_WINS : BLUE_WINS;
-        reason = blue ? "OPPONENT HAS NO MOVES LEFT" : "YOU HAVE NO MOVES LEFT";
-        game_over();
-        return;
-    }
+    if(stuck()) return;
     show_turn();
     if(blue) {
         state = BLUE_THINK;
@@ -519,8 +546,19 @@ static void pause_draw(void) {
     for(i=0; i<PAUSE_ENTRIES; i++) {
         row = PAUSE_ENTRY_ROW + i * PAUSE_PITCH;
         video_text_plate(PAUSE_ENTRY_COL - 2, row, i == pause_choice ? ">" : " ", TEXT_DEEP_RED);
-        video_text_plate(PAUSE_ENTRY_COL, row, pause_entries[i], i == pause_choice ? TEXT_DEEP_RED : TEXT_INK);
+        video_text_plate(PAUSE_ENTRY_COL, row, entries[i], i == pause_choice ? TEXT_DEEP_RED : TEXT_INK);
     }
+}
+
+/**
+ * @brief Open the plate with `list` as its entries and `title` on top
+ */
+static void plate_open(const char* const* list, const char* title, uint8_t color) {
+    entries = list;
+    pause_choice = 0;
+    dialog_plate(PAUSE_COL, PAUSE_ROW, PAUSE_W, PAUSE_H);
+    dialog_centred(PAUSE_COL, PAUSE_W, PAUSE_ROW + 3, title, color);
+    pause_draw();
 }
 
 /**
@@ -548,12 +586,26 @@ static void pause_open(void) {
     menu_wanted = 0;
     paused_state = state;
     state = PAUSED;
-    pause_choice = PAUSE_RESUME;
     mark(NOWHERE);
-    dialog_plate(PAUSE_COL, PAUSE_ROW, PAUSE_W, PAUSE_H);
-    dialog_centred(PAUSE_COL, PAUSE_W, PAUSE_ROW + 3, "GAME MENU", TEXT_UI_RED);
-    pause_draw();
+    plate_open(pause_entries, "GAME MENU", TEXT_UI_RED);
     panel_bar("GAME PAUSED: CLICK AN OPTION, OR PRESS 1, 2 OR 3", "ESCAPE: RESUME THE GAME");
+}
+
+/**
+ * @brief The result of the game, over the board with Blue's army revealed
+ */
+static void result_open(void) {
+    result_shown = 1;
+    plate_open(over_entries, winner == RED_WINS ? "VICTORY" : winner == BLUE_WINS ? "DEFEAT" : "DRAW",
+               winner == BLUE_WINS ? TEXT_DEEP_BLUE : TEXT_UI_RED);
+    dialog_centred(PAUSE_COL, PAUSE_W, PAUSE_ROW + 5, reason, TEXT_INK);
+    panel_bar("GAME OVER: CLICK AN OPTION, OR PRESS 1, 2 OR 3", "RETURN: NEW GAME   ESCAPE: MAIN MENU");
+}
+
+static void result_close(void) {
+    result_shown = 0;
+    view_board();
+    panel_bar(reason, "SPACE OR CLICK: RESULT   RETURN: NEW GAME   ESCAPE: MENU");
 }
 
 static void pause_close(void) {
@@ -576,7 +628,12 @@ static void pause_save(void) {
     }
 }
 
-static uint8_t pause_update(void) {
+/**
+ * @brief The entry chosen on the plate this frame, or PAUSE_ENTRIES
+ *
+ * @param escape the entry that Escape chooses
+ */
+static uint8_t plate_pick(uint8_t escape) {
     uint8_t hover = pause_entry_at(input.x, input.y), old = pause_choice, pick = PAUSE_ENTRIES;
 
     if(hover < PAUSE_ENTRIES) {
@@ -584,20 +641,37 @@ static uint8_t pause_update(void) {
         if(input.pressed & BUTTON_LEFT) pick = hover;
     }
     switch(input.key) {
-        case '1':        pick = PAUSE_RESUME; break;
-        case '2':        pick = PAUSE_SAVE; break;
-        case '3':        pick = PAUSE_QUIT; break;
-        case KEY_ESCAPE: pick = PAUSE_RESUME; break;
+        case KEY_ESCAPE: pick = escape; break;
         case KEY_RETURN: pick = pause_choice; break;
         case KEY_UP:     if(pause_choice > 0) pause_choice--; break;
         case KEY_DOWN:   if(pause_choice < PAUSE_ENTRIES - 1) pause_choice++; break;
     }
+    if(input.key >= '1' && input.key < '1' + PAUSE_ENTRIES) pick = input.key - '1';
     if(pick < PAUSE_ENTRIES) pause_choice = pick;
     if(pause_choice != old) pause_draw();
-    switch(pick) {
+    return pick;
+}
+
+static uint8_t pause_update(void) {
+    switch(plate_pick(PAUSE_RESUME)) {
         case PAUSE_RESUME: pause_close(); break;
         case PAUSE_SAVE:   pause_save(); break;
         case PAUSE_QUIT:   return SCENE_MENU;
+    }
+    return SCENE_STAY;
+}
+
+static uint8_t over_update(void) {
+    uint8_t pick = PAUSE_ENTRIES;
+
+    if(result_shown) pick = plate_pick(OVER_MENU);
+    else if(input.key == ' ' || (input.pressed & BUTTON_LEFT)) result_open();
+    else if(input.key == KEY_RETURN) pick = OVER_NEW;
+    else if(input.key == KEY_ESCAPE) pick = OVER_MENU;
+    switch(pick) {
+        case OVER_NEW:   return SCENE_GAME_SETTINGS;
+        case OVER_BOARD: result_close(); break;
+        case OVER_MENU:  return SCENE_MENU;
     }
     return SCENE_STAY;
 }
@@ -625,7 +699,7 @@ static void begin(void) {
     } else {
         state = RED_TURN;
     }
-    show_turn();
+    if(!stuck()) show_turn();       // a loaded position may already be over
 }
 
 void play_enter(void) {
@@ -637,6 +711,22 @@ void play_enter(void) {
     turn = 1;
     blue = 0;
     begin();
+}
+
+void play_position(uint8_t blue_moves) {
+    uint8_t army, type;
+
+    rules_reset();
+    for(army=0; army<2; army++) {
+        for(type=0; type<PIECE_TYPES; type++) {
+            rules_lost[army][type] = rules_known_lost[army][type] = piece_counts[type] - board_count(type, army);
+        }
+    }
+    panel_tray_fallen(1);
+    memcpy(saved, tray, TRAY_SLOTS);
+    saved[TRAY_SLOTS] = 1;
+    saved[TRAY_SLOTS + 1] = 0;
+    saved[TRAY_SLOTS + 2] = blue_moves;
 }
 
 uint8_t play_load(void) {
@@ -652,8 +742,8 @@ void play_resume(void) {
 
 uint8_t play_update(void) {
     if(state == PAUSED) return pause_update();
+    if(state == GAME_OVER) return over_update();
     if(input.key == KEY_ESCAPE) {
-        if(state == GAME_OVER) return SCENE_MENU;
         if(state == RED_DRAG) {
             clear_markers();
             put_back();
@@ -692,8 +782,6 @@ uint8_t play_update(void) {
         case FALLING:
             falling();
             break;
-        default:
-            if(input.key == KEY_RETURN) return SCENE_GAME_SETTINGS;
     }
     return SCENE_STAY;
 }

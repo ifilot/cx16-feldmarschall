@@ -16,7 +16,8 @@ river runs under a thin grid inside a plain stone frame; the panel and
 message bar are stone with light grey plates. Beside it, a tray
 holds an army of 40 tokens, five across and eight down.
 
-The game opens with a four-color charcoal panorama. Press **Enter** to
+The game opens with a four-color Prussian marshal portrait in ink, slate,
+gold, and red. Press **Enter** to
 continue to the menu.
 
 ![Splash screen](assets/splash/feldmarschall.png)
@@ -158,18 +159,23 @@ back row guarded by bombs.
 * The tray shows Blue's army, one compartment per piece: a captured piece
   lands face up in its compartment, so the empty ones are what Blue has
   left.
-* Capture the flag, or leave the opponent without a move, to win. Blue's
-  army is then revealed; **Return** opens game settings for a new game.
+* Capture the flag, or leave the opponent without a move, to win. If a
+  battle leaves neither army able to move, the game is a draw. Blue's army
+  is then revealed, and a plate names the result and why: **1 New game**
+  (or Return) opens game settings, **2 View the board** puts the plate
+  away to study the revealed armies (Space or a click brings it back), and
+  **3 Main menu** (or Escape).
 * **Escape** opens the game menu over the board and pauses the game:
   **1 Resume** (or Escape again), **2 Save game**, which writes the game
   to `GAME.DAT` and keeps the menu open, and **3 Quit to menu**. Pressed
   during the computer's move or a battle, the menu opens as soon as that
   move is over, so a saved game never holds half a move. A saved game
   keeps the board, both armies' casualties, the variants in play and the
-  turn; **3 Continue saved game** in the main menu resumes it. Once a game
-  is over, Escape returns straight to the main menu.
+  turn; **3 Continue saved game** in the main menu resumes it.
 
 ![Game menu](docs/game-menu.png)
+
+![The end of a game](docs/game-over.png)
 
 ![Playing against the computer](docs/play.png)
 
@@ -397,6 +403,36 @@ the game menu.
 Game state that outlives a scene (the player's deployment) lives in
 `core/`.
 
+### Developer scenarios
+
+Type **DEV** at the main menu to swap its entries for test scenarios
+(`src/scenes/dev.c`); type it again, or press Escape, to get the menu back.
+Each scenario puts a game straight into a situation worth testing, with
+everything else already captured:
+
+| # | Scenario | What happens |
+| -: | --- | --- |
+| 1 | Lose: last piece taken | Blue moves first; its Marshal takes your last movable piece, a Sergeant, and you have no moves left |
+| 2 | Win: last enemy taken | your Marshal takes Blue's last movable piece |
+| 3 | Draw: no one can move | the last movers, two Sergeants, fall together |
+| 4 | Win: capture the flag | your Captain stands next to Blue's flag |
+| 5 | Lose: flag captured | Blue moves first and takes your flag, which it has seen |
+| 6 | Rescue a piece | the Rescue variant, with your Major one step from Blue's back row |
+
+A scenario is a few bytes: the variants, who moves first, and the pieces as
+(square, cell) pairs; `play_position()` counts the missing pieces as fallen.
+`make test-endings` plays them all through the emulator and checks the
+result plates. The game stays on the scenario list until you leave it.
+
+### Memory
+
+The program, its data and its variables share the X16's 38 KB of main RAM
+with cc65's C stack. Since every function keeps its locals static
+(`#pragma static-locals`), the stack needs only a few dozen bytes: 36 at
+most in a long game, measured by filling it with a marker byte in the
+emulator. `src/Makefile` therefore reserves 1 KB for it instead of cc65's
+default 2 KB; `src/FELDMARS.map` shows how much room is left below it.
+
 ## Testing and rating the computer player
 
 The computer player in `src/core` also builds as a PC program,
@@ -443,8 +479,9 @@ make run          # start it in ../x16-emulator
 make dist         # package the runtime files in build/dist/FELDMARSCHALL.ZIP
 make test-dist    # boot that package through AUTOBOOT.X16 and check it
 make site         # the website with the game in the browser, in build/site
-make screenshot   # drive it in the AgentBridge emulator, save the screenshots in docs/
+make screenshots  # regenerate every screenshot in docs/ in the AgentBridge emulator
 make test-variants # emulator checks of Masters variants and hidden information
+make test-endings # every way a game ends, through the developer scenarios
 make check        # check the built-in deployments and the rules (tests/)
 make native       # build the computer player as a PC program (needs gcc)
 make rating       # rate it against the baseline bots
@@ -472,11 +509,28 @@ the splash screen pixel by pixel, the menus by keyboard and mouse, dragging
 a piece onto the board, whole-pixel fullscreen, and touch dragging on a
 phone-sized screen.
 
+Every picture in `docs/` comes from `make screenshots`
+(`tools/screenshots.py`). It plays through the game in the
+[AgentBridge emulator](https://github.com/ifilot/x16-emulator) (expected in
+`../x16-emulator`, with the r49 ROM in `../emulator/rom.bin`), in a temporary
+copy of the runtime files so your saves stay untouched. Before each capture it
+reads the screen's text back from VRAM, so a change in the game's flow stops
+it rather than producing a wrong picture. The run is reproducible: the dice
+are pinned before each random army, and About shows the date of the last
+commit. A file is only rewritten when its pixels change, so after changing
+the game, `make screenshots` and `git status docs` show exactly which screens
+it affected. The emulator tests (`make test-flow` and friends) keep their
+captures in `build/test-shots/`.
+
 GitHub Actions builds the game, runs `make check` and a short `make rating`,
 and packages it on every push and pull request (`.github/workflows/build.yml`);
-pushing a `v*` tag attaches the ZIP to a release. Every push to `master`
-builds, checks and deploys the website to GitHub Pages
-(`.github/workflows/pages.yml`).
+pushing a `v*` tag attaches the ZIP to a release. It also builds the
+AgentBridge emulator (`.github/actions/agent-emulator`), runs the emulator
+tests (`make test-endings`, `test-flow`, `test-variants`, `test-colors`,
+`test-dist`), regenerates the screenshots and warns when those in the
+commit are stale; the fresh ones are attached to the run. Every push to `master` regenerates the screenshots,
+then builds, checks and deploys the website to GitHub Pages
+(`.github/workflows/pages.yml`), so the site always shows the current game.
 
 `assets/scripts/build_graphics.py` writes the VRAM resources and `src/gfx.h`.
 It also writes previews of layer 0 and the token sheet to `build/preview`.
@@ -489,8 +543,13 @@ receives through the generated `gfx.h`.
 * `assets/font/masthead.png` and `assets/font/new-game.png`: rendered from
   [UnifrakturMaguntia](https://github.com/google/fonts/tree/main/ofl/unifrakturmaguntia)
   (SIL Open Font License).
+* `assets/splash/feldmarschall.png`: AI-generated Prussian marshal portrait,
+  exported at 640 × 480 with exactly four VERA-compatible colors.
 * `assets/menu/marshals-orders.png`: AI-generated artwork adapted from the
-  selected Marshal’s Orders concept, using the built-in image-generation tool.
+  selected Marshal’s Orders concept, with revised Prussian iconography,
+  using the built-in image-generation tool. The 640 × 480 artwork uses
+  15 distinct colors from the existing 16-entry palette, with a fixed
+  `#BBBBAA` background behind the live controls.
 * Terrain and panel design inspired by Stratego (Accolade, 1990).
 
 ## License
