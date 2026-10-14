@@ -125,13 +125,18 @@ must not be overwritten.
    stack headroom, concealed-rank invariance, public-only features, persistent
    native/X16 parity for both armies, timing, bank restoration and save/load
    semantics for any added persistent state.
-5. **Stronger desktop teacher:** evaluate the existing teacher's actual choices
-   against the mission policy, investigate sampled-world inconsistencies and
-   material-only limits, compare an information-set approach and cover quiet
-   strategy, decoys and sparse endgames using public inputs only.
-6. **New student:** after establishing better teacher decisions, generate labels
-   with full and missing history, group related positions/games together, measure
-   fresh game strength and require fairness, timing and X16 gates before adoption.
+5. **Stronger desktop teacher:** Classic Normal strength gates passed. A frozen
+   masked-policy rollout successor scores 71.0% against missions and 54.0%
+   against the earlier material teacher in independent 1,400-game comparisons.
+   Public-only history, quiet strategy and focused cases are covered. The
+   [teacher and student handoff](ai-teacher/README.md) records mechanisms and limits.
+6. **New student:** full/cold-history labels and grouped fits complete. The first
+   fit scores 37.1%. Representative development data produces a compact model
+   with independent score 56.25% (53.96–58.54%), but it fails an existing
+   Scout-support tactic. Inventory features score 51.4%; removing quiet
+   corrections passes tactics but scores 50.0%. None is promoted. Next preserve
+   specialist support while retaining the useful quiet decisions, then repeat
+   independent strength, fairness, timing and X16 gates for the new candidate.
 7. **Variant strength:** extend the referee and opponents to individual variants
    and representative combinations, test Normal and Hard independently and use
    results to decide whether variant-specific tuning is justified.

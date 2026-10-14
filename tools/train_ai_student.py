@@ -131,7 +131,7 @@ def fit(rows, depth=4, minimum=24):
         nodes.append({'feature':255,'threshold':0,'left':0,'right':0,'value':mean})
         if level==depth or len(selected)<minimum*2: return index
         best=None
-        for feature in range(len(FEATURES)):
+        for feature in range(len(selected[0]['features'])):
             ordered=sorted(selected,key=lambda row:row['features'][feature])
             total=sum(row['target'] for row in ordered);total2=sum(row['target']**2 for row in ordered)
             left=left2=0

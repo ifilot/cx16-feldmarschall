@@ -52,6 +52,11 @@ def main():
     parser.add_argument('--suite', choices=('classic', 'broad'), default='classic',
                         help='historical deployments or diverse legal stress deployments')
     parser.add_argument('--candidate-engine', type=Path, default=ROOT / 'build/feldmarschall-engine')
+    parser.add_argument('--candidate-command', help='explicit executable and arguments; all script/binary arguments are frozen')
+    parser.add_argument('--reference-command', help='explicit reference executable and arguments, replacing the default opponent')
+    parser.add_argument('--reference-name', default='teacher-reference')
+    parser.add_argument('--reference-source', type=Path)
+    parser.add_argument('--source-extra', type=Path, action='append', default=[], help='additional generated model/source files required to rebuild the candidate')
     parser.add_argument('--candidate-source', type=Path, default=ROOT / 'src/core/ai.c')
     parser.add_argument('--phase', choices=('development', 'validation', 'diagnostic'), default='development')
     parser.add_argument('--strategy', default='current', help='explicit experimental policy identifier')
@@ -65,15 +70,20 @@ def main():
         parser.error('--rounds must be positive')
     if args.jobs < 1:
         parser.error('--jobs must be positive')
+    if args.reference_command and (args.levels or args.league or args.previous or args.progress or args.adaptive or args.missions):
+        parser.error('--reference-command cannot be combined with another opponent selector')
+    if args.reference_command and (not args.reference_source or args.reference_name == 'current'):
+        parser.error('a distinct reference name and --reference-source are required')
     started = datetime.now(timezone.utc)
     revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     kind = 'league' if args.league else 'levels' if args.levels else 'progress' if args.previous or args.progress or args.adaptive or args.missions else 'v020'
     if args.out is None:
         args.out = ROOT / 'build/ai-benchmarks' / (started.strftime('%Y%m%dT%H%M%S%fZ') + '-' + revision[:8] + '-' + kind)
-    engines = {'current': str(args.candidate_engine.resolve()),
+    candidate_command = args.candidate_command or str(args.candidate_engine.resolve())
+    engines = {'current': candidate_command,
                'v020': str(ROOT / 'build/feldmarschall-ai-v020')}
     if args.levels:
-        engines = {level: str(args.candidate_engine.resolve()) + ' --difficulty ' + level
+        engines = {level: candidate_command + ' --difficulty ' + level
                    for level in ('easy', 'normal', 'hard')}
     else:
         engines['current'] += ' --difficulty ' + args.difficulty
@@ -92,7 +102,9 @@ def main():
                 'easy': str(ROOT / 'build/feldmarschall-engine') + ' --difficulty easy',
                 'greedy': shlex.join([sys.executable, str(ROOT / 'tools/bots.py'), 'greedy']),
             })
-    pairs = [('normal', 'easy'), ('hard', 'normal'), ('hard', 'easy')] if args.levels else [('current', 'milestone-20261014' if args.previous else 'normal-progress' if args.progress else 'adaptive-progress' if args.adaptive else 'coordinated-missions' if args.missions else 'v020')]
+    if args.reference_command:
+        engines = {'current': engines['current'], args.reference_name: args.reference_command + ' --difficulty ' + args.difficulty}
+    pairs = [('normal', 'easy'), ('hard', 'normal'), ('hard', 'easy')] if args.levels else [('current', args.reference_name if args.reference_command else 'milestone-20261014' if args.previous else 'normal-progress' if args.progress else 'adaptive-progress' if args.adaptive else 'coordinated-missions' if args.missions else 'v020')]
     if args.league:
         pairs = [('current', name) for name in engines if name != 'current']
     groups = [('mixed', 20261021), ('random', 20261022), ('presets', 20261023)] if args.levels else [('mixed', 271828), ('random', 314159), ('presets', 161803)]
@@ -135,6 +147,9 @@ def main():
     }
     if args.previous:
         provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_levels_20261014.c', 'ai_level_20261014.c')}
+    if args.reference_command:
+        provenance['reference_source'] = str(args.reference_source)
+        provenance['reference_source_sha256'] = sha(args.reference_source)
     if args.progress:
         provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_normal_progress_20261014.c', 'ai_level_20261014.c')}
     if args.adaptive:
@@ -151,6 +166,7 @@ def main():
     print(f'Benchmark records: {args.out}', file=sys.stderr)
     # Retain dirty and untracked implementations too: a hash is not a snapshot.
     source_files = [ROOT / 'Makefile', ROOT / 'src/Makefile', args.candidate_source.resolve()]
+    source_files.extend(path.resolve() for path in args.source_extra)
     for directory in ('src', 'tools', 'tests'):
         source_files.extend(p for p in (ROOT / directory).rglob('*') if p.suffix in ('.c', '.h', '.s', '.py', '.cfg', '.md'))
     with zipfile.ZipFile(args.out / 'sources.zip', 'x', compression=zipfile.ZIP_DEFLATED) as archive:
@@ -178,6 +194,16 @@ def main():
                     shutil.copy2(dependency, copied)
                     provenance['support_sha256'][str(copied.relative_to(args.out))] = sha(copied)
                 arguments[index] = str((support / script.name).resolve())
+            elif script.is_file():
+                # Teacher adapters also depend on native observer/search programs.
+                support = args.out / 'engines' / 'support' / name
+                support.mkdir(parents=True, exist_ok=True)
+                copied = support / script.name
+                if copied.exists():
+                    if sha(copied) != sha(script): raise ValueError(f'conflicting support filenames: {script}')
+                else: shutil.copy2(script, copied)
+                provenance['support_sha256'][str(copied.relative_to(args.out))] = sha(copied)
+                arguments[index] = str(copied.resolve())
         frozen_commands[name] = shlex.join([str(target.resolve()), *arguments])
         provenance['engine_sha256'][name] = sha(target)
     provenance['run_engine_commands'] = frozen_commands

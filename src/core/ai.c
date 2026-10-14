@@ -25,6 +25,9 @@
 #include "board.h"
 #include "random.h"
 #include "rules.h"
+#ifdef AI_STUDENT_CONTEXT
+#include "ai_student.h"
+#endif
 #ifdef AI_MEMORY
 #include "ai_memory.h"
 #endif
@@ -658,6 +661,9 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
     else memset(discovery, 0, sizeof(discovery));
 #endif
     flag_danger = flag_threats();
+#ifdef AI_STUDENT_CONTEXT
+    ai_student_inventory(lost);
+#endif
 #ifdef AI_MISSIONS
     if(ai_difficulty != AI_EASY) ai_mission_begin(army);
 #endif

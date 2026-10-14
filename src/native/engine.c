@@ -238,6 +238,9 @@ static void features(char* args) {
     if(!army || !hex(lost,enemy_lost,PIECE_TYPES) || !hex(cells,board,SQUARES)) {reply("error features");return;}
     own=atoi(army)?CELL_BLUE:0;
     if(cold && atoi(cold)) ai_memory_reset();
+#ifdef AI_STUDENT_CONTEXT
+    ai_student_inventory(enemy_lost);
+#endif
     ai_student_begin(own);
     for(sq=0;sq<SQUARES;sq++) {
         if(!IS_PIECE(board[sq]) || (board[sq]&CELL_BLUE)!=own) continue;
@@ -330,6 +333,19 @@ int main(int argc, char** argv) {
             }
         }
 #ifdef AI_DIAGNOSTICS
+        else if(!strcmp(command, "position")) {
+            char* army=strtok(args," ");char* lost=strtok(NULL," ");
+            char* cells=strtok(NULL," ");char* history=strtok(NULL," ");
+            uint8_t state[RULES_STATE_SIZE], shuttles[6];
+            if(!army || !hex(lost,enemy_lost,PIECE_TYPES) || !hex(cells,board,SQUARES) ||
+               !hex(history,shuttles,6)) {reply("error position");continue;}
+            own=atoi(army) ? CELL_BLUE : 0;ai_mask(own);ai_reset();rules_reset();
+            rules_state_save(state);memcpy(state+RULES_STATE_SIZE-6,shuttles,6);rules_state_load(state);
+            reply("positionok");
+        }
+        else if(!strcmp(command, "ranked")) {
+            tracing=1; go(); tracing=0;
+        }
         else if(!strcmp(command, "played")) {
             uint8_t options[MAX_TARGETS], n, i;
             from = square(strtok(args, " ")); to = square(strtok(NULL, " "));
@@ -359,7 +375,12 @@ int main(int argc, char** argv) {
         } else if(!strcmp(command, "student")) {
             from=square(strtok(args," "));to=square(strtok(NULL," "));
             if(from==NOWHERE || to==NOWHERE) reply("error squares");
-            else {ai_student_begin(own);printf("learned %d\n",ai_student_score(from,to));fflush(stdout);}
+            else {
+#ifdef AI_STUDENT_CONTEXT
+                ai_student_inventory(enemy_lost);
+#endif
+                ai_student_begin(own);printf("learned %d\n",ai_student_score(from,to));fflush(stdout);
+            }
 #endif
 #ifdef AI_MEMORY
         } else if(!strcmp(command, "memory")) {

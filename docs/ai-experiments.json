@@ -3666,5 +3666,409 @@
     "executable_snapshots_available": true,
     "archive": "ai-runs/mission-scout-loss-hard-development-20261014.zip",
     "archive_sha256": "563ee3c0ce004030ab9fd57fef65431c154f3a7c75dcddb3dc4c268d5552ae12"
+  },
+  {
+    "name": "teacher-material-smoke-20261014",
+    "decision": "diagnostic",
+    "reason": "14-game infrastructure smoke; no strength claim.",
+    "source_sha256": "40a124cda52b4031e8c1712d9d676d54c13e452aa27f53ac92a34ae86a94996a",
+    "phase": "diagnostic",
+    "strategy": "material-teacher-smoke",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 138.85714285714286
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/teacher-material-smoke-20261014.zip",
+    "archive_sha256": "0c0d8be716e91e6851abaae5ee23d80c62ee0f93a99364775e3aa818aeb3446b"
+  },
+  {
+    "name": "teacher-rollout-smoke-20261014",
+    "decision": "diagnostic",
+    "reason": "14-game masked-rollout infrastructure smoke; no strength claim.",
+    "source_sha256": "40a124cda52b4031e8c1712d9d676d54c13e452aa27f53ac92a34ae86a94996a",
+    "phase": "diagnostic",
+    "strategy": "rollout-teacher-smoke",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 218.71428571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/teacher-rollout-smoke-20261014.zip",
+    "archive_sha256": "a173cce67a56b7f9786643667b5c3dc52f1dd22e89a5d4f4d2279818b75a8876"
+  },
+  {
+    "name": "teacher-material-raw-development-20261014",
+    "decision": "diagnostic",
+    "reason": "Full-action material teacher reference: 53.6% over 280 broad development games, interval includes 50%; preserve as comparator.",
+    "source_sha256": "ef24e64eb53333e01e51c1eb51100ba15689afc0fc7c656a0378d1019f090e39",
+    "phase": "development",
+    "strategy": "material-raw-teacher",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 150,
+        "draws": 0,
+        "losses": 130,
+        "score": 0.5357142857142857,
+        "paired_bootstrap_95": [
+          0.48214285714285715,
+          0.5892857142857143
+        ],
+        "reasons": {
+          "no moves": 6,
+          "flag": 274
+        },
+        "average_plies": 175.37857142857143
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/teacher-material-raw-development-20261014.zip",
+    "archive_sha256": "68fab637ffccade2ae3deda432f4c9b7e6d787b3659a00689e184782d04919f4"
+  },
+  {
+    "name": "teacher-rollout-raw-development-20261014",
+    "decision": "diagnostic",
+    "reason": "Direct masked-policy rollout scored 67.3% over 280 development games. Retain as alternative; correction policy selected before independent validation.",
+    "source_sha256": "ef24e64eb53333e01e51c1eb51100ba15689afc0fc7c656a0378d1019f090e39",
+    "phase": "development",
+    "strategy": "rollout-raw-teacher",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 188,
+        "draws": 1,
+        "losses": 91,
+        "score": 0.6732142857142858,
+        "paired_bootstrap_95": [
+          0.6178571428571429,
+          0.7267857142857143
+        ],
+        "reasons": {
+          "flag": 268,
+          "no moves": 11,
+          "ply limit": 1
+        },
+        "average_plies": 198.225
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/teacher-rollout-raw-development-20261014.zip",
+    "archive_sha256": "49ea7bb96adf568a844c5babf49c8330c25920dafc31e6e583c24cbc5cbf459b"
+  },
+  {
+    "name": "teacher-rollout-correction-development-20261014",
+    "decision": "diagnostic",
+    "reason": "Masked-policy rollout corrections scored 68.4% over 280 development games. Frozen at eight worlds, four plies and strategic shaping before independent validation.",
+    "source_sha256": "ef24e64eb53333e01e51c1eb51100ba15689afc0fc7c656a0378d1019f090e39",
+    "phase": "development",
+    "strategy": "rollout-correction-teacher",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 191,
+        "draws": 1,
+        "losses": 88,
+        "score": 0.6839285714285714,
+        "paired_bootstrap_95": [
+          0.6392857142857142,
+          0.7285714285714285
+        ],
+        "reasons": {
+          "flag": 273,
+          "ply limit": 1,
+          "no moves": 6
+        },
+        "average_plies": 163.14285714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/teacher-rollout-correction-development-20261014.zip",
+    "archive_sha256": "b5aed1a5186e28150727d1efdfed4499f83119a057821fc87b53d8b4701786c0"
+  },
+  {
+    "name": "teacher-correction-mission-validation-20261014",
+    "decision": "keep",
+    "reason": "Frozen desktop teacher scores 71.0% against mission Normal over 1,400 independent broad games (paired 95% 69.0\u201373.0%). Desktop teacher acceptance only, not X16 promotion.",
+    "source_sha256": "ef24e64eb53333e01e51c1eb51100ba15689afc0fc7c656a0378d1019f090e39",
+    "phase": "validation",
+    "strategy": "frozen-rollout-correction",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 1400,
+        "wins": 993,
+        "draws": 1,
+        "losses": 406,
+        "score": 0.7096428571428571,
+        "paired_bootstrap_95": [
+          0.6896428571428571,
+          0.73
+        ],
+        "reasons": {
+          "flag": 1366,
+          "no moves": 33,
+          "ply limit": 1
+        },
+        "average_plies": 171.73142857142858
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/teacher-correction-mission-validation-20261014.zip",
+    "archive_sha256": "1f8d9c6c4494ece1034f2167fb2c4874be48c2d4b9186fd67470d507f8330f64"
+  },
+  {
+    "name": "teacher-correction-material-validation-20261014",
+    "decision": "keep",
+    "reason": "Frozen rollout teacher scores 54.0% against the material teacher using the same correction adapter over 1,400 independent broad games (51.9\u201356.1%). This evaluates the combined successor; horizon and compute are not matched.",
+    "source_sha256": "ef24e64eb53333e01e51c1eb51100ba15689afc0fc7c656a0378d1019f090e39",
+    "phase": "validation",
+    "strategy": "frozen-rollout-versus-material",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-material-teacher": {
+        "games": 1400,
+        "wins": 756,
+        "draws": 0,
+        "losses": 644,
+        "score": 0.54,
+        "paired_bootstrap_95": [
+          0.5185714285714286,
+          0.5614285714285714
+        ],
+        "reasons": {
+          "flag": 1373,
+          "no moves": 27
+        },
+        "average_plies": 147.91142857142856
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/teacher-correction-material-validation-20261014.zip",
+    "archive_sha256": "cdc87a589594957def3047ec1da9b931bf8871fe39cf050682d1cfae538503f0"
+  },
+  {
+    "name": "rollout-student-v2-development-20261014",
+    "decision": "reject",
+    "reason": "All-action 17-node/102-byte student scores 37.1% over 560 fresh broad development games (33.4\u201340.9%). Label MAE also fails to beat zero. No promotion; retain model/header binding and supplemental generated sources.",
+    "source_sha256": "6fce3275450025be634957feffa788dbca9b0940c07f89514fd8b4024437d91f",
+    "phase": "development",
+    "strategy": "rollout-student-v2",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 560,
+        "wins": 208,
+        "draws": 0,
+        "losses": 352,
+        "score": 0.37142857142857144,
+        "paired_bootstrap_95": [
+          0.3339285714285714,
+          0.4089285714285714
+        ],
+        "reasons": {
+          "flag": 553,
+          "no moves": 7
+        },
+        "average_plies": 226.2
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-v2-development-20261014.zip",
+    "archive_sha256": "9b254e0cb1324cbfe0b9b8967da3bcbf1c15beb002e07af2d40f080dc284d56c"
+  },
+  {
+    "name": "rollout-student-balanced-development-20261014",
+    "decision": "diagnostic",
+    "reason": "Representative development corpus improved score to 55.4%; frozen for validation, not promoted.",
+    "source_sha256": "6fce3275450025be634957feffa788dbca9b0940c07f89514fd8b4024437d91f",
+    "phase": "development",
+    "strategy": "rollout-student-balanced-v2",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 560,
+        "wins": 308,
+        "draws": 4,
+        "losses": 248,
+        "score": 0.5535714285714286,
+        "paired_bootstrap_95": [
+          0.51875,
+          0.5892857142857143
+        ],
+        "reasons": {
+          "no moves": 8,
+          "flag": 548,
+          "ply limit": 4
+        },
+        "average_plies": 175.18928571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-balanced-development-20261014.zip",
+    "archive_sha256": "cffea566b261704de6224cc0adb01df39534e5aa57cba716f3ad83ac09fe7a34"
+  },
+  {
+    "name": "rollout-student-balanced-validation-20261014",
+    "decision": "reject",
+    "reason": "Independent strength passed at 56.25% (53.96-58.54%), but Scout-support tactical regression failed; no runtime promotion.",
+    "source_sha256": "c5ec643b995a42c0272df9b54cb0374cbe38c4f7580fea73f482863b28d0989b",
+    "phase": "validation",
+    "strategy": "rollout-student-balanced-v2",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 1400,
+        "wins": 781,
+        "draws": 13,
+        "losses": 606,
+        "score": 0.5625,
+        "paired_bootstrap_95": [
+          0.5396428571428571,
+          0.5853571428571429
+        ],
+        "reasons": {
+          "flag": 1369,
+          "ply limit": 12,
+          "no moves": 18,
+          "neither can move": 1
+        },
+        "average_plies": 178.11785714285713
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-balanced-validation-20261014.zip",
+    "archive_sha256": "8c2894b859f8def35ea37e58fb39ff61020a57993cc3bf00d97111b177d9d097"
+  },
+  {
+    "name": "rollout-student-context-development-20261014",
+    "decision": "reject",
+    "reason": "Public inventory features: 51.43% (47.96-54.82%), no established gain and same Scout-support tactical regression.",
+    "source_sha256": "3e429d8ffc9f8445eb44a815a693e57e298cb2d5a0dd523a3f558c213412acb7",
+    "phase": "development",
+    "strategy": "rollout-student-context-v3",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 560,
+        "wins": 287,
+        "draws": 2,
+        "losses": 271,
+        "score": 0.5142857142857142,
+        "paired_bootstrap_95": [
+          0.48035714285714287,
+          0.5482142857142858
+        ],
+        "reasons": {
+          "flag": 552,
+          "no moves": 6,
+          "ply limit": 2
+        },
+        "average_plies": 169.82142857142858
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-context-development-20261014.zip",
+    "archive_sha256": "3c7bab5a4ccb947ceb9993faec8504fe151f432067fa8dd5c1aa8716c342f9d0"
+  },
+  {
+    "name": "rollout-student-capture-guard-development-20261014",
+    "decision": "reject",
+    "reason": "Capture-only ablation passes tactics/fairness but scores 50.0% (46.8-53.2%); quiet corrections are needed for the observed all-action gain.",
+    "source_sha256": "24e2076012302a94433c429c54df405403ec81efe16b36c21776bbfae3e7f08a",
+    "phase": "development",
+    "strategy": "rollout-student-capture-guard",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 560,
+        "wins": 279,
+        "draws": 2,
+        "losses": 279,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.46785714285714286,
+          0.5321428571428571
+        ],
+        "reasons": {
+          "flag": 550,
+          "ply limit": 2,
+          "no moves": 8
+        },
+        "average_plies": 169.525
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-capture-guard-development-20261014.zip",
+    "archive_sha256": "3ce960adef0a5f3534786337d387e06f41ec0f0298477d5556952064aa9fc0fa"
   }
 ]

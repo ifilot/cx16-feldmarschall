@@ -3,6 +3,10 @@
 .import _ai_mission_begin_banked, _ai_mission_score_banked, _ai_mission_reset_banked
 .export _setup_ai
 .import _setup_ai_banked
+.ifdef AI_STUDENT_CONTEXT
+.export _ai_student_inventory
+.import _ai_student_inventory_banked
+.endif
 .ifdef AI_MEMORY
 .export _ai_memory_observe
 .import _ai_memory_observe_banked
@@ -46,6 +50,13 @@ saved_bank: .res 1
     jsr _setup_ai_banked
     jmp restore_bank
 .endproc
+.ifdef AI_STUDENT_CONTEXT
+.proc _ai_student_inventory
+    jsr select_bank
+    jsr _ai_student_inventory_banked
+    jmp restore_bank
+.endproc
+.endif
 .ifdef AI_MEMORY
 .proc _ai_memory_observe
     jsr select_bank

@@ -61,6 +61,69 @@ CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai
 CORE_MISSIONS = $(CORE_NATIVE) src/core/ai_mission.c
 CORE_MEMORY = $(CORE_MISSIONS) src/core/ai_memory.c
 
+.PHONY: native-teacher-rollout native-teacher-observer
+.PHONY: native-student-v2 test-ai-student-v2
+AI_STUDENT_V2_DIR ?= build/ai-student/rollout-v2-r1
+native-student-v2: build/feldmarschall-engine-student-v2
+build/feldmarschall-engine-student-v2: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_V2_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -I$(AI_STUDENT_V2_DIR) -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+test-ai-student-v2: build/ai-student-v2-test
+	build/ai-student-v2-test
+build/ai-student-v2-test: tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_V2_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -I$(AI_STUDENT_V2_DIR) -Isrc/core -o $@ tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c
+.PHONY: native-student-v2-diagnostics native-student-v3 test-ai-student-v3
+.PHONY: native-student-quiet-guard test-ai-student-quiet-guard
+native-student-quiet-guard: build/feldmarschall-student-quiet-guard
+build/feldmarschall-student-quiet-guard: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_V2_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_QUIET_LIMIT=0 -DAI_DIAGNOSTICS -I$(AI_STUDENT_V2_DIR) -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+test-ai-student-quiet-guard: build/ai-student-quiet-guard-test
+	build/ai-student-quiet-guard-test
+build/ai-student-quiet-guard-test: tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_V2_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_QUIET_LIMIT=0 -I$(AI_STUDENT_V2_DIR) -Isrc/core -o $@ tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c
+native-student-v2-diagnostics: build/feldmarschall-student-v2-diagnostics
+build/feldmarschall-student-v2-diagnostics: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_V2_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_DIAGNOSTICS -I$(AI_STUDENT_V2_DIR) -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+AI_STUDENT_V3_DIR ?= build/ai-student/balanced-context-v3
+native-student-v3: build/feldmarschall-engine-student-v3
+build/feldmarschall-engine-student-v3: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_V3_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_CONTEXT -I$(AI_STUDENT_V3_DIR) -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+test-ai-student-v3: build/ai-student-v3-test
+	build/ai-student-v3-test
+build/ai-student-v3-test: tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_V3_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_CONTEXT -I$(AI_STUDENT_V3_DIR) -Isrc/core -o $@ tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c
+.PHONY: test-teacher-rollout
+.PHONY: test-teacher-student-inputs
+.PHONY: test-teacher-corpus test-student-context
+test-teacher-corpus:
+	python3 tools/test_teacher_corpus.py
+test-student-context: native-teacher-rollout native-teacher-observer native-teacher-observer-context
+	python3 tools/test_student_context.py
+test-teacher-student-inputs: native-teacher-rollout native-teacher-observer
+	python3 tools/test_teacher_student_inputs.py
+test-teacher-rollout: native-teacher-rollout native-teacher-observer
+	python3 tools/test_teacher_rollout.py
+native-teacher-rollout: build/feldmarschall-teacher-rollout
+build/feldmarschall-teacher-rollout: src/native/teacher_rollout.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_DIAGNOSTICS -Isrc/core -o $@ src/native/teacher_rollout.c $(CORE_MISSIONS)
+native-teacher-observer: build/feldmarschall-teacher-observer
+build/feldmarschall-teacher-observer: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_DIAGNOSTICS -DAI_TRACE -DAI_TRAINING -DAI_FEATURE_TRACE -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+
+.PHONY: native-teacher-observer-context
+native-teacher-observer-context: build/feldmarschall-teacher-observer-context
+build/feldmarschall-teacher-observer-context: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_DIAGNOSTICS -DAI_TRACE -DAI_TRAINING -DAI_FEATURE_TRACE -DAI_STUDENT_CONTEXT -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+
 .PHONY: native-mission-progress test-ai-mission-progress
 .PHONY: test-ai-diagnostic-history
 test-ai-diagnostic-history: build/ai-diagnostic-history-test

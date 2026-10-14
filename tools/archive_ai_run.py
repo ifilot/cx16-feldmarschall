@@ -37,7 +37,7 @@ def main():
         for filename in ('provenance.json', 'games.jsonl', 'summary.json', 'sources.zip', 'endgames.json', 'candidate.c',
                          'portfolio.json', 'trials.json', 'deployment-block-analysis.json', 'analysis-sources.zip',
                          'deployment-integrity.json', 'policy.json', 'frozen-policy.json',
-                         'selection-integrity.json'):
+                         'selection-integrity.json', 'model-binding.json', 'model-sources.zip'):
             path = args.run / filename
             if path.exists():
                 archive.write(path, filename)

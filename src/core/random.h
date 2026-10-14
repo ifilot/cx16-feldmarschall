@@ -38,5 +38,8 @@ void random_seed(uint16_t seed);
  * @brief The next number of the sequence, 1 to 65535
  */
 uint16_t random_next(void);
+#if defined(AI_TEST) || defined(AI_DIAGNOSTICS)
+uint16_t random_current(void);
+#endif
 
 #endif
