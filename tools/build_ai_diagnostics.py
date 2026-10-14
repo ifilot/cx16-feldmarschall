@@ -156,6 +156,8 @@ def main():
         with zipfile.ZipFile(path) as archive:
             games = [json.loads(line) for line in archive.read('games.jsonl').splitlines()]
             provenance = json.loads(archive.read('provenance.json'))
+        if provenance.get('rules',0):
+            continue  # Classic diagnostic replay must never reinterpret variant games.
         limit = args.broad_games_per_run if provenance.get('suite') == 'broad' else args.games_per_run
         chosen = choose_games(games, limit)
         for index, game, _ in chosen:

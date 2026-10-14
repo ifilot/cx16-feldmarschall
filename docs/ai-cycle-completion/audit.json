@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "objective_sha256": "f3d7348cc91bae2644a42330dc3cdca375b58f8a6dc168d452e22e4f4315f53c",
+  "requirements": [
+    {
+      "requirement": "Define and independently validate varied deployment selection",
+      "status": "complete",
+      "evidence": "docs/ai-next-cycle-2026-10-14.md; selection Normal/Hard archives"
+    },
+    {
+      "requirement": "Integrate successful deployment policy into X16 and packages",
+      "status": "complete",
+      "evidence": "docs/ai-selection/manifest.json; docs/ai-student-production/manifest.json"
+    },
+    {
+      "requirement": "Focused public decoy, stall, Miner and specialist diagnostics",
+      "status": "complete",
+      "evidence": "docs/ai-mission-cases/manifest.json; 18 cases and oracle-exclusion checks"
+    },
+    {
+      "requirement": "Isolated mission experiments and a reliable accepted improvement",
+      "status": "complete",
+      "evidence": "14 rejected runs, 3920 games; cooperation-guard student 54.0% and two diagnostic improvements"
+    },
+    {
+      "requirement": "Actual X16 fairness, parity, resources, timing and save/load gates",
+      "status": "complete",
+      "evidence": "docs/ai-student-production/manifest.json; exact current game-source identity"
+    },
+    {
+      "requirement": "Stronger public-input desktop teacher",
+      "status": "complete",
+      "evidence": "docs/ai-teacher/manifest.json; recomputed independent teacher gates"
+    },
+    {
+      "requirement": "Compact full/cold-history student with independent strength and target gates",
+      "status": "complete",
+      "evidence": "46808 grouped labels; recomputed student and runtime gates"
+    },
+    {
+      "requirement": "Individual/combined variant strength for Normal/Hard and tuning decision",
+      "status": "complete",
+      "evidence": "docs/ai-variants/manifest.json; 15400 audited/replayed final games"
+    },
+    {
+      "requirement": "Retain sources, programs, seeds, traces, decisions and commit checkpoints",
+      "status": "complete",
+      "evidence": "docs/ai-experiments.json; immutable bundles; repository commit containing this audit"
+    }
+  ],
+  "archives_verified": 135,
+  "games_in_ledger": 76686,
+  "selection": {
+    "normal": {
+      "games": 5040,
+      "complete_trial_matrix": true,
+      "policy_and_actual_selections_verified": true,
+      "phase": "validation"
+    },
+    "hard": {
+      "games": 5040,
+      "complete_trial_matrix": true,
+      "policy_and_actual_selections_verified": true,
+      "phase": "validation"
+    }
+  },
+  "teacher_gate_passed": true,
+  "student_gate_passed": true,
+  "runtime": {
+    "model_payload_sha256": "91174a58c5974cd5205ffee3dbf5b305f570cf3156dfd3f893b884d9f934b377",
+    "model_bytes": 186,
+    "model_presence_offsets": {
+      "MISSION.BIN": 5941,
+      "BRIDGE.PRG": 17794
+    },
+    "main_free_before_reserved_stack": 585,
+    "reserved_stack_bytes": 1024,
+    "tactical_bank_bytes": 8147,
+    "mission_bank_bytes": 7512,
+    "browser_runtime_files_matching": 34,
+    "browser_download_matches_distribution": true,
+    "distribution_sha256": "2c12ab2a5024c5daa9133a8b6b7c58ddb518db13f5b66b15774223444e06abbe"
+  },
+  "unchanged_game_source_files": 65,
+  "grouped_labels": 46808,
+  "diagnostic_improvements": 2,
+  "variant_plies_replayed": 3588284,
+  "variant_views_audited": 7207368,
+  "remaining_required_work": []
+}

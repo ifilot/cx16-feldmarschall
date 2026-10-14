@@ -38,12 +38,16 @@ desktop teacher adapters; production builds omit these commands.
 | `isready` | `readyok` | Synchronise. |
 | `difficulty <level>` | | Choose `easy`, `normal` or `hard`; also available as `--difficulty LEVEL` at launch. |
 | `seed <n>` | | Seed the engine's random choices (for reproducible games). |
+| `rules <mask>` | | Select optional rules, 0–63; preserved by `new`. |
 | `new red` / `new blue` | | Start a game playing this army. The enemy's 40 pieces stand unknown on its home rows. |
 | `setup <40 glyphs>` | | The engine's deployment, chosen by the referee. |
 | `setup` | `setup <40 glyphs>` | The engine chooses its own deployment. |
 | `go` | `move <from> <to>` or `move none` | The engine's turn. |
 | `moved <from> <to>` | | A quiet move by either army, including the engine's own. |
 | `battle <from> <to> <attacker> <defender>` | | An attack by either army, with both ranks revealed. |
+| `combat <from> <to> <attacker> <defender-or-?> <outcome>` | | Variant observation: only permitted ranks and an observable result, `A`, `D` or `X`. |
+| `reinforce <trigger> <destination> <rank-or-?> <visible>` | | A rescue; rank is private to its owner unless `visible` is 1. |
+| `view` | `view <army> <board> <enemy-known-lost> <own-lost> <rescues> <shuttle>` | Audit the native or variant bot's permitted state; byte arrays are hexadecimal. |
 | `quit` | | End the program. |
 
 An unknown command or malformed argument may be answered with a line that
@@ -79,6 +83,56 @@ A game ends when a Flag is captured, when the army to move has no legal
 move (it loses), or as a draw after the referee's ply limit
 (`--max-plies`, 1000 by default). A move that is not legal loses the game.
 The "more-squares rule" against chasing a piece endlessly is not enforced.
+
+## Optional rules and public observations
+
+`tools/arena.py --rules MASK` and `tools/benchmark_ai.py --rules MASK` use the
+game's C rules through `build/librules-variant.so` (`make native-variant-rules`).
+Mask 0 selects the same referee for a Classic cross-check. Omitting `--rules`
+retains the historical Classic referee and `battle` notifications.
+
+| Bit | Option |
+| --- | --- |
+| 1 | Attacker wins equal ranks |
+| 2 | Silent Defense |
+| 4 | Bombs explode, removing both pieces except when defused by a Miner |
+| 8 | Bombs may move quietly; an undefused Bomb also explodes |
+| 16 | Flags may move quietly and win on reaching the enemy back row |
+| 32 | Rescue |
+
+Moving Bombs and Flags cannot attack. Silent Defense leaves the defender's rank
+undisclosed unless a Scout attacked or the rank was already revealed. Both
+players receive the same `combat` event. `A` means the attacker survives, `D`
+means the defender survives, and `X` means both fall. The owner already knows
+its own defender's rank, even when the event contains `?`. For example,
+`combat a4 a5 5 ? D` removes the Captain without revealing the surviving defender.
+The receiver must use the supplied public outcome rather than requesting the
+hidden rank to resolve combat.
+
+Rescue follows an eligible surviving mover's arrival at the enemy back row,
+once per arriving piece and at most twice per army. Scouts, Bombs and Flags
+cannot trigger it. The referee uses the X16 demo policy for both armies:
+restore the strongest available ordinary casualty into the first vacant home
+square, scanning Blue 39 down to 0 or Red 60 up to 99. Failed attacks do not
+create an arrival or offer a rescue to the defender.
+
+The owner receives the returning rank in `reinforce`; its opponent receives
+`?` unless a previously disclosed casualty makes the returning rank public.
+`visible=0` preserves the owner's private rank without marking it revealed.
+Own casualties, disclosed enemy casualties and public rescue counters update
+with these events. The native AI can therefore use legitimate own rescue
+opportunities without receiving the opponent's private casualty inventory.
+
+The audited referee compares both `view` replies with the permitted true-state
+projection after every turn and at the end. Board and casualty fields contain
+100, 12 and 12 bytes; rescue counters contain two bytes. The six shuttle bytes
+are Red/Blue source, Red/Blue destination, then Red/Blue count. Unused
+coordinates for a zero count are `ff`. `view` is a native testing command;
+it is not an X16 game command or a source of extra enemy information.
+
+Use `tools/variant_bot.py greedy` or `random` with this referee. These opponents
+use masked boards and the same C move/battle rules. The historical
+`tools/bots.py` opponents retain their Classic protocol.
 
 ## An example
 

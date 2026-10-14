@@ -62,6 +62,14 @@ CORE_MISSIONS = $(CORE_NATIVE) src/core/ai_mission.c
 CORE_MEMORY = $(CORE_MISSIONS) src/core/ai_memory.c
 CORE_PRODUCTION = $(CORE_MEMORY) src/core/ai_student.c
 AI_PRODUCTION_FLAGS = -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_PRODUCTION -DAI_STUDENT_COOP_GUARD
+.PHONY: native-variant-rules
+native-variant-rules: build/librules-variant.so
+.PHONY: test-variant-arena
+test-variant-arena: native native-variant-rules
+	python3 tools/test_variant_arena.py
+build/librules-variant.so: src/core/rules.c src/core/board.c src/core/pieces.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -fPIC -shared -Isrc/core -o $@ src/core/rules.c src/core/board.c src/core/pieces.c
 
 .PHONY: native-teacher-rollout native-teacher-observer
 .PHONY: native-student-v2 test-ai-student-v2

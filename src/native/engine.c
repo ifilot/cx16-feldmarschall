@@ -166,9 +166,24 @@ static void memory(uint8_t sq) {
 static void remove_piece(uint8_t sq) {
     uint8_t cell = board[sq];
 
+    if(IS_PIECE(cell) && PIECE_TYPE(cell)<PIECE_TYPES) {
+        uint8_t army=(cell&CELL_BLUE)?1:0;
+        rules_lost[army][PIECE_TYPE(cell)]++;
+        if(cell&CELL_REVEALED) rules_known_lost[army][PIECE_TYPE(cell)]++;
+    }
     if(IS_PIECE(cell) && (cell & CELL_BLUE) != own && (cell & CELL_REVEALED))
         enemy_lost[PIECE_TYPE(cell)]++;
     board[sq] = CELL_EMPTY;
+}
+
+static void public_identity(uint8_t from, uint8_t to, uint8_t outcome) {
+    uint8_t state[RULES_STATE_SIZE];
+    uint8_t* identities=state+1+4*PIECE_TYPES+2;
+    rules_state_save(state);
+    if(outcome==BATTLE_ATTACKER || outcome==BATTLE_QUIET) identities[to]=identities[from];
+    else if(outcome==BATTLE_BOTH) identities[to]=0;
+    identities[from]=0;
+    rules_state_load(state);
 }
 
 /**
@@ -181,6 +196,7 @@ static void moved(uint8_t from, uint8_t to) {
     ai_memory_observe(from, to, AI_MEMORY_QUIET);
 #endif
 
+    public_identity(from,to,BATTLE_QUIET);
     if(rows > 1 || rows < -1 || cols > 1 || cols < -1) {
         cell = (cell & ~CELL_TYPE) | PIECE_SCOUT | CELL_REVEALED;
     }
@@ -214,6 +230,57 @@ static void battle(uint8_t from, uint8_t to, int attacker, int defender) {
             remove_piece(from);
             remove_piece(to);
     }
+}
+
+/* Only observable ranks and the observable outcome cross the protocol. */
+static void combat(uint8_t from,uint8_t to,uint8_t attacker,int defender,uint8_t outcome) {
+    uint8_t a=(board[from]&~CELL_TYPE)|attacker|CELL_REVEALED;
+    uint8_t d=board[to];
+    if(defender>=0) d=(d&~CELL_TYPE)|defender|CELL_REVEALED;
+    board[from]=a;board[to]=d;
+#ifdef AI_MEMORY
+    ai_memory_observe(from,to,outcome);
+#endif
+    public_identity(from,to,outcome);
+    if(outcome!=BATTLE_ATTACKER) remove_piece(from);
+    if(outcome!=BATTLE_DEFENDER) remove_piece(to);
+    if(outcome==BATTLE_ATTACKER) board[to]=a|CELL_MOVED;
+    board[from]=CELL_EMPTY;
+}
+
+static int reinforce(uint8_t trigger,uint8_t destination,int rank,uint8_t visible) {
+    uint8_t owner,army,state[RULES_STATE_SIZE];
+    if(trigger>=SQUARES || destination>=SQUARES || !IS_PIECE(board[trigger]) ||
+       board[destination]!=CELL_EMPTY || rank>=PIECE_BOMB || (visible && rank<0)) return 0;
+    owner=board[trigger]&CELL_BLUE;army=owner?1:0;
+    if(!board_home(destination,army) || (owner==own && rank<0)) return 0;
+    board[destination]=owner|(rank<0?PIECE_UNKNOWN:rank)|(visible?CELL_REVEALED:0);
+    rules_rescues[army]++;
+    if(rank>=0) {
+        if(rules_lost[army][rank]) rules_lost[army][rank]--;
+        if(visible && rules_known_lost[army][rank]) rules_known_lost[army][rank]--;
+        if(owner!=own && visible && enemy_lost[rank]) enemy_lost[rank]--;
+    }
+    rules_state_save(state);state[1+4*PIECE_TYPES+2+trigger]=1;
+    state[1+4*PIECE_TYPES+2+destination]=0;rules_state_load(state);
+    return 1;
+}
+
+static void view(void) {
+    uint8_t i,state[RULES_STATE_SIZE];
+    ai_mask(own);rules_state_save(state);
+    for(i=0;i<2;i++) if(!state[RULES_STATE_SIZE-2+i])
+        state[RULES_STATE_SIZE-6+i]=state[RULES_STATE_SIZE-4+i]=255;
+    printf("view %u ",own?1:0);
+    for(i=0;i<SQUARES;i++) printf("%02x",board[i]);
+    putchar(' ');
+    for(i=0;i<PIECE_TYPES;i++) printf("%02x",enemy_lost[i]);
+    putchar(' ');
+    for(i=0;i<PIECE_TYPES;i++) printf("%02x",rules_lost[own?1:0][i]);
+    putchar(' ');
+    printf("%02x%02x ",rules_rescues[0],rules_rescues[1]);
+    for(i=RULES_STATE_SIZE-6;i<RULES_STATE_SIZE;i++) printf("%02x",state[i]);
+    putchar('\n');fflush(stdout);
 }
 
 static int hex(const char* text, uint8_t* out, int n) {
@@ -408,6 +475,24 @@ int main(int argc, char** argv) {
                     battle(from, to, attacker, defender);
                 }
             }
+        } else if(!strcmp(command, "combat")) {
+            char ag, dg, result;
+            char first[8],second[8];
+            if(!args || sscanf(args,"%7s %7s %c %c %c",first,second,&ag,&dg,&result)!=5 ||
+               (from=square(first))==NOWHERE || (to=square(second))==NOWHERE ||
+               (attacker=type_of(ag))<0 || (dg!='?' && type_of(dg)<0) ||
+               !strchr("ADX",result) || !IS_PIECE(board[from]) || !IS_PIECE(board[to])) reply("error combat");
+            else {
+                rules_record(from,to);
+                combat(from,to,attacker,type_of(dg),result=='A'?BATTLE_ATTACKER:result=='D'?BATTLE_DEFENDER:BATTLE_BOTH);
+            }
+        } else if(!strcmp(command, "reinforce")) {
+            char rank;unsigned visible;char first[8],second[8];
+            if(!args || sscanf(args,"%7s %7s %c %u",first,second,&rank,&visible)!=4 || visible>1 ||
+               (rank!='?' && type_of(rank)<0) ||
+               !reinforce(square(first),square(second),type_of(rank),visible)) reply("error reinforce");
+        } else if(!strcmp(command, "view")) {
+            view();
         } else if(!strcmp(command, "think")) {
             think(args);
 #ifdef AI_FEATURE_TRACE

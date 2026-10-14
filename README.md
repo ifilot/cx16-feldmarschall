@@ -509,6 +509,10 @@ stronger public-input desktop teacher and the compact cooperation-guard model
 adopted for Classic Normal. It scores 54.0% against the frozen mission baseline
 in 1,400 independent games; the separate matched opponent league shows no overall
 gain. Other difficulties and variants retain mission scoring.
+The [optional-variant benchmarks](docs/ai-variants/README.md) add 15,400 audited
+games across individual and combined rules, with Normal and Hard measured
+separately. The [cycle completion audit](docs/ai-cycle-completion/README.md)
+maps the full requested cycle to its retained evidence and checkpoints.
 
 Normal and Hard coordinate a miner approach when revealed rear bombs suggest
 a fortified flag area. A shared route assigns a friendly blocker to move aside,

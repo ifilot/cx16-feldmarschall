@@ -193,5 +193,5 @@
     "browser_download_matches_distribution": true,
     "distribution_sha256": "2c12ab2a5024c5daa9133a8b6b7c58ddb518db13f5b66b15774223444e06abbe"
   },
-  "remaining_work": "Optional-variant strength referee, opponents, individual/combined rule benchmarks and final checkpoint."
+  "remaining_work": "Variant measurements and tuning decision completed in ../ai-variants/manifest.json; full requirement audit in ../ai-cycle-completion/audit.json."
 }

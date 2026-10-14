@@ -148,7 +148,8 @@ and legacy saves, game flow, demo, variant rules and distribution boot. All 34
 browser runtime files match the built game, and its download matches the
 distribution ZIP. The [production manifest](../ai-student-production/manifest.json)
 retains the model binding, sources, programs, timing, stack, save/load and package
-evidence. Optional-variant strength benchmarks remain the next required stage.
+evidence. The later [variant strength suite](../ai-variants/README.md) completes
+the optional-rule measurements and records priorities for future tuning.
 
 ## Evidence and reproduction
 
@@ -185,4 +186,5 @@ make native-student-v2 AI_STUDENT_V2_DIR=NEW_FIT
 The unguarded model's tactical test remains an expected rejection. Reproduce the
 accepted candidate with `make native-student-coop-guard test-ai-student-coop-guard`.
 `make all native check` builds and checks the adopted production configuration.
-Variant strength remains outstanding.
+Variant strength results and the full requirement audit are retained in the
+[cycle completion handoff](../ai-cycle-completion/README.md).

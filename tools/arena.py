@@ -29,6 +29,9 @@ from feldmarschall import (BLUE, FLAG, GLYPHS, RED, ROOT, Engine, Position, new_
 def play(job):
     """Play one game; job = (red name, red command, blue name, blue command, setups, seed, max plies)."""
     names, commands, setups, seed, max_plies, *options = job
+    if len(options)>1:
+        from variant_arena import play_variant
+        return play_variant(job)
     record_moves = bool(options and options[0])
     moves = []
     truth = Position()
@@ -111,6 +114,8 @@ def main():
     parser.add_argument('--seed', type=int, default=1)
     parser.add_argument('--jobs', type=int, default=os.cpu_count())
     parser.add_argument('--out', default=str(ROOT / 'build/results.jsonl'))
+    parser.add_argument('--rules',type=int,choices=range(64),help='use the audited C variant referee; 0 checks Classic')
+    parser.add_argument('--rules-library',type=Path,default=ROOT/'build/librules-variant.so')
     args = parser.parse_args()
 
     engines = dict(e.split('=', 1) for e in args.engine)
@@ -123,6 +128,7 @@ def main():
             seed = rng.randrange(1, 60000)
             for red, blue in ((a, b), (b, a)):
                 jobs.append(((red, blue), (engines[red], engines[blue]), (first, second), seed, args.max_plies))
+                if args.rules is not None: jobs[-1]=(*jobs[-1],True,args.rules,str(args.rules_library.resolve()))
 
     score = {name: [0.0, 0] for name in engines}
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)

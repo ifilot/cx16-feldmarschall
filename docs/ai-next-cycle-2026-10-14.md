@@ -91,7 +91,8 @@ package has all 34 runtime files byte-identical to the X16 build, and its ZIP
 download matches the distribution. The [runtime manifest](ai-selection/manifest.json)
 links the original deployment checkpoint. The later
 [student production manifest](ai-student-production/manifest.json) retains the
-current runtime. Archive verification passes for 82 runs and 57,226 games.
+current runtime. The complete ledger verifies 135 runs and 76,686 games,
+including the later variant stage and retained rejected work.
 
 ## Reproduction
 
@@ -111,7 +112,7 @@ make dist site test-dist
 Use new seeds for further strength claims. Existing run directories and archives
 must not be overwritten.
 
-## Remaining work in the requested order
+## Requirement status in the requested order
 
 1. **Deployment selection:** development, frozen policy validation, runtime
    integration, distribution/browser checks and retained runtime evidence complete.
@@ -142,12 +143,16 @@ must not be overwritten.
    score. It passes diagnostics, fairness and X16 checks and is adopted for
    Classic Normal. The matched five-opponent league check establishes no overall
    gain; decoys remain a weakness. Sources, models and rejections are retained.
-7. **Variant strength:** extend the referee and opponents to individual variants
-   and representative combinations, test Normal and Hard independently and use
-   results to decide whether variant-specific tuning is justified.
-8. **Checkpoints:** retain sources, executable identities, seeds, traces and each
-   acceptance/rejection decision; update the handoff and commit completed changes.
+7. **Variant strength:** complete. The C referee and public-observation opponents
+   cover all six individual variants, four combinations and a Classic control.
+   Normal and Hard each play 700 games per condition: 15,400 final games and
+   3,588,284 exactly replayed plies. The [variant handoff](ai-variants/README.md)
+   records scores, limits and the decision to prioritize targeted Hard tie-ending,
+   blast and all-options/rescue experiments in future work.
+8. **Checkpoints:** sources, executable identities, seeds, traces and each
+   acceptance/rejection decision are retained. The commit containing the
+   completion audit closes the final stage and the requested cycle.
 
-The full requested cycle remains in progress. Optional-variant strength benchmarks
-must still extend the referee and opponents, then validate Normal and Hard using
-the retained production policy and close that stage with its own checkpoint.
+The requested cycle is complete. The [completion audit](ai-cycle-completion/README.md)
+maps all nine original requirements to retained evidence. Suggested variant tuning
+is future development; the requested benchmark and tuning decision are complete.

@@ -27,6 +27,7 @@ def main():
         'strategy': report['provenance'].get('strategy', 'historical'),
         'suite': report['provenance'].get('suite', 'classic'),
         'difficulty': report['provenance'].get('difficulty'),
+        'rules': report['provenance'].get('rules',0),
         'comparisons': {key: value['overall'] for key, value in report['comparisons'].items()},
         'source_snapshot_available': (args.run / 'sources.zip').exists(),
         'evaluator_snapshot_available': (args.run / 'sources.zip').exists() or (args.run / 'candidate.c').exists(),

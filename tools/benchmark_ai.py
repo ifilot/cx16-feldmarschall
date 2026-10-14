@@ -63,6 +63,8 @@ def main():
     parser.add_argument('--difficulty', choices=('easy', 'normal', 'hard'), default='normal')
     parser.add_argument('--jobs', type=int, default=8)
     parser.add_argument('--record-moves', action='store_true', help='save complete move traces for endgame analysis')
+    parser.add_argument('--rules',type=int,choices=range(64),help='audited C variant referee; 0 cross-checks Classic')
+    parser.add_argument('--rules-library',type=Path,default=ROOT/'build/librules-variant.so')
     parser.add_argument('--seed-offset', type=int, default=0, help='offset deployment seeds for development or held-out validation')
     parser.add_argument('--out', type=Path, help='new output directory; existing directories are never overwritten')
     args = parser.parse_args()
@@ -104,6 +106,10 @@ def main():
             })
     if args.reference_command:
         engines = {'current': engines['current'], args.reference_name: args.reference_command + ' --difficulty ' + args.difficulty}
+    if args.rules is not None and args.league:
+        # Keep the reference league fixed when comparing Normal with Hard.
+        engines['adaptive']=str(ROOT/'build/feldmarschall-ai-adaptive-progress')+' --difficulty normal'
+        engines['greedy']=shlex.join([sys.executable,str(ROOT/'tools/variant_bot.py'),'greedy','--rules-library',str(args.rules_library.resolve())])
     pairs = [('normal', 'easy'), ('hard', 'normal'), ('hard', 'easy')] if args.levels else [('current', args.reference_name if args.reference_command else 'milestone-20261014' if args.previous else 'normal-progress' if args.progress else 'adaptive-progress' if args.adaptive else 'coordinated-missions' if args.missions else 'v020')]
     if args.league:
         pairs = [('current', name) for name in engines if name != 'current']
@@ -123,6 +129,7 @@ def main():
             for a, b in pairs:
                 for names in [(a, b), (b, a)]:
                     jobs.append((names, tuple(engines[n] for n in names), setups, move_seed, 1000, args.record_moves))
+                    if args.rules is not None: jobs[-1]=(*jobs[-1],args.rules,str(args.rules_library.resolve()))
                     metadata.append({'group': kind, 'round': round_index, 'deployments': list(setups),
                                      'deployment_features': [describe_setup(setup) for setup in setups],
                                      'comparison': a + '-vs-' + b})
@@ -145,6 +152,9 @@ def main():
         'level_configuration_sha256': sha(ROOT / 'src/core/ai_level.c'),
         'confidence_method': '10000 bootstrap resamples of complete side-swapped pairs; seed 8675309',
     }
+    if args.rules is not None:
+        provenance['rules']=args.rules
+        provenance['referee']='C rules with per-ply board, disclosed casualties, own casualties, rescues and repetition audit'
     if args.previous:
         provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_levels_20261014.c', 'ai_level_20261014.c')}
     if args.reference_command:
@@ -178,6 +188,11 @@ def main():
     frozen_commands = {}
     (args.out / 'engines').mkdir()
     provenance['support_sha256'] = {}
+    if args.rules is not None:
+        frozen_referee=args.out/'engines/support/referee/rules.so'
+        frozen_referee.parent.mkdir(parents=True)
+        shutil.copy2(args.rules_library,frozen_referee)
+        provenance['support_sha256'][str(frozen_referee.relative_to(args.out))]=sha(frozen_referee)
     for name, command in engines.items():
         executable, *arguments = shlex.split(command)
         target = args.out / 'engines' / name
@@ -209,6 +224,7 @@ def main():
     provenance['run_engine_commands'] = frozen_commands
     jobs = [(names, tuple(frozen_commands[name] for name in names), *rest)
             for names, commands, *rest in jobs]
+    if args.rules is not None: jobs=[(*job[:-1],str(frozen_referee.resolve())) for job in jobs]
     (args.out / 'provenance.json').write_text(json.dumps(provenance, indent=2) + '\n')
     games = []
     with (args.out / 'games.jsonl').open('w') as out, ProcessPoolExecutor(args.jobs) as pool:

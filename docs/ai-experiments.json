@@ -4337,5 +4337,5242 @@
     "executable_snapshots_available": true,
     "archive": "ai-runs/rollout-student-coop-guard-league-control-20261014.zip",
     "archive_sha256": "68f9480f5c5f069943d25fbdc78154efe3460b25a9865720486ecd53a0ea72ac"
+  },
+  {
+    "name": "variants-smoke-rules-00-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 0,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 8,
+        "draws": 2,
+        "losses": 4,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.39285714285714285,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 12,
+          "ply limit": 2
+        },
+        "average_plies": 438.42857142857144
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 178.71428571428572
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 4,
+        "draws": 0,
+        "losses": 10,
+        "score": 0.2857142857142857,
+        "paired_bootstrap_95": [
+          0.07142857142857142,
+          0.42857142857142855
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 186.92857142857142
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 286.92857142857144
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 125.28571428571429
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-00-hard-20261014.zip",
+    "archive_sha256": "c900b63636e24e23636a6c4448153401f3cae4cb70b5316a5942e5683bf47d32"
+  },
+  {
+    "name": "variants-smoke-rules-00-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 0,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 9,
+        "draws": 1,
+        "losses": 4,
+        "score": 0.6785714285714286,
+        "paired_bootstrap_95": [
+          0.4642857142857143,
+          0.8928571428571429
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 12,
+          "ply limit": 1
+        },
+        "average_plies": 252.71428571428572
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 13
+        },
+        "average_plies": 185.78571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 165.42857142857142
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 13
+        },
+        "average_plies": 235.21428571428572
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 96.71428571428571
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-00-normal-20261014.zip",
+    "archive_sha256": "fd80376a2f5cd1da97a0584673ba23954b5a635e15724b1d5d672a28acaea079"
+  },
+  {
+    "name": "variants-smoke-rules-01-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 1,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 6,
+        "draws": 5,
+        "losses": 3,
+        "score": 0.6071428571428571,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "ply limit": 5,
+          "flag": 9
+        },
+        "average_plies": 538.9285714285714
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 4,
+        "draws": 2,
+        "losses": 8,
+        "score": 0.35714285714285715,
+        "paired_bootstrap_95": [
+          0.21428571428571427,
+          0.5
+        ],
+        "reasons": {
+          "flag": 12,
+          "ply limit": 2
+        },
+        "average_plies": 364.7142857142857
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 216.78571428571428
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 7,
+        "draws": 4,
+        "losses": 3,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.4642857142857143,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "flag": 10,
+          "ply limit": 4
+        },
+        "average_plies": 543.7142857142857
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 136.5
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-01-hard-20261014.zip",
+    "archive_sha256": "b583e374525545aca7e01e799046f32a174b975e66ffebfad52e9b96e0817715"
+  },
+  {
+    "name": "variants-smoke-rules-01-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 1,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 350.35714285714283
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 182.71428571428572
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 165.28571428571428
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 8,
+        "draws": 1,
+        "losses": 5,
+        "score": 0.6071428571428571,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "flag": 13,
+          "ply limit": 1
+        },
+        "average_plies": 275.85714285714283
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 102.71428571428571
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-01-normal-20261014.zip",
+    "archive_sha256": "19b854c40e45f6ce6555fa2d2e22fdfbfbb7c0062b96f9e6ce1a96a16f18be9c"
+  },
+  {
+    "name": "variants-smoke-rules-02-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 2,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 5,
+        "draws": 4,
+        "losses": 5,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.6428571428571429
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 9,
+          "ply limit": 4
+        },
+        "average_plies": 430.5
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 1,
+        "losses": 6,
+        "score": 0.5357142857142857,
+        "paired_bootstrap_95": [
+          0.32142857142857145,
+          0.75
+        ],
+        "reasons": {
+          "flag": 11,
+          "ply limit": 1,
+          "no moves": 2
+        },
+        "average_plies": 254.28571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 201.35714285714286
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 1,
+        "losses": 3,
+        "score": 0.75,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 13,
+          "ply limit": 1
+        },
+        "average_plies": 440.2142857142857
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 12,
+          "no moves": 2
+        },
+        "average_plies": 163.0
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-02-hard-20261014.zip",
+    "archive_sha256": "36f78de1c4f16c15fec9056b6825738b74c2bac43891451801d62dbfa4c36422"
+  },
+  {
+    "name": "variants-smoke-rules-02-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 2,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 9,
+        "draws": 1,
+        "losses": 4,
+        "score": 0.6785714285714286,
+        "paired_bootstrap_95": [
+          0.39285714285714285,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 13,
+          "ply limit": 1
+        },
+        "average_plies": 321.7142857142857
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 262.42857142857144
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 6,
+        "draws": 0,
+        "losses": 8,
+        "score": 0.42857142857142855,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.5
+        ],
+        "reasons": {
+          "no moves": 2,
+          "flag": 12
+        },
+        "average_plies": 201.35714285714286
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 13
+        },
+        "average_plies": 295.5
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          1.0
+        ],
+        "reasons": {
+          "flag": 11,
+          "no moves": 3
+        },
+        "average_plies": 150.5
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-02-normal-20261014.zip",
+    "archive_sha256": "475329ced456e387ff518ded5f874b863b316a7ff860a68ba8869b17b7b0cacc"
+  },
+  {
+    "name": "variants-smoke-rules-03-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 3,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 6,
+        "draws": 6,
+        "losses": 2,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.4642857142857143,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "ply limit": 6,
+          "flag": 7,
+          "no moves": 1
+        },
+        "average_plies": 633.1428571428571
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 2,
+        "losses": 5,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 11,
+          "ply limit": 2
+        },
+        "average_plies": 460.0
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 6,
+        "draws": 0,
+        "losses": 8,
+        "score": 0.42857142857142855,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.5
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 241.07142857142858
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 8,
+        "draws": 2,
+        "losses": 4,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.4642857142857143,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "no moves": 1,
+          "ply limit": 2,
+          "flag": 11
+        },
+        "average_plies": 423.35714285714283
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 12,
+          "no moves": 2
+        },
+        "average_plies": 159.21428571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-03-hard-20261014.zip",
+    "archive_sha256": "3c14b072261ae000de824d92d8094c22bc81a7f45cd8bd8d0dfee9adff4393f8"
+  },
+  {
+    "name": "variants-smoke-rules-03-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 3,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 7,
+        "draws": 1,
+        "losses": 6,
+        "score": 0.5357142857142857,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 12,
+          "no moves": 1,
+          "ply limit": 1
+        },
+        "average_plies": 408.57142857142856
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 224.28571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 167.28571428571428
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 289.57142857142856
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 12,
+          "no moves": 2
+        },
+        "average_plies": 157.71428571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-03-normal-20261014.zip",
+    "archive_sha256": "4b3c0527014a77e6bcb4a3395ac924803618c3f62c7b1ebfd167c0dfe4e55cc3"
+  },
+  {
+    "name": "variants-smoke-rules-04-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 4,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 7,
+        "draws": 3,
+        "losses": 4,
+        "score": 0.6071428571428571,
+        "paired_bootstrap_95": [
+          0.5,
+          0.75
+        ],
+        "reasons": {
+          "ply limit": 3,
+          "flag": 11
+        },
+        "average_plies": 361.2142857142857
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 5,
+        "draws": 0,
+        "losses": 9,
+        "score": 0.35714285714285715,
+        "paired_bootstrap_95": [
+          0.14285714285714285,
+          0.6428571428571429
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 192.14285714285714
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 5,
+        "draws": 0,
+        "losses": 9,
+        "score": 0.35714285714285715,
+        "paired_bootstrap_95": [
+          0.21428571428571427,
+          0.5
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 158.71428571428572
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 316.5
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 142.35714285714286
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-04-hard-20261014.zip",
+    "archive_sha256": "d2e020448b57138b1f738e298e46aa3c6144ea8577e6d767f431cc9cdf6a7a6b"
+  },
+  {
+    "name": "variants-smoke-rules-04-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 4,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 229.28571428571428
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 6,
+        "draws": 0,
+        "losses": 8,
+        "score": 0.42857142857142855,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.5
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 217.35714285714286
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 143.14285714285714
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 302.2857142857143
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 105.14285714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-04-normal-20261014.zip",
+    "archive_sha256": "75f833aeb5503b81ca4168324e04b8c342403f863b87b93b6b2cb19965b3e26a"
+  },
+  {
+    "name": "variants-smoke-rules-08-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 8,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 8,
+        "draws": 2,
+        "losses": 4,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5357142857142857,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 12,
+          "ply limit": 2
+        },
+        "average_plies": 273.7142857142857
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 130.28571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 148.14285714285714
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 281.14285714285717
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 113.5
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-08-hard-20261014.zip",
+    "archive_sha256": "5b41bdb75e76be8c7520819581d49084d7b9ed0fc3161df510492429f39cce22"
+  },
+  {
+    "name": "variants-smoke-rules-08-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 8,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 152.28571428571428
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 162.28571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 223.42857142857142
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 188.42857142857142
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 120.92857142857143
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-08-normal-20261014.zip",
+    "archive_sha256": "893585ab4f836df15e606f9b1708b2cb645d18c42b5937ce38e2c7e45ad4f754"
+  },
+  {
+    "name": "variants-smoke-rules-10-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 10,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 9,
+        "draws": 1,
+        "losses": 4,
+        "score": 0.6785714285714286,
+        "paired_bootstrap_95": [
+          0.5357142857142857,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 13,
+          "ply limit": 1
+        },
+        "average_plies": 248.5
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 146.5
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 175.42857142857142
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 7,
+        "draws": 2,
+        "losses": 5,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.32142857142857145,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "flag": 12,
+          "ply limit": 2
+        },
+        "average_plies": 348.85714285714283
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 152.64285714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-10-hard-20261014.zip",
+    "archive_sha256": "37b6073dec0112b51277d016d91b097340a235016d7f6055bfcfc970bbd158b5"
+  },
+  {
+    "name": "variants-smoke-rules-10-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 10,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          1.0
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 137.21428571428572
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.21428571428571427,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 190.28571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 256.2857142857143
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          1.0
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 230.35714285714286
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 168.71428571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-10-normal-20261014.zip",
+    "archive_sha256": "942545e3a3a750c91f6659a07e138d62e6ed4898c0fb72866ac3ab1b64b994e7"
+  },
+  {
+    "name": "variants-smoke-rules-16-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 16,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 12,
+        "draws": 1,
+        "losses": 1,
+        "score": 0.8928571428571429,
+        "paired_bootstrap_95": [
+          0.75,
+          1.0
+        ],
+        "reasons": {
+          "flag": 10,
+          "no moves": 1,
+          "ply limit": 1,
+          "flag arrival": 2
+        },
+        "average_plies": 322.64285714285717
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 11,
+          "no moves": 1,
+          "flag arrival": 2
+        },
+        "average_plies": 300.7857142857143
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 6,
+        "draws": 0,
+        "losses": 8,
+        "score": 0.42857142857142855,
+        "paired_bootstrap_95": [
+          0.21428571428571427,
+          0.6428571428571429
+        ],
+        "reasons": {
+          "no moves": 2,
+          "flag": 10,
+          "flag arrival": 2
+        },
+        "average_plies": 263.07142857142856
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.21428571428571427,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 12,
+          "flag arrival": 2
+        },
+        "average_plies": 280.42857142857144
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 12,
+          "flag arrival": 1,
+          "no moves": 1
+        },
+        "average_plies": 130.0
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-16-hard-20261014.zip",
+    "archive_sha256": "4b2b208ed8c3d9e0eff802ae2229ed78b15c64f5de1034e870f97aad580f7dde"
+  },
+  {
+    "name": "variants-smoke-rules-16-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 16,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 12,
+        "draws": 1,
+        "losses": 1,
+        "score": 0.8928571428571429,
+        "paired_bootstrap_95": [
+          0.75,
+          1.0
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 10,
+          "ply limit": 1,
+          "flag arrival": 2
+        },
+        "average_plies": 328.92857142857144
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 13
+        },
+        "average_plies": 192.71428571428572
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "no moves": 2,
+          "flag": 11,
+          "flag arrival": 1
+        },
+        "average_plies": 215.14285714285714
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 9,
+        "draws": 1,
+        "losses": 4,
+        "score": 0.6785714285714286,
+        "paired_bootstrap_95": [
+          0.5357142857142857,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "ply limit": 1,
+          "no moves": 1,
+          "flag arrival": 2,
+          "flag": 10
+        },
+        "average_plies": 276.7142857142857
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 11,
+          "no moves": 1,
+          "flag arrival": 2
+        },
+        "average_plies": 118.85714285714286
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-16-normal-20261014.zip",
+    "archive_sha256": "562aa4edbea509dd0c69c148a50b7db9bbfaa8d6e181933ca0cf15bf295b3e44"
+  },
+  {
+    "name": "variants-smoke-rules-32-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 32,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 13
+        },
+        "average_plies": 219.64285714285714
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 144.14285714285714
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 133.64285714285714
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 142.78571428571428
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 119.71428571428571
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-32-hard-20261014.zip",
+    "archive_sha256": "82a1861a675ba5617b886dc1e8a453b3ec38b1c89d04bd9adc04d6a546d51f6d"
+  },
+  {
+    "name": "variants-smoke-rules-32-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 32,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 205.92857142857142
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 6,
+        "draws": 0,
+        "losses": 8,
+        "score": 0.42857142857142855,
+        "paired_bootstrap_95": [
+          0.21428571428571427,
+          0.6428571428571429
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 140.78571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 143.64285714285714
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 193.64285714285714
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 117.42857142857143
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-32-normal-20261014.zip",
+    "archive_sha256": "9fd5ad5f5b4d5ce4587022a650801f6f0e0c0fa1aac1c63790926c033da57414"
+  },
+  {
+    "name": "variants-smoke-rules-48-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 48,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          1.0
+        ],
+        "reasons": {
+          "flag": 13,
+          "flag arrival": 1
+        },
+        "average_plies": 120.78571428571429
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 11,
+          "no moves": 1,
+          "flag arrival": 2
+        },
+        "average_plies": 162.85714285714286
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 13,
+          "flag arrival": 1
+        },
+        "average_plies": 156.42857142857142
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 126.35714285714286
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 136.42857142857142
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-48-hard-20261014.zip",
+    "archive_sha256": "170e00d134009b5e559882ef03e868d7e82c650d84d7adf1cbeac9f679132355"
+  },
+  {
+    "name": "variants-smoke-rules-48-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 48,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 133.14285714285714
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "no moves": 2,
+          "flag": 12
+        },
+        "average_plies": 221.07142857142858
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 6,
+        "draws": 1,
+        "losses": 7,
+        "score": 0.4642857142857143,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.6071428571428571
+        ],
+        "reasons": {
+          "no moves": 2,
+          "ply limit": 1,
+          "flag": 9,
+          "flag arrival": 2
+        },
+        "average_plies": 306.92857142857144
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 12,
+          "flag arrival": 1
+        },
+        "average_plies": 181.14285714285714
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 13,
+          "flag arrival": 1
+        },
+        "average_plies": 134.28571428571428
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-48-normal-20261014.zip",
+    "archive_sha256": "6cb3f90c5249fdedc3fc55515dc5d624b7cbfd7fa75d3b0e910bb5230cf581c4"
+  },
+  {
+    "name": "variants-smoke-rules-63-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 63,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 11,
+        "draws": 1,
+        "losses": 2,
+        "score": 0.8214285714285714,
+        "paired_bootstrap_95": [
+          0.6428571428571429,
+          0.9642857142857143
+        ],
+        "reasons": {
+          "flag": 11,
+          "flag arrival": 2,
+          "ply limit": 1
+        },
+        "average_plies": 208.85714285714286
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 8,
+        "draws": 1,
+        "losses": 5,
+        "score": 0.6071428571428571,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "flag": 13,
+          "ply limit": 1
+        },
+        "average_plies": 198.35714285714286
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 9,
+        "draws": 1,
+        "losses": 4,
+        "score": 0.6785714285714286,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "ply limit": 1,
+          "flag arrival": 5,
+          "flag": 8
+        },
+        "average_plies": 324.57142857142856
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 6,
+        "draws": 1,
+        "losses": 7,
+        "score": 0.4642857142857143,
+        "paired_bootstrap_95": [
+          0.17857142857142858,
+          0.75
+        ],
+        "reasons": {
+          "flag": 9,
+          "flag arrival": 4,
+          "ply limit": 1
+        },
+        "average_plies": 264.5
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 118.07142857142857
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-63-hard-20261014.zip",
+    "archive_sha256": "001426a7184b177d778031b4f73d10ea02384481db8c98129fc18bdca24f81b2"
+  },
+  {
+    "name": "variants-smoke-rules-63-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Initial infrastructure smoke, superseded by the corrected arrival guard; no strength claim.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 63,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 8,
+        "draws": 1,
+        "losses": 5,
+        "score": 0.6071428571428571,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "flag arrival": 2,
+          "flag": 11,
+          "ply limit": 1
+        },
+        "average_plies": 291.64285714285717
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 6,
+        "draws": 3,
+        "losses": 5,
+        "score": 0.5357142857142857,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.75
+        ],
+        "reasons": {
+          "flag": 8,
+          "flag arrival": 3,
+          "ply limit": 3
+        },
+        "average_plies": 414.35714285714283
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 12,
+          "flag arrival": 2
+        },
+        "average_plies": 272.85714285714283
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 6,
+        "draws": 4,
+        "losses": 4,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.6785714285714286
+        ],
+        "reasons": {
+          "ply limit": 4,
+          "flag arrival": 2,
+          "flag": 8
+        },
+        "average_plies": 446.14285714285717
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 114.71428571428571
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rules-63-normal-20261014.zip",
+    "archive_sha256": "05b95d624217335fb0d34e3a02417402e69e4024d10a726f9962411c77021369"
+  },
+  {
+    "name": "variants-validation-rules-01-hard-20261014",
+    "decision": "reject",
+    "reason": "Discarded validation attempt: missing rescue arrival guard; source pins stopped the run.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 1,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 58,
+        "draws": 54,
+        "losses": 28,
+        "score": 0.6071428571428571,
+        "paired_bootstrap_95": [
+          0.5535714285714286,
+          0.6607142857142857
+        ],
+        "reasons": {
+          "ply limit": 54,
+          "flag": 86
+        },
+        "average_plies": 580.9142857142857
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 68,
+        "draws": 22,
+        "losses": 50,
+        "score": 0.5642857142857143,
+        "paired_bootstrap_95": [
+          0.5035714285714286,
+          0.625
+        ],
+        "reasons": {
+          "ply limit": 22,
+          "flag": 116,
+          "no moves": 2
+        },
+        "average_plies": 418.65
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 64,
+        "draws": 5,
+        "losses": 71,
+        "score": 0.475,
+        "paired_bootstrap_95": [
+          0.4142857142857143,
+          0.5357142857142857
+        ],
+        "reasons": {
+          "flag": 132,
+          "no moves": 3,
+          "ply limit": 5
+        },
+        "average_plies": 239.95714285714286
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 84,
+        "draws": 20,
+        "losses": 36,
+        "score": 0.6714285714285714,
+        "paired_bootstrap_95": [
+          0.6071428571428571,
+          0.7321428571428571
+        ],
+        "reasons": {
+          "ply limit": 20,
+          "flag": 119,
+          "no moves": 1
+        },
+        "average_plies": 431.0785714285714
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 119,
+        "draws": 0,
+        "losses": 21,
+        "score": 0.85,
+        "paired_bootstrap_95": [
+          0.7928571428571428,
+          0.9071428571428571
+        ],
+        "reasons": {
+          "flag": 131,
+          "no moves": 9
+        },
+        "average_plies": 151.25
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-validation-rules-01-hard-20261014.zip",
+    "archive_sha256": "6adfb0ec5a1c942f016c23761a4c413cb0ab6b6647c34bea92be5695a84736c3"
+  },
+  {
+    "name": "variants-validation-rules-01-normal-20261014",
+    "decision": "reject",
+    "reason": "Discarded validation attempt: missing rescue arrival guard; source pins stopped the run.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 1,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 93,
+        "draws": 10,
+        "losses": 37,
+        "score": 0.7,
+        "paired_bootstrap_95": [
+          0.6357142857142857,
+          0.7678571428571429
+        ],
+        "reasons": {
+          "flag": 130,
+          "ply limit": 10
+        },
+        "average_plies": 315.99285714285713
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 73,
+        "draws": 2,
+        "losses": 65,
+        "score": 0.5285714285714286,
+        "paired_bootstrap_95": [
+          0.45714285714285713,
+          0.6
+        ],
+        "reasons": {
+          "flag": 136,
+          "no moves": 2,
+          "ply limit": 2
+        },
+        "average_plies": 221.2357142857143
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 62,
+        "draws": 0,
+        "losses": 78,
+        "score": 0.44285714285714284,
+        "paired_bootstrap_95": [
+          0.39285714285714285,
+          0.4928571428571429
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 171.55714285714285
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 94,
+        "draws": 5,
+        "losses": 41,
+        "score": 0.6892857142857143,
+        "paired_bootstrap_95": [
+          0.6178571428571429,
+          0.7571428571428571
+        ],
+        "reasons": {
+          "ply limit": 5,
+          "flag": 133,
+          "no moves": 2
+        },
+        "average_plies": 270.0857142857143
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 115,
+        "draws": 0,
+        "losses": 25,
+        "score": 0.8214285714285714,
+        "paired_bootstrap_95": [
+          0.7642857142857142,
+          0.8785714285714286
+        ],
+        "reasons": {
+          "flag": 134,
+          "no moves": 6
+        },
+        "average_plies": 149.25
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-validation-rules-01-normal-20261014.zip",
+    "archive_sha256": "80657e71b48cccc194eff7b1fd3c68e9cfa6a8192fadb2964327e68db681e457"
+  },
+  {
+    "name": "variants-validation-rules-02-normal-20261014",
+    "decision": "reject",
+    "reason": "Discarded validation attempt: missing rescue arrival guard; source pins stopped the run.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 2,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 96,
+        "draws": 3,
+        "losses": 41,
+        "score": 0.6964285714285714,
+        "paired_bootstrap_95": [
+          0.6357142857142857,
+          0.7607142857142857
+        ],
+        "reasons": {
+          "flag": 132,
+          "no moves": 5,
+          "ply limit": 3
+        },
+        "average_plies": 255.0
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 79,
+        "draws": 0,
+        "losses": 61,
+        "score": 0.5642857142857143,
+        "paired_bootstrap_95": [
+          0.4928571428571429,
+          0.6357142857142857
+        ],
+        "reasons": {
+          "flag": 137,
+          "no moves": 3
+        },
+        "average_plies": 215.87857142857143
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 72,
+        "draws": 1,
+        "losses": 67,
+        "score": 0.5178571428571429,
+        "paired_bootstrap_95": [
+          0.4714285714285714,
+          0.5678571428571428
+        ],
+        "reasons": {
+          "no moves": 5,
+          "flag": 134,
+          "ply limit": 1
+        },
+        "average_plies": 194.36428571428573
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 97,
+        "draws": 2,
+        "losses": 41,
+        "score": 0.7,
+        "paired_bootstrap_95": [
+          0.6285714285714286,
+          0.7714285714285715
+        ],
+        "reasons": {
+          "no moves": 5,
+          "flag": 133,
+          "ply limit": 2
+        },
+        "average_plies": 264.22857142857146
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 112,
+        "draws": 0,
+        "losses": 28,
+        "score": 0.8,
+        "paired_bootstrap_95": [
+          0.7285714285714285,
+          0.8642857142857143
+        ],
+        "reasons": {
+          "flag": 126,
+          "no moves": 14
+        },
+        "average_plies": 170.1
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-validation-rules-02-normal-20261014.zip",
+    "archive_sha256": "412025d615c1a76bd393555d7aea10c57bf306387d9356c493ac3b8ee5d4f615"
+  },
+  {
+    "name": "variants-smoke-rescue-r1-rules-32-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Corrected rescue-arrival smoke; every trace replayed and permitted view audited.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 32,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 9,
+        "draws": 1,
+        "losses": 4,
+        "score": 0.6785714285714286,
+        "paired_bootstrap_95": [
+          0.5357142857142857,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 12,
+          "no moves": 1,
+          "ply limit": 1
+        },
+        "average_plies": 258.0
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 149.78571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 145.14285714285714
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 205.57142857142858
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 187.0
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rescue-r1-rules-32-hard-20261014.zip",
+    "archive_sha256": "a9874b43c2ad178feb48809fb1673b45dd991573a89157c1f54edc96ec4ccc6c"
+  },
+  {
+    "name": "variants-smoke-rescue-r1-rules-32-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Corrected rescue-arrival smoke; every trace replayed and permitted view audited.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 32,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 198.28571428571428
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 151.42857142857142
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 6,
+        "draws": 0,
+        "losses": 8,
+        "score": 0.42857142857142855,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.5
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 13
+        },
+        "average_plies": 207.21428571428572
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 223.92857142857142
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          1.0
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 146.21428571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rescue-r1-rules-32-normal-20261014.zip",
+    "archive_sha256": "0d77f0f1bdbe8c6e9ac32fe4ddf1666caf35fafb558c5f120ec69302c4195324"
+  },
+  {
+    "name": "variants-smoke-rescue-r1-rules-48-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Corrected rescue-arrival smoke; every trace replayed and permitted view audited.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 48,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 13,
+          "flag arrival": 1
+        },
+        "average_plies": 163.28571428571428
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 10,
+          "no moves": 1,
+          "flag arrival": 3
+        },
+        "average_plies": 176.28571428571428
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 10,
+          "flag arrival": 4
+        },
+        "average_plies": 164.07142857142858
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "no moves": 2,
+          "flag": 10,
+          "flag arrival": 2
+        },
+        "average_plies": 234.35714285714286
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 148.0
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rescue-r1-rules-48-hard-20261014.zip",
+    "archive_sha256": "c10d563029c9594250d8d5b6b5c7458e476cadb230a30c5df650da578dcbd212"
+  },
+  {
+    "name": "variants-smoke-rescue-r1-rules-48-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Corrected rescue-arrival smoke; every trace replayed and permitted view audited.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 48,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          1.0
+        ],
+        "reasons": {
+          "flag": 13,
+          "flag arrival": 1
+        },
+        "average_plies": 201.64285714285714
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 8,
+        "draws": 1,
+        "losses": 5,
+        "score": 0.6071428571428571,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 11,
+          "ply limit": 1,
+          "flag arrival": 2
+        },
+        "average_plies": 215.57142857142858
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 13
+        },
+        "average_plies": 132.07142857142858
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.21428571428571427,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 10,
+          "flag arrival": 4
+        },
+        "average_plies": 208.14285714285714
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 13,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.9285714285714286,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          1.0
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 148.71428571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rescue-r1-rules-48-normal-20261014.zip",
+    "archive_sha256": "89d060858aeeba7dd629f7d1e0b374a33f543d68619546b77169d71e5d004e51"
+  },
+  {
+    "name": "variants-smoke-rescue-r1-rules-63-hard-20261014",
+    "decision": "diagnostic",
+    "reason": "Corrected rescue-arrival smoke; every trace replayed and permitted view audited.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 63,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 6,
+        "draws": 3,
+        "losses": 5,
+        "score": 0.5357142857142857,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag arrival": 2,
+          "flag": 9,
+          "ply limit": 3
+        },
+        "average_plies": 383.0
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 8,
+        "draws": 2,
+        "losses": 4,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5357142857142857,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 11,
+          "ply limit": 2,
+          "flag arrival": 1
+        },
+        "average_plies": 256.0
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 11,
+          "flag arrival": 3
+        },
+        "average_plies": 194.42857142857142
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 13,
+          "flag arrival": 1
+        },
+        "average_plies": 215.14285714285714
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 9,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.35714285714285715,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 13,
+          "flag arrival": 1
+        },
+        "average_plies": 111.71428571428571
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rescue-r1-rules-63-hard-20261014.zip",
+    "archive_sha256": "08438f81923a527302671024ccc0d623dcf66dea6da56067aeb7b7d615873f8d"
+  },
+  {
+    "name": "variants-smoke-rescue-r1-rules-63-normal-20261014",
+    "decision": "diagnostic",
+    "reason": "Corrected rescue-arrival smoke; every trace replayed and permitted view audited.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "diagnostic",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 63,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 7,
+        "draws": 2,
+        "losses": 5,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.75
+        ],
+        "reasons": {
+          "ply limit": 2,
+          "flag": 10,
+          "flag arrival": 2
+        },
+        "average_plies": 289.0
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag arrival": 4,
+          "flag": 10
+        },
+        "average_plies": 195.85714285714286
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 7,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 8,
+          "flag arrival": 6
+        },
+        "average_plies": 326.85714285714283
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 7,
+        "draws": 1,
+        "losses": 6,
+        "score": 0.5357142857142857,
+        "paired_bootstrap_95": [
+          0.39285714285714285,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag arrival": 3,
+          "flag": 10,
+          "ply limit": 1
+        },
+        "average_plies": 209.5
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          1.0
+        ],
+        "reasons": {
+          "flag": 13,
+          "flag arrival": 1
+        },
+        "average_plies": 144.92857142857142
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-smoke-rescue-r1-rules-63-normal-20261014.zip",
+    "archive_sha256": "708b3061dff023f9db8d6e5fa44cb720d06c772524f82c5d3a7ba34f6e66986e"
+  },
+  {
+    "name": "variants-final-rules-00-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 0,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 89,
+        "draws": 21,
+        "losses": 30,
+        "score": 0.7107142857142857,
+        "paired_bootstrap_95": [
+          0.65,
+          0.7714285714285715
+        ],
+        "reasons": {
+          "flag": 118,
+          "ply limit": 21,
+          "no moves": 1
+        },
+        "average_plies": 387.57142857142856
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 78,
+        "draws": 12,
+        "losses": 50,
+        "score": 0.6,
+        "paired_bootstrap_95": [
+          0.5392857142857143,
+          0.6607142857142857
+        ],
+        "reasons": {
+          "ply limit": 12,
+          "flag": 126,
+          "no moves": 2
+        },
+        "average_plies": 300.85714285714283
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 68,
+        "draws": 0,
+        "losses": 72,
+        "score": 0.4857142857142857,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.5428571428571428
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 185.92857142857142
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 95,
+        "draws": 5,
+        "losses": 40,
+        "score": 0.6964285714285714,
+        "paired_bootstrap_95": [
+          0.625,
+          0.7678571428571429
+        ],
+        "reasons": {
+          "flag": 134,
+          "ply limit": 5,
+          "no moves": 1
+        },
+        "average_plies": 327.6928571428571
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 114,
+        "draws": 0,
+        "losses": 26,
+        "score": 0.8142857142857143,
+        "paired_bootstrap_95": [
+          0.75,
+          0.8714285714285714
+        ],
+        "reasons": {
+          "flag": 137,
+          "no moves": 3
+        },
+        "average_plies": 154.54285714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-00-hard-20261014.zip",
+    "archive_sha256": "5911a7c3e7235937484eb8744c552ae1dadc894f93a334d9f2e92d9a9194a24a"
+  },
+  {
+    "name": "variants-final-rules-00-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 0,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 106,
+        "draws": 5,
+        "losses": 29,
+        "score": 0.775,
+        "paired_bootstrap_95": [
+          0.7107142857142857,
+          0.8357142857142857
+        ],
+        "reasons": {
+          "flag": 134,
+          "ply limit": 5,
+          "no moves": 1
+        },
+        "average_plies": 271.89285714285717
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 80,
+        "draws": 0,
+        "losses": 60,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.5071428571428571,
+          0.6357142857142857
+        ],
+        "reasons": {
+          "flag": 139,
+          "no moves": 1
+        },
+        "average_plies": 187.2
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 76,
+        "draws": 1,
+        "losses": 63,
+        "score": 0.5464285714285714,
+        "paired_bootstrap_95": [
+          0.4785714285714286,
+          0.6142857142857143
+        ],
+        "reasons": {
+          "flag": 137,
+          "ply limit": 1,
+          "no moves": 2
+        },
+        "average_plies": 176.05714285714285
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 101,
+        "draws": 2,
+        "losses": 37,
+        "score": 0.7285714285714285,
+        "paired_bootstrap_95": [
+          0.6607142857142857,
+          0.7928571428571428
+        ],
+        "reasons": {
+          "flag": 138,
+          "ply limit": 2
+        },
+        "average_plies": 248.5142857142857
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 114,
+        "draws": 0,
+        "losses": 26,
+        "score": 0.8142857142857143,
+        "paired_bootstrap_95": [
+          0.7571428571428571,
+          0.8714285714285714
+        ],
+        "reasons": {
+          "no moves": 3,
+          "flag": 137
+        },
+        "average_plies": 150.5142857142857
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-00-normal-20261014.zip",
+    "archive_sha256": "de3f68da483ced9f25c58511214e083917ea67f49e4381d4d4da4b29c246e1e3"
+  },
+  {
+    "name": "variants-final-rules-01-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 1,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 52,
+        "draws": 67,
+        "losses": 21,
+        "score": 0.6107142857142858,
+        "paired_bootstrap_95": [
+          0.5607142857142857,
+          0.6607142857142857
+        ],
+        "reasons": {
+          "ply limit": 67,
+          "flag": 73
+        },
+        "average_plies": 615.9714285714285
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 48,
+        "draws": 39,
+        "losses": 53,
+        "score": 0.48214285714285715,
+        "paired_bootstrap_95": [
+          0.425,
+          0.5392857142857143
+        ],
+        "reasons": {
+          "ply limit": 39,
+          "flag": 99,
+          "no moves": 2
+        },
+        "average_plies": 467.07142857142856
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 67,
+        "draws": 3,
+        "losses": 70,
+        "score": 0.48928571428571427,
+        "paired_bootstrap_95": [
+          0.40714285714285714,
+          0.5714285714285714
+        ],
+        "reasons": {
+          "flag": 135,
+          "no moves": 2,
+          "ply limit": 3
+        },
+        "average_plies": 230.1642857142857
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 81,
+        "draws": 22,
+        "losses": 37,
+        "score": 0.6571428571428571,
+        "paired_bootstrap_95": [
+          0.6,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 116,
+          "ply limit": 22,
+          "no moves": 2
+        },
+        "average_plies": 461.0285714285714
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 114,
+        "draws": 0,
+        "losses": 26,
+        "score": 0.8142857142857143,
+        "paired_bootstrap_95": [
+          0.75,
+          0.8714285714285714
+        ],
+        "reasons": {
+          "flag": 133,
+          "no moves": 7
+        },
+        "average_plies": 166.1
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-01-hard-20261014.zip",
+    "archive_sha256": "be08d1bdf77bb02a53bb3c2f3a35fa8453946b04dcb62ca7c784d84c2519770d"
+  },
+  {
+    "name": "variants-final-rules-01-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 1,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 88,
+        "draws": 15,
+        "losses": 37,
+        "score": 0.6821428571428572,
+        "paired_bootstrap_95": [
+          0.6178571428571429,
+          0.7464285714285714
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 124,
+          "ply limit": 15
+        },
+        "average_plies": 340.0571428571429
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 79,
+        "draws": 0,
+        "losses": 61,
+        "score": 0.5642857142857143,
+        "paired_bootstrap_95": [
+          0.4928571428571429,
+          0.6357142857142857
+        ],
+        "reasons": {
+          "flag": 137,
+          "no moves": 3
+        },
+        "average_plies": 233.39285714285714
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 64,
+        "draws": 0,
+        "losses": 76,
+        "score": 0.45714285714285713,
+        "paired_bootstrap_95": [
+          0.4,
+          0.5142857142857142
+        ],
+        "reasons": {
+          "flag": 138,
+          "no moves": 2
+        },
+        "average_plies": 186.54285714285714
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 96,
+        "draws": 4,
+        "losses": 40,
+        "score": 0.7,
+        "paired_bootstrap_95": [
+          0.6392857142857142,
+          0.7607142857142857
+        ],
+        "reasons": {
+          "flag": 134,
+          "no moves": 2,
+          "ply limit": 4
+        },
+        "average_plies": 296.6928571428571
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 108,
+        "draws": 0,
+        "losses": 32,
+        "score": 0.7714285714285715,
+        "paired_bootstrap_95": [
+          0.7,
+          0.8357142857142857
+        ],
+        "reasons": {
+          "flag": 129,
+          "no moves": 11
+        },
+        "average_plies": 179.34285714285716
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-01-normal-20261014.zip",
+    "archive_sha256": "ca59a3301853f455085a5c1e8cc1a1d34e04dba37602e05aad0865d2ed75d64d"
+  },
+  {
+    "name": "variants-final-rules-02-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 2,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 80,
+        "draws": 29,
+        "losses": 31,
+        "score": 0.675,
+        "paired_bootstrap_95": [
+          0.6178571428571429,
+          0.7321428571428571
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 110,
+          "ply limit": 29
+        },
+        "average_plies": 454.6857142857143
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 70,
+        "draws": 8,
+        "losses": 62,
+        "score": 0.5285714285714286,
+        "paired_bootstrap_95": [
+          0.4714285714285714,
+          0.5857142857142857
+        ],
+        "reasons": {
+          "flag": 126,
+          "no moves": 6,
+          "ply limit": 8
+        },
+        "average_plies": 295.24285714285713
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 65,
+        "draws": 0,
+        "losses": 75,
+        "score": 0.4642857142857143,
+        "paired_bootstrap_95": [
+          0.38571428571428573,
+          0.5428571428571428
+        ],
+        "reasons": {
+          "flag": 138,
+          "no moves": 2
+        },
+        "average_plies": 204.22142857142856
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 92,
+        "draws": 11,
+        "losses": 37,
+        "score": 0.6964285714285714,
+        "paired_bootstrap_95": [
+          0.6321428571428571,
+          0.7607142857142857
+        ],
+        "reasons": {
+          "flag": 119,
+          "ply limit": 11,
+          "no moves": 10
+        },
+        "average_plies": 391.3642857142857
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 113,
+        "draws": 0,
+        "losses": 27,
+        "score": 0.8071428571428572,
+        "paired_bootstrap_95": [
+          0.7428571428571429,
+          0.8642857142857143
+        ],
+        "reasons": {
+          "flag": 124,
+          "no moves": 16
+        },
+        "average_plies": 184.10714285714286
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-02-hard-20261014.zip",
+    "archive_sha256": "a09ed2cb713d051f2f839227075b116dce74ae252a0bbf2a60ac36be4fc309da"
+  },
+  {
+    "name": "variants-final-rules-02-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 2,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 102,
+        "draws": 4,
+        "losses": 34,
+        "score": 0.7428571428571429,
+        "paired_bootstrap_95": [
+          0.6785714285714286,
+          0.8035714285714286
+        ],
+        "reasons": {
+          "no moves": 3,
+          "flag": 133,
+          "ply limit": 4
+        },
+        "average_plies": 274.1142857142857
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 73,
+        "draws": 0,
+        "losses": 67,
+        "score": 0.5214285714285715,
+        "paired_bootstrap_95": [
+          0.45714285714285713,
+          0.5857142857142857
+        ],
+        "reasons": {
+          "flag": 136,
+          "no moves": 4
+        },
+        "average_plies": 227.2357142857143
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 69,
+        "draws": 0,
+        "losses": 71,
+        "score": 0.4928571428571429,
+        "paired_bootstrap_95": [
+          0.44285714285714284,
+          0.5428571428571428
+        ],
+        "reasons": {
+          "flag": 138,
+          "no moves": 2
+        },
+        "average_plies": 196.67857142857142
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 95,
+        "draws": 4,
+        "losses": 41,
+        "score": 0.6928571428571428,
+        "paired_bootstrap_95": [
+          0.6357142857142857,
+          0.75
+        ],
+        "reasons": {
+          "flag": 123,
+          "ply limit": 4,
+          "no moves": 13
+        },
+        "average_plies": 291.7142857142857
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 110,
+        "draws": 0,
+        "losses": 30,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.7285714285714285,
+          0.8428571428571429
+        ],
+        "reasons": {
+          "flag": 125,
+          "no moves": 15
+        },
+        "average_plies": 177.61428571428573
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-02-normal-20261014.zip",
+    "archive_sha256": "903c8d5e8f71c4954ef431aa94a40ad0487fdc1630ea14094e3c04e6c063e564"
+  },
+  {
+    "name": "variants-final-rules-03-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 3,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 55,
+        "draws": 59,
+        "losses": 26,
+        "score": 0.6035714285714285,
+        "paired_bootstrap_95": [
+          0.55,
+          0.6607142857142857
+        ],
+        "reasons": {
+          "flag": 79,
+          "ply limit": 59,
+          "no moves": 2
+        },
+        "average_plies": 616.8928571428571
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 55,
+        "draws": 36,
+        "losses": 49,
+        "score": 0.5214285714285715,
+        "paired_bootstrap_95": [
+          0.4714285714285714,
+          0.5678571428571428
+        ],
+        "reasons": {
+          "ply limit": 36,
+          "flag": 100,
+          "no moves": 4
+        },
+        "average_plies": 463.62857142857143
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 78,
+        "draws": 3,
+        "losses": 59,
+        "score": 0.5678571428571428,
+        "paired_bootstrap_95": [
+          0.5071428571428571,
+          0.6285714285714286
+        ],
+        "reasons": {
+          "flag": 136,
+          "no moves": 1,
+          "ply limit": 3
+        },
+        "average_plies": 258.50714285714287
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 59,
+        "draws": 41,
+        "losses": 40,
+        "score": 0.5678571428571428,
+        "paired_bootstrap_95": [
+          0.5214285714285715,
+          0.6142857142857143
+        ],
+        "reasons": {
+          "ply limit": 41,
+          "flag": 94,
+          "no moves": 5
+        },
+        "average_plies": 544.0928571428572
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 111,
+        "draws": 0,
+        "losses": 29,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.7357142857142858,
+          0.85
+        ],
+        "reasons": {
+          "flag": 117,
+          "no moves": 23
+        },
+        "average_plies": 176.47857142857143
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-03-hard-20261014.zip",
+    "archive_sha256": "bd64ad2dcd1d67ea69235ff3fbdec2ec1cce55e25a9c859f79611d3c8ca7e7a2"
+  },
+  {
+    "name": "variants-final-rules-03-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 3,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 86,
+        "draws": 10,
+        "losses": 44,
+        "score": 0.65,
+        "paired_bootstrap_95": [
+          0.5892857142857143,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 127,
+          "no moves": 3,
+          "ply limit": 10
+        },
+        "average_plies": 349.3285714285714
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 75,
+        "draws": 1,
+        "losses": 64,
+        "score": 0.5392857142857143,
+        "paired_bootstrap_95": [
+          0.4785714285714286,
+          0.6
+        ],
+        "reasons": {
+          "flag": 132,
+          "ply limit": 1,
+          "no moves": 7
+        },
+        "average_plies": 251.67857142857142
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 80,
+        "draws": 0,
+        "losses": 60,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.5214285714285715,
+          0.6214285714285714
+        ],
+        "reasons": {
+          "flag": 137,
+          "no moves": 3
+        },
+        "average_plies": 201.88571428571427
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 97,
+        "draws": 6,
+        "losses": 37,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.65,
+          0.7785714285714286
+        ],
+        "reasons": {
+          "flag": 129,
+          "no moves": 5,
+          "ply limit": 6
+        },
+        "average_plies": 311.27142857142854
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 109,
+        "draws": 0,
+        "losses": 31,
+        "score": 0.7785714285714286,
+        "paired_bootstrap_95": [
+          0.7071428571428572,
+          0.8428571428571429
+        ],
+        "reasons": {
+          "no moves": 18,
+          "flag": 122
+        },
+        "average_plies": 172.15
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-03-normal-20261014.zip",
+    "archive_sha256": "94a28e52ef5ab682d0f7b4840996968176974b76cc4fe321cc34462389c127c4"
+  },
+  {
+    "name": "variants-final-rules-04-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 4,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 80,
+        "draws": 24,
+        "losses": 36,
+        "score": 0.6571428571428571,
+        "paired_bootstrap_95": [
+          0.5928571428571429,
+          0.7214285714285714
+        ],
+        "reasons": {
+          "flag": 116,
+          "ply limit": 24
+        },
+        "average_plies": 393.92857142857144
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 68,
+        "draws": 6,
+        "losses": 66,
+        "score": 0.5071428571428571,
+        "paired_bootstrap_95": [
+          0.4357142857142857,
+          0.5821428571428572
+        ],
+        "reasons": {
+          "flag": 134,
+          "ply limit": 6
+        },
+        "average_plies": 244.57142857142858
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 55,
+        "draws": 0,
+        "losses": 85,
+        "score": 0.39285714285714285,
+        "paired_bootstrap_95": [
+          0.32857142857142857,
+          0.45714285714285713
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 169.35
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 100,
+        "draws": 7,
+        "losses": 33,
+        "score": 0.7392857142857143,
+        "paired_bootstrap_95": [
+          0.675,
+          0.8035714285714286
+        ],
+        "reasons": {
+          "flag": 133,
+          "ply limit": 7
+        },
+        "average_plies": 315.1714285714286
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 103,
+        "draws": 0,
+        "losses": 37,
+        "score": 0.7357142857142858,
+        "paired_bootstrap_95": [
+          0.6642857142857143,
+          0.8
+        ],
+        "reasons": {
+          "flag": 135,
+          "no moves": 5
+        },
+        "average_plies": 160.40714285714284
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-04-hard-20261014.zip",
+    "archive_sha256": "660bcf0edfa0d32e20667e9a2bab786b3548ff6d1866ac4ee2db53104ba0fd8c"
+  },
+  {
+    "name": "variants-final-rules-04-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 4,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 96,
+        "draws": 0,
+        "losses": 44,
+        "score": 0.6857142857142857,
+        "paired_bootstrap_95": [
+          0.6214285714285714,
+          0.75
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 187.2
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 81,
+        "draws": 1,
+        "losses": 58,
+        "score": 0.5821428571428572,
+        "paired_bootstrap_95": [
+          0.5178571428571429,
+          0.65
+        ],
+        "reasons": {
+          "flag": 139,
+          "ply limit": 1
+        },
+        "average_plies": 183.97142857142856
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 70,
+        "draws": 0,
+        "losses": 70,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 160.17142857142858
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 113,
+        "draws": 0,
+        "losses": 27,
+        "score": 0.8071428571428572,
+        "paired_bootstrap_95": [
+          0.75,
+          0.8642857142857143
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 209.06428571428572
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 105,
+        "draws": 0,
+        "losses": 35,
+        "score": 0.75,
+        "paired_bootstrap_95": [
+          0.6857142857142857,
+          0.8142857142857143
+        ],
+        "reasons": {
+          "flag": 133,
+          "no moves": 7
+        },
+        "average_plies": 173.05
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-04-normal-20261014.zip",
+    "archive_sha256": "f9708e178115f74e81f36c035eab44b26691e87c6613ff1802181aa99ea979e6"
+  },
+  {
+    "name": "variants-final-rules-08-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 8,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 85,
+        "draws": 16,
+        "losses": 39,
+        "score": 0.6642857142857143,
+        "paired_bootstrap_95": [
+          0.5892857142857143,
+          0.7357142857142858
+        ],
+        "reasons": {
+          "flag": 124,
+          "ply limit": 16
+        },
+        "average_plies": 311.10714285714283
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 80,
+        "draws": 1,
+        "losses": 59,
+        "score": 0.575,
+        "paired_bootstrap_95": [
+          0.5,
+          0.6535714285714286
+        ],
+        "reasons": {
+          "flag": 139,
+          "ply limit": 1
+        },
+        "average_plies": 182.7642857142857
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 66,
+        "draws": 0,
+        "losses": 74,
+        "score": 0.4714285714285714,
+        "paired_bootstrap_95": [
+          0.40714285714285714,
+          0.5357142857142857
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 152.87142857142857
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 107,
+        "draws": 5,
+        "losses": 28,
+        "score": 0.7821428571428571,
+        "paired_bootstrap_95": [
+          0.725,
+          0.8392857142857143
+        ],
+        "reasons": {
+          "flag": 135,
+          "ply limit": 5
+        },
+        "average_plies": 279.0
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 106,
+        "draws": 0,
+        "losses": 34,
+        "score": 0.7571428571428571,
+        "paired_bootstrap_95": [
+          0.6857142857142857,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 168.65714285714284
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-08-hard-20261014.zip",
+    "archive_sha256": "d9fe1e4290863fe01819a37630db01425cfee2ee66103922cc49b465246f16d8"
+  },
+  {
+    "name": "variants-final-rules-08-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 8,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 99,
+        "draws": 0,
+        "losses": 41,
+        "score": 0.7071428571428572,
+        "paired_bootstrap_95": [
+          0.6357142857142857,
+          0.7785714285714286
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 160.39285714285714
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 81,
+        "draws": 0,
+        "losses": 59,
+        "score": 0.5785714285714286,
+        "paired_bootstrap_95": [
+          0.5071428571428571,
+          0.65
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 157.69285714285715
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 70,
+        "draws": 0,
+        "losses": 70,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 158.54285714285714
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 110,
+        "draws": 0,
+        "losses": 30,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.7285714285714285,
+          0.8428571428571429
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 187.05714285714285
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 98,
+        "draws": 0,
+        "losses": 42,
+        "score": 0.7,
+        "paired_bootstrap_95": [
+          0.6285714285714286,
+          0.7714285714285715
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 160.4857142857143
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-08-normal-20261014.zip",
+    "archive_sha256": "3429ba765951edf9c6816f7454166718b52b96214a5bcab700ada60f139080e0"
+  },
+  {
+    "name": "variants-final-rules-10-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 10,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 91,
+        "draws": 9,
+        "losses": 40,
+        "score": 0.6821428571428572,
+        "paired_bootstrap_95": [
+          0.6142857142857143,
+          0.75
+        ],
+        "reasons": {
+          "flag": 131,
+          "ply limit": 9
+        },
+        "average_plies": 271.2857142857143
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 78,
+        "draws": 2,
+        "losses": 60,
+        "score": 0.5642857142857143,
+        "paired_bootstrap_95": [
+          0.49642857142857144,
+          0.6321428571428571
+        ],
+        "reasons": {
+          "flag": 138,
+          "ply limit": 2
+        },
+        "average_plies": 189.67142857142858
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 55,
+        "draws": 0,
+        "losses": 85,
+        "score": 0.39285714285714285,
+        "paired_bootstrap_95": [
+          0.32857142857142857,
+          0.45714285714285713
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 158.22142857142856
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 106,
+        "draws": 6,
+        "losses": 28,
+        "score": 0.7785714285714286,
+        "paired_bootstrap_95": [
+          0.7178571428571429,
+          0.8357142857142857
+        ],
+        "reasons": {
+          "flag": 134,
+          "ply limit": 6
+        },
+        "average_plies": 276.99285714285713
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 100,
+        "draws": 1,
+        "losses": 39,
+        "score": 0.7178571428571429,
+        "paired_bootstrap_95": [
+          0.65,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "flag": 139,
+          "ply limit": 1
+        },
+        "average_plies": 191.52142857142857
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-10-hard-20261014.zip",
+    "archive_sha256": "307160a066dc0534e2265797a4553cef4358879e6b3e419cef8e814051030590"
+  },
+  {
+    "name": "variants-final-rules-10-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 10,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 96,
+        "draws": 0,
+        "losses": 44,
+        "score": 0.6857142857142857,
+        "paired_bootstrap_95": [
+          0.6142857142857143,
+          0.7571428571428571
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 171.74285714285713
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 94,
+        "draws": 1,
+        "losses": 45,
+        "score": 0.675,
+        "paired_bootstrap_95": [
+          0.6107142857142858,
+          0.7392857142857143
+        ],
+        "reasons": {
+          "flag": 139,
+          "ply limit": 1
+        },
+        "average_plies": 172.70714285714286
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 70,
+        "draws": 0,
+        "losses": 70,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 167.94285714285715
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 109,
+        "draws": 0,
+        "losses": 31,
+        "score": 0.7785714285714286,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          0.8357142857142857
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 192.80714285714285
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 99,
+        "draws": 0,
+        "losses": 41,
+        "score": 0.7071428571428572,
+        "paired_bootstrap_95": [
+          0.6428571428571429,
+          0.7714285714285715
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 182.72142857142856
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-10-normal-20261014.zip",
+    "archive_sha256": "adce5b5a09e893c9e3ca2f60f23b456a6785245e4c61bb5469c6e097593de357"
+  },
+  {
+    "name": "variants-final-rules-16-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 16,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 101,
+        "draws": 10,
+        "losses": 29,
+        "score": 0.7571428571428571,
+        "paired_bootstrap_95": [
+          0.6964285714285714,
+          0.8178571428571428
+        ],
+        "reasons": {
+          "flag": 109,
+          "ply limit": 10,
+          "no moves": 2,
+          "flag arrival": 19
+        },
+        "average_plies": 327.55
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 74,
+        "draws": 5,
+        "losses": 61,
+        "score": 0.5464285714285714,
+        "paired_bootstrap_95": [
+          0.475,
+          0.6178571428571429
+        ],
+        "reasons": {
+          "no moves": 13,
+          "flag": 97,
+          "ply limit": 5,
+          "flag arrival": 25
+        },
+        "average_plies": 268.6928571428571
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 66,
+        "draws": 1,
+        "losses": 73,
+        "score": 0.475,
+        "paired_bootstrap_95": [
+          0.4,
+          0.5535714285714286
+        ],
+        "reasons": {
+          "no moves": 11,
+          "flag": 104,
+          "neither can move": 1,
+          "flag arrival": 24
+        },
+        "average_plies": 219.1
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 97,
+        "draws": 5,
+        "losses": 38,
+        "score": 0.7107142857142857,
+        "paired_bootstrap_95": [
+          0.6464285714285715,
+          0.775
+        ],
+        "reasons": {
+          "flag": 103,
+          "no moves": 5,
+          "flag arrival": 27,
+          "ply limit": 5
+        },
+        "average_plies": 304.01428571428573
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 115,
+        "draws": 0,
+        "losses": 25,
+        "score": 0.8214285714285714,
+        "paired_bootstrap_95": [
+          0.7642857142857142,
+          0.8785714285714286
+        ],
+        "reasons": {
+          "no moves": 8,
+          "flag": 128,
+          "flag arrival": 4
+        },
+        "average_plies": 124.82142857142857
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-16-hard-20261014.zip",
+    "archive_sha256": "4928f90c0ed1434c491d024ca77d97a9053159b3de53c1dcc206a48d9ed11132"
+  },
+  {
+    "name": "variants-final-rules-16-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 16,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 109,
+        "draws": 1,
+        "losses": 30,
+        "score": 0.7821428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          0.8464285714285714
+        ],
+        "reasons": {
+          "flag": 114,
+          "no moves": 4,
+          "ply limit": 1,
+          "flag arrival": 21
+        },
+        "average_plies": 254.25714285714287
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 83,
+        "draws": 0,
+        "losses": 57,
+        "score": 0.5928571428571429,
+        "paired_bootstrap_95": [
+          0.5214285714285715,
+          0.6642857142857143
+        ],
+        "reasons": {
+          "no moves": 12,
+          "flag": 106,
+          "flag arrival": 22
+        },
+        "average_plies": 215.60714285714286
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 74,
+        "draws": 1,
+        "losses": 65,
+        "score": 0.5321428571428571,
+        "paired_bootstrap_95": [
+          0.475,
+          0.5928571428571429
+        ],
+        "reasons": {
+          "flag": 104,
+          "no moves": 6,
+          "neither can move": 1,
+          "flag arrival": 29
+        },
+        "average_plies": 201.05
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 116,
+        "draws": 0,
+        "losses": 24,
+        "score": 0.8285714285714286,
+        "paired_bootstrap_95": [
+          0.7714285714285715,
+          0.8785714285714286
+        ],
+        "reasons": {
+          "flag": 113,
+          "no moves": 5,
+          "flag arrival": 22
+        },
+        "average_plies": 215.61428571428573
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 122,
+        "draws": 0,
+        "losses": 18,
+        "score": 0.8714285714285714,
+        "paired_bootstrap_95": [
+          0.8214285714285714,
+          0.9214285714285714
+        ],
+        "reasons": {
+          "no moves": 6,
+          "flag": 130,
+          "flag arrival": 4
+        },
+        "average_plies": 124.84285714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-16-normal-20261014.zip",
+    "archive_sha256": "d151849a0391ac95eef29199deacdec0693202a8ac37ca4b4d3b0967254b6fa8"
+  },
+  {
+    "name": "variants-final-rules-32-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 32,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 84,
+        "draws": 1,
+        "losses": 55,
+        "score": 0.6035714285714285,
+        "paired_bootstrap_95": [
+          0.5321428571428571,
+          0.6714285714285714
+        ],
+        "reasons": {
+          "flag": 136,
+          "no moves": 3,
+          "ply limit": 1
+        },
+        "average_plies": 160.95
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 69,
+        "draws": 1,
+        "losses": 70,
+        "score": 0.49642857142857144,
+        "paired_bootstrap_95": [
+          0.4357142857142857,
+          0.5571428571428572
+        ],
+        "reasons": {
+          "flag": 134,
+          "no moves": 5,
+          "ply limit": 1
+        },
+        "average_plies": 155.55714285714285
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 78,
+        "draws": 2,
+        "losses": 60,
+        "score": 0.5642857142857143,
+        "paired_bootstrap_95": [
+          0.4928571428571429,
+          0.6357142857142857
+        ],
+        "reasons": {
+          "no moves": 2,
+          "ply limit": 2,
+          "flag": 136
+        },
+        "average_plies": 162.00714285714287
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 90,
+        "draws": 0,
+        "losses": 50,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5785714285714286,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 138,
+          "no moves": 2
+        },
+        "average_plies": 159.85714285714286
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 113,
+        "draws": 0,
+        "losses": 27,
+        "score": 0.8071428571428572,
+        "paired_bootstrap_95": [
+          0.75,
+          0.8642857142857143
+        ],
+        "reasons": {
+          "flag": 136,
+          "no moves": 4
+        },
+        "average_plies": 142.22142857142856
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-32-hard-20261014.zip",
+    "archive_sha256": "2647e849c857f3321dc4fa19ba0636928456ec2ccd79e47673f6bcc51c7aecd2"
+  },
+  {
+    "name": "variants-final-rules-32-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 32,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 90,
+        "draws": 2,
+        "losses": 48,
+        "score": 0.65,
+        "paired_bootstrap_95": [
+          0.5857142857142857,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 134,
+          "no moves": 4,
+          "ply limit": 2
+        },
+        "average_plies": 158.53571428571428
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 72,
+        "draws": 1,
+        "losses": 67,
+        "score": 0.5178571428571429,
+        "paired_bootstrap_95": [
+          0.45,
+          0.5857142857142857
+        ],
+        "reasons": {
+          "flag": 139,
+          "neither can move": 1
+        },
+        "average_plies": 135.52857142857144
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 74,
+        "draws": 0,
+        "losses": 66,
+        "score": 0.5285714285714286,
+        "paired_bootstrap_95": [
+          0.4714285714285714,
+          0.5857142857142857
+        ],
+        "reasons": {
+          "flag": 138,
+          "no moves": 2
+        },
+        "average_plies": 129.94285714285715
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 90,
+        "draws": 0,
+        "losses": 50,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.7071428571428572
+        ],
+        "reasons": {
+          "flag": 138,
+          "no moves": 2
+        },
+        "average_plies": 153.0
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 113,
+        "draws": 2,
+        "losses": 25,
+        "score": 0.8142857142857143,
+        "paired_bootstrap_95": [
+          0.7535714285714286,
+          0.8714285714285714
+        ],
+        "reasons": {
+          "flag": 134,
+          "ply limit": 2,
+          "no moves": 4
+        },
+        "average_plies": 165.56428571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-32-normal-20261014.zip",
+    "archive_sha256": "16cae46f0ef19c6d7dedd6e2767da9cbae2cb78ea5b40d1a8b94f44f871be231"
+  },
+  {
+    "name": "variants-final-rules-48-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 48,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 88,
+        "draws": 3,
+        "losses": 49,
+        "score": 0.6392857142857142,
+        "paired_bootstrap_95": [
+          0.5678571428571428,
+          0.7107142857142857
+        ],
+        "reasons": {
+          "flag": 114,
+          "ply limit": 3,
+          "no moves": 8,
+          "flag arrival": 15
+        },
+        "average_plies": 192.69285714285715
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 73,
+        "draws": 3,
+        "losses": 64,
+        "score": 0.5321428571428571,
+        "paired_bootstrap_95": [
+          0.46785714285714286,
+          0.5964285714285714
+        ],
+        "reasons": {
+          "no moves": 10,
+          "flag": 103,
+          "ply limit": 3,
+          "flag arrival": 24
+        },
+        "average_plies": 213.87857142857143
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 63,
+        "draws": 5,
+        "losses": 72,
+        "score": 0.46785714285714286,
+        "paired_bootstrap_95": [
+          0.3964285714285714,
+          0.5392857142857143
+        ],
+        "reasons": {
+          "flag": 106,
+          "no moves": 6,
+          "ply limit": 5,
+          "flag arrival": 23
+        },
+        "average_plies": 215.4142857142857
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 91,
+        "draws": 3,
+        "losses": 46,
+        "score": 0.6607142857142857,
+        "paired_bootstrap_95": [
+          0.5964285714285714,
+          0.7214285714285714
+        ],
+        "reasons": {
+          "no moves": 6,
+          "flag": 114,
+          "neither can move": 1,
+          "ply limit": 2,
+          "flag arrival": 17
+        },
+        "average_plies": 195.06428571428572
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 117,
+        "draws": 1,
+        "losses": 22,
+        "score": 0.8392857142857143,
+        "paired_bootstrap_95": [
+          0.7821428571428571,
+          0.8928571428571429
+        ],
+        "reasons": {
+          "no moves": 5,
+          "flag": 130,
+          "ply limit": 1,
+          "flag arrival": 4
+        },
+        "average_plies": 140.75
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-48-hard-20261014.zip",
+    "archive_sha256": "23075696a5ee9207f139362eaabc93a486ed90ed79cbca945828e2a6a4568036"
+  },
+  {
+    "name": "variants-final-rules-48-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 48,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 83,
+        "draws": 6,
+        "losses": 51,
+        "score": 0.6142857142857143,
+        "paired_bootstrap_95": [
+          0.5428571428571428,
+          0.6857142857142857
+        ],
+        "reasons": {
+          "no moves": 7,
+          "neither can move": 1,
+          "flag": 103,
+          "flag arrival": 24,
+          "ply limit": 5
+        },
+        "average_plies": 212.2357142857143
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 78,
+        "draws": 4,
+        "losses": 58,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.4928571428571429,
+          0.65
+        ],
+        "reasons": {
+          "no moves": 6,
+          "neither can move": 3,
+          "flag": 107,
+          "ply limit": 1,
+          "flag arrival": 23
+        },
+        "average_plies": 191.65714285714284
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 66,
+        "draws": 4,
+        "losses": 70,
+        "score": 0.4857142857142857,
+        "paired_bootstrap_95": [
+          0.425,
+          0.55
+        ],
+        "reasons": {
+          "no moves": 11,
+          "neither can move": 1,
+          "flag": 104,
+          "ply limit": 3,
+          "flag arrival": 21
+        },
+        "average_plies": 217.84285714285716
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 100,
+        "draws": 3,
+        "losses": 37,
+        "score": 0.725,
+        "paired_bootstrap_95": [
+          0.6607142857142857,
+          0.7857142857142857
+        ],
+        "reasons": {
+          "no moves": 4,
+          "flag": 113,
+          "ply limit": 3,
+          "flag arrival": 20
+        },
+        "average_plies": 213.7
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 120,
+        "draws": 2,
+        "losses": 18,
+        "score": 0.8642857142857143,
+        "paired_bootstrap_95": [
+          0.8071428571428572,
+          0.9142857142857143
+        ],
+        "reasons": {
+          "ply limit": 2,
+          "flag": 134,
+          "no moves": 2,
+          "flag arrival": 2
+        },
+        "average_plies": 135.97857142857143
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-48-normal-20261014.zip",
+    "archive_sha256": "00aa16dacd97eba0cd6aecbf91bf96f40b9529624c3071ce0178b387921f838e"
+  },
+  {
+    "name": "variants-final-rules-63-hard-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "hard",
+    "rules": 63,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 86,
+        "draws": 8,
+        "losses": 46,
+        "score": 0.6428571428571429,
+        "paired_bootstrap_95": [
+          0.5785714285714286,
+          0.7071428571428572
+        ],
+        "reasons": {
+          "flag": 115,
+          "flag arrival": 17,
+          "ply limit": 8
+        },
+        "average_plies": 212.97142857142856
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 59,
+        "draws": 6,
+        "losses": 75,
+        "score": 0.44285714285714284,
+        "paired_bootstrap_95": [
+          0.37857142857142856,
+          0.5107142857142857
+        ],
+        "reasons": {
+          "ply limit": 6,
+          "flag": 110,
+          "flag arrival": 24
+        },
+        "average_plies": 246.55
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 60,
+        "draws": 7,
+        "losses": 73,
+        "score": 0.45357142857142857,
+        "paired_bootstrap_95": [
+          0.37857142857142856,
+          0.5321428571428571
+        ],
+        "reasons": {
+          "flag arrival": 31,
+          "flag": 102,
+          "ply limit": 7
+        },
+        "average_plies": 252.59285714285716
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 76,
+        "draws": 9,
+        "losses": 55,
+        "score": 0.575,
+        "paired_bootstrap_95": [
+          0.5142857142857142,
+          0.6357142857142857
+        ],
+        "reasons": {
+          "flag arrival": 21,
+          "flag": 110,
+          "ply limit": 9
+        },
+        "average_plies": 239.90714285714284
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 118,
+        "draws": 0,
+        "losses": 22,
+        "score": 0.8428571428571429,
+        "paired_bootstrap_95": [
+          0.7857142857142857,
+          0.8928571428571429
+        ],
+        "reasons": {
+          "flag": 128,
+          "flag arrival": 12
+        },
+        "average_plies": 129.57142857142858
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-63-hard-20261014.zip",
+    "archive_sha256": "39b2291bd127b1e4917d1af1fa7eb32417fca75ccc74414d542b6b616f0d1b41"
+  },
+  {
+    "name": "variants-final-rules-63-normal-20261014",
+    "decision": "keep",
+    "reason": "Retained production variant benchmark with fixed opponents, matched setups/sides/seeds and public observation audit; aggregate interpretation retained in the variant handoff.",
+    "source_sha256": "3759bb5875d3982735261cb41899d589ea22c3cb678c9419cb77cab108c0c165",
+    "phase": "validation",
+    "strategy": "production-variant-league",
+    "suite": "broad",
+    "difficulty": "normal",
+    "rules": 63,
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 83,
+        "draws": 9,
+        "losses": 48,
+        "score": 0.625,
+        "paired_bootstrap_95": [
+          0.5535714285714286,
+          0.6964285714285714
+        ],
+        "reasons": {
+          "flag": 115,
+          "flag arrival": 16,
+          "ply limit": 9
+        },
+        "average_plies": 238.75714285714287
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 72,
+        "draws": 5,
+        "losses": 63,
+        "score": 0.5321428571428571,
+        "paired_bootstrap_95": [
+          0.4642857142857143,
+          0.5964285714285714
+        ],
+        "reasons": {
+          "flag": 110,
+          "flag arrival": 25,
+          "ply limit": 5
+        },
+        "average_plies": 230.90714285714284
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 67,
+        "draws": 6,
+        "losses": 67,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 120,
+          "flag arrival": 14,
+          "ply limit": 6
+        },
+        "average_plies": 264.9714285714286
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 89,
+        "draws": 6,
+        "losses": 45,
+        "score": 0.6571428571428571,
+        "paired_bootstrap_95": [
+          0.5892857142857143,
+          0.7214285714285714
+        ],
+        "reasons": {
+          "flag": 119,
+          "ply limit": 6,
+          "flag arrival": 15
+        },
+        "average_plies": 260.9214285714286
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 111,
+        "draws": 0,
+        "losses": 29,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.7285714285714285,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 131,
+          "flag arrival": 9
+        },
+        "average_plies": 144.42142857142858
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/variants-final-rules-63-normal-20261014.zip",
+    "archive_sha256": "563d96872e3810b05f2b25fa3d456d3ffcdb9bd79420d3cff77d7b99da25ab52"
   }
 ]

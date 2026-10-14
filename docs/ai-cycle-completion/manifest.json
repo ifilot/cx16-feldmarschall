@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "objective_sha256": "f3d7348cc91bae2644a42330dc3cdca375b58f8a6dc168d452e22e4f4315f53c",
+  "audit_sha256": "8e9f807db12458d504e77be33c6017dd37496af05ab348031e94b3b0d1e2ac9e",
+  "evidence": {
+    "docs/ai-selection/manifest.json": "a2dd9aedc3745989c0551467ba5f64cab5276c6d8c30a884d12ecf632784a5d7",
+    "docs/ai-mission-cases/manifest.json": "b5952680781a4c6d37e6ef1a2862bd3c35d8d3a7d3bc5cf227deaaa41eaae1a7",
+    "docs/ai-teacher/manifest.json": "60e3ba8de9fa49f7728d35863e54bd7046bc00cc6d682660ce4329ac21db108a",
+    "docs/ai-student-production/manifest.json": "f7d0782b052e1bdbac9a25d26f1544d5801078f8d499ee547e30d920ce3ebd7f",
+    "docs/ai-variants/manifest.json": "337b1fa0809536191a6d15f90e1012e43b45f84f98d396a4f110d185c9e8a86e",
+    "docs/ai-experiments.json": "13aff2491bd14d1a25467587ff96bdd6a9d958957fe3cd346d70aaee0f9d6e3c",
+    "docs/ai-runs/archive-integrity.json": "98691697707daa99d02953869a9a7d770a79564d723c8e6f610b6091737a09e7"
+  },
+  "checkpoint": "Repository commit containing this manifest closes the cycle.",
+  "remaining_required_work": []
+}
