@@ -66,21 +66,39 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to);
  * @brief Forget goals and both armies' move histories (at the start of a game)
  */
 void ai_reset(void);
+#ifdef AI_DIAGNOSTICS
+/* Correct a diagnostic proposal to the move actually executed in a forced history. */
+void ai_diagnostic_choice(uint8_t army, uint8_t from, uint8_t to);
+#endif
 
 #ifdef AI_TEST
 #define AI_TEST_STATE_SIZE 208
 #ifdef AI_MISSIONS
 #undef AI_TEST_STATE_SIZE
 #define AI_TEST_STATE_SIZE 210
+#ifdef AI_MISSION_PROGRESS
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE 218
+#endif
 #ifdef AI_SECTOR_MEMORY
 #undef AI_TEST_STATE_SIZE
 #define AI_TEST_STATE_SIZE 230
+#ifdef AI_MISSION_PROGRESS
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE 238
+#endif
 #endif
 #endif
 void ai_test_save(uint8_t* out);
 #ifdef AI_MEMORY
 #include "ai_memory.h"
-#if defined(AI_MISSIONS) && defined(AI_SECTOR_MEMORY)
+#if defined(AI_MISSIONS) && defined(AI_MISSION_PROGRESS) && defined(AI_SECTOR_MEMORY)
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE (238 + AI_MEMORY_STATE_SIZE)
+#elif defined(AI_MISSIONS) && defined(AI_MISSION_PROGRESS)
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE (218 + AI_MEMORY_STATE_SIZE)
+#elif defined(AI_MISSIONS) && defined(AI_SECTOR_MEMORY)
 #undef AI_TEST_STATE_SIZE
 #define AI_TEST_STATE_SIZE (230 + AI_MEMORY_STATE_SIZE)
 #elif defined(AI_MISSIONS)

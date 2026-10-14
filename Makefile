@@ -61,6 +61,72 @@ CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai
 CORE_MISSIONS = $(CORE_NATIVE) src/core/ai_mission.c
 CORE_MEMORY = $(CORE_MISSIONS) src/core/ai_memory.c
 
+.PHONY: native-mission-progress test-ai-mission-progress
+.PHONY: test-ai-diagnostic-history
+test-ai-diagnostic-history: build/ai-diagnostic-history-test
+	build/ai-diagnostic-history-test
+build/ai-diagnostic-history-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_DIAGNOSTICS -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+.PHONY: test-ai-mission-cases
+test-ai-mission-cases:
+	python3 tools/test_ai_mission_cases.py docs/ai-mission-cases
+native-mission-progress: build/feldmarschall-engine-mission-progress
+build/feldmarschall-engine-mission-progress: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_DIAGNOSTICS -DAI_MISSION_PROGRESS -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+.PHONY: native-mission-diagnostics
+native-mission-diagnostics: build/feldmarschall-engine-mission-diagnostics
+build/feldmarschall-engine-mission-diagnostics: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_DIAGNOSTICS -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+test-ai-mission-progress: build/ai-mission-progress-test
+	build/ai-mission-progress-test
+build/ai-mission-progress-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MISSION_PROGRESS -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+
+.PHONY: native-mission-evidence test-ai-mission-evidence
+native-mission-evidence: build/feldmarschall-engine-mission-evidence
+build/feldmarschall-engine-mission-evidence: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_DIAGNOSTICS -DAI_MISSION_EVIDENCE -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+test-ai-mission-evidence: build/ai-mission-evidence-test
+	build/ai-mission-evidence-test
+build/ai-mission-evidence-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MISSION_EVIDENCE -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+
+.PHONY: native-mission-preserve native-mission-escort test-ai-mission-preserve test-ai-mission-escort
+.PHONY: native-mission-scout-value test-ai-mission-scout-value
+native-mission-scout-value: build/feldmarschall-engine-mission-scout-value
+build/feldmarschall-engine-mission-scout-value: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_DIAGNOSTICS -DAI_MISSION_SCOUT_VALUE -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+test-ai-mission-scout-value: build/ai-mission-scout-value-test
+	build/ai-mission-scout-value-test
+build/ai-mission-scout-value-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MISSION_SCOUT_VALUE -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+native-mission-preserve: build/feldmarschall-engine-mission-preserve
+native-mission-escort: build/feldmarschall-engine-mission-escort
+build/feldmarschall-engine-mission-preserve: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_DIAGNOSTICS -DAI_MISSION_PRESERVE -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+build/feldmarschall-engine-mission-escort: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_DIAGNOSTICS -DAI_MISSION_ESCORT -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+test-ai-mission-preserve: build/ai-mission-preserve-test
+	build/ai-mission-preserve-test
+test-ai-mission-escort: build/ai-mission-escort-test
+	build/ai-mission-escort-test
+build/ai-mission-preserve-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MISSION_PRESERVE -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+build/ai-mission-escort-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MISSION_ESCORT -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+
 .PHONY: native-student test-ai-student native-student-features
 native-student: build/feldmarschall-engine-student
 native-student-features: build/feldmarschall-engine-student-features

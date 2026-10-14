@@ -328,7 +328,32 @@ int main(int argc, char** argv) {
             } else {
                 choose_setup();
             }
-        } else if(!strcmp(command, "go")) {
+        }
+#ifdef AI_DIAGNOSTICS
+        else if(!strcmp(command, "played")) {
+            uint8_t options[MAX_TARGETS], n, i;
+            from = square(strtok(args, " ")); to = square(strtok(NULL, " "));
+            if(from >= SQUARES || to >= SQUARES || !IS_PIECE(board[from]) ||
+               (board[from] & CELL_BLUE) != own) { reply("error played"); continue; }
+            n = rules_targets(from, options);
+            for(i=0; i<n && options[i] != to; i++) {}
+            if(i == n) { reply("error played"); continue; }
+            ai_diagnostic_choice(own, from, to);
+            reply("playedok");
+        }
+        else if(!strcmp(command, "public")) {
+            uint8_t i, state[RULES_STATE_SIZE];
+            rules_state_save(state);
+            printf("public %u ", own ? 1 : 0);
+            for(i=0; i<SQUARES; i++) printf("%02x", board[i]);
+            putchar(' ');
+            for(i=0; i<PIECE_TYPES; i++) printf("%02x", enemy_lost[i]);
+            putchar(' ');
+            for(i=RULES_STATE_SIZE-6; i<RULES_STATE_SIZE; i++) printf("%02x", state[i]);
+            putchar('\n'); fflush(stdout);
+        }
+#endif
+        else if(!strcmp(command, "go")) {
             go();
 #ifdef AI_STUDENT
         } else if(!strcmp(command, "student")) {

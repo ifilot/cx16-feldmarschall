@@ -10,5 +10,8 @@ int16_t ai_mission_score(uint8_t from, uint8_t to);
 void ai_mission_save(uint8_t* out);
 void ai_mission_load(const uint8_t* in);
 uint8_t ai_mission_test_target(uint8_t army);
+#ifdef AI_MISSION_PROGRESS
+uint8_t ai_mission_test_stalled(uint8_t army);
+#endif
 #endif
 #endif

@@ -112,15 +112,15 @@ must not be overwritten.
 
 1. **Deployment selection:** development, frozen policy validation, runtime
    integration, distribution/browser checks and retained runtime evidence complete.
-2. **Focused diagnostics:** select public-information examples of decoys, quiet
-   repetition, ineffective Miner routes and specialist losses. Reconstruct
-   permitted views, give legal alternative moves with reasons, distinguish
-   structural blockage from potentially avoidable cycles, and keep the set
-   separate from independent strength games.
-3. **Mission experiments:** test mission progress and reconsideration first,
-   then contradictory sector evidence, Miner preservation and escort/support.
-   Change one mechanism at a time. Require diagnostic improvement and independent
-   broad-suite strength against the frozen mission baseline before promotion.
+2. **Focused diagnostics:** complete. The [18-case set](ai-mission-cases/README.md)
+   contains reconstructed permitted views, legal alternatives, public histories
+   and two controls with permanent direct flag-route obstruction. It is quarantined
+   from new strength games; diagnostic metadata never enters AI features.
+3. **Mission experiments:** seven isolated versions tested in 3,920 development
+   games, covering progress/reconsideration, contradictory fortification evidence,
+   Miner preservation, escort and Scout preservation. None earned promotion.
+   A further policy with useful diagnostic improvement and independently established
+   broad-suite strength against the frozen mission baseline remains outstanding.
 4. **Mission hardware gate:** for every accepted change, check bank/main RAM and
    stack headroom, concealed-rank invariance, public-only features, persistent
    native/X16 parity for both armies, timing, bank restoration and save/load

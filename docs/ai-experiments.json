@@ -3192,5 +3192,479 @@
     "executable_snapshots_available": true,
     "archive": "ai-runs/selection-hard-validation-20261014.zip",
     "archive_sha256": "74d6790faf51f2c68e4b9a82453827d9a218ce064d19660d0b36f7addd138bfa"
+  },
+  {
+    "name": "mission-escort-hard-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-specialist-escort development against frozen coordinated missions: 0.503571, paired 95% interval [0.4928571428571429, 0.5178571428571429], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "511b45ba39011ef3ac0bb8940516552bba9fd0e491c3326c8d3e573db0d5b1ae",
+    "phase": "development",
+    "strategy": "mission-specialist-escort",
+    "suite": "broad",
+    "difficulty": "hard",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 140,
+        "draws": 2,
+        "losses": 138,
+        "score": 0.5035714285714286,
+        "paired_bootstrap_95": [
+          0.4928571428571429,
+          0.5178571428571429
+        ],
+        "reasons": {
+          "flag": 274,
+          "no moves": 4,
+          "ply limit": 2
+        },
+        "average_plies": 212.41071428571428
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-escort-hard-development-20261014.zip",
+    "archive_sha256": "2ec29c0ba968ac395260d5806cfec066b16eec8c4b1a01554b1f6f0df66f2a75"
+  },
+  {
+    "name": "mission-escort-normal-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-specialist-escort development against frozen coordinated missions: 0.503571, paired 95% interval [0.5, 0.5107142857142857], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "511b45ba39011ef3ac0bb8940516552bba9fd0e491c3326c8d3e573db0d5b1ae",
+    "phase": "development",
+    "strategy": "mission-specialist-escort",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 141,
+        "draws": 0,
+        "losses": 139,
+        "score": 0.5035714285714286,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5107142857142857
+        ],
+        "reasons": {
+          "flag": 275,
+          "no moves": 5
+        },
+        "average_plies": 168.525
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-escort-normal-development-20261014.zip",
+    "archive_sha256": "e23941943ceccf1db6d46fa9e31ff2ff25dbd26b6d5dae915c624564f874e9da"
+  },
+  {
+    "name": "mission-evidence-hard-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-public-evidence development against frozen coordinated missions: 0.480357, paired 95% interval [0.45714285714285713, 0.5017857142857143], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "ab9c49844f458d3bb8b2b24d05a5655426adcbd56c907ad203e805a223f32e31",
+    "phase": "development",
+    "strategy": "mission-public-evidence",
+    "suite": "broad",
+    "difficulty": "hard",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 130,
+        "draws": 9,
+        "losses": 141,
+        "score": 0.48035714285714287,
+        "paired_bootstrap_95": [
+          0.45714285714285713,
+          0.5017857142857143
+        ],
+        "reasons": {
+          "flag": 265,
+          "no moves": 6,
+          "neither can move": 2,
+          "ply limit": 7
+        },
+        "average_plies": 215.89285714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-evidence-hard-development-20261014.zip",
+    "archive_sha256": "890ee2171c369f50421b883b7c188ee04d94143b19c11db5a02ee878f18b7ba6"
+  },
+  {
+    "name": "mission-evidence-normal-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-public-evidence development against frozen coordinated missions: 0.500000, paired 95% interval [0.4785714285714286, 0.5214285714285715], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "ab9c49844f458d3bb8b2b24d05a5655426adcbd56c907ad203e805a223f32e31",
+    "phase": "development",
+    "strategy": "mission-public-evidence",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 139,
+        "draws": 2,
+        "losses": 139,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.4785714285714286,
+          0.5214285714285715
+        ],
+        "reasons": {
+          "flag": 272,
+          "no moves": 6,
+          "ply limit": 2
+        },
+        "average_plies": 174.37142857142857
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-evidence-normal-development-20261014.zip",
+    "archive_sha256": "756b63ed54e4cc05186783573d53833d620f28692a95ee4fbd998c5e069f76c7"
+  },
+  {
+    "name": "mission-job-progress-hard-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-job-progress development against frozen coordinated missions: 0.503571, paired 95% interval [0.5, 0.5107142857142857], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "3a2ea26f3df1e75f498b7213a394b627fd0bc54306b8563204c9ec576ef88630",
+    "phase": "development",
+    "strategy": "mission-job-progress",
+    "suite": "broad",
+    "difficulty": "hard",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 138,
+        "draws": 6,
+        "losses": 136,
+        "score": 0.5035714285714286,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5107142857142857
+        ],
+        "reasons": {
+          "flag": 273,
+          "no moves": 1,
+          "ply limit": 6
+        },
+        "average_plies": 222.63214285714287
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-job-progress-hard-development-20261014.zip",
+    "archive_sha256": "028b835a7267b291e4532a3ec412dbd136ab4a524a3efd91e6a7ec9eb3b22c4e"
+  },
+  {
+    "name": "mission-job-progress-normal-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-job-progress development against frozen coordinated missions: 0.500000, paired 95% interval [0.5, 0.5], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "3a2ea26f3df1e75f498b7213a394b627fd0bc54306b8563204c9ec576ef88630",
+    "phase": "development",
+    "strategy": "mission-job-progress",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 140,
+        "draws": 0,
+        "losses": 140,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 276,
+          "no moves": 4
+        },
+        "average_plies": 165.93571428571428
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-job-progress-normal-development-20261014.zip",
+    "archive_sha256": "c38e72964545313b285b0ddd231e2d02d552f7f94271ee0af41ca3359c9b460e"
+  },
+  {
+    "name": "mission-preserve-hard-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-miner-preservation development against frozen coordinated missions: 0.489286, paired 95% interval [0.4714285714285714, 0.5071428571428571], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "511b45ba39011ef3ac0bb8940516552bba9fd0e491c3326c8d3e573db0d5b1ae",
+    "phase": "development",
+    "strategy": "mission-miner-preservation",
+    "suite": "broad",
+    "difficulty": "hard",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 134,
+        "draws": 6,
+        "losses": 140,
+        "score": 0.48928571428571427,
+        "paired_bootstrap_95": [
+          0.4714285714285714,
+          0.5071428571428571
+        ],
+        "reasons": {
+          "flag": 272,
+          "no moves": 2,
+          "ply limit": 6
+        },
+        "average_plies": 225.28214285714284
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-preserve-hard-development-20261014.zip",
+    "archive_sha256": "e3b4094a649507f112a6e03edb6d50de4338ce776e0bac1a0907d3d2202d75df"
+  },
+  {
+    "name": "mission-preserve-normal-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-miner-preservation development against frozen coordinated missions: 0.492857, paired 95% interval [0.4714285714285714, 0.5142857142857142], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "511b45ba39011ef3ac0bb8940516552bba9fd0e491c3326c8d3e573db0d5b1ae",
+    "phase": "development",
+    "strategy": "mission-miner-preservation",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 138,
+        "draws": 0,
+        "losses": 142,
+        "score": 0.4928571428571429,
+        "paired_bootstrap_95": [
+          0.4714285714285714,
+          0.5142857142857142
+        ],
+        "reasons": {
+          "no moves": 8,
+          "flag": 272
+        },
+        "average_plies": 193.10714285714286
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-preserve-normal-development-20261014.zip",
+    "archive_sha256": "cec19b37470e38460cdf42cfd37c8201c2e01cc296068a9d48b05977483d1c0e"
+  },
+  {
+    "name": "mission-progress-hard-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-progress development against frozen coordinated missions: 0.501786, paired 95% interval [0.48928571428571427, 0.5142857142857142], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "d2d43cab45fa44f1677b2d68e94ca3af92bbc57a5329b7b18de614ec868679ae",
+    "phase": "development",
+    "strategy": "mission-progress",
+    "suite": "broad",
+    "difficulty": "hard",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 140,
+        "draws": 1,
+        "losses": 139,
+        "score": 0.5017857142857143,
+        "paired_bootstrap_95": [
+          0.48928571428571427,
+          0.5142857142857142
+        ],
+        "reasons": {
+          "flag": 277,
+          "ply limit": 1,
+          "no moves": 2
+        },
+        "average_plies": 215.80714285714285
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-progress-hard-development-20261014.zip",
+    "archive_sha256": "01c2422f0ac20292de1bfd2bd835d4b1083d364923734c18d92d8bd2728cfb79"
+  },
+  {
+    "name": "mission-progress-normal-development-20261014",
+    "decision": "reject",
+    "reason": "Isolated mission-progress development against frozen coordinated missions: 0.500000, paired 95% interval [0.5, 0.5], 280 broad-suite games. No reliable strength gain and no established improvement on the fixed 18 public diagnostic cases; keep opt-in, do not promote.",
+    "source_sha256": "d2d43cab45fa44f1677b2d68e94ca3af92bbc57a5329b7b18de614ec868679ae",
+    "phase": "development",
+    "strategy": "mission-progress",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 140,
+        "draws": 0,
+        "losses": 140,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 278,
+          "no moves": 2
+        },
+        "average_plies": 167.32142857142858
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-progress-normal-development-20261014.zip",
+    "archive_sha256": "311a1250f91da44869f56c2a49ca4ece44ba41efc8db72ff996f9144e1a2840a"
+  },
+  {
+    "name": "mission-scout-value-normal-development-20261014",
+    "decision": "reject",
+    "reason": "Scarce-Scout preservation development: 0.503571, paired interval [0.4928571428571429, 0.5178571428571429], 280 games. No changed decisions in the fixed public diagnostic set and no reliable strength gain. Retain version 1; do not promote.",
+    "source_sha256": "a4ae32d24331b632b30b0b5abaaa2ea739701b026c566ada0c1b827b260c2b91",
+    "phase": "development",
+    "strategy": "mission-scout-preservation",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 141,
+        "draws": 0,
+        "losses": 139,
+        "score": 0.5035714285714286,
+        "paired_bootstrap_95": [
+          0.4928571428571429,
+          0.5178571428571429
+        ],
+        "reasons": {
+          "flag": 278,
+          "no moves": 2
+        },
+        "average_plies": 171.73928571428573
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-scout-value-normal-development-20261014.zip",
+    "archive_sha256": "0a0de8d6f12b6c98aafd033b24bb60e218820eb0af3fc888cbe57a27aa6e7a60"
+  },
+  {
+    "name": "mission-scout-value-hard-development-20261014",
+    "decision": "reject",
+    "reason": "Scarce-Scout preservation development: 0.489286, paired interval [0.475, 0.5], 280 games. No changed decisions in the fixed public diagnostic set and no reliable strength gain. Retain version 1; do not promote.",
+    "source_sha256": "a4ae32d24331b632b30b0b5abaaa2ea739701b026c566ada0c1b827b260c2b91",
+    "phase": "development",
+    "strategy": "mission-scout-preservation",
+    "suite": "broad",
+    "difficulty": "hard",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 131,
+        "draws": 12,
+        "losses": 137,
+        "score": 0.48928571428571427,
+        "paired_bootstrap_95": [
+          0.475,
+          0.5
+        ],
+        "reasons": {
+          "flag": 260,
+          "no moves": 8,
+          "ply limit": 10,
+          "neither can move": 2
+        },
+        "average_plies": 230.23214285714286
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-scout-value-hard-development-20261014.zip",
+    "archive_sha256": "8be2d7c408e4509f09960ce47bd49c682afce94e078da062f293f18667a8f36e"
+  },
+  {
+    "name": "mission-scout-loss-normal-development-20261014",
+    "decision": "reject",
+    "reason": "Penalty for uncompensated known Scout losses: 0.496429, paired interval [0.48214285714285715, 0.5107142857142857], 280 broad-suite development games. Three forced-history diagnostic decisions changed, but fresh game strength did not improve; no promotion.",
+    "source_sha256": "fe85ab45ba663a2014921de43ecf073a5e59e5643eafefec94de715492e98efc",
+    "phase": "development",
+    "strategy": "mission-uninformative-scout-loss",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 137,
+        "draws": 4,
+        "losses": 139,
+        "score": 0.49642857142857144,
+        "paired_bootstrap_95": [
+          0.48214285714285715,
+          0.5107142857142857
+        ],
+        "reasons": {
+          "flag": 265,
+          "no moves": 11,
+          "ply limit": 2,
+          "neither can move": 2
+        },
+        "average_plies": 192.4607142857143
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-scout-loss-normal-development-20261014.zip",
+    "archive_sha256": "c25cfd3bfb52be0e449e7876c81578574eee036ed31ec8b1fbc0a9e2244b053c"
+  },
+  {
+    "name": "mission-scout-loss-hard-development-20261014",
+    "decision": "reject",
+    "reason": "Penalty for uncompensated known Scout losses: 0.496429, paired interval [0.48928571428571427, 0.5], 280 broad-suite development games. Three forced-history diagnostic decisions changed, but fresh game strength did not improve; no promotion.",
+    "source_sha256": "fe85ab45ba663a2014921de43ecf073a5e59e5643eafefec94de715492e98efc",
+    "phase": "development",
+    "strategy": "mission-uninformative-scout-loss",
+    "suite": "broad",
+    "difficulty": "hard",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 137,
+        "draws": 4,
+        "losses": 139,
+        "score": 0.49642857142857144,
+        "paired_bootstrap_95": [
+          0.48928571428571427,
+          0.5
+        ],
+        "reasons": {
+          "flag": 266,
+          "no moves": 10,
+          "ply limit": 4
+        },
+        "average_plies": 199.08928571428572
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/mission-scout-loss-hard-development-20261014.zip",
+    "archive_sha256": "563ee3c0ce004030ab9fd57fef65431c154f3a7c75dcddb3dc4c268d5552ae12"
   }
 ]

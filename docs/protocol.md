@@ -24,6 +24,14 @@ the moves of both armies, and the ranks revealed in battles.
 
 ## Commands
 
+Native builds with `AI_DIAGNOSTICS` also support `public`, returning the army,
+masked board, disclosed enemy casualties and two-square state as hex strings.
+After `go`, `played <from> <to>` acknowledges a different legal action with
+`playedok`, correcting the proposal's goal transfer and backtracking caches.
+It does not move a board piece: send the ordinary `moved` or `battle`
+notification afterward. This supports forced public-history diagnostics and
+desktop teacher adapters; production builds omit these commands.
+
 | Command | Reply | Meaning |
 | --- | --- | --- |
 | `feldmarschall` | `id name …`, `id author …`, `ok` | Sent once at start; the referee waits for `ok`. |

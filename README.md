@@ -502,6 +502,8 @@ tracker, offline teacher, compact-model results and independently tested
 
 The [next cycle checkpoint](docs/ai-next-cycle-2026-10-14.md) records independently
 validated varied deployment selection, its runtime integration and remaining work.
+The [focused mission diagnostics](docs/ai-mission-cases/README.md) retain 18
+permitted-view cases, legal alternatives and rejected strategic experiments.
 
 Normal and Hard coordinate a miner approach when revealed rear bombs suggest
 a fortified flag area. A shared route assigns a friendly blocker to move aside,

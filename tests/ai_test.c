@@ -317,7 +317,182 @@ static void variants(void) {
     }
 }
 
+#ifdef AI_MISSION_PROGRESS
+static void mission_progress_state(void) {
+    uint8_t i, saved[AI_TEST_STATE_SIZE];
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[30] = PIECE_MINER; board[20] = PIECE_CAPTAIN;
+    board[99] = PIECE_FLAG;
+    board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+    board[9] = PIECE_UNKNOWN | CELL_BLUE;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_stalled(0) == 0, "a new mission starts with no stall debt");
+    for(i=0; i<30; i++) ai_mission_begin(0);
+    CHECK(ai_mission_test_stalled(0) == 30, "unchanged route work accumulates stall debt");
+    CHECK(ai_mission_score(20, 21) == 0, "an unproductive clearing job loses its mission bonus");
+    ai_test_save(saved);
+    ai_mission_begin(CELL_BLUE);
+    CHECK(ai_mission_test_stalled(0) == 30 && ai_mission_test_stalled(CELL_BLUE) == 0,
+          "armies keep independent mission progress");
+    board[21] = board[20]; board[20] = CELL_EMPTY;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_stalled(0) == 0, "clearing a corridor blocker is measurable progress");
+    board[20] = board[21]; board[21] = CELL_EMPTY;
+    ai_test_load(saved); ai_mission_begin(0);
+    CHECK(ai_mission_test_stalled(0) == 31, "snapshots restore unproductive mission history");
+    board[20] = board[30]; board[30] = CELL_EMPTY;
+    board[21] = PIECE_CAPTAIN;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_stalled(0) == 0, "leader route progress resets stall debt");
+    for(i=0; i<250; i++) ai_mission_begin(0);
+    for(i=0; i<20; i++) ai_mission_begin(0);
+    CHECK(ai_mission_test_stalled(0) == 255, "mission progress counters saturate");
+    board[9] = CELL_EMPTY;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_stalled(0) == 0, "a public piece-count change restarts route assessment");
+    board[10] = CELL_EMPTY;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) == NOWHERE && ai_mission_test_stalled(0) == 0,
+          "contradicted or removed fortification evidence cancels the mission");
+    fresh(); board[20] = PIECE_MINER; board[99] = PIECE_FLAG;
+    board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+    for(i=0; i<50; i++) ai_mission_begin(0);
+    CHECK(ai_mission_test_stalled(0) >= 24 && ai_mission_score(20, 10) == 0,
+          "alternating guard and flag hypotheses cannot reset an unchanged cooperation job");
+}
+#endif
+
+#ifdef AI_MISSION_EVIDENCE
+static void mission_evidence(void) {
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[20] = PIECE_MINER; board[99] = PIECE_FLAG;
+    board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+    board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) == 10, "an adjacent public flag candidate supports a guard mission");
+    board[0] |= CELL_MOVED;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) == NOWHERE, "public movement contradicts a stationary guarded flag");
+    board[0] = PIECE_SCOUT | CELL_BLUE | CELL_REVEALED;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) == NOWHERE, "a disclosed mobile decoy cancels speculative guard mining");
+    game_rules = RULE_MOVING_FLAG;
+    board[0] = PIECE_UNKNOWN | CELL_BLUE | CELL_MOVED;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) != NOWHERE, "a moved concealed flag remains possible under moving flag rules");
+}
+#endif
+
+#ifdef AI_MISSION_PRESERVE
+static void mission_preserve(void) {
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[30] = PIECE_MINER; board[21] = PIECE_SERGEANT;
+    board[99] = PIECE_FLAG;
+    board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+    board[20] = PIECE_UNKNOWN | CELL_BLUE;
+    ai_mission_begin(0);
+    CHECK(ai_mission_score(21, 20) > 0 && ai_mission_score(30, 20) == 0,
+          "probe a route blocker with another piece while retaining the last miner");
+    board[20] = PIECE_SCOUT | CELL_BLUE | CELL_REVEALED;
+    ai_mission_begin(0);
+    CHECK(ai_mission_score(21, 20) > 0 && ai_mission_score(30, 20) == 0,
+          "use a suitable support attacker instead of spending the last miner");
+}
+#endif
+
+#ifdef AI_MISSION_ESCORT
+static void mission_escort(void) {
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[20] = PIECE_MINER; board[12] = PIECE_MAJOR;
+    board[99] = PIECE_FLAG;
+    board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+    board[11] = PIECE_CAPTAIN | CELL_BLUE | CELL_REVEALED;
+    ai_mission_begin(0);
+    CHECK(ai_mission_score(12, 11) > 0 && ai_mission_score(20, 10) == 0,
+          "assign support to remove a disclosed recapture threat beside a bomb");
+    board[11] = CELL_EMPTY;
+    ai_mission_begin(0);
+    CHECK(ai_mission_score(20, 10) > 0,
+          "resume the miner's guard capture after the threat is removed");
+}
+#endif
+
+#ifdef AI_MISSION_SCOUT_VALUE
+static void mission_scout_value(void) {
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[20] = PIECE_SCOUT; board[99] = PIECE_FLAG;
+    board[10] = PIECE_CAPTAIN | CELL_BLUE | CELL_REVEALED;
+    board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    ai_mission_begin(0);
+    CHECK(ai_mission_score(20, 10) == -24, "a scout should not buy already disclosed information by dying");
+    board[0] = PIECE_FLAG | CELL_BLUE | CELL_REVEALED;
+    ai_mission_begin(0);
+    CHECK(ai_mission_score(20, 10) == 0, "no reconnaissance scarcity penalty when all enemies are disclosed");
+    board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    board[21] = board[22] = PIECE_SCOUT;
+    ai_mission_begin(0);
+    CHECK(ai_mission_score(20, 10) == -24, "uninformative known losses remain costly with multiple scouts");
+    board[10] = PIECE_SCOUT | CELL_BLUE | CELL_REVEALED;
+    ai_mission_begin(0);
+    CHECK(ai_mission_score(20, 10) == 0, "an equal trade removes an opposing piece and is not an uncompensated loss");
+}
+#endif
+
+#ifdef AI_DIAGNOSTICS
+static void diagnostic_history(void) {
+    uint8_t side, a, b, actual, target, proposal_goal;
+    uint8_t before[AI_TEST_STATE_SIZE], after[AI_TEST_STATE_SIZE];
+    for(side=0; side<2; side++) {
+        fresh(); ai_difficulty = AI_NORMAL;
+        a = side ? 39 : 60; b = side ? 38 : 61;
+        board[a] = PIECE_MARSHAL | (side ? CELL_BLUE : 0);
+        board[b] = PIECE_SERGEANT | (side ? CELL_BLUE : 0);
+        board[side ? 0 : 99] = PIECE_FLAG | (side ? CELL_BLUE : 0);
+        board[side ? 49 : 50] = PIECE_SCOUT | CELL_REVEALED | (side ? 0 : CELL_BLUE);
+        board[side ? 99 : 0] = PIECE_FLAG | CELL_REVEALED | (side ? 0 : CELL_BLUE);
+        lost[PIECE_FLAG]--; lost[PIECE_SCOUT]--;
+        random_seed(1); ai_move(side ? CELL_BLUE : 0, lost, &from, &to);
+        CHECK(from == a || from == b, "diagnostic fixture selects a mobile actor");
+        ai_test_save(before);
+        ai_diagnostic_choice(side ? CELL_BLUE : 0, from, to);
+        ai_test_save(after);
+        CHECK(!memcmp(before, after, sizeof(before)), "acknowledging the proposed move preserves every cache");
+        proposal_goal = before[side*SQUARES + to];
+        actual = from == a ? b : a;
+        target = side ? actual-10 : actual+10;
+        ai_diagnostic_choice(side ? CELL_BLUE : 0, actual, target);
+        ai_test_save(after);
+        CHECK(after[side*SQUARES + from] == proposal_goal && after[side*SQUARES + to] == NOWHERE,
+              "a forced history undoes the proposal's speculative goal transfer");
+        CHECK(after[200 + side] == actual && after[202 + side] == target &&
+              after[side*SQUARES + actual] == NOWHERE && after[side*SQUARES + target] == before[side*SQUARES + actual],
+              "goal and backtrack caches follow the actually executed move on both armies");
+    }
+}
+#endif
+
 int main(void) {
+#ifdef AI_DIAGNOSTICS
+    diagnostic_history();
+#endif
+#ifdef AI_MISSION_SCOUT_VALUE
+    mission_scout_value();
+#endif
+#ifdef AI_MISSION_PRESERVE
+    mission_preserve();
+#endif
+#ifdef AI_MISSION_ESCORT
+    mission_escort();
+#endif
+#ifdef AI_MISSION_EVIDENCE
+    mission_evidence();
+#endif
+#ifdef AI_MISSION_PROGRESS
+    mission_progress_state();
+#endif
 #ifdef AI_OCCUPANCY_BELIEFS
     occupancy_beliefs();
 #endif

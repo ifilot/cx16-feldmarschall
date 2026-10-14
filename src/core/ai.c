@@ -61,6 +61,20 @@ static uint8_t targets[MAX_TARGETS];
 /* All private state lives with the code in bank 23 on the X16. Goals are
  * square-indexed, transferred after our chosen move, and validated next turn. */
 static uint8_t goals[2][SQUARES];
+#ifdef AI_DIAGNOSTICS
+static uint8_t diagnostic_goals[SQUARES];
+static void ai_diagnostic_prepare(uint8_t army) {
+    memcpy(diagnostic_goals, goals[army ? 1 : 0], SQUARES);
+}
+void ai_diagnostic_choice(uint8_t army, uint8_t from, uint8_t to) {
+    uint8_t index = army ? 1 : 0;
+    memcpy(goals[index], diagnostic_goals, SQUARES);
+    goals[index][to] = goals[index][from];
+    goals[index][from] = NOWHERE;
+    last_from[index] = from;
+    last_to[index] = to;
+}
+#endif
 static uint8_t distance[SQUARES], queue[SQUARES];
 static int16_t worth[PIECE_TYPES];
 static int16_t attack[PIECE_TYPES][2];
@@ -699,6 +713,9 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
             }
         }
     }
+#ifdef AI_DIAGNOSTICS
+    ai_diagnostic_prepare(own);
+#endif
     if(*from != NOWHERE) {
         goals[own ? 1 : 0][*to] = goals[own ? 1 : 0][*from];
         goals[own ? 1 : 0][*from] = NOWHERE;

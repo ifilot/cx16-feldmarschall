@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "archive": "evidence-20261014.zip",
+  "archive_sha256": "507184b090b6fbf04e77fedcfd22ec2328d8cd7e18d9d6c70ec317c0f506b5ce",
+  "source_archive_sha256": "b425cbce9c18e2d2b241aef3615b474a005bd9b6d3d9451ac1c347bb6cdd1f83",
+  "cases_sha256": "57595de6d9caee78f3e8adec6c1df99e8e9c4e211d27fc66037b5c41c4b90503",
+  "current_policy_versions": [
+    "job progress",
+    "adjacent flag evidence",
+    "last Miner preservation",
+    "escort",
+    "uncompensated Scout loss"
+  ],
+  "historical_policy_versions": [
+    "goal progress",
+    "scarce Scout preservation"
+  ],
+  "development_games": 3920,
+  "accepted_policies": 0,
+  "production_matches_frozen_missions": {
+    "normal_decisions": 1672,
+    "hard_decisions": 1809
+  },
+  "benchmark_archives": [
+    "ai-runs/mission-escort-hard-development-20261014.zip",
+    "ai-runs/mission-escort-normal-development-20261014.zip",
+    "ai-runs/mission-evidence-hard-development-20261014.zip",
+    "ai-runs/mission-evidence-normal-development-20261014.zip",
+    "ai-runs/mission-job-progress-hard-development-20261014.zip",
+    "ai-runs/mission-job-progress-normal-development-20261014.zip",
+    "ai-runs/mission-preserve-hard-development-20261014.zip",
+    "ai-runs/mission-preserve-normal-development-20261014.zip",
+    "ai-runs/mission-progress-hard-development-20261014.zip",
+    "ai-runs/mission-progress-normal-development-20261014.zip",
+    "ai-runs/mission-scout-loss-hard-development-20261014.zip",
+    "ai-runs/mission-scout-loss-normal-development-20261014.zip",
+    "ai-runs/mission-scout-value-hard-development-20261014.zip",
+    "ai-runs/mission-scout-value-normal-development-20261014.zip"
+  ]
+}
