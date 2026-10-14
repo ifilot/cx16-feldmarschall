@@ -56,5 +56,5 @@
     "build/ai-teacher/teacher-gate.json": "4320145c2e44f10e6a22b3fe88b8b4e1147e66da8f10d2e73b992380e9868a3a"
   },
   "checkpoint_sources_sha256": "af26d0d37c69e4335e732f59a093ba3eb8495eb9b172765a0673b52b4be3a449",
-  "scope": "Desktop teacher and student experiments; all students remain experimental and disabled in production."
+  "scope": "Initial teacher/student checkpoint before the cooperation guard; promotion evidence is in ../ai-student-production/manifest.json."
 }

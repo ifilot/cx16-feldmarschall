@@ -6,6 +6,9 @@
 #include "ai.h"
 #include "board.h"
 #include "rules.h"
+#if defined(AI_STUDENT_PRODUCTION) && (!defined(AI_STUDENT_V2) || !defined(AI_STUDENT_COOP_GUARD) || defined(AI_STUDENT_CONTEXT) || defined(AI_STUDENT_QUIET_LIMIT))
+#error Production student requires the validated V2 cooperation guard and original features
+#endif
 #ifndef AI_MEMORY
 #error Student features require AI_MEMORY
 #endif
@@ -105,7 +108,9 @@ uint8_t ai_student_feature(uint8_t from,uint8_t to,uint8_t feature) {
 }
 #ifdef AI_STUDENT
 typedef struct {uint8_t feature,threshold,left,right;int16_t value;} student_node_t;
-#ifdef AI_STUDENT_V2
+#ifdef AI_STUDENT_PRODUCTION
+#include "ai_student_model_production.h"
+#elif defined(AI_STUDENT_V2)
 #include "ai_student_model_v2.h"
 #else
 #include "ai_student_model.h"

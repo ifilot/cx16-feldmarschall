@@ -28,6 +28,14 @@
 static uint8_t saved[ARMY_SIZE];    // Red's home rows, top row first
 static uint8_t saved_valid;
 
+#if defined(BANKED_AI) && defined(AI_MEMORY)
+/* The tracker/student needs main RAM. Random deployment runs wholly in bank
+ * 24, including its work pool; stored player deployments stay in main RAM. */
+#pragma code-name ("MISSIONCODE")
+#pragma rodata-name ("MISSIONRODATA")
+#pragma bss-name ("MISSIONBSS")
+#define setup_random setup_random_banked
+#endif
 static uint8_t pool[ARMY_SIZE];
 
 /**
@@ -74,6 +82,11 @@ void setup_random(uint8_t blue) {
     }
 }
 
+#if defined(BANKED_AI) && defined(AI_MEMORY)
+#pragma code-name ("CODE")
+#pragma rodata-name ("RODATA")
+#pragma bss-name ("BSS")
+#endif
 void setup_store(void) {
     memcpy(saved, board + RED_HOME0, ARMY_SIZE);
     saved_valid = 1;

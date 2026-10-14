@@ -4,11 +4,10 @@
 
 The masked-policy rollout teacher establishes a useful Classic Normal strength
 gain against the frozen mission policy and the earlier material teacher. A
-student trained on representative development games also passes an independent
-strength gate, but breaks an existing Scout-support regression. It remains
-disabled in production. Inventory features and a capture-only ablation do not
-establish a gain. The next experiment must retain useful quiet decisions while
-preserving support for a specialist.
+student trained on representative development games initially broke an existing
+Scout-support regression. A cooperation guard preserves assigned support jobs
+while retaining a reliable strength gain. This guarded model is now enabled for
+Classic Normal. Inventory features and the capture-only ablation remain rejected.
 
 ## Teacher behaviour and validation
 
@@ -103,9 +102,58 @@ Held-out mean absolute error also fails to beat zero correction: 14.52 versus
 The game results justify investigating move ranking and quiet-move safeguards,
 rather than treating regression accuracy as a sufficient promotion criterion.
 
+## Cooperation guard and production adoption
+
+The accepted version preserves the assigned cooperation actor's native quiet-move
+scores. Learned corrections still apply to other quiet moves and to all captures.
+This protects a support assignment that the cold future rollout cannot reliably
+reconstruct, without disabling quiet corrections throughout the army.
+
+Development scores 55.2% over 560 games. After freezing the executable and model,
+fresh independent validation scores 54.0% over 1,400 games, with a paired 95%
+interval of 51.8–56.2%. It avoids the same two diagnostic specialist losses and
+passes the unchanged Scout-support tests. The decoy family remains weak at
+46.5% (42.0–50.5%); the overall result does not establish improvement in that family.
+
+A separate matched league check plays 700 games per policy against five frozen
+opponents. Both the student and mission control score 70.07%. The complete-block
+interval for their difference is -3.64 to +3.50 percentage points. Gains against
+the adaptive opponent offset lower scores against the original and greedy
+opponents. Capped games increase from three to thirteen. Adoption therefore rests
+on the independently demonstrated mission-baseline gain, with no established
+league-wide gain or claim about human strength.
+
+The 31-node model occupies 186 bytes. Production enables it only for Classic
+Normal; Easy, Hard and optional variants retain their mission scoring. The
+tracker restarts cold after loading GAME.DAT, preserving the existing format.
+An actual save/load check verifies that stale observer records are cleared.
+
+The first banked integration exceeded main RAM by three bytes. Moving protected
+random deployment and its work pool into bank 24 leaves 585 bytes before the
+reserved 1 KB stack. Calls already in bank 24 use the random implementation
+directly, avoiding nested gateway state. The tactical bank remains 8,147/8,192
+bytes and the mission bank uses 7,512/8,192 bytes. All 180 banked deployment calls
+match native layouts and RNG, including the direct Random-button path.
+
+Eighty actual production turns match both native armies with accumulated history
+and per-turn RNG. At least 996 stack-canary bytes remain untouched in these AI
+calls; this is an observed guard measurement, not a mathematical stack bound.
+Their maximum time is 33 frames. Another 100 cold positions match the frozen
+candidate and actual X16 build, taking at most 39 frames (0.65 seconds), mean
+23.07 frames. A separate 50-position Hard prototype check also matches native.
+
+Production checks pass for 15,163 hidden-rank permutations, 3,836 Silent Defense
+comparisons, disclosure bookkeeping, eight banked cooperation fixtures, difficulty
+and legacy saves, game flow, demo, variant rules and distribution boot. All 34
+browser runtime files match the built game, and its download matches the
+distribution ZIP. The [production manifest](../ai-student-production/manifest.json)
+retains the model binding, sources, programs, timing, stack, save/load and package
+evidence. Optional-variant strength benchmarks remain the next required stage.
+
 ## Evidence and reproduction
 
-The [manifest](manifest.json) identifies the [evidence archive](evidence-20261014.zip).
+The [initial checkpoint manifest](manifest.json) identifies its
+[evidence archive](evidence-20261014.zip), captured before the cooperation guard.
 It contains full/cold public inputs, labels, generated models, source snapshots,
 programs, frozen teacher settings, strength gates, focused reports and rejected
 tactical results. The initial failed producer is retained too: it compared stale
@@ -134,6 +182,7 @@ python3 tools/train_teacher_student.py --gate build/ai-teacher/teacher-gate.json
 make native-student-v2 AI_STUDENT_V2_DIR=NEW_FIT
 ```
 
-The all-action model's tactical test is an expected rejection, not a passing
-integration check. No student has earned X16 promotion. Production still uses
-coordinated missions with the validated deployment mixtures. Variant strength,+a successful mission/student change and its hardware gates remain outstanding.
+The unguarded model's tactical test remains an expected rejection. Reproduce the
+accepted candidate with `make native-student-coop-guard test-ai-student-coop-guard`.
+`make all native check` builds and checks the adopted production configuration.
+Variant strength remains outstanding.

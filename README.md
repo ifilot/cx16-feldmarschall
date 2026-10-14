@@ -504,6 +504,11 @@ The [next cycle checkpoint](docs/ai-next-cycle-2026-10-14.md) records independen
 validated varied deployment selection, its runtime integration and remaining work.
 The [focused mission diagnostics](docs/ai-mission-cases/README.md) retain 18
 permitted-view cases, legal alternatives and rejected strategic experiments.
+The [teacher and student checkpoint](docs/ai-teacher/README.md) records the
+stronger public-input desktop teacher and the compact cooperation-guard model
+adopted for Classic Normal. It scores 54.0% against the frozen mission baseline
+in 1,400 independent games; the separate matched opponent league shows no overall
+gain. Other difficulties and variants retain mission scoring.
 
 Normal and Hard coordinate a miner approach when revealed rear bombs suggest
 a fortified flag area. A shared route assigns a friendly blocker to move aside,

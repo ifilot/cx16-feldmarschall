@@ -11,6 +11,10 @@
 #pragma rodata-name ("MISSIONRODATA")
 #pragma bss-name ("MISSIONBSS")
 #define setup_ai setup_ai_banked
+#ifdef AI_MEMORY
+/* Already in bank 24: avoid nesting the gateway's saved-bank slot. */
+#define setup_random setup_random_banked
+#endif
 #endif
 
 /* Front row first, columns a-j: Fortress, Evolved 2, Evolved 3. */

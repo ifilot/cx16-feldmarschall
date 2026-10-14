@@ -8,6 +8,8 @@
 .import _ai_student_inventory_banked
 .endif
 .ifdef AI_MEMORY
+.export _setup_random
+.import _setup_random_banked
 .export _ai_memory_observe
 .import _ai_memory_observe_banked
 .endif
@@ -58,6 +60,11 @@ saved_bank: .res 1
 .endproc
 .endif
 .ifdef AI_MEMORY
+.proc _setup_random
+    jsr select_bank
+    jsr _setup_random_banked
+    jmp restore_bank
+.endproc
 .proc _ai_memory_observe
     jsr select_bank
     jsr _ai_memory_observe_banked

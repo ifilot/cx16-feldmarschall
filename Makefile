@@ -60,6 +60,8 @@ HOSTCC ?= gcc
 CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai.c ai_level.c ai_deploy.c)
 CORE_MISSIONS = $(CORE_NATIVE) src/core/ai_mission.c
 CORE_MEMORY = $(CORE_MISSIONS) src/core/ai_memory.c
+CORE_PRODUCTION = $(CORE_MEMORY) src/core/ai_student.c
+AI_PRODUCTION_FLAGS = -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_PRODUCTION -DAI_STUDENT_COOP_GUARD
 
 .PHONY: native-teacher-rollout native-teacher-observer
 .PHONY: native-student-v2 test-ai-student-v2
@@ -89,6 +91,17 @@ build/feldmarschall-student-v2-diagnostics: src/native/engine.c $(CORE_MEMORY) s
 	mkdir -p build
 	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_DIAGNOSTICS -I$(AI_STUDENT_V2_DIR) -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
 AI_STUDENT_V3_DIR ?= build/ai-student/balanced-context-v3
+.PHONY: native-student-coop-guard test-ai-student-coop-guard
+AI_STUDENT_BALANCED_DIR ?= build/ai-student/balanced-v2
+native-student-coop-guard: build/feldmarschall-student-coop-guard
+build/feldmarschall-student-coop-guard: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_BALANCED_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_COOP_GUARD -DAI_DIAGNOSTICS -I$(AI_STUDENT_BALANCED_DIR) -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+test-ai-student-coop-guard: build/ai-student-coop-guard-test
+	build/ai-student-coop-guard-test
+build/ai-student-coop-guard-test: tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_BALANCED_DIR)/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_COOP_GUARD -I$(AI_STUDENT_BALANCED_DIR) -Isrc/core -o $@ tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c
 native-student-v3: build/feldmarschall-engine-student-v3
 build/feldmarschall-engine-student-v3: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h) $(AI_STUDENT_V3_DIR)/ai_student_model_v2.h
 	mkdir -p build
@@ -367,9 +380,9 @@ build/feldmarschall-ai-coordinated: src/native/engine.c tests/baselines/ai_coord
 benchmark-ai-progress: native native-coordinated-baseline
 	python3 tools/benchmark_ai.py --missions $(AI_BENCHMARK_FLAGS)
 
-build/feldmarschall-engine: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+build/feldmarschall-engine: src/native/engine.c $(CORE_PRODUCTION) $(wildcard src/core/*.h)
 	mkdir -p build
-	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow $(AI_PRODUCTION_FLAGS) -Isrc/core -o $@ src/native/engine.c $(CORE_PRODUCTION)
 
 # Previous planned evaluator, used to prove Normal optimizations preserve choices.
 native-planned: build/feldmarschall-ai-planned
@@ -397,9 +410,9 @@ build/feldmarschall-ai-v020: src/native/engine.c tests/baselines/ai_v020.c $(fil
 test-ai: build/ai-test
 	build/ai-test
 
-build/ai-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+build/ai-test: tests/ai_test.c $(CORE_PRODUCTION) $(wildcard src/core/*.h)
 	mkdir -p build
-	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST $(AI_PRODUCTION_FLAGS) -Isrc/core -o $@ tests/ai_test.c $(CORE_PRODUCTION)
 
 test-ai-levels: all
 	python3 tools/test_ai_levels.py
@@ -456,9 +469,9 @@ check: build/rules-test build/ai-test build/native-info-test
 	build/ai-test
 	build/native-info-test
 
-build/native-info-test: tests/native_info_test.c src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+build/native-info-test: tests/native_info_test.c src/native/engine.c $(CORE_PRODUCTION) $(wildcard src/core/*.h)
 	mkdir -p build
-	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -Isrc/core -o $@ tests/native_info_test.c $(CORE_MISSIONS)
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow $(AI_PRODUCTION_FLAGS) -Isrc/core -o $@ tests/native_info_test.c $(CORE_PRODUCTION)
 
 build/rules-test: tests/rules_test.c src/core/rules.c src/core/board.c src/core/pieces.c src/core/ai.c src/core/ai_level.c src/core/random.c $(wildcard src/core/*.h)
 	mkdir -p build

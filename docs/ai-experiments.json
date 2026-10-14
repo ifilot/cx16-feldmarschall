@@ -4070,5 +4070,272 @@
     "executable_snapshots_available": true,
     "archive": "ai-runs/rollout-student-capture-guard-development-20261014.zip",
     "archive_sha256": "3ce960adef0a5f3534786337d387e06f41ec0f0298477d5556952064aa9fc0fa"
+  },
+  {
+    "name": "rollout-student-coop-guard-development-20261014",
+    "decision": "diagnostic",
+    "reason": "Cooperation actor guard passes tactics and fairness, scores 55.2% in development; frozen before fresh validation.",
+    "source_sha256": "37dec246ac0c42e1854c8b9d4e3a410cbf205ece8e8688a12eeab33335ac50ad",
+    "phase": "development",
+    "strategy": "rollout-student-coop-guard",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 560,
+        "wins": 306,
+        "draws": 6,
+        "losses": 248,
+        "score": 0.5517857142857143,
+        "paired_bootstrap_95": [
+          0.5178571428571429,
+          0.5857142857142857
+        ],
+        "reasons": {
+          "no moves": 11,
+          "flag": 543,
+          "neither can move": 1,
+          "ply limit": 5
+        },
+        "average_plies": 176.16071428571428
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-coop-guard-development-20261014.zip",
+    "archive_sha256": "69564c6aa5a79689e55ba0606ef8417217dd5ae95ab9c7687835f856a7df8899"
+  },
+  {
+    "name": "rollout-student-coop-guard-validation-20261014",
+    "decision": "keep",
+    "reason": "Classic Normal candidate: 54.0% versus frozen missions, paired interval 51.8-56.2%, two diagnostic specialist losses avoided, tactics and fairness pass; runtime integration evidence retained separately.",
+    "source_sha256": "37dec246ac0c42e1854c8b9d4e3a410cbf205ece8e8688a12eeab33335ac50ad",
+    "phase": "validation",
+    "strategy": "rollout-student-coop-guard",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 1400,
+        "wins": 753,
+        "draws": 6,
+        "losses": 641,
+        "score": 0.54,
+        "paired_bootstrap_95": [
+          0.5178571428571429,
+          0.5625
+        ],
+        "reasons": {
+          "flag": 1378,
+          "no moves": 16,
+          "ply limit": 6
+        },
+        "average_plies": 171.01142857142858
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-coop-guard-validation-20261014.zip",
+    "archive_sha256": "ec273d807dbdc6cedbd98e100a7cf7f87e03c4c67c92db05698993355757e35a"
+  },
+  {
+    "name": "rollout-student-coop-guard-league-validation-20261014",
+    "decision": "diagnostic",
+    "reason": "Frozen candidate league check: 70.07% in 700 games; matched mission control has same overall score, with opponent tradeoffs and more caps.",
+    "source_sha256": "37dec246ac0c42e1854c8b9d4e3a410cbf205ece8e8688a12eeab33335ac50ad",
+    "phase": "validation",
+    "strategy": "rollout-student-coop-guard",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 93,
+        "draws": 9,
+        "losses": 38,
+        "score": 0.6964285714285714,
+        "paired_bootstrap_95": [
+          0.6357142857142857,
+          0.7571428571428571
+        ],
+        "reasons": {
+          "flag": 130,
+          "ply limit": 9,
+          "no moves": 1
+        },
+        "average_plies": 248.0
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 86,
+        "draws": 1,
+        "losses": 53,
+        "score": 0.6178571428571429,
+        "paired_bootstrap_95": [
+          0.5571428571428572,
+          0.675
+        ],
+        "reasons": {
+          "flag": 136,
+          "no moves": 3,
+          "ply limit": 1
+        },
+        "average_plies": 182.62142857142857
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 82,
+        "draws": 0,
+        "losses": 58,
+        "score": 0.5857142857142857,
+        "paired_bootstrap_95": [
+          0.5214285714285715,
+          0.65
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 158.84285714285716
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 110,
+        "draws": 2,
+        "losses": 28,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.7357142857142858,
+          0.85
+        ],
+        "reasons": {
+          "flag": 137,
+          "no moves": 1,
+          "ply limit": 2
+        },
+        "average_plies": 247.62142857142857
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 113,
+        "draws": 1,
+        "losses": 26,
+        "score": 0.8107142857142857,
+        "paired_bootstrap_95": [
+          0.7535714285714286,
+          0.8678571428571429
+        ],
+        "reasons": {
+          "flag": 137,
+          "no moves": 2,
+          "ply limit": 1
+        },
+        "average_plies": 154.29285714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-coop-guard-league-validation-20261014.zip",
+    "archive_sha256": "e03ac4298ff586edd76a83ce228728e004766c72177168abd7e1856da7599e03"
+  },
+  {
+    "name": "rollout-student-coop-guard-league-control-20261014",
+    "decision": "diagnostic",
+    "reason": "Matched frozen mission control for candidate league check, 70.07%; identical deployments, seeds, sides and opponents.",
+    "source_sha256": "0e2f81ad7ce5634d0becf6259fc44445b9f5885ca13df9d8884ca2d1afb63aa3",
+    "phase": "validation",
+    "strategy": "mission-league-control",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 140,
+        "wins": 106,
+        "draws": 0,
+        "losses": 34,
+        "score": 0.7571428571428571,
+        "paired_bootstrap_95": [
+          0.6928571428571428,
+          0.8214285714285714
+        ],
+        "reasons": {
+          "flag": 139,
+          "no moves": 1
+        },
+        "average_plies": 202.42857142857142
+      },
+      "current-vs-planned": {
+        "games": 140,
+        "wins": 83,
+        "draws": 2,
+        "losses": 55,
+        "score": 0.6,
+        "paired_bootstrap_95": [
+          0.5214285714285715,
+          0.675
+        ],
+        "reasons": {
+          "flag": 135,
+          "ply limit": 2,
+          "no moves": 3
+        },
+        "average_plies": 202.6
+      },
+      "current-vs-adaptive": {
+        "games": 140,
+        "wins": 68,
+        "draws": 0,
+        "losses": 72,
+        "score": 0.4857142857142857,
+        "paired_bootstrap_95": [
+          0.42142857142857143,
+          0.55
+        ],
+        "reasons": {
+          "flag": 140
+        },
+        "average_plies": 171.77142857142857
+      },
+      "current-vs-easy": {
+        "games": 140,
+        "wins": 111,
+        "draws": 1,
+        "losses": 28,
+        "score": 0.7964285714285714,
+        "paired_bootstrap_95": [
+          0.7357142857142858,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 138,
+          "ply limit": 1,
+          "no moves": 1
+        },
+        "average_plies": 207.07142857142858
+      },
+      "current-vs-greedy": {
+        "games": 140,
+        "wins": 121,
+        "draws": 0,
+        "losses": 19,
+        "score": 0.8642857142857143,
+        "paired_bootstrap_95": [
+          0.8071428571428572,
+          0.9142857142857143
+        ],
+        "reasons": {
+          "flag": 137,
+          "no moves": 3
+        },
+        "average_plies": 146.52142857142857
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/rollout-student-coop-guard-league-control-20261014.zip",
+    "archive_sha256": "68f9480f5c5f069943d25fbdc78154efe3460b25a9865720486ecd53a0ea72ac"
   }
 ]

@@ -15,6 +15,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--runtime',type=Path,default=ROOT/'build/ai-student-x16')
     parser.add_argument('--turns',type=int,default=80)
+    parser.add_argument('--engine',type=Path,default=ROOT/'build/feldmarschall-engine-student')
     args=parser.parse_args();runtime=args.runtime
     symbols=(runtime/'FELDMARS.sym').read_text()
     symbol=lambda name:int(re.search(r'al ([0-9A-F]+) \._'+name+r'\b',symbols).group(1),16)
@@ -34,7 +35,7 @@ def main():
             assert session.emu.request('status')['pc']==mask
             truth=bytes(session.emu.read_memory(symbol('board'),100))
             for army in (0,1):
-                engine=Engine(str(ROOT/'build/feldmarschall-engine-student')+' --difficulty normal')
+                engine=Engine(str(args.engine.resolve())+' --difficulty normal')
                 engine.send('new '+('red','blue')[army])
                 engine.send('setup '+''.join(GLYPHS[truth[sq]&15] for sq in setup_squares(army)))
                 engines.append(engine)
@@ -44,6 +45,9 @@ def main():
             for turn in range(args.turns):
                 before=session.emu.request('status');assert before['pc']==gateway
                 stack=int.from_bytes(session.emu.read_memory(0x22,2),'little')
+                assert 0x9b00+32 < stack < 0x9f00, 'software stack stays inside its reserved 1 KB'
+                canary=bytes([0xa5])*(stack-0x9b00)
+                session.emu.write_memory(0x9b00,canary)
                 arguments=bytes(session.emu.read_memory(stack,5))
                 from_ptr=int.from_bytes(arguments[:2],'little')
                 to_ptr=before['a']|before['x']<<8
@@ -54,9 +58,13 @@ def main():
                 session.emu.request('breakpoint',action='remove',address=gateway)
                 session.emu.request('breakpoint',address=gateway+6)
                 assert session.emu.advance(600)['reason']=='breakpoint'
+                after=session.emu.request('status')
                 got=(session.emu.read_memory(from_ptr,1)[0],session.emu.read_memory(to_ptr,1)[0])
                 assert got==expected,(turn,army,got,expected)
-                assert session.emu.request('status')['ram_bank']==23
+                assert after['ram_bank']==23
+                used=bytes(session.emu.read_memory(0x9b00,len(canary)))
+                untouched=next((i for i,v in enumerate(used) if v!=0xa5),len(used))
+                assert untouched>=32, 'AI leaves a stack guard intact'
                 session.emu.request('breakpoint',action='remove',address=gateway+6)
                 session.emu.request('breakpoint',address=observe)
                 assert session.emu.advance(600)['reason']=='breakpoint'
@@ -69,6 +77,8 @@ def main():
                     f'battle {square_name(src)} {square_name(to)} {GLYPHS[cells[src]&15]} {GLYPHS[cells[to]&15]}')
                 for engine in engines:engine.send(notification)
                 records.append({'turn':turn,'army':int(army),'seed':seed,'move':got,
+                                'frames':after['frames']-before['frames'],
+                                'stack_canary_untouched_bytes':untouched,
                                 'actor_prior_observed_moves':history[5],'notification':notification})
                 session.emu.request('breakpoint',action='remove',address=observe)
                 if outcome!=3 and cells[to]&15==11:break
@@ -82,7 +92,9 @@ def main():
             session.emu.close()
     assert len(records)>=20
     report={'turns':records,'mismatches':0,'max_actor_prior_observed_moves':max(r['actor_prior_observed_moves'] for r in records),
-            'native_sha256':hashlib.sha256((ROOT/'build/feldmarschall-engine-student').read_bytes()).hexdigest(),
+            'max_frames':max(r['frames'] for r in records),
+            'minimum_stack_canary_untouched_bytes':min(r['stack_canary_untouched_bytes'] for r in records),
+            'native_sha256':hashlib.sha256(args.engine.read_bytes()).hexdigest(),
             'runtime_provenance':json.loads((runtime/'provenance.json').read_text())}
     (runtime/'banked-student-decisions.json').write_text(json.dumps(report,indent=2)+'\n')
     print(f'{len(records)} real banked student turns match both native armies; history and per-turn RNG preserved')

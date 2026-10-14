@@ -4,9 +4,10 @@
 
 Classic Normal and Hard now select varied deployments from CORNER FORTRESS,
 Evolved 2 and Evolved 3. The frozen mixtures passed independent validation
-against protected random deployment. Move selection remains coordinated missions;
-the experimental student remains disabled. Easy and optional variants retain
-protected random deployment.
+against protected random deployment. Classic Normal now adds a validated compact
+student with a cooperation guard to the mission evaluator. Other levels and
+variants retain mission scoring. Easy and optional variants retain protected
+random deployment.
 
 ## Deployment policy and independent results
 
@@ -79,16 +80,18 @@ continuation. Fallback tests cover all 63 nonzero rule combinations. Another
 all five rejected first draws, both armies, Easy and representative variants.
 The gateway restores bank 22 after each call.
 
-The production tactical bank remains 8,147/8,192 bytes. Mission bank use is
-2,546/8,192 bytes. Main RAM ends at 0x9AD7, leaving 41 bytes before the reserved
-1 KB stack at 0x9B00. No stack reservation was reduced.
+The current production tactical bank remains 8,147/8,192 bytes. After student
+integration and relocation of random deployment into bank 24, mission bank use
+is 7,512/8,192 bytes. The first free main-RAM address is 0x98B7, leaving 585 bytes before the
+reserved 1 KB stack at 0x9B00. No stack reservation was reduced.
 
 `make all check`, deployment selection tests, flow, demo, difficulty/save controls,
 eight banked mission fixtures and distribution boot pass. The rebuilt browser
 package has all 34 runtime files byte-identical to the X16 build, and its ZIP
 download matches the distribution. The [runtime manifest](ai-selection/manifest.json)
-links retained sources, binaries, linker map, banked checks and distribution.
-Archive verification passes for 52 runs and 42,638 games.
+links the original deployment checkpoint. The later
+[student production manifest](ai-student-production/manifest.json) retains the
+current runtime. Archive verification passes for 82 runs and 57,226 games.
 
 ## Reproduction
 
@@ -119,12 +122,12 @@ must not be overwritten.
 3. **Mission experiments:** seven isolated versions tested in 3,920 development
    games, covering progress/reconsideration, contradictory fortification evidence,
    Miner preservation, escort and Scout preservation. None earned promotion.
-   A further policy with useful diagnostic improvement and independently established
-   broad-suite strength against the frozen mission baseline remains outstanding.
-4. **Mission hardware gate:** for every accepted change, check bank/main RAM and
-   stack headroom, concealed-rank invariance, public-only features, persistent
-   native/X16 parity for both armies, timing, bank restoration and save/load
-   semantics for any added persistent state.
+   The subsequent guarded student avoids two specialist losses in the diagnostic
+   set and scores 54.0% (51.8–56.2%) against the frozen mission baseline over
+   1,400 independent Classic Normal games. Isolated failed heuristics remain off.
+4. **Mission hardware gate:** complete for the adopted guarded student. Bank/main
+   RAM, stack guards, hidden-information invariance, both armies with persistent
+   histories, timing, bank restoration and cold history on save/load pass.
 5. **Stronger desktop teacher:** Classic Normal strength gates passed. A frozen
    masked-policy rollout successor scores 71.0% against missions and 54.0%
    against the earlier material teacher in independent 1,400-game comparisons.
@@ -134,14 +137,17 @@ must not be overwritten.
    fit scores 37.1%. Representative development data produces a compact model
    with independent score 56.25% (53.96–58.54%), but it fails an existing
    Scout-support tactic. Inventory features score 51.4%; removing quiet
-   corrections passes tactics but scores 50.0%. None is promoted. Next preserve
-   specialist support while retaining the useful quiet decisions, then repeat
-   independent strength, fairness, timing and X16 gates for the new candidate.
+   corrections passes tactics but scores 50.0%. A cooperation guard preserves the
+   assigned actor's quiet priorities and retains a reliable 54.0% independent
+   score. It passes diagnostics, fairness and X16 checks and is adopted for
+   Classic Normal. The matched five-opponent league check establishes no overall
+   gain; decoys remain a weakness. Sources, models and rejections are retained.
 7. **Variant strength:** extend the referee and opponents to individual variants
    and representative combinations, test Normal and Hard independently and use
    results to decide whether variant-specific tuning is justified.
 8. **Checkpoints:** retain sources, executable identities, seeds, traces and each
    acceptance/rejection decision; update the handoff and commit completed changes.
 
-The full requested cycle remains in progress. Completion of deployment selection
-does not complete the later mission, teacher, student or variant requirements.
+The full requested cycle remains in progress. Optional-variant strength benchmarks
+must still extend the referee and opponents, then validate Normal and Hard using
+the retained production policy and close that stage with its own checkpoint.

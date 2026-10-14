@@ -360,6 +360,11 @@ int16_t ai_mission_score(uint8_t from, uint8_t to) {
        rules_battle(PIECE_SCOUT, PIECE_TYPE(board[to])) == BATTLE_DEFENDER) result -= 24;
 #endif
 #ifdef AI_STUDENT
+#ifdef AI_STUDENT_COOP_GUARD
+    /* Rollout futures start cold. Preserve the assigned cooperation actor's
+     * quiet priorities while learning other quiet moves and all captures. */
+    if(from==actor && !IS_PIECE(board[to])) return result;
+#endif
     result += ai_student_score(from, to);
 #endif
     return result;

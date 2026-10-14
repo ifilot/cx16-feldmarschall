@@ -1,5 +1,6 @@
 """Difficulty selection, saved-game compatibility, and real banked AI use."""
 import shutil
+import re
 import tempfile
 from pathlib import Path
 from distribute import runtime_files
@@ -16,6 +17,9 @@ def checksum(data):
 
 
 def main():
+    mapping=(ROOT/'src/FELDMARS.map').read_text()
+    memory_base=int(re.search(r'^MISSIONBSS\s+([0-9A-F]+)',mapping,re.M).group(1),16)
+    memory_base+=int(re.search(r'ai_memory\.o:\n\s+MISSIONBSS\s+Offs=([0-9A-F]+)',mapping).group(1),16)
     with tempfile.TemporaryDirectory(prefix='feldmarschall-ai-levels-') as tmp:
         directory = Path(tmp)
         for name in runtime_files():
@@ -54,7 +58,12 @@ def main():
             assert saved[-3] & 0x46 == 0x44
             choose(session, '3')
             write(session, 'ai_difficulty', [0])
+            # GAME.DAT omits observer history. Loading must clear a warm tracker
+            # and safely use the cold-history model, rather than stale identities.
+            session.emu.write_memory(memory_base-0xa000,bytes([0])*941,space='banked_ram',bank=24)
             choose(session, '3')
+            history=bytes(session.emu.read_memory(memory_base-0xa000,941,space='banked_ram',bank=24))
+            assert history==bytes([255])*100+bytes(841), 'loading clears all public observer history'
             assert read(session, 'ai_difficulty', 1) == b'\x02'
             assert text(session, 9) == 'YOUR TURN'
             choose(session, 'Escape'); choose(session, '3')
