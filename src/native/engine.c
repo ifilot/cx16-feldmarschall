@@ -38,9 +38,17 @@
 #include "setup.h"
 #include "random.h"
 #include "ai.h"
+#if defined(AI_FEATURE_TRACE) || defined(AI_STUDENT)
+#include "ai_student.h"
+#endif
 
 static uint8_t own;                         // CELL_BLUE or 0
 static int tracing;                         // "think" prints every candidate
+#ifdef AI_TRAINING
+void ai_trace_training(uint8_t from, uint8_t to, int16_t capture_credit) {
+    if(tracing == 1) printf("credit %u %u %d\n", from, to, capture_credit);
+}
+#endif
 
 void ai_trace(uint8_t from, uint8_t to, int16_t score) {
     if(tracing == 1) printf("candidate %d %d %d\n", from, to, score);
@@ -141,6 +149,20 @@ static void go(void) {
     reply(text);
 }
 
+#ifdef AI_MEMORY
+static void memory(uint8_t sq) {
+    char text[128];
+    uint8_t id;
+    const ai_piece_history_t* piece;
+    ai_memory_sync(); id = ai_memory_identity(sq); piece = ai_memory_history(id);
+    if(!piece) { reply("history none"); return; }
+    sprintf(text, "history %u %u %u %u %u %u %u %u %u %u %u", sq, id,
+            piece->origin, piece->square, piece->owner, piece->moves, piece->battles,
+            piece->known_rank, piece->approach_rank, piece->retreat_rank, piece->candidates);
+    reply(text);
+}
+#endif
+
 static void remove_piece(uint8_t sq) {
     uint8_t cell = board[sq];
 
@@ -155,6 +177,9 @@ static void remove_piece(uint8_t sq) {
 static void moved(uint8_t from, uint8_t to) {
     uint8_t cell = board[from];
     int rows = SQUARE_ROW(from) - SQUARE_ROW(to), cols = SQUARE_COL(from) - SQUARE_COL(to);
+#ifdef AI_MEMORY
+    ai_memory_observe(from, to, AI_MEMORY_QUIET);
+#endif
 
     if(rows > 1 || rows < -1 || cols > 1 || cols < -1) {
         cell = (cell & ~CELL_TYPE) | PIECE_SCOUT | CELL_REVEALED;
@@ -173,6 +198,9 @@ static void battle(uint8_t from, uint8_t to, int attacker, int defender) {
 
     board[from] = a;
     board[to] = d;
+#ifdef AI_MEMORY
+    ai_memory_observe(from, to, rules_battle(attacker, defender));
+#endif
     switch(rules_battle(attacker, defender)) {
         case BATTLE_ATTACKER:
             remove_piece(to);
@@ -199,6 +227,30 @@ static int hex(const char* text, uint8_t* out, int n) {
     }
     return 1;
 }
+
+#ifdef AI_FEATURE_TRACE
+static void features(char* args) {
+    char* army=strtok(args," ");
+    char* lost=strtok(NULL," ");
+    char* cells=strtok(NULL," ");
+    char* cold=strtok(NULL," ");
+    uint8_t sq,n,i,k,targets[MAX_TARGETS];
+    if(!army || !hex(lost,enemy_lost,PIECE_TYPES) || !hex(cells,board,SQUARES)) {reply("error features");return;}
+    own=atoi(army)?CELL_BLUE:0;
+    if(cold && atoi(cold)) ai_memory_reset();
+    ai_student_begin(own);
+    for(sq=0;sq<SQUARES;sq++) {
+        if(!IS_PIECE(board[sq]) || (board[sq]&CELL_BLUE)!=own) continue;
+        n=rules_targets(sq,targets);
+        for(i=0;i<n;i++) {
+            printf("feature %u %u",sq,targets[i]);
+            for(k=0;k<AI_STUDENT_FEATURES;k++) printf(" %u",ai_student_feature(sq,targets[i],k));
+            puts("");
+        }
+    }
+    reply("features_done");
+}
+#endif
 
 /**
  * @brief think <army> <seed> <lost: 24 hex digits> <board: 200 hex digits>
@@ -278,6 +330,18 @@ int main(int argc, char** argv) {
             }
         } else if(!strcmp(command, "go")) {
             go();
+#ifdef AI_STUDENT
+        } else if(!strcmp(command, "student")) {
+            from=square(strtok(args," "));to=square(strtok(NULL," "));
+            if(from==NOWHERE || to==NOWHERE) reply("error squares");
+            else {ai_student_begin(own);printf("learned %d\n",ai_student_score(from,to));fflush(stdout);}
+#endif
+#ifdef AI_MEMORY
+        } else if(!strcmp(command, "memory")) {
+            from = square(args);
+            if(from == NOWHERE) reply("error square");
+            else memory(from);
+#endif
         } else if(!strcmp(command, "moved") || !strcmp(command, "battle")) {
             from = square(strtok(args, " "));
             to = square(strtok(NULL, " "));
@@ -300,6 +364,10 @@ int main(int argc, char** argv) {
             }
         } else if(!strcmp(command, "think")) {
             think(args);
+#ifdef AI_FEATURE_TRACE
+        } else if(!strcmp(command, "features")) {
+            features(args);
+#endif
 #ifdef AI_TRACE
         } else if(!strcmp(command, "trace")) {
             tracing = args && !strcmp(args, "on") ? 2 : 0;

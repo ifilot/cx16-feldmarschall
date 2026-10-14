@@ -1,0 +1,27 @@
+{
+  "archive": "public-history-20261014-final.zip",
+  "archive_sha256": "2e2c12f7d1d5e81fdc0ee92548393ad11cd4b9776962c72b3264a0d046c571b1",
+  "tracking_tests": 6506,
+  "hidden_permutation_tests": 15163,
+  "silent_private_inventory_tests": 3836,
+  "banked_event_tests": 24,
+  "native_x16_live_history_comparisons": 1892,
+  "native_move_equivalence": {
+    "normal": 1672,
+    "hard": 1809
+  },
+  "integration_games": 42,
+  "production_enabled": false,
+  "tracker_state_bytes": 941,
+  "prototype_mission_bank_bytes": 4935,
+  "prototype_main_ram_bytes_below_stack": 6,
+  "save_semantics": "AI_TEST snapshots preserve history; current GAME.DAT restores restart observed history",
+  "uncertain_weights": "heuristic relative likelihoods, not calibrated probabilities; not used by the production move policy",
+  "compiled_source_and_runtime_hashes_valid": true,
+  "draft_bundle": {
+    "archive": "public-history-20261014.zip",
+    "archive_sha256": "8c81512555ccd5d6c72f21222887e7bb6ef1564c150c077c9c997c69fa0cf5a0",
+    "status": "superseded",
+    "reason": "Final bundle includes the complete source tree and excludes mutable reports/self-references from runtime hash metadata."
+  }
+}

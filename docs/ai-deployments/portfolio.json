@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "encoding": "40 glyphs, front row first, columns a-j; 123456789SBF",
+  "fixed_move_policy": "frozen coordinated missions; learner disabled",
+  "layouts": [
+    {
+      "name": "Evolved 1",
+      "id": "setup-74e54c5129ea",
+      "glyphs": "9995BB5999132876695748S47B6B8973BFB86584",
+      "status": "validated diverse alternative; no advantage over best existing preset established",
+      "normal_score": 0.8839285714285714,
+      "hard_score": 0.8410714285714286
+    },
+    {
+      "name": "Evolved 2",
+      "id": "setup-d83d63408255",
+      "glyphs": "9B95996949627S398975B8657531B8FB8B74846B",
+      "status": "validated diverse alternative; no advantage over best existing preset established",
+      "normal_score": 0.8866071428571428,
+      "hard_score": 0.8919642857142858,
+      "hard_confirmation_score": 0.9071428571428571
+    },
+    {
+      "name": "Evolved 3",
+      "id": "setup-815ddb0df689",
+      "glyphs": "1S2999596968384795847B5B637B9588BFB64B97",
+      "status": "validated diverse alternative; no advantage over best existing preset established",
+      "normal_score": 0.8964285714285715,
+      "hard_score": 0.85625
+    }
+  ],
+  "preferred_existing_control": {
+    "name": "CORNER FORTRESS",
+    "glyphs": "94959969496271358975B869753SB8FB8B748B6B",
+    "normal_score": 0.9053571428571429,
+    "hard_confirmation_score": 0.9160714285714285,
+    "hard_vs_protected_random": {
+      "paired_cases": 420,
+      "score_difference": 0.02976190476190476,
+      "deployment_blocks": 84,
+      "confidence_method": "stratified bootstrap of complete layout/round blocks, all opponents and sides bundled",
+      "paired_bootstrap_95": [
+        0.0023809523809523803,
+        0.05654761904761905
+      ]
+    }
+  },
+  "minimum_pairwise_hamming_distance": 32,
+  "scope": "Classic games versus five frozen programs on seven opponent-layout families. Fixed-layout results do not prove human strength."
+}

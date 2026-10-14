@@ -59,6 +59,52 @@ screenshots: all
 HOSTCC ?= gcc
 CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai.c ai_level.c)
 CORE_MISSIONS = $(CORE_NATIVE) src/core/ai_mission.c
+CORE_MEMORY = $(CORE_MISSIONS) src/core/ai_memory.c
+
+.PHONY: native-student test-ai-student native-student-features
+native-student: build/feldmarschall-engine-student
+native-student-features: build/feldmarschall-engine-student-features
+build/feldmarschall-engine-student-features: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_FEATURE_TRACE -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+test-ai-student: build/ai-student-test
+	build/ai-student-test
+build/feldmarschall-engine-student: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+build/ai-student-test: tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -Isrc/core -o $@ tests/ai_test.c $(CORE_MEMORY) src/core/ai_student.c
+
+.PHONY: native-teacher native-features test-ai-teacher
+test-ai-teacher: native-teacher native-features
+	python3 tools/test_ai_teacher.py
+native-teacher: build/feldmarschall-teacher
+native-features: build/feldmarschall-engine-features
+build/feldmarschall-teacher: src/native/teacher.c src/core/pieces.c src/core/board.c src/core/rules.c src/core/random.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Isrc/core -o $@ src/native/teacher.c src/core/pieces.c src/core/board.c src/core/rules.c src/core/random.c
+build/feldmarschall-engine-features: src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_MISSIONS -DAI_MEMORY -DAI_TRACE -DAI_TRAINING -DAI_FEATURE_TRACE -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY) src/core/ai_student.c
+
+.PHONY: native-memory test-ai-memory
+native-memory: build/feldmarschall-engine-memory
+test-ai-memory: build/ai-memory-test build/ai-memory-fair-test
+	build/ai-memory-test
+	build/ai-memory-fair-test
+
+build/feldmarschall-engine-memory: src/native/engine.c $(CORE_MEMORY) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -Isrc/core -o $@ src/native/engine.c $(CORE_MEMORY)
+
+build/ai-memory-test: tests/ai_memory_test.c $(CORE_MEMORY) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MEMORY -Isrc/core -o $@ tests/ai_memory_test.c $(CORE_MEMORY)
+
+build/ai-memory-fair-test: tests/ai_test.c $(CORE_MEMORY) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_MEMORY -Isrc/core -o $@ tests/ai_test.c $(CORE_MEMORY)
 
 .PHONY: native-inference test-ai-inference
 native-inference: build/feldmarschall-engine-inference
@@ -235,6 +281,25 @@ benchmark-ai-levels: native
 # Independent, paired comparisons against the frozen v0.2.0 AI.
 benchmark-ai: native native-baseline
 	python3 tools/benchmark_ai.py $(AI_BENCHMARK_FLAGS)
+
+.PHONY: test-ai-benchmark benchmark-ai-broad test-ai-diagnostics verify-ai-archives
+test-ai-benchmark:
+	python3 tools/test_benchmark_setups.py
+
+benchmark-ai-broad: native native-baseline native-planned native-adaptive-baseline test-ai-benchmark
+	python3 tools/benchmark_ai.py --suite broad --league --record-moves $(AI_BENCHMARK_FLAGS)
+
+test-ai-diagnostics:
+	python3 tools/test_ai_diagnostics.py docs/ai-diagnostics/positions-20261014.zip
+
+verify-ai-archives:
+	python3 tools/verify_ai_archives.py
+
+.PHONY: test-ai-deployments optimize-ai-deployments
+test-ai-deployments:
+	python3 tools/test_ai_deployments.py
+optimize-ai-deployments: native native-coordinated-baseline native-baseline native-planned native-adaptive-baseline test-ai-deployments
+	python3 tools/optimize_ai_deployments.py --out build/ai-deployments/search $(AI_DEPLOYMENT_FLAGS)
 
 # Elo ratings of the computer player against the baseline bots
 ROUNDS ?= 100

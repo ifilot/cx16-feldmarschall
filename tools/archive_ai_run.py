@@ -25,6 +25,7 @@ def main():
         'source_sha256': report['provenance']['source_sha256'],
         'phase': report['provenance'].get('phase', 'historical'),
         'strategy': report['provenance'].get('strategy', 'historical'),
+        'suite': report['provenance'].get('suite', 'classic'),
         'difficulty': report['provenance'].get('difficulty'),
         'comparisons': {key: value['overall'] for key, value in report['comparisons'].items()},
         'source_snapshot_available': (args.run / 'sources.zip').exists(),
@@ -33,13 +34,15 @@ def main():
     }
     destination.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(destination, 'x', compression=zipfile.ZIP_DEFLATED) as archive:
-        for filename in ('provenance.json', 'games.jsonl', 'summary.json', 'sources.zip', 'endgames.json', 'candidate.c'):
+        for filename in ('provenance.json', 'games.jsonl', 'summary.json', 'sources.zip', 'endgames.json', 'candidate.c',
+                         'portfolio.json', 'trials.json', 'deployment-block-analysis.json', 'analysis-sources.zip',
+                         'deployment-integrity.json'):
             path = args.run / filename
             if path.exists():
                 archive.write(path, filename)
         archive.writestr('experiment.json', json.dumps(entry, indent=2) + '\n')
         if (args.run / 'engines').exists():
-            for path in sorted((args.run / 'engines').iterdir()):
+            for path in sorted((args.run / 'engines').rglob('*')):
                 if path.is_file():
                     archive.write(path, str(path.relative_to(args.run)))
     entry['archive'] = 'ai-runs/' + destination.name

@@ -6,6 +6,15 @@
 #include "ai_mission.h"
 #include "board.h"
 #include "rules.h"
+#ifdef AI_STUDENT
+#include "ai_student.h"
+#endif
+#ifdef AI_MEMORY
+#include "ai_memory.h"
+#ifdef BANKED_AI
+void ai_memory_reset_banked(void);
+#endif
+#endif
 #ifdef BANKED_AI
 #pragma code-name ("MISSIONCODE")
 #pragma rodata-name ("MISSIONRODATA")
@@ -82,6 +91,13 @@ static uint8_t choose_leader(uint8_t flag) {
 }
 
 void ai_mission_reset(void) {
+#ifdef AI_MEMORY
+#ifdef BANKED_AI
+    ai_memory_reset_banked();
+#else
+    ai_memory_reset();
+#endif
+#endif
     remembered[0] = remembered[1] = NOWHERE;
 #ifdef AI_SECTOR_MEMORY
     memset(sector, 0, sizeof(sector));
@@ -93,6 +109,9 @@ void ai_mission_begin(uint8_t army) {
     uint8_t walk, obstacle = NOWHERE, type, best_actor = NOWHERE;
     int16_t value, best = -32767, cost, best_cost = 32767;
     own = army; leader = actor = objective = NOWHERE; vacate = 0;
+#ifdef AI_STUDENT
+    ai_student_begin(army);
+#endif
     memset(corridor, 0, sizeof(corridor));
 #ifdef AI_SECTOR_MEMORY
     /* Discard a hypothesis when public movement or disclosure contradicts it. */
@@ -181,7 +200,12 @@ void ai_mission_begin(uint8_t army) {
     }
 }
 
-int16_t ai_mission_score(uint8_t from, uint8_t to) {
+#ifdef AI_STUDENT
+static int16_t mission_base_score(uint8_t from, uint8_t to)
+#else
+int16_t ai_mission_score(uint8_t from, uint8_t to)
+#endif
+{
     if(from != actor) return 0;
     if(vacate) return board[to] == CELL_EMPTY && !corridor[to] ? 36 : 0;
     if(to == objective) return 30;
@@ -189,6 +213,12 @@ int16_t ai_mission_score(uint8_t from, uint8_t to) {
         return 20 + ((int16_t)distance[from] - distance[to]) * 10;
     return 0;
 }
+
+#ifdef AI_STUDENT
+int16_t ai_mission_score(uint8_t from, uint8_t to) {
+    return mission_base_score(from, to) + ai_student_score(from, to);
+}
+#endif
 
 #ifdef AI_TEST
 void ai_mission_save(uint8_t* out) {

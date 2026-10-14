@@ -1,0 +1,12 @@
+{
+  "archive": "deployment-analysis-20261014.zip",
+  "archive_sha256": "e00f4f74930648d9273e4c32ff1a49a6dce8f0b6a2690a6010031073576b9c36",
+  "searched_layouts": 52,
+  "search_games": 3640,
+  "normal_validation_games": 2800,
+  "hard_transfer_games": 2800,
+  "hard_confirmation_games": 2520,
+  "total_setup_games": 11760,
+  "minimum_candidate_distance": 32,
+  "programs_and_full_moves": "Four runs in docs/ai-experiments.json; this supplement retains explicit portfolios, trials and block-level analyses."
+}

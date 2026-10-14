@@ -19,7 +19,7 @@ import shlex
 import shutil
 
 from arena import deployments, play
-from feldmarschall import ROOT, new_rng
+from feldmarschall import ROOT, new_rng, describe_setup, valid_setup
 
 
 def sha(path):
@@ -48,6 +48,9 @@ def main():
     mode.add_argument('--progress', action='store_true', help='compare against the validated Normal progress milestone')
     mode.add_argument('--adaptive', action='store_true', help='compare against the adaptive Normal milestone')
     mode.add_argument('--missions', action='store_true', help='compare against the coordinated mission milestone')
+    mode.add_argument('--league', action='store_true', help='compare against original, planned, adaptive, Easy and greedy opponents')
+    parser.add_argument('--suite', choices=('classic', 'broad'), default='classic',
+                        help='historical deployments or diverse legal stress deployments')
     parser.add_argument('--candidate-engine', type=Path, default=ROOT / 'build/feldmarschall-engine')
     parser.add_argument('--candidate-source', type=Path, default=ROOT / 'src/core/ai.c')
     parser.add_argument('--phase', choices=('development', 'validation', 'diagnostic'), default='development')
@@ -64,7 +67,7 @@ def main():
         parser.error('--jobs must be positive')
     started = datetime.now(timezone.utc)
     revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
-    kind = 'levels' if args.levels else 'progress' if args.previous or args.progress or args.adaptive or args.missions else 'v020'
+    kind = 'league' if args.league else 'levels' if args.levels else 'progress' if args.previous or args.progress or args.adaptive or args.missions else 'v020'
     if args.out is None:
         args.out = ROOT / 'build/ai-benchmarks' / (started.strftime('%Y%m%dT%H%M%S%fZ') + '-' + revision[:8] + '-' + kind)
     engines = {'current': str(args.candidate_engine.resolve()),
@@ -82,23 +85,41 @@ def main():
             engines = {'current': engines['current'], 'adaptive-progress': str(ROOT / 'build/feldmarschall-ai-adaptive-progress') + ' --difficulty ' + args.difficulty}
         elif args.missions:
             engines = {'current': engines['current'], 'coordinated-missions': str(ROOT / 'build/feldmarschall-ai-coordinated') + ' --difficulty ' + args.difficulty}
+        elif args.league:
+            engines.update({
+                'planned': str(ROOT / 'build/feldmarschall-ai-planned'),
+                'adaptive': str(ROOT / 'build/feldmarschall-ai-adaptive-progress') + ' --difficulty ' + args.difficulty,
+                'easy': str(ROOT / 'build/feldmarschall-engine') + ' --difficulty easy',
+                'greedy': shlex.join([sys.executable, str(ROOT / 'tools/bots.py'), 'greedy']),
+            })
     pairs = [('normal', 'easy'), ('hard', 'normal'), ('hard', 'easy')] if args.levels else [('current', 'milestone-20261014' if args.previous else 'normal-progress' if args.progress else 'adaptive-progress' if args.adaptive else 'coordinated-missions' if args.missions else 'v020')]
+    if args.league:
+        pairs = [('current', name) for name in engines if name != 'current']
     groups = [('mixed', 20261021), ('random', 20261022), ('presets', 20261023)] if args.levels else [('mixed', 271828), ('random', 314159), ('presets', 161803)]
+    if args.suite == 'broad':
+        groups = [(name, 20261101+i) for i, name in enumerate(
+            ('fortified', 'uniform', 'unguarded', 'forward', 'decoy', 'presets', 'broad-mixed'))]
     groups = [(kind, seed + args.seed_offset) for kind, seed in groups]
     jobs, metadata = [], []
     for kind, seed in groups:
         rng = new_rng(seed)
         for round_index in range(args.rounds):
             setups = (deployments(kind, rng), deployments(kind, rng))
+            if not all(valid_setup(setup) for setup in setups):
+                raise ValueError(f'invalid deployment in {kind} round {round_index}')
             move_seed = rng.randrange(1, 60000)
             for a, b in pairs:
                 for names in [(a, b), (b, a)]:
                     jobs.append((names, tuple(engines[n] for n in names), setups, move_seed, 1000, args.record_moves))
-                    metadata.append({'group': kind, 'round': round_index, 'deployments': list(setups), 'comparison': a + '-vs-' + b})
+                    metadata.append({'group': kind, 'round': round_index, 'deployments': list(setups),
+                                     'deployment_features': [describe_setup(setup) for setup in setups],
+                                     'comparison': a + '-vs-' + b})
     provenance = {
         'started_utc': started.isoformat(), 'git_revision': revision,
         'phase': args.phase, 'candidate_source': str(args.candidate_source),
         'strategy': args.strategy,
+        'suite': args.suite, 'opponent_league': bool(args.league),
+        'command': sys.argv,
         'git_status': subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, text=True),
         'engine_commands': engines,
         'difficulty': None if args.levels else args.difficulty,
@@ -108,7 +129,7 @@ def main():
         'source_sha256': sha(args.candidate_source),
         'baseline_sha256': sha(ROOT / 'tests/baselines/ai_v020.c'),
         'rules_sha256': sha(ROOT / 'src/core/rules.c'),
-        'engine_sha256': {name: sha(path.split(' --difficulty ')[0]) for name, path in engines.items()},
+        'engine_sha256': {name: sha(Path(shlex.split(command)[0])) for name, command in engines.items()},
         'level_configuration_sha256': sha(ROOT / 'src/core/ai_level.c'),
         'confidence_method': '10000 bootstrap resamples of complete side-swapped pairs; seed 8675309',
     }
@@ -120,6 +141,9 @@ def main():
         provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_adaptive_progress_20261014.c', 'ai_level_20261014.c')}
     if args.missions:
         provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_coordinated_20261014.c', 'ai_mission_20261014.c', 'ai_level_20261014.c')}
+    if args.league:
+        provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in
+            ('ai_v020.c', 'ai_planned.c', 'ai_adaptive_progress_20261014.c', 'ai_level_20261014.c')}
     try:
         args.out.mkdir(parents=True, exist_ok=False)
     except FileExistsError:
@@ -137,11 +161,24 @@ def main():
     # Rebuilding the project must not change an engine half-way through a run.
     frozen_commands = {}
     (args.out / 'engines').mkdir()
+    provenance['support_sha256'] = {}
     for name, command in engines.items():
-        executable, *arguments = command.split(' --difficulty ', 1)
+        executable, *arguments = shlex.split(command)
         target = args.out / 'engines' / name
         shutil.copy2(executable, target)
-        frozen_commands[name] = shlex.join([str(target.resolve()), *(['--difficulty', arguments[0]] if arguments else [])])
+        # Script opponents need their imports frozen too. Running a retained
+        # interpreter against mutable scripts would invalidate reproducibility.
+        for index, argument in enumerate(arguments):
+            script = Path(argument)
+            if script.suffix == '.py' and script.is_file():
+                support = args.out / 'engines' / 'support' / name
+                support.mkdir(parents=True, exist_ok=True)
+                for dependency in script.parent.glob('*.py'):
+                    copied = support / dependency.name
+                    shutil.copy2(dependency, copied)
+                    provenance['support_sha256'][str(copied.relative_to(args.out))] = sha(copied)
+                arguments[index] = str((support / script.name).resolve())
+        frozen_commands[name] = shlex.join([str(target.resolve()), *arguments])
         provenance['engine_sha256'][name] = sha(target)
     provenance['run_engine_commands'] = frozen_commands
     jobs = [(names, tuple(frozen_commands[name] for name in names), *rest)
@@ -166,7 +203,7 @@ def main():
             lo, hi = stat['paired_bootstrap_95']
             print(f'{name}, {kind}: {stat["wins"]} wins, {stat["draws"]} draws, {stat["losses"]} losses; '
                   f'score {stat["score"]:.1%}, paired 95% CI {lo:.1%}–{hi:.1%}')
-    if not args.levels:
+    if not args.levels and not args.league:
         report.update(report['comparisons'][pairs[0][0] + '-vs-' + pairs[0][1]])
     (args.out / 'summary.json').write_text(json.dumps(report, indent=2) + '\n')
     illegal = [g for g in games if g['reason'].startswith('illegal')]

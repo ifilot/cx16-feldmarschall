@@ -25,6 +25,9 @@
 #include "board.h"
 #include "random.h"
 #include "rules.h"
+#ifdef AI_MEMORY
+#include "ai_memory.h"
+#endif
 #ifdef AI_MISSIONS
 #include "ai_mission.h"
 #endif
@@ -462,6 +465,9 @@ static int16_t score(uint8_t from, uint8_t to) {
     if(target != CELL_EMPTY && !(target & CELL_REVEALED)) defence /= 4;
     board[from] = moving;
     board[to] = target;
+#ifdef AI_TRAINING
+    ai_trace_training(from, to, target == CELL_EMPTY ? 0 : new_danger / 2);
+#endif
 
     if(target == CELL_EMPTY) {
         s = ((int16_t)SQUARE_ROW(to) - SQUARE_ROW(from)) * (own ? 4 : -4);
@@ -612,6 +618,9 @@ static void retain(uint8_t from, uint8_t to, int16_t score) {
 }
 
 void ai_reset(void) {
+#if defined(AI_MEMORY) && !defined(AI_MISSIONS)
+    ai_memory_reset();
+#endif
 #ifdef AI_MISSIONS
     ai_mission_reset();
 #endif
@@ -720,6 +729,9 @@ uint8_t ai_test_quiet(uint8_t army) {
 /* Test-only snapshots let hidden-layout comparisons start from identical
  * persistent goals and histories. This code is absent from game builds. */
 void ai_test_save(uint8_t* out) {
+#ifdef AI_MEMORY
+    ai_memory_save(out + AI_TEST_STATE_SIZE - AI_MEMORY_STATE_SIZE);
+#endif
     memcpy(out, goals, sizeof(goals));
     memcpy(out + sizeof(goals), last_from, sizeof(last_from));
     memcpy(out + sizeof(goals) + sizeof(last_from), last_to, sizeof(last_to));
@@ -730,6 +742,9 @@ void ai_test_save(uint8_t* out) {
 #endif
 }
 void ai_test_load(const uint8_t* in) {
+#ifdef AI_MEMORY
+    ai_memory_load(in + AI_TEST_STATE_SIZE - AI_MEMORY_STATE_SIZE);
+#endif
     memcpy(goals, in, sizeof(goals));
     memcpy(last_from, in + sizeof(goals), sizeof(last_from));
     memcpy(last_to, in + sizeof(goals) + sizeof(last_from), sizeof(last_to));

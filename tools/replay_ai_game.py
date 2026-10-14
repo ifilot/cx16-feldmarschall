@@ -2,6 +2,7 @@
 import argparse
 import json
 import sys
+import shlex
 from pathlib import Path
 
 from feldmarschall import ROOT, Engine, Position, RED, BLUE, GLYPHS, parse_square, square_name
@@ -18,6 +19,8 @@ def main():
                         help='binary for the frozen milestone in progress benchmarks')
     parser.add_argument('--difficulty', choices=('easy', 'normal', 'hard'),
                         help='level for current/reference comparisons; defaults to run provenance')
+    parser.add_argument('--recorded-engines', action='store_true',
+                        help='use retained programs and support scripts from this run')
     parser.add_argument('--trace-start', type=int, default=180, help='zero-based ply, inclusive')
     parser.add_argument('--trace-end', type=int, default=190, help='zero-based ply, exclusive')
     args = parser.parse_args()
@@ -35,7 +38,16 @@ def main():
             is_milestone = level not in ('easy', 'normal', 'hard', 'current')
             command = args.opponent_engine if is_milestone else args.engine
             difficulty = configured_level if is_milestone or level == 'current' else level
-            engine = Engine(command + ' --difficulty ' + difficulty)
+            if args.recorded_engines:
+                argv = shlex.split(provenance['run_engine_commands'][level])
+                argv[0] = str((args.games.parent / 'engines' / level).resolve())
+                for i, value in enumerate(argv[1:], 1):
+                    if value.endswith('.py'):
+                        argv[i] = str((args.games.parent / 'engines/support' / level / Path(value).name).resolve())
+                command = shlex.join(argv)
+            else:
+                command += ' --difficulty ' + difficulty
+            engine = Engine(command)
             engines.append(engine)
             engine.send(f"seed {game['seed'] * 2 + army + 1}")
             engine.send('new ' + ('red', 'blue')[army])
@@ -44,7 +56,7 @@ def main():
         for ply, (src, dst) in enumerate(game['moves']):
             army = ply % 2
             tracing = args.trace_start <= ply < args.trace_end
-            if (game['red'], game['blue'])[army] in ('easy', 'normal', 'hard', 'current'):
+            if not args.recorded_engines and (game['red'], game['blue'])[army] in ('easy', 'normal', 'hard', 'current'):
                 engines[army].send('trace ' + ('on' if tracing else 'off'))
             if tracing:
                 print(f'ply {ply} army={army}', file=sys.stderr, flush=True)

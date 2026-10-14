@@ -23,7 +23,7 @@ from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 from feldmarschall import (BLUE, FLAG, GLYPHS, RED, ROOT, Engine, Position, new_rng, parse_square,
-                      presets, random_setup, square_name, valid_setup)
+                      presets, random_setup, square_name, valid_setup, stress_setup, STRESS_SETUPS)
 
 
 def play(job):
@@ -93,6 +93,10 @@ def play(job):
 
 
 def deployments(kind, rng):
+    if kind in STRESS_SETUPS:
+        return stress_setup(kind, rng)
+    if kind == 'broad-mixed':
+        return deployments(rng.choice((*STRESS_SETUPS, 'presets')), rng)
     if kind == 'presets' or (kind == 'mixed' and rng.random() < 0.5):
         return rng.choice(presets())[1]
     return random_setup(rng)
@@ -102,7 +106,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--engine', action='append', required=True, metavar='NAME=COMMAND')
     parser.add_argument('--rounds', type=int, default=10)
-    parser.add_argument('--setups', choices=('random', 'presets', 'mixed'), default='mixed')
+    parser.add_argument('--setups', choices=('random', 'presets', 'mixed', 'broad-mixed', *STRESS_SETUPS), default='mixed')
     parser.add_argument('--max-plies', type=int, default=1000)
     parser.add_argument('--seed', type=int, default=1)
     parser.add_argument('--jobs', type=int, default=os.cpu_count())

@@ -1,7 +1,9 @@
 {
-  "archives_checked": 39,
-  "games_in_ledger": 12006,
+  "archives_checked": 48,
+  "games_in_ledger": 29758,
   "crc_and_archive_hashes_valid": true,
   "evaluator_hashes_valid": true,
-  "retained_executable_hashes_valid": true
+  "retained_executable_hashes_valid": true,
+  "supporting_script_hashes_valid": true,
+  "game_counts_and_trace_lengths_valid": true
 }

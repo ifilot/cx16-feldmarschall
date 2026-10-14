@@ -22,6 +22,9 @@
 #define _AI_H
 
 #include <stdint.h>
+#ifdef AI_MEMORY
+#include "ai_memory.h"
+#endif
 
 #define AI_EASY   0
 #define AI_NORMAL 1
@@ -75,6 +78,19 @@ void ai_reset(void);
 #endif
 #endif
 void ai_test_save(uint8_t* out);
+#ifdef AI_MEMORY
+#include "ai_memory.h"
+#if defined(AI_MISSIONS) && defined(AI_SECTOR_MEMORY)
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE (230 + AI_MEMORY_STATE_SIZE)
+#elif defined(AI_MISSIONS)
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE (210 + AI_MEMORY_STATE_SIZE)
+#else
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE (208 + AI_MEMORY_STATE_SIZE)
+#endif
+#endif
 void ai_test_load(const uint8_t* in);
 uint8_t ai_test_quiet(uint8_t army);
 #ifdef AI_OCCUPANCY_BELIEFS
@@ -89,6 +105,9 @@ int16_t ai_test_reply(uint8_t from, uint8_t to);
 #endif
 
 #ifdef AI_TRACE
+#ifdef AI_TRAINING
+void ai_trace_training(uint8_t from, uint8_t to, int16_t capture_credit);
+#endif
 /* supplied by a test build: called with the score of every candidate move */
 void ai_trace(uint8_t from, uint8_t to, int16_t score);
 void ai_trace_plan(uint8_t from, uint8_t goal, uint8_t previous, uint8_t steps, int16_t utility);

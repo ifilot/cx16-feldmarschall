@@ -490,8 +490,13 @@ default 2 KB; `src/FELDMARS.map` shows how much room is left below it.
 
 [AI milestones and reproducible benchmark records](docs/ai-milestones.md)
 and [strategy research, rejected alternatives, and final strength validation](docs/ai-strategy-research.md)
-([final handoff](docs/ai-write-off-2026-10-14-strategies.md)).
+([final handoff](docs/ai-write-off-2026-10-14-strategies.md))
 track the frozen evaluators, the current experiment, and complete game traces.
+The [next development cycle](docs/ai-development-plan-2026-10-14.md) records
+the expanded opponent/layout suite and diagnostic position collection.
+The [five-step cycle handoff](docs/ai-cycle-write-off-2026-10-14.md) covers the
+tracker, offline teacher, compact-model results and independently tested
+[deployment portfolio](docs/ai-deployments/portfolio.json).
 
 Normal and Hard coordinate a miner approach when revealed rear bombs suggest
 a fortified flag area. A shared route assigns a friendly blocker to move aside,

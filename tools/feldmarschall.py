@@ -76,6 +76,54 @@ def random_setup(rng):
     return ''.join(c if c else pool.pop() for c in cells)
 
 
+STRESS_SETUPS = ('fortified', 'uniform', 'unguarded', 'forward', 'decoy')
+
+
+def setup_neighbors(index):
+    """Orthogonal neighbors in the four-row deployment array."""
+    return [n for n in (index-10, index+10,
+                       index-1 if index % 10 else -1,
+                       index+1 if index % 10 < 9 else -1) if 0 <= n < 40]
+
+
+def stress_setup(kind, rng):
+    """Legal adversarial layouts; leave the historical random generator intact."""
+    if kind == 'fortified':
+        return random_setup(rng)
+    if kind == 'uniform':
+        pool = [g for g, n in zip(GLYPHS, COUNTS) for _ in range(n)]
+        rng.shuffle(pool)
+        return ''.join(pool)
+    if kind not in STRESS_SETUPS:
+        raise ValueError(f'unknown stress deployment: {kind}')
+    cells = [None] * 40
+    flag = rng.randrange(30, 40) if kind == 'unguarded' else rng.randrange(10)
+    if kind == 'decoy':
+        # A rear bomb enclosure with a mobile piece in its centre, while the
+        # actual flag is elsewhere. This directly challenges bomb-sector plans.
+        centre = 30 + rng.randrange(1, 9)
+        for index in setup_neighbors(centre):
+            cells[index] = 'B'
+        flag = rng.choice([i for i in range(20) if abs(i % 10-centre % 10) >= 3])
+        cells[centre] = rng.choice('456789')
+    cells[flag] = 'F'
+    forbidden = set(setup_neighbors(flag))
+    remaining_bombs = COUNTS[BOMB] - cells.count('B')
+    bomb_slots = [i for i, cell in enumerate(cells) if cell is None and i not in forbidden]
+    for index in rng.sample(bomb_slots, remaining_bombs):
+        cells[index] = 'B'
+    pool = [g for g, n in zip(GLYPHS, COUNTS) for _ in range(n-cells.count(g))]
+    rng.shuffle(pool)
+    return ''.join(cell if cell is not None else pool.pop() for cell in cells)
+
+
+def describe_setup(glyphs):
+    """Public benchmark metadata only; never passed to an opponent."""
+    flag = glyphs.index('F')
+    return {'flag_index': flag, 'flag_row_from_front': flag // 10,
+            'adjacent_bomb_guards': sum(glyphs[i] == 'B' for i in setup_neighbors(flag))}
+
+
 def presets():
     """The ten built-in deployments of src/core/presets.c, as (name, glyphs)."""
     source = (ROOT / 'src/core/presets.c').read_text()
@@ -193,6 +241,14 @@ class Engine:
             self.process.wait(timeout=5)
         except Exception:
             self.process.kill()
+            self.process.wait()
+        finally:
+            for stream in (self.process.stdin, self.process.stdout):
+                if stream and not stream.closed:
+                    try:
+                        stream.close()
+                    except OSError:
+                        pass
 
 
 def new_rng(seed):

@@ -1348,5 +1348,1509 @@
     "executable_snapshots_available": true,
     "archive": "ai-runs/final-hard-v020-validation.zip",
     "archive_sha256": "9fe51f6898df0bfa8db7139689c2f5d6dc59bbdbb376448833419f22a66e5f83"
+  },
+  {
+    "name": "broad-league-smoke",
+    "decision": "diagnostic",
+    "reason": "70-game infrastructure smoke test: seven layout families and five opponents produced legal complete traces; scores are too small for strength claims.",
+    "source_sha256": "1c2572151883aeb70022e9b6f6cf00b74884857c9591b25ba53c5dc76b262805",
+    "phase": "diagnostic",
+    "strategy": "broad-suite-smoke",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5,
+          1.0
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 218.0
+      },
+      "current-vs-planned": {
+        "games": 14,
+        "wins": 10,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.42857142857142855,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 276.35714285714283
+      },
+      "current-vs-adaptive": {
+        "games": 14,
+        "wins": 8,
+        "draws": 0,
+        "losses": 6,
+        "score": 0.5714285714285714,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7142857142857143
+        ],
+        "reasons": {
+          "flag": 14
+        },
+        "average_plies": 205.64285714285714
+      },
+      "current-vs-easy": {
+        "games": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          1.0
+        ],
+        "reasons": {
+          "no moves": 1,
+          "flag": 13
+        },
+        "average_plies": 261.5
+      },
+      "current-vs-greedy": {
+        "games": 14,
+        "wins": 11,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 13,
+          "no moves": 1
+        },
+        "average_plies": 236.14285714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/broad-league-smoke.zip",
+    "archive_sha256": "344af4cad3121bd13b82ab8be3dfae6c676631fec748c7d9c3be84e8edeb9a2c"
+  },
+  {
+    "name": "broad-normal-league-validation",
+    "decision": "diagnostic",
+    "reason": "Expanded-suite reference: 2,800 legal games against five distinct opponents. Normal retains an overall advantage over v0.2.0 and adaptive Normal, but its gain over v0.2.0 is weakest on decoy fortifications; use the complete traces to build the diagnostic corpus.",
+    "source_sha256": "1c2572151883aeb70022e9b6f6cf00b74884857c9591b25ba53c5dc76b262805",
+    "phase": "validation",
+    "strategy": "mission-generalization",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 560,
+        "wins": 384,
+        "draws": 17,
+        "losses": 159,
+        "score": 0.7008928571428571,
+        "paired_bootstrap_95": [
+          0.6642857142857143,
+          0.7366071428571429
+        ],
+        "reasons": {
+          "no moves": 7,
+          "flag": 536,
+          "ply limit": 17
+        },
+        "average_plies": 237.20535714285714
+      },
+      "current-vs-planned": {
+        "games": 560,
+        "wins": 320,
+        "draws": 5,
+        "losses": 235,
+        "score": 0.5758928571428571,
+        "paired_bootstrap_95": [
+          0.54375,
+          0.6089285714285714
+        ],
+        "reasons": {
+          "flag": 550,
+          "no moves": 5,
+          "ply limit": 5
+        },
+        "average_plies": 195.79642857142858
+      },
+      "current-vs-adaptive": {
+        "games": 560,
+        "wins": 296,
+        "draws": 2,
+        "losses": 262,
+        "score": 0.5303571428571429,
+        "paired_bootstrap_95": [
+          0.5035714285714286,
+          0.5571428571428572
+        ],
+        "reasons": {
+          "flag": 550,
+          "no moves": 8,
+          "ply limit": 2
+        },
+        "average_plies": 169.80178571428573
+      },
+      "current-vs-easy": {
+        "games": 560,
+        "wins": 417,
+        "draws": 9,
+        "losses": 134,
+        "score": 0.7526785714285714,
+        "paired_bootstrap_95": [
+          0.7196428571428571,
+          0.7866071428571428
+        ],
+        "reasons": {
+          "flag": 541,
+          "no moves": 10,
+          "ply limit": 9
+        },
+        "average_plies": 247.18928571428572
+      },
+      "current-vs-greedy": {
+        "games": 560,
+        "wins": 443,
+        "draws": 2,
+        "losses": 115,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.7607142857142857,
+          0.8241071428571428
+        ],
+        "reasons": {
+          "no moves": 20,
+          "flag": 538,
+          "ply limit": 2
+        },
+        "average_plies": 154.925
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/broad-normal-league-validation.zip",
+    "archive_sha256": "f3431238e2803dfa6e05bc6d9beedade3b5c4ac08dd9779e2594d2982eaea4e8"
+  },
+  {
+    "name": "broad-hard-league-validation",
+    "decision": "diagnostic",
+    "reason": "Expanded-suite reference: 2,800 legal games. Hard scores 64.9% versus original v0.2.0 overall, but only 45.0% versus adaptive Hard on decoy fortifications (paired interval 40.0\u201348.8%); treat this selected subgroup as a diagnostic signal requiring independent confirmation.",
+    "source_sha256": "1c2572151883aeb70022e9b6f6cf00b74884857c9591b25ba53c5dc76b262805",
+    "phase": "validation",
+    "strategy": "mission-generalization",
+    "suite": "broad",
+    "difficulty": "hard",
+    "comparisons": {
+      "current-vs-v020": {
+        "games": 560,
+        "wins": 317,
+        "draws": 93,
+        "losses": 150,
+        "score": 0.6491071428571429,
+        "paired_bootstrap_95": [
+          0.6196428571428572,
+          0.6785714285714286
+        ],
+        "reasons": {
+          "flag": 461,
+          "ply limit": 93,
+          "no moves": 6
+        },
+        "average_plies": 378.6232142857143
+      },
+      "current-vs-planned": {
+        "games": 560,
+        "wins": 274,
+        "draws": 26,
+        "losses": 260,
+        "score": 0.5125,
+        "paired_bootstrap_95": [
+          0.47946428571428573,
+          0.5446428571428571
+        ],
+        "reasons": {
+          "flag": 527,
+          "ply limit": 26,
+          "no moves": 7
+        },
+        "average_plies": 252.575
+      },
+      "current-vs-adaptive": {
+        "games": 560,
+        "wins": 289,
+        "draws": 4,
+        "losses": 267,
+        "score": 0.5196428571428572,
+        "paired_bootstrap_95": [
+          0.49107142857142855,
+          0.5491071428571429
+        ],
+        "reasons": {
+          "flag": 547,
+          "no moves": 9,
+          "ply limit": 4
+        },
+        "average_plies": 206.59107142857144
+      },
+      "current-vs-easy": {
+        "games": 560,
+        "wins": 412,
+        "draws": 19,
+        "losses": 129,
+        "score": 0.7526785714285714,
+        "paired_bootstrap_95": [
+          0.7205357142857143,
+          0.7839285714285714
+        ],
+        "reasons": {
+          "flag": 524,
+          "no moves": 17,
+          "ply limit": 19
+        },
+        "average_plies": 315.25357142857143
+      },
+      "current-vs-greedy": {
+        "games": 560,
+        "wins": 447,
+        "draws": 1,
+        "losses": 112,
+        "score": 0.7991071428571429,
+        "paired_bootstrap_95": [
+          0.7678571428571429,
+          0.8303571428571429
+        ],
+        "reasons": {
+          "flag": 544,
+          "no moves": 15,
+          "ply limit": 1
+        },
+        "average_plies": 156.7017857142857
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/broad-hard-league-validation.zip",
+    "archive_sha256": "cfd056ab86c5011b9e963257048c7134d943bf5fe97c756cddf69995b035dc6a"
+  },
+  {
+    "name": "memory-normal-integration",
+    "decision": "diagnostic",
+    "reason": "Public identity/history observer preserves mission policy: 42 side-swapped games spanning all seven broad layout groups produce 50% and matching paired traces. No strength gain is claimed; this is the feature foundation for the offline teacher.",
+    "source_sha256": "8afc4630eaa070f4927e96aefeace7b423728d6febb29e36381a0c6307023d63",
+    "phase": "diagnostic",
+    "strategy": "public-piece-history",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 42,
+        "wins": 21,
+        "draws": 0,
+        "losses": 21,
+        "score": 0.5,
+        "paired_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "reasons": {
+          "flag": 42
+        },
+        "average_plies": 186.52380952380952
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/memory-normal-integration.zip",
+    "archive_sha256": "aaba80ab09eb078eb5fb19a9ad2583023be72222062ff6d73842a3045f5b5491"
+  },
+  {
+    "name": "student-normal-development",
+    "decision": "reject",
+    "reason": "The first offline tactical student fits in 150 bytes of model data and passes tactical/fairness tests, but scores 48.9% (43.9\u201353.9%) over 280 fresh broad-suite games. No demonstrated strength gain; retain the pipeline and fitted model as an experiment.",
+    "source_sha256": "bc29d22113c195f43e29cac5f3bd2734420ce29993a59622914785d7e40505d1",
+    "phase": "development",
+    "strategy": "offline-tactical-student",
+    "suite": "broad",
+    "difficulty": "normal",
+    "comparisons": {
+      "current-vs-coordinated-missions": {
+        "games": 280,
+        "wins": 136,
+        "draws": 2,
+        "losses": 142,
+        "score": 0.48928571428571427,
+        "paired_bootstrap_95": [
+          0.4392857142857143,
+          0.5392857142857143
+        ],
+        "reasons": {
+          "flag": 272,
+          "no moves": 6,
+          "ply limit": 2
+        },
+        "average_plies": 181.72857142857143
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/student-normal-development.zip",
+    "archive_sha256": "79f74457cf2dff3ff62f42c079a9ee7c9a446c1e59ffe227d4d4edbb3cbf4cee"
+  },
+  {
+    "name": "search-v1",
+    "decision": "diagnostic",
+    "reason": "Genetic deployment search evaluated 52 legal layouts in 3,640 games with the frozen Normal move policy. Three new layouts, pairwise Hamming distance at least eight, were selected before independent validation; development fitness is selection-biased.",
+    "source_sha256": "c4a48be36d3ed6891876c4d9efdb8d01d03e078e9cc3f94fb09ece1f35f505f6",
+    "phase": "development",
+    "strategy": "deployment-genetic-search",
+    "suite": "broad-deployment",
+    "difficulty": "normal",
+    "comparisons": {
+      "setup-5d49c8ec5352-vs-league": {
+        "games": 70,
+        "wins": 61,
+        "draws": 2,
+        "losses": 7,
+        "score": 0.8857142857142857,
+        "paired_bootstrap_95": [
+          0.8,
+          0.9571428571428572
+        ],
+        "reasons": {
+          "flag": 66,
+          "ply limit": 2,
+          "no moves": 2
+        },
+        "average_plies": 242.17142857142858
+      },
+      "setup-2ad8958628ae-vs-league": {
+        "games": 70,
+        "wins": 61,
+        "draws": 1,
+        "losses": 8,
+        "score": 0.8785714285714286,
+        "paired_bootstrap_95": [
+          0.7928571428571428,
+          0.95
+        ],
+        "reasons": {
+          "flag": 69,
+          "ply limit": 1
+        },
+        "average_plies": 231.62857142857143
+      },
+      "setup-5691341735f9-vs-league": {
+        "games": 70,
+        "wins": 59,
+        "draws": 2,
+        "losses": 9,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7571428571428571,
+          0.9357142857142857
+        ],
+        "reasons": {
+          "ply limit": 2,
+          "flag": 68
+        },
+        "average_plies": 270.8857142857143
+      },
+      "setup-f2245b731007-vs-league": {
+        "games": 70,
+        "wins": 50,
+        "draws": 0,
+        "losses": 20,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.6,
+          0.8285714285714286
+        ],
+        "reasons": {
+          "flag": 67,
+          "no moves": 3
+        },
+        "average_plies": 260.75714285714287
+      },
+      "setup-aa6fbdeefb92-vs-league": {
+        "games": 70,
+        "wins": 49,
+        "draws": 0,
+        "losses": 21,
+        "score": 0.7,
+        "paired_bootstrap_95": [
+          0.5714285714285714,
+          0.8285714285714286
+        ],
+        "reasons": {
+          "flag": 69,
+          "no moves": 1
+        },
+        "average_plies": 216.0857142857143
+      },
+      "setup-f675a865247d-vs-league": {
+        "games": 70,
+        "wins": 47,
+        "draws": 1,
+        "losses": 22,
+        "score": 0.6785714285714286,
+        "paired_bootstrap_95": [
+          0.5571428571428572,
+          0.8
+        ],
+        "reasons": {
+          "flag": 67,
+          "ply limit": 1,
+          "no moves": 2
+        },
+        "average_plies": 209.28571428571428
+      },
+      "setup-8aee8eca4ff3-vs-league": {
+        "games": 70,
+        "wins": 50,
+        "draws": 3,
+        "losses": 17,
+        "score": 0.7357142857142858,
+        "paired_bootstrap_95": [
+          0.6142857142857143,
+          0.85
+        ],
+        "reasons": {
+          "flag": 64,
+          "no moves": 3,
+          "ply limit": 3
+        },
+        "average_plies": 303.2
+      },
+      "setup-ff2ed3a012e5-vs-league": {
+        "games": 70,
+        "wins": 48,
+        "draws": 5,
+        "losses": 17,
+        "score": 0.7214285714285714,
+        "paired_bootstrap_95": [
+          0.6142857142857143,
+          0.8285714285714286
+        ],
+        "reasons": {
+          "flag": 63,
+          "ply limit": 5,
+          "no moves": 2
+        },
+        "average_plies": 323.0285714285714
+      },
+      "setup-5557dbc5a6fd-vs-league": {
+        "games": 70,
+        "wins": 44,
+        "draws": 1,
+        "losses": 25,
+        "score": 0.6357142857142857,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7714285714285715
+        ],
+        "reasons": {
+          "flag": 67,
+          "ply limit": 1,
+          "no moves": 2
+        },
+        "average_plies": 275.95714285714286
+      },
+      "setup-4802d303ee4f-vs-league": {
+        "games": 70,
+        "wins": 59,
+        "draws": 1,
+        "losses": 10,
+        "score": 0.85,
+        "paired_bootstrap_95": [
+          0.7571428571428571,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 67,
+          "no moves": 2,
+          "ply limit": 1
+        },
+        "average_plies": 314.5
+      },
+      "setup-938453d8fc73-vs-league": {
+        "games": 70,
+        "wins": 56,
+        "draws": 0,
+        "losses": 14,
+        "score": 0.8,
+        "paired_bootstrap_95": [
+          0.6857142857142857,
+          0.9
+        ],
+        "reasons": {
+          "no moves": 5,
+          "flag": 65
+        },
+        "average_plies": 309.95714285714286
+      },
+      "setup-44737ebba2c7-vs-league": {
+        "games": 70,
+        "wins": 51,
+        "draws": 0,
+        "losses": 19,
+        "score": 0.7285714285714285,
+        "paired_bootstrap_95": [
+          0.6,
+          0.8428571428571429
+        ],
+        "reasons": {
+          "flag": 69,
+          "no moves": 1
+        },
+        "average_plies": 229.82857142857142
+      },
+      "setup-94b3d9e21c3a-vs-league": {
+        "games": 70,
+        "wins": 47,
+        "draws": 2,
+        "losses": 21,
+        "score": 0.6857142857142857,
+        "paired_bootstrap_95": [
+          0.5785714285714286,
+          0.7928571428571428
+        ],
+        "reasons": {
+          "flag": 68,
+          "ply limit": 2
+        },
+        "average_plies": 255.75714285714287
+      },
+      "setup-2c2aec89c878-vs-league": {
+        "games": 70,
+        "wins": 16,
+        "draws": 0,
+        "losses": 54,
+        "score": 0.22857142857142856,
+        "paired_bootstrap_95": [
+          0.11428571428571428,
+          0.35714285714285715
+        ],
+        "reasons": {
+          "flag": 70
+        },
+        "average_plies": 112.3
+      },
+      "setup-70d5eaafeda1-vs-league": {
+        "games": 70,
+        "wins": 41,
+        "draws": 0,
+        "losses": 29,
+        "score": 0.5857142857142857,
+        "paired_bootstrap_95": [
+          0.44285714285714284,
+          0.7285714285714285
+        ],
+        "reasons": {
+          "flag": 69,
+          "no moves": 1
+        },
+        "average_plies": 229.77142857142857
+      },
+      "setup-c76431005728-vs-league": {
+        "games": 70,
+        "wins": 28,
+        "draws": 2,
+        "losses": 40,
+        "score": 0.4142857142857143,
+        "paired_bootstrap_95": [
+          0.2857142857142857,
+          0.55
+        ],
+        "reasons": {
+          "flag": 68,
+          "ply limit": 2
+        },
+        "average_plies": 234.5857142857143
+      },
+      "setup-eb7b1d3ae351-vs-league": {
+        "games": 70,
+        "wins": 59,
+        "draws": 0,
+        "losses": 11,
+        "score": 0.8428571428571429,
+        "paired_bootstrap_95": [
+          0.7285714285714285,
+          0.9428571428571428
+        ],
+        "reasons": {
+          "flag": 70
+        },
+        "average_plies": 294.77142857142854
+      },
+      "setup-a79cd953a101-vs-league": {
+        "games": 70,
+        "wins": 55,
+        "draws": 1,
+        "losses": 14,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.6714285714285714,
+          0.9
+        ],
+        "reasons": {
+          "flag": 67,
+          "no moves": 2,
+          "ply limit": 1
+        },
+        "average_plies": 297.92857142857144
+      },
+      "setup-84527089a5d4-vs-league": {
+        "games": 70,
+        "wins": 59,
+        "draws": 0,
+        "losses": 11,
+        "score": 0.8428571428571429,
+        "paired_bootstrap_95": [
+          0.7428571428571429,
+          0.9428571428571428
+        ],
+        "reasons": {
+          "flag": 69,
+          "no moves": 1
+        },
+        "average_plies": 237.25714285714287
+      },
+      "setup-74e54c5129ea-vs-league": {
+        "games": 70,
+        "wins": 65,
+        "draws": 1,
+        "losses": 4,
+        "score": 0.9357142857142857,
+        "paired_bootstrap_95": [
+          0.8785714285714286,
+          0.9857142857142858
+        ],
+        "reasons": {
+          "flag": 68,
+          "ply limit": 1,
+          "no moves": 1
+        },
+        "average_plies": 298.4428571428571
+      },
+      "setup-c37fdc8a681b-vs-league": {
+        "games": 70,
+        "wins": 54,
+        "draws": 1,
+        "losses": 15,
+        "score": 0.7785714285714286,
+        "paired_bootstrap_95": [
+          0.6785714285714286,
+          0.8714285714285714
+        ],
+        "reasons": {
+          "flag": 67,
+          "ply limit": 1,
+          "no moves": 2
+        },
+        "average_plies": 244.3
+      },
+      "setup-56ff80c53aaa-vs-league": {
+        "games": 70,
+        "wins": 50,
+        "draws": 0,
+        "losses": 20,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.5857142857142857,
+          0.8285714285714286
+        ],
+        "reasons": {
+          "flag": 70
+        },
+        "average_plies": 184.75714285714287
+      },
+      "setup-d879a3cffc80-vs-league": {
+        "games": 70,
+        "wins": 55,
+        "draws": 1,
+        "losses": 14,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.7,
+          0.8785714285714286
+        ],
+        "reasons": {
+          "flag": 69,
+          "ply limit": 1
+        },
+        "average_plies": 311.8142857142857
+      },
+      "setup-d83d63408255-vs-league": {
+        "games": 70,
+        "wins": 62,
+        "draws": 1,
+        "losses": 7,
+        "score": 0.8928571428571429,
+        "paired_bootstrap_95": [
+          0.8071428571428572,
+          0.9642857142857143
+        ],
+        "reasons": {
+          "flag": 68,
+          "ply limit": 1,
+          "no moves": 1
+        },
+        "average_plies": 265.6142857142857
+      },
+      "setup-4a78ceef2b64-vs-league": {
+        "games": 70,
+        "wins": 57,
+        "draws": 0,
+        "losses": 13,
+        "score": 0.8142857142857143,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          0.9
+        ],
+        "reasons": {
+          "flag": 69,
+          "no moves": 1
+        },
+        "average_plies": 226.4
+      },
+      "setup-815ddb0df689-vs-league": {
+        "games": 70,
+        "wins": 61,
+        "draws": 1,
+        "losses": 8,
+        "score": 0.8785714285714286,
+        "paired_bootstrap_95": [
+          0.7785714285714286,
+          0.9571428571428572
+        ],
+        "reasons": {
+          "flag": 67,
+          "ply limit": 1,
+          "no moves": 2
+        },
+        "average_plies": 298.3857142857143
+      },
+      "setup-92047162734e-vs-league": {
+        "games": 70,
+        "wins": 59,
+        "draws": 2,
+        "losses": 9,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7714285714285715,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 68,
+          "ply limit": 2
+        },
+        "average_plies": 301.87142857142857
+      },
+      "setup-61df1a4f46af-vs-league": {
+        "games": 70,
+        "wins": 35,
+        "draws": 3,
+        "losses": 32,
+        "score": 0.5214285714285715,
+        "paired_bootstrap_95": [
+          0.4,
+          0.65
+        ],
+        "reasons": {
+          "flag": 67,
+          "ply limit": 3
+        },
+        "average_plies": 238.0
+      },
+      "setup-4084132f43f2-vs-league": {
+        "games": 70,
+        "wins": 55,
+        "draws": 1,
+        "losses": 14,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.6928571428571428,
+          0.8857142857142857
+        ],
+        "reasons": {
+          "flag": 68,
+          "no moves": 1,
+          "ply limit": 1
+        },
+        "average_plies": 220.27142857142857
+      },
+      "setup-00bfc86b6a7f-vs-league": {
+        "games": 70,
+        "wins": 61,
+        "draws": 0,
+        "losses": 9,
+        "score": 0.8714285714285714,
+        "paired_bootstrap_95": [
+          0.8,
+          0.9428571428571428
+        ],
+        "reasons": {
+          "flag": 69,
+          "no moves": 1
+        },
+        "average_plies": 258.9428571428571
+      },
+      "setup-c958fed5b06c-vs-league": {
+        "games": 70,
+        "wins": 53,
+        "draws": 0,
+        "losses": 17,
+        "score": 0.7571428571428571,
+        "paired_bootstrap_95": [
+          0.6428571428571429,
+          0.8571428571428571
+        ],
+        "reasons": {
+          "flag": 64,
+          "no moves": 6
+        },
+        "average_plies": 235.25714285714287
+      },
+      "setup-cf96a8ef3a1d-vs-league": {
+        "games": 70,
+        "wins": 57,
+        "draws": 0,
+        "losses": 13,
+        "score": 0.8142857142857143,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          0.9142857142857143
+        ],
+        "reasons": {
+          "flag": 67,
+          "no moves": 3
+        },
+        "average_plies": 281.3142857142857
+      },
+      "setup-dc9b99c23a23-vs-league": {
+        "games": 70,
+        "wins": 53,
+        "draws": 5,
+        "losses": 12,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.7071428571428572,
+          0.8785714285714286
+        ],
+        "reasons": {
+          "flag": 64,
+          "ply limit": 5,
+          "no moves": 1
+        },
+        "average_plies": 358.7142857142857
+      },
+      "setup-95427f8b3f0f-vs-league": {
+        "games": 70,
+        "wins": 15,
+        "draws": 0,
+        "losses": 55,
+        "score": 0.21428571428571427,
+        "paired_bootstrap_95": [
+          0.1,
+          0.34285714285714286
+        ],
+        "reasons": {
+          "flag": 70
+        },
+        "average_plies": 40.57142857142857
+      },
+      "setup-b57f614bb9de-vs-league": {
+        "games": 70,
+        "wins": 56,
+        "draws": 2,
+        "losses": 12,
+        "score": 0.8142857142857143,
+        "paired_bootstrap_95": [
+          0.7071428571428572,
+          0.9071428571428571
+        ],
+        "reasons": {
+          "no moves": 4,
+          "flag": 64,
+          "ply limit": 2
+        },
+        "average_plies": 318.0571428571429
+      },
+      "setup-08869847f2ac-vs-league": {
+        "games": 70,
+        "wins": 59,
+        "draws": 0,
+        "losses": 11,
+        "score": 0.8428571428571429,
+        "paired_bootstrap_95": [
+          0.7571428571428571,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "no moves": 6,
+          "flag": 64
+        },
+        "average_plies": 241.94285714285715
+      },
+      "setup-bf821b69ec42-vs-league": {
+        "games": 70,
+        "wins": 56,
+        "draws": 2,
+        "losses": 12,
+        "score": 0.8142857142857143,
+        "paired_bootstrap_95": [
+          0.6928571428571428,
+          0.9142857142857143
+        ],
+        "reasons": {
+          "flag": 66,
+          "ply limit": 2,
+          "no moves": 2
+        },
+        "average_plies": 302.54285714285714
+      },
+      "setup-161268f06d9f-vs-league": {
+        "games": 70,
+        "wins": 53,
+        "draws": 0,
+        "losses": 17,
+        "score": 0.7571428571428571,
+        "paired_bootstrap_95": [
+          0.6428571428571429,
+          0.8714285714285714
+        ],
+        "reasons": {
+          "flag": 69,
+          "no moves": 1
+        },
+        "average_plies": 216.02857142857144
+      },
+      "setup-a471fccd6e4b-vs-league": {
+        "games": 70,
+        "wins": 54,
+        "draws": 2,
+        "losses": 14,
+        "score": 0.7857142857142857,
+        "paired_bootstrap_95": [
+          0.6642857142857143,
+          0.8928571428571429
+        ],
+        "reasons": {
+          "flag": 67,
+          "no moves": 1,
+          "ply limit": 2
+        },
+        "average_plies": 277.4428571428571
+      },
+      "setup-d3be044485c5-vs-league": {
+        "games": 70,
+        "wins": 63,
+        "draws": 0,
+        "losses": 7,
+        "score": 0.9,
+        "paired_bootstrap_95": [
+          0.8285714285714286,
+          0.9571428571428572
+        ],
+        "reasons": {
+          "flag": 69,
+          "no moves": 1
+        },
+        "average_plies": 244.57142857142858
+      },
+      "setup-862e2bdd7c54-vs-league": {
+        "games": 70,
+        "wins": 59,
+        "draws": 1,
+        "losses": 10,
+        "score": 0.85,
+        "paired_bootstrap_95": [
+          0.75,
+          0.9357142857142857
+        ],
+        "reasons": {
+          "flag": 67,
+          "no moves": 2,
+          "ply limit": 1
+        },
+        "average_plies": 276.0
+      },
+      "setup-e7fb5659a1ca-vs-league": {
+        "games": 70,
+        "wins": 53,
+        "draws": 2,
+        "losses": 15,
+        "score": 0.7714285714285715,
+        "paired_bootstrap_95": [
+          0.6714285714285714,
+          0.8642857142857143
+        ],
+        "reasons": {
+          "flag": 67,
+          "no moves": 1,
+          "ply limit": 2
+        },
+        "average_plies": 288.45714285714286
+      },
+      "setup-4881cec0a2b7-vs-league": {
+        "games": 70,
+        "wins": 61,
+        "draws": 1,
+        "losses": 8,
+        "score": 0.8785714285714286,
+        "paired_bootstrap_95": [
+          0.7928571428571428,
+          0.95
+        ],
+        "reasons": {
+          "flag": 66,
+          "no moves": 3,
+          "ply limit": 1
+        },
+        "average_plies": 227.02857142857144
+      },
+      "setup-f91f22c85cf6-vs-league": {
+        "games": 70,
+        "wins": 56,
+        "draws": 3,
+        "losses": 11,
+        "score": 0.8214285714285714,
+        "paired_bootstrap_95": [
+          0.7214285714285714,
+          0.9071428571428571
+        ],
+        "reasons": {
+          "flag": 61,
+          "no moves": 6,
+          "ply limit": 3
+        },
+        "average_plies": 241.72857142857143
+      },
+      "setup-004a77fcecd3-vs-league": {
+        "games": 70,
+        "wins": 59,
+        "draws": 2,
+        "losses": 9,
+        "score": 0.8571428571428571,
+        "paired_bootstrap_95": [
+          0.7571428571428571,
+          0.9428571428571428
+        ],
+        "reasons": {
+          "ply limit": 2,
+          "flag": 68
+        },
+        "average_plies": 246.92857142857142
+      },
+      "setup-9e52bdbac7bc-vs-league": {
+        "games": 70,
+        "wins": 50,
+        "draws": 0,
+        "losses": 20,
+        "score": 0.7142857142857143,
+        "paired_bootstrap_95": [
+          0.6,
+          0.8142857142857143
+        ],
+        "reasons": {
+          "flag": 70
+        },
+        "average_plies": 231.81428571428572
+      },
+      "setup-5ec19e5c7549-vs-league": {
+        "games": 70,
+        "wins": 55,
+        "draws": 3,
+        "losses": 12,
+        "score": 0.8071428571428572,
+        "paired_bootstrap_95": [
+          0.7071428571428572,
+          0.9
+        ],
+        "reasons": {
+          "flag": 64,
+          "no moves": 3,
+          "ply limit": 3
+        },
+        "average_plies": 283.4142857142857
+      },
+      "setup-77e24d30d783-vs-league": {
+        "games": 70,
+        "wins": 50,
+        "draws": 1,
+        "losses": 19,
+        "score": 0.7214285714285714,
+        "paired_bootstrap_95": [
+          0.5928571428571429,
+          0.8428571428571429
+        ],
+        "reasons": {
+          "flag": 67,
+          "no moves": 2,
+          "ply limit": 1
+        },
+        "average_plies": 229.21428571428572
+      },
+      "setup-3fbe3baf2858-vs-league": {
+        "games": 70,
+        "wins": 44,
+        "draws": 0,
+        "losses": 26,
+        "score": 0.6285714285714286,
+        "paired_bootstrap_95": [
+          0.5,
+          0.7428571428571429
+        ],
+        "reasons": {
+          "flag": 68,
+          "no moves": 2
+        },
+        "average_plies": 200.7
+      },
+      "setup-8e3ec841d3ff-vs-league": {
+        "games": 70,
+        "wins": 61,
+        "draws": 1,
+        "losses": 8,
+        "score": 0.8785714285714286,
+        "paired_bootstrap_95": [
+          0.7928571428571428,
+          0.95
+        ],
+        "reasons": {
+          "flag": 64,
+          "no moves": 5,
+          "ply limit": 1
+        },
+        "average_plies": 300.22857142857146
+      },
+      "setup-1234733730fb-vs-league": {
+        "games": 70,
+        "wins": 55,
+        "draws": 1,
+        "losses": 14,
+        "score": 0.7928571428571428,
+        "paired_bootstrap_95": [
+          0.6928571428571428,
+          0.8857142857142857
+        ],
+        "reasons": {
+          "flag": 69,
+          "ply limit": 1
+        },
+        "average_plies": 255.88571428571427
+      },
+      "setup-cd2aabcd670c-vs-league": {
+        "games": 70,
+        "wins": 58,
+        "draws": 0,
+        "losses": 12,
+        "score": 0.8285714285714286,
+        "paired_bootstrap_95": [
+          0.7142857142857143,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 64,
+          "no moves": 6
+        },
+        "average_plies": 280.15714285714284
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/search-v1.zip",
+    "archive_sha256": "c73fff4b9392f03173a4564a41f627ea4f122d1d55a81e81197441e342108cea"
+  },
+  {
+    "name": "normal-validation-v1",
+    "decision": "diagnostic",
+    "reason": "Setup-only Normal validation: three diverse new layouts score 88.4\u201389.6%, versus 90.5% for the best existing preset and 89.1% for protected random. No new-layout advantage was established. The separately retained deployment-block analysis bundles all five opponents per layout for confidence intervals.",
+    "source_sha256": "c4a48be36d3ed6891876c4d9efdb8d01d03e078e9cc3f94fb09ece1f35f505f6",
+    "phase": "validation",
+    "strategy": "deployment-heldout-validation",
+    "suite": "broad-deployment",
+    "difficulty": "normal",
+    "comparisons": {
+      "setup-74e54c5129ea-vs-league": {
+        "games": 560,
+        "wins": 494,
+        "draws": 2,
+        "losses": 64,
+        "score": 0.8839285714285714,
+        "paired_bootstrap_95": [
+          0.8544642857142857,
+          0.9107142857142857
+        ],
+        "reasons": {
+          "flag": 557,
+          "no moves": 1,
+          "ply limit": 2
+        },
+        "average_plies": 230.59107142857144
+      },
+      "setup-d83d63408255-vs-league": {
+        "games": 560,
+        "wins": 493,
+        "draws": 7,
+        "losses": 60,
+        "score": 0.8866071428571428,
+        "paired_bootstrap_95": [
+          0.8571428571428571,
+          0.9151785714285714
+        ],
+        "reasons": {
+          "flag": 540,
+          "no moves": 13,
+          "ply limit": 7
+        },
+        "average_plies": 236.91071428571428
+      },
+      "setup-815ddb0df689-vs-league": {
+        "games": 560,
+        "wins": 499,
+        "draws": 6,
+        "losses": 55,
+        "score": 0.8964285714285715,
+        "paired_bootstrap_95": [
+          0.86875,
+          0.9223214285714286
+        ],
+        "reasons": {
+          "flag": 546,
+          "ply limit": 6,
+          "no moves": 8
+        },
+        "average_plies": 216.42857142857142
+      },
+      "preset-control-vs-league": {
+        "games": 560,
+        "wins": 505,
+        "draws": 4,
+        "losses": 51,
+        "score": 0.9053571428571429,
+        "paired_bootstrap_95": [
+          0.8794642857142857,
+          0.9294642857142857
+        ],
+        "reasons": {
+          "flag": 541,
+          "no moves": 15,
+          "ply limit": 4
+        },
+        "average_plies": 205.05892857142857
+      },
+      "random-control-vs-league": {
+        "games": 560,
+        "wins": 496,
+        "draws": 6,
+        "losses": 58,
+        "score": 0.8910714285714286,
+        "paired_bootstrap_95": [
+          0.8633928571428572,
+          0.9169642857142857
+        ],
+        "reasons": {
+          "flag": 542,
+          "ply limit": 6,
+          "no moves": 12
+        },
+        "average_plies": 231.475
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/normal-validation-v1.zip",
+    "archive_sha256": "090ad72e5d3584ff52b0e244e1c11f209e55fc5e8bdf31ca4699e044152ce6cc"
+  },
+  {
+    "name": "hard-transfer-v1",
+    "decision": "diagnostic",
+    "reason": "Hard setup transfer: preselected new layout d83d63408255 gains 4.4 percentage points and the existing preset gains 5.5 over protected random, with deployment-block intervals above zero. These secondary signals are selected for independent confirmation before a strength recommendation.",
+    "source_sha256": "c4a48be36d3ed6891876c4d9efdb8d01d03e078e9cc3f94fb09ece1f35f505f6",
+    "phase": "validation",
+    "strategy": "deployment-heldout-validation",
+    "suite": "broad-deployment",
+    "difficulty": "hard",
+    "comparisons": {
+      "setup-74e54c5129ea-vs-league": {
+        "games": 560,
+        "wins": 451,
+        "draws": 40,
+        "losses": 69,
+        "score": 0.8410714285714286,
+        "paired_bootstrap_95": [
+          0.8116071428571429,
+          0.8696428571428572
+        ],
+        "reasons": {
+          "flag": 517,
+          "ply limit": 40,
+          "no moves": 3
+        },
+        "average_plies": 308.6
+      },
+      "setup-d83d63408255-vs-league": {
+        "games": 560,
+        "wins": 488,
+        "draws": 23,
+        "losses": 49,
+        "score": 0.8919642857142858,
+        "paired_bootstrap_95": [
+          0.8651785714285715,
+          0.9178571428571428
+        ],
+        "reasons": {
+          "flag": 522,
+          "ply limit": 23,
+          "no moves": 15
+        },
+        "average_plies": 274.7392857142857
+      },
+      "setup-815ddb0df689-vs-league": {
+        "games": 560,
+        "wins": 464,
+        "draws": 31,
+        "losses": 65,
+        "score": 0.85625,
+        "paired_bootstrap_95": [
+          0.8258928571428571,
+          0.8848214285714285
+        ],
+        "reasons": {
+          "ply limit": 31,
+          "flag": 520,
+          "no moves": 9
+        },
+        "average_plies": 303.0571428571429
+      },
+      "preset-control-vs-league": {
+        "games": 560,
+        "wins": 499,
+        "draws": 14,
+        "losses": 47,
+        "score": 0.9035714285714286,
+        "paired_bootstrap_95": [
+          0.8758928571428571,
+          0.9285714285714286
+        ],
+        "reasons": {
+          "flag": 530,
+          "no moves": 16,
+          "ply limit": 14
+        },
+        "average_plies": 242.24642857142857
+      },
+      "random-control-vs-league": {
+        "games": 560,
+        "wins": 461,
+        "draws": 28,
+        "losses": 71,
+        "score": 0.8482142857142857,
+        "paired_bootstrap_95": [
+          0.8160714285714286,
+          0.8794642857142857
+        ],
+        "reasons": {
+          "flag": 520,
+          "no moves": 12,
+          "ply limit": 27,
+          "neither can move": 1
+        },
+        "average_plies": 287.0785714285714
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/hard-transfer-v1.zip",
+    "archive_sha256": "461d7de476391e3bef505b8148bc25c6b604716465ad2d7f7fbdb9485b1034ed"
+  },
+  {
+    "name": "hard-confirmation-v1",
+    "decision": "keep",
+    "reason": "Fresh predeclared Hard confirmation: existing CORNER FORTRESS scores 91.6% versus protected random 88.6%, a +3.0 percentage-point setup-only gain (complete deployment-block 95% interval +0.2\u20135.7). The evolved candidate scores 90.7%, but its +2.1 point advantage over random is not established; retain it as a diverse benchmark alternative.",
+    "source_sha256": "d75de9a69e2fcc29037db7fcc7162b08a4bedfc0c8d42151c095df14e3af71a5",
+    "phase": "validation",
+    "strategy": "deployment-heldout-validation",
+    "suite": "broad-deployment",
+    "difficulty": "hard",
+    "comparisons": {
+      "setup-d83d63408255-vs-league": {
+        "games": 840,
+        "wins": 743,
+        "draws": 38,
+        "losses": 59,
+        "score": 0.9071428571428571,
+        "paired_bootstrap_95": [
+          0.8869047619047619,
+          0.9267857142857143
+        ],
+        "reasons": {
+          "flag": 785,
+          "ply limit": 38,
+          "no moves": 17
+        },
+        "average_plies": 288.08214285714286
+      },
+      "preset-control-vs-league": {
+        "games": 840,
+        "wins": 760,
+        "draws": 19,
+        "losses": 61,
+        "score": 0.9160714285714285,
+        "paired_bootstrap_95": [
+          0.8958333333333334,
+          0.9351190476190476
+        ],
+        "reasons": {
+          "flag": 802,
+          "no moves": 19,
+          "ply limit": 19
+        },
+        "average_plies": 263.4654761904762
+      },
+      "random-control-vs-league": {
+        "games": 840,
+        "wins": 728,
+        "draws": 33,
+        "losses": 79,
+        "score": 0.8863095238095238,
+        "paired_bootstrap_95": [
+          0.8630952380952381,
+          0.9083333333333333
+        ],
+        "reasons": {
+          "flag": 788,
+          "ply limit": 33,
+          "no moves": 19
+        },
+        "average_plies": 285.66190476190474
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/hard-confirmation-v1.zip",
+    "archive_sha256": "43137870d03b65ebd481a6278d46dfdb7c91be4cb80e19935334c6d9e7d34f40"
   }
 ]
