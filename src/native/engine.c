@@ -139,7 +139,8 @@ static void go(void) {
 static void remove_piece(uint8_t sq) {
     uint8_t cell = board[sq];
 
-    if(IS_PIECE(cell) && (cell & CELL_BLUE) != own) enemy_lost[PIECE_TYPE(cell)]++;
+    if(IS_PIECE(cell) && (cell & CELL_BLUE) != own && (cell & CELL_REVEALED))
+        enemy_lost[PIECE_TYPE(cell)]++;
     board[sq] = CELL_EMPTY;
 }
 
@@ -158,11 +159,12 @@ static void moved(uint8_t from, uint8_t to) {
 }
 
 /**
- * @brief A battle by either army: both ranks become known, the losers leave
+ * @brief Resolve referee combat, disclosing ranks only when the rules allow it
  */
 static void battle(uint8_t from, uint8_t to, int attacker, int defender) {
     uint8_t a = (board[from] & ~CELL_TYPE) | attacker | CELL_REVEALED | CELL_MOVED;
-    uint8_t d = (board[to] & ~CELL_TYPE) | defender | CELL_REVEALED;
+    uint8_t d = board[to];
+    if(rules_reveal_defender(attacker)) d = (d & ~CELL_TYPE) | defender | CELL_REVEALED;
 
     board[from] = a;
     board[to] = d;
@@ -222,11 +224,23 @@ static void think(char* args) {
     reply(text);
 }
 
-int main(void) {
+static int difficulty(const char* name) {
+    if(name && !strcmp(name, "easy")) ai_difficulty = AI_EASY;
+    else if(name && !strcmp(name, "normal")) ai_difficulty = AI_NORMAL;
+    else if(name && !strcmp(name, "hard")) ai_difficulty = AI_HARD;
+    else return 0;
+    return 1;
+}
+
+int main(int argc, char** argv) {
     char line[512], *command, *args;
     uint8_t from, to;
     int attacker, defender;
 
+    if(argc != 1 && (argc != 3 || strcmp(argv[1], "--difficulty") || !difficulty(argv[2]))) {
+        fputs("usage: feldmarschall-engine [--difficulty easy|normal|hard]\n", stderr);
+        return 2;
+    }
     random_seed(1);
     new_game(0);
     while(fgets(line, sizeof(line), stdin)) {
@@ -242,6 +256,11 @@ int main(void) {
             reply("readyok");
         } else if(!strcmp(command, "seed")) {
             random_seed(args ? atoi(args) : 1);
+        } else if(!strcmp(command, "rules")) {
+            if(args && atoi(args) >= 0 && atoi(args) < 64) game_rules = atoi(args);
+            else reply("error rules");
+        } else if(!strcmp(command, "difficulty")) {
+            if(!difficulty(args)) reply("error difficulty");
         } else if(!strcmp(command, "new")) {
             new_game(args && !strcmp(args, "blue"));
         } else if(!strcmp(command, "setup")) {

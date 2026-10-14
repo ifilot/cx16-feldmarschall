@@ -29,6 +29,8 @@
  *   $0404-040F  the enemy's captured pieces per type
  *   $0410-0473  the army's view of the board, as in src/core/board.h
  *   $0474-0475  the chosen move: from and to (255: none)
+ *   $0476       difficulty (0 Easy, 1 Normal, 2 Hard)
+ *   $0477       rules bitmask (0..63)
  */
 #include <string.h>
 
@@ -44,6 +46,8 @@
 #define LOST        4
 #define VIEW        16
 #define MOVE        116
+#define LEVEL       118
+#define OPTIONS     119
 
 static uint8_t lost[PIECE_TYPES];
 
@@ -75,6 +79,8 @@ void main(void) {
         random_seed(MAILBOX[SEED] | (MAILBOX[SEED + 1] << 8));
         ai_reset();
         rules_reset();
+        ai_difficulty = MAILBOX[LEVEL] < AI_LEVELS ? MAILBOX[LEVEL] : AI_NORMAL;
+        game_rules = MAILBOX[OPTIONS] & 63;
 #ifdef AI_TRACE
         TRACE[0] = 0;
 #endif

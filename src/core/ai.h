@@ -23,6 +23,16 @@
 
 #include <stdint.h>
 
+#define AI_EASY   0
+#define AI_NORMAL 1
+#define AI_HARD   2
+#define AI_LEVELS 3
+extern uint8_t ai_difficulty;
+extern const char* const ai_level_names[AI_LEVELS];
+
+/* Replace every undisclosed enemy rank, including Spy/Marshal/Flag, in place. */
+void ai_mask(uint8_t army);
+
 /**
  * @brief Choose a move for one army, from what that army knows
  *
@@ -30,11 +40,15 @@
  * pieces with their true type only once revealed (CELL_REVEALED); every
  * other enemy piece has type PIECE_UNKNOWN. The caller keeps the truth.
  *
- * A one-move lookahead. Attacks on a hidden piece are weighed over every
- * rank it could be: the starting army, minus the pieces captured (`lost`)
- * and those revealed on the board. A piece that has moved is no bomb or
- * flag. Quiet moves advance, flee threatened squares and avoid stepping
- * next to known danger; a little randomness (random.h) breaks ties.
+ * Single-move tactical evaluation with persistent per-piece objectives and
+ * breadth-first routes around lakes and occupied squares. Hidden attacks use
+ * remaining-rank counts and movement evidence; undisclosed ranks stay unknown.
+ * Resulting occupancy is checked for adjacent and long-range scout danger,
+ * immediate flag defence, and immediate victories. Specialist values depend
+ * on remaining enemy ranks. Small random adjustments vary similar choices.
+ * Easy simplifies planning and varies scores more; Normal uses this evaluator.
+ * Hard checks the best material reply to six shortlisted moves, weighting
+ * concealed combat outcomes. All levels receive the same masked information.
  *
  * @param army CELL_BLUE for Blue, 0 for Red
  * @param lost the enemy's captured pieces, per type
@@ -44,9 +58,15 @@
 void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to);
 
 /**
- * @brief Forget the previous move (at the start of a game)
+ * @brief Forget goals and both armies' move histories (at the start of a game)
  */
 void ai_reset(void);
+
+#ifdef AI_TEST
+#define AI_TEST_STATE_SIZE 204
+void ai_test_save(uint8_t* out);
+void ai_test_load(const uint8_t* in);
+#endif
 
 #ifdef AI_TRACE
 /* supplied by a test build: called with the score of every candidate move */

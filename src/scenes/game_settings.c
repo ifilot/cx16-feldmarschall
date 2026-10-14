@@ -1,6 +1,7 @@
 #include <ascii_charmap.h>
 #pragma static-locals (on)
 #include "game_settings.h"
+#include "ai.h"
 #include "scene.h"
 #include "rules.h"
 #include "dialog.h"
@@ -23,6 +24,9 @@
 #define CLASSIC_COL 21
 #define NEXT_COL 33
 #define BUTTON_ROW 44
+#define LEVEL_COL (DETAIL_COL + 2)
+#define LEVEL_ROW 44
+#define LEVEL_WIDTH 12
 
 static uint8_t choice, hovered, pressed = 0xFF, press_timer;
 static const char* const names[6] = {
@@ -42,10 +46,18 @@ static const char* const button_names[3] = {"BACK", "CLASSIC", "CONTINUE"};
 
 static uint8_t button_at(void) {
     uint8_t i;
+    if(input.x >= LEVEL_COL*8 && input.x < (LEVEL_COL+LEVEL_WIDTH)*8 &&
+       input.y >= LEVEL_ROW*8 && input.y < (LEVEL_ROW+BUTTON_HEIGHT)*8) return 3;
     for(i=0; i<3; i++) {
         if(button_hit(button_cols[i], BUTTON_ROW, button_names[i], input.x, input.y)) return i;
     }
     return 0xFF;
+}
+
+static void draw_level(void) {
+    video_text_plate(LEVEL_COL, LEVEL_ROW-2, "DIFFICULTY", TEXT_UI_RED);
+    button_draw_width(LEVEL_COL, LEVEL_ROW, LEVEL_WIDTH, ai_level_names[ai_difficulty],
+                      pressed >= 9 && pressed != 0xFF ? BUTTON_PRESSED : hovered == 3 ? BUTTON_HOVER : BUTTON_NORMAL);
 }
 
 static void draw_buttons(void) {
@@ -55,6 +67,7 @@ static void draw_buttons(void) {
                     pressed == 6+i ? BUTTON_PRESSED : hovered == i ? BUTTON_HOVER : BUTTON_NORMAL);
         if(hovered == i) video_text_plate(button_cols[i] + 2, BUTTON_ROW + 1, button_names[i], TEXT_UI_RED);
     }
+    draw_level();
 }
 
 static void draw(void) {
@@ -70,6 +83,7 @@ static void draw(void) {
     for(i=0; i<6; i++) {
         video_text_plate(DETAIL_COL + 2, DETAIL_ROW + 7 + i * 3, details[choice][i], TEXT_INK);
     }
+    draw_level();
 }
 
 static void toggle(uint8_t i) {
@@ -116,6 +130,7 @@ uint8_t game_settings_update(void) {
         if(i < 6) toggle(i);
         else if(i == 6) { sound_sfx(SFX_MENU_BACK); return SCENE_MENU; }
         else if(i == 8) { sound_sfx(SFX_MENU_SELECT); return SCENE_PREPARE; }
+        else if(i >= 9) { ai_difficulty = (ai_difficulty + (i == 9 ? 1 : 2)) % AI_LEVELS; sound_sfx(SFX_MENU_SELECT); }
         else { game_rules = 0; sound_sfx(SFX_MENU_SELECT); draw(); }
         draw_buttons();
         return SCENE_STAY;
@@ -123,6 +138,8 @@ uint8_t game_settings_update(void) {
     if(key >= 0xC1 && key <= 0xDA) key -= 0x80;
     if(key == KEY_ESCAPE) { sound_sfx(SFX_MENU_BACK); return SCENE_MENU; }
     if(key == KEY_RETURN) return press(8);
+    if(key == KEY_RIGHT) return press(9);
+    if(key == KEY_LEFT) return press(10);
     if(key >= '1' && key <= '6') return press(key - '1');
     if(key == ' ') return press(choice);
     if(key == 'C' || key == 'c') return press(7);
@@ -130,7 +147,7 @@ uint8_t game_settings_update(void) {
     if(key == KEY_DOWN && choice < 5) choice++;
     if(input.key) hover = 0xFF;
     if(hover != hovered) { hovered = hover; draw_buttons(); }
-    if(input.pointer_active && (input.pressed & BUTTON_LEFT) && hover < 3) return press(6+hover);
+    if(input.pointer_active && (input.pressed & BUTTON_LEFT) && hover < 4) return press(hover == 3 ? 9 : 6+hover);
     if(input.pointer_active && input.x >= 80 && input.x < 344) {
         for(i=0; i<6; i++) {
             if(input.y >= (FIRST + i * PITCH - 1) * 8 && input.y < (FIRST + i * PITCH + 2) * 8) {

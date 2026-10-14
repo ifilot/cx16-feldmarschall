@@ -10,6 +10,7 @@ move with the same random seed: the native engine (build/feldmarschall-engine,
 Every move must be identical. Requires `make` and `make native`.
 """
 import argparse
+import json
 import random
 import sys
 from pathlib import Path
@@ -78,21 +79,36 @@ def main():
     parser.add_argument('--emu', default=str(ROOT.parent / 'x16-emulator/build/x16emu'))
     roms = [ROOT.parent / 'emulator/rom.bin', ROOT.parent / 'emulator-win/rom.bin']
     parser.add_argument('--rom', default=str(next((r for r in roms if r.exists()), roms[0])))
+    parser.add_argument('--difficulty', choices=('easy', 'normal', 'hard'), default='normal')
+    parser.add_argument('--rules', type=int, default=0)
+    parser.add_argument('--bridge', type=Path, default=ROOT / 'src/BRIDGE.PRG')
+    parser.add_argument('--engine', default=str(ROOT / 'build/feldmarschall-engine'))
+    parser.add_argument('--reference', help='also compare fresh decisions with another native engine')
+    parser.add_argument('--json-out', type=Path)
     args = parser.parse_args()
 
     rng = random.Random(args.seed)
     tests = positions(args.positions, rng)
-    native = Engine(str(ROOT / 'build/feldmarschall-engine'), 'native')
-    emu = X16Agent(args.emu, args.rom, fsroot=ROOT / 'src', options=['-prg', str(ROOT / 'src/BRIDGE.PRG'), '-run'])
+    native = Engine(args.engine, 'native')
+    native.send('difficulty ' + args.difficulty)
+    native.send(f'rules {args.rules}')
+    reference = Engine(args.reference, 'reference') if args.reference else None
+    emu = X16Agent(args.emu, args.rom, fsroot=ROOT / 'src', options=['-prg', str(args.bridge), '-run'])
     mismatches, slowest = 0, 0
+    timings = []
     try:
         emu.advance(120)
         for n, (army, cells, lost) in enumerate(tests, 1):
             seed = rng.randrange(1, 65536)
             answer = native.ask(f'think {army} {seed} {bytes(lost).hex()} {bytes(cells).hex()}', 'best')
             expected = tuple(int(v) for v in answer.split())
+            if reference:
+                reference_answer = reference.ask(f'think {army} {seed} {bytes(lost).hex()} {bytes(cells).hex()}', 'best')
+                if tuple(map(int, reference_answer.split())) != expected:
+                    raise SystemExit(f'position {n}: optimized decision differs from reference')
 
             emu.write_memory(MAILBOX + 1, bytes([army, seed & 255, seed >> 8]) + bytes(lost) + bytes(cells))
+            emu.write_memory(MAILBOX + 118, bytes([('easy', 'normal', 'hard').index(args.difficulty), args.rules]))
             emu.write_memory(MAILBOX, bytes([1]))
             for frames in range(1, 600):
                 emu.advance(1)
@@ -101,15 +117,26 @@ def main():
             else:
                 raise SystemExit(f'position {n}: the X16 did not answer')
             slowest = max(slowest, frames)
+            timings.append(frames)
             got = tuple(emu.read_memory(MAILBOX + 116, 2))
             if got != expected:
                 mismatches += 1
                 print(f'position {n}: native {expected}, X16 {got}')
     finally:
         native.close()
+        if reference: reference.close()
         emu.close()
     print(f'{len(tests)} positions, {mismatches} mismatches; '
           f'the X16 took at most {slowest} frames ({slowest / 60:.2f} s) per move')
+    if args.json_out:
+        args.json_out.parent.mkdir(parents=True, exist_ok=True)
+        args.json_out.write_text(json.dumps({
+            'difficulty': args.difficulty, 'positions': len(tests), 'seed': args.seed,
+            'rules': args.rules, 'mismatches': mismatches, 'max_frames': slowest,
+            'mean_frames': sum(timings) / len(timings),
+            'p95_frames': sorted(timings)[int(0.95 * (len(timings)-1))],
+            'frame_samples': timings,
+        }, indent=2) + '\n')
     sys.exit(1 if mismatches else 0)
 
 

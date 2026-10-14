@@ -28,6 +28,7 @@ the moves of both armies, and the ranks revealed in battles.
 | --- | --- | --- |
 | `feldmarschall` | `id name …`, `id author …`, `ok` | Sent once at start; the referee waits for `ok`. |
 | `isready` | `readyok` | Synchronise. |
+| `difficulty <level>` | | Choose `easy`, `normal` or `hard`; also available as `--difficulty LEVEL` at launch. |
 | `seed <n>` | | Seed the engine's random choices (for reproducible games). |
 | `new red` / `new blue` | | Start a game playing this army. The enemy's 40 pieces stand unknown on its home rows. |
 | `setup <40 glyphs>` | | The engine's deployment, chosen by the referee. |
@@ -97,10 +98,22 @@ from i4 to i5 and later defeats a Blue Miner on i6.
 ## Testing commands
 
 `build/feldmarschall-engine` also answers `think <army> <seed> <lost> <view>`:
-the move it would choose from a raw position, given as hexadecimal bytes in
+the move it would choose from a raw **masked army view**, given as hexadecimal bytes in
 the encoding of `src/core` (`board.h`, `pieces.h`), with fresh random state.
 It replies `best <from> <to>` as square numbers 0–99 (rank 10 first). The
 parity test (`tools/parity.py`) sends the same positions to `BRIDGE.PRG`
 on the X16 and checks that both builds choose the same moves. With the
 environment variable `FELDMARSCHALL_TRACE` set, and the engine compiled with
 `-DAI_TRACE`, `think` first lists every candidate move with its score.
+
+`rules <0..63>` selects the bitmask from `src/core/rules.h` before a `think`
+request (the default is classic rules). The native information ledger honours
+Silent Defense when resolving referee battles: an undisclosed defender and
+its casualty rank stay unknown, unless a Scout or earlier revelation permits
+disclosure. The match referee currently benchmarks classic rules only; it does
+not implement the game's rescue or moving-flag victory flow.
+
+The X16 mailbox carries difficulty at `$0476` and the rules mask at `$0477`.
+For example, `python3 tools/parity.py --difficulty hard --rules 63` checks
+matching native/X16 decisions with every variant enabled. Level selection is
+preserved by `new`, `think`, and AI history resets.

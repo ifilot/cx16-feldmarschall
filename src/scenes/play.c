@@ -161,16 +161,9 @@ static const char* const* entries = pause_entries;
  * of the call; only disclosed casualty ranks are passed to the AI.
  */
 static void computer_think(void) {
-    uint8_t sq, cell;
-
 
     memcpy(truth, board, SQUARES);
-    for(sq=0; sq<SQUARES; sq++) {
-        cell = board[sq];
-        if(IS_PIECE(cell) && (cell & CELL_BLUE) != (blue ? CELL_BLUE : 0) && !(cell & CELL_REVEALED)) {
-            board[sq] = (cell & ~CELL_TYPE) | PIECE_UNKNOWN;
-        }
-    }
+    ai_mask(blue ? CELL_BLUE : 0);
     ai_move(blue ? CELL_BLUE : 0, rules_known_lost[blue ? 0 : 1], &move_from, &move_to);
     memcpy(board, truth, SQUARES);
 }
@@ -764,7 +757,7 @@ static void pause_save(void) {
     memcpy(saved, tray, TRAY_SLOTS);
     saved[TRAY_SLOTS] = (uint8_t)turn;
     saved[TRAY_SLOTS + 1] = turn >> 8;
-    saved[TRAY_SLOTS + 2] = blue;
+    saved[TRAY_SLOTS + 2] = blue | 0x40 | (ai_difficulty << 1);
     video_text_plate(GAME_MENU_COL + 1, GAME_STATUS, "                                ", TEXT_INK);
     if(store_game_write(saved)) {
         sound_sfx(SFX_SAVE);
@@ -918,6 +911,8 @@ void play_resume(void) {
     turn = saved[TRAY_SLOTS] | (saved[TRAY_SLOTS + 1] << 8);
     blue = saved[TRAY_SLOTS + 2] & 1;
     demo = (saved[TRAY_SLOTS + 2] & 0x80) != 0;
+    ai_difficulty = (saved[TRAY_SLOTS + 2] & 0x40) ? (saved[TRAY_SLOTS + 2] >> 1) & 3 : AI_NORMAL;
+    if(ai_difficulty >= AI_LEVELS) ai_difficulty = AI_NORMAL;
     begin();
 }
 

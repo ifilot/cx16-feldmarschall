@@ -256,16 +256,23 @@ preserves your prepared army and saved deployment slots.
 
 #### The computer
 
-Blue looks one move ahead and only uses what it may know. The game hands
-it a *view* of the board in which every red piece it has not seen is
-unknown; it counts how many pieces of each rank Red still hides from the
-starting army, the pieces captured and those revealed. An
-attack on a hidden piece is weighed over every rank it could be; a piece
-that has moved excludes stationary Bombs and Flags only when their movement
-variants are disabled. Silent Defense withholds undisclosed casualty ranks
-from the computer as well. Quiet moves advance, flee squares next
-to a known stronger piece, and avoid stepping into danger. A little
-randomness keeps games apart.
+The computer evaluates legal moves using only its army's view. Undisclosed
+enemy ranks are replaced with unknowns; Silent Defense also withholds hidden
+casualty ranks. Attacks on unknowns use remaining-rank counts and movement
+evidence, excluding stationary Bombs and Flags after a piece has moved.
+
+Each piece selects a reachable enemy objective and keeps a small preference
+for continuing that plan. Breadth-first routes guide it around lakes and
+occupied squares. Tactical evaluation checks the resulting occupancy for
+adjacent enemies and long scout rays, prioritizes immediate victory and
+confirmed threats to its own flag, and preserves specialist value while the
+opposing threat remains. Small random adjustments vary similar choices.
+Normal uses this evaluator. Easy skips route planning and varies choices
+more; Hard checks the best material reply to six shortlisted moves, weighting
+possible concealed combat outcomes. Every level receives the same information.
+Choose difficulty by clicking its button in New Game, or with the left/right
+arrow keys. Difficulty is retained in saved games; older saves use Normal. See
+[the AI comparison](docs/ai-comparison.md) for measured results and limits.
 
 ## Layout
 
@@ -500,7 +507,8 @@ may know, so other programs can join in.
   it runs `BRIDGE.PRG` (`src/bridge`) in the emulator and the native
   engine side by side on hundreds of positions, with the same random seed.
 
-`make rating` plays 600 games in about half a minute:
+The pre-upgrade v0.2.0 AI had these historical results over 600 games
+against the baseline bots (these are not human Elo ratings):
 
 | Engine | Elo | 95% | Score |
 | --- | ---: | ---: | ---: |
@@ -512,8 +520,28 @@ Ratings only compare engines within the pool that played; on this scale
 a 100-point gap means the stronger engine scores about 64%. The parity
 test found a cc65 quirk that made the X16 mis-score attacks on hidden
 pieces (cc65 divides a negative `long` by an `unsigned char` as unsigned);
-both builds now agree on every tested position, and the X16 needs at most
-a tenth of a second per move.
+both builds now agree on every tested position. The upgraded AI matched on
+500 fresh positions per difficulty. The maximum measured times were 14 frames
+(0.23 seconds) for Easy, 24 (0.40) for Normal and 45 (0.75) for Hard. Normal's
+optimizations preserved 17,417 decisions across 30 complete games against the
+previous planned evaluator, whose measured maximum was 43 frames (0.72 seconds).
+
+`make benchmark-ai` rebuilds the frozen v0.2.0 opponent and runs 1,800 games
+against the current AI, with independent seeds, side-swapped deployment
+pairs, and confidence intervals resampled by pair. The current AI scored
+69.8% (894 wins, 724 draws, 182 losses), counting draws as half a point;
+the paired 95% interval was 68.3–71.3%. Full results and deployments go to
+`build/ai-benchmark/`. See [the recorded report](docs/ai-benchmark.json).
+
+`make benchmark-ai-levels` plays 3,600 independent validation games across
+all level pairings and three deployment groups. Normal scored 80.7% against
+Easy; Hard scored 55.0% against Normal and 84.0% against Easy. Paired 95%
+intervals were 78.8–82.6%, 52.5–57.5%, and 82.0–85.9%, respectively.
+See [the difficulty report](docs/ai-level-benchmark.json). `make check` also
+verifies 15,242 decisions after permuting hidden ranks, including Spy,
+Marshal and Flag, plus 3,644 changes to undisclosed Silent Defense casualty
+inventories. Choices, random consumption and persistent history must match.
+
 
 ## Building
 
@@ -536,6 +564,11 @@ make test-controls # keyboard/pointer arbitration and simulated gamepad actions
 make check        # check the built-in deployments and the rules (tests/)
 make native       # build the computer player as a PC program (needs gcc)
 make rating       # rate it against the baseline bots
+make benchmark-ai # compare with the frozen pre-upgrade v0.2.0 AI
+make test-ai      # tactics, all levels, hidden permutations and 64 rule combinations
+make test-ai-levels # difficulty controls, saved games and banked execution
+make benchmark-ai-levels # paired Easy/Normal/Hard strength comparisons
+make compare-ai   # prove Normal optimizations preserve complete-game choices
 make parity       # check that the X16 and the PC choose the same moves
 make autoplay     # play 150 turns of random red moves against the computer
 ```
@@ -601,8 +634,10 @@ make test-sound
 ZSMKit v1 runs music on PSG voices 0–11 and effects on 12–15. Playback is
 interrupt-driven from RAM, so AI searches and disk loads do not starve it.
 RAM bank 1 holds ZSMKit state, 2 the effects, and 3–21 the music; 22 and 23
-hold the play-scene and AI code. Their data stays in main RAM, and assembly
-gateways restore the caller's bank. `PLAY.BIN` and `AI.BIN` are required
+hold the play-scene and AI code. The play-scene data stays in main RAM;
+the AI's private goals, route scratch space, scores and static locals live
+with its code in bank 23 (`AIBSS`). The AI initializes that state explicitly,
+and assembly gateways restore the caller's bank. `PLAY.BIN` and `AI.BIN` are required
 runtime files. The native engine and `BRIDGE.PRG` keep their ordinary AI code.
 `src/feldmarschall.cfg` checks bank sizes, and the sound build refuses music
 that would overlap the code banks. Music resumes its current track across

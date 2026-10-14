@@ -48,6 +48,8 @@
 #define KEY_ESCAPE      0x1B
 #define KEY_UP          0x91
 #define KEY_DOWN        0x11
+#define KEY_LEFT        0x9D
+#define KEY_RIGHT       0x1D
 
 /* the input of the current frame, read by main() before each update */
 typedef struct {

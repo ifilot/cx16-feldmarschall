@@ -1,0 +1,239 @@
+{
+  "provenance": {
+    "rounds_per_group": 200,
+    "groups": {
+      "mixed": 20261021,
+      "random": 20261022,
+      "presets": 20261023
+    },
+    "max_plies": 1000,
+    "source_sha256": "0ce3aadea07736cd3768ae6e0a2e122a199c45221b349e579b6ada3fc76639ab",
+    "baseline_sha256": "ef69a7911f4f3add97ae63c3772b13b716679b7ff4fa249c6d32580f067443bb",
+    "rules_sha256": "9645cbe7955c821fc7ff6bd8e9f20ecf10eee3b6db462a6f5f671e44af41813d",
+    "engine_sha256": {
+      "easy": "eea941391d63b5974de945e93d871a2b566a0d803bdae75620ce47a24b2fe959",
+      "normal": "eea941391d63b5974de945e93d871a2b566a0d803bdae75620ce47a24b2fe959",
+      "hard": "eea941391d63b5974de945e93d871a2b566a0d803bdae75620ce47a24b2fe959"
+    },
+    "level_configuration_sha256": "2f7f5f3c7acbda776c655974ea097c9dbcf3ea3aca3cf12be8e7f333a0bb4c48",
+    "confidence_method": "10000 bootstrap resamples of complete side-swapped pairs; seed 8675309"
+  },
+  "comparisons": {
+    "normal-vs-easy": {
+      "groups": {
+        "mixed": {
+          "games": 400,
+          "wins": 298,
+          "draws": 52,
+          "losses": 50,
+          "score": 0.81,
+          "paired_bootstrap_95": [
+            0.77625,
+            0.8425
+          ],
+          "reasons": {
+            "flag": 338,
+            "ply limit": 52,
+            "no moves": 10
+          },
+          "average_plies": 572.885
+        },
+        "random": {
+          "games": 400,
+          "wins": 284,
+          "draws": 72,
+          "losses": 44,
+          "score": 0.8,
+          "paired_bootstrap_95": [
+            0.7675,
+            0.83125
+          ],
+          "reasons": {
+            "flag": 315,
+            "ply limit": 72,
+            "no moves": 13
+          },
+          "average_plies": 622.5225
+        },
+        "presets": {
+          "games": 400,
+          "wins": 299,
+          "draws": 50,
+          "losses": 51,
+          "score": 0.81,
+          "paired_bootstrap_95": [
+            0.77625,
+            0.84375
+          ],
+          "reasons": {
+            "flag": 346,
+            "ply limit": 50,
+            "no moves": 4
+          },
+          "average_plies": 543.405
+        }
+      },
+      "overall": {
+        "games": 1200,
+        "wins": 881,
+        "draws": 174,
+        "losses": 145,
+        "score": 0.8066666666666666,
+        "paired_bootstrap_95": [
+          0.7875,
+          0.8258333333333333
+        ],
+        "reasons": {
+          "flag": 999,
+          "ply limit": 174,
+          "no moves": 27
+        },
+        "average_plies": 579.6041666666666
+      }
+    },
+    "hard-vs-normal": {
+      "groups": {
+        "mixed": {
+          "games": 400,
+          "wins": 193,
+          "draws": 28,
+          "losses": 179,
+          "score": 0.5175,
+          "paired_bootstrap_95": [
+            0.4725,
+            0.56125
+          ],
+          "reasons": {
+            "flag": 362,
+            "ply limit": 28,
+            "no moves": 10
+          },
+          "average_plies": 398.0025
+        },
+        "random": {
+          "games": 400,
+          "wins": 210,
+          "draws": 31,
+          "losses": 159,
+          "score": 0.56375,
+          "paired_bootstrap_95": [
+            0.52,
+            0.6075
+          ],
+          "reasons": {
+            "flag": 348,
+            "ply limit": 31,
+            "no moves": 21
+          },
+          "average_plies": 441.27
+        },
+        "presets": {
+          "games": 400,
+          "wins": 214,
+          "draws": 27,
+          "losses": 159,
+          "score": 0.56875,
+          "paired_bootstrap_95": [
+            0.525,
+            0.61375
+          ],
+          "reasons": {
+            "flag": 371,
+            "ply limit": 27,
+            "no moves": 2
+          },
+          "average_plies": 387.03
+        }
+      },
+      "overall": {
+        "games": 1200,
+        "wins": 617,
+        "draws": 86,
+        "losses": 497,
+        "score": 0.55,
+        "paired_bootstrap_95": [
+          0.5245833333333333,
+          0.5754166666666667
+        ],
+        "reasons": {
+          "flag": 1081,
+          "ply limit": 86,
+          "no moves": 33
+        },
+        "average_plies": 408.7675
+      }
+    },
+    "hard-vs-easy": {
+      "groups": {
+        "mixed": {
+          "games": 400,
+          "wins": 328,
+          "draws": 18,
+          "losses": 54,
+          "score": 0.8425,
+          "paired_bootstrap_95": [
+            0.80875,
+            0.875
+          ],
+          "reasons": {
+            "flag": 373,
+            "ply limit": 18,
+            "no moves": 9
+          },
+          "average_plies": 489.4325
+        },
+        "random": {
+          "games": 400,
+          "wins": 313,
+          "draws": 32,
+          "losses": 55,
+          "score": 0.8225,
+          "paired_bootstrap_95": [
+            0.7875,
+            0.85625
+          ],
+          "reasons": {
+            "flag": 342,
+            "no moves": 26,
+            "ply limit": 32
+          },
+          "average_plies": 547.5075
+        },
+        "presets": {
+          "games": 400,
+          "wins": 333,
+          "draws": 17,
+          "losses": 50,
+          "score": 0.85375,
+          "paired_bootstrap_95": [
+            0.82125,
+            0.885
+          ],
+          "reasons": {
+            "flag": 376,
+            "no moves": 7,
+            "ply limit": 17
+          },
+          "average_plies": 464.38
+        }
+      },
+      "overall": {
+        "games": 1200,
+        "wins": 974,
+        "draws": 67,
+        "losses": 159,
+        "score": 0.8395833333333333,
+        "paired_bootstrap_95": [
+          0.82,
+          0.85875
+        ],
+        "reasons": {
+          "flag": 1091,
+          "ply limit": 67,
+          "no moves": 42
+        },
+        "average_plies": 500.44
+      }
+    }
+  }
+}
