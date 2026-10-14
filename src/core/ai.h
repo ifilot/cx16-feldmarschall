@@ -49,6 +49,8 @@ void ai_mask(uint8_t army);
  * Easy simplifies planning and varies scores more; Normal uses this evaluator.
  * Hard checks the best material reply to six shortlisted moves, weighting
  * concealed combat outcomes. All levels receive the same masked information.
+ * Normal and Hard share an evidence-driven miner approach mission, assigning
+ * route clearing, reconnaissance and attacks to supporting pieces.
  *
  * @param army CELL_BLUE for Blue, 0 for Red
  * @param lost the enemy's captured pieces, per type
@@ -63,14 +65,33 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to);
 void ai_reset(void);
 
 #ifdef AI_TEST
-#define AI_TEST_STATE_SIZE 204
+#define AI_TEST_STATE_SIZE 208
+#ifdef AI_MISSIONS
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE 210
+#ifdef AI_SECTOR_MEMORY
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE 230
+#endif
+#endif
 void ai_test_save(uint8_t* out);
 void ai_test_load(const uint8_t* in);
+uint8_t ai_test_quiet(uint8_t army);
+#ifdef AI_OCCUPANCY_BELIEFS
+int16_t ai_test_expected(uint8_t rank, uint8_t moved);
+#endif
+#ifdef AI_PURPOSEFUL_PROBES
+uint8_t ai_test_discovery(uint8_t square);
+#endif
+#ifdef AI_LOCAL_EXCHANGES
+int16_t ai_test_reply(uint8_t from, uint8_t to);
+#endif
 #endif
 
 #ifdef AI_TRACE
 /* supplied by a test build: called with the score of every candidate move */
 void ai_trace(uint8_t from, uint8_t to, int16_t score);
+void ai_trace_plan(uint8_t from, uint8_t goal, uint8_t previous, uint8_t steps, int16_t utility);
 #endif
 
 #endif

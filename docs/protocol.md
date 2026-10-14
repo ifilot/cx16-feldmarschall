@@ -97,7 +97,7 @@ from i4 to i5 and later defeats a Blue Miner on i6.
 
 ## Testing commands
 
-`build/feldmarschall-engine` also answers `think <army> <seed> <lost> <view>`:
+`build/feldmarschall-engine` also answers `think <army> <seed> <lost> <view> [repetitions]`:
 the move it would choose from a raw **masked army view**, given as hexadecimal bytes in
 the encoding of `src/core` (`board.h`, `pieces.h`), with fresh random state.
 It replies `best <from> <to>` as square numbers 0–99 (rank 10 first). The
@@ -105,6 +105,11 @@ parity test (`tools/parity.py`) sends the same positions to `BRIDGE.PRG`
 on the X16 and checks that both builds choose the same moves. With the
 environment variable `FELDMARSCHALL_TRACE` set, and the engine compiled with
 `-DAI_TRACE`, `think` first lists every candidate move with its score.
+
+The optional repetition count (1–255, default 1) repeats evaluation of the same
+view without resetting AI state between calls. It is a diagnostic for persistent
+state, not a game simulation. `tools/parity.py --repetitions 129` exercises
+saturated quiet-turn pressure on native and X16 builds.
 
 `rules <0..63>` selects the bitmask from `src/core/rules.h` before a `think`
 request (the default is classic rules). The native information ledger honours

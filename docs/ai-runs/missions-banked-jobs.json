@@ -1,0 +1,74 @@
+[
+  {
+    "level": 1,
+    "blue": false,
+    "job": "vacate",
+    "move": [
+      50,
+      51
+    ]
+  },
+  {
+    "level": 1,
+    "blue": false,
+    "job": "probe",
+    "move": [
+      61,
+      41
+    ]
+  },
+  {
+    "level": 1,
+    "blue": true,
+    "job": "vacate",
+    "move": [
+      49,
+      48
+    ]
+  },
+  {
+    "level": 1,
+    "blue": true,
+    "job": "probe",
+    "move": [
+      38,
+      58
+    ]
+  },
+  {
+    "level": 2,
+    "blue": false,
+    "job": "vacate",
+    "move": [
+      50,
+      51
+    ]
+  },
+  {
+    "level": 2,
+    "blue": false,
+    "job": "probe",
+    "move": [
+      61,
+      41
+    ]
+  },
+  {
+    "level": 2,
+    "blue": true,
+    "job": "vacate",
+    "move": [
+      49,
+      48
+    ]
+  },
+  {
+    "level": 2,
+    "blue": true,
+    "job": "probe",
+    "move": [
+      38,
+      58
+    ]
+  }
+]

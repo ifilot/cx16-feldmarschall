@@ -64,6 +64,7 @@ uint8_t sound_init(void) {
     uint8_t i;
     /* This bank contains executable game code and is required even if audio fails. */
     if(!load_banked("PLAY.BIN", PLAY_BANK) || !load_banked("AI.BIN", 23)) return 0;
+    if(!load_banked("MISSION.BIN", 24)) return 0;
     if(!load_banked("SFX.BIN", 2)) { sound_music_enabled = sound_effects_enabled = 0; return 1; }
     for(i=0; i<8; i++) if(!load_banked(files[i], banks[i])) { sound_music_enabled = sound_effects_enabled = 0; return 1; }
     sound_engine_init();

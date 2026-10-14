@@ -66,14 +66,21 @@ void ai_trace(uint8_t from, uint8_t to, int16_t score) {
     p[2] = (uint8_t)score;
     p[3] = (uint16_t)score >> 8;
 }
+void ai_trace_plan(uint8_t from, uint8_t goal, uint8_t previous, uint8_t steps, int16_t utility) {
+    /* The mailbox trace records candidate scores; native tracing shows goals. */
+    (void)from; (void)goal; (void)previous; (void)steps; (void)utility;
+}
 #endif
 
 void main(void) {
-    uint8_t from, to;
+    uint8_t from, to, repetitions, army;
 
     MAILBOX[COMMAND] = 0;
     for(;;) {
-        if(MAILBOX[COMMAND] != 1) continue;
+        if(MAILBOX[COMMAND] != 1 && MAILBOX[COMMAND] != 3) continue;
+        /* Command 3 exercises persistent quiet-turn pressure on a fixed view. */
+        repetitions = MAILBOX[COMMAND] == 3 ? MAILBOX[120] : 1;
+        if(!repetitions) repetitions = 129;
         memcpy(lost, (uint8_t*)MAILBOX + LOST, PIECE_TYPES);
         memcpy(board, (uint8_t*)MAILBOX + VIEW, SQUARES);
         random_seed(MAILBOX[SEED] | (MAILBOX[SEED + 1] << 8));
@@ -81,10 +88,15 @@ void main(void) {
         rules_reset();
         ai_difficulty = MAILBOX[LEVEL] < AI_LEVELS ? MAILBOX[LEVEL] : AI_NORMAL;
         game_rules = MAILBOX[OPTIONS] & 63;
+        /* cc65 may cache the mailbox pointer in ptr1 across loop calls;
+         * ai_move uses that scratch pointer. Read the army before the loop. */
+        army = MAILBOX[ARMY] ? CELL_BLUE : 0;
 #ifdef AI_TRACE
         TRACE[0] = 0;
 #endif
-        ai_move(MAILBOX[ARMY] ? CELL_BLUE : 0, lost, &from, &to);
+        do {
+            ai_move(army, lost, &from, &to);
+        } while(--repetitions);
         MAILBOX[MOVE] = from;
         MAILBOX[MOVE + 1] = to;
         MAILBOX[COMMAND] = 2;

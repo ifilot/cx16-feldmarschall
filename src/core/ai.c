@@ -25,6 +25,9 @@
 #include "board.h"
 #include "random.h"
 #include "rules.h"
+#ifdef AI_MISSIONS
+#include "ai_mission.h"
+#endif
 
 #ifdef BANKED_AI
 #pragma code-name ("AICODE")
@@ -45,8 +48,12 @@ static const int16_t value[PIECE_TYPES] = {
 static uint8_t own;                     // CELL_BLUE or 0: the army to move
 static uint8_t hidden[PIECE_TYPES];     // the enemy's unrevealed pieces per rank
 static uint8_t hidden_mobile;
+#ifdef AI_OCCUPANCY_BELIEFS
+static uint8_t hidden_moved;
+#endif
 static int16_t risk[PIECE_TYPES];       // expected loss next to a hidden enemy piece
 static uint8_t last_from[2], last_to[2]; // independent history for each army
+static uint8_t quiet_turns[2], previous_count[2];
 static uint8_t targets[MAX_TARGETS];
 /* All private state lives with the code in bank 23 on the X16. Goals are
  * square-indexed, transferred after our chosen move, and validated next turn. */
@@ -57,6 +64,39 @@ static int16_t attack[PIECE_TYPES][2];
 static int16_t combat_gain[PIECE_TYPES][PIECE_TYPES], source_danger;
 static uint8_t combat_result[PIECE_TYPES][PIECE_TYPES];
 static uint8_t flag_square, flag_danger;
+#ifdef AI_PURPOSEFUL_PROBES
+static uint8_t discovery[SQUARES];
+/* Information matters when a nearby friendly piece would attack some possible
+ * ranks and avoid others. Cache that decision uncertainty from public counts. */
+static void prepare_discovery(void) {
+    uint8_t sq, ally, t, cell, count, wins, other, amount;
+    int16_t bonus;
+    memset(discovery, 0, sizeof(discovery));
+    for(sq=0; sq<SQUARES; sq++) {
+        cell = board[sq];
+        if(!IS_PIECE(cell) || (cell & CELL_BLUE) == own || (cell & CELL_REVEALED)) continue;
+        for(ally=0; ally<SQUARES; ally++) {
+            if(!IS_PIECE(board[ally]) || (board[ally] & CELL_BLUE) != own ||
+               PIECE_TYPE(board[ally]) >= PIECE_SCOUT ||
+               (ally/10 > sq/10 ? ally/10-sq/10 : sq/10-ally/10) +
+               (ally%10 > sq%10 ? ally%10-sq%10 : sq%10-ally%10) > 3) continue;
+            count = wins = 0;
+            for(t=0; t<PIECE_TYPES; t++) {
+                if((cell & CELL_MOVED) &&
+                   ((t == PIECE_BOMB && !(game_rules & RULE_MOVING_BOMBS)) ||
+                    (t == PIECE_FLAG && !(game_rules & RULE_MOVING_FLAG)))) continue;
+                count += hidden[t];
+                if(rules_battle(PIECE_TYPE(board[ally]), t) == BATTLE_ATTACKER) wins += hidden[t];
+            }
+            if(!count) continue;
+            other = count-wins; amount = wins < other ? wins : other;
+            bonus = (int16_t)amount * value[PIECE_TYPE(board[ally])] / count;
+            if(bonus > 80) bonus = 80;
+            if(bonus > discovery[sq]) discovery[sq] = bonus;
+        }
+    }
+}
+#endif
 #define SHORTLIST 6
 static uint8_t shortlist_from[SHORTLIST], shortlist_to[SHORTLIST], shortlist_count;
 static int16_t shortlist_score[SHORTLIST], shortlist_discount[SHORTLIST], danger_discount, counter_gain[PIECE_TYPES][2];
@@ -187,14 +227,25 @@ static uint8_t enemy(uint8_t cell) {
  * @brief Count the enemy's hidden ranks and the risk they pose to each rank
  */
 static void survey(const uint8_t* lost) {
-    uint8_t sq, cell, a, t, seen[PIECE_TYPES];
+    uint8_t sq, cell, a, t, count = 0, seen[PIECE_TYPES];
     int32_t loss;
 
     for(t=0; t<PIECE_TYPES; t++) seen[t] = 0;
+#ifdef AI_OCCUPANCY_BELIEFS
+    hidden_moved = 0;
+#endif
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq];
+        if(IS_PIECE(cell)) count++;
         if(enemy(cell) && (cell & CELL_REVEALED)) seen[PIECE_TYPE(cell)]++;
+#ifdef AI_OCCUPANCY_BELIEFS
+        if(enemy(cell) && !(cell & CELL_REVEALED) && (cell & CELL_MOVED)) hidden_moved++;
+#endif
     }
+    a = own ? 1 : 0;
+    if(count != previous_count[a]) quiet_turns[a] = 0;
+    else if(quiet_turns[a] < 128) quiet_turns[a]++;
+    previous_count[a] = count;
     hidden_mobile = 0;
     for(t=0; t<PIECE_TYPES; t++) {
         hidden[t] = piece_counts[t] > lost[t] + seen[t] ? piece_counts[t] - lost[t] - seen[t] : 0;
@@ -205,6 +256,15 @@ static void survey(const uint8_t* lost) {
     /* Scarce specialists retain their jobs until the opposing threat is gone. */
     if(hidden[PIECE_BOMB] + seen[PIECE_BOMB]) worth[PIECE_MINER] = 40;
     if(!(hidden[PIECE_MARSHAL] + seen[PIECE_MARSHAL])) worth[PIECE_SPY] = 15;
+#ifdef AI_CAPABILITY_VALUES
+    /* A rank that defeats every remaining mobile enemy is a winning resource,
+     * even if its printed rank would normally have a modest material value. */
+    for(a=PIECE_GENERAL; a<=PIECE_SERGEANT; a++) {
+        uint8_t threat_count = 0;
+        for(t=0; t<=a; t++) threat_count += hidden[t] + seen[t];
+        if(!threat_count) worth[a] = value[PIECE_MARSHAL];
+    }
+#endif
     flag_square = NOWHERE;
     for(sq=0; sq<SQUARES; sq++) {
         if(IS_PIECE(board[sq]) && (board[sq] & CELL_BLUE) == own &&
@@ -235,6 +295,21 @@ static void survey(const uint8_t* lost) {
 static int16_t expected(uint8_t a, uint8_t moved) {
     int32_t sum = 0;
     uint8_t t, n = 0;
+#ifdef AI_OCCUPANCY_BELIEFS
+    uint16_t weight, total = 0;
+    uint8_t mobile, remaining_mobile = hidden_mobile > hidden_moved ? hidden_mobile-hidden_moved : 0;
+    if(!moved && hidden_mobile) {
+        /* Moved unknown pieces consume mobile ranks. Immobile ranks therefore
+         * concentrate in unmoved slots under a uniform consistent assignment. */
+        for(t=0; t<PIECE_TYPES; t++) {
+            mobile = t < PIECE_BOMB || (t == PIECE_BOMB && (game_rules & RULE_MOVING_BOMBS)) ||
+                     (t == PIECE_FLAG && (game_rules & RULE_MOVING_FLAG));
+            weight = (uint16_t)hidden[t] * (mobile ? remaining_mobile : hidden_mobile);
+            sum += (int32_t)weight * gain(a, t); total += weight;
+        }
+        if(total) return sum / (int32_t)total;
+    }
+#endif
 
     for(t=0; t<PIECE_TYPES; t++) {
         if(moved && t == PIECE_BOMB && !(game_rules & RULE_MOVING_BOMBS)) continue;
@@ -337,6 +412,9 @@ static uint8_t plan(uint8_t from) {
         g = cell & CELL_REVEALED ? gain(a, PIECE_TYPE(cell)) : attack[a][!!(cell & CELL_MOVED)];
         utility = 24 + g / 4;
         if(!(cell & CELL_REVEALED) && a >= PIECE_SERGEANT) utility += 12;
+#ifdef AI_PURPOSEFUL_PROBES
+        if(a >= PIECE_SERGEANT && a < PIECE_BOMB) utility += discovery[sq] / 4;
+#endif
         if(g < -worth[a] / 2) continue;
         if(flag_square != NOWHERE && manhattan(sq, flag_square) <= 2 &&
            (!(cell & CELL_REVEALED) || PIECE_TYPE(cell) < PIECE_BOMB)) utility += 40;
@@ -347,6 +425,9 @@ static uint8_t plan(uint8_t from) {
     goals[own ? 1 : 0][from] = best;
     if(best != NOWHERE) route(best, from);
     else memset(distance, NOWHERE, sizeof(distance));
+#ifdef AI_TRACE
+    ai_trace_plan(from, best, previous, distance[from], best_score);
+#endif
     return best;
 }
 
@@ -387,11 +468,18 @@ static int16_t score(uint8_t from, uint8_t to) {
         s += old_danger - new_danger;
         if(distance[from] != NOWHERE && distance[to] != NOWHERE)
             s += ((int16_t)distance[from] - distance[to]) * 6;
+        /* Normal increasingly favors reachable objectives during quiet play.
+         * Captures/rescues reset the pressure; Hard retains reply scoring. */
+        if(ai_difficulty == AI_NORMAL && distance[from] == NOWHERE)
+            s -= 12 + (quiet_turns[own ? 1 : 0] >> 2);
     } else {
         s = target & CELL_REVEALED ? gain(a, PIECE_TYPE(target)) : attack[a][!!(target & CELL_MOVED)];
         s -= new_danger / 2;
         /* Cheap probes purchase useful rank information. */
         if(!(target & CELL_REVEALED) && a >= PIECE_SERGEANT && a < PIECE_BOMB) s += 10;
+#ifdef AI_PURPOSEFUL_PROBES
+        if(!(target & CELL_REVEALED) && a >= PIECE_SERGEANT && a < PIECE_BOMB) s += discovery[to];
+#endif
         if(flag_square != NOWHERE && manhattan(to, flag_square) <= 2 &&
            s >= 0) s += 40;
     }
@@ -412,12 +500,33 @@ static int16_t score(uint8_t from, uint8_t to) {
         }
     }
     if(from == last_to[own ? 1 : 0] && to == last_from[own ? 1 : 0]) s -= BACKTRACK;
+#ifdef AI_MISSIONS
+    if(ai_difficulty != AI_EASY) s += ai_mission_score(from, to);
+#endif
     return s + (random_next() & (ai_difficulty == AI_EASY ? 31 : 7));
 }
 
 /* A bounded second ply: the opponent's best material capture in this
  * hypothetical position. Known enemies use legal moves and exact combat;
  * unknown enemies use remaining-rank estimates, never the true layout. */
+#ifdef AI_LOCAL_EXCHANGES
+static uint8_t exchange_focus;
+/* Extend only a disclosed capture of the root mover. Concealed identities
+ * remain distributions; this prototype never assigns them a guessed rank. */
+static uint8_t can_recapture(uint8_t from, uint8_t to) {
+    uint8_t moving = board[from], target = board[to], sq, n, i, found = 0;
+    uint8_t targets[MAX_TARGETS];
+    board[from] = CELL_EMPTY; board[to] = moving | CELL_MOVED;
+    for(sq=0; sq<SQUARES && !found; sq++) {
+        if(!IS_PIECE(board[sq]) || enemy(board[sq]) ||
+           rules_battle(PIECE_TYPE(board[sq]), PIECE_TYPE(moving)) != BATTLE_ATTACKER) continue;
+        n = rules_targets(sq, targets);
+        for(i=0; i<n; i++) if(targets[i] == to) { found = 1; break; }
+    }
+    board[from] = moving; board[to] = target;
+    return found;
+}
+#endif
 static int16_t reply_loss(void) {
     uint8_t sq, i, n, cell, victim, a, d;
     static uint8_t replies[MAX_TARGETS];
@@ -436,6 +545,11 @@ static int16_t reply_loss(void) {
             if(cell & CELL_REVEALED) {
                 a = PIECE_TYPE(cell);
                 cost = d == PIECE_FLAG ? 6000 : gain(a, d);
+#ifdef AI_LOCAL_EXCHANGES
+                if(d != PIECE_FLAG && replies[i] == exchange_focus && cost > worst &&
+                   combat_result[a][d] == BATTLE_ATTACKER && can_recapture(sq, replies[i]))
+                    cost -= worth[a];
+#endif
             } else cost = counter_gain[d][!!(cell & CELL_MOVED)];
             if(cost > worst) worst = cost;
         }
@@ -461,6 +575,9 @@ static int16_t reply_penalty(uint8_t from, uint8_t to) {
     uint8_t target = board[to], a = PIECE_TYPE(board[from]), t, outcome, count = 0;
     static uint8_t outcomes[3];
     int32_t sum = 0;
+#ifdef AI_LOCAL_EXCHANGES
+    exchange_focus = to;
+#endif
     if(target == CELL_EMPTY) return replies_after(from, to, BATTLE_ATTACKER);
     if(target & CELL_REVEALED) return replies_after(from, to, combat_result[a][PIECE_TYPE(target)]);
     /* For concealed combat, weight all possible occupancy outcomes. Never
@@ -495,7 +612,12 @@ static void retain(uint8_t from, uint8_t to, int16_t score) {
 }
 
 void ai_reset(void) {
+#ifdef AI_MISSIONS
+    ai_mission_reset();
+#endif
     memset(goals, NOWHERE, sizeof(goals));
+    memset(quiet_turns, 0, sizeof(quiet_turns));
+    memset(previous_count, 0, sizeof(previous_count));
     last_from[0] = last_from[1] = last_to[0] = last_to[1] = NOWHERE;
 }
 
@@ -508,7 +630,14 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
     *from = *to = NOWHERE;
     shortlist_count = 0;
     survey(lost);
+#ifdef AI_PURPOSEFUL_PROBES
+    if(ai_difficulty != AI_EASY) prepare_discovery();
+    else memset(discovery, 0, sizeof(discovery));
+#endif
     flag_danger = flag_threats();
+#ifdef AI_MISSIONS
+    if(ai_difficulty != AI_EASY) ai_mission_begin(army);
+#endif
     for(sq=0; sq<PIECE_TYPES; sq++) {
         attack[sq][0] = expected(sq, 0);
         attack[sq][1] = expected(sq, 1);
@@ -570,16 +699,44 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
 }
 
 #ifdef AI_TEST
+#ifdef AI_OCCUPANCY_BELIEFS
+int16_t ai_test_expected(uint8_t rank, uint8_t moved) {
+    return expected(rank, moved);
+}
+#endif
+#ifdef AI_PURPOSEFUL_PROBES
+uint8_t ai_test_discovery(uint8_t square) {
+    return discovery[square];
+}
+#endif
+#ifdef AI_LOCAL_EXCHANGES
+int16_t ai_test_reply(uint8_t from, uint8_t to) {
+    return reply_penalty(from, to);
+}
+#endif
+uint8_t ai_test_quiet(uint8_t army) {
+    return quiet_turns[army ? 1 : 0];
+}
 /* Test-only snapshots let hidden-layout comparisons start from identical
  * persistent goals and histories. This code is absent from game builds. */
 void ai_test_save(uint8_t* out) {
     memcpy(out, goals, sizeof(goals));
     memcpy(out + sizeof(goals), last_from, sizeof(last_from));
     memcpy(out + sizeof(goals) + sizeof(last_from), last_to, sizeof(last_to));
+    memcpy(out + 204, quiet_turns, sizeof(quiet_turns));
+    memcpy(out + 206, previous_count, sizeof(previous_count));
+#ifdef AI_MISSIONS
+    ai_mission_save(out + 208);
+#endif
 }
 void ai_test_load(const uint8_t* in) {
     memcpy(goals, in, sizeof(goals));
     memcpy(last_from, in + sizeof(goals), sizeof(last_from));
     memcpy(last_to, in + sizeof(goals) + sizeof(last_from), sizeof(last_to));
+    memcpy(quiet_turns, in + 204, sizeof(quiet_turns));
+    memcpy(previous_count, in + 206, sizeof(previous_count));
+#ifdef AI_MISSIONS
+    ai_mission_load(in + 208);
+#endif
 }
 #endif

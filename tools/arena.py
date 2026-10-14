@@ -28,7 +28,9 @@ from feldmarschall import (BLUE, FLAG, GLYPHS, RED, ROOT, Engine, Position, new_
 
 def play(job):
     """Play one game; job = (red name, red command, blue name, blue command, setups, seed, max plies)."""
-    names, commands, setups, seed, max_plies = job
+    names, commands, setups, seed, max_plies, *options = job
+    record_moves = bool(options and options[0])
+    moves = []
     truth = Position()
     engines = []
     try:
@@ -61,6 +63,8 @@ def play(job):
                 winner, reason = 1 - side, 'illegal move ' + ' '.join(answer)
                 break
             src, dst = move
+            if record_moves:
+                moves.append([src, dst])
             names_sq = f'{square_name(src)} {square_name(dst)}'
             if truth.cells[dst] is None:
                 truth.move(src, dst)
@@ -80,9 +84,12 @@ def play(job):
     finally:
         for engine in engines:
             engine.close()
-    return {'red': names[RED], 'blue': names[BLUE], 'winner': None if winner is None else names[winner],
+    result = {'red': names[RED], 'blue': names[BLUE], 'winner': None if winner is None else names[winner],
             'result': {None: 'draw', RED: 'red', BLUE: 'blue'}[winner], 'reason': reason,
             'plies': plies, 'seed': seed}
+    if record_moves:
+        result['moves'] = moves
+    return result
 
 
 def deployments(kind, rng):

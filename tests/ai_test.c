@@ -6,6 +6,9 @@
 #include "rules.h"
 #include "setup.h"
 #include "random.h"
+#ifdef AI_MISSIONS
+#include "ai_mission.h"
+#endif
 
 static int failures;
 #define CHECK(c, message) do { if(!(c)) { printf("FAIL level %u move %u->%u: %s\n", ai_difficulty, from, to, message); failures++; } } while(0)
@@ -76,6 +79,130 @@ static void tactical(void) {
 }
 
 static unsigned private_inventory_checks;
+#ifdef AI_OCCUPANCY_BELIEFS
+static void occupancy_beliefs(void) {
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_SCOUT; board[61] = PIECE_MINER;
+    board[50] = PIECE_UNKNOWN | CELL_BLUE;
+    board[0] = PIECE_UNKNOWN | CELL_BLUE | CELL_MOVED;
+    lost[PIECE_SCOUT]--; lost[PIECE_BOMB]--;
+    decide(1);
+    CHECK(ai_test_expected(PIECE_SCOUT, 0) == -10, "the only moved unknown consumes the remaining mobile rank");
+    CHECK(ai_test_expected(PIECE_MINER, 0) == 20, "the unmoved unknown must be the remaining bomb");
+    CHECK(ai_test_expected(PIECE_SCOUT, 1) == 0, "moved unknown remains a scout in this inventory");
+    board[0] &= ~CELL_MOVED; decide(1);
+    CHECK(ai_test_expected(PIECE_SCOUT, 0) == -5, "without movement evidence both assignments are possible");
+    board[0] |= CELL_MOVED; game_rules = RULE_MOVING_BOMBS; decide(1);
+    CHECK(ai_test_expected(PIECE_SCOUT, 0) == 5 && ai_test_expected(PIECE_SCOUT, 1) == 5,
+          "moving bombs remain possible, with the variant's mutual destruction payoff");
+}
+#endif
+#ifdef AI_PURPOSEFUL_PROBES
+static void probes(void) {
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_SCOUT; board[61] = PIECE_GENERAL; board[99] = PIECE_FLAG;
+    board[50] = board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    lost[PIECE_MARSHAL]--; lost[PIECE_SCOUT]--;
+    decide(1);
+    CHECK(ai_test_discovery(50) > 0, "value information that changes a nearby general's attack decision");
+    CHECK(ai_test_discovery(0) == 0, "avoid rewarding information with no nearby beneficiary");
+    board[50] = PIECE_MARSHAL | CELL_BLUE | CELL_REVEALED;
+    decide(1);
+    CHECK(ai_test_discovery(50) == 0, "a disclosed rank needs no reconnaissance");
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_SCOUT; board[61] = PIECE_GENERAL;
+    board[50] = PIECE_UNKNOWN | CELL_BLUE;
+    lost[PIECE_SCOUT]--;
+    decide(1);
+    CHECK(ai_test_discovery(50) == 0, "certain winning matchup needs no information bonus");
+}
+#endif
+#ifdef AI_LOCAL_EXCHANGES
+static void exchanges(void) {
+    uint8_t before[SQUARES];
+    fresh(); ai_difficulty = AI_HARD;
+    board[60] = PIECE_GENERAL; board[51] = PIECE_SPY; board[99] = PIECE_FLAG;
+    board[50] = PIECE_CAPTAIN | CELL_BLUE | CELL_REVEALED;
+    board[40] = PIECE_MARSHAL | CELL_BLUE | CELL_REVEALED;
+    lost[PIECE_CAPTAIN]--; lost[PIECE_MARSHAL]--;
+    decide(1); memcpy(before, board, sizeof(before));
+    CHECK(ai_test_reply(60, 50) == 0, "recognize the spy recapture after a marshal takes our general");
+    CHECK(!memcmp(before, board, sizeof(before)), "exchange search restores every hypothetical square");
+    board[51] = CELL_EMPTY; decide(1);
+    CHECK(ai_test_reply(60, 50) > 0, "charge for the general when no recapture exists");
+}
+#endif
+#ifdef AI_SECTOR_MEMORY
+static void sector_memory(void) {
+    uint8_t state[AI_TEST_STATE_SIZE];
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[20] = PIECE_MINER; board[99] = PIECE_FLAG;
+    board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+    lost[PIECE_FLAG]--; lost[PIECE_BOMB]--;
+    decide(1);
+    CHECK(ai_mission_test_target(0) == 10, "start by clearing a disclosed guard");
+    ai_test_save(state);
+    board[10] = PIECE_MINER | CELL_MOVED; board[20] = CELL_EMPTY;
+    lost[PIECE_BOMB]++;
+    decide(1);
+    CHECK(ai_mission_test_target(0) == 0, "remember flag-sector evidence after its guard is removed");
+    ai_reset(); ai_test_load(state);
+    decide(1);
+    CHECK(ai_mission_test_target(0) == 0, "restore sector hypotheses in an AI snapshot");
+    board[0] = CELL_EMPTY;
+    decide(1);
+    CHECK(ai_mission_test_target(0) == NOWHERE, "discard a contradicted sector hypothesis");
+}
+#endif
+#ifdef AI_MISSIONS
+static void missions(void) {
+    uint16_t seed;
+    uint8_t level;
+    for(level=AI_NORMAL; level<=AI_HARD; level++) for(seed=1; seed<=32; seed++) {
+        ai_difficulty = level; fresh();
+        board[60] = PIECE_MINER; board[50] = PIECE_MAJOR; board[99] = PIECE_FLAG;
+        board[0] = PIECE_FLAG | CELL_BLUE | CELL_REVEALED;
+        board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+        lost[PIECE_FLAG]--; lost[PIECE_BOMB]--;
+        decide(seed);
+        CHECK(from == 50 && to == 51, "move a blocker off the miner corridor");
+
+        fresh();
+        board[60] = PIECE_MINER; board[61] = PIECE_SCOUT; board[99] = PIECE_FLAG;
+        board[0] = PIECE_FLAG | CELL_BLUE | CELL_REVEALED;
+        board[1] = board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+        board[40] = board[39] = PIECE_UNKNOWN | CELL_BLUE;
+        lost[PIECE_FLAG]--; lost[PIECE_BOMB] -= 3; lost[PIECE_SCOUT]--;
+        decide(seed);
+        CHECK(from == 61 && to == 41, "scout investigates a blocker before sending the miner");
+    }
+}
+#endif
+static void progress_state(void) {
+    uint8_t state[AI_TEST_STATE_SIZE];
+    unsigned turn;
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_SCOUT | CELL_REVEALED;
+    board[99] = PIECE_FLAG | CELL_REVEALED;
+    board[30] = PIECE_SCOUT | CELL_BLUE | CELL_REVEALED;
+    board[0] = PIECE_FLAG | CELL_BLUE | CELL_REVEALED;
+    lost[PIECE_SCOUT]--; lost[PIECE_FLAG]--;
+    for(turn=0; turn<140; turn++) decide(1);
+    CHECK(ai_test_quiet(0) == 128, "quiet-turn pressure saturates without wrapping");
+    ai_move(CELL_BLUE, lost, &from, &to);
+    ai_move(CELL_BLUE, lost, &from, &to);
+    CHECK(ai_test_quiet(CELL_BLUE) == 1 && ai_test_quiet(0) == 128,
+          "armies keep independent progress counters");
+    ai_test_save(state); ai_reset();
+    CHECK(ai_test_quiet(0) == 0, "new game clears progress pressure");
+    ai_test_load(state);
+    CHECK(ai_test_quiet(0) == 128 && ai_test_quiet(CELL_BLUE) == 1,
+          "fairness snapshots restore progress pressure");
+    board[30] = CELL_EMPTY; lost[PIECE_SCOUT]++;
+    decide(1);
+    CHECK(ai_test_quiet(0) == 0, "capture resets progress pressure");
+}
 static uint16_t secret_ranks_checked;
 
 static void reply_tactic(void) {
@@ -191,6 +318,18 @@ static void variants(void) {
 }
 
 int main(void) {
+#ifdef AI_OCCUPANCY_BELIEFS
+    occupancy_beliefs();
+#endif
+#ifdef AI_PURPOSEFUL_PROBES
+    probes();
+#endif
+#ifdef AI_LOCAL_EXCHANGES
+    exchanges();
+#endif
+#ifdef AI_SECTOR_MEMORY
+    sector_memory();
+#endif
     uint8_t level;
     for(level=0; level<AI_LEVELS; level++) {
         ai_difficulty = level;
@@ -198,6 +337,10 @@ int main(void) {
         variants();
     }
     reply_tactic();
+#ifdef AI_MISSIONS
+    missions();
+#endif
+    progress_state();
     CHECK(private_inventory_checks > 0, "silent casualties were tested with different true rank inventories");
     CHECK((secret_ranks_checked & ((1 << PIECE_SPY) | (1 << PIECE_MARSHAL) | (1 << PIECE_FLAG))) ==
           ((1 << PIECE_SPY) | (1 << PIECE_MARSHAL) | (1 << PIECE_FLAG)), "Spy, Marshal and Flag identities were each permuted");

@@ -43,7 +43,11 @@ static uint8_t own;                         // CELL_BLUE or 0
 static int tracing;                         // "think" prints every candidate
 
 void ai_trace(uint8_t from, uint8_t to, int16_t score) {
-    if(tracing) printf("candidate %d %d %d\n", from, to, score);
+    if(tracing == 1) printf("candidate %d %d %d\n", from, to, score);
+    else if(tracing == 2) fprintf(stderr, "candidate %u %u %d rank=%u target=%u\n", from, to, score, PIECE_TYPE(board[from]), board[to]);
+}
+void ai_trace_plan(uint8_t from, uint8_t goal, uint8_t previous, uint8_t steps, int16_t utility) {
+    if(tracing == 2) fprintf(stderr, "plan %u goal=%u previous=%u steps=%u utility=%d\n", from, goal, previous, steps, utility);
 }
 static uint8_t enemy_lost[PIECE_TYPES];
 
@@ -126,6 +130,7 @@ static void go(void) {
     uint8_t from, to;
 
     ai_move(own, enemy_lost, &from, &to);
+    if(tracing == 2) fprintf(stderr, "chosen %u %u\n", from, to);
     if(from == NOWHERE) {
         reply("move none");
         return;
@@ -207,9 +212,11 @@ static void think(char* args) {
     char* seed = strtok(NULL, " ");
     char* lost = strtok(NULL, " ");
     char* view = strtok(NULL, " ");
+    char* repeat = strtok(NULL, " ");
     uint8_t from, to;
+    int repetitions = repeat ? atoi(repeat) : 1;
 
-    if(!army || !seed || !hex(lost, enemy_lost, PIECE_TYPES) || !hex(view, board, SQUARES)) {
+    if(!army || !seed || repetitions < 1 || repetitions > 255 || !hex(lost, enemy_lost, PIECE_TYPES) || !hex(view, board, SQUARES)) {
         reply("error think");
         return;
     }
@@ -218,7 +225,7 @@ static void think(char* args) {
     ai_reset();
     rules_reset();
     tracing = getenv("FELDMARSCHALL_TRACE") != NULL;
-    ai_move(own, enemy_lost, &from, &to);
+    while(repetitions--) ai_move(own, enemy_lost, &from, &to);
     tracing = 0;
     sprintf(text, "best %d %d", from, to);
     reply(text);
@@ -293,6 +300,10 @@ int main(int argc, char** argv) {
             }
         } else if(!strcmp(command, "think")) {
             think(args);
+#ifdef AI_TRACE
+        } else if(!strcmp(command, "trace")) {
+            tracing = args && !strcmp(args, "on") ? 2 : 0;
+#endif
         } else if(!strcmp(command, "quit")) {
             break;
         } else {

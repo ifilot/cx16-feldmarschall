@@ -7,6 +7,7 @@ src/*.ZSM
 src/music.h
 src/sfx.h
 src/**/*.o
+tests/baselines/*.o
 src/*.map
 src/*.sym
 src/gfx.h

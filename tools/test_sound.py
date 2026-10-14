@@ -232,6 +232,7 @@ def main():
             bank_file(session, 'SFX.BIN', 2)
             bank_file(session, 'PLAY.BIN', 22)
             bank_file(session, 'AI.BIN', 23)
+            bank_file(session, 'MISSION.BIN', 24)
             caller_bank = title_loop(session)
             independent_audio(session)
             choose(session, '1')

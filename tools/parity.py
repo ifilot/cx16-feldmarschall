@@ -75,6 +75,8 @@ def positions(count, rng):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--positions', type=int, default=100)
+    parser.add_argument('--repetitions', type=int, choices=range(1, 256), default=1,
+                        help='repeated decisions on each fixed view; 129 saturates quiet-turn pressure')
     parser.add_argument('--seed', type=int, default=1)
     parser.add_argument('--emu', default=str(ROOT.parent / 'x16-emulator/build/x16emu'))
     roms = [ROOT.parent / 'emulator/rom.bin', ROOT.parent / 'emulator-win/rom.bin']
@@ -100,17 +102,18 @@ def main():
         emu.advance(120)
         for n, (army, cells, lost) in enumerate(tests, 1):
             seed = rng.randrange(1, 65536)
-            answer = native.ask(f'think {army} {seed} {bytes(lost).hex()} {bytes(cells).hex()}', 'best')
+            answer = native.ask(f'think {army} {seed} {bytes(lost).hex()} {bytes(cells).hex()} {args.repetitions}', 'best')
             expected = tuple(int(v) for v in answer.split())
             if reference:
-                reference_answer = reference.ask(f'think {army} {seed} {bytes(lost).hex()} {bytes(cells).hex()}', 'best')
+                reference_answer = reference.ask(f'think {army} {seed} {bytes(lost).hex()} {bytes(cells).hex()} {args.repetitions}', 'best')
                 if tuple(map(int, reference_answer.split())) != expected:
                     raise SystemExit(f'position {n}: optimized decision differs from reference')
 
             emu.write_memory(MAILBOX + 1, bytes([army, seed & 255, seed >> 8]) + bytes(lost) + bytes(cells))
             emu.write_memory(MAILBOX + 118, bytes([('easy', 'normal', 'hard').index(args.difficulty), args.rules]))
-            emu.write_memory(MAILBOX, bytes([1]))
-            for frames in range(1, 600):
+            emu.write_memory(MAILBOX + 120, bytes([args.repetitions]))
+            emu.write_memory(MAILBOX, bytes([3 if args.repetitions > 1 else 1]))
+            for frames in range(1, 600 * args.repetitions):
                 emu.advance(1)
                 if emu.read_memory(MAILBOX, 1)[0] == 2:
                     break
@@ -126,12 +129,14 @@ def main():
         native.close()
         if reference: reference.close()
         emu.close()
+    unit = 'per move' if args.repetitions == 1 else f'per {args.repetitions}-call batch'
     print(f'{len(tests)} positions, {mismatches} mismatches; '
-          f'the X16 took at most {slowest} frames ({slowest / 60:.2f} s) per move')
+          f'the X16 took at most {slowest} frames ({slowest / 60:.2f} s) {unit}')
     if args.json_out:
         args.json_out.parent.mkdir(parents=True, exist_ok=True)
         args.json_out.write_text(json.dumps({
             'difficulty': args.difficulty, 'positions': len(tests), 'seed': args.seed,
+            'repetitions': args.repetitions,
             'rules': args.rules, 'mismatches': mismatches, 'max_frames': slowest,
             'mean_frames': sum(timings) / len(timings),
             'p95_frames': sorted(timings)[int(0.95 * (len(timings)-1))],

@@ -58,12 +58,143 @@ screenshots: all
 # the computer player as a native program speaking docs/protocol.md
 HOSTCC ?= gcc
 CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai.c ai_level.c)
+CORE_MISSIONS = $(CORE_NATIVE) src/core/ai_mission.c
+
+.PHONY: native-inference test-ai-inference
+native-inference: build/feldmarschall-engine-inference
+test-ai-inference: build/ai-inference-test
+	build/ai-inference-test
+
+build/feldmarschall-engine-inference: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_OCCUPANCY_BELIEFS -DAI_PURPOSEFUL_PROBES -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+
+build/ai-inference-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_OCCUPANCY_BELIEFS -DAI_PURPOSEFUL_PROBES -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+
+.PHONY: native-beliefs test-ai-beliefs
+native-beliefs: build/feldmarschall-engine-beliefs
+test-ai-beliefs: build/ai-beliefs-test
+	build/ai-beliefs-test
+
+build/feldmarschall-engine-beliefs: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_OCCUPANCY_BELIEFS -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+
+build/ai-beliefs-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_OCCUPANCY_BELIEFS -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+
+.PHONY: native-probes test-ai-probes
+native-probes: build/feldmarschall-engine-probes
+test-ai-probes: build/ai-probes-test
+	build/ai-probes-test
+
+build/feldmarschall-engine-probes: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_PURPOSEFUL_PROBES -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+
+build/ai-probes-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_PURPOSEFUL_PROBES -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+
+.PHONY: native-exchanges test-ai-exchanges
+native-exchanges: build/feldmarschall-engine-exchanges
+test-ai-exchanges: build/ai-exchanges-test
+	build/ai-exchanges-test
+
+build/feldmarschall-engine-exchanges: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_LOCAL_EXCHANGES -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+
+build/ai-exchanges-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_LOCAL_EXCHANGES -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+
+.PHONY: native-sector native-capability test-ai-sector test-ai-capability
+native-sector: build/feldmarschall-engine-sector
+native-capability: build/feldmarschall-engine-capability
+
+build/feldmarschall-engine-sector: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_SECTOR_MEMORY -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+
+build/feldmarschall-engine-capability: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_CAPABILITY_VALUES -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+
+test-ai-sector: build/ai-sector-test
+	build/ai-sector-test
+test-ai-capability: build/ai-capability-test
+	build/ai-capability-test
+
+build/ai-sector-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_SECTOR_MEMORY -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
+
+build/ai-capability-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -DAI_CAPABILITY_VALUES -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
 
 native: build/feldmarschall-engine
 
-build/feldmarschall-engine: src/native/engine.c $(CORE_NATIVE) $(wildcard src/core/*.h)
+.PHONY: native-missions test-ai-missions
+native-missions: build/feldmarschall-engine-missions
+
+build/feldmarschall-engine-missions: src/native/engine.c $(CORE_NATIVE) src/core/ai_mission.c $(wildcard src/core/*.h)
 	mkdir -p build
-	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core -o $@ src/native/engine.c $(CORE_NATIVE)
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -Isrc/core -o $@ src/native/engine.c $(CORE_NATIVE) src/core/ai_mission.c
+
+test-ai-missions: all build/ai-mission-test
+	build/ai-mission-test
+	python3 tools/test_ai_missions.py
+
+build/ai-mission-test: tests/ai_test.c $(CORE_NATIVE) src/core/ai_mission.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_MISSIONS -DAI_TEST -Isrc/core -o $@ tests/ai_test.c $(CORE_NATIVE) src/core/ai_mission.c
+
+native-trace: build/feldmarschall-engine-trace
+
+build/feldmarschall-engine-trace: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_TRACE -DAI_MISSIONS -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
+
+# Frozen three-level milestone before endgame improvements.
+native-milestone: build/feldmarschall-ai-20261014
+
+build/feldmarschall-ai-20261014: src/native/engine.c tests/baselines/ai_levels_20261014.c tests/baselines/ai_level_20261014.c $(filter-out src/core/ai.c src/core/ai_level.c,$(CORE_NATIVE)) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core -o $@ src/native/engine.c $(filter-out src/core/ai.c src/core/ai_level.c,$(CORE_NATIVE)) tests/baselines/ai_levels_20261014.c tests/baselines/ai_level_20261014.c
+
+.PHONY: native-milestone native-trace benchmark-ai-progress
+.PHONY: native-progress-baseline
+native-progress-baseline: build/feldmarschall-ai-normal-progress
+
+build/feldmarschall-ai-normal-progress: src/native/engine.c tests/baselines/ai_normal_progress_20261014.c tests/baselines/ai_level_20261014.c $(filter-out src/core/ai.c src/core/ai_level.c,$(CORE_NATIVE)) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core -o $@ src/native/engine.c $(filter-out src/core/ai.c src/core/ai_level.c,$(CORE_NATIVE)) tests/baselines/ai_normal_progress_20261014.c tests/baselines/ai_level_20261014.c
+
+.PHONY: native-adaptive-baseline
+native-adaptive-baseline: build/feldmarschall-ai-adaptive-progress
+
+build/feldmarschall-ai-adaptive-progress: src/native/engine.c tests/baselines/ai_adaptive_progress_20261014.c tests/baselines/ai_level_20261014.c $(filter-out src/core/ai.c src/core/ai_level.c,$(CORE_NATIVE)) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core -o $@ src/native/engine.c $(filter-out src/core/ai.c src/core/ai_level.c,$(CORE_NATIVE)) tests/baselines/ai_adaptive_progress_20261014.c tests/baselines/ai_level_20261014.c
+
+.PHONY: native-coordinated-baseline
+native-coordinated-baseline: build/feldmarschall-ai-coordinated
+
+build/feldmarschall-ai-coordinated: src/native/engine.c tests/baselines/ai_coordinated_20261014.c tests/baselines/ai_mission_20261014.c tests/baselines/ai_level_20261014.c $(filter-out src/core/ai.c src/core/ai_level.c,$(CORE_NATIVE)) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -Isrc/core -o $@ src/native/engine.c $(filter-out src/core/ai.c src/core/ai_level.c,$(CORE_NATIVE)) tests/baselines/ai_coordinated_20261014.c tests/baselines/ai_mission_20261014.c tests/baselines/ai_level_20261014.c
+
+benchmark-ai-progress: native native-coordinated-baseline
+	python3 tools/benchmark_ai.py --missions $(AI_BENCHMARK_FLAGS)
+
+build/feldmarschall-engine: src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -Isrc/core -o $@ src/native/engine.c $(CORE_MISSIONS)
 
 # Previous planned evaluator, used to prove Normal optimizations preserve choices.
 native-planned: build/feldmarschall-ai-planned
@@ -91,19 +222,19 @@ build/feldmarschall-ai-v020: src/native/engine.c tests/baselines/ai_v020.c $(fil
 test-ai: build/ai-test
 	build/ai-test
 
-build/ai-test: tests/ai_test.c $(CORE_NATIVE) $(wildcard src/core/*.h)
+build/ai-test: tests/ai_test.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
 	mkdir -p build
-	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -Isrc/core -o $@ tests/ai_test.c $(CORE_NATIVE)
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_MISSIONS -Isrc/core -o $@ tests/ai_test.c $(CORE_MISSIONS)
 
 test-ai-levels: all
 	python3 tools/test_ai_levels.py
 
 benchmark-ai-levels: native
-	python3 tools/benchmark_ai.py --levels --rounds 200 --out build/ai-level-benchmark
+	python3 tools/benchmark_ai.py --levels --rounds 200 $(AI_BENCHMARK_FLAGS)
 
 # Independent, paired comparisons against the frozen v0.2.0 AI.
 benchmark-ai: native native-baseline
-	python3 tools/benchmark_ai.py
+	python3 tools/benchmark_ai.py $(AI_BENCHMARK_FLAGS)
 
 # Elo ratings of the computer player against the baseline bots
 ROUNDS ?= 100
@@ -124,9 +255,9 @@ check: build/rules-test build/ai-test build/native-info-test
 	build/ai-test
 	build/native-info-test
 
-build/native-info-test: tests/native_info_test.c src/native/engine.c $(CORE_NATIVE) $(wildcard src/core/*.h)
+build/native-info-test: tests/native_info_test.c src/native/engine.c $(CORE_MISSIONS) $(wildcard src/core/*.h)
 	mkdir -p build
-	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core -o $@ tests/native_info_test.c $(CORE_NATIVE)
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -Isrc/core -o $@ tests/native_info_test.c $(CORE_MISSIONS)
 
 build/rules-test: tests/rules_test.c src/core/rules.c src/core/board.c src/core/pieces.c src/core/ai.c src/core/ai_level.c src/core/random.c $(wildcard src/core/*.h)
 	mkdir -p build

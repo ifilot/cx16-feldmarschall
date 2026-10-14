@@ -20,16 +20,16 @@ SOUND_ASSETS=$(notdir $(wildcard ../assets/sound/psg/*.ZSM)) SFX.BIN music.h sfx
 BRIDGE_SRC=bridge/bridge.c $(filter-out core/store.c core/presets.c,$(wildcard core/*.c))
 HDR=$(filter-out gfx.h color_profiles.h app_info.h,$(wildcard *.h core/*.h ui/*.h scenes/*.h))
 
-all: FELDMARS.PRG PLAY.BIN AI.BIN BRIDGE.PRG
+all: FELDMARS.PRG PLAY.BIN AI.BIN MISSION.BIN BRIDGE.PRG
 
-FELDMARS.PRG PLAY.BIN AI.BIN &: $(SRC) $(ASM) $(HDR) $(GFX_ASSETS) $(SOUND_ASSETS) app_info.h feldmarschall.cfg vendor/zsmkit.lib vendor/zsmkit.inc
-	$(CC) $(CFLAGS) -D BANKED_AI $(LDFLAGS) -o FELDMARS.PRG -m FELDMARS.map -Ln FELDMARS.sym $(SRC) $(ASM) vendor/zsmkit.lib
+FELDMARS.PRG PLAY.BIN AI.BIN MISSION.BIN &: $(SRC) $(ASM) $(HDR) $(GFX_ASSETS) $(SOUND_ASSETS) app_info.h feldmarschall.cfg vendor/zsmkit.lib vendor/zsmkit.inc
+	$(CC) $(CFLAGS) -D BANKED_AI -D AI_MISSIONS $(LDFLAGS) -o FELDMARS.PRG -m FELDMARS.map -Ln FELDMARS.sym $(SRC) $(ASM) vendor/zsmkit.lib
 
 $(SOUND_ASSETS): %: ../assets/sound/psg/%
 	cp $< $@
 
 BRIDGE.PRG: $(BRIDGE_SRC) $(wildcard core/*.h)
-	$(CC) -O -t cx16 -I core -o $@ $(BRIDGE_SRC)
+	$(CC) -O -t cx16 -D AI_MISSIONS -I core -o $@ $(BRIDGE_SRC)
 
 app_info.h: FORCE ../tools/build_info.py
 	$(PYTHON) ../tools/build_info.py $@

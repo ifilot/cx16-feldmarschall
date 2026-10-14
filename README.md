@@ -488,6 +488,19 @@ default 2 KB; `src/FELDMARS.map` shows how much room is left below it.
 
 ## Testing and rating the computer player
 
+[AI milestones and reproducible benchmark records](docs/ai-milestones.md)
+and [strategy research, rejected alternatives, and final strength validation](docs/ai-strategy-research.md)
+([final handoff](docs/ai-write-off-2026-10-14-strategies.md)).
+track the frozen evaluators, the current experiment, and complete game traces.
+
+Normal and Hard coordinate a miner approach when revealed rear bombs suggest
+a fortified flag area. A shared route assigns a friendly blocker to move aside,
+a scout to investigate an unknown defender, or a suitable piece to clear a
+known defender. Tactical danger and flag defence still govern the chosen move.
+The planner scored 57.4% for Normal and 56.3% for Hard against their preceding
+frozen versions over 600 held-out games each. See the
+[mission handoff](docs/ai-write-off-2026-10-14-missions.md).
+
 The computer player in `src/core` also builds as a PC program,
 `build/feldmarschall-engine` (`make native`), which speaks a line-based
 protocol on standard input and output (see [docs/protocol.md](docs/protocol.md)).
@@ -520,7 +533,7 @@ Ratings only compare engines within the pool that played; on this scale
 a 100-point gap means the stronger engine scores about 64%. The parity
 test found a cc65 quirk that made the X16 mis-score attacks on hidden
 pieces (cc65 divides a negative `long` by an `unsigned char` as unsigned);
-both builds now agree on every tested position. The upgraded AI matched on
+both builds now agree on every tested position. The initial three-level AI matched on
 500 fresh positions per difficulty. The maximum measured times were 14 frames
 (0.23 seconds) for Easy, 24 (0.40) for Normal and 45 (0.75) for Hard. Normal's
 optimizations preserved 17,417 decisions across 30 complete games against the
@@ -634,10 +647,11 @@ make test-sound
 ZSMKit v1 runs music on PSG voices 0–11 and effects on 12–15. Playback is
 interrupt-driven from RAM, so AI searches and disk loads do not starve it.
 RAM bank 1 holds ZSMKit state, 2 the effects, and 3–21 the music; 22 and 23
-hold the play-scene and AI code. The play-scene data stays in main RAM;
+hold the play-scene and tactical AI code; bank 24 holds mission planning.
+The play-scene data stays in main RAM;
 the AI's private goals, route scratch space, scores and static locals live
 with its code in bank 23 (`AIBSS`). The AI initializes that state explicitly,
-and assembly gateways restore the caller's bank. `PLAY.BIN` and `AI.BIN` are required
+and assembly gateways restore the caller's bank. `PLAY.BIN`, `AI.BIN`, and `MISSION.BIN` are required
 runtime files. The native engine and `BRIDGE.PRG` keep their ordinary AI code.
 `src/feldmarschall.cfg` checks bank sizes, and the sound build refuses music
 that would overlap the code banks. Music resumes its current track across

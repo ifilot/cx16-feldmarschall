@@ -7,6 +7,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--games', type=int, default=30)
     parser.add_argument('--baseline', default=str(ROOT / 'build/feldmarschall-ai-planned'))
+    parser.add_argument('--difficulty', choices=('easy', 'normal', 'hard'), default='normal',
+                        help='level for both engines; use the three-level milestone for Easy/Hard')
     args = parser.parse_args()
     rng, decisions = new_rng(1234567), 0
     for game in range(args.games):
@@ -15,7 +17,8 @@ def main():
             for army in (RED, BLUE):
                 setup = random_setup(rng)
                 truth.place(army, setup)
-                pair = [Engine(str(ROOT / 'build/feldmarschall-engine'), 'optimized'), Engine(args.baseline, 'planned')]
+                pair = [Engine(str(ROOT / 'build/feldmarschall-engine') + ' --difficulty ' + args.difficulty, 'optimized'),
+                        Engine(args.baseline + ' --difficulty ' + args.difficulty, 'baseline')]
                 engines.append(pair)
                 seed = rng.randrange(1, 65536)
                 for engine in pair:

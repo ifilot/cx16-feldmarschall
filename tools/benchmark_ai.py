@@ -5,13 +5,18 @@ with identical deployments and engine sides swapped. Confidence intervals
 resample complete pairs, so the two games are not treated as independent.
 """
 import argparse
+from datetime import datetime, timezone
 from collections import Counter
 from concurrent.futures import ProcessPoolExecutor
 import hashlib
 import json
 from pathlib import Path
 import random
+import subprocess
 import sys
+import zipfile
+import shlex
+import shutil
 
 from arena import deployments, play
 from feldmarschall import ROOT, new_rng
@@ -37,19 +42,49 @@ def statistics(games, engine="current"):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rounds', type=int, default=300, help='paired rounds for each deployment group')
-    parser.add_argument('--levels', action='store_true', help='compare Easy, Normal and Hard with independent seeds')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--levels', action='store_true', help='compare Easy, Normal and Hard with independent seeds')
+    mode.add_argument('--previous', action='store_true', help='compare against the frozen 2026-10-14 milestone')
+    mode.add_argument('--progress', action='store_true', help='compare against the validated Normal progress milestone')
+    mode.add_argument('--adaptive', action='store_true', help='compare against the adaptive Normal milestone')
+    mode.add_argument('--missions', action='store_true', help='compare against the coordinated mission milestone')
+    parser.add_argument('--candidate-engine', type=Path, default=ROOT / 'build/feldmarschall-engine')
+    parser.add_argument('--candidate-source', type=Path, default=ROOT / 'src/core/ai.c')
+    parser.add_argument('--phase', choices=('development', 'validation', 'diagnostic'), default='development')
+    parser.add_argument('--strategy', default='current', help='explicit experimental policy identifier')
+    parser.add_argument('--difficulty', choices=('easy', 'normal', 'hard'), default='normal')
     parser.add_argument('--jobs', type=int, default=8)
-    parser.add_argument('--out', type=Path, default=ROOT / 'build/ai-benchmark')
+    parser.add_argument('--record-moves', action='store_true', help='save complete move traces for endgame analysis')
+    parser.add_argument('--seed-offset', type=int, default=0, help='offset deployment seeds for development or held-out validation')
+    parser.add_argument('--out', type=Path, help='new output directory; existing directories are never overwritten')
     args = parser.parse_args()
     if args.rounds < 1:
         parser.error('--rounds must be positive')
-    engines = {'current': str(ROOT / 'build/feldmarschall-engine'),
+    if args.jobs < 1:
+        parser.error('--jobs must be positive')
+    started = datetime.now(timezone.utc)
+    revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    kind = 'levels' if args.levels else 'progress' if args.previous or args.progress or args.adaptive or args.missions else 'v020'
+    if args.out is None:
+        args.out = ROOT / 'build/ai-benchmarks' / (started.strftime('%Y%m%dT%H%M%S%fZ') + '-' + revision[:8] + '-' + kind)
+    engines = {'current': str(args.candidate_engine.resolve()),
                'v020': str(ROOT / 'build/feldmarschall-ai-v020')}
     if args.levels:
-        engines = {level: str(ROOT / 'build/feldmarschall-engine') + ' --difficulty ' + level
+        engines = {level: str(args.candidate_engine.resolve()) + ' --difficulty ' + level
                    for level in ('easy', 'normal', 'hard')}
-    pairs = [('normal', 'easy'), ('hard', 'normal'), ('hard', 'easy')] if args.levels else [('current', 'v020')]
+    else:
+        engines['current'] += ' --difficulty ' + args.difficulty
+        if args.previous:
+            engines = {'current': engines['current'], 'milestone-20261014': str(ROOT / 'build/feldmarschall-ai-20261014') + ' --difficulty ' + args.difficulty}
+        elif args.progress:
+            engines = {'current': engines['current'], 'normal-progress': str(ROOT / 'build/feldmarschall-ai-normal-progress') + ' --difficulty ' + args.difficulty}
+        elif args.adaptive:
+            engines = {'current': engines['current'], 'adaptive-progress': str(ROOT / 'build/feldmarschall-ai-adaptive-progress') + ' --difficulty ' + args.difficulty}
+        elif args.missions:
+            engines = {'current': engines['current'], 'coordinated-missions': str(ROOT / 'build/feldmarschall-ai-coordinated') + ' --difficulty ' + args.difficulty}
+    pairs = [('normal', 'easy'), ('hard', 'normal'), ('hard', 'easy')] if args.levels else [('current', 'milestone-20261014' if args.previous else 'normal-progress' if args.progress else 'adaptive-progress' if args.adaptive else 'coordinated-missions' if args.missions else 'v020')]
     groups = [('mixed', 20261021), ('random', 20261022), ('presets', 20261023)] if args.levels else [('mixed', 271828), ('random', 314159), ('presets', 161803)]
+    groups = [(kind, seed + args.seed_offset) for kind, seed in groups]
     jobs, metadata = [], []
     for kind, seed in groups:
         rng = new_rng(seed)
@@ -58,18 +93,60 @@ def main():
             move_seed = rng.randrange(1, 60000)
             for a, b in pairs:
                 for names in [(a, b), (b, a)]:
-                    jobs.append((names, tuple(engines[n] for n in names), setups, move_seed, 1000))
+                    jobs.append((names, tuple(engines[n] for n in names), setups, move_seed, 1000, args.record_moves))
                     metadata.append({'group': kind, 'round': round_index, 'deployments': list(setups), 'comparison': a + '-vs-' + b})
-    args.out.mkdir(parents=True, exist_ok=True)
     provenance = {
+        'started_utc': started.isoformat(), 'git_revision': revision,
+        'phase': args.phase, 'candidate_source': str(args.candidate_source),
+        'strategy': args.strategy,
+        'git_status': subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, text=True),
+        'engine_commands': engines,
+        'difficulty': None if args.levels else args.difficulty,
+        'tracked_source_sha256': {name: sha(ROOT / name) for name in subprocess.check_output(
+            ['git', 'ls-files', 'src/core', 'src/native', 'tools', 'tests/baselines', 'Makefile'], cwd=ROOT, text=True).splitlines() if (ROOT / name).is_file()},
         'rounds_per_group': args.rounds, 'groups': dict(groups), 'max_plies': 1000,
-        'source_sha256': sha(ROOT / 'src/core/ai.c'),
+        'source_sha256': sha(args.candidate_source),
         'baseline_sha256': sha(ROOT / 'tests/baselines/ai_v020.c'),
         'rules_sha256': sha(ROOT / 'src/core/rules.c'),
         'engine_sha256': {name: sha(path.split(' --difficulty ')[0]) for name, path in engines.items()},
         'level_configuration_sha256': sha(ROOT / 'src/core/ai_level.c'),
         'confidence_method': '10000 bootstrap resamples of complete side-swapped pairs; seed 8675309',
     }
+    if args.previous:
+        provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_levels_20261014.c', 'ai_level_20261014.c')}
+    if args.progress:
+        provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_normal_progress_20261014.c', 'ai_level_20261014.c')}
+    if args.adaptive:
+        provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_adaptive_progress_20261014.c', 'ai_level_20261014.c')}
+    if args.missions:
+        provenance['milestone_sha256'] = {name: sha(ROOT / 'tests/baselines' / name) for name in ('ai_coordinated_20261014.c', 'ai_mission_20261014.c', 'ai_level_20261014.c')}
+    try:
+        args.out.mkdir(parents=True, exist_ok=False)
+    except FileExistsError:
+        parser.error(f'output directory already exists: {args.out}; choose a new --out')
+    print(f'Benchmark records: {args.out}', file=sys.stderr)
+    # Retain dirty and untracked implementations too: a hash is not a snapshot.
+    source_files = [ROOT / 'Makefile', ROOT / 'src/Makefile', args.candidate_source.resolve()]
+    for directory in ('src', 'tools', 'tests'):
+        source_files.extend(p for p in (ROOT / directory).rglob('*') if p.suffix in ('.c', '.h', '.s', '.py', '.cfg', '.md'))
+    with zipfile.ZipFile(args.out / 'sources.zip', 'x', compression=zipfile.ZIP_DEFLATED) as archive:
+        for path in sorted(set(source_files)):
+            if path.is_file():
+                archive.write(path, str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else 'candidate/' + path.name)
+    provenance['source_archive_sha256'] = sha(args.out / 'sources.zip')
+    # Rebuilding the project must not change an engine half-way through a run.
+    frozen_commands = {}
+    (args.out / 'engines').mkdir()
+    for name, command in engines.items():
+        executable, *arguments = command.split(' --difficulty ', 1)
+        target = args.out / 'engines' / name
+        shutil.copy2(executable, target)
+        frozen_commands[name] = shlex.join([str(target.resolve()), *(['--difficulty', arguments[0]] if arguments else [])])
+        provenance['engine_sha256'][name] = sha(target)
+    provenance['run_engine_commands'] = frozen_commands
+    jobs = [(names, tuple(frozen_commands[name] for name in names), *rest)
+            for names, commands, *rest in jobs]
+    (args.out / 'provenance.json').write_text(json.dumps(provenance, indent=2) + '\n')
     games = []
     with (args.out / 'games.jsonl').open('w') as out, ProcessPoolExecutor(args.jobs) as pool:
         for i, game in enumerate(pool.map(play, jobs)):
@@ -90,7 +167,7 @@ def main():
             print(f'{name}, {kind}: {stat["wins"]} wins, {stat["draws"]} draws, {stat["losses"]} losses; '
                   f'score {stat["score"]:.1%}, paired 95% CI {lo:.1%}–{hi:.1%}')
     if not args.levels:
-        report.update(report['comparisons']['current-vs-v020'])
+        report.update(report['comparisons'][pairs[0][0] + '-vs-' + pairs[0][1]])
     (args.out / 'summary.json').write_text(json.dumps(report, indent=2) + '\n')
     illegal = [g for g in games if g['reason'].startswith('illegal')]
     if illegal:
