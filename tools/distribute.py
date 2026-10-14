@@ -46,8 +46,8 @@ Choose 1 SETUPS to create, load or save army arrangements; Back
 returns to the menu. Choose 2 SKIRMISH to deploy your
 game rules, then deploy your army before a match. Start is enabled when all 40 pieces are on the board.
 Choose 3 LOAD GAME to resume the game saved in GAME.DAT.
-Choose DEMO to watch two computer armies battle with random deployments
-and the current rules. Menu pauses and offers separate music/effects toggles; demos cannot save.
+Choose DEMO to watch two computer armies battle with deployments selected
+for the current difficulty and rules. Menu pauses and offers separate music/effects toggles; demos cannot save.
 New game at the result starts another demo.
 Choose 4 OPTIONS to select field styles, army colors and rank numbers
 (classic: 1 = Marshal, S = Spy; modern: 1 = Spy, 10 = Marshal).

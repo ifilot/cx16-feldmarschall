@@ -279,7 +279,7 @@ void deploy_enter(uint8_t playing) {
     labels[BUTTON_START] = for_play ? "START" : "BACK";
     view_show_all = 0;
     board_clear();
-    if(for_play) setup_random(1);   // show the opponent only when preparing a match
+    if(for_play) setup_ai(1);       // show the opponent only when preparing a match
     setup_load();                   // and whatever the player deployed before
     store_read();                   // the player's saved deployments
     held = CELL_EMPTY;

@@ -57,7 +57,7 @@ screenshots: all
 
 # the computer player as a native program speaking docs/protocol.md
 HOSTCC ?= gcc
-CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai.c ai_level.c)
+CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai.c ai_level.c ai_deploy.c)
 CORE_MISSIONS = $(CORE_NATIVE) src/core/ai_mission.c
 CORE_MEMORY = $(CORE_MISSIONS) src/core/ai_memory.c
 
@@ -296,6 +296,13 @@ verify-ai-archives:
 	python3 tools/verify_ai_archives.py
 
 .PHONY: test-ai-deployments optimize-ai-deployments
+.PHONY: test-ai-selection test-ai-selection-banked benchmark-ai-selection
+test-ai-selection:
+	python3 tools/test_ai_selection.py
+test-ai-selection-banked: all
+	python3 tools/test_ai_selection_banked.py
+benchmark-ai-selection: native native-coordinated-baseline native-baseline native-planned native-adaptive-baseline test-ai-selection
+	python3 tools/benchmark_ai_selection.py $(AI_SELECTION_FLAGS)
 test-ai-deployments:
 	python3 tools/test_ai_deployments.py
 optimize-ai-deployments: native native-coordinated-baseline native-baseline native-planned native-adaptive-baseline test-ai-deployments

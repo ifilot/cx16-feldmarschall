@@ -2852,5 +2852,345 @@
     "executable_snapshots_available": true,
     "archive": "ai-runs/hard-confirmation-v1.zip",
     "archive_sha256": "43137870d03b65ebd481a6278d46dfdb7c91be4cb80e19935334c6d9e7d34f40"
+  },
+  {
+    "name": "selection-normal-development-20261014",
+    "decision": "diagnostic",
+    "reason": "Fresh development games choose constrained mixture weights; three layouts and no weight above 50%. Selection fitness is not a strength claim.",
+    "source_sha256": "0806644ad508adc2ab1be26d070e76f70cf7827905ef77e9e3785446451c0a36",
+    "phase": "development",
+    "strategy": "deployment-selection",
+    "suite": "broad-deployment",
+    "difficulty": "normal",
+    "comparisons": {
+      "fortress-vs-league": {
+        "games": 280,
+        "wins": 253,
+        "draws": 0,
+        "losses": 27,
+        "score": 0.9035714285714286,
+        "paired_bootstrap_95": [
+          0.8678571428571429,
+          0.9357142857142857
+        ],
+        "reasons": {
+          "flag": 274,
+          "no moves": 6
+        },
+        "average_plies": 226.15357142857144
+      },
+      "setup-74e54c5129ea-vs-league": {
+        "games": 280,
+        "wins": 238,
+        "draws": 7,
+        "losses": 35,
+        "score": 0.8625,
+        "paired_bootstrap_95": [
+          0.8160714285714286,
+          0.9053571428571429
+        ],
+        "reasons": {
+          "flag": 269,
+          "no moves": 4,
+          "ply limit": 7
+        },
+        "average_plies": 232.23214285714286
+      },
+      "setup-d83d63408255-vs-league": {
+        "games": 280,
+        "wins": 247,
+        "draws": 1,
+        "losses": 32,
+        "score": 0.8839285714285714,
+        "paired_bootstrap_95": [
+          0.8410714285714286,
+          0.9232142857142858
+        ],
+        "reasons": {
+          "flag": 274,
+          "no moves": 5,
+          "neither can move": 1
+        },
+        "average_plies": 221.38214285714287
+      },
+      "setup-815ddb0df689-vs-league": {
+        "games": 280,
+        "wins": 243,
+        "draws": 1,
+        "losses": 36,
+        "score": 0.8696428571428572,
+        "paired_bootstrap_95": [
+          0.8214285714285714,
+          0.9125
+        ],
+        "reasons": {
+          "flag": 276,
+          "no moves": 3,
+          "ply limit": 1
+        },
+        "average_plies": 254.57857142857142
+      },
+      "random-control-vs-league": {
+        "games": 280,
+        "wins": 229,
+        "draws": 3,
+        "losses": 48,
+        "score": 0.8232142857142857,
+        "paired_bootstrap_95": [
+          0.7732142857142857,
+          0.8696428571428572
+        ],
+        "reasons": {
+          "flag": 271,
+          "no moves": 6,
+          "ply limit": 3
+        },
+        "average_plies": 234.53214285714284
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/selection-normal-development-20261014.zip",
+    "archive_sha256": "8a668e05242970ccc60aa52bb84673bf15bb8eb1ae14c64e3ace17e1f59e710d"
+  },
+  {
+    "name": "selection-normal-validation-20261014",
+    "decision": "keep",
+    "reason": "Frozen varied normal deployment passes independent validation versus protected random: difference 0.027381, block 95% interval [0.003869047619047619, 0.05178571428571428]. Actual block selections and complete side-swapped trial matrix verified.",
+    "source_sha256": "0806644ad508adc2ab1be26d070e76f70cf7827905ef77e9e3785446451c0a36",
+    "phase": "validation",
+    "strategy": "deployment-selection",
+    "suite": "broad-deployment",
+    "difficulty": "normal",
+    "comparisons": {
+      "mixture-vs-league": {
+        "games": 1680,
+        "wins": 1510,
+        "draws": 7,
+        "losses": 163,
+        "score": 0.9008928571428572,
+        "paired_bootstrap_95": [
+          0.8857142857142857,
+          0.9157738095238095
+        ],
+        "reasons": {
+          "flag": 1629,
+          "no moves": 44,
+          "ply limit": 7
+        },
+        "average_plies": 232.625
+      },
+      "fortress-vs-league": {
+        "games": 1680,
+        "wins": 1522,
+        "draws": 9,
+        "losses": 149,
+        "score": 0.9086309523809524,
+        "paired_bootstrap_95": [
+          0.89375,
+          0.9229166666666667
+        ],
+        "reasons": {
+          "flag": 1628,
+          "no moves": 43,
+          "ply limit": 9
+        },
+        "average_plies": 220.725
+      },
+      "random-control-vs-league": {
+        "games": 1680,
+        "wins": 1462,
+        "draws": 11,
+        "losses": 207,
+        "score": 0.8735119047619048,
+        "paired_bootstrap_95": [
+          0.85625,
+          0.8904761904761904
+        ],
+        "reasons": {
+          "flag": 1629,
+          "ply limit": 11,
+          "no moves": 40
+        },
+        "average_plies": 232.28809523809525
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/selection-normal-validation-20261014.zip",
+    "archive_sha256": "b938f4a973148b2b1ce0467547f40c368152bb662ca062e9e3ab01d5b4b4506f"
+  },
+  {
+    "name": "selection-hard-development-20261014",
+    "decision": "diagnostic",
+    "reason": "Fresh development games choose constrained mixture weights; three layouts and no weight above 50%. Selection fitness is not a strength claim.",
+    "source_sha256": "0806644ad508adc2ab1be26d070e76f70cf7827905ef77e9e3785446451c0a36",
+    "phase": "development",
+    "strategy": "deployment-selection",
+    "suite": "broad-deployment",
+    "difficulty": "hard",
+    "comparisons": {
+      "fortress-vs-league": {
+        "games": 280,
+        "wins": 250,
+        "draws": 8,
+        "losses": 22,
+        "score": 0.9071428571428571,
+        "paired_bootstrap_95": [
+          0.8714285714285714,
+          0.9392857142857143
+        ],
+        "reasons": {
+          "flag": 258,
+          "no moves": 14,
+          "ply limit": 8
+        },
+        "average_plies": 243.7642857142857
+      },
+      "setup-74e54c5129ea-vs-league": {
+        "games": 280,
+        "wins": 228,
+        "draws": 26,
+        "losses": 26,
+        "score": 0.8607142857142858,
+        "paired_bootstrap_95": [
+          0.8196428571428571,
+          0.8982142857142857
+        ],
+        "reasons": {
+          "flag": 253,
+          "ply limit": 26,
+          "no moves": 1
+        },
+        "average_plies": 360.98214285714283
+      },
+      "setup-d83d63408255-vs-league": {
+        "games": 280,
+        "wins": 254,
+        "draws": 7,
+        "losses": 19,
+        "score": 0.9196428571428571,
+        "paired_bootstrap_95": [
+          0.8839285714285714,
+          0.9517857142857142
+        ],
+        "reasons": {
+          "ply limit": 7,
+          "flag": 267,
+          "no moves": 6
+        },
+        "average_plies": 262.88928571428573
+      },
+      "setup-815ddb0df689-vs-league": {
+        "games": 280,
+        "wins": 233,
+        "draws": 17,
+        "losses": 30,
+        "score": 0.8625,
+        "paired_bootstrap_95": [
+          0.8196428571428571,
+          0.9017857142857143
+        ],
+        "reasons": {
+          "flag": 259,
+          "ply limit": 17,
+          "no moves": 4
+        },
+        "average_plies": 300.66785714285714
+      },
+      "random-control-vs-league": {
+        "games": 280,
+        "wins": 233,
+        "draws": 15,
+        "losses": 32,
+        "score": 0.8589285714285714,
+        "paired_bootstrap_95": [
+          0.8142857142857143,
+          0.9
+        ],
+        "reasons": {
+          "flag": 254,
+          "no moves": 11,
+          "ply limit": 15
+        },
+        "average_plies": 292.50714285714287
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/selection-hard-development-20261014.zip",
+    "archive_sha256": "eb2ac7fe09808ad4d463bbbfb501afb110037dfb22959b67a060ac10ade8291f"
+  },
+  {
+    "name": "selection-hard-validation-20261014",
+    "decision": "keep",
+    "reason": "Frozen varied hard deployment passes independent validation versus protected random: difference 0.043452, block 95% interval [0.023809523809523808, 0.0630952380952381]. Actual block selections and complete side-swapped trial matrix verified.",
+    "source_sha256": "0806644ad508adc2ab1be26d070e76f70cf7827905ef77e9e3785446451c0a36",
+    "phase": "validation",
+    "strategy": "deployment-selection",
+    "suite": "broad-deployment",
+    "difficulty": "hard",
+    "comparisons": {
+      "mixture-vs-league": {
+        "games": 1680,
+        "wins": 1511,
+        "draws": 50,
+        "losses": 119,
+        "score": 0.9142857142857143,
+        "paired_bootstrap_95": [
+          0.9005952380952381,
+          0.9276785714285715
+        ],
+        "reasons": {
+          "flag": 1590,
+          "ply limit": 50,
+          "no moves": 40
+        },
+        "average_plies": 269.24345238095236
+      },
+      "fortress-vs-league": {
+        "games": 1680,
+        "wins": 1503,
+        "draws": 53,
+        "losses": 124,
+        "score": 0.9104166666666667,
+        "paired_bootstrap_95": [
+          0.8964285714285715,
+          0.9238095238095239
+        ],
+        "reasons": {
+          "flag": 1581,
+          "ply limit": 52,
+          "no moves": 46,
+          "neither can move": 1
+        },
+        "average_plies": 262.48869047619047
+      },
+      "random-control-vs-league": {
+        "games": 1680,
+        "wins": 1406,
+        "draws": 114,
+        "losses": 160,
+        "score": 0.8708333333333333,
+        "paired_bootstrap_95": [
+          0.8547619047619047,
+          0.8863095238095238
+        ],
+        "reasons": {
+          "flag": 1530,
+          "ply limit": 114,
+          "no moves": 36
+        },
+        "average_plies": 308.89940476190475
+      }
+    },
+    "source_snapshot_available": true,
+    "evaluator_snapshot_available": true,
+    "executable_snapshots_available": true,
+    "archive": "ai-runs/selection-hard-validation-20261014.zip",
+    "archive_sha256": "74d6790faf51f2c68e4b9a82453827d9a218ce064d19660d0b36f7addd138bfa"
   }
 ]

@@ -160,8 +160,9 @@ opens army preparation; **Back** or **Escape** returns to the menu.
 Then review or edit your army. You can load a
 saved or built-in setup, place the pieces yourself, or choose Random. Start
 is enabled once all 40 pieces are placed, and the match uses that exact
-arrangement. The computer deploys its army at random, with its flag on the
-back row guarded by bombs.
+arrangement. With Classic rules on Normal or Hard, the computer randomly
+chooses one of three independently tested layouts. Easy and optional variants
+use a shuffled army with its flag on the back row guarded by bombs.
 
 ![Pre-game deployment](docs/prepare-play.png)
 
@@ -242,7 +243,8 @@ piece retains disclosure only if its captured rank was known.
 ### Demo
 
 Choose **Demo** from the main menu to watch two computer armies battle.
-Both deploy at random and use the current game rules. Both armies are face up
+Both select deployments using the current difficulty and game rules, as in
+Skirmish. Both armies are face up
 for spectators; each AI still sees only enemy ranks revealed in battle and
 keeps its own move history. Moves, battles and rescues run automatically.
 
@@ -497,6 +499,9 @@ the expanded opponent/layout suite and diagnostic position collection.
 The [five-step cycle handoff](docs/ai-cycle-write-off-2026-10-14.md) covers the
 tracker, offline teacher, compact-model results and independently tested
 [deployment portfolio](docs/ai-deployments/portfolio.json).
+
+The [next cycle checkpoint](docs/ai-next-cycle-2026-10-14.md) records independently
+validated varied deployment selection, its runtime integration and remaining work.
 
 Normal and Hard coordinate a miner approach when revealed rear bombs suggest
 a fortified flag area. A shared route assigns a friendly blocker to move aside,

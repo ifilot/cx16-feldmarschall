@@ -94,7 +94,7 @@ def evaluate(layouts,cases,provenance,pool,output,generation):
     jobs=[];metadata=[];commands=provenance['run_engine_commands']
     for name,layout in layouts.items():
         for case_index,case in enumerate(cases):
-            own=case['random_control'] if layout is None else layout
+            own=case['random_control'] if layout is None else layout[case_index] if isinstance(layout,dict) else layout
             if not valid_setup(own) or not valid_setup(case['opponent_setup']):raise ValueError('illegal setup')
             opponent=case['opponent'];foe=case['opponent_setup']
             for blue in (False,True):

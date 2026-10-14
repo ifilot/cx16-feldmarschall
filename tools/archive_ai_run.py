@@ -36,7 +36,8 @@ def main():
     with zipfile.ZipFile(destination, 'x', compression=zipfile.ZIP_DEFLATED) as archive:
         for filename in ('provenance.json', 'games.jsonl', 'summary.json', 'sources.zip', 'endgames.json', 'candidate.c',
                          'portfolio.json', 'trials.json', 'deployment-block-analysis.json', 'analysis-sources.zip',
-                         'deployment-integrity.json'):
+                         'deployment-integrity.json', 'policy.json', 'frozen-policy.json',
+                         'selection-integrity.json'):
             path = args.run / filename
             if path.exists():
                 archive.write(path, filename)

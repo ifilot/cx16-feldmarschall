@@ -866,8 +866,8 @@ static void begin(void) {
 
 static void new_game(void) {
     board_clear();
-    setup_random(1);
-    if(demo) setup_random(0);
+    setup_ai(1);
+    if(demo) setup_ai(0);
     else setup_load();
     panel_tray_fallen(1);
     rules_reset();
