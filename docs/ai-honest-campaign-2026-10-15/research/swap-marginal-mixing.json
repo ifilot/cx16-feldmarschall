@@ -1,0 +1,769 @@
+{
+  "scope": "Fourteen fixed historical calibration public views: one per family and observer side, first game and one-third snapshot. No rank labels or wins enter this mixing audit.",
+  "chains": 256,
+  "reference": "4096 independent learned importance proposals, separate RNG domain.",
+  "roots": [
+    {
+      "family": "broad-mixed",
+      "army": 0,
+      "game": 269,
+      "ply": 40,
+      "unknowns": 32,
+      "reference_ess": 2962.1320703910687,
+      "approximate_sampling_noise": 0.003619587204725124,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.0065055344414888016,
+          "ratio_to_approximate_sampling_noise": 1.797313912756756
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.0034483300005806973,
+          "ratio_to_approximate_sampling_noise": 0.9526859847662015
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0036858783617128785,
+          "ratio_to_approximate_sampling_noise": 1.01831456274937
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.003382407161095973,
+          "ratio_to_approximate_sampling_noise": 0.9344731787869267
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.0033423908040719433,
+          "ratio_to_approximate_sampling_noise": 0.9234176758357087
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.01644601092530982,
+          "ratio_to_approximate_sampling_noise": 4.543615057496245
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.004833643538299442,
+          "ratio_to_approximate_sampling_noise": 1.3354129255373237
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0038713570757526634,
+          "ratio_to_approximate_sampling_noise": 1.0695576199128096
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.003791132825781129,
+          "ratio_to_approximate_sampling_noise": 1.0473936975001081
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.00354882621923558,
+          "ratio_to_approximate_sampling_noise": 0.9804505371780599
+        }
+      }
+    },
+    {
+      "family": "broad-mixed",
+      "army": 1,
+      "game": 269,
+      "ply": 40,
+      "unknowns": 28,
+      "reference_ess": 3266.4872618762765,
+      "approximate_sampling_noise": 0.0036698366811805236,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.00438254206898062,
+          "ratio_to_approximate_sampling_noise": 1.1942062957338013
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.0037560634674722385,
+          "ratio_to_approximate_sampling_noise": 1.023496082736842
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0031040040279684553,
+          "ratio_to_approximate_sampling_noise": 0.8458153039578727
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.0031675097339255998,
+          "ratio_to_approximate_sampling_noise": 0.863120081111257
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.00398427632202952,
+          "ratio_to_approximate_sampling_noise": 1.085682189199724
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.010930164895522907,
+          "ratio_to_approximate_sampling_noise": 2.9783791065075027
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.0036146843917688673,
+          "ratio_to_approximate_sampling_noise": 0.9849714594400112
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0033621259743410506,
+          "ratio_to_approximate_sampling_noise": 0.9161513894017519
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.004013781281432114,
+          "ratio_to_approximate_sampling_noise": 1.0937220454565157
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.003258507418469315,
+          "ratio_to_approximate_sampling_noise": 0.8879161939765421
+        }
+      }
+    },
+    {
+      "family": "decoy",
+      "army": 0,
+      "game": 189,
+      "ply": 0,
+      "unknowns": 40,
+      "reference_ess": 2771.6226124602545,
+      "approximate_sampling_noise": 0.003742448164866743,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.004869713935125775,
+          "ratio_to_approximate_sampling_noise": 1.301210790530527
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.004096134778353137,
+          "ratio_to_approximate_sampling_noise": 1.0945067501019048
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.004034599323767228,
+          "ratio_to_approximate_sampling_noise": 1.078064183131014
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.003952711914931582,
+          "ratio_to_approximate_sampling_noise": 1.0561834769119176
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.0036471370208721885,
+          "ratio_to_approximate_sampling_noise": 0.9745324077192802
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.007847359396799631,
+          "ratio_to_approximate_sampling_noise": 2.0968518603594477
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.003721351540545451,
+          "ratio_to_approximate_sampling_noise": 0.9943628813568236
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.004134475362990946,
+          "ratio_to_approximate_sampling_noise": 1.1047515371901382
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.004528873723449895,
+          "ratio_to_approximate_sampling_noise": 1.2101366602658488
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.003812081183146532,
+          "ratio_to_approximate_sampling_noise": 1.018606274612829
+        }
+      }
+    },
+    {
+      "family": "decoy",
+      "army": 1,
+      "game": 189,
+      "ply": 0,
+      "unknowns": 40,
+      "reference_ess": 3120.032182703938,
+      "approximate_sampling_noise": 0.0037062564946285944,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.004307283861713659,
+          "ratio_to_approximate_sampling_noise": 1.162165615886575
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.0038502384323951568,
+          "ratio_to_approximate_sampling_noise": 1.0388483468360143
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0038243513696955044,
+          "ratio_to_approximate_sampling_noise": 1.0318636541313486
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.0034081825683786662,
+          "ratio_to_approximate_sampling_noise": 0.9195754728033743
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.0030470923846500552,
+          "ratio_to_approximate_sampling_noise": 0.8221482752384103
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.007152641714402519,
+          "ratio_to_approximate_sampling_noise": 1.9298830841224033
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.004226279627455006,
+          "ratio_to_approximate_sampling_noise": 1.1403095370166827
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0035889658265839328,
+          "ratio_to_approximate_sampling_noise": 0.9683533322060551
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.0034223906923856904,
+          "ratio_to_approximate_sampling_noise": 0.9234090239965029
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.003751004411243761,
+          "ratio_to_approximate_sampling_noise": 1.0120736157036132
+        }
+      }
+    },
+    {
+      "family": "fortified",
+      "army": 0,
+      "game": 29,
+      "ply": 60,
+      "unknowns": 33,
+      "reference_ess": 2850.1145289217984,
+      "approximate_sampling_noise": 0.0035755200328140527,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.005227358462765434,
+          "ratio_to_approximate_sampling_noise": 1.46198550554654
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.003944049864516582,
+          "ratio_to_approximate_sampling_noise": 1.1030702746230971
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0035029830333881767,
+          "ratio_to_approximate_sampling_noise": 0.9797128812703682
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.0033599905848985144,
+          "ratio_to_approximate_sampling_noise": 0.9397208109764359
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.003197557165882848,
+          "ratio_to_approximate_sampling_noise": 0.8942914978905221
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.012716576789731432,
+          "ratio_to_approximate_sampling_noise": 3.5565670652173815
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.0047856282154885394,
+          "ratio_to_approximate_sampling_noise": 1.3384425682331003
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0038768742899277005,
+          "ratio_to_approximate_sampling_noise": 1.0842826370284582
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.00413707924897644,
+          "ratio_to_approximate_sampling_noise": 1.1570566549784989
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.004860984888554855,
+          "ratio_to_approximate_sampling_noise": 1.3595182921487086
+        }
+      }
+    },
+    {
+      "family": "fortified",
+      "army": 1,
+      "game": 29,
+      "ply": 60,
+      "unknowns": 32,
+      "reference_ess": 3090.766447009114,
+      "approximate_sampling_noise": 0.0036566794476779944,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.004878178715692518,
+          "ratio_to_approximate_sampling_noise": 1.3340460342484164
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.0037955957837004467,
+          "ratio_to_approximate_sampling_noise": 1.0379897494462262
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0036602647833272016,
+          "ratio_to_approximate_sampling_noise": 1.000980489457856
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.0035068532626614615,
+          "ratio_to_approximate_sampling_noise": 0.9590267106645968
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.0038206946837805703,
+          "ratio_to_approximate_sampling_noise": 1.044853599679547
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.009625461838719302,
+          "ratio_to_approximate_sampling_noise": 2.6322957690019857
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.004555146068022092,
+          "ratio_to_approximate_sampling_noise": 1.2457056007232536
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0037788909181276573,
+          "ratio_to_approximate_sampling_noise": 1.033421433898798
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.0033908121778472985,
+          "ratio_to_approximate_sampling_noise": 0.9272927054080382
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.004111598961209238,
+          "ratio_to_approximate_sampling_noise": 1.1244078186345043
+        }
+      }
+    },
+    {
+      "family": "forward",
+      "army": 0,
+      "game": 149,
+      "ply": 0,
+      "unknowns": 40,
+      "reference_ess": 2740.054070323124,
+      "approximate_sampling_noise": 0.003744425010285929,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.004648522754312117,
+          "ratio_to_approximate_sampling_noise": 1.2414516892560628
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.004020951710415583,
+          "ratio_to_approximate_sampling_noise": 1.0738502438612165
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.003166147414516546,
+          "ratio_to_approximate_sampling_noise": 0.8455630452790868
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.004002660528276238,
+          "ratio_to_approximate_sampling_noise": 1.0689653330700806
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.0035485543618723166,
+          "ratio_to_approximate_sampling_noise": 0.9476900597887377
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.007744072260525192,
+          "ratio_to_approximate_sampling_noise": 2.0681605958864817
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.004101080015825053,
+          "ratio_to_approximate_sampling_noise": 1.0952496056295409
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0038782177044380008,
+          "ratio_to_approximate_sampling_noise": 1.035731172018279
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.003656050865344999,
+          "ratio_to_approximate_sampling_noise": 0.9763984738115555
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.0035735143605570368,
+          "ratio_to_approximate_sampling_noise": 0.9543559694053424
+        }
+      }
+    },
+    {
+      "family": "forward",
+      "army": 1,
+      "game": 149,
+      "ply": 0,
+      "unknowns": 40,
+      "reference_ess": 3186.043496821368,
+      "approximate_sampling_noise": 0.003701329538851433,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.004326699756283389,
+          "ratio_to_approximate_sampling_noise": 1.1689582650957406
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.003437192373577333,
+          "ratio_to_approximate_sampling_noise": 0.9286372200849577
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0038541160049531203,
+          "ratio_to_approximate_sampling_noise": 1.041278806574218
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.0034911833298736637,
+          "ratio_to_approximate_sampling_noise": 0.9432241288510128
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.004018885972704634,
+          "ratio_to_approximate_sampling_noise": 1.0857952339882015
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.007456188968802023,
+          "ratio_to_approximate_sampling_noise": 2.014462341312027
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.003464844677811324,
+          "ratio_to_approximate_sampling_noise": 0.9361081312653148
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0034015922023226614,
+          "ratio_to_approximate_sampling_noise": 0.9190190083367222
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.0038193939100385774,
+          "ratio_to_approximate_sampling_noise": 1.031897827509782
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.0038567268067715666,
+          "ratio_to_approximate_sampling_noise": 1.0419841752237915
+        }
+      }
+    },
+    {
+      "family": "presets",
+      "army": 0,
+      "game": 229,
+      "ply": 40,
+      "unknowns": 28,
+      "reference_ess": 3314.207730615742,
+      "approximate_sampling_noise": 0.0036393675742378015,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.004841619997298539,
+          "ratio_to_approximate_sampling_noise": 1.330346522723121
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.003934164319604175,
+          "ratio_to_approximate_sampling_noise": 1.0810021904501124
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.003740046054585036,
+          "ratio_to_approximate_sampling_noise": 1.0276637295611228
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.002964665812299189,
+          "ratio_to_approximate_sampling_noise": 0.814610162844044
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.0035243617037519033,
+          "ratio_to_approximate_sampling_noise": 0.968399490257594
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.012894523779197307,
+          "ratio_to_approximate_sampling_noise": 3.543067172020355
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.006596173451268005,
+          "ratio_to_approximate_sampling_noise": 1.8124504647347834
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.004412463411702818,
+          "ratio_to_approximate_sampling_noise": 1.2124258739176481
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.003837038269208886,
+          "ratio_to_approximate_sampling_noise": 1.0543145727764207
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.0034538681875559063,
+          "ratio_to_approximate_sampling_noise": 0.9490297742951275
+        }
+      }
+    },
+    {
+      "family": "presets",
+      "army": 1,
+      "game": 229,
+      "ply": 40,
+      "unknowns": 32,
+      "reference_ess": 3119.4795289216254,
+      "approximate_sampling_noise": 0.003692131374820759,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.0038261973132232845,
+          "ratio_to_approximate_sampling_noise": 1.036311258942955
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.0038054405757313634,
+          "ratio_to_approximate_sampling_noise": 1.0306893740789778
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.003139074505864533,
+          "ratio_to_approximate_sampling_noise": 0.8502066116260353
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.003585983319653855,
+          "ratio_to_approximate_sampling_noise": 0.9712501955128676
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.004290346102315376,
+          "ratio_to_approximate_sampling_noise": 1.1620242257830433
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.009017792700806328,
+          "ratio_to_approximate_sampling_noise": 2.4424354892420674
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.0037947143465171373,
+          "ratio_to_approximate_sampling_noise": 1.0277842149377359
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.004573779125572219,
+          "ratio_to_approximate_sampling_noise": 1.238791002065646
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.003877364150177757,
+          "ratio_to_approximate_sampling_noise": 1.050169605724279
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.003691211091176947,
+          "ratio_to_approximate_sampling_noise": 0.9997507446105282
+        }
+      }
+    },
+    {
+      "family": "unguarded",
+      "army": 0,
+      "game": 109,
+      "ply": 60,
+      "unknowns": 32,
+      "reference_ess": 3198.786740164383,
+      "approximate_sampling_noise": 0.0036548616098658645,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.005457329264582886,
+          "ratio_to_approximate_sampling_noise": 1.4931698781293044
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.003912689268493799,
+          "ratio_to_approximate_sampling_noise": 1.070543754086874
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0037683786668409845,
+          "ratio_to_approximate_sampling_noise": 1.0310591943259066
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.004133603032269593,
+          "ratio_to_approximate_sampling_noise": 1.1309875649221361
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.003787316355669481,
+          "ratio_to_approximate_sampling_noise": 1.0362407007275107
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.01187548150796602,
+          "ratio_to_approximate_sampling_noise": 3.249228774055239
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.004814250534700898,
+          "ratio_to_approximate_sampling_noise": 1.317218283095973
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.004907955845331215,
+          "ratio_to_approximate_sampling_noise": 1.34285682174197
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.0032615794667376114,
+          "ratio_to_approximate_sampling_noise": 0.8923947921676063
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.003783381055982911,
+          "ratio_to_approximate_sampling_noise": 1.0351639705782905
+        }
+      }
+    },
+    {
+      "family": "unguarded",
+      "army": 1,
+      "game": 109,
+      "ply": 60,
+      "unknowns": 28,
+      "reference_ess": 3328.5884127749387,
+      "approximate_sampling_noise": 0.0036637004173362495,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.0041774664325784005,
+          "ratio_to_approximate_sampling_noise": 1.140231448185846
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.0030556779438668316,
+          "ratio_to_approximate_sampling_noise": 0.8340414323746781
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0030296035407917365,
+          "ratio_to_approximate_sampling_noise": 0.826924474079804
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.003376515213787439,
+          "ratio_to_approximate_sampling_noise": 0.9216133496642138
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.004139866783827078,
+          "ratio_to_approximate_sampling_noise": 1.1299686961951525
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.010129343924180667,
+          "ratio_to_approximate_sampling_noise": 2.7647849906749102
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.004844078526359043,
+          "ratio_to_approximate_sampling_noise": 1.322181940269288
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0038933007933830656,
+          "ratio_to_approximate_sampling_noise": 1.0626689821472222
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.004073603643522045,
+          "ratio_to_approximate_sampling_noise": 1.1118822991765855
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.0035844579134077367,
+          "ratio_to_approximate_sampling_noise": 0.978370910581677
+        }
+      }
+    },
+    {
+      "family": "uniform",
+      "army": 0,
+      "game": 69,
+      "ply": 20,
+      "unknowns": 35,
+      "reference_ess": 2884.9180895893464,
+      "approximate_sampling_noise": 0.003674539858331191,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.006131324391843551,
+          "ratio_to_approximate_sampling_noise": 1.668596512279532
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.003496107800503675,
+          "ratio_to_approximate_sampling_noise": 0.9514409790866845
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.0040832699981561684,
+          "ratio_to_approximate_sampling_noise": 1.1112330129984231
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.004115120726424,
+          "ratio_to_approximate_sampling_noise": 1.1199009631352592
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.0034726208144786725,
+          "ratio_to_approximate_sampling_noise": 0.945049162170683
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.011190265881240257,
+          "ratio_to_approximate_sampling_noise": 3.0453516120852115
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.004662698734090683,
+          "ratio_to_approximate_sampling_noise": 1.2689204400706293
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0036926048065636804,
+          "ratio_to_approximate_sampling_noise": 1.0049162477286866
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.0045291087512058315,
+          "ratio_to_approximate_sampling_noise": 1.2325648722892741
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.0037215344384692777,
+          "ratio_to_approximate_sampling_noise": 1.0127892421772313
+        }
+      }
+    },
+    {
+      "family": "uniform",
+      "army": 1,
+      "game": 69,
+      "ply": 20,
+      "unknowns": 35,
+      "reference_ess": 3100.1834263938754,
+      "approximate_sampling_noise": 0.0036842676744027916,
+      "results": {
+        "learned-proposal-0": {
+          "squared_error": 0.004775223534675954,
+          "ratio_to_approximate_sampling_noise": 1.29611199746772
+        },
+        "learned-proposal-1": {
+          "squared_error": 0.003224032435296229,
+          "ratio_to_approximate_sampling_noise": 0.8750809442255942
+        },
+        "learned-proposal-4": {
+          "squared_error": 0.004582871193724372,
+          "ratio_to_approximate_sampling_noise": 1.243902886200374
+        },
+        "learned-proposal-16": {
+          "squared_error": 0.003755670426026219,
+          "ratio_to_approximate_sampling_noise": 1.0193804462470284
+        },
+        "learned-proposal-64": {
+          "squared_error": 0.0036123458000649985,
+          "ratio_to_approximate_sampling_noise": 0.9804786512018426
+        },
+        "uniform-counts-0": {
+          "squared_error": 0.008742675277219511,
+          "ratio_to_approximate_sampling_noise": 2.3729750522637234
+        },
+        "uniform-counts-1": {
+          "squared_error": 0.0038430791687087107,
+          "ratio_to_approximate_sampling_noise": 1.0431053083925728
+        },
+        "uniform-counts-4": {
+          "squared_error": 0.0033586118460610707,
+          "ratio_to_approximate_sampling_noise": 0.9116090748225809
+        },
+        "uniform-counts-16": {
+          "squared_error": 0.00346822062085939,
+          "ratio_to_approximate_sampling_noise": 0.9413595665036955
+        },
+        "uniform-counts-64": {
+          "squared_error": 0.0038639548762625193,
+          "ratio_to_approximate_sampling_noise": 1.0487714839798805
+        }
+      }
+    }
+  ],
+  "summary": {
+    "learned-proposal-0": {
+      "mean_squared_error": 0.0048824996378974955,
+      "mean_ratio_to_sampling_noise": 1.3304361233416355
+    },
+    "learned-proposal-1": {
+      "mean_squared_error": 0.003698333482464803,
+      "mean_ratio_to_sampling_noise": 1.0068488090542416
+    },
+    "learned-proposal-4": {
+      "mean_squared_error": 0.0036553991628065674,
+      "mean_ratio_to_sampling_noise": 0.9951844882387714
+    },
+    "learned-proposal-16": {
+      "mean_squared_error": 0.0035859326867501424,
+      "mean_ratio_to_sampling_noise": 0.9758594196786536
+    },
+    "learned-proposal-64": {
+      "mean_squared_error": 0.0036738175911408275,
+      "mean_ratio_to_sampling_noise": 1.0000408475482827
+    },
+    "uniform-counts-0": {
+      "mean_squared_error": 0.010269182847173066,
+      "mean_ratio_to_sampling_noise": 2.80271842644607
+    },
+    "uniform-counts-1": {
+      "mean_squared_error": 0.0044184037740614465,
+      "mean_ratio_to_sampling_noise": 1.2044445257645024
+    },
+    "uniform-counts-4": {
+      "mean_squared_error": 0.003909372513078478,
+      "mean_ratio_to_sampling_noise": 1.0646097237440546
+    },
+    "uniform-counts-16": {
+      "mean_squared_error": 0.0038433164019262616,
+      "mean_ratio_to_sampling_noise": 1.046428056968908
+    },
+    "uniform-counts-64": {
+      "mean_squared_error": 0.0037765465580030843,
+      "mean_ratio_to_sampling_noise": 1.0287992145075804
+    }
+  },
+  "seconds": 24.40946695200182,
+  "corpus_sha256": "1ed8f86dbb3242e89bcde3dd2bc90237243bafcc01bd5bbc3a83321ea0da81dd",
+  "model_sha256": "3327ec168d4834c45e62e4f0576c47fd41e716904b4df4c8bee8d9ec2bd0f38b",
+  "sampler_sha256": "f9afefc5950f6c1064a384cb3363da486b63f8c5b9bac842266e1b22a6bee044",
+  "analysis_sha256": "6390ae8ca4e54532dfed1bd270cb1e028cae8d174de7aef0d226458b9eb8914d",
+  "limitation": "Marginal agreement from two initializers is evidence, not a convergence proof for the full joint posterior. Reference has Monte Carlo error. Noise ratios use multinomial endpoint and weighted-reference ESS approximations."
+}

@@ -1,0 +1,43 @@
+{
+  "hypothesis": "Improved structural beliefs must influence the immediate expected gain of attacking an unknown piece, not merely the sampled continuation after that immediate outcome is subtracted.",
+  "source_algebra": {
+    "teacher": "tools/teacher_bot.py: correction=clip(E[future]-E[immediate]-E[reference]+credit). src/native/teacher_rollout.c: an unknown Flag capture sets immediate=future=WIN-initial, so that sampled terminal immediate outcome cancels from the residual.",
+    "native": "src/core/ai.c survey()/expected(): hidden ranks equal initial counts minus public losses and live disclosed ranks; unmoved attacks use the global hidden rank proportions, moved targets exclude Flag/Bomb. Baseline defines do not activate AI_OCCUPANCY_BELIEFS.",
+    "adjustment": "For unknown capture(a,s), add truncate(sum_r P(r_at_s|public_history)*gain(a,r)) minus the exact native integer expected(a,moved). Keep all other score terms and the existing rollout residual unchanged.",
+    "quantization": "Native integer division truncates toward zero. Analytic posterior expectations use the same quantization, with only a tiny floating-point guard at exact integer boundaries.",
+    "scope_limit": "This replaces a direct expected-capture-gain component additively. Native plan() goal selection, danger and defense calculations, the conditional near-own-Flag score>=0 bonus, mission scores and student corrections remain fixed. It is not exact recomputation of the whole native evaluator."
+  },
+  "scientific_rationale": {
+    "source": "Kaelbling, Littman and Cassandra (1998), Planning and acting in partially observable stochastic domains, section3.4, page108",
+    "url": "https://people.csail.mit.edu/lpk/papers/aij98-pomdp.pdf",
+    "principle": "The immediate reward in belief space averages the underlying reward under the current belief, rather than an unrelated count prior. This motivates the component adjustment; it does not prove the full heuristic Stratego policy is optimal or stronger."
+  },
+  "two_controls": {
+    "counts": "Condition the remaining Flag/Bomb counts on unmoved hidden slots; allocate remaining mobile ranks exchangeably across all mobile slots. This isolates correcting the native global-count occupancy approximation.",
+    "joint": "Average exact Flag and weighted Bomb-subset marginals over the frozen joint setup-style posterior, then allocate remaining mobile ranks exchangeably.",
+    "shared": "Both use exactly the frozen joint model's eight sampled continuation worlds, four-ply native search, correction blend and native policy. No world sampler or model weights are changed. Analytic root marginals omit behavioral encounter likelihoods in BOTH controls.",
+    "bomb_inclusion": "Conditional on style z and Flag f, a remaining Bomb subset has weights exp(theta_z*adjacent(f,s)). A site's inclusion probability is its weight times the size(k-1) subset partition excluding the site, divided by the size(k) full partition."
+  },
+  "native_gain_contract": {
+    "base_values": [400,200,100,75,45,30,15,25,10,100,20,1000],
+    "miner": "Worth40 while any enemy Bomb remains, otherwise25.",
+    "spy": "Worth15 if the enemy Marshal is eliminated, otherwise100.",
+    "flag": "An attack on Flag contributes2000 in the native gain table.",
+    "equal_exchange": "Both same-rank pieces disappear; equal worths cancel to0.",
+    "quiet_known_wins": "Quiet moves, already disclosed targets and native forced wins receive no adjustment."
+  },
+  "historical_development_mechanism": {
+    "roots": 140,
+    "roots_with_hidden_capture": 42,
+    "hidden_capture_actions": 50,
+    "count_vs_joint_different_decisions": 8,
+    "counts_changed_from_joint_sampler_only": 1,
+    "joint_changed_from_joint_sampler_only": 7,
+    "search_seconds": 2.4129855610080995,
+    "counts_marginal_seconds": 0.01624626198099577,
+    "joint_marginal_seconds": 0.2104999670300458,
+    "strength_evidence": false,
+    "source": "belief-capture-values-mechanism.json"
+  },
+  "verification": "Seven tests pass: exact immobile enumeration, full mobile-rank assignment enumeration, uniform joint equals count-conditioned control, inventory conservation, hidden-nibble/RNG/model invariance, preserved quiet/known/win handling, dynamic specialist rules, and eighty public-inventory comparisons against the original frozen native C expected-gain routine."
+}

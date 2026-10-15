@@ -25,6 +25,10 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 5 | teacher-calibrated-beliefs-v1-normal | 157 / 3 / 393 | 28.7% | 7 |
 | 5 | teacher-flag-row-control-v1-normal | 157 / 8 / 381 | 29.5% | 14 |
 | 5 | teacher-joint-setup-v1-normal | 162 / 13 / 372 | 30.8% | 13 |
+| 6 | teacher-context-v1-normal | 116 / 3 / 293 | 28.5% | 8 |
+| 6 | teacher-capable-routes-v1-normal | 128 / 7 / 281 | 31.6% | 4 |
+| 6 | teacher-informed-opponent-v1-normal | 120 / 11 / 285 | 30.2% | 4 |
+| 6 | teacher-parent-anchor-v1-normal | 113 / 9 / 292 | 28.4% | 6 |
 | 7 | student-guard-v1-normal | 123 / 21 / 271 | 32.2% | 5 |
 | 7 | student-exact-contact-risk-v1-normal | 142 / 12 / 261 | 35.7% | 5 |
 | 7 | teacher-context-v1-normal | 116 / 7 / 288 | 29.1% | 9 |
@@ -82,16 +86,19 @@ Evidence: [cycle-05-joint-setup-beliefs](cycle-05-joint-setup-beliefs/result.jso
 Exploratory signal only: the joint-minus-Context interval at 98.3333% is [-0.8, +8.6] points and includes zero. Spatial coupling did not clearly beat the simpler Flag-row control.
 
 
+**Cycle 6 hypotheses:** Evaluate Flag routes an actual attacker can survive, instead of ignoring enemy mobile defenders.; Honestly model DOS knowledge: simulated opponent knows our Flag and Spy; root learns no enemy identity.; Anchor clipped continuation corrections to the legal native fallback rather than an imaginary pass; no coefficient change.
+
+Evidence: [cycle-06-evaluation-and-opponent](cycle-06-evaluation-and-opponent/result.json).
+
+- teacher-capable-routes-v1-normal minus teacher-context-v1-normal: +2.8 percentage points; 95% paired interval [-1.6, +7.2].
+- teacher-informed-opponent-v1-normal minus teacher-context-v1-normal: +2.3 percentage points; 95% paired interval [-2.8, +7.3].
+- teacher-parent-anchor-v1-normal minus teacher-context-v1-normal: +0.1 percentage points; 95% paired interval [-3.5, +3.9].
+
+
 **Cycle 7 hypotheses:** Replace maximum of individual hidden-contact mean risks by expected lethal opportunity across contacts, respecting unique ranks and movement constraints.; Test the same cheap probability model in native play and the Context Teacher continuations.
 
 Evidence: [cycle-07-exact-contact-risk](cycle-07-exact-contact-risk/result.json).
 
 - student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +3.3 percentage points; 95% paired interval [-1.3, +8.0].
 - teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal: +1.4 percentage points; 95% paired interval [-2.6, +5.5].
-
-
-**Preflight failures, without DOS strength results:**
-
-- Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
-- Cycle 15: AI_TEST alone did not enable public queries; missing outer AI_DIAGNOSTICS guard. No saved tournament executed. [Preserved evidence](cycle-15-native-belief-objectives-v2/CONCLUSION.md).
 

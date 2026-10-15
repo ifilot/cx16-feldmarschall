@@ -1,0 +1,9 @@
+test_default_observer_binary_is_byte_identical_before_and_after_guard (test_campaign_policy_deployment.PolicyDeployment.test_default_observer_binary_is_byte_identical_before_and_after_guard) ... ok
+test_easy_keeps_legacy_random_setup_exactly (test_campaign_policy_deployment.PolicyDeployment.test_easy_keeps_legacy_random_setup_exactly) ... ok
+test_fixed_armies_keep_120_forced_history_moves_identical (test_campaign_policy_deployment.PolicyDeployment.test_fixed_armies_keep_120_forced_history_moves_identical) ... ok
+test_normal_and_hard_select_only_validated_mixture_on_both_sides (test_campaign_policy_deployment.PolicyDeployment.test_normal_and_hard_select_only_validated_mixture_on_both_sides) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.720s
+
+OK

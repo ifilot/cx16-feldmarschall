@@ -10,6 +10,7 @@ from pathlib import Path
 from ai_registry import ROOT, build_policy, catalog, get_policy, register, receives_opponent_setup
 from information_strategy_cycle import analyze_match, bootstrap, digest, validate_metadata
 from tournament import run
+from tournament_store import Tournament
 
 BASE = ROOT / 'docs/ai-honest-campaign-2026-10-15'
 FAMILIES = ['fortified', 'uniform', 'unguarded', 'forward', 'decoy', 'presets', 'broad-mixed']
@@ -52,13 +53,20 @@ def evaluate(directory):
             with path.with_suffix('.log').open('x') as log, contextlib.redirect_stdout(log):
                 result = run(identity, plan['opponent'], path, rounds=plan['rounds'], seed=plan['seed'],
                              jobs=plan['jobs'], families=plan['families'], max_plies=plan['max_plies'],
-                             backend=plan['backend'])
+                             backend=plan['backend'], setup_mode=plan.get('setup_mode','referee'))
                 print(json.dumps(result), flush=True)
         validate_metadata(path, match, plan, frozen)
         assert path.stat().st_mtime >= registration['epoch']
         report_path = path.with_suffix('.report.json')
         # Reanalyse from artifacts: never silently reuse stale cached statistics.
         report, complete, current = analyze_match(path, match, plan, frozen)
+        with Tournament(path) as tournament:
+            assert tournament.metadata().get('setup_mode','referee') == plan.get('setup_mode','referee')
+            if plan.get('setup_mode') == 'policy-owned':
+                # Own deployments are the treatment; only DOS armies must match across arms.
+                current = [(g['id'],g['pair_id'],g['family'],g['seed'],
+                            g['red_setup'] if g['red']==plan['opponent'] else g['blue_setup'])
+                           for g in (tournament.game(row['id']) for row in tournament.games())]
         if signature is None:
             signature = current
         assert current == signature, 'Unmatched armies or seeds'
@@ -66,11 +74,17 @@ def evaluate(directory):
         write(report_path, report)
         print('Verified', identity, report['summary']['standings'][identity], flush=True)
     comparisons = {}
+    error_sensitivity = {}
     for first, second in plan['contrasts']:
         common = sorted(pairs[first].keys() & pairs[second].keys())
         comparisons[first+' minus '+second] = bootstrap([
             (pairs[first][key][0], dict(score=pairs[first][key][1]['score']-pairs[second][key][1]['score']))
             for key in common])
+        from campaign_error_sensitivity import compare as compare_errors
+        name = first+' minus '+second
+        error_sensitivity[name] = compare_errors(directory/(first+'.fmtour'), first,
+                                                directory/(second+'.fmtour'), second)
+    write(directory/'error-sensitivity.json', error_sensitivity)
     if plan['cycle'] == 1:
         base8, learned8, base32, learned32 = plan['policies']
         common = sorted(set.intersection(*(set(pairs[p]) for p in plan['policies'])))
@@ -78,11 +92,12 @@ def evaluate(directory):
             (pairs[base8][key][0], dict(score=
              pairs[learned32][key][1]['score'] - pairs[base32][key][1]['score'] -
              pairs[learned8][key][1]['score'] + pairs[base8][key][1]['score'])) for key in common])
-    result = dict(cycle=plan['cycle'], hypotheses=plan['hypotheses'],
+    result = dict(cycle=plan['cycle'], hypotheses=plan['hypotheses'], setup_mode=plan.get('setup_mode','referee'),
                   standings={p:dict(r['summary']['standings'][p], errors=r['summary']['errors'])
                              for p,r in reports.items()},
                   execution_seconds={p:r['execution_seconds'] for p,r in reports.items()},
                   comparisons=comparisons, attempts=sum(r['summary']['games'] for r in reports.values()),
+                  error_sensitivity={name:value['summary'] for name,value in error_sensitivity.items()},
                   errors=sum(r['summary']['errors'] for r in reports.values()),
                   production='Unchanged. Campaign screening evidence, not a promotion decision.',
                   verified_games=sum(r['verification']['native_replayed_all_states'] for r in reports.values()))
@@ -113,12 +128,29 @@ def overview(through_cycle=None):
         details += ['', '**Cycle '+str(result['cycle'])+' hypotheses:** '+
                   '; '.join(result['hypotheses']), '',
                   'Evidence: ['+path.parent.name+']('+path.parent.name+'/result.json).', '']
+        if result.get('setup_mode') == 'policy-owned':
+            details += ['Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.', '']
         for name, contrast in result['comparisons'].items():
             metric = contrast['metrics']['score']
             low, high = metric['interval_95']
             details.append(f"- {name}: {100*metric['mean']:+.1f} percentage points; 95% paired interval [{100*low:+.1f}, {100*high:+.1f}].")
+        if result['cycle'] == 3:
+            details += ['', 'Recurrence caveat: only five pair scores changed. The exact two-sided direction test is p=0.0625; its sparse bootstrap interval alone does not establish a regression.']
+        if result['cycle'] == 5:
+            details += ['', 'Exploratory signal only: the joint-minus-Context interval at 98.3333% is [-0.8, +8.6] points and includes zero. Spatial coupling did not clearly beat the simpler Flag-row control.']
+        if result['cycle'] == 12:
+            details += ['', 'Prespecified independent validation: interpret the three contrasts with the 98.3333% intervals recorded in result.json; no tuning on this cohort.']
         details.append('')
     lines += details
+    failures = []
+    for path in sorted(BASE.glob('cycle-*/preflight-result.json')):
+        record = json.loads(path.read_text())
+        if through_cycle is not None and record['cycle'] > through_cycle:
+            continue
+        failures += [f"- Cycle {record['cycle']}: {record['reason']} "
+                     f"[Preserved evidence]({path.parent.name}/CONCLUSION.md)."]
+    if failures:
+        lines += ['', '**Preflight failures, without DOS strength results:**', '', *failures, '']
     (BASE/'OVERVIEW.md').write_text('\n'.join(lines)+'\n')
 
 
@@ -135,7 +167,7 @@ def audit(directory):
         policy = frozen[spec['id']]
         assert not receives_opponent_setup(policy)
         assert 'AI_DIAGNOSTIC_TRUTH' not in policy['defines']
-        assert '--diagnostic-truth' not in policy['driver_args']
+        assert '--diagnostic-truth' not in policy.get('driver_args', [])
         executable, previous = build_policy(policy['id'])
         (executable.parent/'build.json').unlink()
         _, rebuilt = build_policy(policy['id'])
@@ -148,6 +180,9 @@ def audit(directory):
         assert report['verification']['python_replayed'] == 14*plan['rounds']
         assert report['verification']['native_replayed_all_states'] == 14*plan['rounds']
         assert path.with_suffix('.png').is_file()
+        if plan.get('setup_mode') == 'policy-owned':
+            from audit_policy_setups import audit as audit_setups
+            write(path.with_suffix('.setups-audit.json'), audit_setups(path))
     tests = directory/'checks.log'
     assert tests.is_file()
     test_text = tests.read_text()
@@ -337,9 +372,113 @@ def init_joint():
     return directory
 
 
+def init_evaluation():
+    directory = BASE/'cycle-06-evaluation-and-opponent'
+    assert not directory.exists()
+    directory.mkdir(parents=True)
+    baseline = 'teacher-context-v1-normal'
+    variants = [
+        ('teacher-capable-routes-v1-normal', [], ['AI_ROLLOUT_CAPABLE_ROUTES'],
+         'Evaluate Flag routes an actual attacker can survive, instead of ignoring enemy mobile defenders.'),
+        ('teacher-informed-opponent-v1-normal', [], ['AI_ROLLOUT_INFORMED_OPPONENT'],
+         'Honestly model DOS knowledge: simulated opponent knows our Flag and Spy; root learns no enemy identity.'),
+        ('teacher-parent-anchor-v1-normal', ['--correction-anchor','parent'], [],
+         'Anchor clipped continuation corrections to the legal native fallback rather than an imaginary pass; no coefficient change.')]
+    new = []
+    for identity, arguments, defines, idea in variants:
+        spec = copy.deepcopy(get_policy(baseline))
+        for key in ('archive', 'source_sha256'):
+            spec.pop(key)
+        spec.update(id=identity, name=identity, status='experimental', description=idea,
+                    model='Isolated honest Context Teacher experiment: '+identity,
+                    information_model='Own setup and public events only. No enemy setup or diagnostic rank disclosure.')
+        spec['driver_args'] += arguments
+        spec['teacher_defines'] += defines
+        if identity=='teacher-informed-opponent-v1-normal':
+            spec['opponent_model']='Opponent knows root-owned Flag and Spy; root masking unchanged.'
+        new.append(spec)
+    policies = [baseline, *[p['id'] for p in new]]
+    write(directory/'plan.json', dict(cycle=6, baseline=baseline, opponent='msdos-1990-v2-normal',
+          policies=policies, new_policies=new, seed=2140001, rounds=30, jobs=4, max_plies=1000,
+          backend='openmp', families=FAMILIES, hypotheses=[row[3] for row in variants],
+          contrasts=[[p, baseline] for p in policies[1:]],
+          analysis='Three distinct prespecified exploratory mechanisms. Fresh matched side-swapped Classic games. '
+                   'No root sampling budget increase; changed value estimates, opponent information assumptions or clipping anchor. '
+                   'Report all variants and intervals. No promotion without independent validation.',
+          evidence='research/horizon: capable-routes, informed-opponent-view-audit and parent-centering-mechanism.'))
+    return directory
+
+
+def init_contact_risk():
+    directory = BASE/'cycle-07-exact-contact-risk'
+    assert not directory.exists()
+    directory.mkdir(parents=True)
+    baseline, native = 'teacher-context-v1-normal', 'student-guard-v1-normal'
+    new = []
+    for parent, identity in ((native,'student-exact-contact-risk-v1-normal'),
+                             (baseline,'teacher-exact-contact-risk-v1-normal')):
+        spec = copy.deepcopy(get_policy(parent))
+        for key in ('archive', 'source_sha256'):
+            spec.pop(key)
+        spec.update(id=identity, name=identity, status='experimental',
+                    description='Count-consistent probability that any hidden contact can beat the actor, using exact moved/unmoved eligibility and Scout rays.',
+                    model='Unchanged '+parent+' except Classic AI_EXACT_CONTACT_RISK fixed-point inclusion-exclusion.',
+                    information_model='Own setup, public rank counts, disclosure and movement bits only. Uniform compatible-rank prior.')
+        spec['defines'].append('AI_EXACT_CONTACT_RISK')
+        if 'teacher_defines' in spec:
+            spec['teacher_defines'].append('AI_EXACT_CONTACT_RISK')
+        spec.setdefault('asset_files', []).extend(['tests/ai_exact_contact_risk_test.c','tests/ai_contact_risk_cost.c'])
+        new.append(spec)
+    policies = [native, new[0]['id'], baseline, new[1]['id']]
+    write(directory/'plan.json', dict(cycle=7, baseline=baseline, opponent='msdos-1990-v2-normal',
+          policies=policies, new_policies=new, seed=2150001, rounds=30, jobs=4, max_plies=1000,
+          backend='openmp', families=FAMILIES,
+          hypotheses=['Replace maximum of individual hidden-contact mean risks by expected lethal opportunity across contacts, respecting unique ranks and movement constraints.',
+                      'Test the same cheap probability model in native play and the Context Teacher continuations.'],
+          contrasts=[[policies[1],native],[policies[3],baseline]],
+          analysis='Fresh matched side-swapped Classic cohort; no tuning or promotion. '
+                   'Probability is exact under uniform compatible ranks, not a guarantee about opponent action choices or playing strength. '
+                   'Speculative capture scoring retains existing survival-branch approximation.',
+          evidence='research/exact-contact-risk-audit.json and exact-contact-risk-derivation.json; 19152 enumeration cases, default native binary parity.'))
+    return directory
+
+
+def init_swap():
+    directory = BASE/'cycle-08-rank-swap-beliefs'
+    assert not directory.exists()
+    directory.mkdir(parents=True)
+    baseline, independent = 'teacher-context-v1-normal', 'teacher-calibrated-beliefs-v1-normal'
+    new = []
+    for identity, sweeps, idea in (
+        ('teacher-unweighted-beliefs-v1-normal',0,
+         'Control: discard small-batch importance weights from the learned sequential proposal, with no posterior rejuvenation.'),
+        ('teacher-swap-beliefs-v1-normal',4,
+         'Use four sweeps of count-preserving rank-swap Metropolis updates in independent chains, then average eight equal-weight worlds.')):
+        spec = copy.deepcopy(get_policy(independent))
+        for key in ('archive', 'source_sha256'):
+            spec.pop(key)
+        spec.update(id=identity, name=identity, status='experimental', description=idea,
+                    model='Unchanged frozen public-history likelihood tables; '+str(sweeps)+' independent-chain swap sweeps, eight worlds and four plies.',
+                    information_model='Own setup and public history only; exact counts/masks; finite-burn-in approximate posterior.')
+        spec['driver_args'] += ['--belief-sweeps',str(sweeps)]
+        new.append(spec)
+    policies = [baseline, independent, *[p['id'] for p in new]]
+    write(directory/'plan.json', dict(cycle=8, baseline=baseline, opponent='msdos-1990-v2-normal',
+          policies=policies, new_policies=new, seed=2160001, rounds=40, jobs=4, max_plies=1000,
+          backend='openmp', families=FAMILIES,
+          hypotheses=['Reduce finite-eight-world importance-weight noise without increasing native rollout count.',
+                      'Separate equal-weight proposal control from approximate posterior correction by rank-swap rejuvenation.'],
+          contrasts=[[policies[3],independent],[policies[3],policies[2]],[policies[2],independent],[policies[3],baseline]],
+          analysis='Fresh matched exploratory cohort; all four arms retained. Four sweeps chosen from historical calibration prediction/mixing, never campaign win scores. '
+                   'Metropolis target is invariant but finite chain convergence is not guaranteed; zero-sweep proposal intentionally has target bias. '
+                   'No promotion without independent validation and honest opponents.',
+          evidence='research/swap-belief-diagnosis.json and swap-marginal-mixing.json.'))
+    return directory
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=['init-sampling','init-mechanisms','init-horizons','init-public-defence','init-joint','freeze','run','overview','audit'])
+    parser.add_argument('action', choices=['init-sampling','init-mechanisms','init-horizons','init-public-defence','init-joint','init-evaluation','init-contact-risk','init-swap','freeze','run','overview','audit'])
     parser.add_argument('--directory', type=Path)
     parser.add_argument('--through-cycle', type=int)
     args = parser.parse_args()
@@ -353,6 +492,12 @@ def main():
         print(init_public_defence())
     elif args.action == 'init-joint':
         print(init_joint())
+    elif args.action == 'init-evaluation':
+        print(init_evaluation())
+    elif args.action == 'init-contact-risk':
+        print(init_contact_risk())
+    elif args.action == 'init-swap':
+        print(init_swap())
     elif args.action == 'freeze':
         freeze(args.directory)
     elif args.action == 'run':

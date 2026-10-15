@@ -1,0 +1,52 @@
+{
+  "schema": "root-cvar-risk-review-v1",
+  "recommendation": "Reserve rather than immediately benchmark: prioritize belief-directed native goals. Eight weighted worlds offer only one or two lower-quarter tail observations.",
+  "hypothesis": "Use lower-tail continuation value to avoid actions whose average depends on favorable hidden armies. This changes the objective, rather than estimating standard errors or randomizing moves.",
+  "fixed_candidate_if_later_tested": {
+    "alpha": 0.25,
+    "reason": "A predeclared lower quartile is a transparent moderately adverse tail, equivalent to at-most fourfold probability reweighting. Literature supports the family, not this game-specific optimum. Alpha is fixed before outcome evidence.",
+    "quantity": "X_a(world)=future_a(world)-immediate_a(world)",
+    "formula": "native_score(a)+clip(lower_CVaR_0.25(X_a)-weighted_mean(reference)+capture_credit(a),-192,192)",
+    "weighted_atoms": "Sort X ascending; take exactly alpha of normalized probability mass, splitting the boundary atom fractionally; divide its weighted sum by alpha.",
+    "preserve": [
+      "same eight weighted worlds and masked continuations",
+      "same immediate known wins and parent tie rule",
+      "same correction clip, coefficients and mean reference"
+    ],
+    "cost": "O(actions*samples*log(samples)), zero extra rollouts; raw per-world values must be retained."
+  },
+  "algebra_caveat": "A per-world reference is random, even though it is action-independent. CVaR(X-reference) is not CVaR(X)-mean(reference); including it in the tail changes which worlds are adverse and introduces risk relative to an imaginary pass. Keeping mean(reference) isolates risk of the action continuation.",
+  "limits": [
+    "future-immediate is a heuristic continuation correction, not actual game return. Immediate uncertain Flag wins cancel in the existing architecture; CVaR does not repair that omission.",
+    "Repeated fixed-alpha root replanning is not an implementation of time-consistent dynamic CVaR. Risk budget/state augmentation and belief updates would be needed for stronger claims.",
+    "Importance-weighted finite empirical tails do not inherit independent-sample concentration guarantees directly. Model misspecification, sparse hidden Flag events and eight worlds remain material.",
+    "A lower tail can reject useful sacrifices and draws in lost positions; literature does not guarantee more wins."
+  ],
+  "historical_resolution": {
+    "artifact": "cvar-tail-resolution.json",
+    "roots": 140,
+    "samples": 8,
+    "unweighted_tail_draws": 2,
+    "roots_allowing_single_atom_quarter_tail": 8,
+    "effective_samples_min": 4.94392523364486,
+    "effective_samples_median": 8,
+    "matching": "Original public prefixes, sampler RNG streams and all saved effective sample sizes reproduced without continuations or outcome tuning."
+  },
+  "sources": [
+    {
+      "title": "Chow, Tamar, Mannor, Pavone (2015), Risk-Sensitive and Robust Decision-Making: a CVaR Optimization Approach",
+      "url": "https://papers.neurips.cc/paper_files/paper/2015/file/64223ccf70bbb65a3a4aceac37e21016-Paper.pdf",
+      "supports": "Section2 CVaR and bounded probability reweighting; Section3 augmented risk state for dynamic programming. Root empirical adaptation here is an inference, not their algorithm."
+    },
+    {
+      "title": "Tamar, Chow, Ghavamzadeh, Mannor (2015), Policy Gradient for Coherent Risk Measures",
+      "url": "https://arxiv.org/pdf/1502.03919",
+      "supports": "Distinguishes static return risk from time-consistent dynamic coherent risk."
+    },
+    {
+      "title": "L.A., Jagannathan, Kolla (2020), Concentration bounds for CVaR estimation: The cases of light-tailed and heavy-tailed distributions",
+      "url": "https://proceedings.mlr.press/v119/l-a-20a/l-a-20a.pdf",
+      "supports": "Finite-sample CVaR accuracy depends on sample count and tail probability under stated distribution assumptions; no guarantee for our weighted eight-world heuristic."
+    }
+  ]
+}

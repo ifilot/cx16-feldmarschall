@@ -1,0 +1,18 @@
+{
+  "schema": "native-belief-protocol-audit-v1",
+  "strength_evidence": false,
+  "command": "python3 -m unittest discover -s tools -p test_campaign_prior_protocol.py -v",
+  "tests": 5,
+  "result": "PASS",
+  "seconds": 9.283,
+  "native_shared_edits": false,
+  "coverage": [
+    "800 hex digits encode Flag Q12 then Bomb Q12; uppercase accepted",
+    "Red and Blue priors change quiet choice and persistent goal with unchanged public view",
+    "Invalid length, hex, overflow, pair sum, trailing junk and oversized packets preserve entire strategy state",
+    "new red, new blue and position reset all 401 prior bytes",
+    "Macro-off command rejected with unchanged strategy state",
+    "Production macro-off engine bytes identical to frozen student-guard-v1-normal after overlaying current engine.c, ai.c and ai.h"
+  ],
+  "note": "Context observer binary includes a separate pre-existing guarded diagnostic command, so immutable binary parity uses the original production student recipe."
+}

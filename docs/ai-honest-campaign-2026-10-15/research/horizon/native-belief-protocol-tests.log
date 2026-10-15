@@ -1,0 +1,12 @@
+Command: python3 -m unittest discover -s tools -p test_campaign_prior_protocol.py -v
+Recorded final passing run (no source edits afterward).
+
+test_default_engine_binary_is_identical_to_frozen_student ... ok
+test_invalid_packets_leave_entire_prior_and_memory_state_unchanged ... ok
+test_macro_off_rejects_command_and_preserves_strategy ... ok
+test_new_game_and_position_reset_clear_every_prior_byte ... ok
+test_valid_packet_routes_quiet_move_for_both_armies_without_disclosure ... ok
+
+Ran 5 tests in 9.283s
+
+OK

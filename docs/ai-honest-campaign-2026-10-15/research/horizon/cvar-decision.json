@@ -1,0 +1,20 @@
+{
+  "schema": "cvar-feasibility-decision-v1",
+  "decision": "Deferred feasibility finding; no saved strength experiment and no rejection on playing strength.",
+  "reason": [
+    "Eight worlds resolve a lower-quarter tail with two equal-weight draws; eight of 140 historical roots can fill that tail with one weighted atom.",
+    "Per-world imaginary-pass reference is a control variate: moving it inside a nonlinear tail aggregator changes which worlds count as adverse.",
+    "Repeated fixed-alpha root aggregation does not implement time-consistent dynamic CVaR or belief-state optimal planning."
+  ],
+  "next_priority": "Native public-belief objectives and their historical decision/time mechanism.",
+  "future_option": "Reconsider only with a separately frozen larger world budget, explicit risk quantity and fresh paired evaluation; not recommended now.",
+  "details": [
+    "cvar-tail-resolution.json",
+    "cvar-risk-review.json"
+  ],
+  "primary_sources": [
+    "https://papers.neurips.cc/paper_files/paper/2015/file/64223ccf70bbb65a3a4aceac37e21016-Paper.pdf",
+    "https://arxiv.org/pdf/1502.03919",
+    "https://proceedings.mlr.press/v119/l-a-20a/l-a-20a.pdf"
+  ]
+}

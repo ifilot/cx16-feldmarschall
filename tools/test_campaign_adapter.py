@@ -58,6 +58,33 @@ class AdapterTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'isolate honest adaptive'):
             self.bot(adaptive_depth=True,diagnostic_truth=True)
 
+    def test_parent_anchor_wiring_preserves_the_legal_fallback_score(self):
+        bot=self.bot(correction_anchor='parent')
+        try:
+            self.initialize(bot,0)
+            bot.choose()
+            parent=bot.last_report['parent']
+            row=next(row for row in bot.last_report['values'] if tuple(row['move'])==parent)
+            self.assertEqual(row['correction'],0)
+            self.assertEqual(row['value'],row['parent_score'])
+            self.assertEqual(bot.last_report['correction_anchor']['parent_correction'],0)
+        finally:bot.close()
+        with self.assertRaisesRegex(ValueError,'isolate honest legal-parent'):
+            self.bot(correction_anchor='parent',diagnostic_truth=True)
+
+    def test_flag_interceptor_receives_public_shuttle_and_reports_coverage(self):
+        bot=self.bot(campaign_strategy='flag-interceptor')
+        try:
+            self.initialize(bot,0)
+            shuttle=bot.observer.ask('public','public').split()[-1]
+            with patch.object(bot.campaign_module,'evaluate',wraps=bot.campaign_module.evaluate) as hook:
+                bot.choose()
+            self.assertEqual(hook.call_count,1)
+            self.assertEqual(hook.call_args.args[-1],shuttle)
+            self.assertIn('flag_interceptor',bot.last_report)
+            self.assertIn('active',bot.last_report['flag_interceptor'])
+        finally:bot.close()
+
     def test_real_hooks_are_called_and_reported(self):
         import campaign_sampling,campaign_strategy,campaign_search
         for options in OPTIONS:

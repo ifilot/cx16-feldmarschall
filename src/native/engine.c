@@ -129,7 +129,13 @@ static void choose_setup(void) {
     char text[ARMY_SIZE + 8];
     uint8_t n;
 
+#ifdef AI_POLICY_DEPLOYMENT
+    /* Explicit immutable-policy option: match the actual Classic game's
+     * validated setup mixture. Legacy native policy IDs retain random setup. */
+    setup_ai(own != 0);
+#else
     setup_random(own != 0);
+#endif
     strcpy(text, "setup ");
     for(n=0; n<ARMY_SIZE; n++) text[6 + n] = piece_glyphs[PIECE_TYPE(board[setup_square(own, n)])];
     text[6 + ARMY_SIZE] = 0;
@@ -364,6 +370,34 @@ static int difficulty(const char* name) {
     return 1;
 }
 
+#ifdef AI_BELIEF_PRIORS
+/* Public posterior marginals, serialized as 200 four-digit Q12 hex values:
+ * all Flag squares, then all Bomb squares. Validate before changing state. */
+static void belief_priors(const char* args) {
+    uint16_t values[2*SQUARES];
+    unsigned i, j, value;
+    if(!args || strlen(args) != 8*SQUARES) {
+        reply("error belief-priors");
+        return;
+    }
+    for(i=0; i<2*SQUARES; ++i) {
+        value = 0;
+        for(j=0; j<4; ++j) {
+            unsigned char c = args[4*i+j];
+            unsigned digit;
+            if(c >= '0' && c <= '9') digit = c-'0';
+            else if(c >= 'a' && c <= 'f') digit = c-'a'+10;
+            else if(c >= 'A' && c <= 'F') digit = c-'A'+10;
+            else { reply("error belief-priors"); return; }
+            value = (value<<4)|digit;
+        }
+        values[i] = value;
+    }
+    reply(ai_belief_priors_set(own, values, values+SQUARES)
+          ? "belief-priorsok" : "error belief-priors");
+}
+#endif
+
 int main(int argc, char** argv) {
 #ifdef FELDMARSCHALL_AI_ID
     if(argc == 2 && !strcmp(argv[1], "--identity")) {
@@ -371,7 +405,11 @@ int main(int argc, char** argv) {
         return 0;
     }
 #endif
+#ifdef AI_BELIEF_PRIORS
+    char line[1024], *command, *args;
+#else
     char line[512], *command, *args;
+#endif
     uint8_t from, to;
     int attacker, defender;
 
@@ -464,6 +502,11 @@ int main(int argc, char** argv) {
             rules_state_save(state);memcpy(state+RULES_STATE_SIZE-6,shuttles,6);rules_state_load(state);
             reply("positionok");
         }
+#ifdef AI_BELIEF_PRIORS
+        else if(!strcmp(command, "belief-priors")) {
+            belief_priors(args);
+        }
+#endif
         else if(!strcmp(command, "ranked")) {
             tracing=1; go(); tracing=0;
         }

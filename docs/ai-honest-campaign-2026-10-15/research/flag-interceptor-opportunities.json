@@ -1,0 +1,7866 @@
+{
+  "kind": "public-flag-interceptor-opportunity-audit",
+  "strength_evidence": false,
+  "tournament": "docs/ai-flag-only-2026-10-15/teacher-context-v1-normal.fmtour",
+  "tournament_sha256": "1de2ff22f28d80d426bf01aa38242459c2e2f8073aef3975ed8befc3951871d2",
+  "policy": "teacher-context-v1-normal",
+  "flag_losses": 194,
+  "counters": {
+    "prefixes_with_public_two_turn_approach": 157,
+    "prefixes_already_covered": 2,
+    "quiet_moves_abandoning_coverage": 1,
+    "prefixes_with_covering_alternative": 17,
+    "quiet_prefixes_with_covering_alternative": 16,
+    "prefixes_with_alternative_covering_all_disclosed_intruders": 17,
+    "games_with_public_two_turn_approach": 121,
+    "games_with_quiet_abandonment": 1
+  },
+  "windows": {
+    "1_turns_rank_disclosed": 160,
+    "1_turns_disclosed_distance2or3": 0,
+    "2_turns_rank_disclosed": 124,
+    "2_turns_disclosed_distance2or3": 119,
+    "3_turns_rank_disclosed": 112,
+    "3_turns_disclosed_distance2or3": 107,
+    "4_turns_rank_disclosed": 102,
+    "4_turns_disclosed_distance2or3": 36,
+    "5_turns_rank_disclosed": 97,
+    "5_turns_disclosed_distance2or3": 34,
+    "6_turns_rank_disclosed": 90,
+    "6_turns_disclosed_distance2or3": 25
+  },
+  "rows": [
+    {
+      "game": 1,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 244,
+      "intruder": 83,
+      "intruder_public_rank": "8",
+      "flag": 94,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        72,
+        73
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              83,
+              84
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              83,
+              93
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              83,
+              84
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              83,
+              93
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 5,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 322,
+      "intruder": 96,
+      "intruder_public_rank": "8",
+      "flag": 94,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        88,
+        78
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              96,
+              95
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              96,
+              95
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 6,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 203,
+      "intruder": 11,
+      "intruder_public_rank": "8",
+      "flag": 2,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        23,
+        22
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              11,
+              1
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              11,
+              12
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 8,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 235,
+      "intruder": 25,
+      "intruder_public_rank": "8",
+      "flag": 5,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        51,
+        61
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 8,
+      "family": "fortified",
+      "own_turns_before_capture": 3,
+      "decision_ply": 233,
+      "intruder": 25,
+      "intruder_public_rank": "8",
+      "flag": 5,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        50,
+        51
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 8,
+      "family": "fortified",
+      "own_turns_before_capture": 4,
+      "decision_ply": 231,
+      "intruder": 25,
+      "intruder_public_rank": "8",
+      "flag": 5,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        40,
+        50
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 9,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 260,
+      "intruder": 97,
+      "intruder_public_rank": "8",
+      "flag": 95,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        40,
+        41
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              97,
+              96
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              97,
+              96
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 11,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 250,
+      "intruder": 84,
+      "intruder_public_rank": "8",
+      "flag": 93,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        68,
+        69
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              84,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              84,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 12,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 231,
+      "intruder": 1,
+      "intruder_public_rank": "8",
+      "flag": 3,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        27,
+        26
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              1,
+              2
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 14,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 363,
+      "intruder": 6,
+      "intruder_public_rank": "8",
+      "flag": 8,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        15,
+        16
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              6,
+              7
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              6,
+              7
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 15,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 240,
+      "intruder": 81,
+      "intruder_public_rank": "8",
+      "flag": 92,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        65,
+        55
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              81,
+              82
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              81,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              81,
+              82
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              81,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 15,
+      "family": "fortified",
+      "own_turns_before_capture": 3,
+      "decision_ply": 238,
+      "intruder": 81,
+      "intruder_public_rank": "8",
+      "flag": 92,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        55,
+        54
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              81,
+              82
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              81,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              81,
+              82
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              81,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 17,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 306,
+      "intruder": 85,
+      "intruder_public_rank": "8",
+      "flag": 94,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        6,
+        7
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              85,
+              95
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              85,
+              84
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 18,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 189,
+      "intruder": 6,
+      "intruder_public_rank": "8",
+      "flag": 8,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        19,
+        29
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              6,
+              7
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 22,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 171,
+      "intruder": 24,
+      "intruder_public_rank": "8",
+      "flag": 4,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        40,
+        30
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              24,
+              14
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              24,
+              14
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 27,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 220,
+      "intruder": 73,
+      "intruder_public_rank": "8",
+      "flag": 93,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        69,
+        59
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 28,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 139,
+      "intruder": 29,
+      "intruder_public_rank": "8",
+      "flag": 9,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        7,
+        6
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              29,
+              19
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              29,
+              19
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 30,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 71,
+      "intruder": 15,
+      "intruder_public_rank": "8",
+      "flag": 6,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        68,
+        67
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              15,
+              5
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              15,
+              16
+            ],
+            "guard_squares": [
+              17
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          17
+        ]
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 31,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 122,
+      "intruder": 88,
+      "intruder_public_rank": "8",
+      "flag": 97,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        75,
+        74
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              88,
+              98
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              88,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              88,
+              98
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              88,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 32,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 203,
+      "intruder": 16,
+      "intruder_public_rank": "8",
+      "flag": 7,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        14,
+        15
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              16,
+              6
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              16,
+              17
+            ],
+            "guard_squares": [
+              27
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          27
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              16,
+              6
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              16,
+              17
+            ],
+            "guard_squares": [
+              27
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          27
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 40,
+      "family": "fortified",
+      "own_turns_before_capture": 2,
+      "decision_ply": 231,
+      "intruder": 6,
+      "intruder_public_rank": "8",
+      "flag": 8,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        22,
+        12
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              6,
+              7
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              6,
+              7
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 41,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 52,
+      "intruder": 55,
+      "intruder_public_rank": "4",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        64,
+        74
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 41,
+      "family": "uniform",
+      "own_turns_before_capture": 3,
+      "decision_ply": 50,
+      "intruder": 55,
+      "intruder_public_rank": "4",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        68,
+        67
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 41,
+      "family": "uniform",
+      "own_turns_before_capture": 4,
+      "decision_ply": 48,
+      "intruder": 55,
+      "intruder_public_rank": "4",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        74,
+        64
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 42,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 65,
+      "intruder": 27,
+      "intruder_public_rank": "5",
+      "flag": 7,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        17,
+        27
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              27,
+              17
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 42,
+      "family": "uniform",
+      "own_turns_before_capture": 3,
+      "decision_ply": 63,
+      "intruder": 27,
+      "intruder_public_rank": "5",
+      "flag": 7,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        34,
+        64
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              27,
+              17
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              27,
+              17
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 45,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 40,
+      "intruder": 65,
+      "intruder_public_rank": "7",
+      "flag": 76,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        40,
+        30
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              65,
+              66
+            ],
+            "guard_squares": [
+              67
+            ]
+          },
+          {
+            "move": [
+              65,
+              75
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          67
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              65,
+              66
+            ],
+            "guard_squares": [
+              67
+            ]
+          },
+          {
+            "move": [
+              65,
+              75
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          67
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            95,
+            85
+          ],
+          "guard_rank": "7",
+          "eliminates_approach": false,
+          "guard_squares": [
+            67,
+            85
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 51,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 484,
+      "intruder": 77,
+      "intruder_public_rank": "3",
+      "flag": 75,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        78,
+        68
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              76
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              76
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 53,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 70,
+      "intruder": 64,
+      "intruder_public_rank": "7",
+      "flag": 73,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        76,
+        66
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              74
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              64,
+              63
+            ],
+            "guard_squares": [
+              62
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          62
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              74
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              64,
+              63
+            ],
+            "guard_squares": [
+              62
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          62
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 54,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 173,
+      "intruder": 22,
+      "intruder_public_rank": "2",
+      "flag": 2,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        12,
+        13
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              22,
+              12
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              22,
+              12
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 57,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 60,
+      "intruder": 54,
+      "intruder_public_rank": "3",
+      "flag": 74,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        64,
+        65
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              54,
+              64
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              54,
+              64
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 57,
+      "family": "uniform",
+      "own_turns_before_capture": 6,
+      "decision_ply": 52,
+      "intruder": 54,
+      "intruder_public_rank": "3",
+      "flag": 74,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        48,
+        38
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              54,
+              64
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 59,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 152,
+      "intruder": 83,
+      "intruder_public_rank": "2",
+      "flag": 92,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        82,
+        72
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              83,
+              82
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              83,
+              82
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            62,
+            72
+          ],
+          "guard_rank": "1",
+          "eliminates_approach": false,
+          "guard_squares": [
+            72
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 67,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 84,
+      "intruder": 70,
+      "intruder_public_rank": "4",
+      "flag": 81,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        72,
+        62
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              70,
+              80
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              70,
+              80
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 68,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 93,
+      "intruder": 25,
+      "intruder_public_rank": "2",
+      "flag": 27,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        74,
+        75
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              26
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              26
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 69,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 140,
+      "intruder": 55,
+      "intruder_public_rank": "3",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        58,
+        48
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 70,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 159,
+      "intruder": 16,
+      "intruder_public_rank": "4",
+      "flag": 14,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        17,
+        16
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              16,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 73,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 154,
+      "intruder": 81,
+      "intruder_public_rank": "3",
+      "flag": 90,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        41,
+        31
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              81,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 75,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 82,
+      "intruder": 55,
+      "intruder_public_rank": "1",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        65,
+        64
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 80,
+      "family": "uniform",
+      "own_turns_before_capture": 2,
+      "decision_ply": 45,
+      "intruder": 40,
+      "intruder_public_rank": "2",
+      "flag": 20,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        44,
+        54
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 81,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 196,
+      "intruder": 78,
+      "intruder_public_rank": "2",
+      "flag": 98,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        77,
+        76
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              78,
+              88
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              78,
+              88
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 83,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 108,
+      "intruder": 74,
+      "intruder_public_rank": "4",
+      "flag": 94,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        40,
+        41
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              74,
+              84
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              74,
+              84
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 85,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 182,
+      "intruder": 88,
+      "intruder_public_rank": "5",
+      "flag": 97,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        87,
+        77
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              88,
+              98
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              88,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              88,
+              98
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              88,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 87,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 116,
+      "intruder": 87,
+      "intruder_public_rank": "2",
+      "flag": 98,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        74,
+        64
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              87,
+              88
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              87,
+              97
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              87,
+              88
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              87,
+              97
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 89,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 224,
+      "intruder": 74,
+      "intruder_public_rank": "7",
+      "flag": 94,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        73,
+        63
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              74,
+              84
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              74,
+              84
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 91,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 96,
+      "intruder": 75,
+      "intruder_public_rank": "3",
+      "flag": 95,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        69,
+        29
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              75,
+              85
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              75,
+              85
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 92,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 79,
+      "intruder": 11,
+      "intruder_public_rank": "3",
+      "flag": 2,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        87,
+        86
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              11,
+              12
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 93,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 84,
+      "intruder": 88,
+      "intruder_public_rank": "3",
+      "flag": 97,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        78,
+        68
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              88,
+              98
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              88,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              88,
+              98
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              88,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 96,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 111,
+      "intruder": 13,
+      "intruder_public_rank": "4",
+      "flag": 2,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        73,
+        83
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              13,
+              3
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              13,
+              12
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              13,
+              3
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              13,
+              12
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 97,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 92,
+      "intruder": 88,
+      "intruder_public_rank": "4",
+      "flag": 99,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        85,
+        84
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              88,
+              89
+            ],
+            "guard_squares": [
+              79
+            ]
+          },
+          {
+            "move": [
+              88,
+              98
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          79
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              88,
+              89
+            ],
+            "guard_squares": [
+              79
+            ]
+          },
+          {
+            "move": [
+              88,
+              98
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          79
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 99,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 326,
+      "intruder": 92,
+      "intruder_public_rank": "4",
+      "flag": 90,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        82,
+        72
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              92,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              92,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 100,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 213,
+      "intruder": 12,
+      "intruder_public_rank": "3",
+      "flag": 1,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        3,
+        4
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              12,
+              2
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              12,
+              11
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              12,
+              2
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              12,
+              11
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 102,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 141,
+      "intruder": 21,
+      "intruder_public_rank": "1",
+      "flag": 1,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        78,
+        88
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              21,
+              11
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              21,
+              11
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            2,
+            12
+          ],
+          "guard_rank": "S",
+          "eliminates_approach": false,
+          "guard_squares": [
+            12
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 103,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 80,
+      "intruder": 71,
+      "intruder_public_rank": "2",
+      "flag": 91,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        82,
+        72
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              71,
+              81
+            ],
+            "guard_squares": [
+              82
+            ]
+          }
+        ],
+        "covered": true,
+        "guards": [
+          82
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              71,
+              81
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": true,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            55,
+            45
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            55,
+            54
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            63,
+            64
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            63,
+            62
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            65,
+            75
+          ],
+          "guard_rank": "8",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            65,
+            64
+          ],
+          "guard_rank": "8",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            70,
+            80
+          ],
+          "guard_rank": "6",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            73,
+            74
+          ],
+          "guard_rank": "6",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            73,
+            72
+          ],
+          "guard_rank": "6",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            76,
+            77
+          ],
+          "guard_rank": "8",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            76,
+            75
+          ],
+          "guard_rank": "8",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            79,
+            89
+          ],
+          "guard_rank": "8",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            79,
+            78
+          ],
+          "guard_rank": "8",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            82,
+            81
+          ],
+          "guard_rank": "1",
+          "eliminates_approach": true,
+          "guard_squares": [],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            84,
+            74
+          ],
+          "guard_rank": "7",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            85,
+            75
+          ],
+          "guard_rank": "8",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            90,
+            80
+          ],
+          "guard_rank": "7",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            99,
+            89
+          ],
+          "guard_rank": "3",
+          "eliminates_approach": false,
+          "guard_squares": [
+            82
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 104,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 247,
+      "intruder": 24,
+      "intruder_public_rank": "2",
+      "flag": 4,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        39,
+        49
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              24,
+              14
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              24,
+              14
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 105,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 300,
+      "intruder": 77,
+      "intruder_public_rank": "3",
+      "flag": 97,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        96,
+        86
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 106,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 107,
+      "intruder": 18,
+      "intruder_public_rank": "2",
+      "flag": 9,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        93,
+        94
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              18,
+              8
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              18,
+              19
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 108,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 467,
+      "intruder": 11,
+      "intruder_public_rank": "S",
+      "flag": 0,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        48,
+        58
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              11,
+              1
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              11,
+              10
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              11,
+              1
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              11,
+              10
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 109,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 64,
+      "intruder": 77,
+      "intruder_public_rank": "3",
+      "flag": 97,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        85,
+        75
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 109,
+      "family": "unguarded",
+      "own_turns_before_capture": 5,
+      "decision_ply": 58,
+      "intruder": 77,
+      "intruder_public_rank": "3",
+      "flag": 97,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        87,
+        88
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              87
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 113,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 78,
+      "intruder": 92,
+      "intruder_public_rank": "2",
+      "flag": 94,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        91,
+        81
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              92,
+              93
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              92,
+              93
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 114,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 77,
+      "intruder": 26,
+      "intruder_public_rank": "2",
+      "flag": 6,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        16,
+        26
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              26,
+              16
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 115,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 294,
+      "intruder": 97,
+      "intruder_public_rank": "4",
+      "flag": 95,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        80,
+        40
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              97,
+              96
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              97,
+              96
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 117,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 212,
+      "intruder": 84,
+      "intruder_public_rank": "3",
+      "flag": 93,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        76,
+        75
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              84,
+              83
+            ],
+            "guard_squares": [
+              82
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          82
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              84,
+              83
+            ],
+            "guard_squares": [
+              82
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          82
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 118,
+      "family": "unguarded",
+      "own_turns_before_capture": 2,
+      "decision_ply": 117,
+      "intruder": 22,
+      "intruder_public_rank": "3",
+      "flag": 2,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        24,
+        34
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              22,
+              12
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              22,
+              12
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 123,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 6,
+      "intruder": 58,
+      "intruder_public_rank": "5",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        71,
+        61
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            77,
+            78
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            78
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 129,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 26,
+      "intruder": 55,
+      "intruder_public_rank": "3",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        64,
+        65
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 129,
+      "family": "forward",
+      "own_turns_before_capture": 3,
+      "decision_ply": 24,
+      "intruder": 55,
+      "intruder_public_rank": "3",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        91,
+        81
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 129,
+      "family": "forward",
+      "own_turns_before_capture": 4,
+      "decision_ply": 22,
+      "intruder": 55,
+      "intruder_public_rank": "3",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        62,
+        61
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 129,
+      "family": "forward",
+      "own_turns_before_capture": 5,
+      "decision_ply": 20,
+      "intruder": 55,
+      "intruder_public_rank": "3",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        32,
+        33
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 129,
+      "family": "forward",
+      "own_turns_before_capture": 6,
+      "decision_ply": 18,
+      "intruder": 55,
+      "intruder_public_rank": "3",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        31,
+        32
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 142,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 23,
+      "intruder": 50,
+      "intruder_public_rank": "7",
+      "flag": 30,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        24,
+        34
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              50,
+              40
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              50,
+              40
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            31,
+            41
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": false,
+          "guard_squares": [
+            41
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 143,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 84,
+      "intruder": 55,
+      "intruder_public_rank": "5",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        61,
+        51
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            74,
+            64
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            64
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            74,
+            75
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            75
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            76,
+            75
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": false,
+          "guard_squares": [
+            75
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 144,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 143,
+      "intruder": 22,
+      "intruder_public_rank": "6",
+      "flag": 33,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        24,
+        25
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              22,
+              23
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              22,
+              32
+            ],
+            "guard_squares": [
+              31
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          31
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              22,
+              23
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              22,
+              32
+            ],
+            "guard_squares": [
+              31
+            ]
+          }
+        ],
+        "covered": false,
+        "guards": [
+          31
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            13,
+            31
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 144,
+      "family": "forward",
+      "own_turns_before_capture": 5,
+      "decision_ply": 137,
+      "intruder": 31,
+      "intruder_public_rank": "6",
+      "flag": 33,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        22,
+        32
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              31,
+              32
+            ],
+            "guard_squares": [
+              22
+            ]
+          }
+        ],
+        "covered": true,
+        "guards": [
+          22
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [],
+        "covered": true,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            0,
+            1
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            3,
+            13
+          ],
+          "guard_rank": "9",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            3,
+            23
+          ],
+          "guard_rank": "9",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            4,
+            5
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            4,
+            14
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            6,
+            5
+          ],
+          "guard_rank": "7",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            22,
+            32
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": true,
+          "guard_squares": [],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            24,
+            14
+          ],
+          "guard_rank": "S",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            24,
+            25
+          ],
+          "guard_rank": "S",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            24,
+            23
+          ],
+          "guard_rank": "S",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            26,
+            36
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            26,
+            25
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            34,
+            35
+          ],
+          "guard_rank": "6",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            37,
+            36
+          ],
+          "guard_rank": "9",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            37,
+            35
+          ],
+          "guard_rank": "9",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            44,
+            45
+          ],
+          "guard_rank": "6",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            54,
+            55
+          ],
+          "guard_rank": "1",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            54,
+            64
+          ],
+          "guard_rank": "1",
+          "eliminates_approach": false,
+          "guard_squares": [
+            22
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 146,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 93,
+      "intruder": 32,
+      "intruder_public_rank": "1",
+      "flag": 30,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        31,
+        41
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              32,
+              31
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              32,
+              31
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 147,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 20,
+      "intruder": 55,
+      "intruder_public_rank": "9",
+      "flag": 64,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        39,
+        29
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": [
+              66,
+              75
+            ]
+          },
+          {
+            "move": [
+              55,
+              54
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          66,
+          75
+        ]
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 147,
+      "family": "forward",
+      "own_turns_before_capture": 3,
+      "decision_ply": 18,
+      "intruder": 45,
+      "intruder_public_rank": "9",
+      "flag": 64,
+      "manhattan_distance": 3,
+      "recorded_move": [
+        38,
+        39
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              45,
+              65
+            ],
+            "guard_squares": [
+              66,
+              75
+            ]
+          },
+          {
+            "move": [
+              45,
+              44
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          66,
+          75
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              45,
+              65
+            ],
+            "guard_squares": [
+              66,
+              75
+            ]
+          },
+          {
+            "move": [
+              45,
+              44
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          66,
+          75
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 147,
+      "family": "forward",
+      "own_turns_before_capture": 4,
+      "decision_ply": 16,
+      "intruder": 45,
+      "intruder_public_rank": "9",
+      "flag": 64,
+      "manhattan_distance": 3,
+      "recorded_move": [
+        28,
+        38
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              45,
+              65
+            ],
+            "guard_squares": [
+              66,
+              75
+            ]
+          },
+          {
+            "move": [
+              45,
+              44
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          66,
+          75
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              45,
+              65
+            ],
+            "guard_squares": [
+              66,
+              75
+            ]
+          },
+          {
+            "move": [
+              45,
+              44
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          66,
+          75
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 147,
+      "family": "forward",
+      "own_turns_before_capture": 5,
+      "decision_ply": 14,
+      "intruder": 45,
+      "intruder_public_rank": "9",
+      "flag": 64,
+      "manhattan_distance": 3,
+      "recorded_move": [
+        38,
+        28
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              45,
+              65
+            ],
+            "guard_squares": [
+              66,
+              75
+            ]
+          },
+          {
+            "move": [
+              45,
+              44
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          66,
+          75
+        ]
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 147,
+      "family": "forward",
+      "own_turns_before_capture": 6,
+      "decision_ply": 12,
+      "intruder": 45,
+      "intruder_public_rank": "9",
+      "flag": 64,
+      "manhattan_distance": 3,
+      "recorded_move": [
+        39,
+        38
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              45,
+              65
+            ],
+            "guard_squares": [
+              66,
+              75
+            ]
+          },
+          {
+            "move": [
+              45,
+              44
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          66,
+          75
+        ]
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 149,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 62,
+      "intruder": 64,
+      "intruder_public_rank": "3",
+      "flag": 62,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        63,
+        73
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              63
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              63
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 150,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 95,
+      "intruder": 41,
+      "intruder_public_rank": "3",
+      "flag": 32,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        11,
+        21
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              41,
+              31
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              41,
+              31
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 156,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 3,
+      "intruder": 44,
+      "intruder_public_rank": "4",
+      "flag": 35,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        31,
+        41
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              44,
+              34
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              44,
+              45
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              44,
+              34
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              44,
+              45
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 157,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 12,
+      "intruder": 58,
+      "intruder_public_rank": "4",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        40,
+        30
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 159,
+      "family": "forward",
+      "own_turns_before_capture": 2,
+      "decision_ply": 14,
+      "intruder": 58,
+      "intruder_public_rank": "5",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        49,
+        39
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            77,
+            78
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            78
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            79,
+            69
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": false,
+          "guard_squares": [
+            69
+          ],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            79,
+            78
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": false,
+          "guard_squares": [
+            78
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 161,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 48,
+      "intruder": 64,
+      "intruder_public_rank": "5",
+      "flag": 66,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        73,
+        74
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 162,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 61,
+      "intruder": 20,
+      "intruder_public_rank": "4",
+      "flag": 22,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        38,
+        39
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              20,
+              21
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              20,
+              21
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            12,
+            11
+          ],
+          "guard_rank": "4",
+          "eliminates_approach": false,
+          "guard_squares": [
+            11
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 168,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 21,
+      "intruder": 31,
+      "intruder_public_rank": "4",
+      "flag": 20,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        25,
+        85
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              31,
+              21
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              31,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 169,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 10,
+      "intruder": 51,
+      "intruder_public_rank": "5",
+      "flag": 60,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        55,
+        45
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": [
+              71
+            ]
+          },
+          {
+            "move": [
+              51,
+              50
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          71
+        ]
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 171,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 112,
+      "intruder": 55,
+      "intruder_public_rank": "4",
+      "flag": 75,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        84,
+        74
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              55,
+              65
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 172,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 63,
+      "intruder": 22,
+      "intruder_public_rank": "3",
+      "flag": 20,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        12,
+        13
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              22,
+              21
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              22,
+              21
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            30,
+            31
+          ],
+          "guard_rank": "3",
+          "eliminates_approach": false,
+          "guard_squares": [
+            31
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 181,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 172,
+      "intruder": 77,
+      "intruder_public_rank": "5",
+      "flag": 79,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        76,
+        66
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              78
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              77,
+              78
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 183,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 60,
+      "intruder": 79,
+      "intruder_public_rank": "5",
+      "flag": 77,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        32,
+        31
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              79,
+              78
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              79,
+              78
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "guard_rank": "5",
+          "eliminates_approach": false,
+          "guard_squares": [
+            68
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 184,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 43,
+      "intruder": 38,
+      "intruder_public_rank": "4",
+      "flag": 36,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        28,
+        29
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              38,
+              37
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              38,
+              37
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 184,
+      "family": "decoy",
+      "own_turns_before_capture": 3,
+      "decision_ply": 41,
+      "intruder": 38,
+      "intruder_public_rank": "4",
+      "flag": 36,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        41,
+        51
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              38,
+              37
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              38,
+              37
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 184,
+      "family": "decoy",
+      "own_turns_before_capture": 4,
+      "decision_ply": 39,
+      "intruder": 38,
+      "intruder_public_rank": "4",
+      "flag": 36,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        44,
+        54
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              38,
+              37
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              38,
+              37
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 60,
+      "intruder": 58,
+      "intruder_public_rank": "6",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        96,
+        86
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "own_turns_before_capture": 3,
+      "decision_ply": 58,
+      "intruder": 58,
+      "intruder_public_rank": "6",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        54,
+        55
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "own_turns_before_capture": 4,
+      "decision_ply": 56,
+      "intruder": 58,
+      "intruder_public_rank": "6",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        55,
+        54
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "own_turns_before_capture": 5,
+      "decision_ply": 54,
+      "intruder": 58,
+      "intruder_public_rank": "6",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        91,
+        81
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "own_turns_before_capture": 6,
+      "decision_ply": 52,
+      "intruder": 58,
+      "intruder_public_rank": "6",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        86,
+        76
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 188,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 61,
+      "intruder": 51,
+      "intruder_public_rank": "9",
+      "flag": 20,
+      "manhattan_distance": 4,
+      "recorded_move": [
+        41,
+        40
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              50
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              21
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            33,
+            30
+          ],
+          "guard_rank": "9",
+          "eliminates_approach": true,
+          "guard_squares": [],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 189,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 26,
+      "intruder": 51,
+      "intruder_public_rank": "3",
+      "flag": 71,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        60,
+        61
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 189,
+      "family": "decoy",
+      "own_turns_before_capture": 3,
+      "decision_ply": 24,
+      "intruder": 51,
+      "intruder_public_rank": "3",
+      "flag": 71,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        74,
+        75
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 189,
+      "family": "decoy",
+      "own_turns_before_capture": 4,
+      "decision_ply": 22,
+      "intruder": 51,
+      "intruder_public_rank": "3",
+      "flag": 71,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        64,
+        54
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 189,
+      "family": "decoy",
+      "own_turns_before_capture": 5,
+      "decision_ply": 20,
+      "intruder": 51,
+      "intruder_public_rank": "3",
+      "flag": 71,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        38,
+        37
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 189,
+      "family": "decoy",
+      "own_turns_before_capture": 6,
+      "decision_ply": 18,
+      "intruder": 51,
+      "intruder_public_rank": "3",
+      "flag": 71,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        39,
+        38
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              51,
+              61
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 197,
+      "family": "decoy",
+      "own_turns_before_capture": 2,
+      "decision_ply": 14,
+      "intruder": 40,
+      "intruder_public_rank": "1",
+      "flag": 60,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        81,
+        71
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              50
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              50
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 201,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 90,
+      "intruder": 73,
+      "intruder_public_rank": "3",
+      "flag": 93,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        83,
+        73
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 202,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 219,
+      "intruder": 23,
+      "intruder_public_rank": "4",
+      "flag": 3,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        22,
+        21
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 203,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 444,
+      "intruder": 84,
+      "intruder_public_rank": "8",
+      "flag": 95,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        34,
+        33
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              85
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              85
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 203,
+      "family": "presets",
+      "own_turns_before_capture": 3,
+      "decision_ply": 442,
+      "intruder": 84,
+      "intruder_public_rank": "8",
+      "flag": 95,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        44,
+        34
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              85
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              85
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 204,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 97,
+      "intruder": 14,
+      "intruder_public_rank": "4",
+      "flag": 3,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        30,
+        40
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              14,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              14,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            22,
+            23
+          ],
+          "guard_rank": "2",
+          "eliminates_approach": false,
+          "guard_squares": [
+            23
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 153,
+      "intruder": 23,
+      "intruder_public_rank": "4",
+      "flag": 3,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        7,
+        8
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 208,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 81,
+      "intruder": 26,
+      "intruder_public_rank": "1",
+      "flag": 6,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        36,
+        35
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              26,
+              16
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              26,
+              16
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 209,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 464,
+      "intruder": 75,
+      "intruder_public_rank": "3",
+      "flag": 95,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        63,
+        64
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              75,
+              85
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              75,
+              85
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 211,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 60,
+      "intruder": 76,
+      "intruder_public_rank": "2",
+      "flag": 96,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        84,
+        74
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              76,
+              86
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              76,
+              86
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 211,
+      "family": "presets",
+      "own_turns_before_capture": 3,
+      "decision_ply": 58,
+      "intruder": 76,
+      "intruder_public_rank": "2",
+      "flag": 96,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        66,
+        65
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              76,
+              86
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              76,
+              86
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 214,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 141,
+      "intruder": 19,
+      "intruder_public_rank": "5",
+      "flag": 8,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        18,
+        28
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              19,
+              9
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              19,
+              18
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              19,
+              9
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              19,
+              18
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 215,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 256,
+      "intruder": 73,
+      "intruder_public_rank": "4",
+      "flag": 93,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        85,
+        75
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 216,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 77,
+      "intruder": 24,
+      "intruder_public_rank": "4",
+      "flag": 4,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        38,
+        48
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              24,
+              14
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 218,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 215,
+      "intruder": 26,
+      "intruder_public_rank": "4",
+      "flag": 6,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        28,
+        38
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              26,
+              16
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              26,
+              16
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 219,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 246,
+      "intruder": 73,
+      "intruder_public_rank": "5",
+      "flag": 93,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        45,
+        35
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 220,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 119,
+      "intruder": 23,
+      "intruder_public_rank": "3",
+      "flag": 3,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        11,
+        21
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 221,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 200,
+      "intruder": 82,
+      "intruder_public_rank": "2",
+      "flag": 93,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        16,
+        17
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              82,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 222,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 195,
+      "intruder": 23,
+      "intruder_public_rank": "1",
+      "flag": 3,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        37,
+        38
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 223,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 268,
+      "intruder": 76,
+      "intruder_public_rank": "4",
+      "flag": 96,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        35,
+        36
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              76,
+              86
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 226,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 117,
+      "intruder": 23,
+      "intruder_public_rank": "3",
+      "flag": 3,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        45,
+        55
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              23,
+              13
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 229,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 76,
+      "intruder": 74,
+      "intruder_public_rank": "2",
+      "flag": 94,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        34,
+        24
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              74,
+              84
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 230,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 151,
+      "intruder": 19,
+      "intruder_public_rank": "9",
+      "flag": 5,
+      "manhattan_distance": 5,
+      "recorded_move": [
+        78,
+        68
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              19,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              19,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            27,
+            17
+          ],
+          "guard_rank": "8",
+          "eliminates_approach": true,
+          "guard_squares": [],
+          "covers_every_disclosed_intruder": true
+        },
+        {
+          "move": [
+            35,
+            25
+          ],
+          "guard_rank": "7",
+          "eliminates_approach": false,
+          "guard_squares": [
+            25
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    },
+    {
+      "game": 232,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 539,
+      "intruder": 11,
+      "intruder_public_rank": "4",
+      "flag": 2,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        85,
+        75
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              11,
+              1
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              11,
+              1
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 235,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 82,
+      "intruder": 76,
+      "intruder_public_rank": "5",
+      "flag": 96,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        49,
+        39
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              76,
+              86
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              76,
+              86
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 237,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 198,
+      "intruder": 73,
+      "intruder_public_rank": "1",
+      "flag": 93,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        72,
+        62
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              73,
+              83
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 238,
+      "family": "presets",
+      "own_turns_before_capture": 2,
+      "decision_ply": 285,
+      "intruder": 1,
+      "intruder_public_rank": "8",
+      "flag": 3,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        68,
+        67
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              1,
+              2
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              1,
+              2
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 242,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 15,
+      "intruder": 48,
+      "intruder_public_rank": "4",
+      "flag": 37,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        28,
+        38
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              48,
+              38
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              48,
+              38
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 242,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 3,
+      "decision_ply": 13,
+      "intruder": 48,
+      "intruder_public_rank": "4",
+      "flag": 37,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        55,
+        65
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              48,
+              38
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 242,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 4,
+      "decision_ply": 11,
+      "intruder": 48,
+      "intruder_public_rank": "4",
+      "flag": 37,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        45,
+        55
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              48,
+              38
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              48,
+              38
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 242,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 5,
+      "decision_ply": 9,
+      "intruder": 48,
+      "intruder_public_rank": "4",
+      "flag": 37,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        41,
+        51
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              48,
+              38
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              48,
+              38
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 244,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 365,
+      "intruder": 25,
+      "intruder_public_rank": "2",
+      "flag": 5,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        16,
+        17
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              25,
+              15
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 245,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 214,
+      "intruder": 84,
+      "intruder_public_rank": "8",
+      "flag": 95,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        77,
+        67
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              85
+            ],
+            "guard_squares": [
+              86
+            ]
+          },
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          86
+        ]
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              84,
+              85
+            ],
+            "guard_squares": [
+              86
+            ]
+          },
+          {
+            "move": [
+              84,
+              94
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": [
+          86
+        ]
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 250,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 37,
+      "intruder": 40,
+      "intruder_public_rank": "4",
+      "flag": 20,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        31,
+        30
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 250,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 3,
+      "decision_ply": 35,
+      "intruder": 40,
+      "intruder_public_rank": "4",
+      "flag": 20,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        38,
+        39
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 250,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 4,
+      "decision_ply": 33,
+      "intruder": 40,
+      "intruder_public_rank": "4",
+      "flag": 20,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        37,
+        38
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 250,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 5,
+      "decision_ply": 31,
+      "intruder": 40,
+      "intruder_public_rank": "4",
+      "flag": 20,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        28,
+        38
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 250,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 6,
+      "decision_ply": 29,
+      "intruder": 40,
+      "intruder_public_rank": "4",
+      "flag": 20,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        10,
+        11
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              40,
+              30
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 251,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 48,
+      "intruder": 70,
+      "intruder_public_rank": "5",
+      "flag": 90,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        79,
+        69
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              70,
+              80
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              70,
+              80
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 253,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 122,
+      "intruder": 71,
+      "intruder_public_rank": "4",
+      "flag": 91,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        18,
+        17
+      ],
+      "recorded_move_is_quiet": false,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              71,
+              81
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 255,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 250,
+      "intruder": 81,
+      "intruder_public_rank": "2",
+      "flag": 90,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        85,
+        75
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              81,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              81,
+              91
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 196,
+      "intruder": 74,
+      "intruder_public_rank": "2",
+      "flag": 94,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        20,
+        10
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              74,
+              84
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              74,
+              84
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 260,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 51,
+      "intruder": 38,
+      "intruder_public_rank": "5",
+      "flag": 29,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        69,
+        79
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              38,
+              28
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              38,
+              39
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              38,
+              28
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              38,
+              39
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 261,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 154,
+      "intruder": 64,
+      "intruder_public_rank": "1",
+      "flag": 73,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        61,
+        51
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              74
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              64,
+              63
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              74
+            ],
+            "guard_squares": []
+          },
+          {
+            "move": [
+              64,
+              63
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 262,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 109,
+      "intruder": 45,
+      "intruder_public_rank": "4",
+      "flag": 36,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        34,
+        54
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              45,
+              35
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              45,
+              35
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 268,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 41,
+      "intruder": 54,
+      "intruder_public_rank": "4",
+      "flag": 34,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        29,
+        39
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              54,
+              44
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              54,
+              44
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 269,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 364,
+      "intruder": 64,
+      "intruder_public_rank": "2",
+      "flag": 62,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        75,
+        65
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              63
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              64,
+              63
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 273,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 30,
+      "intruder": 58,
+      "intruder_public_rank": "7",
+      "flag": 67,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        49,
+        39
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              58,
+              68
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": []
+    },
+    {
+      "game": 275,
+      "family": "broad-mixed",
+      "own_turns_before_capture": 2,
+      "decision_ply": 262,
+      "intruder": 78,
+      "intruder_public_rank": "6",
+      "flag": 98,
+      "manhattan_distance": 2,
+      "recorded_move": [
+        67,
+        68
+      ],
+      "recorded_move_is_quiet": true,
+      "before": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              78,
+              88
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "after_recorded_quiet_move": {
+        "immediate": false,
+        "approaches": [
+          {
+            "move": [
+              78,
+              88
+            ],
+            "guard_squares": []
+          }
+        ],
+        "covered": false,
+        "guards": []
+      },
+      "abandons_interception_coverage": false,
+      "quiet_defensive_deployments": [
+        {
+          "move": [
+            99,
+            89
+          ],
+          "guard_rank": "6",
+          "eliminates_approach": false,
+          "guard_squares": [
+            89
+          ],
+          "covers_every_disclosed_intruder": true
+        }
+      ]
+    }
+  ],
+  "analyzer_sha256": "c7f8530a00afdd85f8ddb3ada3524365cfceb408edc45d9d536c51fc7736438d",
+  "runtime_module_sha256": "d9eddff94c0957acd6e899671fefbed72f789ccff904fd6e8ac2fc9e3dc10fee",
+  "unique_games_with_covering_alternative": 16,
+  "unique_games_with_alternative_covering_all_disclosed_intruders": 16,
+  "scope": "At each of the last six defender decisions, label the eventual captor offline; local coverage uses only its disclosed rank and the masked public board.",
+  "source_observations": [
+    "ai.c flag_threats detects one-move attacks and applies a900-point defense difference; it does not represent an interceptor reserve against a two-enemy-move approach.",
+    "ai.c plan may pursue enemies within distance2of own Flag but does not prove future interception coverage.",
+    "ai_mission.c cooperatively approaches enemy Flag/Bomb objectives; its guard terminology concerns enemy fortification, not an own-Flag reserve role."
+  ],
+  "proposal": "A two-turn interception mission: identify every disclosed intruder that can reach a Flag attack in one advance, and retain/deploy a friendly piece that can remove it afterward. Rank-asymmetric interception is distinguished from simply occupying its route. Do not promise protection when no legal coverage-restoring action exists.",
+  "limits": [
+    "A local two-turn response against one disclosed intruder is not a full minimax proof against all enemy moves.",
+    "Covered interception may require a material sacrifice; it only establishes removal of the immediate local Flag attacker.",
+    "This retrospective cohort is mechanism development evidence, not fresh strength validation."
+  ]
+}

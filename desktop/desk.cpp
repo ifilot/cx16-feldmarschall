@@ -230,6 +230,9 @@ void Desk::openTournament(const QString &path) {
     auto participants = tournament->metadata["participants"].toArray();
     QStringList lines{QString("%1 · %2 · %3 / %4 games").arg(QFileInfo(path).fileName(), tournament->metadata["status"].toString())
             .arg(tournament->games.size()).arg(tournament->metadata["planned_games"].toInt())};
+    if (tournament->metadata["setup_mode"].toString() == "policy-owned")
+        lines.append(QString("Deployment comparison: %1 chooses its army; armies follow players across sides.")
+                     .arg(tournament->metadata["setup_owner"].toString()));
     QMap<QString, std::array<double, 2>> families; QMap<QString, int> endings; double totalPlies = 0;
     for (int n = 0; n < 2; ++n) {
         QString id = participants[n].toObject()["policy"].toObject()["id"].toString();

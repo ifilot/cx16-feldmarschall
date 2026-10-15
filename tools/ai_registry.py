@@ -48,6 +48,10 @@ def register(spec):
         raise ValueError(f'ID already exists: {identity}; create a new version')
     if spec.get('difficulty', 'normal') not in ('easy', 'normal', 'hard'):
         raise ValueError('Invalid difficulty')
+    if spec.get('driver') == 'native-beliefs':
+        required = {'AI_BELIEF_PRIORS', 'AI_DIAGNOSTICS', 'AI_MEMORY'}
+        if not required.issubset(spec.get('defines', [])):
+            raise ValueError('Native belief driver requires public-board, memory and prior protocol compile flags')
     files = set()
     for directory in ('src/core', 'src/native', 'tests/baselines'):
         files.update(p for p in (ROOT / directory).iterdir() if p.suffix in ('.c', '.h'))
@@ -121,6 +125,8 @@ def build_policy(identity, policy=None):
         command += ['-o', str(executable), *policy['sources']]
         subprocess.run(command, cwd=source, check=True)
         runtime = [executable.name]
+        if policy.get('driver') == 'native-beliefs':
+            runtime = build_native_beliefs(source, directory, executable, policy)
         if policy.get('driver') == 'teacher':
             observer = directory / 'observer'
             executable.replace(observer)
@@ -138,7 +144,10 @@ def build_policy(identity, policy=None):
             for flag, name in (('--world-sampling', 'campaign_sampling.py'),
                                ('--campaign-strategy', 'campaign_strategy.py'),
                                ('--paired-confidence', 'campaign_search.py'),
-                               ('--adaptive-depth', 'campaign_depth.py')):
+                               ('--adaptive-depth', 'campaign_depth.py'),
+                               ('--correction-anchor', 'campaign_anchor.py'),
+                               ('--belief-sweeps', 'campaign_swap_beliefs.py'),
+                               ('--root-capture-mode', 'campaign_belief_values.py')):
                 if flag in policy.get('driver_args', []):
                     (directory / name).write_bytes((source / 'tools' / name).read_bytes())
                     runtime.append(name)
@@ -146,6 +155,11 @@ def build_policy(identity, policy=None):
                 name = 'campaign_recurrence.py'
                 (directory / name).write_bytes((source / 'tools' / name).read_bytes())
                 runtime.append(name)
+                arguments=policy['driver_args']
+                if arguments[arguments.index('--campaign-strategy')+1]=='flag-interceptor':
+                    name='campaign_flag_guard.py'
+                    (directory/name).write_bytes((source/'tools'/name).read_bytes())
+                    runtime.append(name)
             if '--information-strategy' in policy.get('driver_args', []):
                 for name in ('info_common.py', 'info_lifetime.py', 'info_objectives.py', 'info_followthrough.py'):
                     (directory / name).write_bytes((source / 'tools' / name).read_bytes())
@@ -207,6 +221,33 @@ def build_policy(identity, policy=None):
                                                        '--version'], text=True).splitlines()[0])
     receipt.write_text(json.dumps(metadata, indent=2) + '\n')
     return executable, metadata
+
+
+def build_native_beliefs(source, directory, executable, policy):
+    """Portable public-posterior adapter around the native move policy."""
+    if 'AI_BELIEF_PRIORS' not in policy.get('defines', []):
+        raise ValueError('Native belief driver requires the opt-in prior API')
+    executable.replace(directory/'observer')
+    runtime = ['engine','observer']
+    for name in ('campaign_native_beliefs.py','campaign_belief_values.py',
+                 'campaign_joint_beliefs.py','calibrated_beliefs.py','feldmarschall.py'):
+        (directory/name).write_bytes((source/'tools'/name).read_bytes())
+        runtime.append(name)
+    model = policy['joint_belief_model']
+    if digest((source/model).read_bytes()) != policy['joint_belief_model_sha256']:
+        raise ValueError('Native belief model failed integrity check')
+    model_name = Path(model).name
+    (directory/model_name).write_bytes((source/model).read_bytes())
+    runtime.append(model_name)
+    arguments = '['+', '.join('str(p / '+repr(arg)+')' if arg==model_name else repr(arg)
+                             for arg in policy['driver_args'])+']'
+    executable.write_text('#!/usr/bin/env python3\nimport os, pathlib, sys\n'
+        'p = pathlib.Path(__file__).resolve().parent\n'
+        f'if sys.argv[1:] == ["--identity"]:\n    print({policy["id"]!r})\n    raise SystemExit\n'
+        'os.execv(sys.executable, [sys.executable, str(p / "campaign_native_beliefs.py"), '
+        '"--observer", str(p / "observer"), *'+arguments+', *sys.argv[1:]])\n')
+    executable.chmod(0o755)
+    return runtime
 
 
 def build_msdos1990(source, directory, executable, policy):

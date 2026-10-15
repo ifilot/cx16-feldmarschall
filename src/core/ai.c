@@ -67,6 +67,16 @@ static uint8_t targets[MAX_TARGETS];
 /* All private state lives with the code in bank 23 on the X16. Goals are
  * square-indexed, transferred after our chosen move, and validated next turn. */
 static uint8_t goals[2][SQUARES];
+#ifdef AI_TASK_ASSIGNMENT
+/* Per-decision scratch only. Persistent assignments use the ordinary goals.
+ * Keep the best existing primary pursuer; reallocate one redundant combat
+ * unit to a profitable, previously uncovered, disclosed mobile objective. */
+static int16_t task_utility[ARMY_SIZE][ARMY_SIZE], task_base_utility[ARMY_SIZE];
+static uint8_t task_column[SQUARES], task_target[ARMY_SIZE], task_source[ARMY_SIZE];
+static uint8_t task_goal[ARMY_SIZE], task_primary[ARMY_SIZE];
+static uint8_t task_count, task_targets, task_row, task_collecting;
+static uint8_t task_reassigned_from, task_reassigned_to;
+#endif
 #ifdef AI_DIAGNOSTICS
 static uint8_t diagnostic_goals[SQUARES];
 static void ai_diagnostic_prepare(uint8_t army) {
@@ -84,6 +94,28 @@ void ai_diagnostic_choice(uint8_t army, uint8_t from, uint8_t to) {
 static uint8_t distance[SQUARES], queue[SQUARES];
 static int16_t worth[PIECE_TYPES];
 static int16_t attack[PIECE_TYPES][2];
+#ifdef AI_BELIEF_PRIORS
+static uint16_t belief_flag[SQUARES], belief_bomb[SQUARES];
+/* Zero means disabled; otherwise owner|1 prevents another army from using it. */
+static uint8_t belief_owner;
+uint8_t ai_belief_priors_set(uint8_t army, const uint16_t* flag_q12, const uint16_t* bomb_q12) {
+    unsigned square;
+    if((army!=0 && army!=CELL_BLUE) || !flag_q12 || !bomb_q12) return 0;
+    for(square=0;square<SQUARES;square++)
+        if(flag_q12[square]>AI_BELIEF_ONE || bomb_q12[square]>AI_BELIEF_ONE ||
+           flag_q12[square]+bomb_q12[square]>AI_BELIEF_ONE) return 0;
+    memcpy(belief_flag,flag_q12,sizeof(belief_flag));
+    memcpy(belief_bomb,bomb_q12,sizeof(belief_bomb));
+    belief_owner=army|1;
+    return 1;
+}
+void ai_belief_priors_clear(void) {
+    memset(belief_flag,0,sizeof(belief_flag));
+    memset(belief_bomb,0,sizeof(belief_bomb));
+    belief_owner=0;
+}
+uint8_t ai_belief_priors_valid(void) { return belief_owner!=0; }
+#endif
 static int16_t combat_gain[PIECE_TYPES][PIECE_TYPES], source_danger;
 static uint8_t combat_result[PIECE_TYPES][PIECE_TYPES];
 static uint8_t flag_square, flag_danger;
@@ -477,6 +509,34 @@ static int16_t expected(uint8_t a, uint8_t moved) {
     return n ? sum / (int32_t)n : 0;
 }
 
+#ifdef AI_BELIEF_PRIORS
+/* Exact Q12 expected gain under per-square Flag/Bomb probabilities. The
+ * remaining mobile ranks are exchangeable; encounter likelihoods are not used.
+ * Preserve the rational mobile mean until the final signed integer division.
+ * All inputs are the mover's permitted view, public inventory and supplied
+ * posterior. The hidden type nibble at an undisclosed enemy is never read. */
+static int16_t expected_at(uint8_t a, uint8_t square) {
+    uint16_t flag,bomb,mobile;
+    uint8_t rank;
+    int32_t immobile, mobile_gain=0, numerator;
+    uint8_t cell=board[square];
+    if(game_rules || ai_difficulty!=AI_NORMAL || belief_owner!=(own|1) ||
+       !enemy(cell) || (cell&CELL_REVEALED)) return attack[a][!!(cell&CELL_MOVED)];
+    if(cell&CELL_MOVED) return attack[a][1];
+    flag=belief_flag[square];bomb=belief_bomb[square];
+    mobile=AI_BELIEF_ONE-flag-bomb;
+    immobile=(int32_t)flag*FLAG_VALUE+(int32_t)bomb*gain(a,PIECE_BOMB);
+    if(!hidden_mobile) {
+        /* A quantized immobile-only posterior must retain total mass one. */
+        if(mobile) return attack[a][0];
+        return immobile/(int32_t)AI_BELIEF_ONE;
+    }
+    for(rank=0;rank<PIECE_BOMB;rank++) mobile_gain+=(int32_t)hidden[rank]*gain(a,rank);
+    numerator=immobile*(int32_t)hidden_mobile+(int32_t)mobile*mobile_gain;
+    return numerator/((int32_t)AI_BELIEF_ONE*hidden_mobile);
+}
+#endif
+
 /**
  * @brief The worst loss a piece of type a risks on square sq
  */
@@ -577,7 +637,11 @@ static uint8_t plan(uint8_t from) {
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq];
         if(!enemy(cell) || distance[sq] == NOWHERE) continue;
+#ifdef AI_BELIEF_PRIORS
+        g = cell & CELL_REVEALED ? gain(a, PIECE_TYPE(cell)) : expected_at(a,sq);
+#else
         g = cell & CELL_REVEALED ? gain(a, PIECE_TYPE(cell)) : attack[a][!!(cell & CELL_MOVED)];
+#endif
         utility = 24 + g / 4;
         if(!(cell & CELL_REVEALED) && a >= PIECE_SERGEANT) utility += 12;
 #ifdef AI_LINKED_SCOUTING
@@ -592,9 +656,23 @@ static uint8_t plan(uint8_t from) {
            (!(cell & CELL_REVEALED) || PIECE_TYPE(cell) < PIECE_BOMB)) utility += 40;
         utility -= (int16_t)distance[sq] * 3;
         if(sq == previous) utility += 8;
+#ifdef AI_TASK_ASSIGNMENT
+        if(task_collecting && task_column[sq] != NOWHERE)
+            task_utility[task_row][task_column[sq]] = utility;
+#endif
         if(utility > best_score) { best_score = utility; best = sq; }
     }
     goals[own ? 1 : 0][from] = best;
+#ifdef AI_TASK_ASSIGNMENT
+    if(task_collecting) {
+        task_base_utility[task_row] = best_score;
+        task_goal[task_row] = best;
+#ifdef AI_TRACE
+        ai_trace_plan(from,best,previous,best == NOWHERE ? NOWHERE : distance[best],best_score);
+#endif
+        return best; /* scoring pass will route to the final assigned goal */
+    }
+#endif
     if(best != NOWHERE) route(best, from);
     else memset(distance, NOWHERE, sizeof(distance));
 #ifdef AI_TRACE
@@ -602,6 +680,57 @@ static uint8_t plan(uint8_t from) {
 #endif
     return best;
 }
+
+#ifdef AI_TASK_ASSIGNMENT
+static void task_assignment_prepare(void) {
+    uint8_t sq,cell,n,options[MAX_TARGETS],row,col,old,primary,best_row=NOWHERE,best_col=NOWHERE;
+    int16_t best_extra=0;
+    task_count=task_targets=0; task_reassigned_from=task_reassigned_to=NOWHERE;
+    memset(task_column,NOWHERE,sizeof(task_column));
+    memset(task_primary,NOWHERE,sizeof(task_primary));
+    memset(task_utility,0,sizeof(task_utility));
+    /* Concealed enemy low nibbles have no authority in eligibility. */
+    for(sq=0;sq<SQUARES;sq++) if(enemy(board[sq]) && (board[sq]&CELL_REVEALED) &&
+            PIECE_TYPE(board[sq]) < PIECE_BOMB) {
+        task_column[sq]=task_targets; task_target[task_targets++]=sq;
+    }
+    task_collecting=1;
+    for(sq=0;sq<SQUARES;sq++) {
+        cell=board[sq];
+        if(!IS_PIECE(cell) || (cell&CELL_BLUE)!=own) continue;
+        n=rules_targets(sq,options);
+        if(!n) continue;
+        task_row=task_count; task_source[task_count++]=sq;
+        plan(sq);
+    }
+    task_collecting=0;
+    /* Lock the existing highest-utility primary for every served task, with
+     * original square scan order breaking ties. Unmatched goals stay intact. */
+    for(row=0;row<task_count;row++) {
+        old=task_goal[row];
+        if(old == NOWHERE || task_column[old] == NOWHERE) continue;
+        col=task_column[old]; primary=task_primary[col];
+        if(primary == NOWHERE || task_base_utility[row] > task_base_utility[primary])
+            task_primary[col]=row;
+    }
+    for(row=0;row<task_count;row++) {
+        old=task_goal[row]; sq=task_source[row];
+        if(old == NOWHERE || task_column[old] == NOWHERE || task_base_utility[row] <= 0 ||
+           task_primary[task_column[old]] == row ||
+           PIECE_TYPE(board[sq]) == PIECE_MINER || PIECE_TYPE(board[sq]) == PIECE_SPY) continue;
+        for(col=0;col<task_targets;col++) {
+            if(task_primary[col] != NOWHERE || task_utility[row][col] <= best_extra ||
+               combat_result[PIECE_TYPE(board[sq])][PIECE_TYPE(board[task_target[col]])] != BATTLE_ATTACKER)
+                continue;
+            best_extra=task_utility[row][col]; best_row=row; best_col=col;
+        }
+    }
+    if(best_row != NOWHERE) {
+        task_reassigned_from=task_source[best_row]; task_reassigned_to=task_target[best_col];
+        goals[own ? 1 : 0][task_reassigned_from]=task_reassigned_to;
+    }
+}
+#endif
 
 static int16_t score(uint8_t from, uint8_t to) {
     uint8_t target = board[to], a = PIECE_TYPE(board[from]);
@@ -673,7 +802,11 @@ static int16_t score(uint8_t from, uint8_t to) {
         if(ai_difficulty == AI_NORMAL && distance[from] == NOWHERE)
             s -= 12 + (quiet_turns[own ? 1 : 0] >> 2);
     } else {
+#ifdef AI_BELIEF_PRIORS
+        s = target & CELL_REVEALED ? gain(a, PIECE_TYPE(target)) : expected_at(a,to);
+#else
         s = target & CELL_REVEALED ? gain(a, PIECE_TYPE(target)) : attack[a][!!(target & CELL_MOVED)];
+#endif
         s -= new_danger / 2;
         /* Cheap probes purchase useful rank information. */
         if(!(target & CELL_REVEALED) && a >= PIECE_SERGEANT && a < PIECE_BOMB) s += 10;
@@ -816,6 +949,12 @@ static void retain(uint8_t from, uint8_t to, int16_t score) {
 }
 
 void ai_reset(void) {
+#ifdef AI_TASK_ASSIGNMENT
+    task_collecting=0; task_reassigned_from=task_reassigned_to=NOWHERE;
+#endif
+#ifdef AI_BELIEF_PRIORS
+    ai_belief_priors_clear();
+#endif
 #if defined(AI_MEMORY) && !defined(AI_MISSIONS)
     ai_memory_reset();
 #endif
@@ -872,6 +1011,9 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
             counter_gain[a][moved] = count ? sum / (int32_t)count : 0;
         }
     }
+#ifdef AI_TASK_ASSIGNMENT
+    if(!game_rules && ai_difficulty == AI_NORMAL) task_assignment_prepare();
+#endif
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq];
         if(!IS_PIECE(cell) || (cell & CELL_BLUE) != own) continue;
@@ -881,7 +1023,14 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
             if(ai_difficulty == AI_EASY) {
                 memset(distance, NOWHERE, sizeof(distance));
                 goals[own ? 1 : 0][sq] = NOWHERE;
-            } else plan(sq);
+            }
+#ifdef AI_TASK_ASSIGNMENT
+            else if(!game_rules && ai_difficulty == AI_NORMAL) {
+                if(goals[own ? 1 : 0][sq] != NOWHERE) route(goals[own ? 1 : 0][sq],sq);
+                else memset(distance,NOWHERE,sizeof(distance));
+            }
+#endif
+            else plan(sq);
         }
         for(i=0; i<n; i++) {
             s = score(sq, targets[i]);
@@ -952,7 +1101,11 @@ uint8_t ai_test_quiet(uint8_t army) {
  * persistent goals and histories. This code is absent from game builds. */
 void ai_test_save(uint8_t* out) {
 #ifdef AI_MEMORY
+#ifdef AI_BELIEF_PRIORS
+    ai_memory_save(out + AI_TEST_PRIOR_OFFSET - AI_MEMORY_STATE_SIZE);
+#else
     ai_memory_save(out + AI_TEST_STATE_SIZE - AI_MEMORY_STATE_SIZE);
+#endif
 #endif
     memcpy(out, goals, sizeof(goals));
     memcpy(out + sizeof(goals), last_from, sizeof(last_from));
@@ -962,10 +1115,19 @@ void ai_test_save(uint8_t* out) {
 #ifdef AI_MISSIONS
     ai_mission_save(out + 208);
 #endif
+#ifdef AI_BELIEF_PRIORS
+    out[AI_TEST_PRIOR_OFFSET]=belief_owner;
+    memcpy(out+AI_TEST_PRIOR_OFFSET+1,belief_flag,sizeof(belief_flag));
+    memcpy(out+AI_TEST_PRIOR_OFFSET+1+sizeof(belief_flag),belief_bomb,sizeof(belief_bomb));
+#endif
 }
 void ai_test_load(const uint8_t* in) {
 #ifdef AI_MEMORY
+#ifdef AI_BELIEF_PRIORS
+    ai_memory_load(in + AI_TEST_PRIOR_OFFSET - AI_MEMORY_STATE_SIZE);
+#else
     ai_memory_load(in + AI_TEST_STATE_SIZE - AI_MEMORY_STATE_SIZE);
+#endif
 #endif
     memcpy(goals, in, sizeof(goals));
     memcpy(last_from, in + sizeof(goals), sizeof(last_from));
@@ -974,6 +1136,11 @@ void ai_test_load(const uint8_t* in) {
     memcpy(previous_count, in + 206, sizeof(previous_count));
 #ifdef AI_MISSIONS
     ai_mission_load(in + 208);
+#endif
+#ifdef AI_BELIEF_PRIORS
+    belief_owner=in[AI_TEST_PRIOR_OFFSET];
+    memcpy(belief_flag,in+AI_TEST_PRIOR_OFFSET+1,sizeof(belief_flag));
+    memcpy(belief_bomb,in+AI_TEST_PRIOR_OFFSET+1+sizeof(belief_flag),sizeof(belief_bomb));
 #endif
 }
 #endif

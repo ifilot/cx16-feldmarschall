@@ -1,0 +1,272 @@
+{
+  "cycle": 6,
+  "baseline": "teacher-context-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "teacher-context-v1-normal",
+    "teacher-capable-routes-v1-normal",
+    "teacher-informed-opponent-v1-normal",
+    "teacher-parent-anchor-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "teacher-capable-routes-v1-normal",
+      "name": "teacher-capable-routes-v1-normal",
+      "description": "Evaluate Flag routes an actual attacker can survive, instead of ignoring enemy mobile defenders.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT",
+        "AI_ROLLOUT_CAPABLE_ROUTES"
+      ],
+      "driver_args": [
+        "--samples",
+        "8",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context"
+      ],
+      "model": "Isolated honest Context Teacher experiment: teacher-capable-routes-v1-normal",
+      "information_model": "Own setup and public events only. No enemy setup or diagnostic rank disclosure."
+    },
+    {
+      "id": "teacher-informed-opponent-v1-normal",
+      "name": "teacher-informed-opponent-v1-normal",
+      "description": "Honestly model DOS knowledge: simulated opponent knows our Flag and Spy; root learns no enemy identity.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT",
+        "AI_ROLLOUT_INFORMED_OPPONENT"
+      ],
+      "driver_args": [
+        "--samples",
+        "8",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context"
+      ],
+      "model": "Isolated honest Context Teacher experiment: teacher-informed-opponent-v1-normal",
+      "information_model": "Own setup and public events only. No enemy setup or diagnostic rank disclosure.",
+      "opponent_model": "Opponent knows root-owned Flag and Spy; root masking unchanged."
+    },
+    {
+      "id": "teacher-parent-anchor-v1-normal",
+      "name": "teacher-parent-anchor-v1-normal",
+      "description": "Anchor clipped continuation corrections to the legal native fallback rather than an imaginary pass; no coefficient change.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT"
+      ],
+      "driver_args": [
+        "--samples",
+        "8",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context",
+        "--correction-anchor",
+        "parent"
+      ],
+      "model": "Isolated honest Context Teacher experiment: teacher-parent-anchor-v1-normal",
+      "information_model": "Own setup and public events only. No enemy setup or diagnostic rank disclosure."
+    }
+  ],
+  "seed": 2140001,
+  "rounds": 30,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "hypotheses": [
+    "Evaluate Flag routes an actual attacker can survive, instead of ignoring enemy mobile defenders.",
+    "Honestly model DOS knowledge: simulated opponent knows our Flag and Spy; root learns no enemy identity.",
+    "Anchor clipped continuation corrections to the legal native fallback rather than an imaginary pass; no coefficient change."
+  ],
+  "contrasts": [
+    [
+      "teacher-capable-routes-v1-normal",
+      "teacher-context-v1-normal"
+    ],
+    [
+      "teacher-informed-opponent-v1-normal",
+      "teacher-context-v1-normal"
+    ],
+    [
+      "teacher-parent-anchor-v1-normal",
+      "teacher-context-v1-normal"
+    ]
+  ],
+  "analysis": "Three distinct prespecified exploratory mechanisms. Fresh matched side-swapped Classic games. No root sampling budget increase; changed value estimates, opponent information assumptions or clipping anchor. Report all variants and intervals. No promotion without independent validation.",
+  "evidence": "research/horizon: capable-routes, informed-opponent-view-audit and parent-centering-mechanism."
+}

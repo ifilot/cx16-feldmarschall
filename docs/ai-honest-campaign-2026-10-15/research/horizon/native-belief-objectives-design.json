@@ -1,0 +1,35 @@
+{
+  "status": "Design and fixture verified; core edits held until deployment snapshots are frozen.",
+  "api": {
+    "set": "uint8_t ai_belief_priors_set(uint8_t army,const uint16_t* flag_q12,const uint16_t* bomb_q12)",
+    "clear": "void ai_belief_priors_clear(void)",
+    "valid": "uint8_t ai_belief_priors_valid(void)",
+    "owner": "army is core0/CELL_BLUE. One serialized byte encodes invalid0, Red1 or Blue17, preventing cross-army reuse.",
+    "validation": "Each Q12 probability<=4096, Flag+Bomb<=4096 per square, reject null arrays/invalid army without altering an existing valid prior."
+  },
+  "state": {
+    "memory_bytes": 401,
+    "serialization": "Append priors after old complete AI_TEST_STATE_SIZE; preserve the old AI_MEMORY snapshot offset explicitly under the new guard to avoid overlap. Reset clears valid; save/load restores arrays and validity/owner exactly."
+  },
+  "evaluation": {
+    "active": "Only Classic Normal, matching prior owner, and concealed enemy targets. Known ranks and forced wins retain existing behavior.",
+    "formula": "[H*(qFlag*2000+qBomb*gain(a,Bomb)) + qMobile*sum_r<10 hidden[r]*gain(a,r)] / (4096*H), with signed C truncation; immobile-only H0 uses the direct Flag/Bomb term.",
+    "nonlinear_integration": "Use posterior expected gain inside BOTH plan target utility/threshold and score capture term. This naturally updates goal routing and the existing conditional near-Flag bonus; danger, mission and student terms are still unchanged.",
+    "default": "All storage/API/call changes compiled strictly under AI_BELIEF_PRIORS; require default native byte parity against frozen source."
+  },
+  "quiet_routing_fixture": {
+    "pieces": {
+      "84": "own Marshal",
+      "74": "own Bomb",
+      "99": "own Flag",
+      "30": "concealed enemy",
+      "39": "concealed enemy",
+      "20": "revealed enemy Scout"
+    },
+    "public_unknown_inventory": "One Flag and one Bomb; enemy has known mobile Scout too.",
+    "verified_original": "Frozen Context native observer chooses quiet84->83 with closest goal30.",
+    "posterior_treatment": "Flag probability1 at39, Bomb probability1 at30. Goal39 routes quiet84->85; no ranks markedREVEALED or private enemy identities supplied."
+  },
+  "rationale": "Belief-space expected reward (Kaelbling/Littman/Cassandra1998 section3.4) should influence persistent native objectives, not only root captures.",
+  "reference": "https://people.csail.mit.edu/lpk/papers/aij98-pomdp.pdf"
+}

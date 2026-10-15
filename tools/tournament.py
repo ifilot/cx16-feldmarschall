@@ -17,7 +17,7 @@ import uuid
 
 from ai_registry import ROOT, build_policy, catalog, digest, receives_opponent_setup
 from arena import deployments
-from feldmarschall import new_rng
+from feldmarschall import new_rng, valid_setup
 from tournament_store import Tournament, verify
 
 FAMILIES = ('fortified', 'uniform', 'unguarded', 'forward', 'decoy', 'presets', 'broad-mixed')
@@ -73,10 +73,25 @@ def load_referee(directory):
     return importlib.import_module(name + '.arena').play
 
 
+def policy_setup(arguments, difficulty, seed):
+    """Ask one frozen policy for its own army without any enemy information."""
+    protocol = ['feldmarschall','new red','rules 0','difficulty '+difficulty,
+                'seed '+str(seed),'setup','quit']
+    result = subprocess.run(arguments, input='\n'.join(protocol)+'\n', capture_output=True,
+                            text=True, check=True, timeout=15)
+    lines = result.stdout.splitlines()
+    setups = [line.removeprefix('setup ').strip() for line in lines if line.startswith('setup ')]
+    if len(setups)!=1 or not valid_setup(setups[0]) or any(line.startswith('error') for line in lines):
+        raise ValueError('Policy returned an invalid Classic deployment')
+    return setups[0], dict(protocol=protocol, stdout=result.stdout, stderr=result.stderr)
+
+
 def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_plies=1000,
-        backend='python', worker=DEFAULT_WORKER, reuse_processes=None):
+        backend='python', worker=DEFAULT_WORKER, reuse_processes=None, setup_mode='referee'):
     if first == second:
         raise ValueError('Choose two different AI versions')
+    if setup_mode not in ('referee','policy-owned'):
+        raise ValueError('Unknown setup mode')
     if rounds < 1 or jobs < 1 or max_plies < 1 or not families or any(f not in FAMILIES for f in families):
         raise ValueError('Positive rounds, workers and ply limit, and known layout families required')
     if Path(out).exists():
@@ -94,6 +109,8 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
             raise ValueError('Native worker build integrity mismatch; rebuild the desktop targets')
     built = [build_policy(identity) for identity in (first, second)]
     participants = [receipt for _, receipt in built]
+    if setup_mode=='policy-owned' and receives_opponent_setup(participants[0]['policy']):
+        raise ValueError('Policy-owned deployment requires an honest first participant')
     if reuse_processes is None:
         reuse_processes = backend == 'openmp' and any(p['policy'].get('driver') == 'msdos1990' for p in participants)
     if backend != 'openmp' and reuse_processes:
@@ -102,7 +119,10 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
                 seed=seed, rounds=rounds, families=list(families), max_plies=max_plies,
                 planned_games=2 * rounds * len(families),
                 backend=backend, requested_workers=jobs, reuse_engine_processes=reuse_processes,
-                comparison='move policies with common referee-generated deployments; swapped sides',
+                setup_mode=setup_mode,
+                comparison=('move policies with common referee-generated deployments; swapped sides'
+                            if setup_mode=='referee' else
+                            'first policy chooses its own army; second uses referee army; armies follow participants across sides'),
                 score='win=1, draw=0.5, loss=0; paired games share deployments and seed')
     with Tournament(out, create=True, metadata=plan) as tournament, tempfile.TemporaryDirectory(prefix='fmtour-') as temp:
         working = Path(temp)
@@ -140,17 +160,39 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
                                          worker_build=worker_receipt))
         else:
             play_game = load_referee(referee)
-        queue, descriptions = [], []
+        queue, descriptions, setup_records = [], [], []
         rng = new_rng(seed)
         for family in families:
             for _ in range(rounds):
                 setups = (deployments(family, rng), deployments(family, rng))
                 move_seed = rng.randrange(1, 60000)
                 pair_id = len(descriptions) // 2 + 1
+                if setup_mode=='policy-owned':
+                    setup_seed=(move_seed*109+0x5e7a)%65535+1
+                    try:
+                        owner_setup, transcript=policy_setup(argv_commands[first],participants[0]['policy']['difficulty'],setup_seed)
+                    except BaseException as error:
+                        tournament.set_metadata(dict(status='failed',error='Policy setup selection: '+str(error)))
+                        raise
+                    setup_records.append(dict(pair_id=pair_id,family=family,move_seed=move_seed,
+                                              setup_seed=setup_seed,owner_setup=owner_setup,
+                                              opponent_setup=setups[1],**transcript))
                 for names in ((first, second), (second, first)):
+                    game_setups=(setups if setup_mode=='referee' else
+                                 (owner_setup,setups[1]) if names[0]==first else (setups[1],owner_setup))
                     recording = dict(record_moves=True,original_dos_setup=[original_dos[n] for n in names]) if any(original_dos.values()) else True
-                    queue.append((names, tuple(commands[n] for n in names), setups, move_seed, max_plies, recording))
-                    descriptions.append((pair_id, family, setups))
+                    queue.append((names, tuple(commands[n] for n in names), game_setups, move_seed, max_plies, recording))
+                    descriptions.append((pair_id, family, game_setups))
+        if setup_mode=='policy-owned':
+            artifact='setup/policy-owned-v1.json'
+            data=json.dumps(dict(schema='classic-policy-owned-setups-v1',owner=first,
+                                 opponent=second,records=setup_records),indent=2).encode()
+            sha=tournament.artifact(artifact,data)
+            tournament.set_metadata(dict(setup_owner=first,setup_records_artifact=artifact,
+                                         setup_records_sha256=sha))
+            setup_sources={name:tournament.artifact('setup/'+name,(ROOT/'tools'/name).read_bytes())
+                           for name in ('tournament.py','arena.py','feldmarschall.py')}
+            tournament.set_metadata(dict(setup_source_sha256=setup_sources))
         execution_started = time.perf_counter()
         try:
             if backend == 'openmp':
@@ -199,6 +241,8 @@ def main():
     play.add_argument('--worker', type=Path, default=DEFAULT_WORKER, help='compiled OpenMP worker executable')
     play.add_argument('--families', nargs='+', choices=FAMILIES, default=FAMILIES)
     play.add_argument('--max-plies', type=int, default=1000)
+    play.add_argument('--setup-mode', choices=('referee','policy-owned'), default='referee',
+                      help='compare moves on fixed armies, or let the first policy choose its army')
     actions.add_parser('show').add_argument('path', type=Path)
     actions.add_parser('verify').add_argument('path', type=Path)
     args = parser.parse_args()
@@ -208,7 +252,8 @@ def main():
                 print(f'{policy["id"]:38s} {policy["name"]} [{policy["status"]}]')
         elif args.action == 'run':
             print(json.dumps(run(args.first, args.second, args.out, args.rounds, args.seed,
-                                 args.jobs, args.families, args.max_plies, args.backend, args.worker), indent=2))
+                                 args.jobs, args.families, args.max_plies, args.backend, args.worker,
+                                 setup_mode=args.setup_mode), indent=2))
         elif args.action == 'verify':
             print(json.dumps(verify(args.path), indent=2))
         else:

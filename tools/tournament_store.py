@@ -168,10 +168,12 @@ def verify(path):
         if metadata['rules'] != 'classic':
             raise ValueError('Only Classic is supported')
         artifacts = set()
+        artifact_rows = {}
         for row in tournament.db.execute('SELECT * FROM artifacts'):
             if hashlib.sha256(zlib.decompress(row['data'])).hexdigest() != row['sha256']:
                 raise ValueError('Artifact hash mismatch')
             artifacts.add(row['sha256'])
+            artifact_rows[row['sha256']] = row
         identities = set()
         for participant in metadata['participants']:
             identities.add(participant['policy']['id'])
@@ -183,6 +185,61 @@ def verify(path):
         for key in ('worker_sha256', 'worker_source_sha256'):
             if key in metadata and metadata[key] not in artifacts:
                 raise ValueError('Missing native worker executable or source archive')
+        setup_mode = metadata.get('setup_mode', 'referee')
+        if setup_mode not in ('referee', 'policy-owned'):
+            raise ValueError('Unknown tournament setup mode')
+        setup_records = {}
+        setup_owner = None
+        if setup_mode == 'policy-owned':
+            setup_owner = metadata.get('setup_owner')
+            if (setup_owner not in identities or len(identities) != 2 or
+                    setup_owner != metadata['participants'][0]['policy']['id']):
+                raise ValueError('Invalid policy-owned setup owner')
+            artifact_sha = metadata.get('setup_records_sha256')
+            artifact_name = metadata.get('setup_records_artifact')
+            if artifact_sha not in artifact_rows or artifact_name != 'setup/policy-owned-v1.json':
+                raise ValueError('Missing policy-owned setup artifact')
+            artifact = artifact_rows[artifact_sha]
+            if artifact['name'] != artifact_name:
+                raise ValueError('Policy-owned setup artifact name mismatch')
+            try:
+                setup_document = json.loads(zlib.decompress(artifact['data']))
+            except (ValueError, TypeError) as error:
+                raise ValueError('Invalid policy-owned setup artifact') from error
+            if (not isinstance(setup_document, dict) or
+                    setup_document.get('schema') != 'classic-policy-owned-setups-v1' or
+                    setup_document.get('owner') != setup_owner or
+                    setup_document.get('opponent') not in identities - {setup_owner} or
+                    not isinstance(setup_document.get('records'), list)):
+                raise ValueError('Invalid policy-owned setup artifact ownership or schema')
+            for record in setup_document['records']:
+                if (not isinstance(record, dict) or
+                        any(type(record.get(key)) is not int or record[key] < 1
+                            for key in ('pair_id', 'move_seed', 'setup_seed')) or
+                        record.get('family') not in metadata['families'] or
+                        not isinstance(record.get('owner_setup'), str) or not valid_setup(record['owner_setup']) or
+                        not isinstance(record.get('opponent_setup'), str) or not valid_setup(record['opponent_setup'])):
+                    raise ValueError('Invalid policy-owned setup record')
+                if record['pair_id'] in setup_records:
+                    raise ValueError('Duplicate policy-owned setup pair')
+                if record['setup_seed'] != ((record['move_seed'] * 109 + 0x5e7a) % 65535) + 1:
+                    raise ValueError('Policy-owned setup seed does not match move seed')
+                if 'protocol' in record:
+                    expected_protocol = ['feldmarschall', 'new red', 'rules 0',
+                        'difficulty ' + metadata['participants'][0]['policy']['difficulty'],
+                        'seed ' + str(record['setup_seed']), 'setup', 'quit']
+                    if record['protocol'] != expected_protocol:
+                        raise ValueError('Invalid policy-owned setup selection protocol')
+                if 'stdout' in record:
+                    if not isinstance(record['stdout'], str):
+                        raise ValueError('Invalid policy-owned setup transcript')
+                    responses = [line[6:].strip() for line in record['stdout'].splitlines()
+                                 if line.startswith('setup ')]
+                    if responses != [record['owner_setup']]:
+                        raise ValueError('Policy-owned setup transcript response mismatch')
+                setup_records[record['pair_id']] = record
+            if metadata['status'] == 'complete' and len(setup_records) * 2 != metadata['planned_games']:
+                raise ValueError('Incomplete policy-owned setup records')
         pairs = {}
         for row in tournament.games():
             game = tournament.game(row['id'])
@@ -191,6 +248,14 @@ def verify(path):
                 raise ValueError('Unknown game participant')
             if game['plies'] > metadata['max_plies'] or (game['reason'] == 'ply limit' and game['plies'] != metadata['max_plies']):
                 raise ValueError('Incorrect move limit')
+            if setup_mode == 'policy-owned':
+                record = setup_records.get(game['pair_id'])
+                if record is None or game['family'] != record['family'] or game['seed'] != record['move_seed']:
+                    raise ValueError('Game does not match policy-owned setup record')
+                owned = game['red_setup'] if game['red'] == setup_owner else game['blue_setup']
+                opponent = game['blue_setup'] if game['red'] == setup_owner else game['red_setup']
+                if owned != record['owner_setup'] or opponent != record['opponent_setup']:
+                    raise ValueError('Game army does not match policy-owned setup artifact')
             pairs.setdefault(game['pair_id'], []).append(game)
         for pair in pairs.values():
             if len(pair) != 2:
@@ -199,7 +264,10 @@ def verify(path):
                 continue
             a, b = pair
             if (a['red'] != b['blue'] or a['blue'] != b['red'] or
-                    any(a[key] != b[key] for key in ('family', 'seed', 'red_setup', 'blue_setup'))):
+                    any(a[key] != b[key] for key in ('family', 'seed')) or
+                    (setup_mode == 'referee' and any(a[key] != b[key] for key in ('red_setup', 'blue_setup'))) or
+                    (setup_mode == 'policy-owned' and
+                     (a['red_setup'] != b['blue_setup'] or a['blue_setup'] != b['red_setup']))):
                 raise ValueError('Mismatched paired round')
         if metadata['status'] == 'complete' and len(tournament.games()) != metadata['planned_games']:
             raise ValueError('Incomplete tournament')

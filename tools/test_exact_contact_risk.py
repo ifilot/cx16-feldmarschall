@@ -11,6 +11,7 @@ import random
 import shlex
 import subprocess
 import tempfile
+import unittest
 
 from ai_registry import ROOT, build_policy, get_policy
 from feldmarschall import battle
@@ -159,6 +160,15 @@ def run():
                              'Root inventory stays frozen during speculative occupancy changes; this does not condition assignments on hypothetical survival.',
                              'Enemy attack feasibility ignores opponent two-squares restrictions, as the original danger routine does.',
                              'Formula is exact under stated prior. Native evaluation uses Q22 arithmetic and rounds material scores, with quantified finite precision.'])
+
+
+class ContactRiskAudit(unittest.TestCase):
+    def test_native_risk_matches_independent_exhaustive_worlds(self):
+        evidence = run()
+        self.assertTrue(evidence['passed'])
+        self.assertGreater(evidence['cases'], 19000)
+        self.assertTrue(evidence['rational_formula_matches_every_enumeration'])
+        self.assertTrue(evidence['default_byte_identical'])
 
 
 if __name__ == '__main__':

@@ -14,8 +14,21 @@ from train_ai_student import sample_world
 
 
 class TeacherBot:
-    def __init__(self, observer, teacher, samples=8, depth=3, blend='raw', strategic=False, context=False, replies=None, diagnostic_truth=False, diagnostic_knowledge='all', information_strategy=None, belief_model=None, root_policy=None, world_sampling=None, campaign_strategy=None, paired_confidence=False, adaptive_depth=False, joint_belief_model=None):
-        if world_sampling not in (None, 'latin', 'uniform') or campaign_strategy not in (None, 'activation', 'recurrence'):
+    def __init__(self, observer, teacher, samples=8, depth=3, blend='raw', strategic=False, context=False, replies=None, diagnostic_truth=False, diagnostic_knowledge='all', information_strategy=None, belief_model=None, root_policy=None, world_sampling=None, campaign_strategy=None, paired_confidence=False, adaptive_depth=False, joint_belief_model=None, correction_anchor=None, belief_sweeps=None, root_capture_mode=None):
+        if belief_sweeps is not None and (not belief_model or blend != 'correction' or diagnostic_truth or information_strategy or root_policy or world_sampling or campaign_strategy or paired_confidence or adaptive_depth or joint_belief_model or correction_anchor):
+            raise ValueError('isolate honest rank-swap beliefs with a frozen belief model')
+        self.belief_sweeps = belief_sweeps
+        if root_capture_mode not in (None, 'counts', 'joint'):
+            raise ValueError('unknown root capture belief mode')
+        if root_capture_mode and (not joint_belief_model or blend != 'correction' or diagnostic_truth or information_strategy or root_policy or world_sampling or campaign_strategy or paired_confidence or adaptive_depth or correction_anchor or belief_sweeps is not None):
+            raise ValueError('isolate honest root capture beliefs with a frozen joint model')
+        self.root_capture_mode = root_capture_mode
+        if correction_anchor not in (None, 'parent'):
+            raise ValueError('unknown correction anchor')
+        if correction_anchor and (diagnostic_truth or information_strategy or root_policy or world_sampling or campaign_strategy or paired_confidence or belief_model or adaptive_depth or joint_belief_model or blend != 'correction'):
+            raise ValueError('isolate honest legal-parent correction anchor')
+        self.correction_anchor = correction_anchor
+        if world_sampling not in (None, 'latin', 'uniform') or campaign_strategy not in (None, 'activation', 'recurrence', 'flag-interceptor'):
             raise ValueError('unknown campaign experiment')
         if (world_sampling or campaign_strategy or paired_confidence) and (diagnostic_truth or information_strategy or root_policy):
             raise ValueError('campaign experiments require isolated honest teacher')
@@ -39,6 +52,8 @@ class TeacherBot:
         elif campaign_strategy == 'recurrence':
             from campaign_recurrence import RecurrenceEscape
             self.campaign_module = RecurrenceEscape()
+        elif campaign_strategy == 'flag-interceptor':
+            self.campaign_module = importlib.import_module('campaign_flag_guard')
         self.paired_confidence = paired_confidence
         if information_strategy not in (None, 'lifetime', 'objectives', 'followthrough'):
             raise ValueError('unknown information strategy')
@@ -61,6 +76,9 @@ class TeacherBot:
         self.world_sampler = self.belief_model
         if self.joint_model:
             self.world_sampler = self.joint_model
+        if belief_sweeps is not None:
+            from campaign_swap_beliefs import SwapBeliefs
+            self.world_sampler = SwapBeliefs(self.belief_model, sweeps=belief_sweeps)
         if world_sampling:
             from campaign_sampling import StratifiedSampler, UniformSampler
             if world_sampling == 'uniform' and self.belief_model:
@@ -182,6 +200,16 @@ class TeacherBot:
             corrections[move] = correction
             means[move] = (future, immediate, reference)
             choices[move] = future + scores[move] * .01 if self.blend == 'raw' else scores[move] + correction
+        anchor_report = None
+        if self.correction_anchor:
+            from campaign_anchor import choices as anchored_choices
+            choices, corrections, anchor_report = anchored_choices(scores, credit, totals, weights, parent)
+        capture_report = None
+        if self.root_capture_mode:
+            from campaign_belief_values import adjustments as capture_adjustments
+            changes, capture_report = capture_adjustments(cells[:],army,list(bytes.fromhex(lost_hex)),
+                                                          histories,dict(scores),self.joint_model,self.root_capture_mode)
+            for move, value in changes.items(): choices[move] += value
         information_adjustments = {}
         if self.information_module:
             # Modules receive only the same public root view as the masked
@@ -193,8 +221,13 @@ class TeacherBot:
                 raise ValueError('invalid information-strategy adjustment')
             for move, value in information_adjustments.items(): choices[move] += value
         campaign_adjustments = {}
+        campaign_diagnostics = None
         if self.campaign_strategy:
-            campaign_adjustments = self.campaign_module.adjustments(cells[:], army, list(bytes.fromhex(lost_hex)), histories, dict(choices))
+            if self.campaign_strategy=='flag-interceptor':
+                campaign_adjustments, campaign_diagnostics = self.campaign_module.evaluate(
+                    cells[:],army,list(bytes.fromhex(lost_hex)),histories,dict(choices),shuttle)
+            else:
+                campaign_adjustments = self.campaign_module.adjustments(cells[:], army, list(bytes.fromhex(lost_hex)), histories, dict(choices))
             if any(move not in choices or not math.isfinite(value) for move, value in campaign_adjustments.items()):
                 raise ValueError('invalid campaign adjustment')
             for move, value in campaign_adjustments.items():
@@ -228,10 +261,18 @@ class TeacherBot:
             self.last_report['paired_selection'] = selection
         if self.adaptive_depth:
             self.last_report['adaptive_depth'] = search_depth
+        if self.correction_anchor:
+            self.last_report['correction_anchor'] = anchor_report
+        if self.belief_sweeps is not None:
+            self.last_report['swap_beliefs'] = self.world_sampler.last_report
+        if self.root_capture_mode:
+            self.last_report['root_capture_beliefs'] = capture_report
         if self.campaign_strategy:
             self.last_report['campaign_adjustments'] = [dict(move=m, adjustment=v) for m,v in campaign_adjustments.items()]
             if self.campaign_strategy == 'recurrence':
                 self.last_report['recurrence'] = self.campaign_module.last_report
+            if self.campaign_strategy == 'flag-interceptor':
+                self.last_report['flag_interceptor'] = campaign_diagnostics
         return selected
 
     def close(self):
@@ -291,12 +332,23 @@ if __name__ == '__main__':
     parser.add_argument('--belief-model', type=Path, help='frozen public-history belief likelihood tables')
     parser.add_argument('--root-policy', type=Path, help='frozen public-score probability selection settings')
     parser.add_argument('--world-sampling', choices=('latin','uniform'), help='public-world sampling experiment')
-    parser.add_argument('--campaign-strategy', choices=('activation','recurrence'), help='public-board strategic experiment')
+    parser.add_argument('--campaign-strategy', choices=('activation','recurrence','flag-interceptor'), help='public-board strategic experiment')
     parser.add_argument('--paired-confidence', action='store_true', help='paired one-standard-error search override experiment')
     parser.add_argument('--adaptive-depth', action='store_true', help='eight-ply planning at roots with at most twelve public legal actions')
     parser.add_argument('--joint-belief-model', type=Path, help='frozen correlated Flag/Bomb setup-style prior with public event memory')
+    parser.add_argument('--correction-anchor', choices=('parent',), help='center clipped continuation corrections on the legal native fallback')
+    parser.add_argument('--belief-sweeps', type=int, help='independent rank-swap rejuvenation sweeps for the frozen belief model; zero is an unweighted proposal control')
+    parser.add_argument('--root-capture-mode', choices=('counts','joint'), help='replace hidden-capture material expectation using public rank marginals')
     args = parser.parse_args()
     if args.samples < 1 or args.depth < 1: parser.error('positive samples and depth required')
-    bot = TeacherBot(args.observer, args.teacher, args.samples, args.depth, args.blend, args.strategic, args.context, args.replies, args.diagnostic_truth, args.diagnostic_knowledge, args.information_strategy, args.belief_model, args.root_policy, args.world_sampling, args.campaign_strategy, args.paired_confidence, args.adaptive_depth, args.joint_belief_model)
+    bot = TeacherBot(args.observer, args.teacher, samples=args.samples, depth=args.depth,
+                     blend=args.blend, strategic=args.strategic, context=args.context, replies=args.replies,
+                     diagnostic_truth=args.diagnostic_truth, diagnostic_knowledge=args.diagnostic_knowledge,
+                     information_strategy=args.information_strategy, belief_model=args.belief_model,
+                     root_policy=args.root_policy, world_sampling=args.world_sampling,
+                     campaign_strategy=args.campaign_strategy, paired_confidence=args.paired_confidence,
+                     adaptive_depth=args.adaptive_depth, joint_belief_model=args.joint_belief_model,
+                     correction_anchor=args.correction_anchor, belief_sweeps=args.belief_sweeps,
+                     root_capture_mode=args.root_capture_mode)
     bot.observer.send('difficulty ' + args.difficulty)
     bot.run()

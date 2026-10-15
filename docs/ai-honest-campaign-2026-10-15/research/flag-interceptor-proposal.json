@@ -1,0 +1,36 @@
+{
+  "hypothesis": "Deploy and retain a capable interceptor before a disclosed enemy advances into a one-move Flag attack.",
+  "policy_id_proposal": "teacher-flag-interceptor-v1-normal",
+  "status": "Algorithm proposal and mechanism fixtures; no tournament strength claim.",
+  "public_inputs": [
+    "Masked100cellpublicboard with exact own ranks and disclosed enemy ranks",
+    "Legal rootmoves and their existing teacherscores",
+    "Sixbytepublicshuttle state; layout fromRed,fromBlue,toRed,toBlue,countRed,countBlue"
+  ],
+  "algorithm": [
+    "Decodepublicshuttle exactly and construct masked Classic position. Concealed enemy ranknibbles are ignored.",
+    "For each disclosedmobile enemy, enumerate surviving legal advances, including captures of our pieces. Retain advances that enable Flagcapture on its following turn.",
+    "For every such advance, identify our legal captures or trades which remove that intruder before its next turn. Respect both armies public twoSquares restrictions after each hypothetical action.",
+    "Skip the experiment on any current confirmed oneply Flagattack or immediate winningmove; ordinary tactical policy retains control.",
+    "When a disclosed intruder has a possible two-turn approach, evaluate legal quiet moves and retain those restoring or maintaining coverage against all disclosed intruders afterward. A static blocker counts only if the intruder cannot win through it; Spy attack asymmetry matters.",
+    "If any repair exists, demote unsafe quietmove scores below the best existing score among the repairs. Leave allcapture scores unchanged. If no repair exists, do not pretend that the policy can guarantee defense."
+  ],
+  "distinctness": [
+    "Current native flag_threats evaluates oneply attacks and defense difference.",
+    "AI_PRIORITIES changes ordering of current tactical categories; this mechanism establishes future response capacity.",
+    "Existing ai_mission goals concern enemy Flag/Bomb approach and offensive routeclearing, not an ownFlag interception reserve."
+  ],
+  "mathematical_contract": "Localtwo-enemy-turn interception proof for each independently acting disclosed intruder, with all other pieces fixed except our chosen deployment. It is not a minimax proof against coordinated enemy actions or hidden ranks.",
+  "evidence": "flag-interceptor-opportunities.json",
+  "fixtures": "tools/test_campaign_flag_guard.py",
+  "design_note": "Before any policy registration, removed the initial already-covered bailout: a deployed guard must also be retained when necessary. If every quiet move maintains coverage, adjustments are zero; if no legal quiet maintainer exists, no forced pass or adjustment is introduced.",
+  "implementation": "tools/campaign_flag_guard.py",
+  "runtime_contract": "adjustments(cells, army, lost, histories, moves, shuttle); evaluate additionally returns diagnostics without global state.",
+  "research_connection": {
+    "title": "Safe Reinforcement Learning via Shielding",
+    "authors": "Alshiekh et al.",
+    "publication": "AAAI 2018",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/11797",
+    "connection": "Separating the task policy from a model-based action restriction gives a useful conceptual comparison. This experiment uses a small local two-turn model, preserves capture choices, and does not inherit the paper's formal safety guarantees or claim to implement its synthesis algorithm."
+  }
+}

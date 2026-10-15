@@ -66,6 +66,16 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to);
  * @brief Forget goals and both armies' move histories (at the start of a game)
  */
 void ai_reset(void);
+#ifdef AI_BELIEF_PRIORS
+/* Desktop research option: public posterior immobile probabilities, in Q12.
+ * army uses the same 0/CELL_BLUE convention as ai_move. Invalid input leaves
+ * the previous prior unchanged. No board disclosure flags are changed. */
+#define AI_BELIEF_ONE 4096u
+#define AI_BELIEF_STATE_SIZE 401
+uint8_t ai_belief_priors_set(uint8_t army, const uint16_t* flag_q12, const uint16_t* bomb_q12);
+void ai_belief_priors_clear(void);
+uint8_t ai_belief_priors_valid(void);
+#endif
 #ifdef AI_DIAGNOSTICS
 /* Correct a diagnostic proposal to the move actually executed in a forced history. */
 void ai_diagnostic_choice(uint8_t army, uint8_t from, uint8_t to);
@@ -119,6 +129,11 @@ uint8_t ai_test_linked_information(uint8_t square);
 enum { AI_TEST_PRE_PLAN_SIZE = AI_TEST_STATE_SIZE };
 #undef AI_TEST_STATE_SIZE
 #define AI_TEST_STATE_SIZE (AI_TEST_PRE_PLAN_SIZE + AI_PLAN_STATE_SIZE)
+#endif
+#ifdef AI_BELIEF_PRIORS
+enum { AI_TEST_PRIOR_OFFSET = AI_TEST_STATE_SIZE };
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE (AI_TEST_PRIOR_OFFSET + AI_BELIEF_STATE_SIZE)
 #endif
 uint8_t ai_test_quiet(uint8_t army);
 #ifdef AI_OCCUPANCY_BELIEFS

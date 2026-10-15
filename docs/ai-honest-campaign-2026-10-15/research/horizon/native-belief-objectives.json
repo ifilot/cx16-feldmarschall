@@ -1,0 +1,78 @@
+{
+  "schema": "honest-native-belief-objectives-v1",
+  "scope": "Classic Normal only; optional compile guard AI_BELIEF_PRIORS; no saved strength result yet",
+  "hypothesis": "Posterior Flag/Bomb probabilities should guide persistent native targets and quiet routing, rather than only adding an immediate capture correction after native move evaluation.",
+  "source": {
+    "title": "Kaelbling, Littman and Cassandra (1998), Planning and acting in partially observable stochastic domains",
+    "url": "https://people.csail.mit.edu/lpk/papers/aij98-pomdp.pdf",
+    "basis": "Belief-state immediate reward is the expectation of state reward. Applying this to native heuristic combat gains is an approximation, not a claim of optimal planning."
+  },
+  "mechanism": {
+    "state": "Two 100-entry uint16 Q12 arrays and one owner/valid byte (401 bytes).",
+    "validation": "Setter transactionally rejects null arrays, invalid army, values above 4096, or square-wise Flag+Bomb probability above 4096. Reset clears arrays and validity.",
+    "owner": "Army 0 (Red) or 16 (Blue); owner prevents another army using stale priors. Caller refreshes before each decision.",
+    "integration": [
+      "plan(): target expected gain for each concealed enemy",
+      "score(): immediate expected gain for a concealed capture before existing nonlinear guards"
+    ],
+    "expectation": "[H*(qFlag*2000 + qBomb*gain(a,Bomb)) + (4096-qFlag-qBomb)*sum_r(hidden[r]*gain(a,r))]/(4096*H), with one final signed truncating division; H is remaining hidden mobile population.",
+    "moved": "A publicly moved target retains existing mobile-only expectation regardless of supplied immobile mass.",
+    "no_mobile": "With H=0, use immobile expectation only if qFlag+qBomb=4096; otherwise fall back to original expectation.",
+    "preserved": "No board disclosure changes; revealed targets, immediate known wins, other difficulties and optional rules retain existing treatment. Existing danger, rank-discovery, near-own-Flag and goal utility transforms still apply.",
+    "behavioral_likelihood": "Mobile rank probabilities are exchangeable remaining inventory; approach/retreat rank likelihoods deliberately omitted."
+  },
+  "quiet_fixture": {
+    "own": {
+      "84": "Marshal",
+      "74": "Bomb",
+      "99": "Flag"
+    },
+    "enemy": {
+      "30": "concealed immobile",
+      "39": "concealed immobile",
+      "20": "public Scout"
+    },
+    "public_hidden_inventory": [
+      "Flag",
+      "Bomb"
+    ],
+    "baseline": {
+      "persistent_goal": 30,
+      "quiet_move": [
+        84,
+        83
+      ]
+    },
+    "posterior": {
+      "Flag39": 1,
+      "Bomb30": 1,
+      "persistent_goal": 39,
+      "quiet_move": [
+        84,
+        85
+      ]
+    },
+    "board_bytes_changed": false,
+    "interpretation": "Demonstrates belief-to-objective-to-action linkage; does not estimate playing strength."
+  },
+  "verification": {
+    "command": "python3 -m unittest discover -s tools -p test_campaign_native_beliefs.py -v",
+    "tests": 7,
+    "result": "PASS",
+    "elapsed_seconds": 3.3,
+    "checks": [
+      "Macro-off ELF byte parity against immutable frozen student-guard-v1-normal sources and recipe",
+      "Exact rational expected-gain parity for counts and joint marginal fixtures",
+      "Concealed enemy rank nibble permutations preserve goals, expected values and move",
+      "Invalid setter leaves state unchanged and reset clears entire appended state",
+      "Save/load restores prior owner, arrays and original native memory",
+      "Wrong owner, Easy and Hard use original expectations",
+      "Quiet target and move change without disclosure changes"
+    ]
+  },
+  "limits": [
+    "Q12 discretizes probabilities; setter enforces numeric bounds, while public model code owns inventory consistency.",
+    "Single-piece native goals and existing heuristic nonlinearities remain; this is not a full belief-state search.",
+    "Better routing can still chase unlikely Flags or underweight cooperative trades; strength requires registered immutable paired Classic evaluation."
+  ]
+}
