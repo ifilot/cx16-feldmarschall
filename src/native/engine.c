@@ -362,6 +362,12 @@ static int difficulty(const char* name) {
 }
 
 int main(int argc, char** argv) {
+#ifdef FELDMARSCHALL_AI_ID
+    if(argc == 2 && !strcmp(argv[1], "--identity")) {
+        puts(FELDMARSCHALL_AI_ID);
+        return 0;
+    }
+#endif
     char line[512], *command, *args;
     uint8_t from, to;
     int attacker, defender;

@@ -62,6 +62,26 @@ CORE_MISSIONS = $(CORE_NATIVE) src/core/ai_mission.c
 CORE_MEMORY = $(CORE_MISSIONS) src/core/ai_memory.c
 CORE_PRODUCTION = $(CORE_MEMORY) src/core/ai_student.c
 AI_PRODUCTION_FLAGS = -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_PRODUCTION -DAI_STUDENT_COOP_GUARD
+
+# Classic AI catalog, compact tournaments and the optional Qt6 companion.
+DESKTOP_PYTHON ?= python3
+.PHONY: ai-catalog tournament desktop desktop-build desktop-python test-tournaments test-tournament-gui test-native-desktop
+ai-catalog:
+	python3 tools/ai_registry.py list
+tournament:
+	python3 tools/tournament.py $(TOURNAMENT_ARGS)
+desktop-build:
+	cmake -S desktop -B build/desktop -DCMAKE_BUILD_TYPE=Release
+	cmake --build build/desktop --parallel 4
+desktop: desktop-build
+	build/desktop/feldmarschall-desk $(TOURNAMENT_FILE)
+desktop-python:
+	$(DESKTOP_PYTHON) tools/tournament_gui.py $(TOURNAMENT_FILE)
+test-tournaments:
+	python3 tools/test_tournaments.py
+test-tournament-gui: test-native-desktop
+test-native-desktop: desktop-build
+	QT_QPA_PLATFORM=offscreen ctest --test-dir build/desktop --output-on-failure
 .PHONY: native-variant-rules
 native-variant-rules: build/librules-variant.so
 .PHONY: test-variant-arena

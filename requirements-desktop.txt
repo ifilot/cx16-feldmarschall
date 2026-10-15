@@ -1,0 +1,4 @@
+PySide6-Essentials>=6.8,<7
+Pillow>=10
+numpy>=1.26
+# Optional legacy Python GUI only. The native GUI uses the system Qt6 libraries.

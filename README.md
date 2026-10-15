@@ -577,6 +577,30 @@ Marshal and Flag, plus 3,644 changes to undisclosed Silent Defense casualty
 inventories. Choices, random consumption and persistent history must match.
 
 
+## Classic AI tournament desk
+
+The [compiled C++ Qt6 tournament desk](docs/tournament-desk.md) selects two
+[named, source-preserved AI versions](ai/README.md), runs Classic tournaments
+and reviews both aggregate results and individual games using the game's artwork.
+Tournaments are portable `.fmtour` files with compressed moves and preserved
+participant sources/executables. Tournament matches run in a native OpenMP worker
+with a selectable worker count. Build with CMake, Qt6 development libraries,
+OpenMP and zlib; Python, Pillow and NumPy embed the game artwork at build time.
+The source builder and file writer use Python and GCC; viewing needs no PySide6.
+
+```sh
+make desktop       # compile and start the Qt6 app
+make desktop-build # compile without launching
+python3 tools/tournament.py run student-guard-v1-normal missions-v1-normal \
+  --backend openmp --jobs 4 --rounds 10 --seed 20261015 \
+  --out build/tournaments/comparison.fmtour
+build/desktop/feldmarschall-desk build/tournaments/comparison.fmtour
+```
+
+New AI research focuses on Classic and clear strategic experiments; see the
+[development direction](docs/ai-direction-2026-10-15.md). Further optional-rule
+tuning is deferred.
+
 ## Building
 
 Requires **cc65**, GNU make 4.3+, and **Python 3** with **Pillow** and **NumPy**.
