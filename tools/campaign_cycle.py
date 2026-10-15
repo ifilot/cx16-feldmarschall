@@ -205,6 +205,7 @@ def overview(through_cycle=None):
         ('Exact public-belief endgame proofs', 'Eligibility occurred in only two of 552 old games; bounded search found no win proof. This does not rule out deeper wins.', 'research/endgame-feasibility-decision.json'),
         ('Scout probes to identify the opening', 'Opening probes identify formations but almost always lose the Scout; no tested immediate Miner followup route. Information gain alone is insufficient.', 'research/template-identification-proposal.json'),
         ('Persistent Miner escorts', 'Existing missions already clear disclosed guards; most observed recapturers were concealed. No distinct executable handoff established.', 'research/miner-assault/proposal.json'),
+        ('Irreplaceable Miner trap avoidance', 'A public proof refutes all 30 rescue replies and a retreat preserves the Miner for two turns; only one of 552 old games would change. Deferred for sparse coverage, not rejected on playing strength.', 'research/miner-assault/last-miner-trap-proposal.json'),
         ('Motion conditioned on our Spy location', 'Historical model selection chose zero Spy-factor strength; retained as a rejected prediction hypothesis, without a separate playing-strength claim.', 'research/inverse-objectives/README.md'),
     ]
     available = [row for row in deferred if (BASE/row[2]).exists()]
@@ -216,6 +217,18 @@ def overview(through_cycle=None):
         lines += ['', '**Target cost evidence:**', '',
                   '- Native belief interface: desktop prototype; the unchanged CX16 production link overflows the AI bank by 1,198 bytes. [Evidence](research/native-belief-target-fit/README.md).',
                   '- Double-shell deployment: full CX16 link passes with 395 bytes free in the mission bank; 282 extra code bytes, no extra storage. [Evidence](research/deployment-double-shell/full-target-link.json).', '']
+    pending = []
+    for path in sorted(BASE.glob('cycle-*/plan.json')):
+        if (path.parent/'result.json').exists() or (path.parent/'preflight-result.json').exists():
+            continue
+        plan = json.loads(path.read_text())
+        if through_cycle is not None and plan['cycle']>through_cycle:
+            continue
+        count = plan.get('planned_games',2*len(plan['families'])*plan['rounds']*len(plan.get('policies',[])))
+        pending.append(f"- Cycle {plan['cycle']}: {'; '.join(plan['hypotheses'])} "
+                       f"{count:,} planned attempts; no completed strength result. [Frozen plan]({path.parent.name}/plan.json).")
+    if pending:
+        lines += ['', '**Registered experiments awaiting completed results:**', '', *pending, '']
     (BASE/'OVERVIEW.md').write_text('\n'.join(lines)+'\n')
 
 

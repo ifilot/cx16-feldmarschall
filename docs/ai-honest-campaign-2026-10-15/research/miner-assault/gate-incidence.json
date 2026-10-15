@@ -1,0 +1,3254 @@
+{
+  "kind": "old-public-last-miner-resource-gate-incidence",
+  "strength_evidence": false,
+  "counters": {
+    "games": 552,
+    "honest_roots": 39933,
+    "resource_gate_roots": 87,
+    "resource_gate_actual_miner_moves": 21,
+    "games_with_resource_gate": 4
+  },
+  "gate": "Exactlyone ownMiner; exactlyone publicFlagcandidate (disclosedFlag or unmovedundisclosed enemy); at leastone ownnonMinermobile; knownenemyBombs disconnect thatFlag from every nonMiner under optimistic terrain-only movement.",
+  "argument": "All other pieces are treated as eventually clearable. If known Bombs still separate the sole Flag, a surviving Miner is necessary for Flag capture. No claim that Flag capture is the only possible winning terminal.",
+  "sources": [
+    {
+      "path": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "sha256": "5fa02f4b09f51b02b92c7e07e103d2850bd994bd47bae33b3512e5cc7cbc2040"
+    },
+    {
+      "path": "docs/ai-vs-msdos-2026-10-15/teacher-context-v1-normal.fmtour",
+      "sha256": "e7c6f311ddda41a0b5000f385d621725140d29e5d1c55bfa8d2ec03e652432a4"
+    },
+    {
+      "path": "docs/ai-restrained-search-2026-10-15/development.fmtour",
+      "sha256": "6a5d2276500adf3bda4b909fb6c680653e5c7edc837f64d8a083b8413ac8d48b"
+    }
+  ],
+  "rows": [
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 354,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        64,
+        62
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ffffff463a1c3aff3a3affffff70ff3affffffffffffffffffffffffffffffffff3afffffffffffffffffefefffffefefffffffffefefffffefeffffffffffff6845ffffffffffffffff47ffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "220e230d0101",
+      "miner": 74,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 356,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        74,
+        64
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffff703a1c3aff3a3affffffffff3affffffffffffffffffffffffffffffffff3afffffffffffffffffefefffffefefffffffffefefffffefeffffffff68ffff45ffffffffffffffff47ffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "400d3e030101",
+      "miner": 74,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 358,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        64,
+        54
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffffff3a1c3aff3a3affffff70ff3affffffffffffffffffffffffffffffffff3afffffffffffffffffefefffffefefffffffffefefffffefeffffffff68ff4745ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "4a03400d0102",
+      "miner": 64,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 360,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        54,
+        44
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffffff3a1c3aff3a3affffffff703affffffffffffffffffffffffffffffffff3afffffffffffffffffefefffffefefffffffffefe47fffefeffffffff68ffff45ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "400d360e0101",
+      "miner": 54,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 362,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        62,
+        64
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ffffffff3a1c3aff3a3affffffffff3affffffffffffffff70ffffffffffffffff3afffffffffffffffffefe47fffefefffffffffefefffffefeffffffff68ffff45ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "360e2c180101",
+      "miner": 44,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 364,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        44,
+        34
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffffff3a1c3aff3a3affffffff703affffffffffffffffffffffffffffffffff3afffffffffffffffffefe47fffefefffffffffefefffffefeffffffffffff6845ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "3e18400e0102",
+      "miner": 44,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 366,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        34,
+        24
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffffff3a1c3aff3a3affffff70ff3affffffffffffffffffffffffffffffffff3a47fffffffffffffffefefffffefefffffffffefefffffefeffffffffffff6845ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "2c0e220d0101",
+      "miner": 34,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 368,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        24,
+        23
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffffff3a1c3aff3a3affffffff703affffffffffffffff47ffffffffffffffff3afffffffffffffffffefefffffefefffffffffefefffffefeffffffffffff6845ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "220d180e0102",
+      "miner": 24,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 370,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        23,
+        13
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffffff3a1c3aff3a3affffffffff3affffffffffffff4770ffffffffffffffff3afffffffffffffffffefefffffefefffffffffefefffffefeffffffffffff6845ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "180e17180101",
+      "miner": 23,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 372,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        13,
+        3
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffffff3a1c3aff3a3affffff47703affffffffffffffffffffffffffffffffff3afffffffffffffffffefefffffefefffffffffefefffffefeffffffffffff6845ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "17180d0e0102",
+      "miner": 13,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 7,
+      "ply": 374,
+      "army": 0,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        3,
+        4
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ffffff473a1c3aff3a3affffff70ff3affffffffffffffffffffffffffffffffff3afffffffffffffffffefefffffefefffffffffefefffffefeffffffffffff6845ffffffffffffffffffffffffffffffffffffff2affff0aff0affffff0a03ff0a0b0a",
+      "lost": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        8,
+        1,
+        0,
+        0
+      ],
+      "shuttle": "0d0e030d0101",
+      "miner": 3,
+      "flag": 5,
+      "known_bombs": [
+        4,
+        6,
+        8,
+        9,
+        15,
+        33
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 235,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        48,
+        58
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ff61ffffffff1a3a55ffffffff1a54ffffffffff78ffffff56fffffffffffefefffffefe75fffffffefefffffefeffff56ff2a4cffffffffffffff604c24ffffffffffff2affff4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "5f2660300101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 237,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        58,
+        68
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ff61ffffffff1a3a55ffffffff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefefffffefe75ff56ff2a4cffffffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4830523a0101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 239,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        68,
+        67
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ff61ffffffff1a3a55ffffffff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefefffffefeffff56ff2a4cffffffff75ffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "473a51440101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 241,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        67,
+        66
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ff61ffffffff1a3a55ffffffff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefefffffefeffff56ff2a4cffffff75ffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "514447430201",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 243,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        66,
+        65
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefefffffefeffff56ff2a4cffff75ffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "0d4317420101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 245,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        60,
+        61
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefefffffefeffff56ff2a4cff75ffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "474251410101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 247,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        61,
+        51
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefefffffefeffffff562a4cff75ffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "513c473d0201",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 249,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        65,
+        55
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefeffffff56fefefffffefeffffffff2aff4c75ffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "3f3d40330101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 251,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        51,
+        61
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefeffffff56fefeff75fefeffffffff2aff4cffffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "474151370101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 253,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        61,
+        60
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefeff75fefeffffff562aff4cffffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "5133473d0201",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 255,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        55,
+        54
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefeff75fefeffff56ff2affff4cffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "403d413c0101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 257,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        60,
+        61
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefe75fffefeffff56ff2affff4cffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "473751360101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 259,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        61,
+        51
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefefffffffffefe75fffefeffffff562affff4cffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "513c473d0201",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 261,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        54,
+        55
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefeffffff56fefe75fffefeffffffff2aff4cffffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "413d40330101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 263,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        32,
+        34
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffff78ffffff56fffffffffffefefffffefeffffff56fefeff75fefeffffffff2aff4cffffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "473651370101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 265,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        55,
+        54
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffffffff78ff56fffffffffffefefffffefeffffff56fefeff75fefeffffffff2affff4cffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "402041220101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 267,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        54,
+        55
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffffffff78ff56fffffffffffefefffffefeffffff56fefe75fffefeffffffff2aff4cffffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "413740360201",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 269,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        34,
+        31
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffffffffff78ff56fffffffffffefefffffefeffffff56fefeff75fefeffffffff2aff4cffffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "513647370102",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 271,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        51,
+        61
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffff78ffffffff56fffffffffffefefffffefeffffff56fefeff75fefeffffffff2aff4cffffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4722511f0201",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 273,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        55,
+        54
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffff78ffffffff56fffffffffffefefffffefefffffffffefeff75fefeffffff562affff4cffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4033413d0101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 275,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        61,
+        60
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffff78ffffffff56fffffffffffefefffffefefffffffffefe75fffefeffffff562affff4cffffffffff60ff24ffffffffffff2aff4c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "513747360101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 277,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        60,
+        70
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffff78ffffffff56fffffffffffefefffffefefffffffffefe75fffefeffff56ff2affff4cffffffffffffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "473d513c0201",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 279,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        54,
+        55
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffff78ffffffff56fffffffffffefefffffefefffffffffefe75fffefeffffffff2aff4cffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "413c40460101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 281,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        55,
+        54
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffff61ff1a54ffffffff78ffffffff56fffffffffffefefffffefefffffffffefeff75fefeffffffff2affff4cffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "403641370201",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 283,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        5,
+        15
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ff13ffffff171a1a1a1bff14ffffffffffff1a3a55ffffffff1a54ffffffff78ff61ffff56fffffffffffefefffffefefffffffffefe75fffefeffffffff2affff4cffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "173721360102",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 285,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        54,
+        55
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bff14ffffff57ffff1a3a55ffffffff1a54ffffffff78ff61ffff56fffffffffffefefffffefefffffffffefe75fffefeffffffff2aff4cffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4105400f0101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 287,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        55,
+        65
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bff14ffffff57ffff1a3a55ffffffff1a54ffffffff78ff61ffff56fffffffffffefefffffefefffffffffefeff75fefeffffffff2affff4cffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "403641370201",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 289,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        20,
+        21
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bff14ffffff57ffff1a3a55ffffffff1a54ffffffff78ff61ffff56fffffffffffefefffffefefffffffffefeff62fefeffffffff2affffffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "413737410101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 291,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        31,
+        61
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bff14ffffff57ffff1a3aff55ffffff1a54ffffffff7861ffffff56fffffffffffefefffffefefffffffffefeff62fefeffffffff2affffffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "211420150101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 293,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        21,
+        31
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bff14ffffff57ffff1a3aff5561ffff1a54ffffffffffffffffff56fffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "201f163d0101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 295,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        31,
+        21
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bff14ffffff57ffff1a3affffffffff1a54ffffffff5561ffffff56fffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "1615201f0201",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 297,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        21,
+        22
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bff14ffffff57ffff1a3aff55ffffff1a54ffffffff61ffffffff56fffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "201f1f150102",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 299,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        11,
+        12
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bff14ffffff57ffff1a3aff6155ffff1a54ffffffffffffffffff56fffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "1f1515160101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 301,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        12,
+        13
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffff54ffff57ffff1a3affff61ffff1a54ffffffffffffffffff56fffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "150b160c0101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 303,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        13,
+        23
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffff6154ff57ffff1a3affffffffff1a54ffffffffffffffffff56fffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ffff24ffffffffffff2a604c4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "160c0c0d0101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 305,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        23,
+        33
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffff61ffff57ffff1a3affffff54ff1a54ffffffffffffffffff56fffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ff4c24ffffffffffff2a60ff4cff2aff2affff0c2a66ffffff4cffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "520d48170101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 307,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        33,
+        34
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffff61ffff57ffff1a3affffffffff1a54ffffffffffff54ffff56fffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ff4c24ffffffffffff2a60ff4cff2a4c2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "601756210101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 309,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        26,
+        27
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffff61ffff57ffff1a3affffffffff1a54ffffffffffffff54ff56fffffffffffefeff62fefefffffffffefefffffefeffffff782affffffffffffff56ff4c24ffffffffffff2a60ff4cff2a4c2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "37212d220101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 311,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        34,
+        33
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffffff61ff57ffff1a3affffffffff1aff54ffffffffffff54ff56fffffffffffefeff62fefefffffffffefefffffefeffffff782affffffffffffff56ff4c24ffffffffffff2a60ff4cff2a4c2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "0c1a0d1b0101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 313,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        33,
+        34
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffffff61ff57ffff1a3affffffffff1aff54ffffffffff54ffff56fffffffffffefeff62fefefffffffffefefffffefeffffff782affffffffffffff56ff4c24ffff4cffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "56224c210101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 315,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        34,
+        44
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffffff61ff57ffff1a3affffffffff1aff54ffffffffffff546256fffffffffffefefffffefefffffffffefefffffefeffffff782affffffffffffff56ff4c24ffff4cffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "2d2123220102",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 317,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        44,
+        45
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffffff61ff57ffff1a3affffffffff1aff54ffffffffffffffff62fffffffffffefe54fffefefffffffffefefffffefeffffff782affffffffffffff56ff4c24ffff4cffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "2322242c0101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 319,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        15,
+        5
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ff13ffffffff1a1a1a1bffffffff6157ffff1a3affffffffff1aff54ffffffffffffffff62fffffffffffefeff54fefefffffffffefefffffefeffffff782affffffffffffff56ff4c24ffff4cffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "0d2c0e2d0101",
+      "miner": 15,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 321,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        5,
+        4
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "ff13ffffff571a1a1a1bffffffffff61ffff1a3affffffffff1aff54ffffffffffffffff62fffffffffffefeff54fefefffffffffefefffffefeffffff782affffffffffffff56ff4c24ffff4cffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "0e0f0f050101",
+      "miner": 5,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 323,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        45,
+        55
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54ffffffffffffff62fffffffffffffefeff54fefefffffffffefefffffefeffffff782affffffffffffff56ff4c24ffff4cffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "240523040101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 325,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        55,
+        65
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54fffffffffffffffffffffffffffffefeff62fefefffffffffefeff54fefeffffff782affffffffffffff56ff4c24ffff4cffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "232d2d370101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 327,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        65,
+        75
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54fffffffffffffffffffffffffffffefefffffefefffffffffefeff62fefeffffff782affff54ffffffff56ff4c24ffff4cffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "2d3737410101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 329,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        75,
+        76
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54fffffffffffffffffffffffffffffefefffffefefffffffffefeff62fefeffffff782affffff4cffffff56ff4c24ff54ffffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4c41424b0101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 331,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        76,
+        77
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54fffffffffffffffffffffffffffffefefffffefefffffffffefeff62fefeffffff782affffffff4cffff56ff4c24ffff54ffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "424b434c0101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 333,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        77,
+        67
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54fffffffffffffffffffffffffffffefefffffefefffffffffefeff62fefeffffff782affffffffff4cff56ff4c24ffffff54ffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "434c444d0101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 335,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        67,
+        68
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54fffffffffffffffffffffffffffffefefffffefefffffffffefeff62fefe4cffff782affffffff54ffff56ff4c24ffffffffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "444d3a430101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 337,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        68,
+        58
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54fffffffffffffffffffffffffffffefefffffefe4cfffffffefeff62fefeffffff782affffffffff54ff56ff4c24ffffffffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "3a4330440101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 339,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        27,
+        37
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1aff54ffffffffffffffffffff4cfffffffefefffffefefffffffffefeff62fefe54ffff782affffffffffffff56ff4c24ffffffffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "3044263a0101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 341,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        58,
+        68
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff1a3affffffffff1affff4cffffffffffffffff54fffffffffefefffffefefffffffffefeff62fefe54ffff782affffffffffffff56ff4c24ffffffffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "261b1c250101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 343,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        68,
+        78
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a1a1bffffffffff61ffff673affffffffff1affffffffffffffffffffff54fffffffffefefffffefefffffffffefeff62fefeffffff782affffffffff54ff56ff4c24ffffffffffff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "1c3a12440101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 16,
+      "ply": 345,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        78,
+        88
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "ff13ffff57ff1a1a671bffffffffff61ffffff3affffffffff1affffffffffffffffffffff54fffffffffefefffffefefffffffffefeff62fefeffffff782affffffffffffff56ff4c24ffffffff54ff2a60ff4cff2aff2affff0c2a66ffffffffffffff",
+      "lost": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        8,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "1244084e0101",
+      "miner": 4,
+      "flag": 90,
+      "known_bombs": [
+        62,
+        80,
+        85,
+        87,
+        91
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 365,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        4,
+        14
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1b1aff1718ffffffff1a1a1a56ffffffff78ffffffffff1a7453ffffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffff64ffffffffffff4cff60ffffff56ff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "555e4b5f0201",
+      "miner": 3,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 367,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        25,
+        26
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1b1aff17ffffffffff1a1a1a56ff58ffff78ffffffffff1a7453ffffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffffff64ffffffffff4cff60ffffff56ff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4204430e0101",
+      "miner": 3,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 369,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        3,
+        4
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1aff17ffffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffffff64ffffffffff4cffffffffff56ff4cffffff602aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4b19551a0101",
+      "miner": 3,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 371,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        4,
+        5
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1affff57ffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffffff64ffffffffff4cff60ffffff56ff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "55034b040201",
+      "miner": 4,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 373,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        5,
+        15
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1affffff57ffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffffffff64ffffffff4cff60ffffff56ff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "430444050101",
+      "miner": 5,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 375,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        15,
+        25
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff5857ff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffffffff64ffffffff4cffffffffff56ff4cffffff602aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4b05550f0101",
+      "miner": 15,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 377,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        25,
+        35
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff58ffff78ffffffffff1a745753ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffffffff64ffffffff4cff60ffffff56ff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "550f4b190201",
+      "miner": 25,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 379,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        79,
+        69
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffff575454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffffffffffffffffff4cff60ffff6456ff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "44194e230101",
+      "miner": 35,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 381,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        35,
+        45
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffff575454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffffffffff56ffffff4cffffffff64ffff4cffffff602aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4b4f55450101",
+      "miner": 35,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 383,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        45,
+        55
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefeff57fefe55ffff4cfefefffffefeffffff2affffffffffffff56ffffff4cff60ffff64ffff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "55234b2d0201",
+      "miner": 45,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 385,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        69,
+        79
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefeff57fefeffffff2affffffffffff6456ffffff4cff60ffffffffff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4e2d44370101",
+      "miner": 55,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 387,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        55,
+        65
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefeff57fefeffffff2affffffffffff64ffffffff4cffffffffff56ff4cffffff602aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "4b45554f0101",
+      "miner": 55,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 389,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        65,
+        66
+      ],
+      "actual_mover_is_miner": true,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffff57ffff64ffffffff4cff60ffffff56ff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "55374b410201",
+      "miner": 65,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "game": 32,
+      "ply": 391,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        79,
+        89
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1b1affffffffffffff1a1a1a56ff58ffff78ffffffffff1a74ff53ffffff4c3affffffff5454ffff4c61fefefffffefe55ffff4cfefefffffefeffffff2affffffff5764ffffffffff4cff60ffffff56ff4cffffffff2aff2affffffffffff2a0c2affff",
+      "lost": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "shuttle": "444143420101",
+      "miner": 66,
+      "flag": 96,
+      "known_bombs": [
+        61,
+        86,
+        88,
+        95,
+        97
+      ]
+    },
+    {
+      "source": "docs/ai-restrained-search-2026-10-15/development.fmtour",
+      "game": 16,
+      "ply": 337,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        6,
+        5
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1a1b1affffff12ff18ffff1a1affffff15ff1affffffff60ff571659ffffffffffffff3a1478fffffffffefe6367fefeff56fffffefe4c68fefeffffffffffff4cff642affffffff2affffff4cff61ffffffffffff62ffffff2affffffffffffffff2a0c",
+      "lost": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        3,
+        4,
+        7,
+        0,
+        2,
+        0
+      ],
+      "shuttle": "584f4e590101",
+      "miner": 25,
+      "flag": 99,
+      "known_bombs": [
+        67,
+        72,
+        89,
+        98
+      ]
+    },
+    {
+      "source": "docs/ai-restrained-search-2026-10-15/development.fmtour",
+      "game": 16,
+      "ply": 339,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        5,
+        15
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1a1b1affff52ffff18ffff1a1affffff15ff1affffffff60ff571659ffffffffffffff3a1478fffffffffefe6367fefeff56fffffefe4c68fefeffffffffffff4cff642affffffff2affffff4cffffffffffffffff62ffff612affffffffffffffff2a0c",
+      "lost": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        3,
+        4,
+        7,
+        0,
+        2,
+        0
+      ],
+      "shuttle": "4e0658050201",
+      "miner": 25,
+      "flag": 99,
+      "known_bombs": [
+        67,
+        72,
+        89,
+        98
+      ]
+    },
+    {
+      "source": "docs/ai-restrained-search-2026-10-15/development.fmtour",
+      "game": 16,
+      "ply": 341,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        49,
+        59
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1a1b1affffffffff18ffff1a1affff5215ff1affffffff60ff571659ffffffffffff633a1478fffffffffefeff67fefeff56fffffefe4c68fefeffffffffffff4cff642affffffff2affffff4cffffffffffffffff62ffff612affffffffffffffff2a0c",
+      "lost": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        3,
+        4,
+        7,
+        0,
+        2,
+        0
+      ],
+      "shuttle": "2c05220f0101",
+      "miner": 25,
+      "flag": 99,
+      "known_bombs": [
+        67,
+        72,
+        89,
+        98
+      ]
+    },
+    {
+      "source": "docs/ai-restrained-search-2026-10-15/development.fmtour",
+      "game": 16,
+      "ply": 343,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        15,
+        14
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1a1b1affffffffff18ffff1a1affff5215ff1affffffff60ff571659ffffffffffff633a1478fffffffffefeff67fefefffffffffefe4c68fefeff56ffffffff4cff642affffffff2affffff4cff61ffffffffffff62ffffff2affffffffffffffff2a0c",
+      "lost": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        3,
+        4,
+        7,
+        0,
+        2,
+        0
+      ],
+      "shuttle": "58314e3b0101",
+      "miner": 25,
+      "flag": 99,
+      "known_bombs": [
+        67,
+        72,
+        89,
+        98
+      ]
+    },
+    {
+      "source": "docs/ai-restrained-search-2026-10-15/development.fmtour",
+      "game": 16,
+      "ply": 345,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        59,
+        69
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1a1b1affffffffff18ffff1a1aff52ff15ff1affffffff60ff571659ffffffffffff633a1478fffffffffefeff67fefefffffffffefe4c68fefeff56ffffffff4cff642affffffff2affffff4cffffffffffffffff62ffff612affffffffffffffff2a0c",
+      "lost": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        3,
+        4,
+        7,
+        0,
+        2,
+        0
+      ],
+      "shuttle": "4e0f580e0201",
+      "miner": 25,
+      "flag": 99,
+      "known_bombs": [
+        67,
+        72,
+        89,
+        98
+      ]
+    },
+    {
+      "source": "docs/ai-restrained-search-2026-10-15/development.fmtour",
+      "game": 16,
+      "ply": 347,
+      "army": 1,
+      "policy": "teacher-context-v1-normal",
+      "actual_move": [
+        14,
+        15
+      ],
+      "actual_mover_is_miner": false,
+      "public_board_hex": "1a1b1affffffffff18ffff1a1aff52ff15ff1affffffff6063571659ffffffffffffff3a1478fffffffffefeff67fefefffffffffefe4c68fefeffffffffffff4cff642aff56ffff2affffff4cffffffffffffffff62ffff612affffffffffffffff2a0c",
+      "lost": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        3,
+        4,
+        7,
+        0,
+        2,
+        0
+      ],
+      "shuttle": "223b18450101",
+      "miner": 25,
+      "flag": 99,
+      "known_bombs": [
+        67,
+        72,
+        89,
+        98
+      ]
+    }
+  ],
+  "source_sha256": "781a3dce80b131a12d7e157da3101eb71cf73d4300927c7216802d9a9516a980"
+}

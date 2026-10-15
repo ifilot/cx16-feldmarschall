@@ -1,0 +1,19 @@
+Running teacher-context-v1-normal
+Verified teacher-context-v1-normal {'wins': 563, 'draws': 33, 'losses': 1473, 'score': 0.28008699855002417}
+Running teacher-flag-row-control-v1-normal
+Verified teacher-flag-row-control-v1-normal {'wins': 575, 'draws': 36, 'losses': 1448, 'score': 0.28800388538125304}
+Running teacher-joint-setup-v1-normal
+Verified teacher-joint-setup-v1-normal {'wins': 585, 'draws': 35, 'losses': 1450, 'score': 0.29106280193236717}
+Traceback (most recent call last):
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/campaign_cycle.py", line 512, in <module>
+    return directory
+    ^^^^^^
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/campaign_cycle.py", line 504, in main
+    backend='openmp', families=FAMILIES,
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/campaign_cycle.py", line 83, in evaluate
+    report, complete, current = analyze_match(path, match, plan, frozen)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/campaign_error_sensitivity.py", line 15, in <module>
+    from tournament_store import Tournament, mirror_setup
+ImportError: cannot import name 'mirror_setup' from 'tournament_store' (/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/tournament_store.py)

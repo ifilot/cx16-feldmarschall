@@ -37,6 +37,9 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 9 | Own setup, seven stress families | student-validated-deployment-v1-normal | 230 / 27 / 147 | 60.3% | 16 |
 | 9 | Own setup, seven stress families | teacher-context-v1-normal | 225 / 9 / 169 | 56.9% | 17 |
 | 9 | Own setup, seven stress families | teacher-validated-deployment-v1-normal | 212 / 12 / 168 | 55.6% | 28 |
+| 12 | Fixed armies, seven stress families | teacher-context-v1-normal | 563 / 33 / 1473 | 28.0% | 31 |
+| 12 | Fixed armies, seven stress families | teacher-flag-row-control-v1-normal | 575 / 36 / 1448 | 28.8% | 41 |
+| 12 | Fixed armies, seven stress families | teacher-joint-setup-v1-normal | 585 / 35 / 1450 | 29.1% | 30 |
 | 16 | Fixed armies, seven stress families | student-guard-v1-normal | 172 / 32 / 345 | 34.2% | 11 |
 | 16 | Fixed armies, seven stress families | student-counts-belief-objectives-v3-normal | 163 / 27 / 360 | 32.1% | 10 |
 | 16 | Fixed armies, seven stress families | student-joint-belief-objectives-v3-normal | 181 / 38 / 339 | 35.8% | 2 |
@@ -120,6 +123,17 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 - teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: -1.1 percentage points; 95% paired interval [-7.5, +5.1].
 
 
+**Cycle 12 hypotheses:** Independently validate the frozen Flag-position and joint Flag/Bomb belief models after the cycle5 screening signal.
+
+Evidence: [cycle-12-setup-belief-validation](cycle-12-setup-belief-validation/result.json).
+
+- teacher-flag-row-control-v1-normal minus teacher-context-v1-normal: +0.6 percentage points; 95% paired interval [-1.5, +2.6].
+- teacher-joint-setup-v1-normal minus teacher-context-v1-normal: +1.5 percentage points; 95% paired interval [-0.7, +3.6].
+- teacher-joint-setup-v1-normal minus teacher-flag-row-control-v1-normal: +0.6 percentage points; 95% paired interval [-1.5, +2.7].
+
+Prespecified independent validation: interpret the three contrasts with the 98.3333% intervals recorded in result.json; no tuning on this cohort.
+
+
 **Cycle 16 hypotheses:** Connect public Flag/Bomb beliefs to native persistent objectives, quiet routes and nonlinear capture evaluation without a rollout engine.; Separate correct moved/unmoved count conditioning from the learned joint setup prior.
 
 Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectives-v3/result.json).
@@ -141,6 +155,7 @@ Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectiv
 - Exact public-belief endgame proofs: Eligibility occurred in only two of 552 old games; bounded search found no win proof. This does not rule out deeper wins. [Evidence](research/endgame-feasibility-decision.json).
 - Scout probes to identify the opening: Opening probes identify formations but almost always lose the Scout; no tested immediate Miner followup route. Information gain alone is insufficient. [Evidence](research/template-identification-proposal.json).
 - Persistent Miner escorts: Existing missions already clear disclosed guards; most observed recapturers were concealed. No distinct executable handoff established. [Evidence](research/miner-assault/proposal.json).
+- Irreplaceable Miner trap avoidance: A public proof refutes all 30 rescue replies and a retreat preserves the Miner for two turns; only one of 552 old games would change. Deferred for sparse coverage, not rejected on playing strength. [Evidence](research/miner-assault/last-miner-trap-proposal.json).
 - Motion conditioned on our Spy location: Historical model selection chose zero Spy-factor strength; retained as a rejected prediction hypothesis, without a separate playing-strength claim. [Evidence](research/inverse-objectives/README.md).
 
 
@@ -148,4 +163,12 @@ Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectiv
 
 - Native belief interface: desktop prototype; the unchanged CX16 production link overflows the AI bank by 1,198 bytes. [Evidence](research/native-belief-target-fit/README.md).
 - Double-shell deployment: full CX16 link passes with 395 bytes free in the mission bank; 282 extra code bytes, no extra storage. [Evidence](research/deployment-double-shell/full-target-link.json).
+
+
+**Registered experiments awaiting completed results:**
+
+- Cycle 8: Reduce finite-eight-world importance-weight noise without increasing native rollout count.; Separate equal-weight proposal control from approximate posterior correction by rank-swap rejuvenation. 2,240 planned attempts; no completed strength result. [Frozen plan](cycle-08-rank-swap-beliefs/plan.json).
+- Cycle 10: Prevent known two-turn Flag threats by deploying and retaining rank-capable interception coverage before immediate danger. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-10-preventive-flag-interception/plan.json).
+- Cycle 11: Connect public setup beliefs to hidden-capture values that the continuation correction currently subtracts.; Compare count-conditioned marginals against correlated setup marginals with identical frozen joint-sampled futures. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-11-belief-capture-values/plan.json).
+- Cycle 14: Independently validate whether joint probability of any lethal concealed contact improves the native guard against DOS. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-14-native-contact-validation/plan.json).
 

@@ -1,0 +1,272 @@
+{
+  "cycle": 12,
+  "hypotheses": [
+    "Independently validate the frozen Flag-position and joint Flag/Bomb belief models after the cycle5 screening signal."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "standings": {
+    "teacher-context-v1-normal": {
+      "wins": 563,
+      "draws": 33,
+      "losses": 1473,
+      "score": 0.28008699855002417,
+      "errors": 31
+    },
+    "teacher-flag-row-control-v1-normal": {
+      "wins": 575,
+      "draws": 36,
+      "losses": 1448,
+      "score": 0.28800388538125304,
+      "errors": 41
+    },
+    "teacher-joint-setup-v1-normal": {
+      "wins": 585,
+      "draws": 35,
+      "losses": 1450,
+      "score": 0.29106280193236717,
+      "errors": 30
+    }
+  },
+  "execution_seconds": {
+    "teacher-context-v1-normal": 1237.2576870810008,
+    "teacher-flag-row-control-v1-normal": 1262.2925284389967,
+    "teacher-joint-setup-v1-normal": 1290.2903512290031
+  },
+  "comparisons": {
+    "teacher-flag-row-control-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 989,
+      "pairs_by_family": {
+        "fortified": 132,
+        "uniform": 150,
+        "unguarded": 149,
+        "forward": 150,
+        "decoy": 150,
+        "presets": 114,
+        "broad-mixed": 144
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.005561172901921132,
+          "interval_95": [
+            -0.015166835187057633,
+            0.026036400404448937
+          ],
+          "interval_98_3333": [
+            -0.019716885743174924,
+            0.03083923154701719
+          ]
+        }
+      }
+    },
+    "teacher-joint-setup-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 999,
+      "pairs_by_family": {
+        "fortified": 135,
+        "uniform": 150,
+        "unguarded": 150,
+        "forward": 150,
+        "decoy": 150,
+        "presets": 119,
+        "broad-mixed": 145
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.014514514514514515,
+          "interval_95": [
+            -0.007007007007007007,
+            0.03553553553553553
+          ],
+          "interval_98_3333": [
+            -0.011511511511511512,
+            0.03978978978978979
+          ]
+        }
+      }
+    },
+    "teacher-joint-setup-v1-normal minus teacher-flag-row-control-v1-normal": {
+      "complete_pairs": 995,
+      "pairs_by_family": {
+        "fortified": 135,
+        "uniform": 150,
+        "unguarded": 149,
+        "forward": 150,
+        "decoy": 150,
+        "presets": 116,
+        "broad-mixed": 145
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.005778894472361809,
+          "interval_95": [
+            -0.015326633165829147,
+            0.026633165829145728
+          ],
+          "interval_98_3333": [
+            -0.020100502512562814,
+            0.031155778894472363
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 6300,
+  "error_sensitivity": {
+    "teacher-flag-row-control-v1-normal minus teacher-context-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 205,
+        "negative_pairs": 196,
+        "zero_pairs": 588,
+        "non_tied_pairs": 401,
+        "exact_two_sided_binomial_sign_p": 0.6895757564448952,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 1050,
+      "error_games_a": 41,
+      "error_games_b": 31,
+      "pairs_with_any_error": 61,
+      "arms": {
+        "a": {
+          "attempted_games": 2100,
+          "error_games": 41,
+          "scored_games": 2059,
+          "wins": 575,
+          "draws": 36,
+          "losses": 1448,
+          "official_scored_score": 0.28800388538125304,
+          "all_attempt_score_bounds": [
+            0.2823809523809524,
+            0.3019047619047619
+          ]
+        },
+        "b": {
+          "attempted_games": 2100,
+          "error_games": 31,
+          "scored_games": 2069,
+          "wins": 563,
+          "draws": 33,
+          "losses": 1473,
+          "official_scored_score": 0.28008699855002417,
+          "all_attempt_score_bounds": [
+            0.27595238095238095,
+            0.2907142857142857
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.008333333333333333,
+        0.025952380952380952
+      ],
+      "complete_case_pairs": 989,
+      "complete_case_paired_effect": 0.005561172901921132
+    },
+    "teacher-joint-setup-v1-normal minus teacher-context-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 218,
+        "negative_pairs": 196,
+        "zero_pairs": 585,
+        "non_tied_pairs": 414,
+        "exact_two_sided_binomial_sign_p": 0.30202218001417785,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 1050,
+      "error_games_a": 30,
+      "error_games_b": 31,
+      "pairs_with_any_error": 51,
+      "arms": {
+        "a": {
+          "attempted_games": 2100,
+          "error_games": 30,
+          "scored_games": 2070,
+          "wins": 585,
+          "draws": 35,
+          "losses": 1450,
+          "official_scored_score": 0.29106280193236717,
+          "all_attempt_score_bounds": [
+            0.2869047619047619,
+            0.3011904761904762
+          ]
+        },
+        "b": {
+          "attempted_games": 2100,
+          "error_games": 31,
+          "scored_games": 2069,
+          "wins": 563,
+          "draws": 33,
+          "losses": 1473,
+          "official_scored_score": 0.28008699855002417,
+          "all_attempt_score_bounds": [
+            0.27595238095238095,
+            0.2907142857142857
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.0038095238095238095,
+        0.025238095238095237
+      ],
+      "complete_case_pairs": 999,
+      "complete_case_paired_effect": 0.014514514514514515
+    },
+    "teacher-joint-setup-v1-normal minus teacher-flag-row-control-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 205,
+        "negative_pairs": 200,
+        "zero_pairs": 590,
+        "non_tied_pairs": 405,
+        "exact_two_sided_binomial_sign_p": 0.8424800794532358,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 1050,
+      "error_games_a": 30,
+      "error_games_b": 41,
+      "pairs_with_any_error": 55,
+      "arms": {
+        "a": {
+          "attempted_games": 2100,
+          "error_games": 30,
+          "scored_games": 2070,
+          "wins": 585,
+          "draws": 35,
+          "losses": 1450,
+          "official_scored_score": 0.29106280193236717,
+          "all_attempt_score_bounds": [
+            0.2869047619047619,
+            0.3011904761904762
+          ]
+        },
+        "b": {
+          "attempted_games": 2100,
+          "error_games": 41,
+          "scored_games": 2059,
+          "wins": 575,
+          "draws": 36,
+          "losses": 1448,
+          "official_scored_score": 0.28800388538125304,
+          "all_attempt_score_bounds": [
+            0.2823809523809524,
+            0.3019047619047619
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.015,
+        0.01880952380952381
+      ],
+      "complete_case_pairs": 995,
+      "complete_case_paired_effect": 0.005778894472361809
+    }
+  },
+  "errors": 102,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 6300
+}

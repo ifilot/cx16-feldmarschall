@@ -1,0 +1,149 @@
+{
+  "hypothesis": "Bounded public trap avoidance for an irreplaceable last Miner",
+  "decision": "DEFER runtime integration, policy registration and strength tournament: one counterfactual override in 552 old games is too sparse.",
+  "not_a_strength_rejection": true,
+  "strategic_distinction": "Preserve a necessary operation by forbidding an exactly demonstrated two-reply resource trap, rather than increasing Miner material value, rewarding retreat, or treating adjacent escorts as zones of control.",
+  "relationship_to_existing_code": {
+    "baseline": "Existing native selected move is the exact fallback; no shared source was edited.",
+    "mission_preserve": "Earlier AI_MISSION_PRESERVE changes job choice/cost for the sole Miner; this prototype adds no job-cost coefficient and requires a complete public trap proof.",
+    "mission_escort": "Earlier AI_MISSION_ESCORT removes an already adjacent disclosed recapture guard before a Bomb breach. This fixture is a quiet enemy approach which creates a trap before any Bomb defuse.",
+    "one_reply_search": "The selected Miner step has no immediate capture by the disclosed Captain; the adversarial quiet Captain reply creates the loss one enemy turn later."
+  },
+  "public_input_contract": {
+    "inputs": [
+      "public board occupancy, MOVED and REVEALED bits",
+      "all legitimate own ranks",
+      "public disclosed enemy ranks",
+      "public enemy lost-rank counts",
+      "both public two-square shuttle tuples",
+      "unchanged native selected move"
+    ],
+    "excluded": [
+      "actual hidden enemy ranks",
+      "actual enemy setup",
+      "game or deployment seeds",
+      "opponent source-state PRNG reconstruction"
+    ],
+    "api": "filter_move(position, army, enemy_lost, selected, max_nodes=20000) -> diagnostics including selected/move/changed; no input mutation or observer I/O.",
+    "unknowns": "Every unrevealed enemy nibble is replaced by UNKNOWN before any decision. Hypothetical unresolved combat invalidates a trap witness; it is never sampled."
+  },
+  "algorithm": [
+    "Require exactly one own Miner, exactly one remaining public enemy Flag candidate, another own mobile, and known enemy Bombs disconnecting every other own mobile from that Flag even after optimistically clearing every other piece.",
+    "Require the unchanged native selected move to be a legal quiet last-Miner step. Every capture and every other selected move remains unchanged.",
+    "Require own Flag fully screened by own Bombs and no public-possible enemy Miner within Manhattan distance two. This conservative exception protects own Flag for the two-enemy-turn horizon, and subsumes immediate confirmed Flag danger bailout.",
+    "Find a legal quiet Miner retreat and a predetermined distinct second square satisfying exact own shuttle and enemy-lethal-distance lower bounds (>1 to first square, >2 to second). Scouts and Spies cannot kill a Miner; they may enter the second square and are then captured. Both squares must otherwise be unoccupied at planning time.",
+    "For the selected native step, enumerate legal quiet replies of disclosed mobile enemies. For each witness enumerate ALL legal friendly replies including allied rescues, captures and shuttle restrictions.",
+    "Any legal own capture of the public-deduced Flag or any unresolved friendly combat aborts this witness. Every friendly reply must either already kill the Miner in disclosed combat or admit a legal disclosed-enemy capture/exchange of the remaining Miner on the next enemy turn.",
+    "Override only if the complete trap witness and separate two-turn survival certificate both exist. Choose the first certified retreat in stable existing legal-move order; no score bonus or tuned coefficient. Cap exhaustion gives the exact original native move."
+  ],
+  "concrete_old_fixture": {
+    "source": {
+      "path": "docs/ai-fair-information-2026-10-15/validation/dos--teacher-context-v1-normal.fmtour",
+      "sha256": "5fa02f4b09f51b02b92c7e07e103d2850bd994bd47bae33b3512e5cc7cbc2040"
+    },
+    "game": 32,
+    "zero_based_ply": 389,
+    "army": "Blue",
+    "selected": [
+      65,
+      66
+    ],
+    "enemy_trap_reply": [
+      68,
+      67
+    ],
+    "friendly_replies": 30,
+    "reply_outcomes": {
+      "known_enemy_capture_next_turn": 29,
+      "Miner_dies_attacking_disclosed_Captain": 1
+    },
+    "override": [
+      65,
+      55
+    ],
+    "planned_second": [
+      55,
+      45
+    ],
+    "rank_correction": "Enemy41 is General rank1, not Colonel. Captain68 rank4 and Marshal75 rank0 certify the trap.",
+    "independent_review": "independent-trap-review.json independently checks all friendly rescue replies and 12 concealed-nibble variants.",
+    "shuttle_control": "When65->55 would be a forbidden sixth reversal, the prototype selects the independently certified65->64->54 route instead."
+  },
+  "incidence": {
+    "gated_roots": 87,
+    "changed": 1,
+    "proof_nodes": 83,
+    "actual_miner_moves": 21,
+    "actual_quiet_miner_moves": 20
+  },
+  "old_corpus": {
+    "games": 552,
+    "honest_roots": 39933,
+    "resource_gate_roots": 87,
+    "resource_gate_actual_miner_moves": 21,
+    "games_with_resource_gate": 4
+  },
+  "timing_ms": {
+    "mean": 0.1273720459770115,
+    "maximum": 0.868371,
+    "total": 11.081368,
+    "sample": "87 already gated roots; wall time on this host only"
+  },
+  "interpretation": [
+    "The 87 gated roots occur in four old games. Only one actual selected move triggers; no gate was relaxed to obtain activity.",
+    "One affected game among552 gives an optimistic descriptive ceiling of1/552, about0.181 percentage points of win rate, even if the sole changed game became a win. It is not an estimated future effect.",
+    "This is an offline counterfactual mechanism audit. Replacing the move can change every later action; no resulting winner or playing-strength gain was measured."
+  ],
+  "tests": {
+    "command": "python3 -m unittest discover -s docs/ai-honest-campaign-2026-10-15/research/miner-assault -p test_trap_filter_prototype.py -v",
+    "passed": 11,
+    "coverage": [
+      "all30 friendly replies",
+      "private-nibble invariance12 variants",
+      "no mutation",
+      "default parity for other moves",
+      "cap fallback",
+      "second-Miner gate exclusion",
+      "own Flag tactical screen bailout",
+      "known friendly rescue refutes trap",
+      "unknown combat aborts witness",
+      "terminal Flag win refutes witness",
+      "exact shuttle changes available certified retreat",
+      "both armies with 180-degree board rotation"
+    ]
+  },
+  "future_adapter_notes": [
+    "Deferred: no runtime driver, selectable ID or tournament was created.",
+    "A future observer adapter must first obtain the unchanged native choice, then run the filter. If an override occurs it must send the existing played actual-source actual-destination command so native persistent goals follow the actual chosen actor/destination (the teacher already uses this correction).",
+    "No native-port readiness is claimed. Actual CX16 AI bank has only45 bytes free; existing mission default is677 bytes. Python wall timing is not a CX16 cycle or bank-size measurement.",
+    "Broader resource-trap coverage should be motivated by future independently observed public loss mechanisms, not by relaxing these gates on this diagnostic case."
+  ],
+  "limitations": [
+    "Only two enemy turns of Miner survival are certified.",
+    "No permanent escape, favorable exchange, retained assault route, eventual Bomb breach, Flag capture or win is proved.",
+    "A Miner is necessary for Flag capture here, but an enemy-no-moves terminal may permit winning without it.",
+    "Strict uncertainty and own Flag screen bailouts intentionally miss other possible traps.",
+    "No separate opponent rationality or action-likelihood model is claimed."
+  ],
+  "primary_research": {
+    "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning",
+    "authors": "Sutton, Precup and Singh",
+    "year": 1999,
+    "doi": "10.1016/S0004-3702(99)00052-1",
+    "url": "https://people.cs.umass.edu/~barto/courses/cs687/Sutton-Precup-Singh-AIJ99.pdf",
+    "relationship": "An option has an initiation set, policy and termination condition. This motivates explicit bounded resource-preservation conditions, but supplies no Stratego-specific benefit guarantee. The trap certificate itself is finite adversarial reply enumeration."
+  },
+  "artifacts": {
+    "trap_filter_prototype.py": "44ef1d464d8fc984bb150d8118e3d0309838f44a9619bd8472761fa382d9489e",
+    "test_trap_filter_prototype.py": "1351b3fbcbda4d5483aa26db3d5a6c840d8eb587d22b83a0b5572b6122602cf0",
+    "trap-filter-incidence.json": "3862b5a2c2d343c07af27f218e17d1de9900a3da9c98493abadd56dc81c43556",
+    "gate_incidence.py": "781a3dce80b131a12d7e157da3101eb71cf73d4300927c7216802d9a9516a980",
+    "gate-incidence.json": "4a2e029547a2cbf47577d3b0b99cd11a87bfffedf9edc49a2fcd8ae2ecb7942b",
+    "independent_trap_review.py": "e268df02d9556ed4e35a32080dcbfcb1960bf5d74c7d1cc9abca4033e8eea9d5",
+    "independent-trap-review.json": "9513937e95fecd6d09c86280496cea7bd2c5e48e32232986115477627acf392e"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39"
+  }
+}
