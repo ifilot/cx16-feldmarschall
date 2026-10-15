@@ -1,0 +1,10 @@
+{
+  "source": "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-template-flag-bomb-v1-normal.fmtour",
+  "source_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "frozen_before_analysis_epoch": 1792107957.0843773,
+  "selection": "All400 completed native template screening attempts, including unscored errors. No validation games.",
+  "confidence_threshold": 0.9,
+  "gate": "First own decision with inferred Flag probability>=0.9 before public Flag disclosure.",
+  "scope": "Descriptive screening diagnostics; no causal or playing-strength claim. Truth used only for offline correctness after prediction.",
+  "path_bound": "Ignore all mobile blockers/guards; block lakes and own Bomb/Flag. Finite distance does not prove a safe route or a win."
+}

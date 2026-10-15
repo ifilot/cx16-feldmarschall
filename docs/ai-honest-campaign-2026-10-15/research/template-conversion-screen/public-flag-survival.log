@@ -1,0 +1,14 @@
+{
+  "flag_losses": 197,
+  "root_confirmed_threat": 197,
+  "selected_every_branch_confirmed_loss": 187,
+  "missed_public_survival_alternative": 0,
+  "final_attacker_already_revealed": 195,
+  "final_attacker_ranks": {
+    "7": 191,
+    "8": 2,
+    "5": 1,
+    "0": 1,
+    "2": 2
+  }
+}

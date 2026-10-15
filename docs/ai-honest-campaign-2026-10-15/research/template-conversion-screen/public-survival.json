@@ -1,0 +1,4155 @@
+{
+  "summary": {
+    "flag_losses": 197,
+    "root_confirmed_threat": 197,
+    "selected_every_branch_confirmed_loss": 187,
+    "missed_public_survival_alternative": 0,
+    "final_attacker_already_revealed": 195,
+    "final_attacker_ranks": {
+      "7": 191,
+      "8": 2,
+      "5": 1,
+      "0": 1,
+      "2": 2
+    }
+  },
+  "records": [
+    {
+      "game_id": 3,
+      "army": 0,
+      "ply": 372,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        21,
+        20
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 36,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 5,
+      "army": 0,
+      "ply": 238,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        97,
+        87
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 6,
+      "army": 1,
+      "ply": 185,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        32,
+        30
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 9,
+      "army": 0,
+      "ply": 358,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        12,
+        11
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 35,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 12,
+      "army": 1,
+      "ply": 341,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        76,
+        77
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 13,
+      "army": 0,
+      "ply": 314,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        37,
+        36
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 3,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 14,
+      "army": 1,
+      "ply": 273,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        30,
+        40
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 17,
+      "army": 0,
+      "ply": 306,
+      "root_confirmed_flag_threats": [
+        94
+      ],
+      "selected": [
+        32,
+        31
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 20,
+      "army": 1,
+      "ply": 427,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        55,
+        54
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 13,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 21,
+      "army": 0,
+      "ply": 256,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        38,
+        37
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 31,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 26,
+      "army": 1,
+      "ply": 245,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        45,
+        55
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 31,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 8
+    },
+    {
+      "game_id": 28,
+      "army": 1,
+      "ply": 145,
+      "root_confirmed_flag_threats": [
+        16
+      ],
+      "selected": [
+        37,
+        36
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 29,
+      "army": 0,
+      "ply": 100,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        65,
+        55
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 30,
+      "army": 1,
+      "ply": 167,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        81,
+        82
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 32,
+      "army": 1,
+      "ply": 99,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        24,
+        25
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 23,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 34,
+      "army": 1,
+      "ply": 131,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        69,
+        79
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 37,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 38,
+      "army": 1,
+      "ply": 109,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        31,
+        41
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 39,
+      "army": 0,
+      "ply": 444,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        35,
+        34
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 7,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 40,
+      "army": 1,
+      "ply": 459,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        71,
+        61
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 41,
+      "army": 0,
+      "ply": 324,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        25,
+        24
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 45,
+      "army": 0,
+      "ply": 418,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        31,
+        21
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 46,
+      "army": 1,
+      "ply": 447,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        71,
+        72
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 52,
+      "army": 1,
+      "ply": 141,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        5,
+        15
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 24,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 53,
+      "army": 0,
+      "ply": 210,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        25,
+        35
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 41,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 55,
+      "army": 0,
+      "ply": 196,
+      "root_confirmed_flag_threats": [
+        94
+      ],
+      "selected": [
+        90,
+        80
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 56,
+      "army": 1,
+      "ply": 241,
+      "root_confirmed_flag_threats": [
+        5
+      ],
+      "selected": [
+        59,
+        69
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 5,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 60,
+      "army": 1,
+      "ply": 343,
+      "root_confirmed_flag_threats": [
+        5
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 15,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 61,
+      "army": 0,
+      "ply": 128,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        83,
+        73
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 62,
+      "army": 1,
+      "ply": 191,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 17,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 68,
+      "army": 1,
+      "ply": 183,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        63,
+        62
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 26,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 70,
+      "army": 1,
+      "ply": 279,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        68,
+        69
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 71,
+      "army": 0,
+      "ply": 382,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        2,
+        1
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 18,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 72,
+      "army": 1,
+      "ply": 179,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        86,
+        87
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 30,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 77,
+      "army": 0,
+      "ply": 104,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        75,
+        35
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 24,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 82,
+      "army": 1,
+      "ply": 265,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 8,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 83,
+      "army": 0,
+      "ply": 340,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        11,
+        10
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 86,
+      "army": 1,
+      "ply": 111,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        24,
+        14
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 31,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 87,
+      "army": 0,
+      "ply": 220,
+      "root_confirmed_flag_threats": [
+        94
+      ],
+      "selected": [
+        27,
+        37
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 90,
+      "army": 1,
+      "ply": 289,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        35,
+        36
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 13,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 91,
+      "army": 0,
+      "ply": 236,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        19,
+        18
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 13,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 92,
+      "army": 1,
+      "ply": 537,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 12,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 96,
+      "army": 1,
+      "ply": 365,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        89,
+        88
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 8,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 98,
+      "army": 1,
+      "ply": 183,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        79,
+        77
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 49,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 99,
+      "army": 0,
+      "ply": 304,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        35,
+        25
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 9,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 100,
+      "army": 1,
+      "ply": 203,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        30,
+        80
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 38,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 101,
+      "army": 0,
+      "ply": 454,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        7,
+        6
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 13,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 102,
+      "army": 1,
+      "ply": 139,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        21,
+        61
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 103,
+      "army": 0,
+      "ply": 176,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        49,
+        39
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 104,
+      "army": 1,
+      "ply": 207,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        85,
+        95
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 105,
+      "army": 0,
+      "ply": 108,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        49,
+        39
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 106,
+      "army": 1,
+      "ply": 113,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        68,
+        69
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 38,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 109,
+      "army": 0,
+      "ply": 476,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        98,
+        97
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 22,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 114,
+      "army": 1,
+      "ply": 305,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        98,
+        97
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 115,
+      "army": 0,
+      "ply": 278,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        34,
+        33
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 116,
+      "army": 1,
+      "ply": 195,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        61,
+        62
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 22,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 117,
+      "army": 0,
+      "ply": 290,
+      "root_confirmed_flag_threats": [
+        94
+      ],
+      "selected": [
+        35,
+        36
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 14,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 119,
+      "army": 0,
+      "ply": 182,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        32,
+        31
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 120,
+      "army": 1,
+      "ply": 259,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        98,
+        97
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 124,
+      "army": 1,
+      "ply": 377,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        62,
+        63
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 14,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 125,
+      "army": 0,
+      "ply": 238,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        64,
+        63
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 12,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 126,
+      "army": 1,
+      "ply": 239,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        12,
+        14
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 127,
+      "army": 0,
+      "ply": 344,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        5,
+        15
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 10,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 128,
+      "army": 1,
+      "ply": 287,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        99,
+        89
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 131,
+      "army": 0,
+      "ply": 166,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        73,
+        72
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 132,
+      "army": 1,
+      "ply": 179,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        70,
+        71
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 34,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 136,
+      "army": 1,
+      "ply": 273,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        70,
+        60
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 23,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 138,
+      "army": 1,
+      "ply": 171,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        23,
+        33
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 141,
+      "army": 0,
+      "ply": 144,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        74,
+        64
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 142,
+      "army": 1,
+      "ply": 233,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        86,
+        96
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 22,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 143,
+      "army": 0,
+      "ply": 282,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        38,
+        37
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 11,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 144,
+      "army": 1,
+      "ply": 319,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        18,
+        17
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 145,
+      "army": 0,
+      "ply": 600,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        28,
+        27
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 147,
+      "army": 0,
+      "ply": 222,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        33,
+        23
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 148,
+      "army": 1,
+      "ply": 189,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        17,
+        16
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 30,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 150,
+      "army": 1,
+      "ply": 271,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        72,
+        82
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 154,
+      "army": 1,
+      "ply": 247,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        34,
+        35
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 7,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 155,
+      "army": 0,
+      "ply": 284,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        17,
+        16
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 158,
+      "army": 1,
+      "ply": 127,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        75,
+        74
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 31,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 160,
+      "army": 1,
+      "ply": 277,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        22,
+        32
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 10,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 163,
+      "army": 0,
+      "ply": 142,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        30,
+        31
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 167,
+      "army": 0,
+      "ply": 272,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        59,
+        58
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 26,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 168,
+      "army": 1,
+      "ply": 355,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        92,
+        93
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 11,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 175,
+      "army": 0,
+      "ply": 230,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        64,
+        63
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 178,
+      "army": 1,
+      "ply": 275,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        16,
+        17
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 26,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 180,
+      "army": 1,
+      "ply": 201,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        26,
+        24
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 181,
+      "army": 0,
+      "ply": 182,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        74,
+        73
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 34,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 185,
+      "army": 0,
+      "ply": 158,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        74,
+        73
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 188,
+      "army": 1,
+      "ply": 317,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        72,
+        73
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 13,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 192,
+      "army": 1,
+      "ply": 157,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        84,
+        74
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 24,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 193,
+      "army": 0,
+      "ply": 138,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        79,
+        39
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 194,
+      "army": 1,
+      "ply": 219,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        23,
+        24
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 195,
+      "army": 0,
+      "ply": 140,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        35,
+        33
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 196,
+      "army": 1,
+      "ply": 181,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        55,
+        65
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 38,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 197,
+      "army": 0,
+      "ply": 314,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        36,
+        35
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 23,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 198,
+      "army": 1,
+      "ply": 299,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 200,
+      "army": 1,
+      "ply": 151,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        37,
+        38
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 204,
+      "army": 1,
+      "ply": 149,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        2,
+        3
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 206,
+      "army": 1,
+      "ply": 209,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        39,
+        69
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 34,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 208,
+      "army": 1,
+      "ply": 321,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        81,
+        91
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 26,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 209,
+      "army": 0,
+      "ply": 282,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        30,
+        20
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 26,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 210,
+      "army": 1,
+      "ply": 261,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        82,
+        72
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 34,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 211,
+      "army": 0,
+      "ply": 172,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        74,
+        79
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 36,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 214,
+      "army": 1,
+      "ply": 147,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        13,
+        14
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 32,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 215,
+      "army": 0,
+      "ply": 124,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        38,
+        37
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 216,
+      "army": 1,
+      "ply": 267,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        34,
+        35
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 219,
+      "army": 0,
+      "ply": 204,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        48,
+        38
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 19,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 221,
+      "army": 0,
+      "ply": 180,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        67,
+        68
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 226,
+      "army": 1,
+      "ply": 259,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        64,
+        54
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 37,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 227,
+      "army": 0,
+      "ply": 258,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        8,
+        9
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 15,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 228,
+      "army": 1,
+      "ply": 81,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        48,
+        58
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 22,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 230,
+      "army": 1,
+      "ply": 149,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        65,
+        75
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 31,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 231,
+      "army": 0,
+      "ply": 268,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        38,
+        37
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 6,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 233,
+      "army": 0,
+      "ply": 310,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        63,
+        62
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 24,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 235,
+      "army": 0,
+      "ply": 132,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        1,
+        0
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 34,
+      "final_attacker_publicly_revealed_before_own_move": false,
+      "final_attacker_rank_after_disclosure": 5
+    },
+    {
+      "game_id": 237,
+      "army": 0,
+      "ply": 184,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        64,
+        54
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 34,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 238,
+      "army": 1,
+      "ply": 189,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        25,
+        15
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 26,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 239,
+      "army": 0,
+      "ply": 182,
+      "root_confirmed_flag_threats": [
+        83
+      ],
+      "selected": [
+        26,
+        16
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 240,
+      "army": 1,
+      "ply": 675,
+      "root_confirmed_flag_threats": [
+        7
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 24,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 241,
+      "army": 0,
+      "ply": 260,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        36,
+        35
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 26,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 242,
+      "army": 1,
+      "ply": 327,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        86,
+        76
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 14,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 243,
+      "army": 0,
+      "ply": 136,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        51,
+        50
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 35,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 244,
+      "army": 1,
+      "ply": 271,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        73,
+        83
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 19,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 246,
+      "army": 1,
+      "ply": 139,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        24,
+        25
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 249,
+      "army": 0,
+      "ply": 186,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        62,
+        61
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 250,
+      "army": 1,
+      "ply": 203,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        4,
+        14
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 25,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 251,
+      "army": 0,
+      "ply": 296,
+      "root_confirmed_flag_threats": [
+        83
+      ],
+      "selected": [
+        40,
+        30
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 12,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 252,
+      "army": 1,
+      "ply": 273,
+      "root_confirmed_flag_threats": [
+        7
+      ],
+      "selected": [
+        34,
+        24
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 4,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 254,
+      "army": 1,
+      "ply": 107,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        22,
+        23
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 27,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 255,
+      "army": 0,
+      "ply": 286,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        70,
+        60
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 0
+    },
+    {
+      "game_id": 257,
+      "army": 0,
+      "ply": 224,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        24,
+        34
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 23,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 259,
+      "army": 0,
+      "ply": 280,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        65,
+        55
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 18,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 260,
+      "army": 1,
+      "ply": 247,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        15,
+        25
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 19,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 261,
+      "army": 0,
+      "ply": 330,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        5,
+        15
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 18,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 262,
+      "army": 1,
+      "ply": 175,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        15,
+        16
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 24,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 263,
+      "army": 0,
+      "ply": 188,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        22,
+        21
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": false,
+      "final_attacker_rank_after_disclosure": 2
+    },
+    {
+      "game_id": 265,
+      "army": 0,
+      "ply": 280,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        87,
+        86
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 266,
+      "army": 1,
+      "ply": 283,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        45,
+        55
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 19,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 268,
+      "army": 1,
+      "ply": 245,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        91,
+        81
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 18,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 269,
+      "army": 0,
+      "ply": 234,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        55,
+        45
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 270,
+      "army": 1,
+      "ply": 437,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        69,
+        79
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 23,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 274,
+      "army": 1,
+      "ply": 213,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 19,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 275,
+      "army": 0,
+      "ply": 314,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        27,
+        26
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 276,
+      "army": 1,
+      "ply": 199,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        55,
+        65
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 31,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 281,
+      "army": 0,
+      "ply": 332,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        24,
+        23
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 22,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 282,
+      "army": 1,
+      "ply": 343,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        75,
+        76
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 4,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 283,
+      "army": 0,
+      "ply": 164,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        0,
+        1
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 37,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 284,
+      "army": 1,
+      "ply": 407,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        86,
+        96
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 287,
+      "army": 0,
+      "ply": 450,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        38,
+        37
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 10,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 288,
+      "army": 1,
+      "ply": 383,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        72,
+        62
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 10,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 289,
+      "army": 0,
+      "ply": 186,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        34,
+        33
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 292,
+      "army": 1,
+      "ply": 131,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        60,
+        70
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 34,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 298,
+      "army": 1,
+      "ply": 603,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        91,
+        90
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 18,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 300,
+      "army": 1,
+      "ply": 239,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        50,
+        60
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 301,
+      "army": 0,
+      "ply": 126,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        84,
+        74
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 302,
+      "army": 1,
+      "ply": 191,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        36,
+        35
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 9,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 303,
+      "army": 0,
+      "ply": 502,
+      "root_confirmed_flag_threats": [
+        83
+      ],
+      "selected": [
+        7,
+        8
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 304,
+      "army": 1,
+      "ply": 239,
+      "root_confirmed_flag_threats": [
+        5
+      ],
+      "selected": [
+        90,
+        91
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 12,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 305,
+      "army": 0,
+      "ply": 334,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        17,
+        27
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 306,
+      "army": 1,
+      "ply": 143,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        84,
+        85
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 30,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 307,
+      "army": 0,
+      "ply": 152,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        74,
+        64
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 35,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 308,
+      "army": 1,
+      "ply": 421,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 14,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 309,
+      "army": 0,
+      "ply": 170,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        87,
+        77
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 310,
+      "army": 1,
+      "ply": 219,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        13,
+        14
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 24,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 311,
+      "army": 0,
+      "ply": 290,
+      "root_confirmed_flag_threats": [
+        94
+      ],
+      "selected": [
+        90,
+        80
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 17,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 313,
+      "army": 0,
+      "ply": 310,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        26,
+        25
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 14,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 315,
+      "army": 0,
+      "ply": 252,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        31,
+        21
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 316,
+      "army": 1,
+      "ply": 163,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        68,
+        69
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 318,
+      "army": 1,
+      "ply": 223,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        86,
+        87
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 37,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 324,
+      "army": 1,
+      "ply": 135,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        48,
+        49
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 31,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 327,
+      "army": 0,
+      "ply": 276,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        37,
+        36
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 29,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 331,
+      "army": 0,
+      "ply": 174,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        65,
+        75
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 31,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 336,
+      "army": 1,
+      "ply": 377,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        75,
+        76
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 11,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 338,
+      "army": 1,
+      "ply": 297,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        74,
+        75
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 341,
+      "army": 0,
+      "ply": 156,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        24,
+        14
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 345,
+      "army": 0,
+      "ply": 210,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        21,
+        20
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 20,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 347,
+      "army": 0,
+      "ply": 194,
+      "root_confirmed_flag_threats": [
+        94
+      ],
+      "selected": [
+        26,
+        16
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 33,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 2
+    },
+    {
+      "game_id": 349,
+      "army": 0,
+      "ply": 170,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        49,
+        39
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 30,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 350,
+      "army": 1,
+      "ply": 203,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        76,
+        77
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 23,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 352,
+      "army": 1,
+      "ply": 211,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        78,
+        88
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 24,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 354,
+      "army": 1,
+      "ply": 151,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        60,
+        61
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 30,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 355,
+      "army": 0,
+      "ply": 380,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        30,
+        20
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 12,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 356,
+      "army": 1,
+      "ply": 501,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        67,
+        68
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 13,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 357,
+      "army": 0,
+      "ply": 270,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        16,
+        17
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 15,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 358,
+      "army": 1,
+      "ply": 331,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        85,
+        75
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 14,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 359,
+      "army": 0,
+      "ply": 222,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        22,
+        21
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 40,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 360,
+      "army": 1,
+      "ply": 199,
+      "root_confirmed_flag_threats": [
+        69
+      ],
+      "selected": [
+        22,
+        21
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 30,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 8
+    },
+    {
+      "game_id": 362,
+      "army": 1,
+      "ply": 123,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        55,
+        65
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 34,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 363,
+      "army": 0,
+      "ply": 258,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        61,
+        60
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 32,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 364,
+      "army": 1,
+      "ply": 171,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        22,
+        32
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 365,
+      "army": 0,
+      "ply": 230,
+      "root_confirmed_flag_threats": [
+        80
+      ],
+      "selected": [
+        65,
+        64
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 28,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 369,
+      "army": 0,
+      "ply": 318,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        2,
+        1
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 374,
+      "army": 1,
+      "ply": 89,
+      "root_confirmed_flag_threats": [
+        19
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 30,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 375,
+      "army": 0,
+      "ply": 260,
+      "root_confirmed_flag_threats": [
+        91
+      ],
+      "selected": [
+        17,
+        7
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": false,
+        "branches": 12
+      },
+      "survival_alternatives": [],
+      "legal_moves": 16,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 378,
+      "army": 1,
+      "ply": 323,
+      "root_confirmed_flag_threats": [
+        8
+      ],
+      "selected": [
+        72,
+        62
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 381,
+      "army": 0,
+      "ply": 452,
+      "root_confirmed_flag_threats": [
+        94
+      ],
+      "selected": [
+        27,
+        26
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 19,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 389,
+      "army": 0,
+      "ply": 270,
+      "root_confirmed_flag_threats": [
+        83
+      ],
+      "selected": [
+        35,
+        36
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 23,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    },
+    {
+      "game_id": 390,
+      "army": 1,
+      "ply": 207,
+      "root_confirmed_flag_threats": [
+        5
+      ],
+      "selected": [
+        91,
+        90
+      ],
+      "selected_result": {
+        "guarantees_no_confirmed_flag_capture": false,
+        "confirmed_flag_capture_in_every_branch": true,
+        "branches": 1
+      },
+      "survival_alternatives": [],
+      "legal_moves": 21,
+      "final_attacker_publicly_revealed_before_own_move": true,
+      "final_attacker_rank_after_disclosure": 7
+    }
+  ]
+}

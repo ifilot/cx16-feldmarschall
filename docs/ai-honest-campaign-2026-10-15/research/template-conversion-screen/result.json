@@ -1,0 +1,6375 @@
+{
+  "summary": {
+    "attempts": 400,
+    "outcomes": {
+      "win": 110,
+      "loss": 203,
+      "draw": 74,
+      "error": 13
+    },
+    "confident_before_disclosure": 332,
+    "correct_confident": 324,
+    "confident_outcomes": {
+      "win": 102,
+      "loss": 153,
+      "draw": 67,
+      "error": 10
+    },
+    "correct_confident_outcomes": {
+      "win": 100,
+      "loss": 148,
+      "draw": 67,
+      "error": 9
+    },
+    "wrong_confident_outcomes": {
+      "loss": 5,
+      "win": 2,
+      "error": 1
+    },
+    "no_miners_at_correct_confidence": 1,
+    "no_optimistic_miner_route_at_correct_confidence": 1,
+    "endings": {
+      "win": {
+        "no moves": 40,
+        "flag": 70
+      },
+      "draw": {
+        "ply limit": 74
+      },
+      "loss": {
+        "flag": 197,
+        "no moves": 6
+      },
+      "error": {
+        "engine error: AI produced an illegal move": 4,
+        "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 9
+      }
+    }
+  },
+  "records": [
+    {
+      "game_id": 1,
+      "pair_id": 1,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 181,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 2,
+      "pair_id": 1,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 514,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 3,
+      "pair_id": 2,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 374,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 4,
+      "pair_id": 2,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 356,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 5,
+      "pair_id": 3,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 240,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": false,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 6,
+      "pair_id": 3,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 187,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 7,
+      "pair_id": 4,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 419,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 8,
+      "pair_id": 4,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 9,
+      "pair_id": 5,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 360,
+      "first_confident": {
+        "ply": 12,
+        "probability": 0.9869852579557858,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 10,
+      "pair_id": 5,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 992,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 11,
+      "pair_id": 6,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 12,
+        "probability": 0.9987250937966707,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 12,
+      "pair_id": 6,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 343,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 13,
+      "pair_id": 7,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 316,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 14,
+      "pair_id": 7,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 275,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 15,
+      "pair_id": 8,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 231,
+      "first_confident": {
+        "ply": 12,
+        "probability": 0.9994865131587513,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 16,
+      "pair_id": 8,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 17,
+      "pair_id": 9,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 308,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 18,
+      "pair_id": 9,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 19,
+      "pair_id": 10,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 253,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 20,
+      "pair_id": 10,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 429,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 21,
+      "pair_id": 11,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 258,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 22,
+      "pair_id": 11,
+      "army": 1,
+      "outcome": "error",
+      "reason": "engine error: AI produced an illegal move",
+      "plies": 302,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 23,
+      "pair_id": 12,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 125,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 24,
+      "pair_id": 12,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 25,
+      "pair_id": 13,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 249,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 26,
+      "pair_id": 13,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 247,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 27,
+      "pair_id": 14,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 28,
+      "pair_id": 14,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 147,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 29,
+      "pair_id": 15,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 102,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 30,
+      "pair_id": 15,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 169,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 31,
+      "pair_id": 16,
+      "army": 0,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 364,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 32,
+      "pair_id": 16,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 101,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9261661262160141,
+        "predicted_origin": 33,
+        "correct": false,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 33,
+      "pair_id": 17,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 34,
+      "pair_id": 17,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 133,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 35,
+      "pair_id": 18,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 307,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 36,
+      "pair_id": 18,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 37,
+      "pair_id": 19,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 281,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 33,
+        "correct": false,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 38,
+      "pair_id": 19,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 111,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 39,
+      "pair_id": 20,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 446,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 40,
+      "pair_id": 20,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 461,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 41,
+      "pair_id": 21,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 326,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 42,
+      "pair_id": 21,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 7,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 43,
+      "pair_id": 22,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 385,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 44,
+      "pair_id": 22,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 152,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 45,
+      "pair_id": 23,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 420,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 46,
+      "pair_id": 23,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 449,
+      "first_confident": {
+        "ply": 11,
+        "probability": 0.9761752273600616,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 47,
+      "pair_id": 24,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 705,
+      "first_confident": {
+        "ply": 12,
+        "probability": 0.9999315037089421,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 48,
+      "pair_id": 24,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 440,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 49,
+      "pair_id": 25,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 467,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 50,
+      "pair_id": 25,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 51,
+      "pair_id": 26,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 197,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 52,
+      "pair_id": 26,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 143,
+      "first_confident": {
+        "ply": 7,
+        "probability": 0.9987250937966707,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 53,
+      "pair_id": 27,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 212,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 54,
+      "pair_id": 27,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 55,
+      "pair_id": 28,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 198,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": false,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 56,
+      "pair_id": 28,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 243,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 57,
+      "pair_id": 29,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "no moves",
+      "plies": 360,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 58,
+      "pair_id": 29,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 300,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 59,
+      "pair_id": 30,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 301,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 60,
+      "pair_id": 30,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 345,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 61,
+      "pair_id": 31,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 130,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 62,
+      "pair_id": 31,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 193,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 63,
+      "pair_id": 32,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 627,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 64,
+      "pair_id": 32,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 65,
+      "pair_id": 33,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 223,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 66,
+      "pair_id": 33,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 486,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 67,
+      "pair_id": 34,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 325,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 68,
+      "pair_id": 34,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 185,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 69,
+      "pair_id": 35,
+      "army": 0,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 132,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 70,
+      "pair_id": 35,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 281,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 71,
+      "pair_id": 36,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 384,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 72,
+      "pair_id": 36,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 181,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 73,
+      "pair_id": 37,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 313,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 74,
+      "pair_id": 37,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 372,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 75,
+      "pair_id": 38,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 76,
+      "pair_id": 38,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 812,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 77,
+      "pair_id": 39,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 106,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 78,
+      "pair_id": 39,
+      "army": 1,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 195,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 79,
+      "pair_id": 40,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9950322234156821,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 80,
+      "pair_id": 40,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 81,
+      "pair_id": 41,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 227,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 82,
+      "pair_id": 41,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 267,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 83,
+      "pair_id": 42,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 342,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 84,
+      "pair_id": 42,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 702,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 85,
+      "pair_id": 43,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 86,
+      "pair_id": 43,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 113,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 87,
+      "pair_id": 44,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 222,
+      "first_confident": {
+        "ply": 10,
+        "probability": 0.9999149021009455,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 88,
+      "pair_id": 44,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 89,
+      "pair_id": 45,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 90,
+      "pair_id": 45,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 291,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 91,
+      "pair_id": 46,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 238,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 92,
+      "pair_id": 46,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 539,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 93,
+      "pair_id": 47,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 94,
+      "pair_id": 47,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 95,
+      "pair_id": 48,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 96,
+      "pair_id": 48,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 367,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 97,
+      "pair_id": 49,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 545,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 98,
+      "pair_id": 49,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 185,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 99,
+      "pair_id": 50,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 306,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 100,
+      "pair_id": 50,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 205,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 101,
+      "pair_id": 51,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 456,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 102,
+      "pair_id": 51,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 141,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 103,
+      "pair_id": 52,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 178,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 104,
+      "pair_id": 52,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 209,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 105,
+      "pair_id": 53,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 110,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 106,
+      "pair_id": 53,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 115,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 107,
+      "pair_id": 54,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 108,
+      "pair_id": 54,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 109,
+      "pair_id": 55,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 478,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 110,
+      "pair_id": 55,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 486,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 111,
+      "pair_id": 56,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 281,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 112,
+      "pair_id": 56,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 350,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 113,
+      "pair_id": 57,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 251,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 114,
+      "pair_id": 57,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 307,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 115,
+      "pair_id": 58,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 280,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 116,
+      "pair_id": 58,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 197,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 117,
+      "pair_id": 59,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 292,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 118,
+      "pair_id": 59,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 600,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 119,
+      "pair_id": 60,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 184,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 120,
+      "pair_id": 60,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 261,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 121,
+      "pair_id": 61,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 583,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 122,
+      "pair_id": 61,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 123,
+      "pair_id": 62,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 124,
+      "pair_id": 62,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 379,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 125,
+      "pair_id": 63,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 240,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 126,
+      "pair_id": 63,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 241,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 127,
+      "pair_id": 64,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 346,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 128,
+      "pair_id": 64,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 289,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 129,
+      "pair_id": 65,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 833,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 130,
+      "pair_id": 65,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 352,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 131,
+      "pair_id": 66,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 168,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 132,
+      "pair_id": 66,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 181,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 133,
+      "pair_id": 67,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 617,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 134,
+      "pair_id": 67,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 176,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 135,
+      "pair_id": 68,
+      "army": 0,
+      "outcome": "error",
+      "reason": "engine error: AI produced an illegal move",
+      "plies": 657,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 136,
+      "pair_id": 68,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 275,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 137,
+      "pair_id": 69,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 107,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 138,
+      "pair_id": 69,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 173,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 139,
+      "pair_id": 70,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 140,
+      "pair_id": 70,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 374,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 141,
+      "pair_id": 71,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 146,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 142,
+      "pair_id": 71,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 235,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 143,
+      "pair_id": 72,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 284,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 144,
+      "pair_id": 72,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 321,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 145,
+      "pair_id": 73,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 602,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 146,
+      "pair_id": 73,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 147,
+      "pair_id": 74,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 224,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 148,
+      "pair_id": 74,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 191,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 149,
+      "pair_id": 75,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 447,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 150,
+      "pair_id": 75,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 273,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 151,
+      "pair_id": 76,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 627,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 152,
+      "pair_id": 76,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 536,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 153,
+      "pair_id": 77,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 201,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 154,
+      "pair_id": 77,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 249,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 155,
+      "pair_id": 78,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 286,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 156,
+      "pair_id": 78,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 157,
+      "pair_id": 79,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 299,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 158,
+      "pair_id": 79,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 129,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 159,
+      "pair_id": 80,
+      "army": 0,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 223,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 160,
+      "pair_id": 80,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 279,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 161,
+      "pair_id": 81,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9999149021009455,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 162,
+      "pair_id": 81,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 244,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 163,
+      "pair_id": 82,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 144,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 164,
+      "pair_id": 82,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 286,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 165,
+      "pair_id": 83,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 367,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 166,
+      "pair_id": 83,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 167,
+      "pair_id": 84,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 274,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 168,
+      "pair_id": 84,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 357,
+      "first_confident": {
+        "ply": 291,
+        "probability": 1.0,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 1,
+        "optimistic_miner_distance": 15
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 169,
+      "pair_id": 85,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 353,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9999149021009455,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 170,
+      "pair_id": 85,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 171,
+      "pair_id": 86,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 259,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 172,
+      "pair_id": 86,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 434,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 173,
+      "pair_id": 87,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 191,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 174,
+      "pair_id": 87,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 338,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 175,
+      "pair_id": 88,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 232,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9999149021009455,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 176,
+      "pair_id": 88,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 248,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 177,
+      "pair_id": 89,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 178,
+      "pair_id": 89,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 277,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 179,
+      "pair_id": 90,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 180,
+      "pair_id": 90,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 203,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 181,
+      "pair_id": 91,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 184,
+      "first_confident": {
+        "ply": 14,
+        "probability": 0.9989735688781088,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 182,
+      "pair_id": 91,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 183,
+      "pair_id": 92,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 245,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 184,
+      "pair_id": 92,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 185,
+      "pair_id": 93,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 160,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 186,
+      "pair_id": 93,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 187,
+      "pair_id": 94,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 188,
+      "pair_id": 94,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 319,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 189,
+      "pair_id": 95,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 265,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 190,
+      "pair_id": 95,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 306,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 191,
+      "pair_id": 96,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 343,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 192,
+      "pair_id": 96,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 159,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 193,
+      "pair_id": 97,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 140,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 194,
+      "pair_id": 97,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 221,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 195,
+      "pair_id": 98,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 142,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 196,
+      "pair_id": 98,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 183,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 197,
+      "pair_id": 99,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 316,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 198,
+      "pair_id": 99,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 301,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 199,
+      "pair_id": 100,
+      "army": 0,
+      "outcome": "error",
+      "reason": "engine error: AI produced an illegal move",
+      "plies": 487,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 200,
+      "pair_id": 100,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 153,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 201,
+      "pair_id": 101,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "no moves",
+      "plies": 322,
+      "first_confident": {
+        "ply": 312,
+        "probability": 1.0,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 0,
+        "optimistic_miner_distance": null
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 202,
+      "pair_id": 101,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "no moves",
+      "plies": 301,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": false,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 203,
+      "pair_id": 102,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 239,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 204,
+      "pair_id": 102,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 151,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 205,
+      "pair_id": 103,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 233,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 206,
+      "pair_id": 103,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 211,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 207,
+      "pair_id": 104,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 287,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9992128050380478,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 208,
+      "pair_id": 104,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 323,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 209,
+      "pair_id": 105,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 284,
+      "first_confident": {
+        "ply": 10,
+        "probability": 0.9999787241285404,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 210,
+      "pair_id": 105,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 263,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 211,
+      "pair_id": 106,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 174,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 212,
+      "pair_id": 106,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 213,
+      "pair_id": 107,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 214,
+      "pair_id": 107,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 149,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 215,
+      "pair_id": 108,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 126,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 216,
+      "pair_id": 108,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 269,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 217,
+      "pair_id": 109,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 259,
+      "first_confident": {
+        "ply": 12,
+        "probability": 0.9999315037089421,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 218,
+      "pair_id": 109,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 219,
+      "pair_id": 110,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 206,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 220,
+      "pair_id": 110,
+      "army": 1,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 166,
+      "first_confident": {
+        "ply": 9,
+        "probability": 0.9879399591514746,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 221,
+      "pair_id": 111,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 182,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 222,
+      "pair_id": 111,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 226,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 223,
+      "pair_id": 112,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 583,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 224,
+      "pair_id": 112,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 482,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 225,
+      "pair_id": 113,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 241,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 226,
+      "pair_id": 113,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 261,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 227,
+      "pair_id": 114,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 260,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 228,
+      "pair_id": 114,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 83,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 229,
+      "pair_id": 115,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 230,
+      "pair_id": 115,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 151,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 231,
+      "pair_id": 116,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 270,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 232,
+      "pair_id": 116,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 233,
+      "pair_id": 117,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 312,
+      "first_confident": {
+        "ply": 12,
+        "probability": 0.9869852579557858,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 234,
+      "pair_id": 117,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 266,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 235,
+      "pair_id": 118,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 134,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 236,
+      "pair_id": 118,
+      "army": 1,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 415,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 237,
+      "pair_id": 119,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 186,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 238,
+      "pair_id": 119,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 191,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 239,
+      "pair_id": 120,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 184,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 240,
+      "pair_id": 120,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 677,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 241,
+      "pair_id": 121,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 262,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 242,
+      "pair_id": 121,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 329,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 243,
+      "pair_id": 122,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 138,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 244,
+      "pair_id": 122,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 273,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 245,
+      "pair_id": 123,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "no moves",
+      "plies": 254,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 246,
+      "pair_id": 123,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 141,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 247,
+      "pair_id": 124,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 248,
+      "pair_id": 124,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 228,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 249,
+      "pair_id": 125,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 188,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 250,
+      "pair_id": 125,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 205,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 251,
+      "pair_id": 126,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 298,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 252,
+      "pair_id": 126,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 275,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 253,
+      "pair_id": 127,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 193,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": false,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 254,
+      "pair_id": 127,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 109,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 255,
+      "pair_id": 128,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 288,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 256,
+      "pair_id": 128,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 257,
+      "pair_id": 129,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 226,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 258,
+      "pair_id": 129,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 164,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 259,
+      "pair_id": 130,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 282,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 260,
+      "pair_id": 130,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 249,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 261,
+      "pair_id": 131,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 332,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 262,
+      "pair_id": 131,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 177,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 263,
+      "pair_id": 132,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 190,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 264,
+      "pair_id": 132,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 265,
+      "pair_id": 133,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 282,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 266,
+      "pair_id": 133,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 285,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 267,
+      "pair_id": 134,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 268,
+      "pair_id": 134,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 247,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 269,
+      "pair_id": 135,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 236,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 270,
+      "pair_id": 135,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 439,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 271,
+      "pair_id": 136,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 272,
+      "pair_id": 136,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 454,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 273,
+      "pair_id": 137,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "no moves",
+      "plies": 244,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 274,
+      "pair_id": 137,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 215,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 275,
+      "pair_id": 138,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 316,
+      "first_confident": {
+        "ply": 10,
+        "probability": 0.9999787241285404,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 276,
+      "pair_id": 138,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 201,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 277,
+      "pair_id": 139,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 247,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 278,
+      "pair_id": 139,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 772,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 279,
+      "pair_id": 140,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 280,
+      "pair_id": 140,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 282,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 281,
+      "pair_id": 141,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 334,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 282,
+      "pair_id": 141,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 345,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 283,
+      "pair_id": 142,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 166,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 284,
+      "pair_id": 142,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 409,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 285,
+      "pair_id": 143,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 525,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 286,
+      "pair_id": 143,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 287,
+      "pair_id": 144,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 452,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 288,
+      "pair_id": 144,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 385,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 289,
+      "pair_id": 145,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 188,
+      "first_confident": {
+        "ply": 16,
+        "probability": 0.9806076854334226,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 290,
+      "pair_id": 145,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 736,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 291,
+      "pair_id": 146,
+      "army": 0,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 176,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 292,
+      "pair_id": 146,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 133,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 293,
+      "pair_id": 147,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 475,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 294,
+      "pair_id": 147,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 304,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 295,
+      "pair_id": 148,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 389,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 296,
+      "pair_id": 148,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 297,
+      "pair_id": 149,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 861,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 298,
+      "pair_id": 149,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 605,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 299,
+      "pair_id": 150,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 300,
+      "pair_id": 150,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 241,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 301,
+      "pair_id": 151,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 128,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 302,
+      "pair_id": 151,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 193,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 303,
+      "pair_id": 152,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 504,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 304,
+      "pair_id": 152,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 241,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 305,
+      "pair_id": 153,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 336,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 306,
+      "pair_id": 153,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 145,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 307,
+      "pair_id": 154,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 154,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 308,
+      "pair_id": 154,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 423,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 309,
+      "pair_id": 155,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 172,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 310,
+      "pair_id": 155,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 221,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 311,
+      "pair_id": 156,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 292,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 312,
+      "pair_id": 156,
+      "army": 1,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 352,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": false,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 313,
+      "pair_id": 157,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 312,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9950322234156821,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 314,
+      "pair_id": 157,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 934,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 315,
+      "pair_id": 158,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 254,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 316,
+      "pair_id": 158,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 165,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 317,
+      "pair_id": 159,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 318,
+      "pair_id": 159,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 225,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 319,
+      "pair_id": 160,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 471,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 320,
+      "pair_id": 160,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 274,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 321,
+      "pair_id": 161,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 322,
+      "pair_id": 161,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 400,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 323,
+      "pair_id": 162,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 205,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 324,
+      "pair_id": 162,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 137,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": false,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 325,
+      "pair_id": 163,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9950322234156821,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 326,
+      "pair_id": 163,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 458,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 327,
+      "pair_id": 164,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 278,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 328,
+      "pair_id": 164,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 329,
+      "pair_id": 165,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 330,
+      "pair_id": 165,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 331,
+      "pair_id": 166,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 176,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 332,
+      "pair_id": 166,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 333,
+      "pair_id": 167,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 291,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 334,
+      "pair_id": 167,
+      "army": 1,
+      "outcome": "error",
+      "reason": "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513",
+      "plies": 150,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 335,
+      "pair_id": 168,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 323,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 336,
+      "pair_id": 168,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 379,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 337,
+      "pair_id": 169,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 367,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 338,
+      "pair_id": 169,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 299,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 339,
+      "pair_id": 170,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 340,
+      "pair_id": 170,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 341,
+      "pair_id": 171,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 158,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 342,
+      "pair_id": 171,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 266,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.990114881111408,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 343,
+      "pair_id": 172,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 14,
+        "probability": 0.9999315037089421,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 344,
+      "pair_id": 172,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 324,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 345,
+      "pair_id": 173,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 212,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 346,
+      "pair_id": 173,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 352,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 347,
+      "pair_id": 174,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 196,
+      "first_confident": {
+        "ply": 8,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 348,
+      "pair_id": 174,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 182,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 349,
+      "pair_id": 175,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 172,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 350,
+      "pair_id": 175,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 205,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 11
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 351,
+      "pair_id": 176,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 363,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 352,
+      "pair_id": 176,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 213,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 353,
+      "pair_id": 177,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 354,
+      "pair_id": 177,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 153,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 355,
+      "pair_id": 178,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 382,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9992128050380478,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 356,
+      "pair_id": 178,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 503,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 357,
+      "pair_id": 179,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 272,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 358,
+      "pair_id": 179,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 333,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 359,
+      "pair_id": 180,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 224,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 360,
+      "pair_id": 180,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 201,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 361,
+      "pair_id": 181,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 283,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 362,
+      "pair_id": 181,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 125,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 363,
+      "pair_id": 182,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 260,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 364,
+      "pair_id": 182,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 173,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 365,
+      "pair_id": 183,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 232,
+      "first_confident": {
+        "ply": 12,
+        "probability": 0.9869852579557858,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 366,
+      "pair_id": 183,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 367,
+      "pair_id": 184,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 395,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 368,
+      "pair_id": 184,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 426,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 369,
+      "pair_id": 185,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 320,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 370,
+      "pair_id": 185,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 371,
+      "pair_id": 186,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 743,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 372,
+      "pair_id": 186,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 480,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 373,
+      "pair_id": 187,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 374,
+      "pair_id": 187,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 91,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 375,
+      "pair_id": 188,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 262,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 376,
+      "pair_id": 188,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "no moves",
+      "plies": 281,
+      "first_confident": null,
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 377,
+      "pair_id": 189,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 378,
+      "pair_id": 189,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 325,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 379,
+      "pair_id": 190,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 380,
+      "pair_id": 190,
+      "army": 1,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 494,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 381,
+      "pair_id": 191,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 454,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 382,
+      "pair_id": 191,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 383,
+      "pair_id": 192,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 384,
+      "pair_id": 192,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 385,
+      "pair_id": 193,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 386,
+      "pair_id": 193,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 430,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 387,
+      "pair_id": 194,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 14,
+        "probability": 0.9806076854334226,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 388,
+      "pair_id": 194,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 524,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9709347996857818,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 389,
+      "pair_id": 195,
+      "army": 0,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 272,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 390,
+      "pair_id": 195,
+      "army": 1,
+      "outcome": "loss",
+      "reason": "flag",
+      "plies": 209,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 391,
+      "pair_id": 196,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 191,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 39,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 392,
+      "pair_id": 196,
+      "army": 1,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9804284580798731,
+        "predicted_origin": 30,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 8
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 393,
+      "pair_id": 197,
+      "army": 0,
+      "outcome": "win",
+      "reason": "no moves",
+      "plies": 391,
+      "first_confident": {
+        "ply": 2,
+        "probability": 0.9114219114219115,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 394,
+      "pair_id": 197,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 214,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 395,
+      "pair_id": 198,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 603,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9984268828246193,
+        "predicted_origin": 32,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 396,
+      "pair_id": 198,
+      "army": 1,
+      "outcome": "error",
+      "reason": "engine error: AI produced an illegal move",
+      "plies": 342,
+      "first_confident": {
+        "ply": 5,
+        "probability": 0.9939323753445661,
+        "predicted_origin": 37,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 397,
+      "pair_id": 199,
+      "army": 0,
+      "outcome": "draw",
+      "reason": "ply limit",
+      "plies": 1000,
+      "first_confident": {
+        "ply": 6,
+        "probability": 0.9996062432323055,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 398,
+      "pair_id": 199,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 178,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 10
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 399,
+      "pair_id": 200,
+      "army": 0,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 451,
+      "first_confident": {
+        "ply": 4,
+        "probability": 0.9925672961028525,
+        "predicted_origin": 36,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    },
+    {
+      "game_id": 400,
+      "pair_id": 200,
+      "army": 1,
+      "outcome": "win",
+      "reason": "flag",
+      "plies": 488,
+      "first_confident": {
+        "ply": 3,
+        "probability": 0.9852472089314195,
+        "predicted_origin": 33,
+        "correct": true,
+        "own_miners": 5,
+        "optimistic_miner_distance": 9
+      },
+      "first_flag_disclosure": null
+    }
+  ]
+}

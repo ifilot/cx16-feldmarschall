@@ -1,0 +1,7 @@
+{
+  "epoch": 1792108152.0989482,
+  "scope": "All203 completed screening losses; final own decision before actual Flag capture, no runtime use or validation tuning.",
+  "source_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "unknown_branch_support": "All12 ranks for unmoved unknown, all10 mobile ranks for moved unknown; no private identities, no learned prior, no remaining-rank exclusions.",
+  "certificate": "Every overapproximated capture branch wins immediately or leaves no legal confirmed enemy Flag capture. Unknown moved neighbors are certain mobile threats; long Scouts must be publicly identified. Enemy two-squares restriction respected. Hidden potential Scouts remain uncertain, so this does NOT certify survival against every hidden possibility."
+}

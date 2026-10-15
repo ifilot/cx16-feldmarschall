@@ -1,0 +1,17 @@
+{
+  "roots": 788,
+  "reasons": {
+    "no-local-threat": 283,
+    "no-quiet-repair": 84,
+    "confirmed-immediate-flag-danger": 198,
+    "all-quiet-moves-maintain-coverage": 208,
+    "retain-interception-mission": 4,
+    "quiet-interception-mission": 11
+  },
+  "actual_quiet_move_would_be_demoted": 11,
+  "affected_games": 10,
+  "demoted_by_turns_before_last": {
+    "1": 10,
+    "2": 1
+  }
+}

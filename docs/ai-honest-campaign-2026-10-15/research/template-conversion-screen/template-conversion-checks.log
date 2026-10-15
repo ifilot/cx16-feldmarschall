@@ -1,0 +1,8 @@
+test_moved_origin_is_never_flag_and_all_mass_is_conserved (tools.test_template_conversion.ConversionTests.test_moved_origin_is_never_flag_and_all_mass_is_conserved) ... ok
+test_path_bound_respects_own_immobiles_but_ignores_mobile_defenders (tools.test_template_conversion.ConversionTests.test_path_bound_respects_own_immobiles_but_ignores_mobile_defenders) ... ok
+test_public_flag_disclosure_overrides_prior_and_captured_identity_persists (tools.test_template_conversion.ConversionTests.test_public_flag_disclosure_overrides_prior_and_captured_identity_persists) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

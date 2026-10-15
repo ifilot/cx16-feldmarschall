@@ -1,0 +1,47 @@
+{
+  "attempts": 400,
+  "outcomes": {
+    "win": 110,
+    "loss": 203,
+    "draw": 74,
+    "error": 13
+  },
+  "confident_before_disclosure": 332,
+  "correct_confident": 324,
+  "confident_outcomes": {
+    "win": 102,
+    "loss": 153,
+    "draw": 67,
+    "error": 10
+  },
+  "correct_confident_outcomes": {
+    "win": 100,
+    "loss": 148,
+    "draw": 67,
+    "error": 9
+  },
+  "wrong_confident_outcomes": {
+    "loss": 5,
+    "win": 2,
+    "error": 1
+  },
+  "no_miners_at_correct_confidence": 1,
+  "no_optimistic_miner_route_at_correct_confidence": 1,
+  "endings": {
+    "win": {
+      "no moves": 40,
+      "flag": 70
+    },
+    "draw": {
+      "ply limit": 74
+    },
+    "loss": {
+      "flag": 197,
+      "no moves": 6
+    },
+    "error": {
+      "engine error: AI produced an illegal move": 4,
+      "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 9
+    }
+  }
+}
