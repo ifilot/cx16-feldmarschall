@@ -1,0 +1,6 @@
+Running student-validated-deployment-v1-normal
+Verified student-validated-deployment-v1-normal {'wins': 57, 'draws': 32, 'losses': 279, 'score': 0.1983695652173913}
+Running student-fortress-deployment-v1-normal
+Verified student-fortress-deployment-v1-normal {'wins': 78, 'draws': 28, 'losses': 271, 'score': 0.2440318302387268}
+Running student-double-bomb-shell-v1-normal
+Verified student-double-bomb-shell-v1-normal {'wins': 60, 'draws': 22, 'losses': 310, 'score': 0.18112244897959184}
