@@ -48,7 +48,7 @@ def register(spec):
         raise ValueError(f'ID already exists: {identity}; create a new version')
     if spec.get('difficulty', 'normal') not in ('easy', 'normal', 'hard'):
         raise ValueError('Invalid difficulty')
-    if spec.get('driver') == 'native-beliefs':
+    if spec.get('driver') in ('native-beliefs', 'native-template'):
         required = {'AI_BELIEF_PRIORS', 'AI_DIAGNOSTICS', 'AI_MEMORY'}
         if not required.issubset(spec.get('defines', [])):
             raise ValueError('Native belief driver requires public-board, memory and prior protocol compile flags')
@@ -78,11 +78,32 @@ def register(spec):
     policy = dict(spec, archive=str(destination.relative_to(ROOT)), source_sha256=sha)
     # A catalog entry must be rebuildable before it becomes selectable. Failed
     # source snapshots may remain as evidence, but never publish a broken ID.
-    build_policy(identity, policy=policy)
+    executable, _ = build_policy(identity, policy=policy)
+    if spec.get('driver') in ('native-beliefs', 'native-template') or any(
+            flag in spec.get('driver_args', []) for flag in ('--template-prior','--objective-belief-model')):
+        public_driver_preflight(executable, policy['difficulty'])
     document = json.loads(CATALOG.read_text())
     document['policies'].append(policy)
     CATALOG.write_text(json.dumps(document, indent=2) + '\n')
     return policy
+
+
+def public_driver_preflight(executable, difficulty):
+    """Require one legal public-input move before publishing a new adapter ID."""
+    from feldmarschall import COUNTS, GLYPHS, Position, parse_square, setup_squares
+    setup = ''.join(glyph*count for glyph,count in zip(GLYPHS,COUNTS))
+    protocol = '\n'.join(['feldmarschall','new red','rules 0','difficulty '+difficulty,
+                          'seed 719','setup '+setup,'go','quit'])+'\n'
+    result = subprocess.run([str(executable),'--difficulty',difficulty],input=protocol,
+                            cwd=executable.parent,capture_output=True,text=True,timeout=20)
+    moves = [line.split()[1:] for line in result.stdout.splitlines() if line.startswith('move ')]
+    if result.returncode or len(moves)!=1 or len(moves[0])!=2 or 'error ' in result.stdout:
+        raise ValueError('Public driver failed pre-registration move check: '+result.stderr[-2000:])
+    board=Position();board.place(0,setup)
+    for square in setup_squares(1):board.cells[square]=[1,12,False,False]
+    if tuple(map(parse_square,moves[0])) not in board.moves(0):
+        raise ValueError('Public driver returned an illegal pre-registration move')
+    return dict(protocol=protocol.splitlines(),stdout=result.stdout,stderr=result.stderr)
 
 
 def build_policy(identity, policy=None):
@@ -125,7 +146,7 @@ def build_policy(identity, policy=None):
         command += ['-o', str(executable), *policy['sources']]
         subprocess.run(command, cwd=source, check=True)
         runtime = [executable.name]
-        if policy.get('driver') == 'native-beliefs':
+        if policy.get('driver') in ('native-beliefs', 'native-template'):
             runtime = build_native_beliefs(source, directory, executable, policy)
         if policy.get('driver') == 'teacher':
             observer = directory / 'observer'
@@ -184,6 +205,22 @@ def build_policy(identity, policy=None):
                 joint_name = Path(model_path).name
                 (directory / joint_name).write_bytes((source / model_path).read_bytes())
                 runtime.append(joint_name)
+            public_args = policy.get('driver_args', [])
+            public_flag = ('--objective-belief-model' if '--objective-belief-model' in public_args else
+                           '--template-prior' if '--template-prior' in public_args else None)
+            if public_flag:
+                public_module = ('campaign_inverse_objectives.py' if public_flag=='--objective-belief-model'
+                                 else 'campaign_template_beliefs.py')
+                for name in (public_module, 'campaign_joint_beliefs.py', 'calibrated_beliefs.py'):
+                    (directory/name).write_bytes((source/'tools'/name).read_bytes())
+                    if name not in runtime: runtime.append(name)
+                if public_flag=='--objective-belief-model':
+                    model_path=policy['objective_belief_model']
+                    if digest((source/model_path).read_bytes()) != policy['objective_belief_model_sha256']:
+                        raise ValueError('Public objective belief model failed integrity check')
+                    objective_name=Path(model_path).name
+                    (directory/objective_name).write_bytes((source/model_path).read_bytes())
+                    runtime.append(objective_name)
             if '--root-policy' in policy.get('driver_args', []):
                 name = 'root_policy.py'
                 (directory / name).write_bytes((source / 'tools' / name).read_bytes())
@@ -205,6 +242,9 @@ def build_policy(identity, policy=None):
                                                    for arg in policy['driver_args']) + ']')
             if '--joint-belief-model' in policy.get('driver_args', []):
                 driver_arguments = ('[' + ', '.join('str(p / '+repr(arg)+')' if arg == joint_name else repr(arg)
+                                                   for arg in policy['driver_args']) + ']')
+            if '--objective-belief-model' in policy.get('driver_args', []):
+                driver_arguments = ('[' + ', '.join('str(p / '+repr(arg)+')' if arg == objective_name else repr(arg)
                                                    for arg in policy['driver_args']) + ']')
             # The adapter locates its siblings relative to this preserved launcher.
             executable.write_text('#!/usr/bin/env python3\nimport os, pathlib, sys\n'
@@ -233,18 +273,26 @@ def build_native_beliefs(source, directory, executable, policy):
                  'campaign_joint_beliefs.py','calibrated_beliefs.py','feldmarschall.py'):
         (directory/name).write_bytes((source/'tools'/name).read_bytes())
         runtime.append(name)
-    model = policy['joint_belief_model']
-    if digest((source/model).read_bytes()) != policy['joint_belief_model_sha256']:
-        raise ValueError('Native belief model failed integrity check')
-    model_name = Path(model).name
-    (directory/model_name).write_bytes((source/model).read_bytes())
-    runtime.append(model_name)
-    arguments = '['+', '.join('str(p / '+repr(arg)+')' if arg==model_name else repr(arg)
-                             for arg in policy['driver_args'])+']'
+    entrypoint = 'campaign_native_beliefs.py'
+    if policy['driver']=='native-template':
+        entrypoint = 'campaign_native_template.py'
+        for name in (entrypoint, 'campaign_template_beliefs.py'):
+            (directory/name).write_bytes((source/'tools'/name).read_bytes())
+            runtime.append(name)
+        arguments = repr(policy.get('driver_args', []))
+    else:
+        model = policy['joint_belief_model']
+        if digest((source/model).read_bytes()) != policy['joint_belief_model_sha256']:
+            raise ValueError('Native belief model failed integrity check')
+        model_name = Path(model).name
+        (directory/model_name).write_bytes((source/model).read_bytes())
+        runtime.append(model_name)
+        arguments = '['+', '.join('str(p / '+repr(arg)+')' if arg==model_name else repr(arg)
+                                 for arg in policy['driver_args'])+']'
     executable.write_text('#!/usr/bin/env python3\nimport os, pathlib, sys\n'
         'p = pathlib.Path(__file__).resolve().parent\n'
         f'if sys.argv[1:] == ["--identity"]:\n    print({policy["id"]!r})\n    raise SystemExit\n'
-        'os.execv(sys.executable, [sys.executable, str(p / "campaign_native_beliefs.py"), '
+        f'os.execv(sys.executable, [sys.executable, str(p / "{entrypoint}"), '
         '"--observer", str(p / "observer"), *'+arguments+', *sys.argv[1:]])\n')
     executable.chmod(0o755)
     return runtime

@@ -14,7 +14,15 @@ from train_ai_student import sample_world
 
 
 class TeacherBot:
-    def __init__(self, observer, teacher, samples=8, depth=3, blend='raw', strategic=False, context=False, replies=None, diagnostic_truth=False, diagnostic_knowledge='all', information_strategy=None, belief_model=None, root_policy=None, world_sampling=None, campaign_strategy=None, paired_confidence=False, adaptive_depth=False, joint_belief_model=None, correction_anchor=None, belief_sweeps=None, root_capture_mode=None):
+    def __init__(self, observer, teacher, samples=8, depth=3, blend='raw', strategic=False, context=False, replies=None, diagnostic_truth=False, diagnostic_knowledge='all', information_strategy=None, belief_model=None, root_policy=None, world_sampling=None, campaign_strategy=None, paired_confidence=False, adaptive_depth=False, joint_belief_model=None, correction_anchor=None, belief_sweeps=None, root_capture_mode=None, public_belief=None):
+        if public_belief is not None:
+            if (blend != 'correction' or diagnostic_truth or diagnostic_knowledge != 'all' or information_strategy or
+                belief_model or root_policy or world_sampling or campaign_strategy or paired_confidence or
+                adaptive_depth or joint_belief_model or correction_anchor or belief_sweeps is not None or root_capture_mode):
+                raise ValueError('isolate honest public beliefs with correction blend')
+            if not all(callable(getattr(public_belief,name,None)) for name in ('observe','sample_worlds')):
+                raise ValueError('public belief requires observe and sample_worlds methods')
+        self.public_belief = public_belief
         if belief_sweeps is not None and (not belief_model or blend != 'correction' or diagnostic_truth or information_strategy or root_policy or world_sampling or campaign_strategy or paired_confidence or adaptive_depth or joint_belief_model or correction_anchor):
             raise ValueError('isolate honest rank-swap beliefs with a frozen belief model')
         self.belief_sweeps = belief_sweeps
@@ -84,6 +92,8 @@ class TeacherBot:
             if world_sampling == 'uniform' and self.belief_model:
                 raise ValueError('uniform averaging isolates handwritten behavioral weights')
             self.world_sampler = (StratifiedSampler(self.belief_model) if world_sampling == 'latin' else UniformSampler())
+        if public_belief is not None:
+            self.world_sampler = public_belief
         self.information_strategy = information_strategy
         self.information_module = importlib.import_module('info_' + information_strategy) if information_strategy else None
         self.observer = Engine(shlex.quote(str(observer)))
@@ -267,6 +277,11 @@ class TeacherBot:
             self.last_report['swap_beliefs'] = self.world_sampler.last_report
         if self.root_capture_mode:
             self.last_report['root_capture_beliefs'] = capture_report
+        if self.public_belief is not None:
+            self.last_report['public_beliefs'] = {'class': type(self.public_belief).__name__}
+            diagnostics = getattr(self.public_belief, 'last_report', None)
+            if diagnostics is not None:
+                self.last_report['public_beliefs']['diagnostics'] = diagnostics
         if self.campaign_strategy:
             self.last_report['campaign_adjustments'] = [dict(move=m, adjustment=v) for m,v in campaign_adjustments.items()]
             if self.campaign_strategy == 'recurrence':
@@ -285,6 +300,8 @@ class TeacherBot:
                 words = line.split()
                 if not words: continue
                 command = words[0]
+                if self.public_belief is not None:
+                    self.public_belief.observe(words)
                 if self.joint_model:
                     self.joint_model.observe(words)
                 if command == 'new' and self.campaign_strategy == 'recurrence':
@@ -310,7 +327,10 @@ class TeacherBot:
                 elif command == 'played': print(self.observer.ask(line.strip(), 'playedok') or 'playedok', flush=True)
                 elif command == 'quit': break
                 elif command == 'setup' and len(words) == 1:
-                    print('setup ' + self.observer.ask('setup', 'setup'), flush=True)
+                    generated = self.observer.ask('setup', 'setup')
+                    if self.public_belief is not None:
+                        self.public_belief.observe(['setup', generated])
+                    print('setup ' + generated, flush=True)
                 else: self.observer.send(line.strip())
         finally: self.close()
 
@@ -339,8 +359,18 @@ if __name__ == '__main__':
     parser.add_argument('--correction-anchor', choices=('parent',), help='center clipped continuation corrections on the legal native fallback')
     parser.add_argument('--belief-sweeps', type=int, help='independent rank-swap rejuvenation sweeps for the frozen belief model; zero is an unweighted proposal control')
     parser.add_argument('--root-capture-mode', choices=('counts','joint'), help='replace hidden-capture material expectation using public rank marginals')
+    public_group = parser.add_mutually_exclusive_group()
+    public_group.add_argument('--template-prior', action='store_true', help='honest whole-setup template mixture with public history')
+    public_group.add_argument('--objective-belief-model', type=Path, help='frozen own-objective conditional public-history likelihoods')
     args = parser.parse_args()
     if args.samples < 1 or args.depth < 1: parser.error('positive samples and depth required')
+    public_belief = None
+    if args.template_prior:
+        from campaign_template_beliefs import TemplateMixtureBeliefs
+        public_belief = TemplateMixtureBeliefs()
+    elif args.objective_belief_model:
+        from campaign_inverse_objectives import ObjectiveSampler
+        public_belief = ObjectiveSampler.load(args.objective_belief_model)
     bot = TeacherBot(args.observer, args.teacher, samples=args.samples, depth=args.depth,
                      blend=args.blend, strategic=args.strategic, context=args.context, replies=args.replies,
                      diagnostic_truth=args.diagnostic_truth, diagnostic_knowledge=args.diagnostic_knowledge,
@@ -349,6 +379,6 @@ if __name__ == '__main__':
                      campaign_strategy=args.campaign_strategy, paired_confidence=args.paired_confidence,
                      adaptive_depth=args.adaptive_depth, joint_belief_model=args.joint_belief_model,
                      correction_anchor=args.correction_anchor, belief_sweeps=args.belief_sweeps,
-                     root_capture_mode=args.root_capture_mode)
+                     root_capture_mode=args.root_capture_mode, public_belief=public_belief)
     bot.observer.send('difficulty ' + args.difficulty)
     bot.run()

@@ -1,0 +1,10 @@
+{
+  "cause": "Long-running process had old tournament_store cached when updated error-sensitivity module imported new mirror_setup. All games had completed and replayed; summary import failed. Fresh process reanalyses existing artifacts only.",
+  "saved_tournaments_unchanged": true,
+  "tournament_sha256": {
+    "student-counts-belief-objectives-v3-normal.report.json": "b1af53388ec82c42419e162a370c9cdcf615c19eca8125ecc8dbdf60762ce565",
+    "student-guard-v1-normal.report.json": "71686dcc22615ede9e5629c0fd17c647894c23bed1fc1274a14b091233cf85c6",
+    "student-joint-belief-objectives-v3-normal.report.json": "446ef7af8f67f5a991e207bc0f2c3ab63b5e1cf0cbc2228631b18e0a46176d20"
+  },
+  "games_rerun": 0
+}

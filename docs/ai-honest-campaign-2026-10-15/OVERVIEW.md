@@ -37,6 +37,9 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 9 | Own setup, seven stress families | student-validated-deployment-v1-normal | 230 / 27 / 147 | 60.3% | 16 |
 | 9 | Own setup, seven stress families | teacher-context-v1-normal | 225 / 9 / 169 | 56.9% | 17 |
 | 9 | Own setup, seven stress families | teacher-validated-deployment-v1-normal | 212 / 12 / 168 | 55.6% | 28 |
+| 16 | Fixed armies, seven stress families | student-guard-v1-normal | 172 / 32 / 345 | 34.2% | 11 |
+| 16 | Fixed armies, seven stress families | student-counts-belief-objectives-v3-normal | 163 / 27 / 360 | 32.1% | 10 |
+| 16 | Fixed armies, seven stress families | student-joint-belief-objectives-v3-normal | 181 / 38 / 339 | 35.8% | 2 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -115,6 +118,15 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 - student-validated-deployment-v1-normal minus student-guard-v1-normal: +5.9 percentage points; 95% paired interval [-0.3, +12.0].
 - teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: -1.1 percentage points; 95% paired interval [-7.5, +5.1].
+
+
+**Cycle 16 hypotheses:** Connect public Flag/Bomb beliefs to native persistent objectives, quiet routes and nonlinear capture evaluation without a rollout engine.; Separate correct moved/unmoved count conditioning from the learned joint setup prior.
+
+Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectives-v3/result.json).
+
+- student-counts-belief-objectives-v3-normal minus student-guard-v1-normal: -1.5 percentage points; 95% paired interval [-3.7, +0.7].
+- student-joint-belief-objectives-v3-normal minus student-guard-v1-normal: +1.1 percentage points; 95% paired interval [-2.9, +5.1].
+- student-joint-belief-objectives-v3-normal minus student-counts-belief-objectives-v3-normal: +3.4 percentage points; 95% paired interval [-0.6, +7.4].
 
 
 **Preflight failures, without DOS strength results:**

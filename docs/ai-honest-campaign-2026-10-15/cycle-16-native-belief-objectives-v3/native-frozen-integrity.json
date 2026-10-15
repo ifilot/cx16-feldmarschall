@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "policies": {
+    "student-counts-belief-objectives-v3-normal": {
+      "source_sha256": "ad2791bafd6132654d4fc08b58b04730847709ee4b18bd253892185da08bbe3b",
+      "runtime_sha256": {
+        "engine": "2828db9ee0fac362c0611803ccf568610a1c1c614e8283c7704ac35e8467d842",
+        "observer": "919534bb42d0254f62d3c1104026c7795aa59c934590db968b5fcc1a4f318839",
+        "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+        "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+        "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+        "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+        "joint-flag-bomb-beliefs-v1.json": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8"
+      },
+      "model_sha256": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8",
+      "current_driver_equals_frozen": true
+    },
+    "student-joint-belief-objectives-v3-normal": {
+      "source_sha256": "5b672b59ca275954852fcef90ea3960b372da76c5e9d2bec3aef848f72da2f5d",
+      "runtime_sha256": {
+        "engine": "115a3315fba6a91a988ca096f03e8e1e0b159d2e0abf8c2a1435efe579adffc2",
+        "observer": "3479b2c4b17663ea7c589702a4f1908611cd4f3b3d72a1ceae7b95f9f21b723d",
+        "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+        "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+        "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+        "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+        "joint-flag-bomb-beliefs-v1.json": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8"
+      },
+      "model_sha256": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8",
+      "current_driver_equals_frozen": true
+    }
+  },
+  "test_source_sha256": "0e14f6219e7a821fb555469e467e817c6505a2c977ca48b6b4b134f1578eaef6"
+}

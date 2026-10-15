@@ -1,0 +1,15 @@
+# Cycle 16: public beliefs in native objectives
+
+The joint Flag/Bomb prior had the strongest observed score, but this screening cohort does not establish an improvement. Connecting public beliefs directly to native quiet goals and capture evaluation remains a plausible strategic idea; the counts-only control did not improve on the guarded student.
+
+Across 560 attempted Classic games per policy against the same DOS opponent, the guarded student scored 34.24% (172 wins, 32 draws, 345 losses; 11 errors), counts objectives 32.09% (163/27/360; 10 errors), and joint objectives 35.84% (181/38/339; 2 errors). Errors retain their legal trace prefixes and remain unscored in official standings.
+
+The matched, complete-pair joint-minus-counts effect was +3.44 percentage points, with a 95% paired bootstrap interval of [-0.56, +7.43] and a 98.3333% interval of [-1.49, +8.36]. Joint minus guarded student was +1.12 points, with intervals [-2.88, +5.11] and [-3.81, +6.04]. Counts minus guarded student was -1.51 points, with intervals [-3.68, +0.66] and [-4.25, +1.13]. Every interval includes zero. The direction diagnostics also remain inconclusive: joint versus counts has 69 positive, 54 negative and 146 tied complete pairs (exact two-sided sign p=0.207); joint versus guarded student has 67/63/139 (p=0.793). These sign tests concern directions, not a mean-effect null, and are unadjusted across the campaign.
+
+Assigning each error game's unknown score any value in [0,1] gives finite-cohort effect bounds of [+2.41, +4.55] points for joint minus counts, [+0.18, +2.50] for joint minus guarded student, and [-4.02, -0.27] for counts minus guarded student. These bounds describe this attempted cohort under missing outcomes; they are not confidence intervals or evidence that the effect generalizes.
+
+Recorded execution was 197.94 seconds for the guarded student, 169.80 for counts and 232.82 for joint objectives. Joint therefore used about 18% more wall time than the guarded student in this run, without multiworld rollouts. These are aggregate batch timings, affected by game lengths and concurrency, rather than controlled per-decision costs.
+
+All 1,680 games were verified with Python and native replay, and Qt captures are preserved. The seven forced-army families are stress tests rather than the original DOS deployment distribution. Both new policies use only their own army and public events, and the mobile-rank expectation remains exchangeable; the learned joint setup model can be misspecified. No policy is promoted. A fresh independent validation cohort would be required before claiming a strength gain.
+
+The original summary process failed after all games completed because it held an older tournament_store module while importing the updated error-sensitivity helper. Only analysis was restarted. The original failure log, recovery log and recovery record are preserved; all three saved tournament hashes match the pre-recovery values, and zero games were rerun. The original recovery record uses report-like filename labels for tournament hashes; analysis-recovery-audit.json makes that mapping explicit.

@@ -1,0 +1,32 @@
+{"event": "progress", "completed": 1, "total": 2}
+{"event": "progress", "completed": 2, "total": 2}
+{
+  "status": "complete",
+  "games": 2,
+  "scored_games": 2,
+  "errors": 0,
+  "standings": {
+    "student-joint-belief-objectives-v3-normal": {
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "score": 0.5
+    },
+    "msdos-1990-v2-normal": {
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "score": 0.5
+    }
+  },
+  "average_plies": 45.0,
+  "families": {
+    "uniform": {
+      "student-joint-belief-objectives-v3-normal": 0.5,
+      "msdos-1990-v2-normal": 0.5
+    }
+  },
+  "endings": {
+    "flag": 2
+  }
+}

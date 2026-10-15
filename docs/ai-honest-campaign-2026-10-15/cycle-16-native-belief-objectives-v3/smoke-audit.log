@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "kind": "Runtime smoke only; two games are not strength evidence.",
+  "summary": {
+    "status": "complete",
+    "games": 2,
+    "scored_games": 2,
+    "errors": 0,
+    "standings": {
+      "student-joint-belief-objectives-v3-normal": {
+        "wins": 1,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.5
+      },
+      "msdos-1990-v2-normal": {
+        "wins": 1,
+        "draws": 0,
+        "losses": 1,
+        "score": 0.5
+      }
+    },
+    "average_plies": 45.0,
+    "families": {
+      "uniform": {
+        "student-joint-belief-objectives-v3-normal": 0.5,
+        "msdos-1990-v2-normal": 0.5
+      }
+    },
+    "endings": {
+      "flag": 2
+    }
+  },
+  "games": [
+    {
+      "id": 1,
+      "army": 0,
+      "plies": 12,
+      "result": "blue",
+      "reason": "flag"
+    },
+    {
+      "id": 2,
+      "army": 1,
+      "plies": 78,
+      "result": "blue",
+      "reason": "flag"
+    }
+  ],
+  "native_replayed_states": 92,
+  "frozen_runtime_public_states_checked": 92,
+  "concealed_enemy_rank_nibbles_checked": 3139,
+  "receives_opponent_setup": false,
+  "tournament_sha256": "f9667913fb40635fac9255423d25bd92f489e18ea3e533d901b001550cba2933",
+  "screenshot_sha256": "16c2b8fd016ea5d807bcd54d33c88160da40194cb3fe9e9a2df47774d6b33ed2",
+  "policy_source_sha256": "5b672b59ca275954852fcef90ea3960b372da76c5e9d2bec3aef848f72da2f5d",
+  "runtime_sha256": {
+    "engine": "115a3315fba6a91a988ca096f03e8e1e0b159d2e0abf8c2a1435efe579adffc2",
+    "observer": "3479b2c4b17663ea7c589702a4f1908611cd4f3b3d72a1ceae7b95f9f21b723d",
+    "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+    "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+    "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+    "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+    "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+    "joint-flag-bomb-beliefs-v1.json": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8"
+  },
+  "audit_source_sha256": "caf700158aa8d4a1215ef75e44c9984b4dca2b15b9b6412365787bd48ca4c4ea"
+}
