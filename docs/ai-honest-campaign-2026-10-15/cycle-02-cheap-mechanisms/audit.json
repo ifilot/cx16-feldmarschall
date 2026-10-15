@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 62,
+  "attempts": 1680,
+  "errors_preserved_unscored": 33,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 4,
+  "exact_rebuild_runtime_sha256": {
+    "teacher-latin-worlds-v1-normal": {
+      "engine": "432a9c773f6ecc0aad4f1bd0cdf329d3fdf03aaf4c04871cd2920161ca22479a",
+      "observer": "97095dbb37fb39a4619506a1de72a9399eee282de6a8723486ebaf7218624076",
+      "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+      "teacher_bot.py": "4b0afe2b7b4362670d565c66f10c1513c100d840315a53d2c527b3668fb2ba69",
+      "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_sampling.py": "f2c5f6e376c7198a1062fd41e5d6a3e88e9f6470f54d90c86b4d6b990b9be47d"
+    },
+    "teacher-army-activation-v1-normal": {
+      "engine": "b629199bfd2869b136b2e90a9237aca1312ea3e679a18c58aee977b85468d704",
+      "observer": "82badd6a4cdbc3549798cfb68970a71f7f34217cb74b59943f92b6f671ccc870",
+      "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+      "teacher_bot.py": "4b0afe2b7b4362670d565c66f10c1513c100d840315a53d2c527b3668fb2ba69",
+      "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_strategy.py": "c9d1846fd3a12fd88fce5c9181f885c2d19f059c19d41528f6e79865d97c454c",
+      "campaign_recurrence.py": "517712f7796ea3a51a5c26120d09cf30d748a0e3bf7a288a32ac652f88f11d77"
+    },
+    "teacher-paired-confidence-v1-normal": {
+      "engine": "eefa200e64712b315fd86b39990b62d9954109cfd3884763ed1b8a45b9d0817e",
+      "observer": "34f6017bcced8cfb83393a8616b65828914d7186b8118006fb90d0f606199daf",
+      "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+      "teacher_bot.py": "4b0afe2b7b4362670d565c66f10c1513c100d840315a53d2c527b3668fb2ba69",
+      "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_search.py": "3040896bd0c2b4ba6837743675f0390474ba0887ff2d5526b8fadf250ef200f8"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    46
+  ],
+  "test_skip_summaries": []
+}
