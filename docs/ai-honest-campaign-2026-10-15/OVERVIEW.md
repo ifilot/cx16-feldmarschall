@@ -2,37 +2,41 @@
 
 Scores count wins plus half of draws; original DOS errors are excluded. Compare policies within their matched cycle. Screening results do not establish promotion.
 
-| Cycle / hypothesis | Policy | W / D / L | DOS score | Errors |
-|---|---|---:|---:|---:|
-| 1 | teacher-context-v1-normal | 70 / 9 / 198 | 26.9% | 3 |
-| 1 | teacher-calibrated-beliefs-v1-normal | 82 / 2 / 191 | 30.2% | 5 |
-| 1 | teacher-context-worlds32-v1-normal | 66 / 4 / 209 | 24.4% | 1 |
-| 1 | teacher-calibrated-worlds32-v1-normal | 57 / 5 / 213 | 21.6% | 5 |
-| 2 | teacher-context-v1-normal | 114 / 6 / 291 | 28.5% | 9 |
-| 2 | teacher-latin-worlds-v1-normal | 111 / 5 / 296 | 27.5% | 8 |
-| 2 | teacher-army-activation-v1-normal | 108 / 14 / 291 | 27.8% | 7 |
-| 2 | teacher-paired-confidence-v1-normal | 115 / 8 / 288 | 29.0% | 9 |
-| 3 | teacher-context-v1-normal | 118 / 4 / 295 | 28.8% | 3 |
-| 3 | teacher-capture-quiescence-v1-normal | 107 / 4 / 305 | 26.2% | 4 |
-| 3 | teacher-sparse-depth-v1-normal | 114 / 7 / 298 | 28.0% | 1 |
-| 3 | teacher-recurrence-escape-v1-normal | 116 / 2 / 300 | 28.0% | 2 |
-| 3 | teacher-uniform-worlds-v1-normal | 118 / 3 / 295 | 28.7% | 4 |
-| 4 | student-guard-v1-normal | 115 / 17 / 283 | 29.8% | 5 |
-| 4 | student-public-flag-threats-v1-normal | 115 / 17 / 283 | 29.8% | 5 |
-| 4 | teacher-context-v1-normal | 109 / 7 / 299 | 27.1% | 5 |
-| 4 | teacher-public-flag-threats-v1-normal | 116 / 6 / 288 | 29.0% | 10 |
-| 5 | teacher-context-v1-normal | 146 / 9 / 394 | 27.4% | 11 |
-| 5 | teacher-calibrated-beliefs-v1-normal | 157 / 3 / 393 | 28.7% | 7 |
-| 5 | teacher-flag-row-control-v1-normal | 157 / 8 / 381 | 29.5% | 14 |
-| 5 | teacher-joint-setup-v1-normal | 162 / 13 / 372 | 30.8% | 13 |
-| 6 | teacher-context-v1-normal | 116 / 3 / 293 | 28.5% | 8 |
-| 6 | teacher-capable-routes-v1-normal | 128 / 7 / 281 | 31.6% | 4 |
-| 6 | teacher-informed-opponent-v1-normal | 120 / 11 / 285 | 30.2% | 4 |
-| 6 | teacher-parent-anchor-v1-normal | 113 / 9 / 292 | 28.4% | 6 |
-| 7 | student-guard-v1-normal | 123 / 21 / 271 | 32.2% | 5 |
-| 7 | student-exact-contact-risk-v1-normal | 142 / 12 / 261 | 35.7% | 5 |
-| 7 | teacher-context-v1-normal | 116 / 7 / 288 | 29.1% | 9 |
-| 7 | teacher-exact-contact-risk-v1-normal | 123 / 5 / 284 | 30.5% | 8 |
+| Cycle | Setup context | Policy | W / D / L | DOS score | Errors |
+|---|---|---|---:|---:|---:|
+| 1 | Fixed armies, seven stress families | teacher-context-v1-normal | 70 / 9 / 198 | 26.9% | 3 |
+| 1 | Fixed armies, seven stress families | teacher-calibrated-beliefs-v1-normal | 82 / 2 / 191 | 30.2% | 5 |
+| 1 | Fixed armies, seven stress families | teacher-context-worlds32-v1-normal | 66 / 4 / 209 | 24.4% | 1 |
+| 1 | Fixed armies, seven stress families | teacher-calibrated-worlds32-v1-normal | 57 / 5 / 213 | 21.6% | 5 |
+| 2 | Fixed armies, seven stress families | teacher-context-v1-normal | 114 / 6 / 291 | 28.5% | 9 |
+| 2 | Fixed armies, seven stress families | teacher-latin-worlds-v1-normal | 111 / 5 / 296 | 27.5% | 8 |
+| 2 | Fixed armies, seven stress families | teacher-army-activation-v1-normal | 108 / 14 / 291 | 27.8% | 7 |
+| 2 | Fixed armies, seven stress families | teacher-paired-confidence-v1-normal | 115 / 8 / 288 | 29.0% | 9 |
+| 3 | Fixed armies, seven stress families | teacher-context-v1-normal | 118 / 4 / 295 | 28.8% | 3 |
+| 3 | Fixed armies, seven stress families | teacher-capture-quiescence-v1-normal | 107 / 4 / 305 | 26.2% | 4 |
+| 3 | Fixed armies, seven stress families | teacher-sparse-depth-v1-normal | 114 / 7 / 298 | 28.0% | 1 |
+| 3 | Fixed armies, seven stress families | teacher-recurrence-escape-v1-normal | 116 / 2 / 300 | 28.0% | 2 |
+| 3 | Fixed armies, seven stress families | teacher-uniform-worlds-v1-normal | 118 / 3 / 295 | 28.7% | 4 |
+| 4 | Fixed armies, seven stress families | student-guard-v1-normal | 115 / 17 / 283 | 29.8% | 5 |
+| 4 | Fixed armies, seven stress families | student-public-flag-threats-v1-normal | 115 / 17 / 283 | 29.8% | 5 |
+| 4 | Fixed armies, seven stress families | teacher-context-v1-normal | 109 / 7 / 299 | 27.1% | 5 |
+| 4 | Fixed armies, seven stress families | teacher-public-flag-threats-v1-normal | 116 / 6 / 288 | 29.0% | 10 |
+| 5 | Fixed armies, seven stress families | teacher-context-v1-normal | 146 / 9 / 394 | 27.4% | 11 |
+| 5 | Fixed armies, seven stress families | teacher-calibrated-beliefs-v1-normal | 157 / 3 / 393 | 28.7% | 7 |
+| 5 | Fixed armies, seven stress families | teacher-flag-row-control-v1-normal | 157 / 8 / 381 | 29.5% | 14 |
+| 5 | Fixed armies, seven stress families | teacher-joint-setup-v1-normal | 162 / 13 / 372 | 30.8% | 13 |
+| 6 | Fixed armies, seven stress families | teacher-context-v1-normal | 116 / 3 / 293 | 28.5% | 8 |
+| 6 | Fixed armies, seven stress families | teacher-capable-routes-v1-normal | 128 / 7 / 281 | 31.6% | 4 |
+| 6 | Fixed armies, seven stress families | teacher-informed-opponent-v1-normal | 120 / 11 / 285 | 30.2% | 4 |
+| 6 | Fixed armies, seven stress families | teacher-parent-anchor-v1-normal | 113 / 9 / 292 | 28.4% | 6 |
+| 7 | Fixed armies, seven stress families | student-guard-v1-normal | 123 / 21 / 271 | 32.2% | 5 |
+| 7 | Fixed armies, seven stress families | student-exact-contact-risk-v1-normal | 142 / 12 / 261 | 35.7% | 5 |
+| 7 | Fixed armies, seven stress families | teacher-context-v1-normal | 116 / 7 / 288 | 29.1% | 9 |
+| 7 | Fixed armies, seven stress families | teacher-exact-contact-risk-v1-normal | 123 / 5 / 284 | 30.5% | 8 |
+| 9 | Own setup, seven stress families | student-guard-v1-normal | 204 / 35 / 172 | 53.9% | 9 |
+| 9 | Own setup, seven stress families | student-validated-deployment-v1-normal | 230 / 27 / 147 | 60.3% | 16 |
+| 9 | Own setup, seven stress families | teacher-context-v1-normal | 225 / 9 / 169 | 56.9% | 17 |
+| 9 | Own setup, seven stress families | teacher-validated-deployment-v1-normal | 212 / 12 / 168 | 55.6% | 28 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -101,6 +105,16 @@ Evidence: [cycle-07-exact-contact-risk](cycle-07-exact-contact-risk/result.json)
 
 - student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +3.3 percentage points; 95% paired interval [-1.3, +8.0].
 - teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal: +1.4 percentage points; 95% paired interval [-2.6, +5.5].
+
+
+**Cycle 9 hypotheses:** Validated deployment mixtures improve end-to-end honest play against DOS.; Measure deployment separately for native and Context move policies.
+
+Evidence: [cycle-09-policy-owned-deployments](cycle-09-policy-owned-deployments/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+- student-validated-deployment-v1-normal minus student-guard-v1-normal: +5.9 percentage points; 95% paired interval [-0.3, +12.0].
+- teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: -1.1 percentage points; 95% paired interval [-7.5, +5.1].
 
 
 **Preflight failures, without DOS strength results:**

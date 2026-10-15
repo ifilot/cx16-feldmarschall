@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "kind": "frozen-policy-owned-setup-replay-audit",
+  "tournament": "/tmp/deployment-openmp-smoke.fmtour",
+  "tournament_sha256": "a5b19d79932a99f84a6de2d28fca9f9107fcdddc923bf7498751bda055e9d454",
+  "owner": "student-validated-deployment-v1-normal",
+  "records": 1,
+  "expected_records": 1,
+  "records_audited": [
+    {
+      "pair_id": 1,
+      "family": "uniform",
+      "setup_seed": 3983,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "ebe3b592637ffa603ab06995b979d4bd77104526dfce9eedfa299040ee9c8ada",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946",
+          "replay_sha256": [
+            "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946",
+            "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    }
+  ],
+  "repetitions": 2,
+  "verified_games": 2,
+  "policy_source_sha256": "9d4592c4067f768f44f559176590f3a3d754dce7303f924bf1b5ba0fbf826a6d",
+  "runtime_sha256": {
+    "engine": "93f34319d055b3d670db34d927b8f8eee441f3b5a6048699d072531ac15c4b25"
+  },
+  "setup_source_sha256": {
+    "tournament.py": "999dade920fd31b15bde0adf8679d3b9540c6dd3e7fec19fad639e2e6048cc95",
+    "arena.py": "a04a4da77b56b7afebf1638bb6b4f2b752a03d0a1244a8859ba797de24a73b3e",
+    "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+  },
+  "setup_records_sha256": "3ce85026c79dded24dba82c5951932dbcac8888f5cb2e092d8091d8cbb0da8bc",
+  "all_setup_sources_present": true,
+  "no_opponent_input": true,
+  "all_streams_repeatable": true,
+  "audit_source_sha256": "0b6669e7475a2628331e89ecd979195e722c73fc514b1ee5751cd4372141a8e3",
+  "limitation": "Repeatability is observed over the specified repeats; variable streams do not receive an exact transcript claim."
+}
