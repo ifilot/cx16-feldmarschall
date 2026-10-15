@@ -17,6 +17,14 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 3 | teacher-sparse-depth-v1-normal | 114 / 7 / 298 | 28.0% | 1 |
 | 3 | teacher-recurrence-escape-v1-normal | 116 / 2 / 300 | 28.0% | 2 |
 | 3 | teacher-uniform-worlds-v1-normal | 118 / 3 / 295 | 28.7% | 4 |
+| 4 | student-guard-v1-normal | 115 / 17 / 283 | 29.8% | 5 |
+| 4 | student-public-flag-threats-v1-normal | 115 / 17 / 283 | 29.8% | 5 |
+| 4 | teacher-context-v1-normal | 109 / 7 / 299 | 27.1% | 5 |
+| 4 | teacher-public-flag-threats-v1-normal | 116 / 6 / 288 | 29.0% | 10 |
+| 5 | teacher-context-v1-normal | 146 / 9 / 394 | 27.4% | 11 |
+| 5 | teacher-calibrated-beliefs-v1-normal | 157 / 3 / 393 | 28.7% | 7 |
+| 5 | teacher-flag-row-control-v1-normal | 157 / 8 / 381 | 29.5% | 14 |
+| 5 | teacher-joint-setup-v1-normal | 162 / 13 / 372 | 30.8% | 13 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -46,4 +54,22 @@ Evidence: [cycle-03-horizons-and-memory](cycle-03-horizons-and-memory/result.jso
 - teacher-sparse-depth-v1-normal minus teacher-context-v1-normal: -0.7 percentage points; 95% paired interval [-5.0, +3.6].
 - teacher-recurrence-escape-v1-normal minus teacher-context-v1-normal: -1.0 percentage points; 95% paired interval [-1.9, -0.2].
 - teacher-uniform-worlds-v1-normal minus teacher-context-v1-normal: -0.1 percentage points; 95% paired interval [-2.2, +2.1].
+
+
+**Cycle 4 hypotheses:** Correct a public logical omission in native Flag defence, without identifying the concealed rank.; Test the same deduction in the Context Teacher observer and masked continuations.
+
+Evidence: [cycle-04-public-flag-defence](cycle-04-public-flag-defence/result.json).
+
+- student-public-flag-threats-v1-normal minus student-guard-v1-normal: +0.0 percentage points; 95% paired interval [+0.0, +0.0].
+- teacher-public-flag-threats-v1-normal minus teacher-context-v1-normal: +1.7 percentage points; 95% paired interval [-0.1, +3.7].
+
+
+**Cycle 5 hypotheses:** A cheap learned setup-style mixture can exploit public Flag/Bomb dependencies missed by independent rank tables.; A control with identical trained Flag-row priors and zero spatial coupling separates positional prior from cross-piece inference.
+
+Evidence: [cycle-05-joint-setup-beliefs](cycle-05-joint-setup-beliefs/result.json).
+
+- teacher-joint-setup-v1-normal minus teacher-flag-row-control-v1-normal: +0.7 percentage points; 95% paired interval [-3.6, +4.8].
+- teacher-joint-setup-v1-normal minus teacher-context-v1-normal: +4.0 percentage points; 95% paired interval [+0.2, +7.8].
+- teacher-flag-row-control-v1-normal minus teacher-context-v1-normal: +2.8 percentage points; 95% paired interval [-1.4, +7.1].
+- teacher-joint-setup-v1-normal minus teacher-calibrated-beliefs-v1-normal: +2.7 percentage points; 95% paired interval [-1.4, +6.8].
 

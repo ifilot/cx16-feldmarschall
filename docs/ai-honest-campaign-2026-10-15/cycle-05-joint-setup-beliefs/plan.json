@@ -1,0 +1,211 @@
+{
+  "cycle": 5,
+  "baseline": "teacher-context-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "teacher-context-v1-normal",
+    "teacher-calibrated-beliefs-v1-normal",
+    "teacher-flag-row-control-v1-normal",
+    "teacher-joint-setup-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "teacher-flag-row-control-v1-normal",
+      "name": "teacher-flag-row-control-v1-normal",
+      "description": "Control: trained Flag-row prior with exact public rank counts; no Flag/Bomb spatial coupling.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT"
+      ],
+      "driver_args": [
+        "--samples",
+        "8",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context",
+        "--joint-belief-model",
+        "flag-row-prior-control-v1.json"
+      ],
+      "model": "Frozen two-style setup prior; exact conditional six-Bomb subset draw, eight worlds/four plies unchanged.",
+      "joint_belief_model": "ai/models/flag-row-prior-control-v1.json",
+      "joint_belief_model_sha256": "8ba679b6188940954411e279a52f83789370f9d87adc675e9a1a293182e07d7e",
+      "asset_files": [
+        "ai/models/flag-row-prior-control-v1.json"
+      ],
+      "information_model": "Own setup and public events only. Retains public captured Bomb origins. No enemy setup."
+    },
+    {
+      "id": "teacher-joint-setup-v1-normal",
+      "name": "teacher-joint-setup-v1-normal",
+      "description": "Infer protected versus loose Flag/Bomb setup style from public movement and retained Bomb disclosures.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT"
+      ],
+      "driver_args": [
+        "--samples",
+        "8",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context",
+        "--joint-belief-model",
+        "joint-flag-bomb-beliefs-v1.json"
+      ],
+      "model": "Frozen two-style setup prior; exact conditional six-Bomb subset draw, eight worlds/four plies unchanged.",
+      "joint_belief_model": "ai/models/joint-flag-bomb-beliefs-v1.json",
+      "joint_belief_model_sha256": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8",
+      "asset_files": [
+        "ai/models/joint-flag-bomb-beliefs-v1.json"
+      ],
+      "information_model": "Own setup and public events only. Retains public captured Bomb origins. No enemy setup."
+    }
+  ],
+  "seed": 2130001,
+  "rounds": 40,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "hypotheses": [
+    "A cheap learned setup-style mixture can exploit public Flag/Bomb dependencies missed by independent rank tables.",
+    "A control with identical trained Flag-row priors and zero spatial coupling separates positional prior from cross-piece inference."
+  ],
+  "contrasts": [
+    [
+      "teacher-joint-setup-v1-normal",
+      "teacher-flag-row-control-v1-normal"
+    ],
+    [
+      "teacher-joint-setup-v1-normal",
+      "teacher-context-v1-normal"
+    ],
+    [
+      "teacher-flag-row-control-v1-normal",
+      "teacher-context-v1-normal"
+    ],
+    [
+      "teacher-joint-setup-v1-normal",
+      "teacher-calibrated-beliefs-v1-normal"
+    ]
+  ],
+  "analysis": "Fresh matched cohort, all four arms retained. Joint versus identical-prior uncoupled control is primary mechanistic contrast. Exploratory strength cohort; fresh final validation and honest opponents required for promotion. Fit196historical training armies; calibration84 armies; no campaign seed used to fit or choose parameters.",
+  "evidence": "research/joint-setup-development.json, joint-exact-control-calibration.json and joint-public-prefix-audit.json."
+}
