@@ -1,0 +1,39 @@
+{
+  "experiment": "Teacher transfer feasibility, 40-minute bounded trial",
+  "started_utc": "2026-10-15 11:08:00 UTC",
+  "deadline_utc": "2026-10-15 11:48:00 UTC",
+  "candidate": "ranking-student-v1-normal",
+  "production": "student-guard-v1-normal",
+  "teacher": "teacher-context-v1-normal",
+  "scope": "Classic Normal only; additive desktop ranking model preserving the production correction and cooperation guard. No X16 compression or production promotion in this trial.",
+  "corpus": "docs/ai-cycle-2026-10-15/student-model/training-evidence.zip",
+  "data": "Use full-history roots only for fitting; preserve original whole family/seed grouped split. Recover native scores, runtime guard and teacher values from retained corrections. Stability diagnostic resamples two independent eight-world batches on 32 outcome-blind development roots.",
+  "learner": {
+    "features": "same 16 permitted move features",
+    "objective": "within-position pairwise logistic ranking of teacher preferences on top of production scores; equal total weight per root",
+    "trees": 64,
+    "depth": 3,
+    "learning_rate": 0.2,
+    "temperature": 24,
+    "maximum_leaf_step": 24,
+    "delta_limit": 192,
+    "minimum_leaf_rows": 12,
+    "regularization": 1.0,
+    "tuning": "One fixed fit, no held-out hyperparameter selection or refitting after tournaments. Production is the zero-delta baseline."
+  },
+  "offline_gate": "Proceed only if held-out mean internal teacher score regret is lower than production after the actual cooperation guard. Report grouped uncertainty, stability and all-root metrics; teacher agreement is not game strength. Stop if teacher repeatability shows no useful repeatable preference beyond production.",
+  "tournament": {
+    "backend": "openmp",
+    "workers": 4,
+    "families": ["fortified", "uniform", "unguarded", "forward", "decoy", "presets", "broad-mixed"],
+    "max_plies": 1000,
+    "head_seed": 1810001,
+    "league_seed": 1811001,
+    "head_rounds": 20,
+    "league_rounds": 10,
+    "opponents": ["original-v1", "planned-v1", "missions-v1-normal"],
+    "primary": "Matched candidate-minus-production league score with 95% complete opponent-and-side block bootstrap interval; positive lower bound supports improvement on this distribution, interval crossing zero is inconclusive.",
+    "secondary": "Direct production head-to-head; no requirement to defeat the teacher. Fixed cohort, no extension after inspecting outcomes.",
+    "time_cap": "If diagnostics or runtime consume the budget, stop at a recorded partial stage. Never silently reduce the fixed cohort and call it full validation."
+  }
+}

@@ -17,6 +17,8 @@ def main():
     parser.add_argument('--turns',type=int,default=80)
     parser.add_argument('--engine',type=Path,default=ROOT/'build/feldmarschall-engine-student')
     args=parser.parse_args();runtime=args.runtime
+    # Fail before running the emulator if the source/build binding is missing.
+    runtime_provenance=json.loads((runtime/'provenance.json').read_text())
     symbols=(runtime/'FELDMARS.sym').read_text()
     symbol=lambda name:int(re.search(r'al ([0-9A-F]+) \._'+name+r'\b',symbols).group(1),16)
     mapping=(runtime/'FELDMARS.map').read_text()
@@ -95,7 +97,7 @@ def main():
             'max_frames':max(r['frames'] for r in records),
             'minimum_stack_canary_untouched_bytes':min(r['stack_canary_untouched_bytes'] for r in records),
             'native_sha256':hashlib.sha256(args.engine.read_bytes()).hexdigest(),
-            'runtime_provenance':json.loads((runtime/'provenance.json').read_text())}
+            'runtime_provenance':runtime_provenance}
     (runtime/'banked-student-decisions.json').write_text(json.dumps(report,indent=2)+'\n')
     print(f'{len(records)} real banked student turns match both native armies; history and per-turn RNG preserved')
 

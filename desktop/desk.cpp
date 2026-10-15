@@ -352,6 +352,16 @@ bool Desk::verifySmoke() {
     perspective->setCurrentIndex(0); slider->setValue(std::min(60, slider->maximum()));
     return true;
 }
+void Desk::captureReview(int match, int ply, int view) {
+    for (int row = 0; row < table->rowCount(); ++row) {
+        if (table->item(row, 0)->data(Qt::UserRole).toInt() != match) continue;
+        table->selectRow(row);
+        perspective->setCurrentIndex(view);
+        slider->setValue(std::max(0, std::min(ply, slider->maximum())));
+        return;
+    }
+    throw std::runtime_error("Requested review match is missing");
+}
 void Desk::closeEvent(QCloseEvent *event) {
     if (process && process->state() != QProcess::NotRunning) { reportError("Let the current tournament finish before closing the desk."); event->ignore(); return; }
     timer->stop(); event->accept();

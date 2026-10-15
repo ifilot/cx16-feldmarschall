@@ -1,0 +1,52 @@
+{
+  "candidate": "student-context-v2-normal",
+  "stage": "student-development",
+  "head_to_head": {
+    "path": "docs/ai-cycle-2026-10-15/tournaments/student-development/student-context-v2-normal--student-guard-v1-normal.fmtour",
+    "sha256": "81f00e7b6a7bf4fbf3d73ff8185e098c105a890ab1bf86ad76c4fb9354bba423",
+    "identity": "student-context-v2-normal",
+    "games": 112,
+    "score": 0.42857142857142855,
+    "paired_95": [
+      0.36607142857142855,
+      0.48660714285714285
+    ],
+    "capped": 2,
+    "families": {
+      "broad-mixed": {
+        "student-context-v2-normal": 0.375,
+        "student-guard-v1-normal": 0.625
+      },
+      "decoy": {
+        "student-context-v2-normal": 0.4375,
+        "student-guard-v1-normal": 0.5625
+      },
+      "fortified": {
+        "student-context-v2-normal": 0.5,
+        "student-guard-v1-normal": 0.5
+      },
+      "forward": {
+        "student-context-v2-normal": 0.5625,
+        "student-guard-v1-normal": 0.4375
+      },
+      "presets": {
+        "student-context-v2-normal": 0.375,
+        "student-guard-v1-normal": 0.625
+      },
+      "unguarded": {
+        "student-context-v2-normal": 0.4375,
+        "student-guard-v1-normal": 0.5625
+      },
+      "uniform": {
+        "student-context-v2-normal": 0.3125,
+        "student-guard-v1-normal": 0.6875
+      }
+    },
+    "endings": {
+      "flag": 110,
+      "ply limit": 2
+    }
+  },
+  "development_gate": false,
+  "validation": false
+}

@@ -39,6 +39,20 @@ class Tournaments(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'already exists'):
             register(catalog()[0])
 
+    def test_failed_build_is_not_published_in_catalog(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for path in ('ai','src/core','src/native','tests/baselines','tools'):
+                (root/path).mkdir(parents=True,exist_ok=True)
+            registry = root/'ai/registry.json'
+            registry.write_text('{"schema":1,"policies":[]}')
+            (root/'src/native/broken.c').write_text('#error deliberate preflight failure\n')
+            with patch('ai_registry.ROOT',root), patch('ai_registry.CATALOG',registry):
+                with self.assertRaises(subprocess.CalledProcessError), contextlib.redirect_stderr(io.StringIO()):
+                    register(dict(id='broken-v1',name='Broken preflight',sources=['src/native/broken.c'],
+                                  defines=[],difficulty='normal',status='experimental',include_dirs=[]))
+                self.assertEqual(catalog(),[])
+
     def test_complete_pairs_and_exact_replay(self):
         summary = verify(self.path)
         self.assertEqual(summary['status'], 'complete')

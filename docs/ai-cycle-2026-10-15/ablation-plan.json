@@ -1,0 +1,11 @@
+{
+  "scope": "Diagnostic attribution only; does not change promotion gates or launch another design/fit.",
+  "hypothesis": "Distinguish transfer of root public strategic state from the combined benefit of guarded-student rollout policy and simulated memory updates.",
+  "candidate": "teacher-context-v1-normal",
+  "control": "teacher-cold-control-v1-normal",
+  "seed": 1561001,
+  "rounds": 8,
+  "games": 112,
+  "samples": 8,
+  "depth": 4
+}

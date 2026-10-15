@@ -1,0 +1,31 @@
+{
+  "source_sha256": "52413ee2dd1036810878ff8caa8d9246213029a47e2aa29d7d97b4de1949ebb1",
+  "model_sha256": "d09cd0f88c5b9ecf4e47081e8859cdd09ef8fa3350c972ab7b6936fb3bd0d770",
+  "audit_source_sha256": "6fd06fcfcc4f757aba25155604a83d79dc9e8b2907839227ef02281a0e10da00",
+  "scope": "Post-fit diagnosis, no refit or gate change. Teacher regret is internal rounded teacher score, not game strength. Native tie simulation uses first enumerated action. Missing features are not established by this audit.",
+  "training": {
+    "roots": 267,
+    "selected_outside_shortlist": 79,
+    "harmful_outside_shortlist": 71,
+    "harmful_changes": 107,
+    "helpful_changes": 37,
+    "native_tie_rule_disagreements": 8,
+    "production_regret": 30.98501872659176,
+    "student_native_tie_regret": 38.36704119850187,
+    "pair_loss_production": 0.7969390889033504,
+    "pair_loss_student": 0.6920088044765889
+  },
+  "held_out": {
+    "roots": 53,
+    "selected_outside_shortlist": 17,
+    "harmful_outside_shortlist": 16,
+    "harmful_changes": 23,
+    "helpful_changes": 3,
+    "native_tie_rule_disagreements": 1,
+    "production_regret": 23.339622641509433,
+    "student_native_tie_regret": 43.679245283018865,
+    "pair_loss_production": 0.7068066642238177,
+    "pair_loss_student": 0.7034568912303534
+  }
+}
+Frozen observer parity: 320 roots 7754 actions

@@ -12,19 +12,26 @@ from train_ai_student import sample_world
 
 
 class TeacherBot:
-    def __init__(self, observer, teacher, samples=8, depth=3, blend='raw', strategic=False):
+    def __init__(self, observer, teacher, samples=8, depth=3, blend='raw', strategic=False, context=False, replies=None):
         self.observer = Engine(shlex.quote(str(observer)))
         command = [str(teacher)] + (['--strategic'] if strategic else [])
+        if context: command.append('--context')
+        if replies is not None: command += ['--replies',str(replies)]
         self.teacher = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True, bufsize=1)
         self.samples, self.depth, self.blend = samples, depth, blend
         self.rng = random.Random(1)
         self.last_report = None
+        self.context = context
 
     def choose(self):
         army_text, board_hex, lost_hex, shuttle = self.observer.ask('public', 'public').split()
         army, cells = int(army_text), list(bytes.fromhex(board_hex))
         histories = {sq: list(map(int, self.observer.ask('memory ' + square_name(sq), 'history').split()))
                      for sq, cell in enumerate(cells) if cell < 254 and bool(cell & 16) != bool(army) and not cell & 32}
+        # Capture strategic state before ranked() speculatively transfers the
+        # chosen actor's goal. Each sampled continuation starts from this same
+        # permitted history, then explicitly follows its own proposed action.
+        context = self.observer.ask('strategy', 'strategy') if self.context else ''
         self.observer.send('ranked')
         scores, credit = {}, {}
         while True:
@@ -39,7 +46,8 @@ class TeacherBot:
         weights, nodes = [], 0
         for _ in range(self.samples):
             world, weight = sample_world(cells, list(bytes.fromhex(lost_hex)), histories, self.rng, army)
-            self.teacher.stdin.write(f'search {army} {self.depth} {bytes(world).hex()} {shuttle}\n'); self.teacher.stdin.flush()
+            suffix = ' ' + context if self.context else ''
+            self.teacher.stdin.write(f'search {army} {self.depth} {bytes(world).hex()} {shuttle}{suffix}\n'); self.teacher.stdin.flush()
             values = {}
             while True:
                 words = self.teacher.stdout.readline().split()
@@ -110,8 +118,10 @@ if __name__ == '__main__':
     parser.add_argument('--blend', choices=('raw', 'correction'), default='raw')
     parser.add_argument('--strategic', action='store_true')
     parser.add_argument('--difficulty', choices=('normal', 'hard'), default='normal')
+    parser.add_argument('--context', action='store_true', help='preserve permitted root strategic history in rollouts')
+    parser.add_argument('--replies', type=int, choices=(1,2,3), help='plausible first opponent replies (supported teacher builds only)')
     args = parser.parse_args()
     if args.samples < 1 or args.depth < 1: parser.error('positive samples and depth required')
-    bot = TeacherBot(args.observer, args.teacher, args.samples, args.depth, args.blend, args.strategic)
+    bot = TeacherBot(args.observer, args.teacher, args.samples, args.depth, args.blend, args.strategic, args.context, args.replies)
     bot.observer.send('difficulty ' + args.difficulty)
     bot.run()

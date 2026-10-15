@@ -79,6 +79,56 @@ static void tactical(void) {
 }
 
 static unsigned private_inventory_checks;
+#ifdef AI_LINKED_SCOUTING
+static void linked_scouting(void) {
+    uint8_t side, target, scout, ally;
+    for(side=0; side<2; side++) {
+        fresh(); ai_difficulty = AI_NORMAL;
+        target = side ? 49 : 50; scout = side ? 39 : 60; ally = side ? 48 : 51;
+        board[scout] = PIECE_SCOUT | (side ? CELL_BLUE : 0);
+        board[ally] = PIECE_GENERAL | (side ? CELL_BLUE : 0);
+        board[target] = PIECE_UNKNOWN | (side ? 0 : CELL_BLUE);
+        board[side ? 99 : 0] = board[side ? 98 : 1] = PIECE_UNKNOWN | (side ? 0 : CELL_BLUE);
+        lost[PIECE_MARSHAL]--; lost[PIECE_COLONEL] -= 2;
+        random_seed(1); ai_move(side ? CELL_BLUE : 0, lost, &from, &to);
+        CHECK(ai_test_linked_information(target) == 66, "cost information by a legal ally's attack-or-abstain decision on both armies");
+        board[ally] = CELL_EMPTY; board[side ? 38 : 61] = PIECE_GENERAL | (side ? CELL_BLUE : 0);
+        random_seed(1); ai_move(side ? CELL_BLUE : 0, lost, &from, &to);
+        CHECK(ai_test_linked_information(target) == 0, "nearby pieces without a legal follow-up attack buy no information");
+        board[side ? 38 : 61] = CELL_EMPTY; board[ally] = PIECE_GENERAL | (side ? CELL_BLUE : 0);
+        board[target] = PIECE_COLONEL | CELL_REVEALED | (side ? 0 : CELL_BLUE);
+        random_seed(1); ai_move(side ? CELL_BLUE : 0, lost, &from, &to);
+        CHECK(ai_test_linked_information(target) == 0, "a disclosed rank needs no information credit");
+    }
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_SCOUT; board[51] = PIECE_GENERAL;
+    board[50] = PIECE_UNKNOWN | CELL_BLUE;
+    lost[PIECE_MARSHAL]--;
+    decide(1);
+    CHECK(ai_test_linked_information(50) == 0, "certain losing follow-up buys no information");
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_SCOUT; board[51] = PIECE_MARSHAL;
+    board[50] = PIECE_UNKNOWN | CELL_BLUE;
+    lost[PIECE_SERGEANT]--; lost[PIECE_BOMB] -= 6;
+    decide(1);
+    CHECK(ai_test_linked_information(50) == 0, "information worth less than the Scout does not justify a probe");
+    board[50] |= CELL_MOVED;
+    decide(1);
+    CHECK(ai_test_linked_information(50) == 0, "movement excludes bombs so a certain winning follow-up needs no probe");
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_SCOUT; board[51] = PIECE_GENERAL;
+    board[50] = PIECE_COLONEL | CELL_BLUE | CELL_REVEALED;
+    lost[PIECE_COLONEL]--;
+    decide(1);
+    CHECK(from == 51 && to == 50, "a favourable disclosure is exploited by the intended beneficiary");
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_SCOUT; board[51] = PIECE_GENERAL;
+    board[50] = PIECE_MARSHAL | CELL_BLUE | CELL_REVEALED;
+    lost[PIECE_MARSHAL]--;
+    decide(1);
+    CHECK(!(from == 51 && to == 50), "an unfavourable disclosure prevents the beneficiary's losing attack");
+}
+#endif
 #ifdef AI_OCCUPANCY_BELIEFS
 static void occupancy_beliefs(void) {
     fresh(); ai_difficulty = AI_NORMAL;
@@ -177,6 +227,30 @@ static void missions(void) {
         decide(seed);
         CHECK(from == 61 && to == 41, "scout investigates a blocker before sending the miner");
     }
+}
+#endif
+#ifdef AI_PLAN_CYCLE
+static void plan_cycle(void) {
+    uint8_t turn, initial;
+    uint8_t snapshot[AI_TEST_STATE_SIZE];
+    fresh(); ai_difficulty = AI_NORMAL;
+    board[60] = PIECE_MINER; board[61] = PIECE_SCOUT; board[99] = PIECE_FLAG;
+    board[0] = board[19] = PIECE_UNKNOWN | CELL_BLUE;
+    board[10] = PIECE_BOMB | CELL_BLUE | CELL_REVEALED;
+    ai_mission_begin(0); initial = ai_mission_test_target(0);
+    CHECK(initial == 10, "plan starts with observable fortification evidence");
+    ai_test_save(snapshot);
+    for(turn=0; turn<8; turn++) ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) == 19, "stalled work opens an investigation in another area");
+    ai_test_load(snapshot);
+    for(turn=0; turn<8; turn++) ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) == 19, "reconsideration history survives a public AI snapshot");
+    board[0] = PIECE_FLAG | CELL_BLUE | CELL_REVEALED;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) == 0, "a disclosed flag overrides speculative-sector cooldown");
+    ai_reset(); board[10] = CELL_EMPTY; board[0] = PIECE_UNKNOWN | CELL_BLUE;
+    ai_mission_begin(0);
+    CHECK(ai_mission_test_target(0) == NOWHERE, "new unsupported guesses do not start a mission");
 }
 #endif
 static void progress_state(void) {
@@ -475,6 +549,12 @@ static void diagnostic_history(void) {
 #endif
 
 int main(void) {
+#ifdef AI_LINKED_SCOUTING
+    linked_scouting();
+#endif
+#ifdef AI_PLAN_CYCLE
+    plan_cycle();
+#endif
 #ifdef AI_DIAGNOSTICS
     diagnostic_history();
 #endif

@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "decision": "rejected at development gate; production remains Guarded Student v1",
+  "plan_sha256": "a0f01608b4d5c92aed018f3bca37adfb64228f1f91419198641fa41d75e53e74",
+  "policy": {
+    "id": "linked-scouting-v1-normal",
+    "name": "Linked Scouting v1 / Normal",
+    "description": "Scout information credit requires another friendly piece with a legal attack whose value changes after disclosure. Uses only public inventories and movement; replaces blanket Scout probe credit and guides Scout objectives.",
+    "sources": [
+      "src/native/engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "src/core/ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "defines": [
+      "AI_MISSIONS",
+      "AI_MEMORY",
+      "AI_STUDENT",
+      "AI_STUDENT_V2",
+      "AI_STUDENT_PRODUCTION",
+      "AI_STUDENT_COOP_GUARD",
+      "AI_LINKED_SCOUTING",
+      "AI_DIAGNOSTICS"
+    ],
+    "difficulty": "normal",
+    "status": "experimental",
+    "include_dirs": [],
+    "archive": "ai/sources/8efa280574799bbc069714290aadf125a6154206a4b44797aa43b03167bf7c4d.zip",
+    "source_sha256": "8efa280574799bbc069714290aadf125a6154206a4b44797aa43b03167bf7c4d"
+  },
+  "reviewed_positions": 18,
+  "gui_captures": 5,
+  "diagnostic_positions": 18,
+  "total_games": 1400,
+  "tournaments": [
+    {
+      "path": "tournaments/development-control/student-guard-v1-normal--missions-v1-normal.fmtour",
+      "sha256": "60f05a0f8216dd80c4145ba1c73d7c1e88f46d2d72a8b47662aac8e748e4262d",
+      "games": 140
+    },
+    {
+      "path": "tournaments/development-control/student-guard-v1-normal--original-v1.fmtour",
+      "sha256": "647f1df163051773216dc6014530be66c8c096e4383f5e30156e889b7c08f41f",
+      "games": 140
+    },
+    {
+      "path": "tournaments/development-control/student-guard-v1-normal--planned-v1.fmtour",
+      "sha256": "d84a63c7ae671107a33938bb1354cce18104ae7ee115e9d55b7f3b346243a3af",
+      "games": 140
+    },
+    {
+      "path": "tournaments/development-control/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+      "sha256": "f6a8fa7a943a3886b229c70a6bd1f734ea69bd20189714f58cda7dce6c073939",
+      "games": 140
+    },
+    {
+      "path": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "sha256": "05f4582b7c43d4f67c54b20918013751e468a5033cac7d17b97c08568e6ac5a1",
+      "games": 280
+    },
+    {
+      "path": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "sha256": "93136492d9bda1a3eacc65fcf95caa74c1334d64d9a0e55ca7c693704d404f8e",
+      "games": 140
+    },
+    {
+      "path": "tournaments/development-league/linked-scouting-v1-normal--original-v1.fmtour",
+      "sha256": "a4af50a7537a00323fcdf4256bbb3f4b630d50be319a598209e3bd0305319cfc",
+      "games": 140
+    },
+    {
+      "path": "tournaments/development-league/linked-scouting-v1-normal--planned-v1.fmtour",
+      "sha256": "7fcfbfeb3842e247875a82c927e62173d5d8c34d5290db48e516584cb0a89c7a",
+      "games": 140
+    },
+    {
+      "path": "tournaments/development-league/linked-scouting-v1-normal--teacher-rollout-v1-normal.fmtour",
+      "sha256": "7964d9b1b3e45d8c640850563730f49add9fb1652d90ec92b3c0438408aa2f46",
+      "games": 140
+    }
+  ],
+  "production_equivalent_decisions": 3901,
+  "root_hidden_permutation_checks": 15163,
+  "silent_inventory_checks": 3836,
+  "requirement_status": {
+    "public_match_review": "complete",
+    "one_named_frozen_candidate": "complete",
+    "production_and_league_development": "complete",
+    "fresh_validation": "not triggered",
+    "public_information_and_cooperation": "passed",
+    "no_teacher_or_student_fit": "complete"
+  },
+  "evidence_sha256": {
+    "README.md": "6af734b15885c8805359416471ae98b79c77a30118773a68e3eb58b4da2efd6f",
+    "activity.json": "4ab2c63e6b1cb04a3294f639ad0eee39f9858e50a4633bd538e546a975302def",
+    "checks/frozen-tactics-provenance.json": "cee626660cd6c5acb41cda04cfd1df4b8b54157239e6aef0c60c8d21e16c85ce",
+    "checks/frozen-tactics.log": "a30fed6fc25dcec91955722ebab85a8c003373aa234e3b03b2ad37c1723c0659",
+    "checks/frozen-tactics.zip": "5df7c57e453851e399fcad2a594812f98ac430e5cd2dbd3a93ff39c53f32bb24",
+    "checks/production-equivalence.log": "4f1b786cfd013db3a09e6269833526d0e0e769634f1954ede28e1ac66bc11338",
+    "checks/production.log": "4ed16313ac5f2afeea2edc64c4f00e4ac3679d3b1d049ad9dc152c3d226afcee",
+    "checks/tactics.log": "d4191b0d6998e66e183c0d9b965458244eeab08487137598b787fc23ed08ad87",
+    "development.json": "6f2c36adfa6cb67177f009ee39887b25f76c36e7553d3a8054ba23f79ff595d8",
+    "diagnostics/baseline": "71aacc905126e9e478658a333dc2e7b0e3e2cebcdf09e168336b7eaa36d3b39a",
+    "diagnostics/candidate": "efcd61cf850b734edef468a3402a91d7b99fab0fdf610a709814b0c342c31475",
+    "diagnostics/summary.json": "1906f1e3e9022a2959effcd4052b66c61a2d0b44dd8446fde762b09b2a958769",
+    "followup-not-taken-head.png": "4ec24d87001ecb845724f2cc812682007a8e6828c0f3325eb44f53f18a81d82c",
+    "followup-not-taken-league.png": "c417e2ada557d3014a3dcc47be0f42e0b5476b4508a0d87f9b4e419e949bf8c0",
+    "plan.json": "a0f01608b4d5c92aed018f3bca37adfb64228f1f91419198641fa41d75e53e74",
+    "review-decoy.png": "834b030386ec224f08d435b9314fd95dd514febffa23b05a0897201b3d528db9",
+    "review-opportunity.png": "60f385c5cc42c6e0adcfb9aef312a2a53c7fbce91d7e05529409fc8f7f1f38bf",
+    "review-scout-loss.png": "375e5edfd8dd3b8094674a0edc4db653738a1d717f0f7b6b17f0d7fb2905e2c7",
+    "review.json": "30cf00d591b7766d8fc6aabfd0d75c70e317c860cf93dbbdd4fbc2d56f8a0cf4",
+    "tournaments/development-control/student-guard-v1-normal--missions-v1-normal.log": "c58eef55d2f7670233c8d952dc11db31fea25f5f5cf672afe96d487de088a8f2",
+    "tournaments/development-control/student-guard-v1-normal--original-v1.log": "c58eef55d2f7670233c8d952dc11db31fea25f5f5cf672afe96d487de088a8f2",
+    "tournaments/development-control/student-guard-v1-normal--planned-v1.log": "c58eef55d2f7670233c8d952dc11db31fea25f5f5cf672afe96d487de088a8f2",
+    "tournaments/development-control/student-guard-v1-normal--teacher-rollout-v1-normal.log": "c58eef55d2f7670233c8d952dc11db31fea25f5f5cf672afe96d487de088a8f2",
+    "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.log": "a5f34ba37cb08b018cf915485003cbbf236f47f257a8521a84834d1a53fb691f",
+    "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.log": "c58eef55d2f7670233c8d952dc11db31fea25f5f5cf672afe96d487de088a8f2",
+    "tournaments/development-league/linked-scouting-v1-normal--original-v1.log": "c58eef55d2f7670233c8d952dc11db31fea25f5f5cf672afe96d487de088a8f2",
+    "tournaments/development-league/linked-scouting-v1-normal--planned-v1.log": "c58eef55d2f7670233c8d952dc11db31fea25f5f5cf672afe96d487de088a8f2",
+    "tournaments/development-league/linked-scouting-v1-normal--teacher-rollout-v1-normal.log": "c58eef55d2f7670233c8d952dc11db31fea25f5f5cf672afe96d487de088a8f2"
+  },
+  "auditor_sha256": "a8d34b4a6d3f305a41f0b39bb951ad7fa1a7897c31d0d741d6f51dd534919088"
+}

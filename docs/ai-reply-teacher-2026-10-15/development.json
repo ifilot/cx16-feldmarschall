@@ -1,0 +1,213 @@
+{
+  "stage": "development",
+  "policy": {
+    "id": "teacher-replies-v1-normal",
+    "name": "Reply-Aware Teacher v1 / Normal",
+    "description": "Context teacher with up to three first opponent replies selected and weighted from that mover's masked-policy scores; same eight worlds, four plies, guarded-student futures and bounded correction blend.",
+    "sources": [
+      "src/native/engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "src/core/ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "defines": [
+      "AI_MISSIONS",
+      "AI_MEMORY",
+      "AI_STUDENT",
+      "AI_STUDENT_V2",
+      "AI_STUDENT_PRODUCTION",
+      "AI_STUDENT_COOP_GUARD",
+      "AI_TEST",
+      "AI_DIAGNOSTICS",
+      "AI_TRACE",
+      "AI_TRAINING",
+      "AI_FEATURE_TRACE"
+    ],
+    "difficulty": "normal",
+    "status": "desktop",
+    "include_dirs": [],
+    "driver": "teacher",
+    "teacher_sources": [
+      "src/native/teacher_rollout.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "src/core/ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "teacher_defines": [
+      "AI_MISSIONS",
+      "AI_MEMORY",
+      "AI_STUDENT",
+      "AI_STUDENT_V2",
+      "AI_STUDENT_PRODUCTION",
+      "AI_STUDENT_COOP_GUARD",
+      "AI_TEST",
+      "AI_DIAGNOSTICS",
+      "AI_ROLLOUT_CONTEXT",
+      "AI_REPLY_BRANCHES",
+      "AI_TRACE"
+    ],
+    "driver_args": [
+      "--samples",
+      "8",
+      "--depth",
+      "4",
+      "--blend",
+      "correction",
+      "--strategic",
+      "--context",
+      "--replies",
+      "3"
+    ],
+    "archive": "ai/sources/5866a6d30250648365ff8acaf580d11315895ebb9d67f504130da17524118fe6.zip",
+    "source_sha256": "5866a6d30250648365ff8acaf580d11315895ebb9d67f504130da17524118fe6"
+  },
+  "plan_sha256": "5d2e48b61076d5fad41dbbb32e9d7bc80af77ede12a3d9247cefd0c1d7c3abe6",
+  "head_to_head": {
+    "path": "docs/ai-reply-teacher-2026-10-15/tournaments/development-head/teacher-replies-v1-normal--teacher-context-v1-normal.fmtour",
+    "sha256": "b2788cc6049bcaf560499942abc2344756b8f5109da6965bc39998c85c484288",
+    "identity": "teacher-replies-v1-normal",
+    "games": 140,
+    "score": 0.4857142857142857,
+    "paired_95": [
+      0.4142857142857143,
+      0.5571428571428572
+    ],
+    "capped": 0,
+    "families": {
+      "broad-mixed": {
+        "teacher-replies-v1-normal": 0.45,
+        "teacher-context-v1-normal": 0.55
+      },
+      "decoy": {
+        "teacher-replies-v1-normal": 0.65,
+        "teacher-context-v1-normal": 0.35
+      },
+      "fortified": {
+        "teacher-replies-v1-normal": 0.45,
+        "teacher-context-v1-normal": 0.55
+      },
+      "forward": {
+        "teacher-replies-v1-normal": 0.55,
+        "teacher-context-v1-normal": 0.45
+      },
+      "presets": {
+        "teacher-replies-v1-normal": 0.5,
+        "teacher-context-v1-normal": 0.5
+      },
+      "unguarded": {
+        "teacher-replies-v1-normal": 0.35,
+        "teacher-context-v1-normal": 0.65
+      },
+      "uniform": {
+        "teacher-replies-v1-normal": 0.45,
+        "teacher-context-v1-normal": 0.55
+      }
+    },
+    "endings": {
+      "flag": 137,
+      "no moves": 3
+    }
+  },
+  "league": {
+    "candidate": 0.6761904761904762,
+    "control": 0.65,
+    "difference": 0.02619047619047619,
+    "block_95": [
+      -0.0380952380952381,
+      0.08571428571428572
+    ],
+    "games_per_policy": 420,
+    "opponents": {
+      "original-v1": {
+        "candidate": 0.8095238095238095,
+        "control": 0.8035714285714286,
+        "games": 84
+      },
+      "planned-v1": {
+        "candidate": 0.7142857142857143,
+        "control": 0.6666666666666666,
+        "games": 84
+      },
+      "missions-v1-normal": {
+        "candidate": 0.6785714285714286,
+        "control": 0.6428571428571429,
+        "games": 84
+      },
+      "student-guard-v1-normal": {
+        "candidate": 0.6309523809523809,
+        "control": 0.5833333333333334,
+        "games": 84
+      },
+      "teacher-rollout-v1-normal": {
+        "candidate": 0.5476190476190477,
+        "control": 0.5535714285714286,
+        "games": 84
+      }
+    },
+    "method": "10000 bootstrap resamples of complete opponent-and-side blocks within each layout family"
+  },
+  "production": {
+    "path": "docs/ai-reply-teacher-2026-10-15/tournaments/development-league/teacher-replies-v1-normal--student-guard-v1-normal.fmtour",
+    "sha256": "c5d596b76c9ba8f444fe6735befc74f729b7c75162ef1849ed7cd7c07cbe406c",
+    "identity": "teacher-replies-v1-normal",
+    "games": 84,
+    "score": 0.6309523809523809,
+    "paired_95": [
+      0.5357142857142857,
+      0.7261904761904762
+    ],
+    "capped": 0,
+    "families": {
+      "broad-mixed": {
+        "teacher-replies-v1-normal": 0.3333333333333333,
+        "student-guard-v1-normal": 0.6666666666666666
+      },
+      "decoy": {
+        "teacher-replies-v1-normal": 0.5,
+        "student-guard-v1-normal": 0.5
+      },
+      "fortified": {
+        "teacher-replies-v1-normal": 0.75,
+        "student-guard-v1-normal": 0.25
+      },
+      "forward": {
+        "teacher-replies-v1-normal": 0.6666666666666666,
+        "student-guard-v1-normal": 0.3333333333333333
+      },
+      "presets": {
+        "teacher-replies-v1-normal": 0.75,
+        "student-guard-v1-normal": 0.25
+      },
+      "unguarded": {
+        "teacher-replies-v1-normal": 0.6666666666666666,
+        "student-guard-v1-normal": 0.3333333333333333
+      },
+      "uniform": {
+        "teacher-replies-v1-normal": 0.75,
+        "student-guard-v1-normal": 0.25
+      }
+    },
+    "endings": {
+      "flag": 82,
+      "no moves": 2
+    }
+  },
+  "privacy_and_state_tests_pass": true,
+  "proceed_to_validation": false
+}

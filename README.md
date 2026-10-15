@@ -601,6 +601,23 @@ New AI research focuses on Classic and clear strategic experiments; see the
 [development direction](docs/ai-direction-2026-10-15.md). Further optional-rule
 tuning is deferred.
 
+The [15 October Classic development cycle](docs/ai-cycle-2026-10-15/README.md)
+records the comparison league, public match review, priority and mission
+experiments, context-preserving desktop teacher and one compact student fit.
+Production remains Guarded Student v1; rejected experiments retain their source
+and portable tournaments.
+The subsequent [linked-scouting experiment](docs/ai-linked-scouting-2026-10-15/README.md)
+tests whether information can guide a legal follow-up attack. Its development
+results reject promotion and retain production unchanged.
+The [reply-aware teacher trial](docs/ai-reply-teacher-2026-10-15/README.md) then
+tests several plausible opponent responses. It improves diagnostic reply
+coverage but establishes no strength gain over Context Teacher v1; its sources
+and 980 games are retained without a new student fit.
+The subsequent [teacher-transfer investigation](docs/ai-transfer-2026-10-15/README.md)
+checks teaching stability and two desktop ranking students. Both fail offline
+learning gates; their sources and diagnostics are retained without new strength
+tournaments or a production change.
+
 ## Building
 
 Requires **cc65**, GNU make 4.3+, and **Python 3** with **Pillow** and **NumPy**.

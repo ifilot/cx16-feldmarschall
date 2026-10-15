@@ -1,0 +1,3 @@
+{
+  "reason": "The evaluator compared inactive zero-count shuttle coordinates literally. No diagnostic scores were produced. The repeated run canonicalizes only unused coordinates; active move history remains exact."
+}

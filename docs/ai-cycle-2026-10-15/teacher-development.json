@@ -1,0 +1,53 @@
+{
+  "candidate": "teacher-context-v1-normal",
+  "stage": "teacher-development",
+  "head_to_head": {
+    "path": "docs/ai-cycle-2026-10-15/tournaments/teacher-development/teacher-context-v1-normal--student-guard-v1-normal.fmtour",
+    "sha256": "cd03e2072eef512e8667d71af88b92965108d502b854aa53b873ff093a684353",
+    "identity": "teacher-context-v1-normal",
+    "games": 112,
+    "score": 0.7142857142857143,
+    "paired_95": [
+      0.6428571428571429,
+      0.7857142857142857
+    ],
+    "capped": 2,
+    "families": {
+      "broad-mixed": {
+        "teacher-context-v1-normal": 0.8125,
+        "student-guard-v1-normal": 0.1875
+      },
+      "decoy": {
+        "teacher-context-v1-normal": 0.625,
+        "student-guard-v1-normal": 0.375
+      },
+      "fortified": {
+        "teacher-context-v1-normal": 0.8125,
+        "student-guard-v1-normal": 0.1875
+      },
+      "forward": {
+        "teacher-context-v1-normal": 0.6875,
+        "student-guard-v1-normal": 0.3125
+      },
+      "presets": {
+        "teacher-context-v1-normal": 0.8125,
+        "student-guard-v1-normal": 0.1875
+      },
+      "unguarded": {
+        "teacher-context-v1-normal": 0.5,
+        "student-guard-v1-normal": 0.5
+      },
+      "uniform": {
+        "teacher-context-v1-normal": 0.75,
+        "student-guard-v1-normal": 0.25
+      }
+    },
+    "endings": {
+      "flag": 108,
+      "no moves": 2,
+      "ply limit": 2
+    }
+  },
+  "development_gate": true,
+  "validation": false
+}

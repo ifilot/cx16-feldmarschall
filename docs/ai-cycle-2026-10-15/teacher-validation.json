@@ -1,0 +1,87 @@
+{
+  "candidate": "teacher-context-v1-normal",
+  "stage": "teacher-validation",
+  "head_to_head": {
+    "path": "docs/ai-cycle-2026-10-15/tournaments/teacher-validation/teacher-context-v1-normal--student-guard-v1-normal.fmtour",
+    "sha256": "2c209aa7c52527124b91d3b0c853e2b1e9db9ca9d4815fc4755f66c0bf189a69",
+    "identity": "teacher-context-v1-normal",
+    "games": 1400,
+    "score": 0.6239285714285714,
+    "paired_95": [
+      0.6021428571428571,
+      0.6453571428571429
+    ],
+    "capped": 9,
+    "families": {
+      "broad-mixed": {
+        "teacher-context-v1-normal": 0.61,
+        "student-guard-v1-normal": 0.39
+      },
+      "decoy": {
+        "teacher-context-v1-normal": 0.64,
+        "student-guard-v1-normal": 0.36
+      },
+      "fortified": {
+        "teacher-context-v1-normal": 0.625,
+        "student-guard-v1-normal": 0.375
+      },
+      "forward": {
+        "teacher-context-v1-normal": 0.565,
+        "student-guard-v1-normal": 0.435
+      },
+      "presets": {
+        "teacher-context-v1-normal": 0.715,
+        "student-guard-v1-normal": 0.285
+      },
+      "unguarded": {
+        "teacher-context-v1-normal": 0.6225,
+        "student-guard-v1-normal": 0.3775
+      },
+      "uniform": {
+        "teacher-context-v1-normal": 0.59,
+        "student-guard-v1-normal": 0.41
+      }
+    },
+    "endings": {
+      "flag": 1378,
+      "ply limit": 9,
+      "no moves": 13
+    }
+  },
+  "development_gate": true,
+  "validation": true,
+  "league": {
+    "candidate": 0.684375,
+    "control": 0.5508928571428572,
+    "difference": 0.13348214285714285,
+    "block_95": [
+      0.09732142857142857,
+      0.16964285714285715
+    ],
+    "games_per_policy": 1120,
+    "opponents": {
+      "original-v1": {
+        "candidate": 0.8089285714285714,
+        "control": 0.7017857142857142,
+        "games": 280
+      },
+      "planned-v1": {
+        "candidate": 0.7196428571428571,
+        "control": 0.5946428571428571,
+        "games": 280
+      },
+      "missions-v1-normal": {
+        "candidate": 0.7089285714285715,
+        "control": 0.5375,
+        "games": 280
+      },
+      "teacher-rollout-v1-normal": {
+        "candidate": 0.5,
+        "control": 0.36964285714285716,
+        "games": 280
+      }
+    },
+    "method": "10000 bootstrap resamples of complete opponent-and-side blocks within each layout family"
+  },
+  "strength_gate": true
+}

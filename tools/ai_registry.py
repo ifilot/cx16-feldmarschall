@@ -62,14 +62,17 @@ def register(spec):
     if not destination.exists():
         destination.write_bytes(data)
     policy = dict(spec, archive=str(destination.relative_to(ROOT)), source_sha256=sha)
+    # A catalog entry must be rebuildable before it becomes selectable. Failed
+    # source snapshots may remain as evidence, but never publish a broken ID.
+    build_policy(identity, policy=policy)
     document = json.loads(CATALOG.read_text())
     document['policies'].append(policy)
     CATALOG.write_text(json.dumps(document, indent=2) + '\n')
     return policy
 
 
-def build_policy(identity):
-    policy = get_policy(identity)
+def build_policy(identity, policy=None):
+    policy = get_policy(identity) if policy is None else policy
     archive = ROOT / policy['archive']
     if digest(archive.read_bytes()) != policy['source_sha256']:
         raise ValueError(f'Source archive failed integrity check: {identity}')

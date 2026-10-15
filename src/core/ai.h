@@ -110,6 +110,16 @@ void ai_test_save(uint8_t* out);
 #endif
 #endif
 void ai_test_load(const uint8_t* in);
+#ifdef AI_LINKED_SCOUTING
+uint8_t ai_test_linked_information(uint8_t square);
+#endif
+#ifdef AI_PLAN_CYCLE
+/* Two seven-byte public mission-progress records, before the memory snapshot. */
+#define AI_PLAN_STATE_SIZE 14
+enum { AI_TEST_PRE_PLAN_SIZE = AI_TEST_STATE_SIZE };
+#undef AI_TEST_STATE_SIZE
+#define AI_TEST_STATE_SIZE (AI_TEST_PRE_PLAN_SIZE + AI_PLAN_STATE_SIZE)
+#endif
 uint8_t ai_test_quiet(uint8_t army);
 #ifdef AI_OCCUPANCY_BELIEFS
 int16_t ai_test_expected(uint8_t rank, uint8_t moved);

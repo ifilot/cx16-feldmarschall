@@ -15,6 +15,10 @@ int main(int argc, char **argv) {
     parser.addOption({"python", "Python interpreter for source builds and tournament storage", "program", QStandardPaths::findExecutable("python3")});
     parser.addOption({"smoke-test", "Run an offscreen integration tournament into a new file", "path"});
     parser.addOption({"screenshot", "Save the integration-test window", "path"});
+    parser.addOption({"capture-review", "Capture an existing tournament and exit", "path"});
+    parser.addOption({"match", "Match ID for review capture", "id", "1"});
+    parser.addOption({"ply", "Ply for review capture", "ply", "0"});
+    parser.addOption({"view", "Review perspective: 0 both, 1 Red, 2 Blue", "view", "0"});
     parser.addPositionalArgument("tournament", "Optional .fmtour file to review"); parser.process(app);
     try {
         auto root = QFileInfo(parser.value("project")).absoluteFilePath();
@@ -24,6 +28,11 @@ int main(int argc, char **argv) {
 #endif
         Desk desk(root, parser.value("python"), worker); desk.show();
         if (!parser.positionalArguments().isEmpty()) desk.openTournament(parser.positionalArguments().first());
+        if (parser.isSet("capture-review")) {
+            desk.openTournament(parser.value("capture-review"));
+            desk.captureReview(parser.value("match").toInt(), parser.value("ply").toInt(), parser.value("view").toInt());
+            QTimer::singleShot(200, &app, [&] { app.exit(desk.grab().save(parser.value("screenshot")) ? 0 : 1); });
+        }
         if (parser.isSet("smoke-test")) {
             desk.finished = [&](bool ok) {
                 try { ok = ok && desk.verifySmoke(); } catch (const std::exception &error) { std::cerr << error.what() << std::endl; ok = false; }

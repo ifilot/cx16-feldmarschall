@@ -1,0 +1,330 @@
+{
+  "scope": "Public failure review; outcomes select games, never AI features. Symptoms and alternatives do not prove a better continuation.",
+  "identity": "student-guard-v1-normal",
+  "games": 18,
+  "symptoms": {
+    "repetition": 6,
+    "late_position": 6,
+    "known_losing_capture": 6
+  },
+  "cases": [
+    {
+      "id": "d28560be6937dc1a0da1",
+      "tournament": "tournaments/baseline/planned-v1--student-guard-v1-normal.fmtour",
+      "match": 39,
+      "family": "broad-mixed",
+      "result": "red",
+      "army": 1,
+      "plies": 111,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 109,
+      "symptom": "repetition",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "751e77980e62bd4eb0de",
+      "tournament": "tournaments/baseline/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+      "match": 37,
+      "family": "broad-mixed",
+      "result": "blue",
+      "army": 0,
+      "plies": 6,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 4,
+      "symptom": "late_position",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "fdbb0ffe28b02d232e02",
+      "tournament": "tournaments/baseline/planned-v1--student-guard-v1-normal.fmtour",
+      "match": 30,
+      "family": "decoy",
+      "result": "blue",
+      "army": 0,
+      "plies": 286,
+      "quiet_tail": 0,
+      "known_losing_captures": [
+        {
+          "ply": 104,
+          "rank": "9",
+          "target": "4"
+        }
+      ],
+      "selected_ply": 104,
+      "symptom": "known_losing_capture",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "ce4dc4be94287668a3ae",
+      "tournament": "tournaments/baseline/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+      "match": 1,
+      "family": "fortified",
+      "result": "blue",
+      "army": 0,
+      "plies": 276,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 274,
+      "symptom": "repetition",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "d6073fcf9ed233e7afc5",
+      "tournament": "tournaments/baseline/missions-v1-normal--student-guard-v1-normal.fmtour",
+      "match": 6,
+      "family": "fortified",
+      "result": "blue",
+      "army": 0,
+      "plies": 424,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 214,
+      "symptom": "repetition",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "7543a554decb343cd79e",
+      "tournament": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+      "match": 21,
+      "family": "forward",
+      "result": "red",
+      "army": 1,
+      "plies": 23,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 21,
+      "symptom": "repetition",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "97e96a1a129076ca2f2b",
+      "tournament": "tournaments/baseline/planned-v1--student-guard-v1-normal.fmtour",
+      "match": 23,
+      "family": "forward",
+      "result": "red",
+      "army": 1,
+      "plies": 27,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 25,
+      "symptom": "late_position",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "36b3107baed91fdbd738",
+      "tournament": "tournaments/baseline/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+      "match": 32,
+      "family": "presets",
+      "result": "red",
+      "army": 1,
+      "plies": 61,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 59,
+      "symptom": "late_position",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "eb25879b5f8fc51a72b2",
+      "tournament": "tournaments/baseline/planned-v1--student-guard-v1-normal.fmtour",
+      "match": 36,
+      "family": "presets",
+      "result": "blue",
+      "army": 0,
+      "plies": 224,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 200,
+      "symptom": "repetition",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "349dd1ce0d804d814866",
+      "tournament": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+      "match": 31,
+      "family": "presets",
+      "result": "draw",
+      "army": 1,
+      "plies": 1000,
+      "quiet_tail": 5,
+      "known_losing_captures": [
+        {
+          "ply": 159,
+          "rank": "9",
+          "target": "4"
+        },
+        {
+          "ply": 741,
+          "rank": "9",
+          "target": "4"
+        },
+        {
+          "ply": 801,
+          "rank": "9",
+          "target": "4"
+        }
+      ],
+      "selected_ply": 801,
+      "symptom": "known_losing_capture",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "e906c7d9db8f63becb39",
+      "tournament": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+      "match": 33,
+      "family": "presets",
+      "result": "draw",
+      "army": 1,
+      "plies": 1000,
+      "quiet_tail": 433,
+      "known_losing_captures": [],
+      "selected_ply": 999,
+      "symptom": "repetition",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "9e6e0312a491096bfc8d",
+      "tournament": "tournaments/baseline/missions-v1-normal--student-guard-v1-normal.fmtour",
+      "match": 16,
+      "family": "unguarded",
+      "result": "blue",
+      "army": 0,
+      "plies": 98,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 96,
+      "symptom": "late_position",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "28960a7288eb64d42d58",
+      "tournament": "tournaments/baseline/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+      "match": 18,
+      "family": "unguarded",
+      "result": "red",
+      "army": 1,
+      "plies": 193,
+      "quiet_tail": 0,
+      "known_losing_captures": [
+        {
+          "ply": 93,
+          "rank": "6",
+          "target": "1"
+        }
+      ],
+      "selected_ply": 93,
+      "symptom": "known_losing_capture",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "a555634b63b644f61221",
+      "tournament": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+      "match": 18,
+      "family": "unguarded",
+      "result": "draw",
+      "army": 0,
+      "plies": 1000,
+      "quiet_tail": 109,
+      "known_losing_captures": [
+        {
+          "ply": 60,
+          "rank": "9",
+          "target": "1"
+        },
+        {
+          "ply": 884,
+          "rank": "9",
+          "target": "1"
+        }
+      ],
+      "selected_ply": 884,
+      "symptom": "known_losing_capture",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "c79181ebf552eb206a35",
+      "tournament": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+      "match": 16,
+      "family": "unguarded",
+      "result": "draw",
+      "army": 0,
+      "plies": 1000,
+      "quiet_tail": 581,
+      "known_losing_captures": [
+        {
+          "ply": 240,
+          "rank": "9",
+          "target": "1"
+        },
+        {
+          "ply": 418,
+          "rank": "9",
+          "target": "4"
+        }
+      ],
+      "selected_ply": 418,
+      "symptom": "known_losing_capture",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "e4572bb7c6c04c3e2fba",
+      "tournament": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+      "match": 10,
+      "family": "uniform",
+      "result": "blue",
+      "army": 0,
+      "plies": 2,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 0,
+      "symptom": "late_position",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "4c1751f5d15ebc055572",
+      "tournament": "tournaments/baseline/missions-v1-normal--student-guard-v1-normal.fmtour",
+      "match": 10,
+      "family": "uniform",
+      "result": "blue",
+      "army": 0,
+      "plies": 2,
+      "quiet_tail": 0,
+      "known_losing_captures": [],
+      "selected_ply": 0,
+      "symptom": "late_position",
+      "permanent_flag_route_blockage": false
+    },
+    {
+      "id": "28d5efde6311b212600b",
+      "tournament": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+      "match": 7,
+      "family": "uniform",
+      "result": "draw",
+      "army": 1,
+      "plies": 1000,
+      "quiet_tail": 661,
+      "known_losing_captures": [
+        {
+          "ply": 133,
+          "rank": "9",
+          "target": "2"
+        },
+        {
+          "ply": 157,
+          "rank": "9",
+          "target": "5"
+        },
+        {
+          "ply": 239,
+          "rank": "7",
+          "target": "3"
+        }
+      ],
+      "selected_ply": 157,
+      "symptom": "known_losing_capture",
+      "permanent_flag_route_blockage": false
+    }
+  ]
+}

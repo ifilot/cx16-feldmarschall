@@ -71,6 +71,19 @@ armies or the public board from one army's viewpoint. Battles and long Scout
 moves reveal ranks as in Classic. The move list remains an analyst's complete
 combat history; it is not an AI input.
 
+For a reproducible review screenshot, the compiled viewer can open a saved match
+at a specified ply and exit after capture. `--view` uses 0 for both armies, 1 for
+Red and 2 for Blue. Ply zero is the starting position:
+
+```sh
+build/desktop/feldmarschall-desk --capture-review saved.fmtour \
+  --match 30 --ply 104 --view 1 --screenshot review.png
+```
+
+Use `QT_QPA_PLATFORM=offscreen` when capturing without a display. The
+[15 October review](ai-cycle-2026-10-15/README.md) includes two examples from real
+saved tournaments.
+
 ## Command-line tournaments
 
 ```sh

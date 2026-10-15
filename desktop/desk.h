@@ -82,4 +82,5 @@ public:
     void startRun(const QString &path, int maxPlies = 1000);
     void startSmoke(const QString &path);
     bool verifySmoke();
+    void captureReview(int match, int ply, int view);
 };

@@ -115,6 +115,35 @@ typedef struct {uint8_t feature,threshold,left,right;int16_t value;} student_nod
 #else
 #include "ai_student_model.h"
 #endif
+#ifdef AI_STUDENT_ENSEMBLE
+/* Desktop-only additive experiment. Each tree uses local byte-sized indices;
+ * the offsets allow the complete ensemble to contain more than 255 nodes. */
+typedef struct {uint8_t feature,threshold,left,right;int16_t value;} ensemble_node_t;
+#include <ai_student_ensemble.h>
+#if ENSEMBLE_SCALE <= 0
+#error Ensemble scale must be positive
+#endif
+static int16_t ensemble_delta(uint8_t from,uint8_t to) {
+    uint8_t features[AI_STUDENT_FEATURES], feature, node;
+    unsigned int tree;
+    int32_t total=0;
+    const ensemble_node_t* nodes;
+    for(feature=0;feature<AI_STUDENT_FEATURES;feature++)
+        features[feature]=ai_student_feature(from,to,feature);
+    for(tree=0;tree<ENSEMBLE_TREES;tree++) {
+        nodes=ensemble_nodes+ensemble_offsets[tree];
+        node=0;
+        while(nodes[node].feature!=255)
+            node=features[nodes[node].feature]<=nodes[node].threshold?
+                 nodes[node].left:nodes[node].right;
+        total+=nodes[node].value;
+    }
+    total/=ENSEMBLE_SCALE;
+    if(total>192) total=192;
+    if(total< -192) total= -192;
+    return (int16_t)total;
+}
+#endif
 int16_t ai_student_score(uint8_t from,uint8_t to) {
     uint8_t node=0;
 #ifdef AI_STUDENT_QUIET_LIMIT
@@ -135,6 +164,8 @@ int16_t ai_student_score(uint8_t from,uint8_t to) {
         if(value< -AI_STUDENT_QUIET_LIMIT) value= -AI_STUDENT_QUIET_LIMIT;
     }
     return value;
+#elif defined(AI_STUDENT_ENSEMBLE)
+    return student_nodes[node].value+ensemble_delta(from,to);
 #else
     return student_nodes[node].value;
 #endif

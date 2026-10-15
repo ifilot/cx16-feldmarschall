@@ -1,0 +1,337 @@
+{
+  "scope": "Public forced-history review; opportunity is a currently legal conditional follow-up, not a guaranteed continuation. Source outcomes never enter the mechanism.",
+  "source": "docs/ai-cycle-2026-10-15/public-cases.jsonl",
+  "positions": [
+    {
+      "id": "d28560be6937dc1a0da1",
+      "source": {
+        "archive": "tournaments/baseline/planned-v1--student-guard-v1-normal.fmtour",
+        "game_index": 39,
+        "group": "broad-mixed",
+        "ply": 109,
+        "seed": 39664
+      },
+      "army": 1,
+      "category": "repetition",
+      "chosen_move": [
+        48,
+        58
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "751e77980e62bd4eb0de",
+      "source": {
+        "archive": "tournaments/baseline/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+        "game_index": 37,
+        "group": "broad-mixed",
+        "ply": 4,
+        "seed": 57109
+      },
+      "army": 0,
+      "category": "late_position",
+      "chosen_move": [
+        69,
+        59
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "fdbb0ffe28b02d232e02",
+      "source": {
+        "archive": "tournaments/baseline/planned-v1--student-guard-v1-normal.fmtour",
+        "game_index": 30,
+        "group": "decoy",
+        "ply": 104,
+        "seed": 3753
+      },
+      "army": 0,
+      "category": "known_losing_capture",
+      "chosen_move": [
+        66,
+        68
+      ],
+      "chosen_target_already_disclosed": true,
+      "opportunities": []
+    },
+    {
+      "id": "ce4dc4be94287668a3ae",
+      "source": {
+        "archive": "tournaments/baseline/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+        "game_index": 1,
+        "group": "fortified",
+        "ply": 274,
+        "seed": 3858
+      },
+      "army": 0,
+      "category": "repetition",
+      "chosen_move": [
+        72,
+        62
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "d6073fcf9ed233e7afc5",
+      "source": {
+        "archive": "tournaments/baseline/missions-v1-normal--student-guard-v1-normal.fmtour",
+        "game_index": 6,
+        "group": "fortified",
+        "ply": 214,
+        "seed": 29806
+      },
+      "army": 0,
+      "category": "repetition",
+      "chosen_move": [
+        81,
+        71
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "7543a554decb343cd79e",
+      "source": {
+        "archive": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+        "game_index": 21,
+        "group": "forward",
+        "ply": 21,
+        "seed": 44406
+      },
+      "army": 1,
+      "category": "repetition",
+      "chosen_move": [
+        31,
+        41
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "97e96a1a129076ca2f2b",
+      "source": {
+        "archive": "tournaments/baseline/planned-v1--student-guard-v1-normal.fmtour",
+        "game_index": 23,
+        "group": "forward",
+        "ply": 25,
+        "seed": 28025
+      },
+      "army": 1,
+      "category": "late_position",
+      "chosen_move": [
+        26,
+        25
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "36b3107baed91fdbd738",
+      "source": {
+        "archive": "tournaments/baseline/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+        "game_index": 32,
+        "group": "presets",
+        "ply": 59,
+        "seed": 57671
+      },
+      "army": 1,
+      "category": "late_position",
+      "chosen_move": [
+        72,
+        82
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": [
+        {
+          "target": 82,
+          "beneficiary": 72,
+          "value": 24,
+          "immediate_scouts": []
+        }
+      ]
+    },
+    {
+      "id": "eb25879b5f8fc51a72b2",
+      "source": {
+        "archive": "tournaments/baseline/planned-v1--student-guard-v1-normal.fmtour",
+        "game_index": 36,
+        "group": "presets",
+        "ply": 200,
+        "seed": 42452
+      },
+      "army": 0,
+      "category": "repetition",
+      "chosen_move": [
+        88,
+        78
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "349dd1ce0d804d814866",
+      "source": {
+        "archive": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+        "game_index": 31,
+        "group": "presets",
+        "ply": 801,
+        "seed": 57671
+      },
+      "army": 1,
+      "category": "known_losing_capture",
+      "chosen_move": [
+        36,
+        39
+      ],
+      "chosen_target_already_disclosed": true,
+      "opportunities": []
+    },
+    {
+      "id": "e906c7d9db8f63becb39",
+      "source": {
+        "archive": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+        "game_index": 33,
+        "group": "presets",
+        "ply": 999,
+        "seed": 34873
+      },
+      "army": 1,
+      "category": "repetition",
+      "chosen_move": [
+        1,
+        11
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "9e6e0312a491096bfc8d",
+      "source": {
+        "archive": "tournaments/baseline/missions-v1-normal--student-guard-v1-normal.fmtour",
+        "game_index": 16,
+        "group": "unguarded",
+        "ply": 96,
+        "seed": 7437
+      },
+      "army": 0,
+      "category": "late_position",
+      "chosen_move": [
+        61,
+        60
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "28960a7288eb64d42d58",
+      "source": {
+        "archive": "tournaments/baseline/student-guard-v1-normal--teacher-rollout-v1-normal.fmtour",
+        "game_index": 18,
+        "group": "unguarded",
+        "ply": 93,
+        "seed": 55436
+      },
+      "army": 1,
+      "category": "known_losing_capture",
+      "chosen_move": [
+        37,
+        38
+      ],
+      "chosen_target_already_disclosed": true,
+      "opportunities": []
+    },
+    {
+      "id": "a555634b63b644f61221",
+      "source": {
+        "archive": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+        "game_index": 18,
+        "group": "unguarded",
+        "ply": 884,
+        "seed": 55436
+      },
+      "army": 0,
+      "category": "known_losing_capture",
+      "chosen_move": [
+        75,
+        55
+      ],
+      "chosen_target_already_disclosed": true,
+      "opportunities": []
+    },
+    {
+      "id": "c79181ebf552eb206a35",
+      "source": {
+        "archive": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+        "game_index": 16,
+        "group": "unguarded",
+        "ply": 418,
+        "seed": 7437
+      },
+      "army": 0,
+      "category": "known_losing_capture",
+      "chosen_move": [
+        67,
+        69
+      ],
+      "chosen_target_already_disclosed": true,
+      "opportunities": []
+    },
+    {
+      "id": "e4572bb7c6c04c3e2fba",
+      "source": {
+        "archive": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+        "game_index": 10,
+        "group": "uniform",
+        "ply": 0,
+        "seed": 33
+      },
+      "army": 0,
+      "category": "late_position",
+      "chosen_move": [
+        64,
+        54
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "4c1751f5d15ebc055572",
+      "source": {
+        "archive": "tournaments/baseline/missions-v1-normal--student-guard-v1-normal.fmtour",
+        "game_index": 10,
+        "group": "uniform",
+        "ply": 0,
+        "seed": 33
+      },
+      "army": 0,
+      "category": "late_position",
+      "chosen_move": [
+        64,
+        54
+      ],
+      "chosen_target_already_disclosed": false,
+      "opportunities": []
+    },
+    {
+      "id": "28d5efde6311b212600b",
+      "source": {
+        "archive": "tournaments/baseline/original-v1--student-guard-v1-normal.fmtour",
+        "game_index": 7,
+        "group": "uniform",
+        "ply": 157,
+        "seed": 37980
+      },
+      "army": 1,
+      "category": "known_losing_capture",
+      "chosen_move": [
+        37,
+        35
+      ],
+      "chosen_target_already_disclosed": true,
+      "opportunities": []
+    }
+  ]
+}

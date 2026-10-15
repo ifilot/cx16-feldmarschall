@@ -48,12 +48,14 @@ def canonical_shuttle(text):
 
 
 def label_record(job):
-    record, observer, teacher, samples = job
+    record, observer, teacher, samples, *settings = job
+    options = settings[0] if settings else {}
     info, history = record['input'], record['public_history']
     army = info['army']; group = record['split_group']
     rows = []; nodes = 0
     for cold in (False, True):
-        bot = TeacherBot(Path(observer), Path(teacher), samples=samples, depth=4, blend='correction', strategic=True)
+        bot = TeacherBot(Path(observer), Path(teacher), samples=samples, depth=4, blend='correction',
+                         strategic=True, context=options.get('context', False))
         try:
             seed = int(hashlib.sha256(record['id'].encode()).hexdigest()[:8], 16)
             bot.rng.seed(seed); bot.observer.send('seed ' + str(seed % 65535 + 1))
@@ -81,10 +83,16 @@ def label_record(job):
             bot.choose(); nodes += bot.last_report['nodes']
             for value in bot.last_report['values']:
                 move = tuple(value['move']); features = vectors[move]
+                correction = round(value['correction'])
+                if 'baseline_model' in options:
+                    # The context teacher starts from the guarded production
+                    # student. Its correction is a delta; a replacement model
+                    # must also reproduce the baseline's existing correction.
+                    correction += predict(options['baseline_model'], features)
                 rows.append({'position': record['id'], 'split_group': group,
                              'validation': int(hashlib.sha256(group.encode()).hexdigest()[:8], 16) % 5 == 0,
                              'history': 'cold' if cold else 'full', 'move': move, 'features': features,
-                             'target': round(value['correction'])})
+                             'target': correction})
         finally: bot.close()
     return {'id': record['id'], 'rows': rows, 'nodes': nodes}
 

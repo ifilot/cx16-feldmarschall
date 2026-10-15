@@ -1,0 +1,30 @@
+fitted 16/64 ranking trees
+fitted 32/64 ranking trees
+fitted 48/64 ranking trees
+fitted 64/64 ranking trees
+{
+  "plan_sha256": "e6bbe626cbdee4b0e3ffab40efb2221eed8d7e3f54272a7c50143c40f40a3923",
+  "corpus_sha256": "e0cd4fdc2b67ce8ea475944a57f66eeca79a5d8e6c49701657d778666edf955d",
+  "input_sha256": "4f2a0c3ef8fb5c0ec3dc94e0445e83a3bea33d4ff92402fd9b23250b4372639a",
+  "trees_count": 64,
+  "node_count": 820,
+  "scale": 1000,
+  "features": 16,
+  "parameters": {
+    "features": "same 16 permitted move features",
+    "objective": "All unordered legal-action pairs with nontrivial teacher margin, excluding pairs where neither correction is permitted; equal total pair weight per root. Same fixed features, capacity and hyperparameters as v1.",
+    "trees": 64,
+    "depth": 3,
+    "learning_rate": 0.2,
+    "temperature": 24,
+    "maximum_leaf_step": 24,
+    "delta_limit": 192,
+    "minimum_leaf_rows": 12,
+    "regularization": 1.0,
+    "tuning": "One fixed fit, no held-out hyperparameter selection or refitting after tournaments. Production is the zero-delta baseline."
+  },
+  "scope": "Internal rounded teacher score regret on retained grouped development roots; not win probability, not independent strength validation. For v2 the old held-out set informed this repair and is development evidence only.",
+  "offline_gate_passed": false
+}
+training {"positions": 267, "groups": 40, "production_regret": 30.98501872659176, "student_regret": 31.303370786516854, "mean_improvement": -0.31835205992509363, "equal_group_mean_improvement": 3.0530655455655458, "equal_group_95": [-1.769874143217893, 9.227643308080808], "changed": 33}
+held_out {"positions": 53, "groups": 10, "production_regret": 23.339622641509433, "student_regret": 24.50943396226415, "mean_improvement": -1.169811320754717, "equal_group_mean_improvement": -0.9047619047619048, "equal_group_95": [-2.6476190476190475, 0.0], "changed": 4}

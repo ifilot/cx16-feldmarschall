@@ -9,6 +9,7 @@ import shutil
 
 from build_ai_mission_cases import public_analysis
 from feldmarschall import ROOT, Engine, parse_square
+from train_teacher_student import canonical_shuttle
 
 
 def decide(case, executable):
@@ -32,7 +33,9 @@ def decide(case, executable):
         shuttle = case['input']['shuttle']
         expected = bytes(shuttle[str(a)][i] if shuttle[str(a)][i] is not None else 255
                          for i in range(3) for a in (0, 1)).hex()
-        assert state_hex == expected
+        # Before an army's first move, its unused coordinates can be zero or
+        # NOWHERE. Active two-square histories must still match exactly.
+        assert canonical_shuttle(state_hex) == canonical_shuttle(expected)
         move = list(map(parse_square, engine.ask('go', 'move').split()))
         assert move in case['legal_moves']
         analysis = public_analysis(case['input'], case['public_history'], move, case['legal_moves'])

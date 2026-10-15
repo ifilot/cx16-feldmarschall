@@ -1,0 +1,1120 @@
+{
+  "scope": "Observational public-root opportunity counts, not causal estimates. Legal follow-up means at least one credited beneficiary remains at its recorded square and can attack the same surviving defender on the next own turn. Favorable means winning immediate combat only; it ignores recapture, flag defense and alternative moves. Declining does not prove a mistake.",
+  "actors": {
+    "linked-scouting-v1-normal": {
+      "games": 840,
+      "scout_attacks": 2421,
+      "concealed_scout_attacks": 2338,
+      "concealed_scout_attacks_with_valued_followup": 21,
+      "valued_probe_scout_losses": 18,
+      "valued_probe_followup_still_legal": 7,
+      "valued_probe_followup_taken": 0,
+      "favorable_followups_available": 2,
+      "favorable_followups_taken": 0,
+      "unfavorable_followups_available": 5,
+      "unfavorable_followups_declined": 5,
+      "valued_probe_defender_left_target": 9,
+      "valued_probe_all_beneficiaries_lost": 4,
+      "disclosed_losing_scout_attacks": 61,
+      "valued_probe_game_ended_before_next_turn": 1
+    },
+    "student-guard-v1-normal": {
+      "games": 840,
+      "scout_attacks": 2616,
+      "concealed_scout_attacks": 2539,
+      "concealed_scout_attacks_with_valued_followup": 1,
+      "disclosed_losing_scout_attacks": 50
+    }
+  },
+  "first_divergences": 234,
+  "divergence_examples": [
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 3,
+      "ply": 10,
+      "candidate_move": [
+        70,
+        60
+      ],
+      "baseline_move": [
+        51,
+        41
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 4,
+      "ply": 177,
+      "candidate_move": [
+        48,
+        58
+      ],
+      "baseline_move": [
+        48,
+        68
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 6,
+      "ply": 125,
+      "candidate_move": [
+        45,
+        55
+      ],
+      "baseline_move": [
+        38,
+        58
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 7,
+      "ply": 90,
+      "candidate_move": [
+        61,
+        51
+      ],
+      "baseline_move": [
+        69,
+        49
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 9,
+      "ply": 42,
+      "candidate_move": [
+        58,
+        59
+      ],
+      "baseline_move": [
+        49,
+        48
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 10,
+      "ply": 177,
+      "candidate_move": [
+        69,
+        68
+      ],
+      "baseline_move": [
+        69,
+        67
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 11,
+      "ply": 48,
+      "candidate_move": [
+        59,
+        49
+      ],
+      "baseline_move": [
+        39,
+        37
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 13,
+      "ply": 66,
+      "candidate_move": [
+        64,
+        54
+      ],
+      "baseline_move": [
+        61,
+        41
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 16,
+      "ply": 53,
+      "candidate_move": [
+        41,
+        51
+      ],
+      "baseline_move": [
+        25,
+        45
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 17,
+      "ply": 96,
+      "candidate_move": [
+        61,
+        51
+      ],
+      "baseline_move": [
+        61,
+        41
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 18,
+      "ply": 77,
+      "candidate_move": [
+        31,
+        41
+      ],
+      "baseline_move": [
+        31,
+        51
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 19,
+      "ply": 156,
+      "candidate_move": [
+        72,
+        62
+      ],
+      "baseline_move": [
+        63,
+        60
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 20,
+      "ply": 79,
+      "candidate_move": [
+        38,
+        48
+      ],
+      "baseline_move": [
+        38,
+        58
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 25,
+      "ply": 110,
+      "candidate_move": [
+        68,
+        67
+      ],
+      "baseline_move": [
+        41,
+        31
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 27,
+      "ply": 138,
+      "candidate_move": [
+        81,
+        71
+      ],
+      "baseline_move": [
+        66,
+        64
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 28,
+      "ply": 51,
+      "candidate_move": [
+        16,
+        6
+      ],
+      "baseline_move": [
+        48,
+        58
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 32,
+      "ply": 67,
+      "candidate_move": [
+        32,
+        31
+      ],
+      "baseline_move": [
+        24,
+        44
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 34,
+      "ply": 17,
+      "candidate_move": [
+        48,
+        58
+      ],
+      "baseline_move": [
+        55,
+        54
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 36,
+      "ply": 59,
+      "candidate_move": [
+        36,
+        35
+      ],
+      "baseline_move": [
+        32,
+        30
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 38,
+      "ply": 17,
+      "candidate_move": [
+        60,
+        70
+      ],
+      "baseline_move": [
+        69,
+        79
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 39,
+      "ply": 92,
+      "candidate_move": [
+        50,
+        40
+      ],
+      "baseline_move": [
+        50,
+        30
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 40,
+      "ply": 31,
+      "candidate_move": [
+        48,
+        38
+      ],
+      "baseline_move": [
+        48,
+        58
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 41,
+      "ply": 6,
+      "candidate_move": [
+        64,
+        34
+      ],
+      "baseline_move": [
+        64,
+        24
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 44,
+      "ply": 107,
+      "candidate_move": [
+        38,
+        48
+      ],
+      "baseline_move": [
+        38,
+        58
+      ]
+    }
+  ],
+  "valued_probe_examples": [
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 1,
+      "ply": 22,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        35,
+        36
+      ],
+      "opportunities": [
+        {
+          "target": 36,
+          "beneficiary": 26,
+          "value": 14,
+          "immediate_scouts": [
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 24,
+      "ply": 29,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        21,
+        71
+      ],
+      "opportunities": [
+        {
+          "target": 71,
+          "beneficiary": 70,
+          "value": 20,
+          "immediate_scouts": [
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 30,
+      "ply": 53,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        37,
+        38
+      ],
+      "opportunities": [
+        {
+          "target": 38,
+          "beneficiary": 39,
+          "value": 15,
+          "immediate_scouts": [
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 54,
+      "ply": 509,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        25,
+        55
+      ],
+      "opportunities": [
+        {
+          "target": 55,
+          "beneficiary": 54,
+          "value": 18,
+          "immediate_scouts": [
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 102,
+      "ply": 237,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        80,
+        10
+      ],
+      "opportunities": [
+        {
+          "target": 10,
+          "beneficiary": 11,
+          "value": 22,
+          "immediate_scouts": [
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 139,
+      "ply": 170,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        60,
+        61
+      ],
+      "opportunities": [
+        {
+          "target": 61,
+          "beneficiary": 71,
+          "value": 10,
+          "immediate_scouts": [
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 255,
+      "ply": 234,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        41,
+        40
+      ],
+      "opportunities": [
+        {
+          "target": 40,
+          "beneficiary": 50,
+          "value": 16,
+          "immediate_scouts": [
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 275,
+      "ply": 108,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        61,
+        51
+      ],
+      "opportunities": [
+        {
+          "target": 51,
+          "beneficiary": 50,
+          "value": 23,
+          "immediate_scouts": [
+            61
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 18,
+      "ply": 115,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        38,
+        48
+      ],
+      "opportunities": [
+        {
+          "target": 48,
+          "beneficiary": 58,
+          "value": 11,
+          "immediate_scouts": [
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 18,
+      "ply": 175,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        26,
+        28
+      ],
+      "opportunities": [
+        {
+          "target": 28,
+          "beneficiary": 29,
+          "value": 13,
+          "immediate_scouts": [
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 32,
+      "ply": 81,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        24,
+        34
+      ],
+      "opportunities": [
+        {
+          "target": 34,
+          "beneficiary": 33,
+          "value": 10,
+          "immediate_scouts": [
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 93,
+      "ply": 18,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        30,
+        31
+      ],
+      "opportunities": [
+        {
+          "target": 31,
+          "beneficiary": 21,
+          "value": 14,
+          "immediate_scouts": [
+            30
+          ]
+        }
+      ]
+    }
+  ],
+  "all_valued_probe_loss_followups": [
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 1,
+      "ply": 22,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        35,
+        36
+      ],
+      "opportunities": [
+        {
+          "target": 36,
+          "beneficiary": 26,
+          "value": 14,
+          "immediate_scouts": [
+            35
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 7,
+      "next_own_ply": 24,
+      "actual_next_move": [
+        62,
+        65
+      ],
+      "defender_still_at_target": true,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 24,
+      "ply": 29,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        21,
+        71
+      ],
+      "opportunities": [
+        {
+          "target": 71,
+          "beneficiary": 70,
+          "value": 20,
+          "immediate_scouts": [
+            21
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 7,
+      "next_own_ply": 31,
+      "actual_next_move": [
+        13,
+        33
+      ],
+      "defender_still_at_target": true,
+      "followup_still_legal": true,
+      "favorable_followup": true,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 30,
+      "ply": 53,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        37,
+        38
+      ],
+      "opportunities": [
+        {
+          "target": 38,
+          "beneficiary": 39,
+          "value": 15,
+          "immediate_scouts": [
+            37
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 7,
+      "next_own_ply": 55,
+      "actual_next_move": [
+        25,
+        35
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 54,
+      "ply": 509,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        25,
+        55
+      ],
+      "opportunities": [
+        {
+          "target": 55,
+          "beneficiary": 54,
+          "value": 18,
+          "immediate_scouts": [
+            25
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 1,
+      "next_own_ply": 511,
+      "actual_next_move": [
+        44,
+        45
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 102,
+      "ply": 237,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        80,
+        10
+      ],
+      "opportunities": [
+        {
+          "target": 10,
+          "beneficiary": 11,
+          "value": 22,
+          "immediate_scouts": [
+            80
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 1,
+      "game_ended_before_next_turn": true
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 139,
+      "ply": 170,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        60,
+        61
+      ],
+      "opportunities": [
+        {
+          "target": 61,
+          "beneficiary": 71,
+          "value": 10,
+          "immediate_scouts": [
+            60
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 5,
+      "next_own_ply": 172,
+      "actual_next_move": [
+        71,
+        61
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 255,
+      "ply": 234,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        41,
+        40
+      ],
+      "opportunities": [
+        {
+          "target": 40,
+          "beneficiary": 50,
+          "value": 16,
+          "immediate_scouts": [
+            41
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 1,
+      "next_own_ply": 236,
+      "actual_next_move": [
+        51,
+        61
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-head/linked-scouting-v1-normal--student-guard-v1-normal.fmtour",
+      "game": 275,
+      "ply": 108,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        61,
+        51
+      ],
+      "opportunities": [
+        {
+          "target": 51,
+          "beneficiary": 50,
+          "value": 23,
+          "immediate_scouts": [
+            61
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 7,
+      "next_own_ply": 110,
+      "actual_next_move": [
+        62,
+        61
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 18,
+      "ply": 115,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        38,
+        48
+      ],
+      "opportunities": [
+        {
+          "target": 48,
+          "beneficiary": 58,
+          "value": 11,
+          "immediate_scouts": [
+            38
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 4,
+      "next_own_ply": 117,
+      "actual_next_move": [
+        26,
+        28
+      ],
+      "defender_still_at_target": true,
+      "followup_still_legal": true,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 18,
+      "ply": 175,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        26,
+        28
+      ],
+      "opportunities": [
+        {
+          "target": 28,
+          "beneficiary": 29,
+          "value": 13,
+          "immediate_scouts": [
+            26
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 7,
+      "next_own_ply": 177,
+      "actual_next_move": [
+        16,
+        17
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 32,
+      "ply": 81,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        24,
+        34
+      ],
+      "opportunities": [
+        {
+          "target": 34,
+          "beneficiary": 33,
+          "value": 10,
+          "immediate_scouts": [
+            24
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 1,
+      "next_own_ply": 83,
+      "actual_next_move": [
+        32,
+        22
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--missions-v1-normal.fmtour",
+      "game": 93,
+      "ply": 18,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        30,
+        31
+      ],
+      "opportunities": [
+        {
+          "target": 31,
+          "beneficiary": 21,
+          "value": 14,
+          "immediate_scouts": [
+            30
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 10,
+      "next_own_ply": 20,
+      "actual_next_move": [
+        21,
+        11
+      ],
+      "defender_still_at_target": true,
+      "followup_still_legal": true,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--original-v1.fmtour",
+      "game": 45,
+      "ply": 30,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        31,
+        21
+      ],
+      "opportunities": [
+        {
+          "target": 21,
+          "beneficiary": 20,
+          "value": 29,
+          "immediate_scouts": [
+            31
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 7,
+      "next_own_ply": 32,
+      "actual_next_move": [
+        20,
+        10
+      ],
+      "defender_still_at_target": true,
+      "followup_still_legal": true,
+      "favorable_followup": true,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--original-v1.fmtour",
+      "game": 93,
+      "ply": 18,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        30,
+        31
+      ],
+      "opportunities": [
+        {
+          "target": 31,
+          "beneficiary": 21,
+          "value": 14,
+          "immediate_scouts": [
+            30
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 10,
+      "next_own_ply": 20,
+      "actual_next_move": [
+        21,
+        11
+      ],
+      "defender_still_at_target": true,
+      "followup_still_legal": true,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--original-v1.fmtour",
+      "game": 122,
+      "ply": 33,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        65,
+        75
+      ],
+      "opportunities": [
+        {
+          "target": 75,
+          "beneficiary": 76,
+          "value": 26,
+          "immediate_scouts": [
+            65
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 3,
+      "next_own_ply": 35,
+      "actual_next_move": [
+        76,
+        86
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--planned-v1.fmtour",
+      "game": 21,
+      "ply": 260,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        72,
+        75
+      ],
+      "opportunities": [
+        {
+          "target": 75,
+          "beneficiary": 76,
+          "value": 10,
+          "immediate_scouts": [
+            72
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 7,
+      "next_own_ply": 262,
+      "actual_next_move": [
+        66,
+        65
+      ],
+      "defender_still_at_target": false,
+      "followup_still_legal": false,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--planned-v1.fmtour",
+      "game": 93,
+      "ply": 18,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        30,
+        31
+      ],
+      "opportunities": [
+        {
+          "target": 31,
+          "beneficiary": 21,
+          "value": 14,
+          "immediate_scouts": [
+            30
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 10,
+      "next_own_ply": 20,
+      "actual_next_move": [
+        21,
+        11
+      ],
+      "defender_still_at_target": true,
+      "followup_still_legal": true,
+      "favorable_followup": false,
+      "followup_taken": false
+    },
+    {
+      "tournament": "tournaments/development-league/linked-scouting-v1-normal--teacher-rollout-v1-normal.fmtour",
+      "game": 52,
+      "ply": 11,
+      "identity": "linked-scouting-v1-normal",
+      "move": [
+        68,
+        69
+      ],
+      "opportunities": [
+        {
+          "target": 69,
+          "beneficiary": 59,
+          "value": 10,
+          "immediate_scouts": [
+            68
+          ]
+        }
+      ],
+      "disclosed_rank_after_probe": 10,
+      "next_own_ply": 13,
+      "actual_next_move": [
+        18,
+        68
+      ],
+      "defender_still_at_target": true,
+      "followup_still_legal": true,
+      "favorable_followup": false,
+      "followup_taken": false
+    }
+  ]
+}

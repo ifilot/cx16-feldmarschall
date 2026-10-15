@@ -38,6 +38,9 @@
 #include "setup.h"
 #include "random.h"
 #include "ai.h"
+#if defined(AI_TEST) && defined(AI_MISSIONS)
+#include "ai_mission.h"
+#endif
 #if defined(AI_FEATURE_TRACE) || defined(AI_STUDENT)
 #include "ai_student.h"
 #endif
@@ -405,7 +408,29 @@ int main(int argc, char** argv) {
                 choose_setup();
             }
         }
+#if defined(AI_TEST) && defined(AI_MISSIONS)
+        else if(!strcmp(command, "guarded")) {
+            from=square(strtok(args," "));to=square(strtok(NULL," "));
+            if(from==NOWHERE || to==NOWHERE) reply("error squares");
+            else {
+                printf("guarded %u\n",ai_mission_training_guarded(from,to));
+                fflush(stdout);
+            }
+        }
+#endif
 #ifdef AI_DIAGNOSTICS
+        else if(!strcmp(command, "strategy")) {
+#ifdef AI_TEST
+            uint8_t state[AI_TEST_STATE_SIZE];
+            unsigned index;
+            ai_test_save(state);
+            fputs("strategy ", stdout);
+            for(index=0; index<AI_TEST_STATE_SIZE; index++) printf("%02x", state[index]);
+            putchar('\n'); fflush(stdout);
+#else
+            reply("error strategy requires AI_TEST");
+#endif
+        }
         else if(!strcmp(command, "position")) {
             char* army=strtok(args," ");char* lost=strtok(NULL," ");
             char* cells=strtok(NULL," ");char* history=strtok(NULL," ");

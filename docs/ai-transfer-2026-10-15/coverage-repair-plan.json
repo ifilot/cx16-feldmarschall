@@ -1,0 +1,55 @@
+{
+  "experiment": "One all-legal-action coverage repair after verified shortlist objective failure",
+  "started_utc": "2026-10-15 11:08:00 UTC",
+  "deadline_utc": "2026-10-15 11:48:00 UTC",
+  "candidate": "ranking-student-v2-normal",
+  "production": "student-guard-v1-normal",
+  "teacher": "teacher-context-v1-normal",
+  "scope": "Classic Normal only; additive desktop ranking model preserving the production correction and cooperation guard. No X16 compression or production promotion in this trial.",
+  "corpus": "docs/ai-cycle-2026-10-15/student-model/training-evidence.zip",
+  "data": "Same retained full-history roots and original training267/previousheldout53 split. The previous heldout has informed this repair and is development evidence only. Fresh tournament seeds are the strength test.",
+  "learner": {
+    "features": "same 16 permitted move features",
+    "objective": "All unordered legal-action pairs with nontrivial teacher margin, excluding pairs where neither correction is permitted; equal total pair weight per root. Same fixed features, capacity and hyperparameters as v1.",
+    "trees": 64,
+    "depth": 3,
+    "learning_rate": 0.2,
+    "temperature": 24,
+    "maximum_leaf_step": 24,
+    "delta_limit": 192,
+    "minimum_leaf_rows": 12,
+    "regularization": 1.0,
+    "tuning": "One fixed fit, no held-out hyperparameter selection or refitting after tournaments. Production is the zero-delta baseline."
+  },
+  "offline_gate": "Training all-action mean teacher score regret must improve over production; old heldout reported as development only, no independent generalization claim. Frozen inference must pass.",
+  "tournament": {
+    "backend": "openmp",
+    "workers": 4,
+    "families": [
+      "fortified",
+      "uniform",
+      "unguarded",
+      "forward",
+      "decoy",
+      "presets",
+      "broad-mixed"
+    ],
+    "max_plies": 1000,
+    "head_seed": 1813001,
+    "league_seed": 1814001,
+    "head_rounds": 20,
+    "league_rounds": 10,
+    "opponents": [
+      "original-v1",
+      "planned-v1",
+      "missions-v1-normal"
+    ],
+    "primary": "Fresh matched candidate-minus-production league score,95% complete-opponent-and-side block bootstrap. Lower bound>0 supports improvement for tested distribution; crossing0 is inconclusive. Old heldout cannot establish generalization for this repair.",
+    "secondary": "Direct production head-to-head; no requirement to defeat the teacher. Fixed cohort, no extension after inspecting outcomes.",
+    "time_cap": "If diagnostics or runtime consume the budget, stop at a recorded partial stage. Never silently reduce the fixed cohort and call it full validation."
+  },
+  "original_plan_sha256": "fed46771e340bb40d270380d3275a14d8bf8e2766829174dda80e075ef368a30",
+  "failed_policy": "ranking-student-v1-normal",
+  "reason": "The v1 surrogate omitted alternatives that remained eligible at runtime. Independent frozen C audit confirms this modeling flaw, not an exporter bug. This explicitly supersedes original one-fit limit for one documented repair; no more fits after this repair.",
+  "model_directory": "coverage-repair-model"
+}

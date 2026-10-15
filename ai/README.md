@@ -6,8 +6,8 @@ source archive under `sources/`. The archives contain actual C sources, headers,
 fitted models and Python adapters. Rebuilding does not use the current working
 tree's evaluator or an ignored historical build directory.
 
-The initial catalog has 39 policies: historical milestones, current guarded
-Normal, retained experimental alternatives and the two desktop teachers. Rejected
+The catalog has 49 policies: historical milestones, current guarded
+Normal, retained experimental alternatives and desktop reference teachers. Rejected
 experiments are clearly marked; being selectable does not imply acceptance.
 Existing experimental run names and results remain intact in
 [`docs/ai-experiments.json`](../docs/ai-experiments.json). Earlier one-off policies
@@ -26,6 +26,33 @@ The main progression is:
 | Guarded Student v1 / `student-guard-v1-normal` | Production learned corrections, protecting assigned support jobs. |
 | Material Teacher v1 / `teacher-material-v1-normal` | Desktop sampled-world material search, with mission corrections. |
 | Rollout Teacher v1 / `teacher-rollout-v1-normal` | Desktop masked-policy rollouts with strategic utility and mission corrections. |
+| Priorities v1 / `priorities-v1-normal` | Rejected priority-class experiment; breaks Scout cooperation. |
+| Reconsidered Plans v2 / `plans-v2-normal` | Rejected stalled-sector reconsideration experiment; independent strength and hardware gates fail. |
+| Context Rollout Teacher v1 / `teacher-context-v1-normal` | Desktop rollout with guarded-student future policies and retained root strategic state. |
+| Context Student v2 / `student-context-v2-normal` | Rejected single compact fit from the context teacher; actual model has 27 nodes / 162 bytes. |
+| Linked Scouting v1 / `linked-scouting-v1-normal` | Rejected public information-value experiment requiring a legal conditional follow-up attack. |
+| Reply-Aware Teacher v1 / `teacher-replies-v1-normal` | Desktop experiment averaging up to three plausible masked-policy replies; rejected at its development gate. |
+| Ranking Student v1 / `ranking-student-v1-normal` | Rejected offline desktop residual ranker; shortlisted training left other legal actions unconstrained. |
+| Ranking Student v2 / `ranking-student-v2-normal` | Rejected offline all-action coverage repair; same capacity and features, no demonstrated learning gain. |
+
+The [15 October cycle](../docs/ai-cycle-2026-10-15/README.md) records development,
+independent validation and acceptance decisions. `teacher-cold-control-v1-normal`
+is the context teacher's diagnostic control without root-state transfer;
+`guard-diagnostics-v1-normal` adds forced-history diagnostics to production.
+The failed, unbuildable Plans v1 source remains in the cycle's build-failure
+record and is absent from the selectable list. Registry status describes the
+policy type; the cycle report records whether an experiment passed its gates.
+The subsequent [linked-scouting experiment](../docs/ai-linked-scouting-2026-10-15/README.md)
+retains one frozen candidate, 1,400 development games and a public follow-up
+analysis. It did not pass the gate for independent validation or adoption.
+The [reply-aware desktop trial](../docs/ai-reply-teacher-2026-10-15/README.md)
+tests multiple plausible first replies against Context Teacher v1 with the same
+sample count and horizon. Its 980 development games do not establish a strength
+gain over that teacher; no student fit followed.
+
+The [teacher-transfer investigation](../docs/ai-transfer-2026-10-15/README.md)
+retains two native desktop ranking models and their offline diagnostics. Neither
+passed its learning gate, so no new strength tournament or compression followed.
 
 These names identify **move policies**. Tournaments deliberately give both
 participants common referee-generated starting armies to compare their play.
@@ -47,8 +74,9 @@ python3 tools/ai_registry.py register /path/to/new-policy.json
 python3 tools/ai_registry.py build missions-v2-normal
 ```
 
-`register` refuses duplicate IDs and freezes source inputs immediately. It does
-not edit or regenerate models. Supply generated model headers in an explicit
+`register` refuses duplicate IDs, freezes source inputs immediately and compiles
+the frozen recipe before publishing it to the selectable list. It does not edit
+or regenerate models. Supply generated model headers in an explicit
 `include_dirs` directory before registration. A changed model, compilation
 define, adapter configuration or difficulty needs a distinct ID. Never edit an
 existing entry or overwrite a source archive. Commit the registry and its new

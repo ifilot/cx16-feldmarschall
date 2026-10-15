@@ -63,6 +63,34 @@ CORE_MEMORY = $(CORE_MISSIONS) src/core/ai_memory.c
 CORE_PRODUCTION = $(CORE_MEMORY) src/core/ai_student.c
 AI_PRODUCTION_FLAGS = -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_PRODUCTION -DAI_STUDENT_COOP_GUARD
 
+.PHONY: test-ai-linked-scouting
+test-ai-linked-scouting: build/ai-linked-scouting-test
+	build/ai-linked-scouting-test
+build/ai-linked-scouting-test: tests/ai_test.c $(CORE_PRODUCTION) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_LINKED_SCOUTING $(AI_PRODUCTION_FLAGS) -Isrc/core -o $@ tests/ai_test.c $(CORE_PRODUCTION)
+
+.PHONY: test-ai-priorities
+test-ai-priorities: build/ai-priorities-test
+	build/ai-priorities-test
+build/ai-priorities-test: tests/ai_test.c $(CORE_PRODUCTION) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_PRIORITIES $(AI_PRODUCTION_FLAGS) -Isrc/core -o $@ tests/ai_test.c $(CORE_PRODUCTION)
+
+.PHONY: test-ai-plan-cycle
+test-ai-plan-cycle: build/ai-plan-cycle-test
+	build/ai-plan-cycle-test
+build/ai-plan-cycle-test: tests/ai_test.c $(CORE_PRODUCTION) $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST -DAI_PLAN_CYCLE $(AI_PRODUCTION_FLAGS) -Isrc/core -o $@ tests/ai_test.c $(CORE_PRODUCTION)
+
+.PHONY: test-ai-cycle-student
+test-ai-cycle-student: build/ai-cycle-student-test
+	build/ai-cycle-student-test
+build/ai-cycle-student-test: tests/ai_test.c $(CORE_PRODUCTION) $(wildcard src/core/*.h) docs/ai-cycle-2026-10-15/student-model/ai_student_model_v2.h
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -DAI_TEST $(filter-out -DAI_STUDENT_PRODUCTION,$(AI_PRODUCTION_FLAGS)) -Idocs/ai-cycle-2026-10-15/student-model -Isrc/core -o $@ tests/ai_test.c $(CORE_PRODUCTION)
+
 # Classic AI catalog, compact tournaments and the optional Qt6 companion.
 DESKTOP_PYTHON ?= python3
 .PHONY: ai-catalog tournament desktop desktop-build desktop-python test-tournaments test-tournament-gui test-native-desktop

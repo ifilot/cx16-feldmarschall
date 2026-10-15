@@ -1,0 +1,10 @@
+{
+  "held_out_positions": 53,
+  "full_history_actions": 1246,
+  "cold_actions": 1246,
+  "guarded_actions": 35,
+  "winning_actions": 0,
+  "masking_positions": 53,
+  "native_selection_checks": 53
+}
+Frozen ranking model: exact inference, guarded score integration, selection and masking passed.

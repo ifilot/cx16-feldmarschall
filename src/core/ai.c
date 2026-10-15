@@ -84,6 +84,12 @@ static int16_t attack[PIECE_TYPES][2];
 static int16_t combat_gain[PIECE_TYPES][PIECE_TYPES], source_danger;
 static uint8_t combat_result[PIECE_TYPES][PIECE_TYPES];
 static uint8_t flag_square, flag_danger;
+#ifdef AI_PRIORITIES
+/* A lexicographic decision: tactical/strategic obligation first; the existing
+ * evaluator (including its learned correction) breaks ties within that class.
+ * These are per-decision scratch values, not persistent or hidden-rank state. */
+static uint8_t candidate_priority;
+#endif
 #ifdef AI_PURPOSEFUL_PROBES
 static uint8_t discovery[SQUARES];
 /* Information matters when a nearby friendly piece would attack some possible
@@ -225,6 +231,59 @@ static const uint8_t neighbors[SQUARES][4] = {
 };
 
 #define adjacent(sq, dir) neighbors[sq][dir]
+
+#ifdef AI_LINKED_SCOUTING
+static int16_t gain(uint8_t a, uint8_t d);
+/* A Scout buys a decision, not information for its own sake. Only count
+ * surviving defenders: when the Scout wins or exchanges, no follow-up rank
+ * decision remains. The other actor must actually be able to attack now;
+ * proximity through a lake or another piece is insufficient. This is an
+ * opportunity value, not a promise the opponent will leave the target there. */
+static uint8_t linked_information[SQUARES];
+static void prepare_linked_scouting(void) {
+    uint8_t target, cell, dir, ally, type, rank, n, i, total;
+    uint8_t options[MAX_TARGETS];
+    int16_t payoff, credit;
+    int32_t informed, blind;
+    memset(linked_information, 0, sizeof(linked_information));
+    if(game_rules || ai_difficulty != AI_NORMAL) return;
+    for(target=0; target<SQUARES; target++) {
+        cell = board[target];
+        if(!IS_PIECE(cell) || (cell & CELL_BLUE) == own || (cell & CELL_REVEALED)) continue;
+        total = 0;
+        for(rank=0; rank<PIECE_TYPES; rank++) {
+            if((cell & CELL_MOVED) && rank >= PIECE_BOMB) continue;
+            total += hidden[rank];
+        }
+        if(!total) continue;
+        for(dir=0; dir<4; dir++) {
+            ally = adjacent(target, dir);
+            if(ally == NOWHERE || !IS_PIECE(board[ally]) || (board[ally] & CELL_BLUE) != own) continue;
+            type = PIECE_TYPE(board[ally]);
+            if(type >= PIECE_BOMB || type == PIECE_SCOUT) continue;
+            n = rules_targets(ally, options);
+            for(i=0; i<n && options[i] != target; i++);
+            if(i == n) continue;
+            informed = blind = 0;
+            for(rank=0; rank<PIECE_TYPES; rank++) {
+                if(((cell & CELL_MOVED) && rank >= PIECE_BOMB) ||
+                   combat_result[PIECE_SCOUT][rank] != BATTLE_DEFENDER) continue;
+                payoff = gain(type, rank);
+                blind += (int32_t)hidden[rank] * payoff;
+                if(payoff > 0) informed += (int32_t)hidden[rank] * payoff;
+            }
+            if(blind < 0) blind = 0;
+            credit = (informed - blind) / total;
+            if(credit < worth[PIECE_SCOUT]) continue;
+            if(credit > 80) credit = 80;
+            if(credit > linked_information[target]) linked_information[target] = credit;
+        }
+    }
+}
+#ifdef AI_TEST
+uint8_t ai_test_linked_information(uint8_t square) { return linked_information[square]; }
+#endif
+#endif
 
 static uint8_t manhattan(uint8_t a, uint8_t b) {
     int16_t r = (int16_t)SQUARE_ROW(a) - SQUARE_ROW(b);
@@ -432,6 +491,10 @@ static uint8_t plan(uint8_t from) {
         g = cell & CELL_REVEALED ? gain(a, PIECE_TYPE(cell)) : attack[a][!!(cell & CELL_MOVED)];
         utility = 24 + g / 4;
         if(!(cell & CELL_REVEALED) && a >= PIECE_SERGEANT) utility += 12;
+#ifdef AI_LINKED_SCOUTING
+        if(!game_rules && ai_difficulty == AI_NORMAL && a == PIECE_SCOUT && !(cell & CELL_REVEALED))
+            utility += (int16_t)linked_information[sq] / 4 - 12;
+#endif
 #ifdef AI_PURPOSEFUL_PROBES
         if(a >= PIECE_SERGEANT && a < PIECE_BOMB) utility += discovery[sq] / 4;
 #endif
@@ -460,11 +523,19 @@ static int16_t score(uint8_t from, uint8_t to) {
     int16_t old_danger = source_danger, new_danger;
 
     danger_discount = 0;
+#ifdef AI_PRIORITIES
+    candidate_priority = 1;
+#endif
     /* Winning moves take precedence over every material/positional term. */
     if((target != CELL_EMPTY && (target & CELL_REVEALED) &&
         PIECE_TYPE(target) == PIECE_FLAG) ||
        (a == PIECE_FLAG && (game_rules & RULE_MOVING_FLAG) &&
-        SQUARE_ROW(to) == (own ? BOARD_SIZE - 1 : 0))) return 30000;
+        SQUARE_ROW(to) == (own ? BOARD_SIZE - 1 : 0))) {
+#ifdef AI_PRIORITIES
+        candidate_priority = 7;
+#endif
+        return 30000;
+    }
 
     /* Evaluate danger on the resulting occupancy: vacating our source can
      * open a scout ray. Do not call rules_apply or alter rule/history state. */
@@ -482,6 +553,23 @@ static int16_t score(uint8_t from, uint8_t to) {
     if(target != CELL_EMPTY && !(target & CELL_REVEALED)) defence /= 4;
     board[from] = moving;
     board[to] = target;
+#ifdef AI_PRIORITIES
+    if(!game_rules && ai_difficulty == AI_NORMAL) {
+        /* Never infer a concealed identity to assign a guaranteed capture or
+         * defence category. Uncertain attacks keep ordinary positional scoring. */
+        if(defence >= 900) candidate_priority = 6;
+        else if(defence >= 0 && target != CELL_EMPTY && (target & CELL_REVEALED) &&
+                outcome == BATTLE_ATTACKER && gain(a, PIECE_TYPE(target)) >= new_danger)
+            candidate_priority = 5;
+        else if(defence >= 0 && target == CELL_EMPTY && old_danger > new_danger)
+            candidate_priority = 4;
+        else if(defence >= 0 && new_danger <= old_danger &&
+                !(target != CELL_EMPTY && (target & CELL_REVEALED) && outcome != BATTLE_ATTACKER) &&
+                ai_mission_progress_move(from, to)) candidate_priority = 3;
+        else if(defence >= 0 && target == CELL_EMPTY && new_danger <= old_danger &&
+                distance[from] != NOWHERE && distance[to] < distance[from]) candidate_priority = 2;
+    }
+#endif
 #ifdef AI_TRAINING
     ai_trace_training(from, to, target == CELL_EMPTY ? 0 : new_danger / 2);
 #endif
@@ -500,6 +588,10 @@ static int16_t score(uint8_t from, uint8_t to) {
         s -= new_danger / 2;
         /* Cheap probes purchase useful rank information. */
         if(!(target & CELL_REVEALED) && a >= PIECE_SERGEANT && a < PIECE_BOMB) s += 10;
+#ifdef AI_LINKED_SCOUTING
+        if(!game_rules && ai_difficulty == AI_NORMAL && a == PIECE_SCOUT && !(target & CELL_REVEALED))
+            s += (int16_t)linked_information[to] - 10;
+#endif
 #ifdef AI_PURPOSEFUL_PROBES
         if(!(target & CELL_REVEALED) && a >= PIECE_SERGEANT && a < PIECE_BOMB) s += discovery[to];
 #endif
@@ -651,11 +743,17 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
     uint8_t sq, i, n, cell, a, t, moved, count;
     int16_t s, cost, best = -32767;
     int32_t sum;
+#ifdef AI_PRIORITIES
+    uint8_t best_priority = 0;
+#endif
 
     own = army;
     *from = *to = NOWHERE;
     shortlist_count = 0;
     survey(lost);
+#ifdef AI_LINKED_SCOUTING
+    prepare_linked_scouting();
+#endif
 #ifdef AI_PURPOSEFUL_PROBES
     if(ai_difficulty != AI_EASY) prepare_discovery();
     else memset(discovery, 0, sizeof(discovery));
@@ -702,8 +800,20 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
 #ifdef AI_TRACE
             ai_trace(sq, targets[i], s);
 #endif
-            if(s > best) {
+            if(
+#ifdef AI_PRIORITIES
+               ((!game_rules && ai_difficulty == AI_NORMAL) && candidate_priority > best_priority) ||
+               ((game_rules || ai_difficulty != AI_NORMAL || candidate_priority == best_priority) &&
+#endif
+               s > best
+#ifdef AI_PRIORITIES
+               )
+#endif
+               ) {
                 best = s;
+#ifdef AI_PRIORITIES
+                best_priority = candidate_priority;
+#endif
                 *from = sq;
                 *to = targets[i];
             }

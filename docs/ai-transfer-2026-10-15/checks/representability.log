@@ -1,0 +1,41 @@
+{
+  "script_sha256": "b7f6d426abd770879988463483312ab2229b258138ef9b6dc09294eee7d3839e",
+  "input_sha256": "3cbd93c9045effef0e759d3d4c9f14cd8b2b2a6d9c5d80657c222a3fe3e35a4d",
+  "features": 16,
+  "correction_limit": 192,
+  "method": "For each candidate action, optimize its relative score by assigning +192 to its feature class and -192 to other classes, with guarded actions fixed at zero. For guarded candidates assign every unguarded class -192. Native first-enumerated ties and immediate-victory action restriction are retained. This exactly tests individual-root reachability with arbitrary bounded feature lookup corrections.",
+  "scope": "An optimistic lower bound on internal single-batch teacher regret, separately choosing a different mapping for every root. It does not establish one globally consistent model, learnability from data, held-out generalization, true action quality, game strength or X16 feasibility. Original grouped held-out roots became development data in the separate v2 coverage-repair plan.",
+  "all": {
+    "positions": 320,
+    "production_mean_regret": 29.71875,
+    "optimistic_mean_minimum_regret": 0.24375,
+    "teacher_best_reachable": 318,
+    "production_positive_regret": 128,
+    "positive_regret_better_choice_reachable": 128,
+    "positive_regret_teacher_best_reachable": 126,
+    "irreducible_positive_regret": 2,
+    "positions_with_within_root_feature_aliases": 103
+  },
+  "training": {
+    "positions": 267,
+    "production_mean_regret": 30.98501872659176,
+    "optimistic_mean_minimum_regret": 0.29213483146067415,
+    "teacher_best_reachable": 265,
+    "production_positive_regret": 108,
+    "positive_regret_better_choice_reachable": 108,
+    "positive_regret_teacher_best_reachable": 106,
+    "irreducible_positive_regret": 2,
+    "positions_with_within_root_feature_aliases": 84
+  },
+  "old_held_out_now_development": {
+    "positions": 53,
+    "production_mean_regret": 23.339622641509433,
+    "optimistic_mean_minimum_regret": 0.0,
+    "teacher_best_reachable": 53,
+    "production_positive_regret": 20,
+    "positive_regret_better_choice_reachable": 20,
+    "positive_regret_teacher_best_reachable": 20,
+    "irreducible_positive_regret": 0,
+    "positions_with_within_root_feature_aliases": 19
+  }
+}

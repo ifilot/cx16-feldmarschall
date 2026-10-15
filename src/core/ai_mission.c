@@ -4,6 +4,9 @@
 #pragma static-locals (on)
 #include <string.h>
 #include "ai_mission.h"
+#ifdef AI_PLAN_CYCLE
+#include "ai.h"
+#endif
 #include "board.h"
 #include "rules.h"
 #ifdef AI_STUDENT
@@ -25,6 +28,21 @@ void ai_memory_reset_banked(void);
 #endif
 
 static uint8_t own, remembered[2];
+#ifdef AI_PLAN_CYCLE
+#if !defined(AI_MEMORY) || defined(AI_MISSION_PROGRESS) || defined(AI_SECTOR_MEMORY)
+#error Plan cycle requires public identity tracking and its own independent progress state
+#endif
+typedef struct {
+    uint8_t job, actor_id, best_distance, stalled, avoided, cooldown, observed;
+} plan_state_t;
+static plan_state_t plans[2];
+static uint8_t exploration;
+static uint8_t same_area(uint8_t a, uint8_t b) {
+    if(a == NOWHERE || b == NOWHERE) return 0;
+    return (a/10 > b/10 ? a/10-b/10 : b/10-a/10) +
+           (a%10 > b%10 ? a%10-b%10 : b%10-a%10) <= 2;
+}
+#endif
 #ifdef AI_MISSION_PROGRESS
 static uint8_t best_work[2], stalled[2], progress_count[2], progress_job[2];
 #ifdef AI_SECTOR_MEMORY
@@ -121,6 +139,13 @@ static uint8_t choose_leader(uint8_t flag) {
         if(!IS_PIECE(cell) || enemy(cell) || PIECE_TYPE(cell) >= PIECE_BOMB ||
            distance[sq] == NOWHERE) continue;
         cost = distance[sq];
+#ifdef AI_PLAN_CYCLE
+        if(exploration) {
+            /* A newly investigated route starts with a Scout. Strong pieces
+             * and Miners only join after the blocker is publicly identified. */
+            if(PIECE_TYPE(cell) != PIECE_SCOUT) continue;
+        } else
+#endif
         if(PIECE_TYPE(cell) != PIECE_MINER) {
             if(!flag && PIECE_TYPE(cell) != PIECE_SCOUT) continue;
             cost += 100;
@@ -139,6 +164,11 @@ void ai_mission_reset(void) {
 #endif
 #endif
     remembered[0] = remembered[1] = NOWHERE;
+#ifdef AI_PLAN_CYCLE
+    memset(plans, NOWHERE, sizeof(plans));
+    plans[0].stalled = plans[1].stalled = 0;
+    plans[0].cooldown = plans[1].cooldown = 0;
+#endif
 #ifdef AI_MISSION_PROGRESS
     memset(best_work, NOWHERE, sizeof(best_work));
     memset(stalled, 0, sizeof(stalled));
@@ -150,10 +180,19 @@ void ai_mission_reset(void) {
 #endif
 }
 
+#ifdef AI_PLAN_CYCLE
+static void mission_prepare(uint8_t army) {
+#else
 void ai_mission_begin(uint8_t army) {
+#endif
     uint8_t sq, cell, goal = NOWHERE, lead = NOWHERE, candidate, flag, dir, nb;
     uint8_t walk, obstacle = NOWHERE, type, best_actor = NOWHERE;
     int16_t value, best = -32767, cost, best_cost = 32767;
+#ifdef AI_PLAN_CYCLE
+    plan_state_t* state = &plans[army ? 1 : 0];
+    const ai_piece_history_t* history;
+    uint8_t old_actor;
+#endif
 #ifdef AI_MISSION_PROGRESS
     uint8_t count = 0, work, index;
     index = army ? 1 : 0;
@@ -164,6 +203,25 @@ void ai_mission_begin(uint8_t army) {
 #endif
 #ifdef AI_STUDENT
     ai_student_begin(army);
+#endif
+#ifdef AI_PLAN_CYCLE
+    ai_memory_sync();
+    exploration = 0;
+    if(!game_rules && ai_difficulty == AI_NORMAL) {
+        if(state->cooldown) state->cooldown--;
+        history = ai_memory_history(state->actor_id);
+        old_actor = history ? history->square : NOWHERE;
+        if(state->job != NOWHERE && old_actor != NOWHERE) {
+            flood(state->job, 0);
+            if(board[state->job] != state->observed || distance[old_actor] < state->best_distance) {
+                state->best_distance = distance[old_actor]; state->stalled = 0;
+            } else if(state->stalled < 255) state->stalled++;
+            if(state->stalled >= 8 && remembered[army ? 1 : 0] != NOWHERE) {
+                state->avoided = remembered[army ? 1 : 0];
+                state->cooldown = 16; state->stalled = 0;
+            }
+        }
+    }
 #endif
     memset(corridor, 0, sizeof(corridor));
 #ifdef AI_SECTOR_MEMORY
@@ -177,6 +235,9 @@ void ai_mission_begin(uint8_t army) {
 #endif
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq];
+#ifdef AI_PLAN_CYCLE
+        exploration = 0;
+#endif
 #ifdef AI_MISSION_SCOUT_VALUE
         if(enemy(cell) && !(cell & CELL_REVEALED)) concealed_left++;
 #endif
@@ -211,11 +272,26 @@ void ai_mission_begin(uint8_t army) {
             if(!value) continue;
             value += 40;
         }
-        else continue;
+        else {
+#ifdef AI_PLAN_CYCLE
+            /* Only an actually stalled mission opens another investigation.
+             * The candidate is an unmoved concealed blocker, never a true-rank
+             * or referee-labelled flag guess. Nearby failed sectors cool down. */
+            if(!game_rules && ai_difficulty == AI_NORMAL && state->cooldown &&
+               !(cell & (CELL_REVEALED | CELL_MOVED)) && rear(sq) &&
+               !same_area(sq, state->avoided)) { value = 24; exploration = 1; }
+            else
+#endif
+            continue;
+        }
         flood(sq, 1);
         candidate = choose_leader(flag);
         if(candidate == NOWHERE) continue;
         value -= (int16_t)distance[candidate] * 3;
+#ifdef AI_PLAN_CYCLE
+        if(!game_rules && ai_difficulty == AI_NORMAL && state->cooldown && !flag &&
+           same_area(sq, state->avoided)) value -= 120;
+#endif
         if(sq == remembered[own ? 1 : 0]) {
 #ifdef AI_MISSION_PROGRESS
             if(stalled[index] < 12) value += 12;
@@ -330,7 +406,26 @@ void ai_mission_begin(uint8_t army) {
     }
 }
 
-#if defined(AI_STUDENT) || defined(AI_MISSION_SCOUT_VALUE)
+#ifdef AI_PLAN_CYCLE
+void ai_mission_begin(uint8_t army) {
+    plan_state_t* state = &plans[army ? 1 : 0];
+    uint8_t job, participant, id;
+    mission_prepare(army);
+    if(game_rules || ai_difficulty != AI_NORMAL) return;
+    participant = actor == NOWHERE ? leader : actor;
+    job = vacate ? actor : objective == NOWHERE ? remembered[army ? 1 : 0] : objective;
+    id = participant == NOWHERE ? NOWHERE : ai_memory_identity(participant);
+    if(job != state->job || id != state->actor_id ||
+       (job != NOWHERE && board[job] != state->observed)) {
+        state->stalled = 0;
+        state->best_distance = participant == NOWHERE ? NOWHERE : distance[participant];
+    }
+    state->job = job; state->actor_id = id;
+    state->observed = job == NOWHERE ? CELL_EMPTY : board[job];
+}
+#endif
+
+#if defined(AI_STUDENT) || defined(AI_MISSION_SCOUT_VALUE) || defined(AI_PRIORITIES)
 static int16_t mission_base_score(uint8_t from, uint8_t to)
 #else
 int16_t ai_mission_score(uint8_t from, uint8_t to)
@@ -347,7 +442,7 @@ int16_t ai_mission_score(uint8_t from, uint8_t to)
     return 0;
 }
 
-#if defined(AI_STUDENT) || defined(AI_MISSION_SCOUT_VALUE)
+#if defined(AI_STUDENT) || defined(AI_MISSION_SCOUT_VALUE) || defined(AI_PRIORITIES)
 int16_t ai_mission_score(uint8_t from, uint8_t to) {
     int16_t result = mission_base_score(from, to);
 #ifdef AI_MISSION_SCOUT_VALUE
@@ -371,9 +466,25 @@ int16_t ai_mission_score(uint8_t from, uint8_t to) {
 }
 #endif
 
+#ifdef AI_PRIORITIES
+uint8_t ai_mission_progress_move(uint8_t from, uint8_t to) {
+    return mission_base_score(from, to) > 0;
+}
+#endif
+
 #ifdef AI_TEST
+uint8_t ai_mission_training_guarded(uint8_t from, uint8_t to) {
+#if defined(AI_STUDENT) && defined(AI_STUDENT_COOP_GUARD)
+    return from==actor && !IS_PIECE(board[to]);
+#else
+    return 0;
+#endif
+}
 void ai_mission_save(uint8_t* out) {
     memcpy(out, remembered, 2);
+#ifdef AI_PLAN_CYCLE
+    memcpy(out + 2, plans, sizeof(plans));
+#endif
 #ifdef AI_MISSION_PROGRESS
     memcpy(out + PROGRESS_STATE_OFFSET, best_work, 2);
     memcpy(out + PROGRESS_STATE_OFFSET + 2, stalled, 2);
@@ -386,6 +497,9 @@ void ai_mission_save(uint8_t* out) {
 }
 void ai_mission_load(const uint8_t* in) {
     memcpy(remembered, in, 2);
+#ifdef AI_PLAN_CYCLE
+    memcpy(plans, in + 2, sizeof(plans));
+#endif
 #ifdef AI_MISSION_PROGRESS
     memcpy(best_work, in + PROGRESS_STATE_OFFSET, 2);
     memcpy(stalled, in + PROGRESS_STATE_OFFSET + 2, 2);
