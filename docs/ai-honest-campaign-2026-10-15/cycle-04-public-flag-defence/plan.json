@@ -1,0 +1,157 @@
+{
+  "cycle": 4,
+  "baseline": "teacher-context-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-guard-v1-normal",
+    "student-public-flag-threats-v1-normal",
+    "teacher-context-v1-normal",
+    "teacher-public-flag-threats-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-public-flag-threats-v1-normal",
+      "name": "student-public-flag-threats-v1-normal",
+      "description": "Classic public deduction: adjacent concealed enemy that already moved is a confirmed Flag threat.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_PUBLIC_FLAG_THREATS"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged student-guard-v1-normal except AI_PUBLIC_FLAG_THREATS.",
+      "information_model": "Own setup and public board/events only; no concealed enemy rank access.",
+      "asset_files": [
+        "tests/ai_public_flag_threats_test.c"
+      ]
+    },
+    {
+      "id": "teacher-public-flag-threats-v1-normal",
+      "name": "teacher-public-flag-threats-v1-normal",
+      "description": "Classic public deduction: adjacent concealed enemy that already moved is a confirmed Flag threat.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE",
+        "AI_PUBLIC_FLAG_THREATS"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT",
+        "AI_PUBLIC_FLAG_THREATS"
+      ],
+      "driver_args": [
+        "--samples",
+        "8",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context"
+      ],
+      "model": "Unchanged teacher-context-v1-normal except AI_PUBLIC_FLAG_THREATS.",
+      "information_model": "Own setup and public board/events only; no concealed enemy rank access.",
+      "asset_files": [
+        "tests/ai_public_flag_threats_test.c"
+      ]
+    }
+  ],
+  "seed": 2120001,
+  "rounds": 30,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "hypotheses": [
+    "Correct a public logical omission in native Flag defence, without identifying the concealed rank.",
+    "Test the same deduction in the Context Teacher observer and masked continuations."
+  ],
+  "contrasts": [
+    [
+      "student-public-flag-threats-v1-normal",
+      "student-guard-v1-normal"
+    ],
+    [
+      "teacher-public-flag-threats-v1-normal",
+      "teacher-context-v1-normal"
+    ]
+  ],
+  "analysis": "Fresh matched side-swapped Classic cohort; report both backends, no tuning or promotion. Historical final positions often unsavable; synthetic defence correctness does not imply recovered wins.",
+  "evidence": "research/loss-mechanisms.json and research/public-flag-threat-tests.json."
+}

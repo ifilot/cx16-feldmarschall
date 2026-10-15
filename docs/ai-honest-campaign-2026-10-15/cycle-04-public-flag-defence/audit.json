@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 69,
+  "attempts": 1680,
+  "errors_preserved_unscored": 25,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 4,
+  "exact_rebuild_runtime_sha256": {
+    "student-public-flag-threats-v1-normal": {
+      "engine": "d02af5ff27ad4510ab3f8e3d3995f8916ffd521a3c61498cebcee2bc9c2a56aa"
+    },
+    "teacher-public-flag-threats-v1-normal": {
+      "engine": "afec405d7510e2292826bd5831f578ec6a7bf2063b3f07194a8405a204403085",
+      "observer": "44f06eb9bd71524887f2a9759a7ea63a9dc36e26712e26925a82cc44841ab113",
+      "teacher": "996d851f804767d35ea33c55747219cb93bd94d7255d56a6a7183194f73ef1ad",
+      "teacher_bot.py": "2f1503cb1bef279c45d1f610e8a7e90a19b57f99e82bef1b6805b16b4fab83b7",
+      "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    1
+  ],
+  "test_skip_summaries": []
+}
