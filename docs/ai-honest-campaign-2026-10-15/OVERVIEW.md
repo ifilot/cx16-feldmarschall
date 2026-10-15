@@ -175,6 +175,25 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +3.9 percentage points; 95% paired interval [-0.3, +8.2].
 
 
+**Cycle 23 hypotheses:** Test whether the same fixed three-swap deployment package helps against an honest native opponent, using the original DOS army distribution as a controlled common deployment.; Separate an opponent-specific response from a deployment improvement that also transfers to an honest opponent.
+
+Evidence: [cycle-23-honest-deployment-control](cycle-23-honest-deployment-control/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+
+- student-validated-deployment-v1-normal: 186 wins / 20 draws / 194 losses; score 49.0%; 0 unscored errors.
+- student-fortress-deployment-v1-normal: 216 wins / 18 draws / 166 losses; score 56.2%; 0 unscored errors.
+- student-double-bomb-shell-v1-normal: 145 wins / 7 draws / 248 losses; score 37.1%; 0 unscored errors.
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-double-bomb-shell-v1-normal minus student-fortress-deployment-v1-normal: -19.1 percentage points; 95% paired interval [-25.6, -12.8].
+- student-double-bomb-shell-v1-normal minus student-validated-deployment-v1-normal: -11.9 percentage points; 95% paired interval [-18.8, -5.0].
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.2 percentage points; 95% paired interval [+2.4, +12.1].
+
+
 **Preflight failures, without DOS strength results:**
 
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
