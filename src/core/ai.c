@@ -54,6 +54,9 @@ static const int16_t value[PIECE_TYPES] = {
 static uint8_t own;                     // CELL_BLUE or 0: the army to move
 static uint8_t hidden[PIECE_TYPES];     // the enemy's unrevealed pieces per rank
 static uint8_t hidden_mobile;
+#ifdef AI_EXACT_CONTACT_RISK
+static uint8_t exact_hidden_unmoved;
+#endif
 #ifdef AI_OCCUPANCY_BELIEFS
 static uint8_t hidden_moved;
 #endif
@@ -313,12 +316,18 @@ static void survey(const uint8_t* lost) {
 #ifdef AI_OCCUPANCY_BELIEFS
     hidden_moved = 0;
 #endif
+#ifdef AI_EXACT_CONTACT_RISK
+    exact_hidden_unmoved = 0;
+#endif
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq];
         if(IS_PIECE(cell)) count++;
         if(enemy(cell) && (cell & CELL_REVEALED)) seen[PIECE_TYPE(cell)]++;
 #ifdef AI_OCCUPANCY_BELIEFS
         if(enemy(cell) && !(cell & CELL_REVEALED) && (cell & CELL_MOVED)) hidden_moved++;
+#endif
+#ifdef AI_EXACT_CONTACT_RISK
+        if(enemy(cell) && !(cell & (CELL_REVEALED | CELL_MOVED))) exact_hidden_unmoved++;
 #endif
     }
     a = own ? 1 : 0;
@@ -368,6 +377,74 @@ static void survey(const uint8_t* lost) {
     }
 }
 
+#ifdef AI_EXACT_CONTACT_RISK
+/* Exact inclusion-exclusion under a uniform remaining-army prior, evaluated
+ * with Q22 arithmetic. A contact kind has bit0=far and bit1=publicly moved.
+ * Uniform means conditional on rank counts and moved/unmoved status only;
+ * behavioral history and narrower candidate masks are not modeled here.
+ * The root inventory stays fixed while score() changes candidate occupancy. */
+#define CONTACT_ONE 4194304UL
+static uint32_t exact_contact_probability(uint8_t a, uint8_t count, const uint8_t* kind) {
+    uint8_t mask, i, n, f, b, bits, dangerous = 0, immobile;
+    uint32_t p;
+    int32_t total = 0;
+    if(!count || !hidden_mobile) return 0;
+    immobile = hidden[PIECE_BOMB] + hidden[PIECE_FLAG];
+    if(exact_hidden_unmoved < immobile) return 0; /* inconsistent diagnostic input */
+    for(i=0;i<PIECE_BOMB;i++)
+        if(combat_result[i][a] == BATTLE_ATTACKER) dangerous += hidden[i];
+    for(mask=1;mask < (1u << count);mask++) {
+        n=f=b=bits=0;
+        for(i=0;i<count;i++) if(mask & (1u << i)) {
+            bits++;
+            if(kind[i]&1) f++; else n++;
+            if(!(kind[i]&2)) b++;
+        }
+        if(n+f > hidden_mobile || n+f > dangerous ||
+           f > hidden[PIECE_SCOUT] || b > exact_hidden_unmoved-immobile ||
+           (f && combat_result[PIECE_SCOUT][a] != BATTLE_ATTACKER)) continue;
+        p=CONTACT_ONE;
+        for(i=0;i<b;i++)
+            p=p*(uint32_t)(exact_hidden_unmoved-immobile-i)/(exact_hidden_unmoved-i);
+        for(i=0;i<f;i++)
+            p=p*(uint32_t)(hidden[PIECE_SCOUT]-i)/(hidden_mobile-i);
+        for(i=0;i<n;i++)
+            p=p*(uint32_t)(dangerous-f-i)/(hidden_mobile-f-i);
+        if(bits&1) total+=(int32_t)p; else total-=(int32_t)p;
+    }
+    if(total < 0) return 0;
+    if((uint32_t)total > CONTACT_ONE) return CONTACT_ONE;
+    return (uint32_t)total;
+}
+
+static int16_t exact_contact_threat(uint8_t sq, uint8_t a) {
+    uint8_t dir, nb, cell, t, range, count=0, kind[4];
+    uint32_t probability;
+    for(dir=0;dir<4;dir++) {
+        nb=sq;
+        for(range=1; ;range++) {
+            nb=adjacent(nb,dir);
+            if(nb == NOWHERE) break;
+            cell=board[nb];
+            if(cell == CELL_EMPTY) continue;
+            if(enemy(cell)) {
+                if(cell & CELL_REVEALED) {
+                    t=PIECE_TYPE(cell);
+                    if(t < PIECE_BOMB && (range == 1 || t == PIECE_SCOUT) &&
+                       combat_result[t][a] == BATTLE_ATTACKER) return worth[a];
+                } else if(range == 1 || combat_result[PIECE_SCOUT][a] == BATTLE_ATTACKER) {
+                    kind[count++]=(range > 1 ? 1 : 0) | (cell & CELL_MOVED ? 2 : 0);
+                }
+            }
+            break;
+        }
+    }
+    probability=exact_contact_probability(a,count,kind);
+    /* worth is at most1000 and Q22 keeps this product within uint32_t. */
+    return (int16_t)((probability*(uint32_t)worth[a]+CONTACT_ONE/2)/CONTACT_ONE);
+}
+#endif
+
 /**
  * @brief Expected gain of attacking a hidden enemy piece
  */
@@ -406,6 +483,10 @@ static int16_t expected(uint8_t a, uint8_t moved) {
 static int16_t threat(uint8_t sq, uint8_t a) {
     int16_t worst = 0, loss;
     uint8_t dir, nb, cell, t, range;
+
+#ifdef AI_EXACT_CONTACT_RISK
+    if(!game_rules) return exact_contact_threat(sq,a);
+#endif
 
     for(dir=0; dir<4; dir++) {
         nb = sq;
@@ -451,6 +532,14 @@ static uint8_t flag_threats(void) {
             if(cell == CELL_EMPTY) continue;
             if(enemy(cell) && (cell & CELL_REVEALED) && PIECE_TYPE(cell) < PIECE_BOMB &&
                (range == 1 || PIECE_TYPE(cell) == PIECE_SCOUT)) count++;
+#ifdef AI_PUBLIC_FLAG_THREATS
+            /* In Classic, a public move proves an unknown piece is mobile.
+             * Every mobile rank captures a Flag from an adjacent square;
+             * its concealed identity is irrelevant to this certain threat.
+             * Optional rules can move Bombs/Flags, so keep this Classic-only. */
+            else if(!game_rules && enemy(cell) && !(cell & CELL_REVEALED) &&
+                    (cell & CELL_MOVED) && range == 1) count++;
+#endif
             break;
         }
     }

@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "kind": "exact-contact-risk-enumeration-audit",
+  "strength_evidence": false,
+  "cases": 19152,
+  "cases_by_group": {
+    "exhaustive-small": 18912,
+    "random-larger": 240
+  },
+  "rational_formula_matches_every_enumeration": true,
+  "probability_fixed_point_bits": 22,
+  "max_absolute_probability_error": 7.62939453125e-07,
+  "maximum_error_in_q22_units": 3.2,
+  "native_mechanism": {
+    "passed": true,
+    "checks": 37,
+    "failures": 0,
+    "benchmark_calls": 200000,
+    "seconds": 0.018995,
+    "sink": 335296320
+  },
+  "microseconds_per_probability_call": 0.094975,
+  "full_decision_cost": [
+    {
+      "enabled": false,
+      "median": {
+        "enabled": 0,
+        "decisions": 1000,
+        "seconds": 0.009636,
+        "checksum": 5565000
+      },
+      "measurements": [
+        {
+          "enabled": 0,
+          "decisions": 1000,
+          "seconds": 0.009034,
+          "checksum": 5565000
+        },
+        {
+          "enabled": 0,
+          "decisions": 1000,
+          "seconds": 0.009636,
+          "checksum": 5565000
+        },
+        {
+          "enabled": 0,
+          "decisions": 1000,
+          "seconds": 0.009864,
+          "checksum": 5565000
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "median": {
+        "enabled": 1,
+        "decisions": 1000,
+        "seconds": 0.009065,
+        "checksum": 5565000
+      },
+      "measurements": [
+        {
+          "enabled": 1,
+          "decisions": 1000,
+          "seconds": 0.008699,
+          "checksum": 5565000
+        },
+        {
+          "enabled": 1,
+          "decisions": 1000,
+          "seconds": 0.009065,
+          "checksum": 5565000
+        },
+        {
+          "enabled": 1,
+          "decisions": 1000,
+          "seconds": 0.009543,
+          "checksum": 5565000
+        }
+      ]
+    }
+  ],
+  "median_full_decision_slowdown": 0.9407430469074305,
+  "default_byte_identical": true,
+  "frozen_default_sha256": "5210515da0b755c190593a8630bb5574ec1224d9530fe9e99a5c86a9ce6d5a9b",
+  "frozen_native_receipt": {
+    "policy": {
+      "id": "student-guard-v1-normal",
+      "name": "Guarded Student v1 / Normal",
+      "description": "Production 186-byte learned corrections with assigned cooperation jobs protected.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD"
+      ],
+      "difficulty": "normal",
+      "status": "production",
+      "include_dirs": [],
+      "archive": "ai/sources/e58aa722d6e49abb88a5eef383a32b2838c709fedf05af4b3f842b32d75db953.zip",
+      "source_sha256": "e58aa722d6e49abb88a5eef383a32b2838c709fedf05af4b3f842b32d75db953"
+    },
+    "recipe_sha256": "5beee737af85d4201fa10f4fdddf78e9f65af952884a1f5b65156e9b23c17983",
+    "executable_sha256": "5210515da0b755c190593a8630bb5574ec1224d9530fe9e99a5c86a9ce6d5a9b",
+    "runtime_sha256": {
+      "engine": "5210515da0b755c190593a8630bb5574ec1224d9530fe9e99a5c86a9ce6d5a9b"
+    },
+    "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+  },
+  "test_case_sha256": "19dac940991a6baade86ac49c1c7b5e6ed12b150a248f697613ea46bcb7cb4c8",
+  "native_output_sha256": "7a5fe2ee2c802fecd05717ace5f9d30aa65af126ccf158f876ca1e4160c1502a",
+  "commands": [
+    "gcc -O2 -std=c99 -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_PRODUCTION -DAI_STUDENT_COOP_GUARD -DAI_EXACT_CONTACT_RISK tests/ai_exact_contact_risk_test.c src/core/pieces.c src/core/board.c src/core/rules.c src/core/setup.c src/core/random.c src/core/ai_deploy.c src/core/ai_level.c src/core/ai_mission.c src/core/ai_memory.c src/core/ai_student.c -o /tmp/exact-contact-risk-wy00g7rm/mechanism",
+    "gcc -O2 -std=c99 -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core '-DFELDMARSCHALL_AI_ID=\"student-guard-v1-normal\"' -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_PRODUCTION -DAI_STUDENT_COOP_GUARD -o /tmp/exact-contact-risk-wy00g7rm/default src/native/engine.c src/core/pieces.c src/core/board.c src/core/rules.c src/core/setup.c src/core/random.c src/core/ai_deploy.c src/core/ai.c src/core/ai_level.c src/core/ai_mission.c src/core/ai_memory.c src/core/ai_student.c"
+  ],
+  "source_sha256": {
+    "src/core/ai.c": "4ff95f380375240ab8f77bc21810c91e10a7b0177d0c4d9fc15d87456ac0061e",
+    "tests/ai_exact_contact_risk_test.c": "7c1ce88d38a3a211946786ef5f7f42566fa0406328eb6bf5075c07e5f63ad5cf",
+    "tests/ai_contact_risk_cost.c": "309a54ddbf2944ada1f985c00e03d0178390ce15d59e859e3e6c5e541eb4a172",
+    "tools/test_exact_contact_risk.py": "1d8849fe7c7738a055e7c075b680113241d4ffefce4f0fa32dea45011127be1c"
+  },
+  "assumptions": [
+    "Uniform complete assignments conditional on rank counts and public moved/unmoved status; narrower battle/history masks and behavior are deliberately omitted.",
+    "At most one opponent attack occurs: payoff is the worst available lethal attack. Equal-rank exchanges have zero net loss.",
+    "Root inventory stays frozen during speculative occupancy changes; this does not condition assignments on hypothetical survival.",
+    "Enemy attack feasibility ignores opponent two-squares restrictions, as the original danger routine does.",
+    "Formula is exact under stated prior. Native evaluation uses Q22 arithmetic and rounds material scores, with quantified finite precision."
+  ]
+}

@@ -135,6 +135,17 @@ def build_policy(identity, policy=None):
                 shutil_path = directory / name
                 shutil_path.write_bytes((source / 'tools' / name).read_bytes())
                 runtime.append(name)
+            for flag, name in (('--world-sampling', 'campaign_sampling.py'),
+                               ('--campaign-strategy', 'campaign_strategy.py'),
+                               ('--paired-confidence', 'campaign_search.py'),
+                               ('--adaptive-depth', 'campaign_depth.py')):
+                if flag in policy.get('driver_args', []):
+                    (directory / name).write_bytes((source / 'tools' / name).read_bytes())
+                    runtime.append(name)
+            if '--campaign-strategy' in policy.get('driver_args', []):
+                name = 'campaign_recurrence.py'
+                (directory / name).write_bytes((source / 'tools' / name).read_bytes())
+                runtime.append(name)
             if '--information-strategy' in policy.get('driver_args', []):
                 for name in ('info_common.py', 'info_lifetime.py', 'info_objectives.py', 'info_followthrough.py'):
                     (directory / name).write_bytes((source / 'tools' / name).read_bytes())
@@ -149,6 +160,16 @@ def build_policy(identity, policy=None):
                 model_name = Path(model_path).name
                 (directory / model_name).write_bytes((source / model_path).read_bytes())
                 runtime.append(model_name)
+            if '--joint-belief-model' in policy.get('driver_args', []):
+                for name in ('campaign_joint_beliefs.py', 'calibrated_beliefs.py'):
+                    (directory / name).write_bytes((source / 'tools' / name).read_bytes())
+                    runtime.append(name)
+                model_path = policy['joint_belief_model']
+                if digest((source / model_path).read_bytes()) != policy['joint_belief_model_sha256']:
+                    raise ValueError('Joint setup model failed integrity check')
+                joint_name = Path(model_path).name
+                (directory / joint_name).write_bytes((source / model_path).read_bytes())
+                runtime.append(joint_name)
             if '--root-policy' in policy.get('driver_args', []):
                 name = 'root_policy.py'
                 (directory / name).write_bytes((source / 'tools' / name).read_bytes())
@@ -167,6 +188,9 @@ def build_policy(identity, policy=None):
                                                    for arg in policy['driver_args']) + ']')
             if '--root-policy' in policy.get('driver_args', []):
                 driver_arguments = ('[' + ', '.join('str(p / '+repr(arg)+')' if arg == settings_name else repr(arg)
+                                                   for arg in policy['driver_args']) + ']')
+            if '--joint-belief-model' in policy.get('driver_args', []):
+                driver_arguments = ('[' + ', '.join('str(p / '+repr(arg)+')' if arg == joint_name else repr(arg)
                                                    for arg in policy['driver_args']) + ']')
             # The adapter locates its siblings relative to this preserved launcher.
             executable.write_text('#!/usr/bin/env python3\nimport os, pathlib, sys\n'

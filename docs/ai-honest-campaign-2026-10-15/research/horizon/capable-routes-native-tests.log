@@ -1,0 +1,10 @@
+test_evaluation_does_not_change_any_masked_rollout_policy_decision (test_campaign_routes.CapableRoutes.test_evaluation_does_not_change_any_masked_rollout_policy_decision) ... ok
+test_miner_capability_was_already_present_in_old_evaluation (test_campaign_routes.CapableRoutes.test_miner_capability_was_already_present_in_old_evaluation) ... ok
+test_native_matches_reference_on_150_inventory_consistent_worlds (test_campaign_routes.CapableRoutes.test_native_matches_reference_on_150_inventory_consistent_worlds) ... ok
+test_spy_attack_exception_and_friendly_mobile_coordination (test_campaign_routes.CapableRoutes.test_spy_attack_exception_and_friendly_mobile_coordination) ... ok
+test_stronger_and_equal_defenders_block_the_same_attacker (test_campaign_routes.CapableRoutes.test_stronger_and_equal_defenders_block_the_same_attacker) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.594s
+
+OK

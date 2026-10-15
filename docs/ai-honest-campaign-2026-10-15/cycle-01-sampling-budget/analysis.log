@@ -1,0 +1,4 @@
+Verified teacher-context-v1-normal {'wins': 70, 'draws': 9, 'losses': 198, 'score': 0.26895306859205775}
+Verified teacher-calibrated-beliefs-v1-normal {'wins': 82, 'draws': 2, 'losses': 191, 'score': 0.3018181818181818}
+Verified teacher-context-worlds32-v1-normal {'wins': 66, 'draws': 4, 'losses': 209, 'score': 0.24372759856630824}
+Verified teacher-calibrated-worlds32-v1-normal {'wins': 57, 'draws': 5, 'losses': 213, 'score': 0.21636363636363637}

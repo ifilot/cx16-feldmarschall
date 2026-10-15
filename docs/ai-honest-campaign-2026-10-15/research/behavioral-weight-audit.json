@@ -1,0 +1,153 @@
+{
+  "scope": "Historical development only; no campaign or validation cohorts inspected.",
+  "hypothesis": "Ablate uncalibrated approach/retreat weights; same IID worlds, no tuning.",
+  "samples": 256,
+  "snapshots": 998,
+  "seed": 2105001,
+  "corpus_sha256": "1ed8f86dbb3242e89bcde3dd2bc90237243bafcc01bd5bbc3a83321ea0da81dd",
+  "tournament_sha256": "253d062f15e167d8c03f0f998a4714663273e5a691bdc23bb59df596006b599c",
+  "analysis_sha256": "77ec6b2c09a75f345c20dfaefd250a8b48e75668a47cd3bfe20273aca4b4cde2",
+  "mask_observations": {
+    "4095": 24710,
+    "1023": 3623
+  },
+  "effective_samples": {
+    "mean": 249.36014186779641,
+    "minimum": 174.56617901962144
+  },
+  "results": {
+    "all": {
+      "piece_observations": 28333,
+      "games": 280,
+      "uniform_log_loss": 2.157621570619285,
+      "behavioral_log_loss": 2.1555862650747635,
+      "uniform_brier": 0.8622382654476337,
+      "behavioral_brier": 0.861787439355139,
+      "paired": {
+        "complete_pairs": 140,
+        "pairs_by_family": {
+          "fortified": 20,
+          "uniform": 20,
+          "unguarded": 20,
+          "forward": 20,
+          "decoy": 20,
+          "presets": 20,
+          "broad-mixed": 20
+        },
+        "metrics": {
+          "log_loss_delta": {
+            "mean": -0.0020353055445212105,
+            "interval_95": [
+              -0.0026311984768415367,
+              -0.0014462439990154056
+            ],
+            "interval_98_3333": [
+              -0.002789626907170724,
+              -0.0013178098868537752
+            ]
+          },
+          "brier_delta": {
+            "mean": -0.0004508260924945686,
+            "interval_95": [
+              -0.0006399400044415173,
+              -0.000270357294723025
+            ],
+            "interval_98_3333": [
+              -0.0006843707175938209,
+              -0.00023071850139583675
+            ]
+          }
+        }
+      }
+    },
+    "later_publicly_revealed": {
+      "piece_observations": 7904,
+      "games": 279,
+      "uniform_log_loss": 2.2880950458063842,
+      "behavioral_log_loss": 2.284361145600056,
+      "uniform_brier": 0.8844997869173062,
+      "behavioral_brier": 0.8836560733343396,
+      "paired": {
+        "complete_pairs": 140,
+        "pairs_by_family": {
+          "fortified": 20,
+          "uniform": 20,
+          "unguarded": 20,
+          "forward": 20,
+          "decoy": 20,
+          "presets": 20,
+          "broad-mixed": 20
+        },
+        "metrics": {
+          "log_loss_delta": {
+            "mean": -0.0037205648484480458,
+            "interval_95": [
+              -0.004963211297827154,
+              -0.00248755351860255
+            ],
+            "interval_98_3333": [
+              -0.005228900227511771,
+              -0.0022304312826581163
+            ]
+          },
+          "brier_delta": {
+            "mean": -0.0008407003201703888,
+            "interval_95": [
+              -0.0011850575042735994,
+              -0.0005110681741242629
+            ],
+            "interval_98_3333": [
+              -0.001262300176468322,
+              -0.000432843677655888
+            ]
+          }
+        }
+      }
+    },
+    "behavior_evidence": {
+      "piece_observations": 536,
+      "games": 172,
+      "uniform_log_loss": 2.148847231386575,
+      "behavioral_log_loss": 2.055864074379778,
+      "uniform_brier": 0.8861065722604471,
+      "behavioral_brier": 0.8669876261243937,
+      "paired": {
+        "complete_pairs": 108,
+        "pairs_by_family": {
+          "fortified": 20,
+          "uniform": 16,
+          "unguarded": 20,
+          "forward": 6,
+          "decoy": 9,
+          "presets": 20,
+          "broad-mixed": 17
+        },
+        "metrics": {
+          "log_loss_delta": {
+            "mean": -0.09824082508416103,
+            "interval_95": [
+              -0.12364265499149465,
+              -0.07366207205730461
+            ],
+            "interval_98_3333": [
+              -0.12910759855959006,
+              -0.06849780946134497
+            ]
+          },
+          "brier_delta": {
+            "mean": -0.01968991822241779,
+            "interval_95": [
+              -0.026948085110469325,
+              -0.012664780411675833
+            ],
+            "interval_98_3333": [
+              -0.028676349473069098,
+              -0.011194237065894033
+            ]
+          }
+        }
+      }
+    }
+  },
+  "interpretation": "Negative behavioral-minus-uniform deltas favor existing weights. Rank calibration is not playing strength. Later-revealed subset has disclosure selection bias. Intervals cluster both game orientations by setup pair, stratified by family; unequal subset game availability is retained."
+}

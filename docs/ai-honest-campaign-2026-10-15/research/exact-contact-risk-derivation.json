@@ -1,0 +1,35 @@
+{
+  "hypothesis": "Replace worst single-cell mean danger with the expected worst lethal opportunity over all first enemy ray contacts under a uniform remaining-army prior.",
+  "prior": "Uniform rank assignments to concealed enemy squares, conditional on exact remaining rank counts and public moved status. Concealed moved squares are mobile; unmoved squares may be mobile, Bomb or Flag. Behavior and narrower battle candidate masks are omitted.",
+  "definitions": {
+    "H": "Number of concealed mobile enemy ranks remaining.",
+    "U": "Number of concealed unmoved enemy squares at the current ai_move root.",
+    "I": "Concealed Bomb count plus concealed Flag count.",
+    "D": "Number of concealed mobile ranks whose attacks defeat the evaluated own rank; equal exchanges contribute zero net material loss.",
+    "S": "Concealed Scout count.",
+    "fall(x,k)": "x*(x-1)*...*(x-k+1), zero for k>x.",
+    "subset": "One nonempty subset of at most four first enemy contacts along cardinal rays.",
+    "n": "Selected adjacent contacts.",
+    "f": "Selected distant contacts.",
+    "b": "Selected contacts that have not publicly moved."
+  },
+  "derivation": [
+    "An unmoved pool of U squares contains exactly U-I mobile pieces. For any b distinct selected unmoved squares, probability all are mobile is fall(U-I,b)/fall(U,b). Moved squares are already conditioned mobile.",
+    "Conditional on mobile status, ranks at selected mobile squares are sampled uniformly without replacement from H concealed mobile ranks.",
+    "A distant enemy can attack only if it is a Scout. If Scout cannot defeat the own rank, every subset containing a distant contact has zero lethal intersection probability.",
+    "Assign the f distant contacts Scout ranks first, with factor fall(S,f)/fall(H,f). These Scouts are lethal in the eligible case, consuming f of the D lethal ranks.",
+    "Assign the n adjacent contacts any remaining lethal ranks: factor fall(D-f,n)/fall(H-f,n). Combining factors gives fall(S,f)*fall(D-f,n)/fall(H,f+n).",
+    "Multiply the unmoved eligibility and rank factors. Inclusion-exclusion over at most15 nonempty subsets yields the probability that at least one enemy has an immediate lethal attack.",
+    "Every lethal attack loses the evaluated own piece worth, while the opponent can execute at most one attack. Expected worst lethal loss is worth times that union probability. A disclosed certain killer returns worth directly."
+  ],
+  "implementation": "AI_EXACT_CONTACT_RISK, Classic-only, default off; Q22 probability arithmetic, no floating point, heap allocations or extra rollout worlds. Material scores round to nearest integer.",
+  "root_inventory": "H,U,I and rank counts are frozen by survey for each ai_move root. Candidate occupancy changes identify contacts without changing the unconditional root inventory. Each simulated rollout ai_move performs its own survey.",
+  "limits": [
+    "The formula is exact under its specified uniform moved-status prior, not under the complete public-history posterior.",
+    "The native implementation has bounded fixed-point error; independent enumeration quantifies it in exact-contact-risk-audit.json.",
+    "Opponent two-squares restrictions are ignored, matching the old danger routine.",
+    "Speculative unknown-capture survival branches retain unconditional root rank counts, rather than conditioning on the hypothetical survival.",
+    "This is mathematical mechanism evidence. Strength requires separately registered immutable policies and fresh tournaments."
+  ],
+  "evidence": "exact-contact-risk-audit.json"
+}

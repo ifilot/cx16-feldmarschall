@@ -1,0 +1,174 @@
+{
+  "cycle": 1,
+  "hypotheses": [
+    "More public-compatible enemy armies reduce decision noise at four times rollout work.",
+    "Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction."
+  ],
+  "standings": {
+    "teacher-context-v1-normal": {
+      "wins": 70,
+      "draws": 9,
+      "losses": 198,
+      "score": 0.26895306859205775,
+      "errors": 3
+    },
+    "teacher-calibrated-beliefs-v1-normal": {
+      "wins": 82,
+      "draws": 2,
+      "losses": 191,
+      "score": 0.3018181818181818,
+      "errors": 5
+    },
+    "teacher-context-worlds32-v1-normal": {
+      "wins": 66,
+      "draws": 4,
+      "losses": 209,
+      "score": 0.24372759856630824,
+      "errors": 1
+    },
+    "teacher-calibrated-worlds32-v1-normal": {
+      "wins": 57,
+      "draws": 5,
+      "losses": 213,
+      "score": 0.21636363636363637,
+      "errors": 5
+    }
+  },
+  "execution_seconds": {
+    "teacher-context-v1-normal": 140.7100274580007,
+    "teacher-calibrated-beliefs-v1-normal": 134.36460025500128,
+    "teacher-context-worlds32-v1-normal": 414.2825696509972,
+    "teacher-calibrated-worlds32-v1-normal": 443.20113782599947
+  },
+  "comparisons": {
+    "teacher-context-worlds32-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 136,
+      "pairs_by_family": {
+        "fortified": 19,
+        "uniform": 20,
+        "unguarded": 20,
+        "forward": 20,
+        "decoy": 20,
+        "presets": 17,
+        "broad-mixed": 20
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.022058823529411766,
+          "interval_95": [
+            -0.07536764705882353,
+            0.03125
+          ],
+          "interval_98_3333": [
+            -0.08639705882352941,
+            0.042279411764705885
+          ]
+        }
+      }
+    },
+    "teacher-calibrated-worlds32-v1-normal minus teacher-calibrated-beliefs-v1-normal": {
+      "complete_pairs": 131,
+      "pairs_by_family": {
+        "fortified": 17,
+        "uniform": 20,
+        "unguarded": 19,
+        "forward": 20,
+        "decoy": 20,
+        "presets": 15,
+        "broad-mixed": 20
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.08396946564885496,
+          "interval_95": [
+            -0.1450381679389313,
+            -0.02480916030534351
+          ],
+          "interval_98_3333": [
+            -0.15839694656488548,
+            -0.009541984732824428
+          ]
+        }
+      }
+    },
+    "teacher-calibrated-beliefs-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 134,
+      "pairs_by_family": {
+        "fortified": 19,
+        "uniform": 20,
+        "unguarded": 19,
+        "forward": 20,
+        "decoy": 20,
+        "presets": 16,
+        "broad-mixed": 20
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.03171641791044776,
+          "interval_95": [
+            -0.026119402985074626,
+            0.08955223880597014
+          ],
+          "interval_98_3333": [
+            -0.03731343283582089,
+            0.10074626865671642
+          ]
+        }
+      }
+    },
+    "teacher-calibrated-worlds32-v1-normal minus teacher-context-worlds32-v1-normal": {
+      "complete_pairs": 135,
+      "pairs_by_family": {
+        "fortified": 18,
+        "uniform": 20,
+        "unguarded": 20,
+        "forward": 20,
+        "decoy": 20,
+        "presets": 17,
+        "broad-mixed": 20
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.025925925925925925,
+          "interval_95": [
+            -0.07777777777777778,
+            0.025925925925925925
+          ],
+          "interval_98_3333": [
+            -0.09074074074074075,
+            0.037037037037037035
+          ]
+        }
+      }
+    },
+    "model by sampling-budget interaction": {
+      "complete_pairs": 130,
+      "pairs_by_family": {
+        "fortified": 17,
+        "uniform": 20,
+        "unguarded": 19,
+        "forward": 20,
+        "decoy": 20,
+        "presets": 14,
+        "broad-mixed": 20
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.07307692307692308,
+          "interval_95": [
+            -0.14615384615384616,
+            0.0
+          ],
+          "interval_98_3333": [
+            -0.16153846153846155,
+            0.01730769230769231
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 1120,
+  "errors": 14,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 1120
+}

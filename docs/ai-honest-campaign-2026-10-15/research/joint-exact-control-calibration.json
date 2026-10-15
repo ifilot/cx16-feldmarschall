@@ -1,0 +1,64 @@
+{
+  "scope": "Fixed historical calibration pairs only; models already fitted/frozen, no fitting or parameter selection.",
+  "comparison": "Exact correlated model versus exact same-weight/same-Flag-row-prior theta=0 control. Differences isolate cross-piece adjacency model.",
+  "model_sha256": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8",
+  "control_sha256": "8ba679b6188940954411e279a52f83789370f9d87adc675e9a1a293182e07d7e",
+  "analysis_sha256": "0bf8de256a261abd17019005052656af630f0e941da5c49d8aa5c205154d0371",
+  "corpus_sha256": "1ed8f86dbb3242e89bcde3dd2bc90237243bafcc01bd5bbc3a83321ea0da81dd",
+  "tournament_sha256": "253d062f15e167d8c03f0f998a4714663273e5a691bdc23bb59df596006b599c",
+  "games": 84,
+  "snapshots": 298,
+  "paired": {
+    "complete_pairs": 42,
+    "pairs_by_family": {
+      "fortified": 6,
+      "uniform": 6,
+      "unguarded": 6,
+      "forward": 6,
+      "decoy": 6,
+      "presets": 6,
+      "broad-mixed": 6
+    },
+    "metrics": {
+      "log_loss_delta": {
+        "mean": -0.08574063488649146,
+        "interval_95": [
+          -0.1639752631168692,
+          -0.012093957952679178
+        ],
+        "interval_98_3333": [
+          -0.18244815437555506,
+          0.00203978165974446
+        ]
+      },
+      "accuracy_delta": {
+        "mean": 0.05952380952380952,
+        "interval_95": [
+          0.017857142857142856,
+          0.10119047619047619
+        ],
+        "interval_98_3333": [
+          0.008928571428571428,
+          0.11011904761904762
+        ]
+      }
+    }
+  },
+  "by_public_clue": {
+    "public_bomb": {
+      "snapshots": 176,
+      "control_log_loss": 2.497513707340508,
+      "joint_log_loss": 2.3606595540812374,
+      "control_accuracy": 0.14204545454545456,
+      "joint_accuracy": 0.22727272727272727
+    },
+    "no_public_bomb": {
+      "snapshots": 122,
+      "control_log_loss": 3.1087663860291745,
+      "joint_log_loss": 3.0700571864535227,
+      "control_accuracy": 0.02459016393442623,
+      "joint_accuracy": 0.06557377049180328
+    }
+  },
+  "limitation": "Exact Flag posterior predictions, not eight sampled runtime worlds. Log-loss improvements do not establish playing strength."
+}

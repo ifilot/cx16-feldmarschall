@@ -14,7 +14,32 @@ from train_ai_student import sample_world
 
 
 class TeacherBot:
-    def __init__(self, observer, teacher, samples=8, depth=3, blend='raw', strategic=False, context=False, replies=None, diagnostic_truth=False, diagnostic_knowledge='all', information_strategy=None, belief_model=None, root_policy=None):
+    def __init__(self, observer, teacher, samples=8, depth=3, blend='raw', strategic=False, context=False, replies=None, diagnostic_truth=False, diagnostic_knowledge='all', information_strategy=None, belief_model=None, root_policy=None, world_sampling=None, campaign_strategy=None, paired_confidence=False, adaptive_depth=False, joint_belief_model=None):
+        if world_sampling not in (None, 'latin', 'uniform') or campaign_strategy not in (None, 'activation', 'recurrence'):
+            raise ValueError('unknown campaign experiment')
+        if (world_sampling or campaign_strategy or paired_confidence) and (diagnostic_truth or information_strategy or root_policy):
+            raise ValueError('campaign experiments require isolated honest teacher')
+        if campaign_strategy and (world_sampling or belief_model or paired_confidence):
+            raise ValueError('isolate campaign strategic hypothesis')
+        if paired_confidence and (world_sampling or belief_model or blend != 'correction'):
+            raise ValueError('isolate paired uncertainty correction experiment')
+        if adaptive_depth and (diagnostic_truth or information_strategy or root_policy or world_sampling or campaign_strategy or paired_confidence or belief_model):
+            raise ValueError('isolate honest adaptive depth experiment')
+        if joint_belief_model and (diagnostic_truth or information_strategy or root_policy or world_sampling or campaign_strategy or paired_confidence or belief_model or adaptive_depth):
+            raise ValueError('isolate honest joint setup belief experiment')
+        self.joint_model = None
+        if joint_belief_model:
+            from campaign_joint_beliefs import JointSetupBeliefs
+            self.joint_model = JointSetupBeliefs.load(joint_belief_model)
+        self.adaptive_depth = adaptive_depth
+        self.campaign_strategy = campaign_strategy
+        self.campaign_module = None
+        if campaign_strategy == 'activation':
+            self.campaign_module = importlib.import_module('campaign_strategy')
+        elif campaign_strategy == 'recurrence':
+            from campaign_recurrence import RecurrenceEscape
+            self.campaign_module = RecurrenceEscape()
+        self.paired_confidence = paired_confidence
         if information_strategy not in (None, 'lifetime', 'objectives', 'followthrough'):
             raise ValueError('unknown information strategy')
         if information_strategy and diagnostic_truth:
@@ -33,6 +58,14 @@ class TeacherBot:
         if belief_model:
             from calibrated_beliefs import BeliefModel
             self.belief_model = BeliefModel.load(belief_model)
+        self.world_sampler = self.belief_model
+        if self.joint_model:
+            self.world_sampler = self.joint_model
+        if world_sampling:
+            from campaign_sampling import StratifiedSampler, UniformSampler
+            if world_sampling == 'uniform' and self.belief_model:
+                raise ValueError('uniform averaging isolates handwritten behavioral weights')
+            self.world_sampler = (StratifiedSampler(self.belief_model) if world_sampling == 'latin' else UniformSampler())
         self.information_strategy = information_strategy
         self.information_module = importlib.import_module('info_' + information_strategy) if information_strategy else None
         self.observer = Engine(shlex.quote(str(observer)))
@@ -113,14 +146,19 @@ class TeacherBot:
                 (scores if words[0] == 'candidate' else credit)[tuple(map(int, words[1:3]))] = int(words[3])
             if words[0] == 'error': raise ValueError(words)
         totals = {move: [0.0, 0.0, 0.0] for move in scores}
+        search_depth = self.depth
+        if self.adaptive_depth:
+            from campaign_depth import depth_for_actions
+            search_depth = depth_for_actions(self.depth, len(scores))
         weights, nodes = [], 0
-        sampled = (self.belief_model.sample_worlds(cells, list(bytes.fromhex(lost_hex)),
-                   histories, self.rng, army, self.samples) if self.belief_model else None)
+        sampled = (self.world_sampler.sample_worlds(cells, list(bytes.fromhex(lost_hex)),
+                   histories, self.rng, army, self.samples) if self.world_sampler else None)
+        world_results = []
         for sample in range(self.samples):
             world, weight = (sampled[sample] if sampled is not None else
                              sample_world(cells, list(bytes.fromhex(lost_hex)), histories, self.rng, army))
             suffix = ' ' + context if self.context else ''
-            self.teacher.stdin.write(f'search {army} {self.depth} {bytes(world).hex()} {shuttle}{suffix}\n'); self.teacher.stdin.flush()
+            self.teacher.stdin.write(f'search {army} {search_depth} {bytes(world).hex()} {shuttle}{suffix}\n'); self.teacher.stdin.flush()
             values = {}
             while True:
                 words = self.teacher.stdout.readline().split()
@@ -130,6 +168,8 @@ class TeacherBot:
                     nodes += int(words[1]); reference = int(words[2]); break
                 if words[0] == 'action': values[tuple(map(int, words[1:3]))] = tuple(map(int, words[3:5]))
             if set(values) != set(scores): raise ValueError('sampled world changes root legal actions')
+            if self.paired_confidence:
+                world_results.append((dict(values), reference))
             weights.append(weight)
             for move, (future, immediate) in values.items():
                 totals[move][0] += weight * future
@@ -152,6 +192,13 @@ class TeacherBot:
                    for move, value in information_adjustments.items()):
                 raise ValueError('invalid information-strategy adjustment')
             for move, value in information_adjustments.items(): choices[move] += value
+        campaign_adjustments = {}
+        if self.campaign_strategy:
+            campaign_adjustments = self.campaign_module.adjustments(cells[:], army, list(bytes.fromhex(lost_hex)), histories, dict(choices))
+            if any(move not in choices or not math.isfinite(value) for move, value in campaign_adjustments.items()):
+                raise ValueError('invalid campaign adjustment')
+            for move, value in campaign_adjustments.items():
+                choices[move] += value
         # Keep unequivocal immediate victories at their native priority.
         wins = [move for move, score in scores.items() if score >= 30000]
         selected = parent if parent in wins else max(wins or choices, key=lambda move: (choices[move], move == parent, -move[0], -move[1]))
@@ -159,6 +206,9 @@ class TeacherBot:
         if self.root_policy and not wins:
             selection = self.root_policy.distribution(scores,corrections)
             selected = self.root_policy.draw(selection,self.policy_rng)
+        if self.paired_confidence:
+            from campaign_search import paired_selection
+            selected, selection = paired_selection(scores, credit, parent, world_results, weights)
         self.observer.ask(f'played {square_name(selected[0])} {square_name(selected[1])}', 'playedok')
         self.last_report = {'army': army, 'parent': parent, 'selected': selected, 'nodes': nodes,
                             'effective_samples': sum(weights)**2 / sum(w*w for w in weights),
@@ -174,6 +224,14 @@ class TeacherBot:
                                                              for move, value in information_adjustments.items()])
         if self.root_policy:
             self.last_report['root_selection'] = selection or {'forced_immediate_win': True}
+        if self.paired_confidence:
+            self.last_report['paired_selection'] = selection
+        if self.adaptive_depth:
+            self.last_report['adaptive_depth'] = search_depth
+        if self.campaign_strategy:
+            self.last_report['campaign_adjustments'] = [dict(move=m, adjustment=v) for m,v in campaign_adjustments.items()]
+            if self.campaign_strategy == 'recurrence':
+                self.last_report['recurrence'] = self.campaign_module.last_report
         return selected
 
     def close(self):
@@ -186,6 +244,10 @@ class TeacherBot:
                 words = line.split()
                 if not words: continue
                 command = words[0]
+                if self.joint_model:
+                    self.joint_model.observe(words)
+                if command == 'new' and self.campaign_strategy == 'recurrence':
+                    self.campaign_module.reset()
                 self.diagnostic_event(words)
                 if command == 'opponent-setup': continue
                 if command == 'feldmarschall':
@@ -228,8 +290,13 @@ if __name__ == '__main__':
     parser.add_argument('--information-strategy', choices=('lifetime', 'objectives', 'followthrough'), help='fair public-input information experiment')
     parser.add_argument('--belief-model', type=Path, help='frozen public-history belief likelihood tables')
     parser.add_argument('--root-policy', type=Path, help='frozen public-score probability selection settings')
+    parser.add_argument('--world-sampling', choices=('latin','uniform'), help='public-world sampling experiment')
+    parser.add_argument('--campaign-strategy', choices=('activation','recurrence'), help='public-board strategic experiment')
+    parser.add_argument('--paired-confidence', action='store_true', help='paired one-standard-error search override experiment')
+    parser.add_argument('--adaptive-depth', action='store_true', help='eight-ply planning at roots with at most twelve public legal actions')
+    parser.add_argument('--joint-belief-model', type=Path, help='frozen correlated Flag/Bomb setup-style prior with public event memory')
     args = parser.parse_args()
     if args.samples < 1 or args.depth < 1: parser.error('positive samples and depth required')
-    bot = TeacherBot(args.observer, args.teacher, args.samples, args.depth, args.blend, args.strategic, args.context, args.replies, args.diagnostic_truth, args.diagnostic_knowledge, args.information_strategy, args.belief_model, args.root_policy)
+    bot = TeacherBot(args.observer, args.teacher, args.samples, args.depth, args.blend, args.strategic, args.context, args.replies, args.diagnostic_truth, args.diagnostic_knowledge, args.information_strategy, args.belief_model, args.root_policy, args.world_sampling, args.campaign_strategy, args.paired_confidence, args.adaptive_depth, args.joint_belief_model)
     bot.observer.send('difficulty ' + args.difficulty)
     bot.run()

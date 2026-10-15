@@ -1,0 +1,18 @@
+{
+  "objective": "Eight-hour cheap honest Classic AI research and DOS benchmark campaign; commit and cumulative overview after every cycle.",
+  "start_epoch": 1792097078,
+  "deadline_epoch": 1792125878,
+  "start_utc": "2026-10-15 20:44:38 UTC",
+  "deadline_utc": "2026-10-16 04:44:38 UTC",
+  "agents": [
+    "campaign_sampling",
+    "campaign_strategy",
+    "campaign_search"
+  ],
+  "baseline_commit": "209d3ef",
+  "baseline_policy": "teacher-context-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "promotion": "Only consider independent fresh validation, including honest direct opponents; never tune on validation.",
+  "seed_allocation": "Cycle i uses 2090001 + (i-1)*10000; additional validation cohorts require a separate frozen plan.",
+  "scope": "Classic, public-input-only candidates; retain all failures and unscored original DOS errors."
+}

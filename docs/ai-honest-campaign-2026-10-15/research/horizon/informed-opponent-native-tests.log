@@ -1,0 +1,8 @@
+test_artificial_opponent_disclosures_never_enter_public_trajectory (test_campaign_informed_opponent.InformedOpponent.test_artificial_opponent_disclosures_never_enter_public_trajectory) ... ok
+test_only_opponent_initial_view_receives_root_flag_and_spy (test_campaign_informed_opponent.InformedOpponent.test_only_opponent_initial_view_receives_root_flag_and_spy) ... ok
+test_other_concealed_root_ranks_remain_masked_to_opponent (test_campaign_informed_opponent.InformedOpponent.test_other_concealed_root_ranks_remain_masked_to_opponent) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.618s
+
+OK

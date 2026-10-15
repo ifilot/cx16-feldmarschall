@@ -1,0 +1,438 @@
+{
+  "tournament": "docs/ai-flag-only-2026-10-15/teacher-context-v1-normal.fmtour",
+  "tournament_sha256": "1de2ff22f28d80d426bf01aa38242459c2e2f8073aef3975ed8befc3951871d2",
+  "policy": "teacher-context-v1-normal",
+  "scored_games": 276,
+  "counters": {
+    "results": {
+      "loss": 198,
+      "draw": 6,
+      "win": 72
+    },
+    "own_deaths_loss": {
+      "9": 940,
+      "7": 325,
+      "4": 235,
+      "S": 69,
+      "2": 92,
+      "8": 413,
+      "3": 159,
+      "6": 316,
+      "B": 91,
+      "5": 293,
+      "F": 194,
+      "1": 66
+    },
+    "miner_death_causes": {
+      "4|defending|known": 48,
+      "8|attacking|known": 3,
+      "5|defending|known": 40,
+      "5|defending|concealed": 58,
+      "5|attacking|known": 2,
+      "4|defending|concealed": 26,
+      "2|defending|known": 40,
+      "6|defending|concealed": 58,
+      "6|attacking|concealed": 13,
+      "1|defending|known": 35,
+      "7|defending|concealed": 44,
+      "8|attacking|concealed": 9,
+      "8|defending|concealed": 32,
+      "3|defending|known": 22,
+      "3|attacking|known": 2,
+      "6|defending|known": 16,
+      "5|attacking|concealed": 13,
+      "8|defending|known": 10,
+      "1|defending|concealed": 8,
+      "3|defending|concealed": 15,
+      "2|defending|concealed": 8,
+      "3|attacking|concealed": 5,
+      "7|attacking|concealed": 12,
+      "1|attacking|concealed": 3,
+      "4|attacking|concealed": 7,
+      "7|defending|known": 6,
+      "1|attacking|known": 1,
+      "4|attacking|known": 1,
+      "2|attacking|concealed": 2,
+      "2|attacking|known": 1
+    },
+    "flag_captor_loss": {
+      "8": 39,
+      "5": 22,
+      "4": 39,
+      "9": 19,
+      "7": 7,
+      "3": 24,
+      "2": 20,
+      "6": 12,
+      "1": 10,
+      "S": 2
+    },
+    "terminal_flag_threats": {
+      "adjacent|known|moved": 160,
+      "adjacent|concealed|moved": 25,
+      "ray|concealed|unmoved": 3,
+      "no preceding own decision": 6
+    },
+    "loss_endings": {
+      "flag": 194,
+      "no moves": 4
+    },
+    "miners_remaining_at_loss": {
+      "1": 24,
+      "0": 27,
+      "2": 29,
+      "3": 31,
+      "4": 33,
+      "5": 54
+    },
+    "own_deaths_draw": {
+      "9": 38,
+      "7": 15,
+      "S": 3,
+      "3": 8,
+      "2": 5,
+      "8": 16,
+      "5": 14,
+      "6": 13,
+      "4": 8,
+      "B": 5,
+      "1": 2
+    },
+    "miner_bomb_defuses": {
+      "loss": 77,
+      "win": 57,
+      "draw": 3
+    },
+    "marshal_death_causes": {
+      "S|defending|concealed": 23,
+      "1|defending|known": 19,
+      "1|attacking|concealed": 2,
+      "B|attacking|concealed": 25,
+      "1|attacking|known": 8,
+      "1|defending|concealed": 16
+    },
+    "own_deaths_win": {
+      "9": 276,
+      "7": 83,
+      "6": 93,
+      "5": 86,
+      "8": 111,
+      "4": 64,
+      "3": 49,
+      "2": 25,
+      "B": 4,
+      "S": 20,
+      "1": 25
+    },
+    "flag_captor_win": {
+      "8": 12,
+      "9": 22,
+      "5": 5,
+      "7": 3,
+      "4": 8,
+      "6": 5,
+      "2": 7,
+      "3": 5,
+      "1": 4
+    }
+  },
+  "concealed_moved_adjacent_terminal_cases": 25,
+  "cases_with_any_legal_capture": 5,
+  "cases_with_guaranteed_capture": 0,
+  "cases_with_offline_actual_successful_capture": 0,
+  "cases": [
+    {
+      "game": 29,
+      "family": "fortified",
+      "ply": 143,
+      "attacker_rank_disclosed_on_final_event": "5",
+      "src": 88,
+      "flag": 98,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 46,
+      "family": "uniform",
+      "ply": 4,
+      "attacker_rank_disclosed_on_final_event": "5",
+      "src": 48,
+      "flag": 38,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 49,
+      "family": "uniform",
+      "ply": 7,
+      "attacker_rank_disclosed_on_final_event": "5",
+      "src": 55,
+      "flag": 65,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 56,
+      "family": "uniform",
+      "ply": 38,
+      "attacker_rank_disclosed_on_final_event": "6",
+      "src": 30,
+      "flag": 20,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 60,
+      "family": "uniform",
+      "ply": 254,
+      "attacker_rank_disclosed_on_final_event": "7",
+      "src": 13,
+      "flag": 3,
+      "legal_capture_responses": [
+        {
+          "move": [
+            12,
+            13
+          ],
+          "own_rank": "9",
+          "removes_every_mobile_rank": false,
+          "offline_actual_outcome": "defender"
+        }
+      ]
+    },
+    {
+      "game": 64,
+      "family": "uniform",
+      "ply": 8,
+      "attacker_rank_disclosed_on_final_event": "4",
+      "src": 41,
+      "flag": 31,
+      "legal_capture_responses": [
+        {
+          "move": [
+            40,
+            41
+          ],
+          "own_rank": "8",
+          "removes_every_mobile_rank": false,
+          "offline_actual_outcome": "defender"
+        }
+      ]
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "ply": 6,
+      "attacker_rank_disclosed_on_final_event": "8",
+      "src": 44,
+      "flag": 34,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 126,
+      "family": "forward",
+      "ply": 4,
+      "attacker_rank_disclosed_on_final_event": "4",
+      "src": 44,
+      "flag": 34,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 128,
+      "family": "forward",
+      "ply": 6,
+      "attacker_rank_disclosed_on_final_event": "6",
+      "src": 41,
+      "flag": 31,
+      "legal_capture_responses": [
+        {
+          "move": [
+            40,
+            41
+          ],
+          "own_rank": "S",
+          "removes_every_mobile_rank": false,
+          "offline_actual_outcome": "defender"
+        }
+      ]
+    },
+    {
+      "game": 137,
+      "family": "forward",
+      "ply": 19,
+      "attacker_rank_disclosed_on_final_event": "S",
+      "src": 65,
+      "flag": 66,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 140,
+      "family": "forward",
+      "ply": 6,
+      "attacker_rank_disclosed_on_final_event": "4",
+      "src": 49,
+      "flag": 39,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 153,
+      "family": "forward",
+      "ply": 9,
+      "attacker_rank_disclosed_on_final_event": "5",
+      "src": 54,
+      "flag": 64,
+      "legal_capture_responses": [
+        {
+          "move": [
+            55,
+            54
+          ],
+          "own_rank": "8",
+          "removes_every_mobile_rank": false,
+          "offline_actual_outcome": "defender"
+        }
+      ]
+    },
+    {
+      "game": 158,
+      "family": "forward",
+      "ply": 36,
+      "attacker_rank_disclosed_on_final_event": "4",
+      "src": 35,
+      "flag": 36,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 170,
+      "family": "decoy",
+      "ply": 48,
+      "attacker_rank_disclosed_on_final_event": "6",
+      "src": 40,
+      "flag": 30,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 173,
+      "family": "decoy",
+      "ply": 9,
+      "attacker_rank_disclosed_on_final_event": "6",
+      "src": 51,
+      "flag": 61,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 179,
+      "family": "decoy",
+      "ply": 235,
+      "attacker_rank_disclosed_on_final_event": "6",
+      "src": 69,
+      "flag": 79,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 190,
+      "family": "decoy",
+      "ply": 6,
+      "attacker_rank_disclosed_on_final_event": "6",
+      "src": 40,
+      "flag": 30,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 192,
+      "family": "decoy",
+      "ply": 8,
+      "attacker_rank_disclosed_on_final_event": "5",
+      "src": 40,
+      "flag": 30,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 228,
+      "family": "presets",
+      "ply": 214,
+      "attacker_rank_disclosed_on_final_event": "6",
+      "src": 13,
+      "flag": 3,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 239,
+      "family": "presets",
+      "ply": 155,
+      "attacker_rank_disclosed_on_final_event": "5",
+      "src": 85,
+      "flag": 95,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 246,
+      "family": "broad-mixed",
+      "ply": 70,
+      "attacker_rank_disclosed_on_final_event": "6",
+      "src": 39,
+      "flag": 29,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 247,
+      "family": "broad-mixed",
+      "ply": 107,
+      "attacker_rank_disclosed_on_final_event": "8",
+      "src": 51,
+      "flag": 61,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 272,
+      "family": "broad-mixed",
+      "ply": 296,
+      "attacker_rank_disclosed_on_final_event": "3",
+      "src": 24,
+      "flag": 23,
+      "legal_capture_responses": [
+        {
+          "move": [
+            34,
+            24
+          ],
+          "own_rank": "5",
+          "removes_every_mobile_rank": false,
+          "offline_actual_outcome": "defender"
+        }
+      ]
+    },
+    {
+      "game": 276,
+      "family": "broad-mixed",
+      "ply": 154,
+      "attacker_rank_disclosed_on_final_event": "8",
+      "src": 36,
+      "flag": 26,
+      "legal_capture_responses": []
+    },
+    {
+      "game": 280,
+      "family": "broad-mixed",
+      "ply": 20,
+      "attacker_rank_disclosed_on_final_event": "1",
+      "src": 48,
+      "flag": 38,
+      "legal_capture_responses": []
+    }
+  ],
+  "finding": "Classic public movement establishes mobile status. Existing flag_threats counts only disclosed ranks; adjacent moved concealed attackers are also logically certain Flag threats.",
+  "hypothesis": "Count this public logical threat under an isolated compile guard, retaining the existing defense evaluation.",
+  "limits": [
+    "Terminal positions are descriptive; changing earlier choices changes the game.",
+    "No historical concealed moved terminal case has a legal capture that succeeds against the subsequently disclosed rank. This is not evidence of recoverable wins.",
+    "Marshal and Miner casualties do not establish avoidable strategic errors.",
+    "Replay physical ranks and counterfactual outcomes never enter policy inputs."
+  ],
+  "primary_code_sources": [
+    "src/core/rules.c",
+    "src/core/pieces.c",
+    "src/core/ai.c"
+  ],
+  "current_source_sha256": {
+    "src/core/rules.c": "0444d6e388f5f854e890d5f2137c3fb30595486c2e444b909bcd422af2e95fe3",
+    "src/core/pieces.c": "847949d7815ed40780a074e3c4174dbabbe3dce018c37d32aa9708a59980b288",
+    "src/core/ai.c": "c5ec5106e40750c63df7cc6aea909985209362fa8b2a6887dea30693d8396020"
+  }
+}

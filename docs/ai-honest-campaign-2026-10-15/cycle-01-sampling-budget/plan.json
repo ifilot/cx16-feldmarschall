@@ -1,0 +1,203 @@
+{
+  "cycle": 1,
+  "baseline": "teacher-context-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "teacher-context-v1-normal",
+    "teacher-calibrated-beliefs-v1-normal",
+    "teacher-context-worlds32-v1-normal",
+    "teacher-calibrated-worlds32-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "teacher-context-worlds32-v1-normal",
+      "name": "teacher-context-worlds32-v1-normal",
+      "description": "Honest 32-world sampling-budget ablation of teacher-context-v1-normal",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT"
+      ],
+      "driver_args": [
+        "--samples",
+        "32",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context"
+      ],
+      "model": "Unchanged four-ply guarded Context Teacher; 32 independent public-compatible armies."
+    },
+    {
+      "id": "teacher-calibrated-worlds32-v1-normal",
+      "name": "teacher-calibrated-worlds32-v1-normal",
+      "description": "Honest 32-world sampling-budget ablation of teacher-calibrated-beliefs-v1-normal",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT"
+      ],
+      "driver_args": [
+        "--samples",
+        "32",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context",
+        "--belief-model",
+        "public-history-beliefs-v1.json"
+      ],
+      "information_model": "Own army and public history only; learned hidden-rank likelihoods, exact public inventory.",
+      "belief_model": "ai/models/public-history-beliefs-v1.json",
+      "model": "Unchanged four-ply guarded Context Teacher; 32 independent public-compatible armies.",
+      "belief_model_sha256": "3327ec168d4834c45e62e4f0576c47fd41e716904b4df4c8bee8d9ec2bd0f38b",
+      "asset_files": [
+        "ai/models/public-history-beliefs-v1.json"
+      ]
+    }
+  ],
+  "seed": 2090001,
+  "rounds": 20,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "hypotheses": [
+    "More public-compatible enemy armies reduce decision noise at four times rollout work.",
+    "Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction."
+  ],
+  "contrasts": [
+    [
+      "teacher-context-worlds32-v1-normal",
+      "teacher-context-v1-normal"
+    ],
+    [
+      "teacher-calibrated-worlds32-v1-normal",
+      "teacher-calibrated-beliefs-v1-normal"
+    ],
+    [
+      "teacher-calibrated-beliefs-v1-normal",
+      "teacher-context-v1-normal"
+    ],
+    [
+      "teacher-calibrated-worlds32-v1-normal",
+      "teacher-context-worlds32-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed fresh screening cohort. 20000 family-stratified swapped-pair bootstrap replicates. Report every contrast and cost, no production promotion from these exploratory comparisons. All public-state traces replayed independently in Python and native worker; Qt6 capture each policy.",
+  "honesty": "No opponent setup, diagnostic observer or referee ranks enter any policy. Learned model was frozen before this campaign; no fitting on these seeds."
+}

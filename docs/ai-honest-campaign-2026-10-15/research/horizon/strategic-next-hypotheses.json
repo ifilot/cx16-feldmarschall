@@ -1,0 +1,40 @@
+{
+  "scope": "Research proposals, not playing-strength results or approved policies. Uses existing code and historical development diagnostics only.",
+  "primary_source": {
+    "title": "A. F. C. Arts (2010), Competitive Play in Stratego",
+    "url": "https://project.dke.maastrichtuniversity.nl/games/files/msc/Arts_thesis.pdf",
+    "relevant_sections": "2.3.2 Miner, 5.3 Strategic Positions, 5.4 Implementation",
+    "claim_scope": "The thesis motivates Miner capability and lane control; it does not validate the specific proposed algorithms below."
+  },
+  "do_not_repeat": {
+    "idea": "Flat last-Miner protection whenever any disclosed enemy Bomb remains",
+    "reason": "Already implemented as AI_MISSION_PRESERVE and rejected in earlier Normal/Hard development at 49.29%/48.93%. New work must represent actual route capability or positional defense rather than a larger preservation bonus."
+  },
+  "ranked_proposals": [
+    {
+      "name": "Capability-aware route viability",
+      "idea": "At each rollout endpoint, distinguish whether a Flag route is reachable without bomb removal, requires an available Miner, or is structurally blocked even under optimistic removal of mobile blockers. Losing the last bomb-clearing capability changes the strategic state, rather than just losing fixed material points.",
+      "difference_from_rejected_preservation": "The value depends on route topology and remaining win conditions, not simply the presence of one Miner and any Bomb. An exposed Flag with an open route needs no Miner reserve; an actual Bomb cut separating every route does.",
+      "cheap_mechanism": "Two breadth-first floods on the 100-square board per side, with and without enemy Bomb transit. Sampled-world evaluation stays within the existing honest belief/search boundary; root features, if any, must use public candidates and disclosed Bombs only.",
+      "failure_evidence": "The public mission diagnostic set contains two permanently blocked route controls with zero Miners and one quiet-repetition case with one Miner and three disclosed enemy Bombs. The existing pursuit utility returns a fixed distance floor for unreachable routes and contains no explicit capability state.",
+      "mechanism_gate": "Change the endpoint preference in a last-Miner capability-loss fixture; make no change for an exposed reachable Flag fixture; preserve enemy hidden-rank invariance. Count real historical development occurrence before paying for a tournament.",
+      "caution": "A blocked Flag route does not imply a lost game, because immobilizing the opponent is another win condition. Avoid treating optimistic reachability or draw potential as an exact outcome."
+    },
+    {
+      "name": "Positional Miner interdiction",
+      "idea": "Recognize a defender that controls a lake corridor and blocks enemy Miners from a bomb-protected own Flag. Preserve that defensive role when taking unrelated material would open the corridor.",
+      "difference_from_current_logic": "Current native Flag danger checks focus on immediate attacks and the leaf pursuit distance ignores mobile defenders. A stable distant garrison can matter many turns before the Miner reaches the Flag.",
+      "cheap_mechanism": "Public route-cut analysis using own ranks, known enemy threats, lakes and own immobile defense; test whether vacating a defender opens a previously interdicted Miner approach. Require a local tactical safety check rather than assuming the defender is invulnerable.",
+      "mechanism_gate": "A historical or constructed corridor fixture must show that the current choice opens the only Miner approach; the new plan must retain or replace the defender without accessing concealed enemy ranks.",
+      "caution": "A static attack zone is not a forced draw certificate. Enemy escorts can dislodge defenders, and pursuit/repetition rules must match this project's Classic referee."
+    },
+    {
+      "name": "Switch win condition when Flag access is publicly impossible",
+      "idea": "When every public Flag candidate is behind permanent barriers and bomb-clearing is unavailable, stop assigning Flag-approach jobs and plan to immobilize remaining enemy mobile pieces instead.",
+      "difference_from_score_tuning": "This changes the strategic objective and target allocation, rather than adding a novelty or anti-repetition penalty.",
+      "failure_evidence": "The two permanent route-obstruction controls retain quiet legal alternatives but cannot achieve direct Flag capture. Their existence motivates a goal switch; it does not prove those alternatives win.",
+      "mechanism_gate": "A public topology proof triggers the switch; uncertain routes do not. The chosen pursuit target must be reachable and beatable from disclosed information, with own Flag safety retained.",
+      "caution": "If neither side can force contact, drawing may be appropriate. Chasing one enemy with one stronger piece need not force capture under the actual movement rules."
+    }
+  ]
+}

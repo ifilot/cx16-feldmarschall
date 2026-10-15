@@ -65,6 +65,7 @@ static int material(void) {
         score += (!!(board[sq]&CELL_BLUE)==root ? 1 : -1) * value[PIECE_TYPE(board[sq])];
     return score;
 }
+#ifndef AI_ROLLOUT_CAPABLE_ROUTES
 static int pursuit(uint8_t army) {
     uint8_t distance[SQUARES], queue[SQUARES], flag = NOWHERE, sq, head=0, tail=0, nb;
     unsigned i, pass;
@@ -94,6 +95,52 @@ static int pursuit(uint8_t army) {
     }
     return -4*best;
 }
+#else
+/* A geometric route through a stronger defender is not a route that one
+ * attacker can complete. Evaluate one reverse flood per surviving own rank,
+ * allowing enemy transit only when that rank wins and survives the battle.
+ * This endpoint heuristic uses a sampled hypothetical world, never the referee
+ * board or a mover's policy input. Friendly mobile blockers remain removable;
+ * cooperative sacrifices and enemy movement are deliberately not solved here.
+ */
+static int pursuit(uint8_t army) {
+    uint8_t distance[SQUARES],queue[SQUARES],present[PIECE_BOMB];
+    uint8_t flag=NOWHERE,sq,nb,head,tail,rank,cell;
+    unsigned i;
+    int best=100;
+    static const int step[4]={-10,1,10,-1};
+    memset(present,0,sizeof(present));
+    for(sq=0;sq<SQUARES;sq++) if(IS_PIECE(board[sq])) {
+        if(!!(board[sq]&CELL_BLUE)!=army && PIECE_TYPE(board[sq])==PIECE_FLAG) flag=sq;
+        if(!!(board[sq]&CELL_BLUE)==army && PIECE_TYPE(board[sq])<PIECE_BOMB)
+            present[PIECE_TYPE(board[sq])]=1;
+    }
+    if(flag==NOWHERE) return 400;
+    for(rank=0;rank<PIECE_BOMB;rank++) if(present[rank]) {
+        memset(distance,NOWHERE,sizeof(distance));head=0;tail=0;
+        distance[flag]=0;queue[tail++]=flag;
+        while(head<tail) {
+            sq=queue[head++];
+            for(i=0;i<4;i++) {
+                int target=(int)sq+step[i];
+                if(target<0 || target>=100 || (i==1 && sq%10==9) || (i==3 && sq%10==0)) continue;
+                nb=(uint8_t)target;cell=board[nb];
+                if(cell==CELL_LAKE || distance[nb]!=NOWHERE) continue;
+                if(IS_PIECE(cell)) {
+                    if(!!(cell&CELL_BLUE)==army) {
+                        if(PIECE_TYPE(cell)>=PIECE_BOMB) continue;
+                    } else if(rules_battle(rank,PIECE_TYPE(cell))!=BATTLE_ATTACKER) continue;
+                }
+                distance[nb]=distance[sq]+1;queue[tail++]=nb;
+            }
+        }
+        for(sq=0;sq<SQUARES;sq++) if(IS_PIECE(board[sq]) &&
+            !!(board[sq]&CELL_BLUE)==army && PIECE_TYPE(board[sq])==rank && distance[sq]<best)
+            best=distance[sq];
+    }
+    return -4*best;
+}
+#endif
 static int utility(void) {
     return material() + (strategic ? pursuit(root)-pursuit(1-root) : 0);
 }
@@ -110,6 +157,16 @@ static void policy_move(uint8_t army,uint8_t* from,uint8_t* to) {
     uint8_t truth[SQUARES];
     unsigned i;
     memcpy(truth,board,SQUARES);ai_mask(army ? CELL_BLUE : 0);
+#ifdef AI_ROLLOUT_INFORMED_OPPONENT
+    /* Honest opponent modelling: the root player knows its own Flag and Spy.
+     * DOS is known to know these too. Give ONLY the simulated opponent that
+     * knowledge. No enemy identity is disclosed to the root mover, and the
+     * original disclosure flags are restored before recording public events. */
+    if(army!=root) for(i=0;i<SQUARES;i++)
+        if(IS_PIECE(truth[i]) && !!(truth[i]&CELL_BLUE)==root &&
+           (PIECE_TYPE(truth[i])==PIECE_FLAG || PIECE_TYPE(truth[i])==PIECE_SPY))
+            board[i]=(board[i]&~CELL_TYPE)|PIECE_TYPE(truth[i])|CELL_REVEALED;
+#endif
     if(audit) {
         uint8_t ai_state[AI_TEST_STATE_SIZE],rule_state[RULES_STATE_SIZE];
         ai_test_save(ai_state);rules_state_save(rule_state);
@@ -147,6 +204,41 @@ static void record_action(uint8_t from,uint8_t to) {
     ai_memory_observe(from, to, attacking ? rules_battle(PIECE_TYPE(board[from]), PIECE_TYPE(board[to])) : AI_MEMORY_QUIET);
 #endif
 }
+#ifdef AI_ROLLOUT_QUIESCENCE
+#ifndef AI_ROLLOUT_QUIESCENCE_PLIES
+#define AI_ROLLOUT_QUIESCENCE_PLIES 4
+#endif
+#if AI_ROLLOUT_QUIESCENCE_PLIES < 1 || AI_ROLLOUT_QUIESCENCE_PLIES > 8
+#error Quiescence extension must contain between one and eight policy decisions
+#endif
+/* Finish an exchange rather than evaluate a temporary material gain. Extension
+ * membership depends only on the next masked policy move being a capture:
+ * neither its true target rank nor its hypothetical utility selects the move.
+ * A quiet policy choice ends the extension without changing the board. This is
+ * policy quiescence, not exhaustive minimax capture search. All normal search
+ * paths remain byte-for-byte the same when the compile-time option is absent.
+ */
+static int quiescence(uint8_t army) {
+    unsigned turn;
+    uint8_t from,to;
+    for(turn=0;turn<AI_ROLLOUT_QUIESCENCE_PLIES;turn++,army=1-army) {
+        if(!rules_has_move(army ? CELL_BLUE : 0)) {
+            if(!rules_has_move(army ? 0 : CELL_BLUE)) return 0;
+            return army==root ? -WIN : WIN;
+        }
+        /* The audit trajectory has a fixed capacity shared with depth<=12.
+         * Never exceed it, even for a deliberately deep diagnostic request. */
+        if(trajectory_length+5>sizeof(trajectory)) break;
+        policy_move(army,&from,&to);
+        if(from==NOWHERE) {fputs("illegal quiescence no move\n",stderr);exit(2);}
+        if(!IS_PIECE(board[to])) break;
+        if(PIECE_TYPE(board[to])==PIECE_FLAG) return army==root ? WIN : -WIN;
+        record_action(from,to);
+        rules_apply(from,to);
+    }
+    return utility();
+}
+#endif
 static int rollout(uint8_t army, unsigned depth) {
     uint8_t from, to;
     unsigned turn;
@@ -161,7 +253,11 @@ static int rollout(uint8_t army, unsigned depth) {
         record_action(from,to);
         rules_apply(from,to);
     }
+#ifdef AI_ROLLOUT_QUIESCENCE
+    return quiescence(army);
+#else
     return utility();
+#endif
 }
 #ifdef AI_REPLY_BRANCHES
 static int reply_rollout(uint8_t army, unsigned depth) {
@@ -279,6 +375,11 @@ int main(int argc,char** argv) {
             uint8_t cell=board[sq];
             initial_view[owner][sq]=IS_PIECE(cell) && !!(cell&CELL_BLUE)!=owner && !(cell&CELL_REVEALED) ?
                 (cell&~CELL_TYPE)|PIECE_UNKNOWN : cell;
+#ifdef AI_ROLLOUT_INFORMED_OPPONENT
+            if(owner!=root && IS_PIECE(cell) && !!(cell&CELL_BLUE)==root &&
+               (PIECE_TYPE(cell)==PIECE_FLAG || PIECE_TYPE(cell)==PIECE_SPY))
+                initial_view[owner][sq]=cell|CELL_REVEALED;
+#endif
         }
         phase=0;trajectory_length=0;
         policy_random[0]=1;policy_random[1]=2;
