@@ -1,0 +1,72 @@
+{
+  "scope": "Fresh correctness and throughput cohort. Original-reference failures are unscored; no fair-information strength claim.",
+  "seed": 1912001,
+  "rounds": 10,
+  "workers": 4,
+  "max_plies": 1000,
+  "summary": {
+    "status": "complete",
+    "games": 140,
+    "scored_games": 138,
+    "errors": 2,
+    "standings": {
+      "msdos-1990-v2-normal": {
+        "wins": 94,
+        "draws": 3,
+        "losses": 41,
+        "score": 0.6920289855072463
+      },
+      "student-guard-v1-normal": {
+        "wins": 41,
+        "draws": 3,
+        "losses": 94,
+        "score": 0.3079710144927536
+      }
+    },
+    "average_plies": 162.07857142857142,
+    "families": {
+      "broad-mixed": {
+        "msdos-1990-v2-normal": 0.575,
+        "student-guard-v1-normal": 0.425
+      },
+      "decoy": {
+        "msdos-1990-v2-normal": 0.8,
+        "student-guard-v1-normal": 0.2
+      },
+      "fortified": {
+        "msdos-1990-v2-normal": 0.7,
+        "student-guard-v1-normal": 0.3
+      },
+      "forward": {
+        "msdos-1990-v2-normal": 0.75,
+        "student-guard-v1-normal": 0.25
+      },
+      "presets": {
+        "msdos-1990-v2-normal": 0.8333333333333334,
+        "student-guard-v1-normal": 0.16666666666666666
+      },
+      "unguarded": {
+        "msdos-1990-v2-normal": 0.75,
+        "student-guard-v1-normal": 0.25
+      },
+      "uniform": {
+        "msdos-1990-v2-normal": 0.45,
+        "student-guard-v1-normal": 0.55
+      }
+    },
+    "endings": {
+      "flag": 132,
+      "no moves": 3,
+      "ply limit": 3,
+      "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 2
+    }
+  },
+  "plies": 22691,
+  "seconds": 33.43371392100016,
+  "execution_seconds": 23.39640734999921,
+  "execution_games_per_minute": 359.02948150713763,
+  "execution_plies_per_second": 969.8497577236262,
+  "end_to_end_games_per_minute": 251.24340119222734,
+  "sha256": "f359008310db6a9e7762e9035e77976a2b80063b62ff7cc784487dc9d26da1e8",
+  "fmtour_bytes": 8830976
+}

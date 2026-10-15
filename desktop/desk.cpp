@@ -42,7 +42,8 @@ TournamentFile::TournamentFile(const QString &path) {
     try {
         require(db.open(), db.lastError().text());
         QSqlQuery query(db);
-        require(query.exec("PRAGMA user_version") && query.next() && query.value(0).toInt() == 1, "Unsupported tournament format");
+        require(query.exec("PRAGMA user_version") && query.next() &&
+                (query.value(0).toInt() == 1 || query.value(0).toInt() == 2), "Unsupported tournament format");
         require(query.exec("SELECT key,value FROM metadata"), query.lastError().text());
         while (query.next()) {
             QJsonParseError error;
@@ -91,7 +92,8 @@ Replay TournamentFile::replay(int id) const {
     }
     auto result = query.value(4).toString(), reason = query.value(5).toString();
     int side = plies % 2;
-    if (flagCaptured) require(reason == "flag" && result == (side == 1 ? "red" : "blue"), "Incorrect flag result");
+    if (result == "error") require(!flagCaptured && reason.startsWith("engine error: "), "Invalid unscored error record");
+    else if (flagCaptured) require(reason == "flag" && result == (side == 1 ? "red" : "blue"), "Incorrect flag result");
     else if (position.moves(side).empty()) {
         bool otherMoves = !position.moves(1 - side).empty();
         require(reason == (otherMoves ? "no moves" : "neither can move") &&
@@ -190,7 +192,7 @@ Desk::Desk(QString project, QString pythonProgram, QString workerProgram)
     breakdown = new QLabel(); breakdown->setWordWrap(true); layout->addWidget(breakdown);
     auto *splitter = new QSplitter(); layout->addWidget(splitter, 1);
     auto *left = new QWidget(); auto *leftLayout = new QVBoxLayout(left);
-    filter = new QComboBox(); filter->addItems({"All matches","Decisive matches","Draws","Reached move limit"}); leftLayout->addWidget(filter);
+    filter = new QComboBox(); filter->addItems({"All matches","Decisive matches","Draws","Reached move limit","Engine errors"}); leftLayout->addWidget(filter);
     connect(filter, &QComboBox::currentIndexChanged, this, [this] { populate(); });
     table = new QTableWidget(0, 6); table->setHorizontalHeaderLabels({"Match","Layout","Red","Blue","Result","Plies"});
     table->setSelectionBehavior(QAbstractItemView::SelectRows); table->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -231,21 +233,30 @@ void Desk::openTournament(const QString &path) {
     QMap<QString, std::array<double, 2>> families; QMap<QString, int> endings; double totalPlies = 0;
     for (int n = 0; n < 2; ++n) {
         QString id = participants[n].toObject()["policy"].toObject()["id"].toString();
-        int wins = 0, draws = 0;
+        int wins = 0, draws = 0, scored = 0;
         for (const auto &game : tournament->games) {
+            if (n == 0) { ++endings[game.result == "error" ? "engine error" : game.reason]; totalPlies += game.plies; }
+            if (game.result == "error") continue;
+            ++scored;
             bool won = game.result == (game.red == id ? "red" : "blue");
             wins += won; draws += game.result == "draw";
             families[game.family][n] += won ? 1 : game.result == "draw" ? 0.5 : 0;
-            if (n == 0) { ++endings[game.reason]; totalPlies += game.plies; }
         }
-        QString score = tournament->games.empty() ? "—" : QString::number((wins + draws * 0.5) * 100 / tournament->games.size(), 'f', 1) + '%';
-        lines.append(QString("%1: %2 (%3 W / %4 D / %5 L)").arg(id, score).arg(wins).arg(draws).arg(int(tournament->games.size()) - wins - draws));
+        QString score = scored == 0 ? "—" : QString::number((wins + draws * 0.5) * 100 / scored, 'f', 1) + '%';
+        lines.append(QString("%1: %2 (%3 W / %4 D / %5 L)").arg(id, score).arg(wins).arg(draws).arg(scored - wins - draws));
     }
+    const auto errors = std::count_if(tournament->games.begin(), tournament->games.end(), [](const Match &g) { return g.result == "error"; });
+    if (errors) lines.append(QString("%1 unscored engine errors; excluded from win rates.").arg(errors));
+    for (const auto &participant : participants)
+        if (participant.toObject()["policy"].toObject()["driver"].toString() == "msdos1990") {
+            lines.append("MS-DOS 1990 uses its original access to hidden enemy ranks.");
+            break;
+        }
     summary->setText(lines.join('\n')); summary->setToolTip(QString::fromUtf8(QJsonDocument(tournament->metadata).toJson()));
     summary->setMinimumHeight(summary->fontMetrics().lineSpacing() * lines.size() + 8);
     QStringList scores, reasons;
     for (auto it = families.cbegin(); it != families.cend(); ++it) {
-        int count = int(std::count_if(tournament->games.begin(), tournament->games.end(), [&](const Match &g) { return g.family == it.key(); }));
+        int count = int(std::count_if(tournament->games.begin(), tournament->games.end(), [&](const Match &g) { return g.family == it.key() && g.result != "error"; }));
         scores.append(QString("%1: %2% / %3%").arg(it.key()).arg(it.value()[0] * 100 / count, 0, 'f', 1).arg(it.value()[1] * 100 / count, 0, 'f', 1));
     }
     for (auto it = endings.cbegin(); it != endings.cend(); ++it) reasons.append(it.key() + ": " + QString::number(it.value()));
@@ -260,7 +271,7 @@ void Desk::populate() {
     timer->stop(); QSignalBlocker block(table); table->setRowCount(0);
     int mode = filter->currentIndex();
     for (const auto &g : tournament->games) {
-        if ((mode == 1 && g.result == "draw") || (mode == 2 && g.result != "draw") || (mode == 3 && g.reason != "ply limit")) continue;
+        if ((mode == 1 && g.result != "red" && g.result != "blue") || (mode == 2 && g.result != "draw") || (mode == 3 && g.reason != "ply limit") || (mode == 4 && g.result != "error")) continue;
         int row = table->rowCount(); table->insertRow(row);
         QStringList values{QString::number(g.id), g.family, g.red, g.blue, g.result, QString::number(g.plies)};
         for (int col = 0; col < 6; ++col) {

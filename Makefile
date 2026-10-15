@@ -541,3 +541,23 @@ autoplay: all
 clean:
 	$(MAKE) -C src clean
 	rm -rf build tools/__pycache__ assets/scripts/__pycache__
+
+# Original 1990 Stratego AI coprocessor: no DOS graphics, audio or UI delays.
+.PHONY: msdos1990 msdos1990-deps msdos1990-import test-msdos1990 benchmark-msdos1990
+MSDOS1990_SOURCE ?= /tmp/feldmarschall-stratego-research
+msdos1990-deps:
+	python3 -m pip install --no-cache-dir --upgrade --target build/msdos1990/deps unicorn==2.1.4
+
+msdos1990-import:
+	python3 tools/setup_msdos1990.py --source "$(MSDOS1990_SOURCE)"
+
+msdos1990:
+	python3 tools/ai_registry.py build msdos-1990-v2-normal
+
+test-msdos1990:
+	python3 tools/test_msdos1990.py
+
+# Supply MSDOS1990_BENCH_OUT for another run; existing evidence is preserved.
+MSDOS1990_BENCH_OUT ?= build/msdos1990-benchmark
+benchmark-msdos1990: desktop-build msdos1990
+	python3 tools/benchmark_msdos1990.py --out "$(MSDOS1990_BENCH_OUT)"

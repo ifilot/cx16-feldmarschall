@@ -184,3 +184,14 @@ The X16 mailbox carries difficulty at `$0476` and the rules mask at `$0477`.
 For example, `python3 tools/parity.py --difficulty hard --rules 63` checks
 matching native/X16 decisions with every variant enabled. Level selection is
 preserved by `new`, `think`, and AI history resets.
+
+## Original DOS reference extension
+
+Only policies explicitly registered with `driver=msdos1990` receive
+`opponent-setup <40 glyphs>` after their ordinary `setup`. This supplies the
+physical board expected by the original software, including its privileged
+rank access. Standard Feldmarschall policies never receive this extension.
+DOS public notifications are followed by `isready` / `readyok` so an original
+execution error is recorded at the event that triggers it. Such failures are
+unscored schema-2 tournament records, not draws or losses. Terminal Flag
+captures end the match before further AI notification is necessary.

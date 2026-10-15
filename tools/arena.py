@@ -32,19 +32,22 @@ def play(job):
     if len(options)>1:
         from variant_arena import play_variant
         return play_variant(job)
-    record_moves = bool(options and options[0])
+    configuration = options[0] if options and isinstance(options[0], dict) else {}
+    record_moves = configuration.get('record_moves', bool(options and options[0]))
     moves = []
     truth = Position()
     engines = []
+    side, plies, winner, reason, failed = RED, 0, None, '', False
     try:
         for army in (RED, BLUE):
             engine = Engine(commands[army], names[army])
             engine.send(f'seed {seed * 2 + army + 1}')
             engine.send('new ' + ('red', 'blue')[army])
             engine.send('setup ' + setups[army])
+            if configuration.get('original_dos_setup', [False, False])[army]:
+                engine.send('opponent-setup ' + setups[1-army])
             truth.place(army, setups[army])
             engines.append(engine)
-        side, plies, winner, reason = RED, 0, None, ''
         while True:
             legal = truth.moves(side)
             if not legal:
@@ -68,27 +71,32 @@ def play(job):
             src, dst = move
             if record_moves:
                 moves.append([src, dst])
+            plies += 1
             names_sq = f'{square_name(src)} {square_name(dst)}'
             if truth.cells[dst] is None:
                 truth.move(src, dst)
-                for engine in engines:
-                    engine.send(f'moved {names_sq}')
+                notification = f'moved {names_sq}'
             else:
                 attacker, defender = truth.cells[src][1], truth.cells[dst][1]
                 truth.fight(src, dst, attacker, defender)
-                for engine in engines:
-                    engine.send(f'battle {names_sq} {GLYPHS[attacker]} {GLYPHS[defender]}')
+                notification = f'battle {names_sq} {GLYPHS[attacker]} {GLYPHS[defender]}'
                 if defender == FLAG:
                     winner, reason = side, 'flag'
-                    plies += 1
                     break
+            for index, engine in enumerate(engines):
+                engine.send(notification)
+                if configuration.get('original_dos_setup', [False, False])[index]:
+                    engine.ask('isready', 'readyok')
             side = 1 - side
-            plies += 1
+    except (RuntimeError, BrokenPipeError) as error:
+        if len(engines) != 2:
+            raise
+        winner, reason, failed = None, 'engine error: ' + str(error), True
     finally:
         for engine in engines:
             engine.close()
     result = {'red': names[RED], 'blue': names[BLUE], 'winner': None if winner is None else names[winner],
-            'result': {None: 'draw', RED: 'red', BLUE: 'blue'}[winner], 'reason': reason,
+            'result': 'error' if failed else {None: 'draw', RED: 'red', BLUE: 'blue'}[winner], 'reason': reason,
             'plies': plies, 'seed': seed}
     if record_moves:
         result['moves'] = moves

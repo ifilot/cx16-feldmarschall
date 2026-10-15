@@ -9,6 +9,7 @@ import shlex
 import subprocess
 import tempfile
 import zipfile
+import shutil
 
 from feldmarschall import ROOT
 
@@ -45,6 +46,7 @@ def register(spec):
     files.update(p for p in (ROOT / 'tools').glob('*.py'))
     files.update(ROOT / p for p in spec['sources'])
     files.update(ROOT / p for p in spec.get('teacher_sources', []))
+    files.update(ROOT / p for p in spec.get('asset_files', []))
     for directory in spec.get('include_dirs', []):
         files.update((ROOT / directory).glob('*.h'))
     import io
@@ -95,6 +97,14 @@ def build_policy(identity, policy=None):
                 if not target.is_relative_to(source.resolve()):
                     raise ValueError('Unsafe source archive path')
             bundle.extractall(source)
+        if policy.get('driver') == 'msdos1990':
+            runtime = build_msdos1990(source, directory, executable, policy)
+            metadata = dict(policy=policy, recipe_sha256=recipe_sha,
+                            executable_sha256=digest(executable.read_bytes()),
+                            runtime_sha256={path: digest((directory / path).read_bytes()) for path in runtime},
+                            compiler='Original 16-bit machine code; Unicorn ' + policy['emulator_version'])
+            receipt.write_text(json.dumps(metadata, indent=2) + '\n')
+            return executable, metadata
         command = [*shlex.split(os.environ.get('HOSTCC', 'gcc')), '-O2', '-std=c99',
                    '-Wno-unknown-pragmas', '-Wno-format-overflow',
                    f'-DFELDMARSCHALL_AI_ID="{identity}"', '-Isrc/core']
@@ -132,6 +142,55 @@ def build_policy(identity, policy=None):
                                                        '--version'], text=True).splitlines()[0])
     receipt.write_text(json.dumps(metadata, indent=2) + '\n')
     return executable, metadata
+
+
+def build_msdos1990(source, directory, executable, policy):
+    """Freeze the headless interpreter and original images beside its launcher."""
+    import importlib.util
+    import sys
+    package = ROOT / 'build/msdos1990/deps/unicorn'
+    if not package.is_dir():
+        found = importlib.util.find_spec('unicorn')
+        if found and found.origin:
+            package = Path(found.origin).parent
+    if not package.is_dir():
+        raise ValueError('Unicorn dependency missing. Run: python3 -m pip install --target build/msdos1990/deps unicorn==' + policy['emulator_version'])
+    subprocess.run([sys.executable, '-c',
+                    f'import sys;sys.path.insert(0,{str(package.parent)!r});import unicorn;assert unicorn.__version__=={policy["emulator_version"]!r}'],check=True)
+    runtime = []
+    for name in ('msdos1990.py', 'feldmarschall.py'):
+        (directory / name).write_bytes((source / 'tools' / name).read_bytes())
+        runtime.append(name)
+    for path in sorted(package.rglob('*')):
+        if not path.is_file() or '__pycache__' in path.parts or 'include' in path.parts or path.suffix in ('.a','.pyc'):
+            continue
+        relative = Path('unicorn') / path.relative_to(package)
+        target = directory / relative
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(path,target)
+        runtime.append(relative.as_posix())
+    for name in policy['asset_files']:
+        relative = Path('original') / Path(name).name
+        target = directory / relative
+        target.parent.mkdir(parents=True,exist_ok=True)
+        target.write_bytes((source / name).read_bytes())
+        runtime.append(relative.as_posix())
+    # Preserve the emulator distribution's license without bundling unused
+    # static libraries or C headers into every portable tournament.
+    for path in sorted(package.parent.glob('unicorn-*.dist-info/licenses/**/*')):
+        if path.is_file():
+            relative=Path('emulator-licenses') / path.name
+            (directory / relative).parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(path,directory / relative)
+            runtime.append(relative.as_posix())
+    executable.write_text('#!/usr/bin/env python3\nimport os, pathlib, sys\n'
+        'p=pathlib.Path(__file__).resolve().parent\n'
+        f'if sys.argv[1:]==["--identity"]:\n    print({policy["id"]!r})\n    raise SystemExit\n'
+        'os.execv(sys.executable,[sys.executable,str(p/"msdos1990.py"),"--assets",str(p/"original"),'
+        f'"--identity",{policy["id"]!r},*{policy["driver_args"]!r},*sys.argv[1:]])\n')
+    executable.chmod(0o755)
+    runtime.append(executable.name)
+    return runtime
 
 
 def restore_tournament(path):

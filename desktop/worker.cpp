@@ -12,6 +12,7 @@
 #include <csignal>
 #include <iostream>
 #include <memory>
+#include <map>
 #include <omp.h>
 #include <stdexcept>
 
@@ -78,23 +79,40 @@ public:
     }
 };
 
-static QJsonObject play(const QJsonObject &job, int timeout) {
+using EnginePool = std::map<QString, std::unique_ptr<Engine>>;
+
+static QJsonObject play(const QJsonObject &job, int timeout, EnginePool *pool = nullptr) {
     auto names = job["names"].toArray(), commands = job["commands"].toArray(), setups = job["setups"].toArray();
     if (names.size() != 2 || commands.size() != 2 || setups.size() != 2 ||
             job["max_plies"].toInt() < 1 || job["seed"].toInt() < 1)
         throw std::runtime_error("Invalid match plan");
     Classic::Position truth;
-    std::array<std::unique_ptr<Engine>, 2> engines;
+    std::array<std::unique_ptr<Engine>, 2> freshEngines;
+    std::array<Engine *, 2> engines{};
+    int side = 0, winner = -1;
+    bool engineError = false;
+    QString reason;
+    QJsonArray trace;
     for (int army = 0; army < 2; ++army) {
         truth.place(army, setups[army].toString());
-        engines[army] = std::make_unique<Engine>(commands[army].toArray(), timeout);
+        if (pool) {
+            QString key = QString::fromUtf8(QJsonDocument(commands[army].toArray()).toJson(QJsonDocument::Compact));
+            if (commands[0] == commands[1]) key += QString("/army%1").arg(army);
+            auto &engine = (*pool)[key];
+            if (!engine) engine = std::make_unique<Engine>(commands[army].toArray(), timeout);
+            engines[army] = engine.get();
+        } else {
+            freshEngines[army] = std::make_unique<Engine>(commands[army].toArray(), timeout);
+            engines[army] = freshEngines[army].get();
+        }
         engines[army]->send("seed " + QString::number(job["seed"].toInt() * 2 + army + 1));
         engines[army]->send(army == 0 ? "new red" : "new blue");
         engines[army]->send("setup " + setups[army].toString());
+        const auto originalDos = job["original_dos_setup"].toArray();
+        if (originalDos.size() == 2 && originalDos[army].toBool())
+            engines[army]->send("opponent-setup " + setups[1-army].toString());
     }
-    int side = 0, winner = -1;
-    QString reason;
-    QJsonArray trace;
+    try {
     while (true) {
         auto legal = truth.moves(side);
         if (legal.empty()) {
@@ -110,13 +128,24 @@ static QJsonObject play(const QJsonObject &job, int timeout) {
         bool capturedFlag = truth.cells[move.second].rank == Classic::Flag;
         auto notification = truth.apply(move);
         trace.append(QJsonArray{move.first, move.second});
-        for (auto &engine : engines) engine->send(notification);
         if (capturedFlag) { winner = side; reason = "flag"; break; }
+        const auto originalDos = job["original_dos_setup"].toArray();
+        for (int army = 0; army < 2; ++army) {
+            if (originalDos.size() == 2 && originalDos[army].toBool())
+                engines[army]->ask(notification + "\nisready", "readyok");
+            else engines[army]->send(notification);
+        }
         side = 1 - side;
+    }
+    } catch (const std::exception &error) {
+        engineError = true; winner = -1;
+        reason = "engine error: " + QString::fromUtf8(error.what());
+        // An exited process must never be reused by the next match.
+        if (pool) pool->clear();
     }
     return {{"red", names[0]}, {"blue", names[1]}, {"seed", job["seed"]},
             {"winner", winner < 0 ? QJsonValue() : names[winner]},
-            {"result", winner < 0 ? "draw" : winner == 0 ? "red" : "blue"},
+            {"result", engineError ? "error" : winner < 0 ? "draw" : winner == 0 ? "red" : "blue"},
             {"reason", reason}, {"plies", trace.size()}, {"moves", trace}};
 }
 
@@ -172,6 +201,9 @@ int main(int argc, char **argv) {
         int actualThreads = 0;
         #pragma omp parallel num_threads(threads)
         {
+            // Processes belong to one worker thread. Every game sends seed,
+            // new, own setup and the explicitly allowed DOS physical setup.
+            EnginePool engines;
             #pragma omp single
             { actualThreads = omp_get_num_threads();
               emitJson({{"event", "backend"}, {"backend", "openmp"}, {"threads", actualThreads}, {"openmp", _OPENMP}}); }
@@ -180,7 +212,7 @@ int main(int argc, char **argv) {
                 if (failed.load() || interrupted) continue;
                 try {
                     const auto job = jobs[index].toObject();
-                    auto game = play(job, timeout);
+                    auto game = play(job, timeout, plan["reuse_processes"].toBool() ? &engines : nullptr);
                     #pragma omp critical(output)
                     { emitJson({{"event", "game"}, {"index", index}, {"completed", ++completed},
                                 {"total", jobs.size()}, {"game", game}}); }

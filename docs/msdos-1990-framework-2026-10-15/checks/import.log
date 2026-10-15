@@ -1,0 +1,36 @@
+Unicorn 2.1.4
+{
+  "schema": 1,
+  "game": "Stratego, MS-DOS 1990",
+  "source_repository": "https://github.com/ifilot/stratego-decompilation",
+  "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+  "original_sha256": {
+    "unpacked/STRATEGO.EXE": "b0812df36607c46a7b78baecebcf5cf85b6e18a4cfb0fb44a61d589102ae7763",
+    "extracted/resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+    "extracted/overlays/ovl5.cod": "373cbdcade64489c1e53d618eea0d6f411a0b51e70711098592fcb19ce080510",
+    "extracted/overlays/ovl5.rel": "2022c37dd471ec7e7ce1c5d38fec3919f11972365ae0272aef18655ad1192362"
+  },
+  "images": {
+    "mz-header.bin": {
+      "size": 1024,
+      "sha256": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99"
+    },
+    "resident-image.bin": {
+      "size": 158274,
+      "sha256": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f"
+    },
+    "ovl5.cod": {
+      "size": 38191,
+      "sha256": "373cbdcade64489c1e53d618eea0d6f411a0b51e70711098592fcb19ce080510"
+    },
+    "ovl5.rel": {
+      "size": 110,
+      "sha256": "2022c37dd471ec7e7ce1c5d38fec3919f11972365ae0272aef18655ad1192362"
+    }
+  },
+  "scope": "Unmodified resident image and overlay 5 plus original MZ relocation header. Graphics, audio, UI and DOS startup are omitted. Host supplies a Classic referee and call boundaries; this is original AI execution, not complete DOS operating-system emulation.",
+  "emulator": {
+    "package": "unicorn",
+    "version": "2.1.4"
+  }
+}

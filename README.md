@@ -618,6 +618,11 @@ checks teaching stability and two desktop ranking students. Both fail offline
 learning gates; their sources and diagnostics are retained without new strength
 tournaments or a production change.
 
+The [MS-DOS 1990 framework](docs/msdos-1990-framework-2026-10-15/README.md)
+runs the original Stratego AI headlessly in the same Qt6/OpenMP tournaments.
+Choose `msdos-1990-v2-normal` for the fast reference; its original hidden-rank
+knowledge and any unscored engine errors are visible in the desk.
+
 ## Building
 
 Requires **cc65**, GNU make 4.3+, and **Python 3** with **Pillow** and **NumPy**.

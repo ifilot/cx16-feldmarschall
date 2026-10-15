@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 import uuid
 
 from ai_registry import ROOT, build_policy, catalog, digest
@@ -23,11 +24,12 @@ FAMILIES = ('fortified', 'uniform', 'unguarded', 'forward', 'decoy', 'presets', 
 DEFAULT_WORKER = ROOT / 'build/desktop/feldmarschall-tournament-worker'
 
 
-def openmp_results(queue, worker, working, threads, argv_commands):
+def openmp_results(queue, worker, working, threads, argv_commands, original_dos=None, reuse_processes=False):
     """Stream independently completed C++/OpenMP matches; storage stays single-writer."""
     plan = working / 'openmp-plan.json'
-    plan.write_text(json.dumps(dict(threads=threads, timeout_ms=60000, jobs=[
+    plan.write_text(json.dumps(dict(threads=threads, timeout_ms=60000, reuse_processes=reuse_processes, jobs=[
         dict(names=names, commands=[argv_commands[n] for n in names], setups=setups,
+             original_dos_setup=[bool(original_dos and original_dos.get(n)) for n in names],
              seed=seed, max_plies=max_plies)
         for names, commands, setups, seed, max_plies, record in queue])))
     errors = []
@@ -72,7 +74,7 @@ def load_referee(directory):
 
 
 def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_plies=1000,
-        backend='python', worker=DEFAULT_WORKER):
+        backend='python', worker=DEFAULT_WORKER, reuse_processes=None):
     if first == second:
         raise ValueError('Choose two different AI versions')
     if rounds < 1 or jobs < 1 or max_plies < 1 or not families or any(f not in FAMILIES for f in families):
@@ -92,24 +94,30 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
             raise ValueError('Native worker build integrity mismatch; rebuild the desktop targets')
     built = [build_policy(identity) for identity in (first, second)]
     participants = [receipt for _, receipt in built]
+    if reuse_processes is None:
+        reuse_processes = backend == 'openmp' and any(p['policy'].get('driver') == 'msdos1990' for p in participants)
+    if backend != 'openmp' and reuse_processes:
+        raise ValueError('Process reuse requires the OpenMP backend')
     plan = dict(created_utc=datetime.now(timezone.utc).isoformat(), participants=participants,
                 seed=seed, rounds=rounds, families=list(families), max_plies=max_plies,
                 planned_games=2 * rounds * len(families),
-                backend=backend, requested_workers=jobs,
+                backend=backend, requested_workers=jobs, reuse_engine_processes=reuse_processes,
                 comparison='move policies with common referee-generated deployments; swapped sides',
                 score='win=1, draw=0.5, loss=0; paired games share deployments and seed')
     with Tournament(out, create=True, metadata=plan) as tournament, tempfile.TemporaryDirectory(prefix='fmtour-') as temp:
         working = Path(temp)
-        commands, argv_commands = {}, {}
+        commands, argv_commands, original_dos = {}, {}, {}
         for (executable, receipt), identity in zip(built, (first, second)):
             bundle = working / identity
             bundle.mkdir()
             for name in receipt['runtime_sha256']:
+                (bundle / name).parent.mkdir(parents=True,exist_ok=True)
                 shutil.copy2(executable.parent / name, bundle / name)
                 tournament.artifact(identity + '/' + name, (bundle / name).read_bytes())
             frozen = bundle / executable.name
             argv_commands[identity] = [str(frozen), '--difficulty', receipt['policy']['difficulty']]
             commands[identity] = shlex.join(argv_commands[identity])
+            original_dos[identity] = receipt['policy'].get('driver') == 'msdos1990'
             tournament.artifact(receipt['policy']['archive'], (ROOT / receipt['policy']['archive']).read_bytes())
         referee = working / 'referee'
         referee.mkdir()
@@ -140,12 +148,14 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
                 move_seed = rng.randrange(1, 60000)
                 pair_id = len(descriptions) // 2 + 1
                 for names in ((first, second), (second, first)):
-                    queue.append((names, tuple(commands[n] for n in names), setups, move_seed, max_plies, True))
+                    recording = dict(record_moves=True,original_dos_setup=[original_dos[n] for n in names]) if any(original_dos.values()) else True
+                    queue.append((names, tuple(commands[n] for n in names), setups, move_seed, max_plies, recording))
                     descriptions.append((pair_id, family, setups))
+        execution_started = time.perf_counter()
         try:
             if backend == 'openmp':
                 completed, seen = 0, set()
-                for index, game in openmp_results(queue, frozen_worker, working, jobs, argv_commands):
+                for index, game in openmp_results(queue, frozen_worker, working, jobs, argv_commands, original_dos, reuse_processes):
                     if index is None:
                         tournament.set_metadata(dict(parallel_execution=game))
                         continue
@@ -165,7 +175,8 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
                             raise ValueError(f'AI produced an {game["reason"]}')
                         tournament.add_game(game, pair_id, family, setups)
                         print(json.dumps(dict(event='progress', completed=completed, total=len(queue))), flush=True)
-            tournament.set_metadata(dict(status='complete', finished_utc=datetime.now(timezone.utc).isoformat()))
+            tournament.set_metadata(dict(status='complete', finished_utc=datetime.now(timezone.utc).isoformat(),
+                                         execution_seconds=time.perf_counter()-execution_started))
         except BaseException as error:
             tournament.set_metadata(dict(status='interrupted' if isinstance(error, KeyboardInterrupt) else 'failed', error=str(error)))
             raise

@@ -21,6 +21,8 @@ def plan():
 
 
 def score(game, identity):
+    if game['result'] == 'error':
+        raise ValueError('Unscored engine error: this cohort cannot support a strength gate')
     return .5 if game['result'] == 'draw' else float(game['result'] == ('red' if game['red'] == identity else 'blue'))
 
 

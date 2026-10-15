@@ -1,0 +1,14 @@
+cmake -S desktop -B build/desktop -DCMAKE_BUILD_TYPE=Release
+-- Configuring done (2.7s)
+-- Generating done (0.7s)
+-- Build files have been written to: /mnt/d/PROGRAMMING/CX16/cx16-feldmarschall/build/desktop
+cmake --build build/desktop --parallel 4
+gmake[1]: Entering directory '/mnt/d/PROGRAMMING/CX16/cx16-feldmarschall/build/desktop'
+[ 10%] Automatic RCC for art/assets.qrc
+[ 20%] Built target feldmarschall-desk_arcc_assets
+[ 40%] Built target classic
+[ 60%] Built target feldmarschall-tournament-worker
+[ 70%] Building CXX object CMakeFiles/feldmarschall-desk.dir/desk.cpp.o
+[ 80%] Linking CXX executable feldmarschall-desk
+[100%] Built target feldmarschall-desk
+gmake[1]: Leaving directory '/mnt/d/PROGRAMMING/CX16/cx16-feldmarschall/build/desktop'

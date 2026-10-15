@@ -105,7 +105,9 @@ selects a subset; `--max-plies` defaults to 1,000 individual moves.
 
 The runner compares move policies using common deployments. It does not measure
 the production deployment mixtures. All games use Classic rules; variant options
-are not exposed. Both engine processes receive only legitimate observations.
+are not exposed. Feldmarschall policies receive only legitimate observations. The explicitly
+labelled [MS-DOS 1990 reference](msdos-1990-framework-2026-10-15/README.md)
+retains its original physical-rank access and alone receives both initial armies.
 The referee is frozen for each run, and every review reconstructs the match
 from its starting armies and moves.
 
@@ -118,7 +120,9 @@ Build the worker with `make desktop-build` before selecting OpenMP.
 
 OpenMP dynamically schedules complete games. Each game has its own board,
 two-square histories and two separately seeded AI processes. The actors' legacy
-static variables are therefore isolated by process. We do not attempt concurrent
+static variables are therefore isolated by process. For DOS runs, a worker can
+reuse its processes after explicitly resetting the seed, army and setup; each
+game gets a fresh emulated address space. We do not attempt concurrent
 turns within a match. Python writes completed games through one database
 connection; game IDs are assigned by the precomputed schedule, so completion
 order does not change match numbering or pairings.
@@ -149,7 +153,9 @@ The GUI does not present an Elo rating or infer human strength.
 
 ## Compact, portable files
 
-`.fmtour` schema 1 is a single SQLite database. Match metadata is indexed for
+New `.fmtour` schema 2 files use a single SQLite database; schema 1 remains readable.
+Schema 2 adds explicitly unscored engine-error traces. These are reviewable and
+excluded from wins, draws, losses and win-rate denominators. Match metadata is indexed for
 browsing. Each move occupies two bytes before zlib compression: its source and
 destination squares. We store the two initial 40-piece armies once per match,
 not a complete board image or JSON object for every move. A 1,000-ply game thus
@@ -162,7 +168,8 @@ is read-only and needs neither the original executables nor original build
 directory. Native executable portability is platform dependent; preserved
 sources allow rebuilding on another host.
 
-Each completed match commits independently. A normal failure records `failed`;
+Each completed match commits independently. An engine failure during a match records an unscored error and the legal trace
+prefix, then the batch continues. A startup or infrastructure failure records `failed`;
 a caught keyboard interruption records `interrupted`. Abrupt process termination
 may leave `running` metadata, but committed matches remain reviewable. Automatic
 resume is not implemented. `verify` checks embedded hashes, source/runtime

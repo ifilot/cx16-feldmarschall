@@ -1,4 +1,8 @@
-"""Version 1 .fmtour files: indexed SQLite, compressed two-byte move records."""
+"""Version 2 .fmtour files: compressed moves and explicitly unscored engine errors.
+
+Version 1 remains readable. Version 2 adds result='error'; these legal trace
+prefixes are never counted as wins, losses or draws.
+"""
 from collections import Counter
 import json
 from pathlib import Path
@@ -7,7 +11,7 @@ import zlib
 
 from feldmarschall import BLUE, FLAG, GLYPHS, RED, Position, square_name, valid_setup
 
-SCHEMA = 1
+SCHEMA = 2
 
 
 class Tournament:
@@ -22,7 +26,7 @@ class Tournament:
         self.db.row_factory = sqlite3.Row
         if create:
             self.db.executescript('''
-                PRAGMA user_version=1;
+                PRAGMA user_version=2;
                 CREATE TABLE metadata (key TEXT PRIMARY KEY, value TEXT NOT NULL);
                 CREATE TABLE artifacts (sha256 TEXT PRIMARY KEY, name TEXT, data BLOB NOT NULL);
                 CREATE TABLE games (
@@ -35,7 +39,7 @@ class Tournament:
                 CREATE INDEX games_result ON games(result, reason);
             ''')
             self.set_metadata(dict(metadata or {}, schema=SCHEMA, rules='classic', status='running'))
-        elif self.db.execute('PRAGMA user_version').fetchone()[0] != SCHEMA:
+        elif self.db.execute('PRAGMA user_version').fetchone()[0] not in (1, SCHEMA):
             self.close()
             raise ValueError('Unsupported tournament file version')
 
@@ -82,24 +86,26 @@ class Tournament:
 
     def summary(self):
         games = self.games()
+        scored = [g for g in games if g['result'] != 'error']
         policies = self.metadata()['participants']
         standings = {}
         for policy in policies:
             identity = policy['policy']['id']
-            wins = sum(g['result'] == ('red' if g['red'] == identity else 'blue') for g in games)
-            draws = sum(g['result'] == 'draw' for g in games)
-            losses = len(games) - wins - draws
+            wins = sum(g['result'] == ('red' if g['red'] == identity else 'blue') for g in scored)
+            draws = sum(g['result'] == 'draw' for g in scored)
+            losses = len(scored) - wins - draws
             standings[identity] = dict(wins=wins, draws=draws, losses=losses,
-                                       score=(wins + draws / 2) / len(games) if games else None)
+                                       score=(wins + draws / 2) / len(scored) if scored else None)
         families = {}
-        for family in sorted({g['family'] for g in games}):
-            subset = [g for g in games if g['family'] == family]
+        for family in sorted({g['family'] for g in scored}):
+            subset = [g for g in scored if g['family'] == family]
             families[family] = {}
             for identity in standings:
                 points = [0.5 if g['result'] == 'draw' else
                           float(g['result'] == ('red' if g['red'] == identity else 'blue')) for g in subset]
                 families[family][identity] = sum(points) / len(points)
-        return dict(status=self.metadata()['status'], games=len(games), standings=standings,
+        return dict(status=self.metadata()['status'], games=len(games), scored_games=len(scored),
+                    errors=len(games)-len(scored), standings=standings,
                     average_plies=sum(g['plies'] for g in games) / len(games) if games else 0,
                     families=families, endings=dict(Counter(g['reason'] for g in games)))
 
@@ -137,6 +143,10 @@ def replay(game):
         events.append(label)
         states.append([cell.copy() if cell else None for cell in position.cells])
     side = len(game['moves']) % 2
+    if game['result'] == 'error':
+        if not game['reason'].startswith('engine error: ') or flag_taken:
+            raise ValueError('Invalid unscored engine-error record')
+        return states, events
     if flag_taken:
         expected = 'red' if (len(game['moves']) - 1) % 2 == RED else 'blue'
         if game['reason'] != 'flag' or game['result'] != expected:

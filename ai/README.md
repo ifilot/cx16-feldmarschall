@@ -6,7 +6,7 @@ source archive under `sources/`. The archives contain actual C sources, headers,
 fitted models and Python adapters. Rebuilding does not use the current working
 tree's evaluator or an ignored historical build directory.
 
-The catalog has 49 policies: historical milestones, current guarded
+The catalog has 51 policies: historical milestones, current guarded
 Normal, retained experimental alternatives and desktop reference teachers. Rejected
 experiments are clearly marked; being selectable does not imply acceptance.
 Existing experimental run names and results remain intact in
@@ -34,6 +34,8 @@ The main progression is:
 | Reply-Aware Teacher v1 / `teacher-replies-v1-normal` | Desktop experiment averaging up to three plausible masked-policy replies; rejected at its development gate. |
 | Ranking Student v1 / `ranking-student-v1-normal` | Rejected offline desktop residual ranker; shortlisted training left other legal actions unconstrained. |
 | Ranking Student v2 / `ranking-student-v2-normal` | Rejected offline all-action coverage repair; same capacity and features, no demonstrated learning gain. |
+| MS-DOS Stratego 1990 v1 / `msdos-1990-v1-normal` | Original 16-bit Colonel AI under instruction-counted headless emulation; original hidden-rank access. |
+| MS-DOS Stratego 1990 v2 / `msdos-1990-v2-normal` | Same original AI with faster native-block execution and a watchdog; recommended DOS reference. |
 
 The [15 October cycle](../docs/ai-cycle-2026-10-15/README.md) records development,
 independent validation and acceptance decisions. `teacher-cold-control-v1-normal`
@@ -53,6 +55,10 @@ gain over that teacher; no student fit followed.
 The [teacher-transfer investigation](../docs/ai-transfer-2026-10-15/README.md)
 retains two native desktop ranking models and their offline diagnostics. Neither
 passed its learning gate, so no new strength tournament or compression followed.
+
+The [MS-DOS 1990 framework](../docs/msdos-1990-framework-2026-10-15/README.md)
+adds a fast original-code opponent. Its original privileged knowledge is explicit;
+reference failures remain unscored, rather than being counted as wins or losses.
 
 These names identify **move policies**. Tournaments deliberately give both
 participants common referee-generated starting armies to compare their play.

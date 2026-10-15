@@ -1,0 +1,417 @@
+{
+  "schema": 1,
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "processor": "",
+  "seed": 1911001,
+  "rounds": 1,
+  "max_plies": 1000,
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "measurements": {
+    "counted": {
+      "policy": {
+        "id": "msdos-1990-v1-normal",
+        "name": "MS-DOS Stratego 1990 v1 / Colonel",
+        "description": "Original 16-bit AI, Colonel difficulty3, headless Unicorn execution. Original privileged physical-rank knowledge retained; fixed Classic referee and Scout move/attack enabled. Original setup UI and automatic no-move mode switching omitted.",
+        "sources": [],
+        "defines": [],
+        "difficulty": "normal",
+        "status": "external-reference",
+        "include_dirs": [],
+        "driver": "msdos1990",
+        "driver_args": [
+          "--level",
+          "3"
+        ],
+        "emulator_version": "2.1.4",
+        "asset_files": [
+          "ai/msdos1990/manifest.json",
+          "ai/msdos1990/mz-header.bin",
+          "ai/msdos1990/ovl5.cod",
+          "ai/msdos1990/ovl5.rel",
+          "ai/msdos1990/resident-image.bin"
+        ],
+        "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+        "requires_opponent_setup": true,
+        "archive": "ai/sources/d26f4f20e23e9f14482fc097a1b7d73cc875e59ce9f0d94ebb530f26bbe27d9b.zip",
+        "source_sha256": "d26f4f20e23e9f14482fc097a1b7d73cc875e59ce9f0d94ebb530f26bbe27d9b"
+      },
+      "backend": "openmp",
+      "workers": 1,
+      "seconds": 37.480987033999554,
+      "games": 14,
+      "plies": 2015,
+      "games_per_minute": 22.41136283945841,
+      "execution_seconds": 22.322788446999766,
+      "execution_games_per_minute": 37.629707506944456,
+      "execution_plies_per_second": 90.26650074582508,
+      "plies_per_second": 53.76059062084368,
+      "summary": {
+        "status": "complete",
+        "games": 14,
+        "standings": {
+          "msdos-1990-v1-normal": {
+            "wins": 10,
+            "draws": 0,
+            "losses": 4,
+            "score": 0.7142857142857143
+          },
+          "student-guard-v1-normal": {
+            "wins": 4,
+            "draws": 0,
+            "losses": 10,
+            "score": 0.2857142857142857
+          }
+        },
+        "average_plies": 143.92857142857142,
+        "families": {
+          "broad-mixed": {
+            "msdos-1990-v1-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "decoy": {
+            "msdos-1990-v1-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "fortified": {
+            "msdos-1990-v1-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "forward": {
+            "msdos-1990-v1-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "presets": {
+            "msdos-1990-v1-normal": 0.5,
+            "student-guard-v1-normal": 0.5
+          },
+          "unguarded": {
+            "msdos-1990-v1-normal": 0.0,
+            "student-guard-v1-normal": 1.0
+          },
+          "uniform": {
+            "msdos-1990-v1-normal": 0.5,
+            "student-guard-v1-normal": 0.5
+          }
+        },
+        "endings": {
+          "flag": 14
+        }
+      },
+      "parallel_execution": {
+        "backend": "openmp",
+        "event": "backend",
+        "openmp": 201511,
+        "threads": 1
+      },
+      "fmtour_bytes": 8765440,
+      "sha256": "f1e5645ee570c183d96ab3def94f5a1ff555891bcc44a2f0a808392d232e1f6c"
+    },
+    "fast-serial": {
+      "policy": {
+        "id": "msdos-1990-v2-normal",
+        "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+        "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+        "sources": [],
+        "defines": [],
+        "difficulty": "normal",
+        "status": "external-reference",
+        "include_dirs": [],
+        "driver": "msdos1990",
+        "driver_args": [
+          "--level",
+          "3"
+        ],
+        "emulator_version": "2.1.4",
+        "asset_files": [
+          "ai/msdos1990/manifest.json",
+          "ai/msdos1990/mz-header.bin",
+          "ai/msdos1990/ovl5.cod",
+          "ai/msdos1990/ovl5.rel",
+          "ai/msdos1990/resident-image.bin"
+        ],
+        "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+        "requires_opponent_setup": true,
+        "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+        "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+      },
+      "backend": "openmp",
+      "workers": 1,
+      "seconds": 17.53887865700017,
+      "games": 14,
+      "plies": 2015,
+      "games_per_minute": 47.89359778509767,
+      "execution_seconds": 6.2412191280018305,
+      "execution_games_per_minute": 134.58908953080322,
+      "execution_plies_per_second": 322.85358976734346,
+      "plies_per_second": 114.88761849639499,
+      "summary": {
+        "status": "complete",
+        "games": 14,
+        "standings": {
+          "msdos-1990-v2-normal": {
+            "wins": 10,
+            "draws": 0,
+            "losses": 4,
+            "score": 0.7142857142857143
+          },
+          "student-guard-v1-normal": {
+            "wins": 4,
+            "draws": 0,
+            "losses": 10,
+            "score": 0.2857142857142857
+          }
+        },
+        "average_plies": 143.92857142857142,
+        "families": {
+          "broad-mixed": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "decoy": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "fortified": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "forward": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "presets": {
+            "msdos-1990-v2-normal": 0.5,
+            "student-guard-v1-normal": 0.5
+          },
+          "unguarded": {
+            "msdos-1990-v2-normal": 0.0,
+            "student-guard-v1-normal": 1.0
+          },
+          "uniform": {
+            "msdos-1990-v2-normal": 0.5,
+            "student-guard-v1-normal": 0.5
+          }
+        },
+        "endings": {
+          "flag": 14
+        }
+      },
+      "parallel_execution": {
+        "backend": "openmp",
+        "event": "backend",
+        "openmp": 201511,
+        "threads": 1
+      },
+      "fmtour_bytes": 8769536,
+      "sha256": "2519afd3f83066247cf68db5dc4f05122534990241277ffe820bdd9d91b604c8"
+    },
+    "fast-parallel": {
+      "policy": {
+        "id": "msdos-1990-v2-normal",
+        "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+        "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+        "sources": [],
+        "defines": [],
+        "difficulty": "normal",
+        "status": "external-reference",
+        "include_dirs": [],
+        "driver": "msdos1990",
+        "driver_args": [
+          "--level",
+          "3"
+        ],
+        "emulator_version": "2.1.4",
+        "asset_files": [
+          "ai/msdos1990/manifest.json",
+          "ai/msdos1990/mz-header.bin",
+          "ai/msdos1990/ovl5.cod",
+          "ai/msdos1990/ovl5.rel",
+          "ai/msdos1990/resident-image.bin"
+        ],
+        "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+        "requires_opponent_setup": true,
+        "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+        "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+      },
+      "backend": "openmp",
+      "workers": 4,
+      "seconds": 20.071514079001645,
+      "games": 14,
+      "plies": 2015,
+      "games_per_minute": 41.8503555184603,
+      "execution_seconds": 7.9460763720016985,
+      "execution_games_per_minute": 105.71255053119951,
+      "execution_plies_per_second": 253.58427300043692,
+      "plies_per_second": 100.39103139249701,
+      "summary": {
+        "status": "complete",
+        "games": 14,
+        "standings": {
+          "msdos-1990-v2-normal": {
+            "wins": 10,
+            "draws": 0,
+            "losses": 4,
+            "score": 0.7142857142857143
+          },
+          "student-guard-v1-normal": {
+            "wins": 4,
+            "draws": 0,
+            "losses": 10,
+            "score": 0.2857142857142857
+          }
+        },
+        "average_plies": 143.92857142857142,
+        "families": {
+          "broad-mixed": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "decoy": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "fortified": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "forward": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "presets": {
+            "msdos-1990-v2-normal": 0.5,
+            "student-guard-v1-normal": 0.5
+          },
+          "unguarded": {
+            "msdos-1990-v2-normal": 0.0,
+            "student-guard-v1-normal": 1.0
+          },
+          "uniform": {
+            "msdos-1990-v2-normal": 0.5,
+            "student-guard-v1-normal": 0.5
+          }
+        },
+        "endings": {
+          "flag": 14
+        }
+      },
+      "parallel_execution": {
+        "backend": "openmp",
+        "event": "backend",
+        "openmp": 201511,
+        "threads": 4
+      },
+      "fmtour_bytes": 8769536,
+      "sha256": "1a15f3ac6dc4c1c33e14fcb5767e53e125b26a24399735213a68911cab75f031"
+    },
+    "fast-python": {
+      "policy": {
+        "id": "msdos-1990-v2-normal",
+        "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+        "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+        "sources": [],
+        "defines": [],
+        "difficulty": "normal",
+        "status": "external-reference",
+        "include_dirs": [],
+        "driver": "msdos1990",
+        "driver_args": [
+          "--level",
+          "3"
+        ],
+        "emulator_version": "2.1.4",
+        "asset_files": [
+          "ai/msdos1990/manifest.json",
+          "ai/msdos1990/mz-header.bin",
+          "ai/msdos1990/ovl5.cod",
+          "ai/msdos1990/ovl5.rel",
+          "ai/msdos1990/resident-image.bin"
+        ],
+        "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+        "requires_opponent_setup": true,
+        "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+        "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+      },
+      "backend": "python",
+      "workers": 4,
+      "seconds": 41.37672679900061,
+      "games": 14,
+      "plies": 2015,
+      "games_per_minute": 20.301267523662332,
+      "execution_seconds": 2.5785499819976394,
+      "execution_games_per_minute": 325.76448231158196,
+      "execution_plies_per_second": 781.4469426879019,
+      "plies_per_second": 48.69887388116619,
+      "summary": {
+        "status": "complete",
+        "games": 14,
+        "standings": {
+          "msdos-1990-v2-normal": {
+            "wins": 10,
+            "draws": 0,
+            "losses": 4,
+            "score": 0.7142857142857143
+          },
+          "student-guard-v1-normal": {
+            "wins": 4,
+            "draws": 0,
+            "losses": 10,
+            "score": 0.2857142857142857
+          }
+        },
+        "average_plies": 143.92857142857142,
+        "families": {
+          "broad-mixed": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "decoy": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "fortified": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "forward": {
+            "msdos-1990-v2-normal": 1.0,
+            "student-guard-v1-normal": 0.0
+          },
+          "presets": {
+            "msdos-1990-v2-normal": 0.5,
+            "student-guard-v1-normal": 0.5
+          },
+          "unguarded": {
+            "msdos-1990-v2-normal": 0.0,
+            "student-guard-v1-normal": 1.0
+          },
+          "uniform": {
+            "msdos-1990-v2-normal": 0.5,
+            "student-guard-v1-normal": 0.5
+          }
+        },
+        "endings": {
+          "flag": 14
+        }
+      },
+      "parallel_execution": null,
+      "fmtour_bytes": 8679424,
+      "sha256": "af8ff677a9f2b72fe1107370a42c831028acd231a4159637fb083d4093acc018"
+    }
+  },
+  "counted_to_fast_serial_speedup": 2.1370229971367087,
+  "openmp_speedup": 0.873819413322134,
+  "all_complete_traces_identical": true,
+  "verified_games": 56,
+  "verified_plies": 8060,
+  "timing_scope": "End-to-end including runtime/source hashes, compression and SQLite writes. Same legal complete paired games, side-swapped on all seven families. Warm host/build cache. No DOSBox/UI timing comparison or hardware-independent performance guarantee.",
+  "fidelity_scope": "Fast and instruction-counted execution of identical original AI images. Exact match parity does not establish equivalence to every complete original DOS UI/game-loop path."
+}
