@@ -1,0 +1,198 @@
+{
+  "cycle": 7,
+  "hypotheses": [
+    "Replace maximum of individual hidden-contact mean risks by expected lethal opportunity across contacts, respecting unique ranks and movement constraints.",
+    "Test the same cheap probability model in native play and the Context Teacher continuations."
+  ],
+  "setup_mode": "referee",
+  "standings": {
+    "student-guard-v1-normal": {
+      "wins": 123,
+      "draws": 21,
+      "losses": 271,
+      "score": 0.3216867469879518,
+      "errors": 5
+    },
+    "student-exact-contact-risk-v1-normal": {
+      "wins": 142,
+      "draws": 12,
+      "losses": 261,
+      "score": 0.3566265060240964,
+      "errors": 5
+    },
+    "teacher-context-v1-normal": {
+      "wins": 116,
+      "draws": 7,
+      "losses": 288,
+      "score": 0.29075425790754256,
+      "errors": 9
+    },
+    "teacher-exact-contact-risk-v1-normal": {
+      "wins": 123,
+      "draws": 5,
+      "losses": 284,
+      "score": 0.30461165048543687,
+      "errors": 8
+    }
+  },
+  "execution_seconds": {
+    "student-guard-v1-normal": 126.89933020299941,
+    "student-exact-contact-risk-v1-normal": 111.75660556199728,
+    "teacher-context-v1-normal": 254.6801727689999,
+    "teacher-exact-contact-risk-v1-normal": 246.55392522299735
+  },
+  "comparisons": {
+    "student-exact-contact-risk-v1-normal minus student-guard-v1-normal": {
+      "complete_pairs": 204,
+      "pairs_by_family": {
+        "fortified": 28,
+        "uniform": 30,
+        "unguarded": 30,
+        "forward": 30,
+        "decoy": 30,
+        "presets": 26,
+        "broad-mixed": 30
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.03308823529411765,
+          "interval_95": [
+            -0.013480392156862746,
+            0.07965686274509803
+          ],
+          "interval_98_3333": [
+            -0.023284313725490197,
+            0.09068627450980392
+          ]
+        }
+      }
+    },
+    "teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 196,
+      "pairs_by_family": {
+        "fortified": 25,
+        "uniform": 30,
+        "unguarded": 30,
+        "forward": 30,
+        "decoy": 30,
+        "presets": 22,
+        "broad-mixed": 29
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.01403061224489796,
+          "interval_95": [
+            -0.025510204081632654,
+            0.0548469387755102
+          ],
+          "interval_98_3333": [
+            -0.03443877551020408,
+            0.06377551020408163
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 1680,
+  "errors": 27,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 1680,
+  "error_sensitivity": {
+    "student-exact-contact-risk-v1-normal minus student-guard-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 48,
+        "negative_pairs": 35,
+        "zero_pairs": 121,
+        "non_tied_pairs": 83,
+        "exact_two_sided_binomial_sign_p": 0.1874598679661928,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 210,
+      "error_games_a": 5,
+      "error_games_b": 5,
+      "pairs_with_any_error": 6,
+      "arms": {
+        "a": {
+          "attempted_games": 420,
+          "error_games": 5,
+          "scored_games": 415,
+          "wins": 142,
+          "draws": 12,
+          "losses": 261,
+          "official_scored_score": 0.3566265060240964,
+          "all_attempt_score_bounds": [
+            0.3523809523809524,
+            0.36428571428571427
+          ]
+        },
+        "b": {
+          "attempted_games": 420,
+          "error_games": 5,
+          "scored_games": 415,
+          "wins": 123,
+          "draws": 21,
+          "losses": 271,
+          "official_scored_score": 0.3216867469879518,
+          "all_attempt_score_bounds": [
+            0.31785714285714284,
+            0.32976190476190476
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        0.02261904761904762,
+        0.04642857142857143
+      ],
+      "complete_case_pairs": 204,
+      "complete_case_paired_effect": 0.03308823529411765
+    },
+    "teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 36,
+        "negative_pairs": 30,
+        "zero_pairs": 130,
+        "non_tied_pairs": 66,
+        "exact_two_sided_binomial_sign_p": 0.5385827752459464,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 210,
+      "error_games_a": 8,
+      "error_games_b": 9,
+      "pairs_with_any_error": 14,
+      "arms": {
+        "a": {
+          "attempted_games": 420,
+          "error_games": 8,
+          "scored_games": 412,
+          "wins": 123,
+          "draws": 5,
+          "losses": 284,
+          "official_scored_score": 0.30461165048543687,
+          "all_attempt_score_bounds": [
+            0.2988095238095238,
+            0.31785714285714284
+          ]
+        },
+        "b": {
+          "attempted_games": 420,
+          "error_games": 9,
+          "scored_games": 411,
+          "wins": 116,
+          "draws": 7,
+          "losses": 288,
+          "official_scored_score": 0.29075425790754256,
+          "all_attempt_score_bounds": [
+            0.2845238095238095,
+            0.305952380952381
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.007142857142857143,
+        0.03333333333333333
+      ],
+      "complete_case_pairs": 196,
+      "complete_case_paired_effect": 0.01403061224489796
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "cycle": 7,
+  "baseline": "teacher-context-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-guard-v1-normal",
+    "student-exact-contact-risk-v1-normal",
+    "teacher-context-v1-normal",
+    "teacher-exact-contact-risk-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-exact-contact-risk-v1-normal",
+      "name": "student-exact-contact-risk-v1-normal",
+      "description": "Count-consistent probability that any hidden contact can beat the actor, using exact moved/unmoved eligibility and Scout rays.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_EXACT_CONTACT_RISK"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged student-guard-v1-normal except Classic AI_EXACT_CONTACT_RISK fixed-point inclusion-exclusion.",
+      "information_model": "Own setup, public rank counts, disclosure and movement bits only. Uniform compatible-rank prior.",
+      "asset_files": [
+        "tests/ai_exact_contact_risk_test.c",
+        "tests/ai_contact_risk_cost.c"
+      ]
+    },
+    {
+      "id": "teacher-exact-contact-risk-v1-normal",
+      "name": "teacher-exact-contact-risk-v1-normal",
+      "description": "Count-consistent probability that any hidden contact can beat the actor, using exact moved/unmoved eligibility and Scout rays.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING",
+        "AI_FEATURE_TRACE",
+        "AI_EXACT_CONTACT_RISK"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "driver": "teacher",
+      "teacher_sources": [
+        "src/native/teacher_rollout.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "teacher_defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_ROLLOUT_CONTEXT",
+        "AI_EXACT_CONTACT_RISK"
+      ],
+      "driver_args": [
+        "--samples",
+        "8",
+        "--depth",
+        "4",
+        "--blend",
+        "correction",
+        "--strategic",
+        "--context"
+      ],
+      "model": "Unchanged teacher-context-v1-normal except Classic AI_EXACT_CONTACT_RISK fixed-point inclusion-exclusion.",
+      "information_model": "Own setup, public rank counts, disclosure and movement bits only. Uniform compatible-rank prior.",
+      "asset_files": [
+        "tests/ai_exact_contact_risk_test.c",
+        "tests/ai_contact_risk_cost.c"
+      ]
+    }
+  ],
+  "seed": 2150001,
+  "rounds": 30,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "hypotheses": [
+    "Replace maximum of individual hidden-contact mean risks by expected lethal opportunity across contacts, respecting unique ranks and movement constraints.",
+    "Test the same cheap probability model in native play and the Context Teacher continuations."
+  ],
+  "contrasts": [
+    [
+      "student-exact-contact-risk-v1-normal",
+      "student-guard-v1-normal"
+    ],
+    [
+      "teacher-exact-contact-risk-v1-normal",
+      "teacher-context-v1-normal"
+    ]
+  ],
+  "analysis": "Fresh matched side-swapped Classic cohort; no tuning or promotion. Probability is exact under uniform compatible ranks, not a guarantee about opponent action choices or playing strength. Speculative capture scoring retains existing survival-branch approximation.",
+  "evidence": "research/exact-contact-risk-audit.json and exact-contact-risk-derivation.json; 19152 enumeration cases, default native binary parity."
+}

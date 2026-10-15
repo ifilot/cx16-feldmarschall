@@ -1,0 +1,8798 @@
+{
+  "student-exact-contact-risk-v1-normal minus student-guard-v1-normal": {
+    "schema": "planned-cohort-engine-error-sensitivity-v1",
+    "interpretation": "Finite-cohort A-minus-B bounds, not confidence intervals. Error prefixes remain unscored in official standings; their unknown scores range independently over [0,1] only for this sensitivity calculation.",
+    "comparison": "student-exact-contact-risk-v1-normal minus student-guard-v1-normal",
+    "setup_mode": "referee",
+    "sources": {
+      "a": {
+        "path": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/cycle-07-exact-contact-risk/student-exact-contact-risk-v1-normal.fmtour",
+        "sha256": "fdeee4259b42bdc59805d57383321f0b2333ef9044600c1ce549e7bf2e03febb",
+        "policy": "student-exact-contact-risk-v1-normal",
+        "opponent": "msdos-1990-v2-normal"
+      },
+      "b": {
+        "path": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/cycle-07-exact-contact-risk/student-guard-v1-normal.fmtour",
+        "sha256": "962632c8af0bd7f588aa3771925ac139266e4f236ae9bfdbfaf9be3a2a830572",
+        "policy": "student-guard-v1-normal",
+        "opponent": "msdos-1990-v2-normal"
+      }
+    },
+    "summary": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 48,
+        "negative_pairs": 35,
+        "zero_pairs": 121,
+        "non_tied_pairs": 83,
+        "exact_two_sided_binomial_sign_p": 0.1874598679661928,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 210,
+      "error_games_a": 5,
+      "error_games_b": 5,
+      "pairs_with_any_error": 6,
+      "arms": {
+        "a": {
+          "attempted_games": 420,
+          "error_games": 5,
+          "scored_games": 415,
+          "wins": 142,
+          "draws": 12,
+          "losses": 261,
+          "official_scored_score": 0.3566265060240964,
+          "all_attempt_score_bounds": [
+            0.3523809523809524,
+            0.36428571428571427
+          ]
+        },
+        "b": {
+          "attempted_games": 420,
+          "error_games": 5,
+          "scored_games": 415,
+          "wins": 123,
+          "draws": 21,
+          "losses": 271,
+          "official_scored_score": 0.3216867469879518,
+          "all_attempt_score_bounds": [
+            0.31785714285714284,
+            0.32976190476190476
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        0.02261904761904762,
+        0.04642857142857143
+      ],
+      "complete_case_pairs": 204,
+      "complete_case_paired_effect": 0.03308823529411765
+    },
+    "families": {
+      "broad-mixed": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 3,
+          "negative_pairs": 5,
+          "zero_pairs": 22,
+          "non_tied_pairs": 8,
+          "exact_two_sided_binomial_sign_p": 0.7265625,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 17,
+            "draws": 3,
+            "losses": 40,
+            "official_scored_score": 0.30833333333333335,
+            "all_attempt_score_bounds": [
+              0.30833333333333335,
+              0.30833333333333335
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 21,
+            "draws": 2,
+            "losses": 37,
+            "official_scored_score": 0.36666666666666664,
+            "all_attempt_score_bounds": [
+              0.36666666666666664,
+              0.36666666666666664
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          -0.058333333333333334,
+          -0.058333333333333334
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": -0.058333333333333334
+      },
+      "decoy": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 4,
+          "negative_pairs": 3,
+          "zero_pairs": 23,
+          "non_tied_pairs": 7,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 25,
+            "draws": 0,
+            "losses": 35,
+            "official_scored_score": 0.4166666666666667,
+            "all_attempt_score_bounds": [
+              0.4166666666666667,
+              0.4166666666666667
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 24,
+            "draws": 1,
+            "losses": 35,
+            "official_scored_score": 0.4083333333333333,
+            "all_attempt_score_bounds": [
+              0.4083333333333333,
+              0.4083333333333333
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.008333333333333333,
+          0.008333333333333333
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": 0.008333333333333333
+      },
+      "fortified": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 9,
+          "negative_pairs": 5,
+          "zero_pairs": 14,
+          "non_tied_pairs": 14,
+          "exact_two_sided_binomial_sign_p": 0.4239501953125,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 2,
+        "pairs_with_any_error": 2,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 17,
+            "draws": 7,
+            "losses": 36,
+            "official_scored_score": 0.3416666666666667,
+            "all_attempt_score_bounds": [
+              0.3416666666666667,
+              0.3416666666666667
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 2,
+            "scored_games": 58,
+            "wins": 8,
+            "draws": 10,
+            "losses": 40,
+            "official_scored_score": 0.22413793103448276,
+            "all_attempt_score_bounds": [
+              0.21666666666666667,
+              0.25
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.09166666666666666,
+          0.125
+        ],
+        "complete_case_pairs": 28,
+        "complete_case_paired_effect": 0.09821428571428571
+      },
+      "forward": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 3,
+          "negative_pairs": 1,
+          "zero_pairs": 26,
+          "non_tied_pairs": 4,
+          "exact_two_sided_binomial_sign_p": 0.625,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 18,
+            "draws": 0,
+            "losses": 42,
+            "official_scored_score": 0.3,
+            "all_attempt_score_bounds": [
+              0.3,
+              0.3
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 16,
+            "draws": 0,
+            "losses": 44,
+            "official_scored_score": 0.26666666666666666,
+            "all_attempt_score_bounds": [
+              0.26666666666666666,
+              0.26666666666666666
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.03333333333333333,
+          0.03333333333333333
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": 0.03333333333333333
+      },
+      "presets": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 9,
+          "negative_pairs": 8,
+          "zero_pairs": 9,
+          "non_tied_pairs": 17,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 5,
+        "error_games_b": 3,
+        "pairs_with_any_error": 4,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 5,
+            "scored_games": 55,
+            "wins": 21,
+            "draws": 1,
+            "losses": 33,
+            "official_scored_score": 0.39090909090909093,
+            "all_attempt_score_bounds": [
+              0.35833333333333334,
+              0.44166666666666665
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 3,
+            "scored_games": 57,
+            "wins": 19,
+            "draws": 2,
+            "losses": 36,
+            "official_scored_score": 0.3508771929824561,
+            "all_attempt_score_bounds": [
+              0.3333333333333333,
+              0.38333333333333336
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          -0.025,
+          0.10833333333333334
+        ],
+        "complete_case_pairs": 26,
+        "complete_case_paired_effect": 0.04807692307692308
+      },
+      "unguarded": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 13,
+          "negative_pairs": 5,
+          "zero_pairs": 12,
+          "non_tied_pairs": 18,
+          "exact_two_sided_binomial_sign_p": 0.09625244140625,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 25,
+            "draws": 0,
+            "losses": 35,
+            "official_scored_score": 0.4166666666666667,
+            "all_attempt_score_bounds": [
+              0.4166666666666667,
+              0.4166666666666667
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 17,
+            "draws": 1,
+            "losses": 42,
+            "official_scored_score": 0.2916666666666667,
+            "all_attempt_score_bounds": [
+              0.2916666666666667,
+              0.2916666666666667
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.125,
+          0.125
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": 0.125
+      },
+      "uniform": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 7,
+          "negative_pairs": 8,
+          "zero_pairs": 15,
+          "non_tied_pairs": 15,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 19,
+            "draws": 1,
+            "losses": 40,
+            "official_scored_score": 0.325,
+            "all_attempt_score_bounds": [
+              0.325,
+              0.325
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 18,
+            "draws": 5,
+            "losses": 37,
+            "official_scored_score": 0.3416666666666667,
+            "all_attempt_score_bounds": [
+              0.3416666666666667,
+              0.3416666666666667
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          -0.016666666666666666,
+          -0.016666666666666666
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": -0.016666666666666666
+      }
+    },
+    "pairs": [
+      {
+        "pair_id": 1,
+        "family": "fortified",
+        "move_seed": 6493,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 2,
+        "family": "fortified",
+        "move_seed": 28081,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 3,
+        "family": "fortified",
+        "move_seed": 25560,
+        "scores_a": [
+          0.5,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 4,
+        "family": "fortified",
+        "move_seed": 27238,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 5,
+        "family": "fortified",
+        "move_seed": 43425,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 6,
+        "family": "fortified",
+        "move_seed": 37606,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 7,
+        "family": "fortified",
+        "move_seed": 44911,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 8,
+        "family": "fortified",
+        "move_seed": 12437,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 9,
+        "family": "fortified",
+        "move_seed": 7778,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 10,
+        "family": "fortified",
+        "move_seed": 37229,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 11,
+        "family": "fortified",
+        "move_seed": 52184,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 12,
+        "family": "fortified",
+        "move_seed": 8001,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 13,
+        "family": "fortified",
+        "move_seed": 28591,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 14,
+        "family": "fortified",
+        "move_seed": 25638,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 15,
+        "family": "fortified",
+        "move_seed": 14427,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 16,
+        "family": "fortified",
+        "move_seed": 58119,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 17,
+        "family": "fortified",
+        "move_seed": 9246,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 18,
+        "family": "fortified",
+        "move_seed": 25954,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 19,
+        "family": "fortified",
+        "move_seed": 44701,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 20,
+        "family": "fortified",
+        "move_seed": 47493,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 21,
+        "family": "fortified",
+        "move_seed": 26478,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 22,
+        "family": "fortified",
+        "move_seed": 48007,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 23,
+        "family": "fortified",
+        "move_seed": 38651,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 24,
+        "family": "fortified",
+        "move_seed": 33567,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 25,
+        "family": "fortified",
+        "move_seed": 9126,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 26,
+        "family": "fortified",
+        "move_seed": 15559,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 27,
+        "family": "fortified",
+        "move_seed": 4279,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 28,
+        "family": "fortified",
+        "move_seed": 25661,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 29,
+        "family": "fortified",
+        "move_seed": 44116,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 30,
+        "family": "fortified",
+        "move_seed": 23358,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 31,
+        "family": "uniform",
+        "move_seed": 44887,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 32,
+        "family": "uniform",
+        "move_seed": 53645,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 33,
+        "family": "uniform",
+        "move_seed": 46173,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 34,
+        "family": "uniform",
+        "move_seed": 45780,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 35,
+        "family": "uniform",
+        "move_seed": 19110,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 36,
+        "family": "uniform",
+        "move_seed": 8854,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 37,
+        "family": "uniform",
+        "move_seed": 27467,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 38,
+        "family": "uniform",
+        "move_seed": 28121,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 39,
+        "family": "uniform",
+        "move_seed": 17849,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 40,
+        "family": "uniform",
+        "move_seed": 36862,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 41,
+        "family": "uniform",
+        "move_seed": 36013,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 42,
+        "family": "uniform",
+        "move_seed": 15002,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 43,
+        "family": "uniform",
+        "move_seed": 25115,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 44,
+        "family": "uniform",
+        "move_seed": 51388,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 45,
+        "family": "uniform",
+        "move_seed": 10122,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 46,
+        "family": "uniform",
+        "move_seed": 56887,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 47,
+        "family": "uniform",
+        "move_seed": 32592,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 48,
+        "family": "uniform",
+        "move_seed": 18880,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 49,
+        "family": "uniform",
+        "move_seed": 7755,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 50,
+        "family": "uniform",
+        "move_seed": 19085,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 51,
+        "family": "uniform",
+        "move_seed": 34197,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 52,
+        "family": "uniform",
+        "move_seed": 22283,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 53,
+        "family": "uniform",
+        "move_seed": 50275,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 54,
+        "family": "uniform",
+        "move_seed": 30870,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 55,
+        "family": "uniform",
+        "move_seed": 33253,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 56,
+        "family": "uniform",
+        "move_seed": 34013,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 57,
+        "family": "uniform",
+        "move_seed": 23271,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 58,
+        "family": "uniform",
+        "move_seed": 15018,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 59,
+        "family": "uniform",
+        "move_seed": 11305,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 60,
+        "family": "uniform",
+        "move_seed": 26094,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 61,
+        "family": "unguarded",
+        "move_seed": 18106,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 62,
+        "family": "unguarded",
+        "move_seed": 15603,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 63,
+        "family": "unguarded",
+        "move_seed": 51258,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 64,
+        "family": "unguarded",
+        "move_seed": 30433,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 65,
+        "family": "unguarded",
+        "move_seed": 10279,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 66,
+        "family": "unguarded",
+        "move_seed": 51432,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 67,
+        "family": "unguarded",
+        "move_seed": 50133,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 68,
+        "family": "unguarded",
+        "move_seed": 33014,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 69,
+        "family": "unguarded",
+        "move_seed": 3732,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 70,
+        "family": "unguarded",
+        "move_seed": 9689,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 71,
+        "family": "unguarded",
+        "move_seed": 34084,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 72,
+        "family": "unguarded",
+        "move_seed": 48055,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 73,
+        "family": "unguarded",
+        "move_seed": 42974,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 74,
+        "family": "unguarded",
+        "move_seed": 1938,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 75,
+        "family": "unguarded",
+        "move_seed": 49116,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 76,
+        "family": "unguarded",
+        "move_seed": 3645,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 77,
+        "family": "unguarded",
+        "move_seed": 11295,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 78,
+        "family": "unguarded",
+        "move_seed": 43285,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 79,
+        "family": "unguarded",
+        "move_seed": 2126,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 80,
+        "family": "unguarded",
+        "move_seed": 43861,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 81,
+        "family": "unguarded",
+        "move_seed": 10482,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 82,
+        "family": "unguarded",
+        "move_seed": 15154,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 83,
+        "family": "unguarded",
+        "move_seed": 39152,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 84,
+        "family": "unguarded",
+        "move_seed": 53208,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 85,
+        "family": "unguarded",
+        "move_seed": 8960,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 86,
+        "family": "unguarded",
+        "move_seed": 17827,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 87,
+        "family": "unguarded",
+        "move_seed": 33631,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 88,
+        "family": "unguarded",
+        "move_seed": 12221,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 89,
+        "family": "unguarded",
+        "move_seed": 13656,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 90,
+        "family": "unguarded",
+        "move_seed": 3411,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 91,
+        "family": "forward",
+        "move_seed": 259,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 92,
+        "family": "forward",
+        "move_seed": 2891,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 93,
+        "family": "forward",
+        "move_seed": 7759,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 94,
+        "family": "forward",
+        "move_seed": 17901,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 95,
+        "family": "forward",
+        "move_seed": 20283,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 96,
+        "family": "forward",
+        "move_seed": 21696,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 97,
+        "family": "forward",
+        "move_seed": 5593,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 98,
+        "family": "forward",
+        "move_seed": 41238,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 99,
+        "family": "forward",
+        "move_seed": 29375,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 100,
+        "family": "forward",
+        "move_seed": 41508,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 101,
+        "family": "forward",
+        "move_seed": 2847,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 102,
+        "family": "forward",
+        "move_seed": 20827,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 103,
+        "family": "forward",
+        "move_seed": 33838,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 104,
+        "family": "forward",
+        "move_seed": 30199,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 105,
+        "family": "forward",
+        "move_seed": 59154,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 106,
+        "family": "forward",
+        "move_seed": 45439,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 107,
+        "family": "forward",
+        "move_seed": 51954,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 108,
+        "family": "forward",
+        "move_seed": 16802,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 109,
+        "family": "forward",
+        "move_seed": 5651,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 110,
+        "family": "forward",
+        "move_seed": 24643,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 111,
+        "family": "forward",
+        "move_seed": 44534,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 112,
+        "family": "forward",
+        "move_seed": 18597,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 113,
+        "family": "forward",
+        "move_seed": 55014,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 114,
+        "family": "forward",
+        "move_seed": 13346,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 115,
+        "family": "forward",
+        "move_seed": 57807,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 116,
+        "family": "forward",
+        "move_seed": 16478,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 117,
+        "family": "forward",
+        "move_seed": 39149,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 118,
+        "family": "forward",
+        "move_seed": 5206,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 119,
+        "family": "forward",
+        "move_seed": 40605,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 120,
+        "family": "forward",
+        "move_seed": 49293,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 121,
+        "family": "decoy",
+        "move_seed": 29623,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 122,
+        "family": "decoy",
+        "move_seed": 54001,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 123,
+        "family": "decoy",
+        "move_seed": 39792,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 124,
+        "family": "decoy",
+        "move_seed": 18242,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 125,
+        "family": "decoy",
+        "move_seed": 38100,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 126,
+        "family": "decoy",
+        "move_seed": 10313,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 127,
+        "family": "decoy",
+        "move_seed": 56265,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 128,
+        "family": "decoy",
+        "move_seed": 17928,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 129,
+        "family": "decoy",
+        "move_seed": 38763,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 130,
+        "family": "decoy",
+        "move_seed": 42724,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 131,
+        "family": "decoy",
+        "move_seed": 34194,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 132,
+        "family": "decoy",
+        "move_seed": 901,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 133,
+        "family": "decoy",
+        "move_seed": 57312,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 134,
+        "family": "decoy",
+        "move_seed": 18949,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 135,
+        "family": "decoy",
+        "move_seed": 17216,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      {
+        "pair_id": 136,
+        "family": "decoy",
+        "move_seed": 50986,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 137,
+        "family": "decoy",
+        "move_seed": 18682,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 138,
+        "family": "decoy",
+        "move_seed": 31512,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 139,
+        "family": "decoy",
+        "move_seed": 16438,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 140,
+        "family": "decoy",
+        "move_seed": 35951,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 141,
+        "family": "decoy",
+        "move_seed": 33355,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 142,
+        "family": "decoy",
+        "move_seed": 36419,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 143,
+        "family": "decoy",
+        "move_seed": 4545,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 144,
+        "family": "decoy",
+        "move_seed": 40889,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 145,
+        "family": "decoy",
+        "move_seed": 13698,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 146,
+        "family": "decoy",
+        "move_seed": 38984,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 147,
+        "family": "decoy",
+        "move_seed": 31866,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 148,
+        "family": "decoy",
+        "move_seed": 6932,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 149,
+        "family": "decoy",
+        "move_seed": 9523,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 150,
+        "family": "decoy",
+        "move_seed": 44785,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 151,
+        "family": "presets",
+        "move_seed": 44089,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 152,
+        "family": "presets",
+        "move_seed": 8459,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 153,
+        "family": "presets",
+        "move_seed": 9015,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 154,
+        "family": "presets",
+        "move_seed": 55568,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 155,
+        "family": "presets",
+        "move_seed": 50034,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 156,
+        "family": "presets",
+        "move_seed": 9019,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 157,
+        "family": "presets",
+        "move_seed": 36947,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 158,
+        "family": "presets",
+        "move_seed": 16592,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.75,
+          -0.75
+        ]
+      },
+      {
+        "pair_id": 159,
+        "family": "presets",
+        "move_seed": 9333,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 160,
+        "family": "presets",
+        "move_seed": 58326,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 161,
+        "family": "presets",
+        "move_seed": 17290,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 162,
+        "family": "presets",
+        "move_seed": 50596,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 163,
+        "family": "presets",
+        "move_seed": 29702,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 164,
+        "family": "presets",
+        "move_seed": 46452,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 165,
+        "family": "presets",
+        "move_seed": 3661,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 166,
+        "family": "presets",
+        "move_seed": 3533,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 167,
+        "family": "presets",
+        "move_seed": 49855,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 168,
+        "family": "presets",
+        "move_seed": 30319,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 169,
+        "family": "presets",
+        "move_seed": 23305,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 170,
+        "family": "presets",
+        "move_seed": 47270,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 171,
+        "family": "presets",
+        "move_seed": 293,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 172,
+        "family": "presets",
+        "move_seed": 11267,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 173,
+        "family": "presets",
+        "move_seed": 51826,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 174,
+        "family": "presets",
+        "move_seed": 7219,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 175,
+        "family": "presets",
+        "move_seed": 8012,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 176,
+        "family": "presets",
+        "move_seed": 55417,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 177,
+        "family": "presets",
+        "move_seed": 2878,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 178,
+        "family": "presets",
+        "move_seed": 14301,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 179,
+        "family": "presets",
+        "move_seed": 35836,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 180,
+        "family": "presets",
+        "move_seed": 37489,
+        "scores_a": [
+          null,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 2,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 181,
+        "family": "broad-mixed",
+        "move_seed": 58162,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 182,
+        "family": "broad-mixed",
+        "move_seed": 42764,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 183,
+        "family": "broad-mixed",
+        "move_seed": 58017,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 184,
+        "family": "broad-mixed",
+        "move_seed": 51033,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 185,
+        "family": "broad-mixed",
+        "move_seed": 46054,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 186,
+        "family": "broad-mixed",
+        "move_seed": 57589,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 187,
+        "family": "broad-mixed",
+        "move_seed": 2021,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 188,
+        "family": "broad-mixed",
+        "move_seed": 20371,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 189,
+        "family": "broad-mixed",
+        "move_seed": 45122,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 190,
+        "family": "broad-mixed",
+        "move_seed": 4458,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      {
+        "pair_id": 191,
+        "family": "broad-mixed",
+        "move_seed": 31645,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 192,
+        "family": "broad-mixed",
+        "move_seed": 1108,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 193,
+        "family": "broad-mixed",
+        "move_seed": 49150,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 194,
+        "family": "broad-mixed",
+        "move_seed": 54366,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 195,
+        "family": "broad-mixed",
+        "move_seed": 37358,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 196,
+        "family": "broad-mixed",
+        "move_seed": 15970,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 197,
+        "family": "broad-mixed",
+        "move_seed": 46146,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 198,
+        "family": "broad-mixed",
+        "move_seed": 15331,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 199,
+        "family": "broad-mixed",
+        "move_seed": 31172,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 200,
+        "family": "broad-mixed",
+        "move_seed": 7259,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 201,
+        "family": "broad-mixed",
+        "move_seed": 26904,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 202,
+        "family": "broad-mixed",
+        "move_seed": 51647,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 203,
+        "family": "broad-mixed",
+        "move_seed": 30749,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 204,
+        "family": "broad-mixed",
+        "move_seed": 24729,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 205,
+        "family": "broad-mixed",
+        "move_seed": 18142,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 206,
+        "family": "broad-mixed",
+        "move_seed": 53262,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 207,
+        "family": "broad-mixed",
+        "move_seed": 37528,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 208,
+        "family": "broad-mixed",
+        "move_seed": 32349,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 209,
+        "family": "broad-mixed",
+        "move_seed": 8055,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 210,
+        "family": "broad-mixed",
+        "move_seed": 26555,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -1.0,
+          -1.0
+        ]
+      }
+    ]
+  },
+  "teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal": {
+    "schema": "planned-cohort-engine-error-sensitivity-v1",
+    "interpretation": "Finite-cohort A-minus-B bounds, not confidence intervals. Error prefixes remain unscored in official standings; their unknown scores range independently over [0,1] only for this sensitivity calculation.",
+    "comparison": "teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal",
+    "setup_mode": "referee",
+    "sources": {
+      "a": {
+        "path": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/cycle-07-exact-contact-risk/teacher-exact-contact-risk-v1-normal.fmtour",
+        "sha256": "28607541522b609d851666751a55c56c5d1d2ac9f635db1d42bf0959ba2fb40c",
+        "policy": "teacher-exact-contact-risk-v1-normal",
+        "opponent": "msdos-1990-v2-normal"
+      },
+      "b": {
+        "path": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/cycle-07-exact-contact-risk/teacher-context-v1-normal.fmtour",
+        "sha256": "2c2f4cdc1bf703ebbdc9a05941f85d4642d93d131c9377f326766d4d868e0e6c",
+        "policy": "teacher-context-v1-normal",
+        "opponent": "msdos-1990-v2-normal"
+      }
+    },
+    "summary": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 36,
+        "negative_pairs": 30,
+        "zero_pairs": 130,
+        "non_tied_pairs": 66,
+        "exact_two_sided_binomial_sign_p": 0.5385827752459464,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 210,
+      "error_games_a": 8,
+      "error_games_b": 9,
+      "pairs_with_any_error": 14,
+      "arms": {
+        "a": {
+          "attempted_games": 420,
+          "error_games": 8,
+          "scored_games": 412,
+          "wins": 123,
+          "draws": 5,
+          "losses": 284,
+          "official_scored_score": 0.30461165048543687,
+          "all_attempt_score_bounds": [
+            0.2988095238095238,
+            0.31785714285714284
+          ]
+        },
+        "b": {
+          "attempted_games": 420,
+          "error_games": 9,
+          "scored_games": 411,
+          "wins": 116,
+          "draws": 7,
+          "losses": 288,
+          "official_scored_score": 0.29075425790754256,
+          "all_attempt_score_bounds": [
+            0.2845238095238095,
+            0.305952380952381
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.007142857142857143,
+        0.03333333333333333
+      ],
+      "complete_case_pairs": 196,
+      "complete_case_paired_effect": 0.01403061224489796
+    },
+    "families": {
+      "broad-mixed": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 3,
+          "negative_pairs": 2,
+          "zero_pairs": 24,
+          "non_tied_pairs": 5,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 1,
+        "pairs_with_any_error": 1,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 22,
+            "draws": 0,
+            "losses": 38,
+            "official_scored_score": 0.36666666666666664,
+            "all_attempt_score_bounds": [
+              0.36666666666666664,
+              0.36666666666666664
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 1,
+            "scored_games": 59,
+            "wins": 21,
+            "draws": 1,
+            "losses": 37,
+            "official_scored_score": 0.3644067796610169,
+            "all_attempt_score_bounds": [
+              0.35833333333333334,
+              0.375
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          -0.008333333333333333,
+          0.008333333333333333
+        ],
+        "complete_case_pairs": 29,
+        "complete_case_paired_effect": 0.008620689655172414
+      },
+      "decoy": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 5,
+          "negative_pairs": 5,
+          "zero_pairs": 20,
+          "non_tied_pairs": 10,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 23,
+            "draws": 0,
+            "losses": 37,
+            "official_scored_score": 0.38333333333333336,
+            "all_attempt_score_bounds": [
+              0.38333333333333336,
+              0.38333333333333336
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 23,
+            "draws": 0,
+            "losses": 37,
+            "official_scored_score": 0.38333333333333336,
+            "all_attempt_score_bounds": [
+              0.38333333333333336,
+              0.38333333333333336
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.0,
+          0.0
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": 0.0
+      },
+      "fortified": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 5,
+          "negative_pairs": 7,
+          "zero_pairs": 13,
+          "non_tied_pairs": 12,
+          "exact_two_sided_binomial_sign_p": 0.7744140625,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 3,
+        "error_games_b": 3,
+        "pairs_with_any_error": 5,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 3,
+            "scored_games": 57,
+            "wins": 8,
+            "draws": 0,
+            "losses": 49,
+            "official_scored_score": 0.14035087719298245,
+            "all_attempt_score_bounds": [
+              0.13333333333333333,
+              0.18333333333333332
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 3,
+            "scored_games": 57,
+            "wins": 9,
+            "draws": 4,
+            "losses": 44,
+            "official_scored_score": 0.19298245614035087,
+            "all_attempt_score_bounds": [
+              0.18333333333333332,
+              0.23333333333333334
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          -0.1,
+          0.0
+        ],
+        "complete_case_pairs": 25,
+        "complete_case_paired_effect": -0.03
+      },
+      "forward": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 4,
+          "negative_pairs": 0,
+          "zero_pairs": 26,
+          "non_tied_pairs": 4,
+          "exact_two_sided_binomial_sign_p": 0.125,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 20,
+            "draws": 0,
+            "losses": 40,
+            "official_scored_score": 0.3333333333333333,
+            "all_attempt_score_bounds": [
+              0.3333333333333333,
+              0.3333333333333333
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 16,
+            "draws": 0,
+            "losses": 44,
+            "official_scored_score": 0.26666666666666666,
+            "all_attempt_score_bounds": [
+              0.26666666666666666,
+              0.26666666666666666
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.06666666666666667,
+          0.06666666666666667
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": 0.06666666666666667
+      },
+      "presets": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 5,
+          "negative_pairs": 5,
+          "zero_pairs": 12,
+          "non_tied_pairs": 10,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 5,
+        "error_games_b": 5,
+        "pairs_with_any_error": 8,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 5,
+            "scored_games": 55,
+            "wins": 10,
+            "draws": 2,
+            "losses": 43,
+            "official_scored_score": 0.2,
+            "all_attempt_score_bounds": [
+              0.18333333333333332,
+              0.26666666666666666
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 5,
+            "scored_games": 55,
+            "wins": 10,
+            "draws": 1,
+            "losses": 44,
+            "official_scored_score": 0.19090909090909092,
+            "all_attempt_score_bounds": [
+              0.175,
+              0.25833333333333336
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          -0.075,
+          0.09166666666666666
+        ],
+        "complete_case_pairs": 22,
+        "complete_case_paired_effect": -0.03409090909090909
+      },
+      "unguarded": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 7,
+          "negative_pairs": 5,
+          "zero_pairs": 18,
+          "non_tied_pairs": 12,
+          "exact_two_sided_binomial_sign_p": 0.7744140625,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 18,
+            "draws": 2,
+            "losses": 40,
+            "official_scored_score": 0.31666666666666665,
+            "all_attempt_score_bounds": [
+              0.31666666666666665,
+              0.31666666666666665
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 15,
+            "draws": 1,
+            "losses": 44,
+            "official_scored_score": 0.25833333333333336,
+            "all_attempt_score_bounds": [
+              0.25833333333333336,
+              0.25833333333333336
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.058333333333333334,
+          0.058333333333333334
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": 0.058333333333333334
+      },
+      "uniform": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 7,
+          "negative_pairs": 6,
+          "zero_pairs": 17,
+          "non_tied_pairs": 13,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 30,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 22,
+            "draws": 1,
+            "losses": 37,
+            "official_scored_score": 0.375,
+            "all_attempt_score_bounds": [
+              0.375,
+              0.375
+            ]
+          },
+          "b": {
+            "attempted_games": 60,
+            "error_games": 0,
+            "scored_games": 60,
+            "wins": 22,
+            "draws": 0,
+            "losses": 38,
+            "official_scored_score": 0.36666666666666664,
+            "all_attempt_score_bounds": [
+              0.36666666666666664,
+              0.36666666666666664
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.008333333333333333,
+          0.008333333333333333
+        ],
+        "complete_case_pairs": 30,
+        "complete_case_paired_effect": 0.008333333333333333
+      }
+    },
+    "pairs": [
+      {
+        "pair_id": 1,
+        "family": "fortified",
+        "move_seed": 6493,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 2,
+        "family": "fortified",
+        "move_seed": 28081,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 3,
+        "family": "fortified",
+        "move_seed": 25560,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 4,
+        "family": "fortified",
+        "move_seed": 27238,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 5,
+        "family": "fortified",
+        "move_seed": 43425,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 6,
+        "family": "fortified",
+        "move_seed": 37606,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 7,
+        "family": "fortified",
+        "move_seed": 44911,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 8,
+        "family": "fortified",
+        "move_seed": 12437,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 9,
+        "family": "fortified",
+        "move_seed": 7778,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 10,
+        "family": "fortified",
+        "move_seed": 37229,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 11,
+        "family": "fortified",
+        "move_seed": 52184,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 12,
+        "family": "fortified",
+        "move_seed": 8001,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 13,
+        "family": "fortified",
+        "move_seed": 28591,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 14,
+        "family": "fortified",
+        "move_seed": 25638,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 15,
+        "family": "fortified",
+        "move_seed": 14427,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 16,
+        "family": "fortified",
+        "move_seed": 58119,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 17,
+        "family": "fortified",
+        "move_seed": 9246,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 18,
+        "family": "fortified",
+        "move_seed": 25954,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 19,
+        "family": "fortified",
+        "move_seed": 44701,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 20,
+        "family": "fortified",
+        "move_seed": 47493,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 21,
+        "family": "fortified",
+        "move_seed": 26478,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.75,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 22,
+        "family": "fortified",
+        "move_seed": 48007,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 23,
+        "family": "fortified",
+        "move_seed": 38651,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 24,
+        "family": "fortified",
+        "move_seed": 33567,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 25,
+        "family": "fortified",
+        "move_seed": 9126,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 26,
+        "family": "fortified",
+        "move_seed": 15559,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 27,
+        "family": "fortified",
+        "move_seed": 4279,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 28,
+        "family": "fortified",
+        "move_seed": 25661,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 29,
+        "family": "fortified",
+        "move_seed": 44116,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 30,
+        "family": "fortified",
+        "move_seed": 23358,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 31,
+        "family": "uniform",
+        "move_seed": 44887,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 32,
+        "family": "uniform",
+        "move_seed": 53645,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 33,
+        "family": "uniform",
+        "move_seed": 46173,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 34,
+        "family": "uniform",
+        "move_seed": 45780,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 35,
+        "family": "uniform",
+        "move_seed": 19110,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 36,
+        "family": "uniform",
+        "move_seed": 8854,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 37,
+        "family": "uniform",
+        "move_seed": 27467,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 38,
+        "family": "uniform",
+        "move_seed": 28121,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 39,
+        "family": "uniform",
+        "move_seed": 17849,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 40,
+        "family": "uniform",
+        "move_seed": 36862,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 41,
+        "family": "uniform",
+        "move_seed": 36013,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 42,
+        "family": "uniform",
+        "move_seed": 15002,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 43,
+        "family": "uniform",
+        "move_seed": 25115,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 44,
+        "family": "uniform",
+        "move_seed": 51388,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 45,
+        "family": "uniform",
+        "move_seed": 10122,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 46,
+        "family": "uniform",
+        "move_seed": 56887,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 47,
+        "family": "uniform",
+        "move_seed": 32592,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 48,
+        "family": "uniform",
+        "move_seed": 18880,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 49,
+        "family": "uniform",
+        "move_seed": 7755,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 50,
+        "family": "uniform",
+        "move_seed": 19085,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 51,
+        "family": "uniform",
+        "move_seed": 34197,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 52,
+        "family": "uniform",
+        "move_seed": 22283,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 53,
+        "family": "uniform",
+        "move_seed": 50275,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 54,
+        "family": "uniform",
+        "move_seed": 30870,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 55,
+        "family": "uniform",
+        "move_seed": 33253,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 56,
+        "family": "uniform",
+        "move_seed": 34013,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 57,
+        "family": "uniform",
+        "move_seed": 23271,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 58,
+        "family": "uniform",
+        "move_seed": 15018,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 59,
+        "family": "uniform",
+        "move_seed": 11305,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 60,
+        "family": "uniform",
+        "move_seed": 26094,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 61,
+        "family": "unguarded",
+        "move_seed": 18106,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 62,
+        "family": "unguarded",
+        "move_seed": 15603,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 63,
+        "family": "unguarded",
+        "move_seed": 51258,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 64,
+        "family": "unguarded",
+        "move_seed": 30433,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 65,
+        "family": "unguarded",
+        "move_seed": 10279,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 66,
+        "family": "unguarded",
+        "move_seed": 51432,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 67,
+        "family": "unguarded",
+        "move_seed": 50133,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 68,
+        "family": "unguarded",
+        "move_seed": 33014,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 69,
+        "family": "unguarded",
+        "move_seed": 3732,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 70,
+        "family": "unguarded",
+        "move_seed": 9689,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 71,
+        "family": "unguarded",
+        "move_seed": 34084,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 72,
+        "family": "unguarded",
+        "move_seed": 48055,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 73,
+        "family": "unguarded",
+        "move_seed": 42974,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 74,
+        "family": "unguarded",
+        "move_seed": 1938,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 75,
+        "family": "unguarded",
+        "move_seed": 49116,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 76,
+        "family": "unguarded",
+        "move_seed": 3645,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 77,
+        "family": "unguarded",
+        "move_seed": 11295,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 78,
+        "family": "unguarded",
+        "move_seed": 43285,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 79,
+        "family": "unguarded",
+        "move_seed": 2126,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 80,
+        "family": "unguarded",
+        "move_seed": 43861,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 81,
+        "family": "unguarded",
+        "move_seed": 10482,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 82,
+        "family": "unguarded",
+        "move_seed": 15154,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 83,
+        "family": "unguarded",
+        "move_seed": 39152,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 84,
+        "family": "unguarded",
+        "move_seed": 53208,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 85,
+        "family": "unguarded",
+        "move_seed": 8960,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 86,
+        "family": "unguarded",
+        "move_seed": 17827,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 87,
+        "family": "unguarded",
+        "move_seed": 33631,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 88,
+        "family": "unguarded",
+        "move_seed": 12221,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 89,
+        "family": "unguarded",
+        "move_seed": 13656,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 90,
+        "family": "unguarded",
+        "move_seed": 3411,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 91,
+        "family": "forward",
+        "move_seed": 259,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 92,
+        "family": "forward",
+        "move_seed": 2891,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 93,
+        "family": "forward",
+        "move_seed": 7759,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 94,
+        "family": "forward",
+        "move_seed": 17901,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 95,
+        "family": "forward",
+        "move_seed": 20283,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 96,
+        "family": "forward",
+        "move_seed": 21696,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 97,
+        "family": "forward",
+        "move_seed": 5593,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 98,
+        "family": "forward",
+        "move_seed": 41238,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 99,
+        "family": "forward",
+        "move_seed": 29375,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 100,
+        "family": "forward",
+        "move_seed": 41508,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 101,
+        "family": "forward",
+        "move_seed": 2847,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 102,
+        "family": "forward",
+        "move_seed": 20827,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 103,
+        "family": "forward",
+        "move_seed": 33838,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 104,
+        "family": "forward",
+        "move_seed": 30199,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 105,
+        "family": "forward",
+        "move_seed": 59154,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 106,
+        "family": "forward",
+        "move_seed": 45439,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 107,
+        "family": "forward",
+        "move_seed": 51954,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 108,
+        "family": "forward",
+        "move_seed": 16802,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 109,
+        "family": "forward",
+        "move_seed": 5651,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 110,
+        "family": "forward",
+        "move_seed": 24643,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 111,
+        "family": "forward",
+        "move_seed": 44534,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 112,
+        "family": "forward",
+        "move_seed": 18597,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 113,
+        "family": "forward",
+        "move_seed": 55014,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 114,
+        "family": "forward",
+        "move_seed": 13346,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 115,
+        "family": "forward",
+        "move_seed": 57807,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 116,
+        "family": "forward",
+        "move_seed": 16478,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 117,
+        "family": "forward",
+        "move_seed": 39149,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 118,
+        "family": "forward",
+        "move_seed": 5206,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 119,
+        "family": "forward",
+        "move_seed": 40605,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 120,
+        "family": "forward",
+        "move_seed": 49293,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 121,
+        "family": "decoy",
+        "move_seed": 29623,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 122,
+        "family": "decoy",
+        "move_seed": 54001,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 123,
+        "family": "decoy",
+        "move_seed": 39792,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 124,
+        "family": "decoy",
+        "move_seed": 18242,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 125,
+        "family": "decoy",
+        "move_seed": 38100,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 126,
+        "family": "decoy",
+        "move_seed": 10313,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 127,
+        "family": "decoy",
+        "move_seed": 56265,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 128,
+        "family": "decoy",
+        "move_seed": 17928,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 129,
+        "family": "decoy",
+        "move_seed": 38763,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 130,
+        "family": "decoy",
+        "move_seed": 42724,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 131,
+        "family": "decoy",
+        "move_seed": 34194,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 132,
+        "family": "decoy",
+        "move_seed": 901,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 133,
+        "family": "decoy",
+        "move_seed": 57312,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 134,
+        "family": "decoy",
+        "move_seed": 18949,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 135,
+        "family": "decoy",
+        "move_seed": 17216,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 136,
+        "family": "decoy",
+        "move_seed": 50986,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 137,
+        "family": "decoy",
+        "move_seed": 18682,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 138,
+        "family": "decoy",
+        "move_seed": 31512,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 139,
+        "family": "decoy",
+        "move_seed": 16438,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 140,
+        "family": "decoy",
+        "move_seed": 35951,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 141,
+        "family": "decoy",
+        "move_seed": 33355,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 142,
+        "family": "decoy",
+        "move_seed": 36419,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 143,
+        "family": "decoy",
+        "move_seed": 4545,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 144,
+        "family": "decoy",
+        "move_seed": 40889,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 145,
+        "family": "decoy",
+        "move_seed": 13698,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 146,
+        "family": "decoy",
+        "move_seed": 38984,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 147,
+        "family": "decoy",
+        "move_seed": 31866,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 148,
+        "family": "decoy",
+        "move_seed": 6932,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 149,
+        "family": "decoy",
+        "move_seed": 9523,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 150,
+        "family": "decoy",
+        "move_seed": 44785,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 151,
+        "family": "presets",
+        "move_seed": 44089,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 152,
+        "family": "presets",
+        "move_seed": 8459,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 153,
+        "family": "presets",
+        "move_seed": 9015,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 154,
+        "family": "presets",
+        "move_seed": 55568,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 155,
+        "family": "presets",
+        "move_seed": 50034,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 156,
+        "family": "presets",
+        "move_seed": 9019,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 157,
+        "family": "presets",
+        "move_seed": 36947,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 158,
+        "family": "presets",
+        "move_seed": 16592,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 159,
+        "family": "presets",
+        "move_seed": 9333,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 160,
+        "family": "presets",
+        "move_seed": 58326,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 161,
+        "family": "presets",
+        "move_seed": 17290,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 162,
+        "family": "presets",
+        "move_seed": 50596,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 163,
+        "family": "presets",
+        "move_seed": 29702,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 164,
+        "family": "presets",
+        "move_seed": 46452,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 165,
+        "family": "presets",
+        "move_seed": 3661,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 166,
+        "family": "presets",
+        "move_seed": 3533,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 167,
+        "family": "presets",
+        "move_seed": 49855,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 168,
+        "family": "presets",
+        "move_seed": 30319,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 169,
+        "family": "presets",
+        "move_seed": 23305,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 170,
+        "family": "presets",
+        "move_seed": 47270,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 171,
+        "family": "presets",
+        "move_seed": 293,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 172,
+        "family": "presets",
+        "move_seed": 11267,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 173,
+        "family": "presets",
+        "move_seed": 51826,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      {
+        "pair_id": 174,
+        "family": "presets",
+        "move_seed": 7219,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 175,
+        "family": "presets",
+        "move_seed": 8012,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 176,
+        "family": "presets",
+        "move_seed": 55417,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 177,
+        "family": "presets",
+        "move_seed": 2878,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 178,
+        "family": "presets",
+        "move_seed": 14301,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 179,
+        "family": "presets",
+        "move_seed": 35836,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 180,
+        "family": "presets",
+        "move_seed": 37489,
+        "scores_a": [
+          null,
+          null
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 2,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 181,
+        "family": "broad-mixed",
+        "move_seed": 58162,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 182,
+        "family": "broad-mixed",
+        "move_seed": 42764,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 183,
+        "family": "broad-mixed",
+        "move_seed": 58017,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 184,
+        "family": "broad-mixed",
+        "move_seed": 51033,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 185,
+        "family": "broad-mixed",
+        "move_seed": 46054,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 186,
+        "family": "broad-mixed",
+        "move_seed": 57589,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 187,
+        "family": "broad-mixed",
+        "move_seed": 2021,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 188,
+        "family": "broad-mixed",
+        "move_seed": 20371,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 189,
+        "family": "broad-mixed",
+        "move_seed": 45122,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 190,
+        "family": "broad-mixed",
+        "move_seed": 4458,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 191,
+        "family": "broad-mixed",
+        "move_seed": 31645,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 192,
+        "family": "broad-mixed",
+        "move_seed": 1108,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 193,
+        "family": "broad-mixed",
+        "move_seed": 49150,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 194,
+        "family": "broad-mixed",
+        "move_seed": 54366,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 195,
+        "family": "broad-mixed",
+        "move_seed": 37358,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 196,
+        "family": "broad-mixed",
+        "move_seed": 15970,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 197,
+        "family": "broad-mixed",
+        "move_seed": 46146,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 198,
+        "family": "broad-mixed",
+        "move_seed": 15331,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 199,
+        "family": "broad-mixed",
+        "move_seed": 31172,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 200,
+        "family": "broad-mixed",
+        "move_seed": 7259,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 201,
+        "family": "broad-mixed",
+        "move_seed": 26904,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 202,
+        "family": "broad-mixed",
+        "move_seed": 51647,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 203,
+        "family": "broad-mixed",
+        "move_seed": 30749,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 204,
+        "family": "broad-mixed",
+        "move_seed": 24729,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 205,
+        "family": "broad-mixed",
+        "move_seed": 18142,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 206,
+        "family": "broad-mixed",
+        "move_seed": 53262,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 207,
+        "family": "broad-mixed",
+        "move_seed": 37528,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 208,
+        "family": "broad-mixed",
+        "move_seed": 32349,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 209,
+        "family": "broad-mixed",
+        "move_seed": 8055,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 210,
+        "family": "broad-mixed",
+        "move_seed": 26555,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      }
+    ]
+  }
+}

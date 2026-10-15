@@ -25,6 +25,10 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 5 | teacher-calibrated-beliefs-v1-normal | 157 / 3 / 393 | 28.7% | 7 |
 | 5 | teacher-flag-row-control-v1-normal | 157 / 8 / 381 | 29.5% | 14 |
 | 5 | teacher-joint-setup-v1-normal | 162 / 13 / 372 | 30.8% | 13 |
+| 7 | student-guard-v1-normal | 123 / 21 / 271 | 32.2% | 5 |
+| 7 | student-exact-contact-risk-v1-normal | 142 / 12 / 261 | 35.7% | 5 |
+| 7 | teacher-context-v1-normal | 116 / 7 / 288 | 29.1% | 9 |
+| 7 | teacher-exact-contact-risk-v1-normal | 123 / 5 / 284 | 30.5% | 8 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -55,6 +59,8 @@ Evidence: [cycle-03-horizons-and-memory](cycle-03-horizons-and-memory/result.jso
 - teacher-recurrence-escape-v1-normal minus teacher-context-v1-normal: -1.0 percentage points; 95% paired interval [-1.9, -0.2].
 - teacher-uniform-worlds-v1-normal minus teacher-context-v1-normal: -0.1 percentage points; 95% paired interval [-2.2, +2.1].
 
+Recurrence caveat: only five pair scores changed. The exact two-sided direction test is p=0.0625; its sparse bootstrap interval alone does not establish a regression.
+
 
 **Cycle 4 hypotheses:** Correct a public logical omission in native Flag defence, without identifying the concealed rank.; Test the same deduction in the Context Teacher observer and masked continuations.
 
@@ -72,4 +78,20 @@ Evidence: [cycle-05-joint-setup-beliefs](cycle-05-joint-setup-beliefs/result.jso
 - teacher-joint-setup-v1-normal minus teacher-context-v1-normal: +4.0 percentage points; 95% paired interval [+0.2, +7.8].
 - teacher-flag-row-control-v1-normal minus teacher-context-v1-normal: +2.8 percentage points; 95% paired interval [-1.4, +7.1].
 - teacher-joint-setup-v1-normal minus teacher-calibrated-beliefs-v1-normal: +2.7 percentage points; 95% paired interval [-1.4, +6.8].
+
+Exploratory signal only: the joint-minus-Context interval at 98.3333% is [-0.8, +8.6] points and includes zero. Spatial coupling did not clearly beat the simpler Flag-row control.
+
+
+**Cycle 7 hypotheses:** Replace maximum of individual hidden-contact mean risks by expected lethal opportunity across contacts, respecting unique ranks and movement constraints.; Test the same cheap probability model in native play and the Context Teacher continuations.
+
+Evidence: [cycle-07-exact-contact-risk](cycle-07-exact-contact-risk/result.json).
+
+- student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +3.3 percentage points; 95% paired interval [-1.3, +8.0].
+- teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal: +1.4 percentage points; 95% paired interval [-2.6, +5.5].
+
+
+**Preflight failures, without DOS strength results:**
+
+- Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
+- Cycle 15: AI_TEST alone did not enable public queries; missing outer AI_DIAGNOSTICS guard. No saved tournament executed. [Preserved evidence](cycle-15-native-belief-objectives-v2/CONCLUSION.md).
 

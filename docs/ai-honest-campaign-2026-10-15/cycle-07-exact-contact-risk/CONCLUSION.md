@@ -1,0 +1,9 @@
+# Cycle 7: combined contact risk merits validation, not promotion
+
+The native candidate scored 142 wins, 12 draws and 261 losses (35.7%) against DOS; its matched guard baseline scored 123/21/271 (32.2%). The complete-pair gain is +3.31 percentage points, 95% bootstrap interval [-1.35, +7.97]. The teacher candidate scored 123/5/284 (30.5%), versus Context at 116/7/288 (29.1%): paired gain +1.40 points, interval [-2.55, +5.48]. Neither establishes improvement.
+
+The strategic hypothesis is to account for the probability that any visible enemy contact can kill a piece, rather than using only the largest separate contact risk. The rational formula matches independent exact world enumeration; native Q22 approximation differs by at most 7.63e-7 in probability under the stated uniform count/moved-status prior. This does not establish that the prior models real adversaries accurately. Publicly known ranks, hidden Scout rays, frozen root inventory during speculative captures and integer precision assumptions are documented in the mechanism audit.
+
+Error sensitivity retains all planned pairs: the native finite-cohort score-difference bounds are [+2.26,+4.64] points if each error's unknown result ranges over [0,1]. These are not confidence intervals and do not replace the official unscored-error standings. Complete-pair directions are 48 positive, 35 negative and 121 tied pairs; six pairs contain an error, exact sign p = .1875; this diagnostic does not test the mean effect. Full family/teacher bounds are in error-sensitivity.json.
+
+All 1,680 attempts were replayed in Python and at every native state; 27 errors remain unscored with legal prefixes. Four Qt6 reviews, two exact candidate rebuilds, 19,152 independent enumeration cases and eight sensitivity tests passed. Cycle14 freezes an independent fixed-size 4,200-game native validation before viewing any validation results. Production stays unchanged.
