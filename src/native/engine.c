@@ -431,6 +431,29 @@ int main(int argc, char** argv) {
             reply("error strategy requires AI_TEST");
 #endif
         }
+#ifdef AI_DIAGNOSTIC_TRUTH
+        /* Desktop ablation only. Compiled out of ordinary observers and game
+         * engines; retain public movement flags and our own disclosure state. */
+        else if(!strcmp(command, "diagnostic-truth") || !strcmp(command, "diagnostic-flag-spy") ||
+                !strcmp(command, "diagnostic-flag")) {
+            uint8_t truth[SQUARES], i;
+            int all = !strcmp(command, "diagnostic-truth");
+            int spy = !strcmp(command, "diagnostic-flag-spy");
+            int valid = hex(args, truth, SQUARES);
+            for(i=0; valid && i<SQUARES; i++) {
+                if(IS_PIECE(board[i]) != IS_PIECE(truth[i])) valid=0;
+                else if(IS_PIECE(board[i])) {
+                    if((board[i]&CELL_BLUE)!=(truth[i]&CELL_BLUE) || PIECE_TYPE(truth[i])>=PIECE_TYPES ||
+                       ((board[i]&CELL_BLUE)==own && PIECE_TYPE(board[i])!=PIECE_TYPE(truth[i]))) valid=0;
+                } else if(board[i]!=truth[i]) valid=0;
+            }
+            if(!valid) {reply("error diagnostic truth mismatch");continue;}
+            for(i=0; i<SQUARES; i++) if(IS_PIECE(board[i]) && (board[i]&CELL_BLUE)!=own &&
+                    (all || PIECE_TYPE(truth[i])==PIECE_FLAG || (spy && PIECE_TYPE(truth[i])==PIECE_SPY)))
+                board[i]=(board[i]&~CELL_TYPE)|PIECE_TYPE(truth[i])|CELL_REVEALED;
+            reply("diagnostic-truthok");
+        }
+#endif
         else if(!strcmp(command, "position")) {
             char* army=strtok(args," ");char* lost=strtok(NULL," ");
             char* cells=strtok(NULL," ");char* history=strtok(NULL," ");

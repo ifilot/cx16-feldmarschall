@@ -1,0 +1,43 @@
+Running pilot dos--teacher-context-v1-normal
+Finished pilot dos--teacher-context-v1-normal 28.56 seconds
+Running pilot dos--teacher-info-lifetime-v1-normal
+Finished pilot dos--teacher-info-lifetime-v1-normal 31.45 seconds
+Running pilot dos--teacher-info-corridor-v1-normal
+Finished pilot dos--teacher-info-corridor-v1-normal 41.77 seconds
+Running pilot dos--teacher-info-followthrough-v1-normal
+Finished pilot dos--teacher-info-followthrough-v1-normal 37.24 seconds
+Running pilot head--teacher-info-lifetime-v1-normal
+Finished pilot head--teacher-info-lifetime-v1-normal 64.47 seconds
+Running pilot head--teacher-info-corridor-v1-normal
+Finished pilot head--teacher-info-corridor-v1-normal 67.49 seconds
+Running pilot head--teacher-info-followthrough-v1-normal
+Finished pilot head--teacher-info-followthrough-v1-normal 60.89 seconds
+Verified pilot dos--teacher-context-v1-normal {'wins': 16, 'draws': 0, 'losses': 53, 'score': 0.2318840579710145}
+Verified pilot dos--teacher-info-lifetime-v1-normal {'wins': 19, 'draws': 1, 'losses': 50, 'score': 0.2785714285714286}
+Verified pilot dos--teacher-info-corridor-v1-normal {'wins': 15, 'draws': 2, 'losses': 51, 'score': 0.23529411764705882}
+Verified pilot dos--teacher-info-followthrough-v1-normal {'wins': 14, 'draws': 0, 'losses': 56, 'score': 0.2}
+Verified pilot head--teacher-info-lifetime-v1-normal {'wins': 39, 'draws': 0, 'losses': 31, 'score': 0.5571428571428572}
+Verified pilot head--teacher-info-corridor-v1-normal {'wins': 36, 'draws': 0, 'losses': 34, 'score': 0.5142857142857142}
+Verified pilot head--teacher-info-followthrough-v1-normal {'wins': 36, 'draws': 0, 'losses': 34, 'score': 0.5142857142857142}
+Running validation dos--teacher-context-v1-normal
+Finished validation dos--teacher-context-v1-normal 173.26 seconds
+Running validation dos--teacher-info-lifetime-v1-normal
+Finished validation dos--teacher-info-lifetime-v1-normal 162.53 seconds
+Running validation dos--teacher-info-corridor-v1-normal
+Finished validation dos--teacher-info-corridor-v1-normal 144.99 seconds
+Running validation dos--teacher-info-followthrough-v1-normal
+Finished validation dos--teacher-info-followthrough-v1-normal 130.35 seconds
+Running validation head--teacher-info-lifetime-v1-normal
+Finished validation head--teacher-info-lifetime-v1-normal 115.14 seconds
+Running validation head--teacher-info-corridor-v1-normal
+Finished validation head--teacher-info-corridor-v1-normal 107.07 seconds
+Running validation head--teacher-info-followthrough-v1-normal
+Finished validation head--teacher-info-followthrough-v1-normal 113.04 seconds
+Verified validation dos--teacher-context-v1-normal {'wins': 80, 'draws': 7, 'losses': 191, 'score': 0.30035971223021585}
+Verified validation dos--teacher-info-lifetime-v1-normal {'wins': 78, 'draws': 5, 'losses': 193, 'score': 0.2916666666666667}
+Verified validation dos--teacher-info-corridor-v1-normal {'wins': 64, 'draws': 3, 'losses': 207, 'score': 0.23905109489051096}
+Verified validation dos--teacher-info-followthrough-v1-normal {'wins': 71, 'draws': 6, 'losses': 200, 'score': 0.26714801444043323}
+Verified validation head--teacher-info-lifetime-v1-normal {'wins': 75, 'draws': 3, 'losses': 62, 'score': 0.5464285714285714}
+Verified validation head--teacher-info-corridor-v1-normal {'wins': 68, 'draws': 1, 'losses': 71, 'score': 0.48928571428571427}
+Verified validation head--teacher-info-followthrough-v1-normal {'wins': 75, 'draws': 0, 'losses': 65, 'score': 0.5357142857142857}
+Report saved /mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-fair-information-2026-10-15

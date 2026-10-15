@@ -1,0 +1,6 @@
+Calibration temperature 0.0 {'games': 84, 'pieces': 32148, 'log_loss': 2.1522264286194206, 'brier': 0.8590809874018519, 'accuracy': 0.22917619308374582}
+Calibration temperature 0.125 {'games': 84, 'pieces': 32148, 'log_loss': 2.142576911296214, 'brier': 0.856979139853952, 'accuracy': 0.2315762504982985}
+Calibration temperature 0.25 {'games': 84, 'pieces': 32148, 'log_loss': 2.1352924303314316, 'brier': 0.8554299542616213, 'accuracy': 0.23354203584788158}
+Calibration temperature 0.5 {'games': 84, 'pieces': 32148, 'log_loss': 2.127123357007921, 'brier': 0.8537845401357167, 'accuracy': 0.23793234462286939}
+Calibration temperature 0.75 {'games': 84, 'pieces': 32148, 'log_loss': 2.1265509874870707, 'brier': 0.8537635218915727, 'accuracy': 0.23972527666431606}
+Calibration temperature 1.0 {'games': 84, 'pieces': 32148, 'log_loss': 2.132171290594858, 'brier': 0.8550487047795536, 'accuracy': 0.23822918407825525}

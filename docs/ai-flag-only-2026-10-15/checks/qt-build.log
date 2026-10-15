@@ -1,0 +1,7 @@
+[ 10%] Automatic RCC for art/assets.qrc
+[ 30%] Built target classic
+[ 40%] Built target feldmarschall-desk_arcc_assets
+[ 60%] Built target feldmarschall-tournament-worker
+[ 70%] Building CXX object CMakeFiles/feldmarschall-desk.dir/desk.cpp.o
+[ 80%] Linking CXX executable feldmarschall-desk
+[100%] Built target feldmarschall-desk

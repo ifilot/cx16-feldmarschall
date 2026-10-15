@@ -15,7 +15,7 @@ import tempfile
 import time
 import uuid
 
-from ai_registry import ROOT, build_policy, catalog, digest
+from ai_registry import ROOT, build_policy, catalog, digest, receives_opponent_setup
 from arena import deployments
 from feldmarschall import new_rng
 from tournament_store import Tournament, verify
@@ -117,7 +117,7 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
             frozen = bundle / executable.name
             argv_commands[identity] = [str(frozen), '--difficulty', receipt['policy']['difficulty']]
             commands[identity] = shlex.join(argv_commands[identity])
-            original_dos[identity] = receipt['policy'].get('driver') == 'msdos1990'
+            original_dos[identity] = receives_opponent_setup(receipt['policy'])
             tournament.artifact(receipt['policy']['archive'], (ROOT / receipt['policy']['archive']).read_bytes())
         referee = working / 'referee'
         referee.mkdir()

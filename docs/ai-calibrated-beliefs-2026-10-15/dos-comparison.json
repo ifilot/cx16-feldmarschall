@@ -1,0 +1,25 @@
+{
+  "complete_pairs": 200,
+  "pairs_by_family": {
+    "fortified": 29,
+    "uniform": 30,
+    "unguarded": 30,
+    "forward": 30,
+    "decoy": 30,
+    "presets": 24,
+    "broad-mixed": 27
+  },
+  "metrics": {
+    "score": {
+      "mean": 0.0275,
+      "interval_95": [
+        -0.02,
+        0.075
+      ],
+      "interval_98_3333": [
+        -0.03,
+        0.08625
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 56,
+  "new_policy": "teacher-calibrated-beliefs-v1-normal",
+  "model_sha256": "3327ec168d4834c45e62e4f0576c47fd41e716904b4df4c8bee8d9ec2bd0f38b",
+  "source_sha256": "2021cc3e4d106e18aee28509261cd61c9f6f08502fc67d037a1b37fa70c97e81",
+  "training_games": 196,
+  "calibration_games": 84,
+  "no_pair_leakage": true,
+  "exact_model_refit": true,
+  "fresh_validation": true,
+  "clean_build_reproduced_all_runtime_hashes": true,
+  "strength_games": 1120,
+  "replayed_strength_states": 176072,
+  "unscored_strength_errors": 11,
+  "development_games_verified": 280,
+  "qt6_captures": 3,
+  "native_parent_parity_decisions": 140,
+  "frozen_adapter_parity_decisions": 140,
+  "supported_dos_gain": false,
+  "supported_head_gain": false,
+  "promote": false
+}

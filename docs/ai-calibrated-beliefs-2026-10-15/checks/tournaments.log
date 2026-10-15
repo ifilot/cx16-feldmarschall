@@ -1,0 +1,17 @@
+test_bad_result_and_mismatched_pair_rejected (test_tournaments.Tournaments.test_bad_result_and_mismatched_pair_rejected) ... ok
+test_complete_pairs_and_exact_replay (test_tournaments.Tournaments.test_complete_pairs_and_exact_replay) ... ok
+test_corrupt_move_and_missing_runtime_rejected (test_tournaments.Tournaments.test_corrupt_move_and_missing_runtime_rejected) ... ok
+test_failed_build_is_not_published_in_catalog (test_tournaments.Tournaments.test_failed_build_is_not_published_in_catalog) ... src/native/broken.c:1:2: error: #error deliberate preflight failure
+    1 | #error deliberate preflight failure
+      |  ^~~~~
+ok
+test_preserved_identity_and_duplicate_rejection (test_tournaments.Tournaments.test_preserved_identity_and_duplicate_rejection) ... ok
+test_repeated_seed_reproduces_moves (test_tournaments.Tournaments.test_repeated_seed_reproduces_moves) ... ok
+test_restore_sources_into_empty_catalog_and_reject_conflict (test_tournaments.Tournaments.test_restore_sources_into_empty_catalog_and_reject_conflict) ... ok
+test_teacher_can_play_through_same_protocol (test_tournaments.Tournaments.test_teacher_can_play_through_same_protocol) ... ok
+test_tournament_is_portable_and_read_only (test_tournaments.Tournaments.test_tournament_is_portable_and_read_only) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.198s
+
+OK

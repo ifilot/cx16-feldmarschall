@@ -1,0 +1,125 @@
+{"event": "progress", "completed": 1, "total": 70}
+{"event": "progress", "completed": 2, "total": 70}
+{"event": "progress", "completed": 3, "total": 70}
+{"event": "progress", "completed": 4, "total": 70}
+{"event": "progress", "completed": 5, "total": 70}
+{"event": "progress", "completed": 6, "total": 70}
+{"event": "progress", "completed": 7, "total": 70}
+{"event": "progress", "completed": 8, "total": 70}
+{"event": "progress", "completed": 9, "total": 70}
+{"event": "progress", "completed": 10, "total": 70}
+{"event": "progress", "completed": 11, "total": 70}
+{"event": "progress", "completed": 12, "total": 70}
+{"event": "progress", "completed": 13, "total": 70}
+{"event": "progress", "completed": 14, "total": 70}
+{"event": "progress", "completed": 15, "total": 70}
+{"event": "progress", "completed": 16, "total": 70}
+{"event": "progress", "completed": 17, "total": 70}
+{"event": "progress", "completed": 18, "total": 70}
+{"event": "progress", "completed": 19, "total": 70}
+{"event": "progress", "completed": 20, "total": 70}
+{"event": "progress", "completed": 21, "total": 70}
+{"event": "progress", "completed": 22, "total": 70}
+{"event": "progress", "completed": 23, "total": 70}
+{"event": "progress", "completed": 24, "total": 70}
+{"event": "progress", "completed": 25, "total": 70}
+{"event": "progress", "completed": 26, "total": 70}
+{"event": "progress", "completed": 27, "total": 70}
+{"event": "progress", "completed": 28, "total": 70}
+{"event": "progress", "completed": 29, "total": 70}
+{"event": "progress", "completed": 30, "total": 70}
+{"event": "progress", "completed": 31, "total": 70}
+{"event": "progress", "completed": 32, "total": 70}
+{"event": "progress", "completed": 33, "total": 70}
+{"event": "progress", "completed": 34, "total": 70}
+{"event": "progress", "completed": 35, "total": 70}
+{"event": "progress", "completed": 36, "total": 70}
+{"event": "progress", "completed": 37, "total": 70}
+{"event": "progress", "completed": 38, "total": 70}
+{"event": "progress", "completed": 39, "total": 70}
+{"event": "progress", "completed": 40, "total": 70}
+{"event": "progress", "completed": 41, "total": 70}
+{"event": "progress", "completed": 42, "total": 70}
+{"event": "progress", "completed": 43, "total": 70}
+{"event": "progress", "completed": 44, "total": 70}
+{"event": "progress", "completed": 45, "total": 70}
+{"event": "progress", "completed": 46, "total": 70}
+{"event": "progress", "completed": 47, "total": 70}
+{"event": "progress", "completed": 48, "total": 70}
+{"event": "progress", "completed": 49, "total": 70}
+{"event": "progress", "completed": 50, "total": 70}
+{"event": "progress", "completed": 51, "total": 70}
+{"event": "progress", "completed": 52, "total": 70}
+{"event": "progress", "completed": 53, "total": 70}
+{"event": "progress", "completed": 54, "total": 70}
+{"event": "progress", "completed": 55, "total": 70}
+{"event": "progress", "completed": 56, "total": 70}
+{"event": "progress", "completed": 57, "total": 70}
+{"event": "progress", "completed": 58, "total": 70}
+{"event": "progress", "completed": 59, "total": 70}
+{"event": "progress", "completed": 60, "total": 70}
+{"event": "progress", "completed": 61, "total": 70}
+{"event": "progress", "completed": 62, "total": 70}
+{"event": "progress", "completed": 63, "total": 70}
+{"event": "progress", "completed": 64, "total": 70}
+{"event": "progress", "completed": 65, "total": 70}
+{"event": "progress", "completed": 66, "total": 70}
+{"event": "progress", "completed": 67, "total": 70}
+{"event": "progress", "completed": 68, "total": 70}
+{"event": "progress", "completed": 69, "total": 70}
+{"event": "progress", "completed": 70, "total": 70}
+{
+  "status": "complete",
+  "games": 70,
+  "scored_games": 70,
+  "errors": 0,
+  "standings": {
+    "teacher-info-followthrough-v1-normal": {
+      "wins": 36,
+      "draws": 0,
+      "losses": 34,
+      "score": 0.5142857142857142
+    },
+    "teacher-context-v1-normal": {
+      "wins": 34,
+      "draws": 0,
+      "losses": 36,
+      "score": 0.4857142857142857
+    }
+  },
+  "average_plies": 154.72857142857143,
+  "families": {
+    "broad-mixed": {
+      "teacher-info-followthrough-v1-normal": 0.5,
+      "teacher-context-v1-normal": 0.5
+    },
+    "decoy": {
+      "teacher-info-followthrough-v1-normal": 0.5,
+      "teacher-context-v1-normal": 0.5
+    },
+    "fortified": {
+      "teacher-info-followthrough-v1-normal": 0.4,
+      "teacher-context-v1-normal": 0.6
+    },
+    "forward": {
+      "teacher-info-followthrough-v1-normal": 0.6,
+      "teacher-context-v1-normal": 0.4
+    },
+    "presets": {
+      "teacher-info-followthrough-v1-normal": 0.5,
+      "teacher-context-v1-normal": 0.5
+    },
+    "unguarded": {
+      "teacher-info-followthrough-v1-normal": 0.6,
+      "teacher-context-v1-normal": 0.4
+    },
+    "uniform": {
+      "teacher-info-followthrough-v1-normal": 0.5,
+      "teacher-context-v1-normal": 0.5
+    }
+  },
+  "endings": {
+    "no moves": 2,
+    "flag": 68
+  }
+}

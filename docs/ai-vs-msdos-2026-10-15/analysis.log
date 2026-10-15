@@ -1,0 +1,39 @@
+Verified student-guard-v1-normal {'wins': 37, 'draws': 7, 'losses': 96, 'score': 0.2892857142857143}
+Verified teacher-rollout-v1-normal {'wins': 41, 'draws': 2, 'losses': 95, 'score': 0.30434782608695654}
+Verified teacher-context-v1-normal {'wins': 37, 'draws': 3, 'losses': 96, 'score': 0.28308823529411764}
+{
+  "teacher-rollout-v1-normal_minus_student-guard-v1-normal": {
+    "mean": 0.014705882352941176,
+    "paired_95_percent_interval": [
+      -0.07352941176470588,
+      0.09926470588235294
+    ],
+    "complete_pairs": 68,
+    "pairs_by_family": {
+      "fortified": 9,
+      "uniform": 10,
+      "unguarded": 10,
+      "forward": 10,
+      "decoy": 10,
+      "presets": 9,
+      "broad-mixed": 10
+    }
+  },
+  "teacher-context-v1-normal_minus_student-guard-v1-normal": {
+    "mean": -0.007575757575757576,
+    "paired_95_percent_interval": [
+      -0.08333333333333333,
+      0.06818181818181818
+    ],
+    "complete_pairs": 66,
+    "pairs_by_family": {
+      "fortified": 10,
+      "uniform": 10,
+      "unguarded": 10,
+      "forward": 10,
+      "decoy": 10,
+      "presets": 6,
+      "broad-mixed": 10
+    }
+  }
+}

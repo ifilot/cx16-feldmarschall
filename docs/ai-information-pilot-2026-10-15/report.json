@@ -1,0 +1,1641 @@
+{
+  "plan": {
+    "question": "How much does knowledge of enemy Flag/Spy, or all enemy ranks, improve Context Teacher against DOS?",
+    "idea": "Flag/Spy knowledge removes uncertainty about the objective and Spy risk. Exact-rank knowledge additionally removes uncertainty about battles. Compare with unchanged masked teacher to locate information-related weakness.",
+    "policies": [
+      "teacher-context-v1-normal",
+      "teacher-context-flag-spy-diagnostic-v1-normal",
+      "teacher-context-truth-diagnostic-v1-normal"
+    ],
+    "opponent": "msdos-1990-v2-normal",
+    "cohorts": {
+      "pilot": 1940001,
+      "validation": 1941001
+    },
+    "rounds": 10,
+    "families": [
+      "fortified",
+      "uniform",
+      "unguarded",
+      "forward",
+      "decoy",
+      "presets",
+      "broad-mixed"
+    ],
+    "backend": "openmp",
+    "jobs": 4,
+    "max_plies": 1000,
+    "planned_attempts": 840,
+    "comparison": "All three policies use identical armies and seeds within each cohort; swapped sides in every pair. No tuning after pilot. Run fresh validation with the same frozen policies.",
+    "analysis": "Report all scored wins/draws/losses and unscored errors. Stratified paired bootstrap with 10000 resamples, analysis seed 1940002: each score on complete scored pairs; matched differences on pairs fully scored in both arms. Report pilot and validation separately. Positive validation difference interval establishes improvement for this diagnostic, not suitability for production.",
+    "limits": "DOS has initial Flag/Spy knowledge plus conditional access to other true ranks. Flag/Spy arm isolates initial identities, not the full DOS knowledge schedule. All-rank arm is a broader intervention. Our simulated opponent still has masked knowledge of our ranks. Privileged enemy ranks are represented with the existing revealed bit, so this also changes known-piece heuristics. No production change or fairness claim.",
+    "privacy": "Only named diagnostic policies receive opponent-setup in addition to original DOS policies. Ordinary policy IDs and frozen sources remain unchanged.",
+    "settings": "Both diagnostics retain eight samples, depth four, correction blend, strategic utility and root context. In the all-rank arm all eight worlds coincide; the simulated opponent does not become the actual DOS policy."
+  },
+  "cohorts": {
+    "pilot": {
+      "seed": 1940001,
+      "policies": {
+        "teacher-context-v1-normal": {
+          "summary": {
+            "status": "complete",
+            "games": 140,
+            "scored_games": 140,
+            "errors": 0,
+            "standings": {
+              "teacher-context-v1-normal": {
+                "wins": 44,
+                "draws": 1,
+                "losses": 95,
+                "score": 0.31785714285714284
+              },
+              "msdos-1990-v2-normal": {
+                "wins": 95,
+                "draws": 1,
+                "losses": 44,
+                "score": 0.6821428571428572
+              }
+            },
+            "average_plies": 123.3,
+            "families": {
+              "broad-mixed": {
+                "teacher-context-v1-normal": 0.4,
+                "msdos-1990-v2-normal": 0.6
+              },
+              "decoy": {
+                "teacher-context-v1-normal": 0.3,
+                "msdos-1990-v2-normal": 0.7
+              },
+              "fortified": {
+                "teacher-context-v1-normal": 0.15,
+                "msdos-1990-v2-normal": 0.85
+              },
+              "forward": {
+                "teacher-context-v1-normal": 0.4,
+                "msdos-1990-v2-normal": 0.6
+              },
+              "presets": {
+                "teacher-context-v1-normal": 0.125,
+                "msdos-1990-v2-normal": 0.875
+              },
+              "unguarded": {
+                "teacher-context-v1-normal": 0.4,
+                "msdos-1990-v2-normal": 0.6
+              },
+              "uniform": {
+                "teacher-context-v1-normal": 0.45,
+                "msdos-1990-v2-normal": 0.55
+              }
+            },
+            "endings": {
+              "flag": 137,
+              "no moves": 2,
+              "ply limit": 1
+            }
+          },
+          "complete_pair_score": {
+            "mean": 0.31785714285714284,
+            "paired_95_percent_interval": [
+              0.2571428571428571,
+              0.375
+            ],
+            "complete_pairs": 70,
+            "pairs_by_family": {
+              "fortified": 10,
+              "uniform": 10,
+              "unguarded": 10,
+              "forward": 10,
+              "decoy": 10,
+              "presets": 10,
+              "broad-mixed": 10
+            }
+          },
+          "tournament_sha256": "231436f08321382be8ab98154e68db2ad89621c04ec193caf75ec3c6b786b19c",
+          "participants": [
+            {
+              "policy": {
+                "id": "teacher-context-v1-normal",
+                "name": "Context Rollout Teacher v1 / Normal",
+                "description": "Eight-world four-ply masked rollout using the guarded student, retaining public root goals, quiet history and piece identities; simulated public events update memory.",
+                "sources": [
+                  "src/native/engine.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_TRACE",
+                  "AI_TRAINING",
+                  "AI_FEATURE_TRACE"
+                ],
+                "difficulty": "normal",
+                "status": "desktop",
+                "include_dirs": [],
+                "archive": "ai/sources/ae77185d660238c8972fcb094c4c900bdbf62c2df1681a7c584859437309a0c8.zip",
+                "source_sha256": "ae77185d660238c8972fcb094c4c900bdbf62c2df1681a7c584859437309a0c8",
+                "driver": "teacher",
+                "teacher_sources": [
+                  "src/native/teacher_rollout.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "teacher_defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_ROLLOUT_CONTEXT"
+                ],
+                "driver_args": [
+                  "--samples",
+                  "8",
+                  "--depth",
+                  "4",
+                  "--blend",
+                  "correction",
+                  "--strategic",
+                  "--context"
+                ]
+              },
+              "recipe_sha256": "a6e278980429ad6e620c7c3b9e25d9b2b97014b20e829efe10c177d8d97b6c9d",
+              "executable_sha256": "ac2fd37e8914b9fcd5e88a32f5f82d01172aaf81110c6fbbee9f107f92a9ec31",
+              "runtime_sha256": {
+                "engine": "ac2fd37e8914b9fcd5e88a32f5f82d01172aaf81110c6fbbee9f107f92a9ec31",
+                "observer": "44cd6aeebedc46cbba92b071e23a8169f93143702bfb2352029ab534dac71141",
+                "teacher": "448e989277967fe06a8a94b98fc1f3b13ee5903d5f38964ffdf6d70dd9f285a0",
+                "teacher_bot.py": "1000dd723e58ef09fb2626a67f6796151c8136bdc915604506ff04a5bdc6fee0",
+                "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+              },
+              "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "policy": {
+                "id": "msdos-1990-v2-normal",
+                "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+                "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+                "sources": [],
+                "defines": [],
+                "difficulty": "normal",
+                "status": "external-reference",
+                "include_dirs": [],
+                "driver": "msdos1990",
+                "driver_args": [
+                  "--level",
+                  "3"
+                ],
+                "emulator_version": "2.1.4",
+                "asset_files": [
+                  "ai/msdos1990/manifest.json",
+                  "ai/msdos1990/mz-header.bin",
+                  "ai/msdos1990/ovl5.cod",
+                  "ai/msdos1990/ovl5.rel",
+                  "ai/msdos1990/resident-image.bin"
+                ],
+                "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+                "requires_opponent_setup": true,
+                "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+                "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+              },
+              "recipe_sha256": "c7e72fffa0f05f0176157ccb579d652dc08b7f33e7a51d83732a21285ab1fc94",
+              "executable_sha256": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9",
+              "runtime_sha256": {
+                "msdos1990.py": "dfbc5dc09fdd6237b70766f8116ee13946aa33a3a27234537c4bbd8aef8cbc02",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+                "unicorn/__init__.py": "9ad32123bca674cf205c308fd4d0d2a4db877c9dc2afac4feab7c84c8cf7043b",
+                "unicorn/arm64_const.py": "92f91a2b0a36cd34deee16db4f8da4ac0c9ae35c3ea1089296e5ef9d170a5be9",
+                "unicorn/arm_const.py": "44fdb7a9f7a9d8c62be07fefaf21e20060813b2a503b6228e378e6bbff7f7b41",
+                "unicorn/lib/libunicorn.so.2": "ddb196ec82b52e502c18e4a34478bf7b9f61c83c2ebaa95c74d8ded45a95da9c",
+                "unicorn/m68k_const.py": "7503e32454751bf66bdf1fcb19dd847537bcf6a5538e18125d8f53d8d448fed9",
+                "unicorn/mips_const.py": "3a04993d82610ea5f492af2d74fa79d849224a044ac0448281033ee331b58dac",
+                "unicorn/ppc_const.py": "154aaa45f947dab3e488e58e74ad99a09c8d772766c561ff92ecb85cdedd61af",
+                "unicorn/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "unicorn/riscv_const.py": "278e10baf05cfb7c8675475081ae7f2d2037616c79cb907d51963aa2c5b490e4",
+                "unicorn/s390x_const.py": "54d7026dd70b5bfca1d02e00e7a58d652eaa974b9ea980ba49ed4b80911b9fde",
+                "unicorn/sparc_const.py": "bcdb0491b6e42c647b104ee53d61610504a97831302dd5280fd2123e05572e95",
+                "unicorn/tricore_const.py": "1b6005a147d77a3fc1ab5c81fc878eeac3b9bb0b68d518e4a4226830d1356c4c",
+                "unicorn/unicorn.py": "e823b17649d0610c6f52b665902ac9dc46962785feebcac8465a0d7c477f25b7",
+                "unicorn/unicorn_const.py": "556c6a27336dc6dd3e0d49348951bde17e1b0f69166f2217773e6b3a7199f45d",
+                "unicorn/unicorn_py2.py": "66e2555d679e4f56a0117c2b8de0895a0a138fa3827e3a8a3621255e348d145a",
+                "unicorn/unicorn_py3/__init__.py": "ee70d3a7de9ea545406d727436ee835f9d644aeb7428f0e4f1510f9190b28726",
+                "unicorn/unicorn_py3/arch/arm.py": "c28693f90d8681c091f0ff92caed0a290350a969ea0a38343bb843a26b726711",
+                "unicorn/unicorn_py3/arch/arm64.py": "62963378864bae452f7cd2a784ddcd64ab6bdc8a6a69e033d48e8faaab0b2515",
+                "unicorn/unicorn_py3/arch/intel.py": "8a04281923b5f4dd65ce5f122e222bd86df3e8efc7eae99086e0d372fd7a1a75",
+                "unicorn/unicorn_py3/arch/types.py": "2e103854e371ef576680073f44ead45b8177a73c450a6125e609b7c54e0bc844",
+                "unicorn/unicorn_py3/unicorn.py": "62ffe84341f4288e309040e06555b81798031817d32fd19a945e250813f872f0",
+                "unicorn/x86_const.py": "3b33c55b97503ab25e8ed8bbe576c1cee693f495df6785b04adc1c8ab47a79c4",
+                "original/manifest.json": "6771cacbf980b981e1297e2d349607967c8990e0df64771321b97c09c5a771dd",
+                "original/mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+                "original/ovl5.cod": "373cbdcade64489c1e53d618eea0d6f411a0b51e70711098592fcb19ce080510",
+                "original/ovl5.rel": "2022c37dd471ec7e7ce1c5d38fec3919f11972365ae0272aef18655ad1192362",
+                "original/resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+                "engine": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9"
+              },
+              "compiler": "Original 16-bit machine code; Unicorn 2.1.4"
+            }
+          ],
+          "execution_seconds": 159.57549653299998,
+          "verification": {
+            "artifact_hashes": true,
+            "python_replay_games": 140,
+            "native_replay_all_states_games": 140,
+            "qt6_review_match": 2
+          }
+        },
+        "teacher-context-flag-spy-diagnostic-v1-normal": {
+          "summary": {
+            "status": "complete",
+            "games": 140,
+            "scored_games": 139,
+            "errors": 1,
+            "standings": {
+              "teacher-context-flag-spy-diagnostic-v1-normal": {
+                "wins": 75,
+                "draws": 2,
+                "losses": 62,
+                "score": 0.5467625899280576
+              },
+              "msdos-1990-v2-normal": {
+                "wins": 62,
+                "draws": 2,
+                "losses": 75,
+                "score": 0.45323741007194246
+              }
+            },
+            "average_plies": 122.56428571428572,
+            "families": {
+              "broad-mixed": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.55,
+                "msdos-1990-v2-normal": 0.45
+              },
+              "decoy": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.65,
+                "msdos-1990-v2-normal": 0.35
+              },
+              "fortified": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.10526315789473684,
+                "msdos-1990-v2-normal": 0.8947368421052632
+              },
+              "forward": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.6,
+                "msdos-1990-v2-normal": 0.4
+              },
+              "presets": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.6,
+                "msdos-1990-v2-normal": 0.4
+              },
+              "unguarded": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.65,
+                "msdos-1990-v2-normal": 0.35
+              },
+              "uniform": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.65,
+                "msdos-1990-v2-normal": 0.35
+              }
+            },
+            "endings": {
+              "flag": 137,
+              "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 1,
+              "ply limit": 2
+            }
+          },
+          "complete_pair_score": {
+            "mean": 0.5507246376811594,
+            "paired_95_percent_interval": [
+              0.4927536231884058,
+              0.6086956521739131
+            ],
+            "complete_pairs": 69,
+            "pairs_by_family": {
+              "fortified": 9,
+              "uniform": 10,
+              "unguarded": 10,
+              "forward": 10,
+              "decoy": 10,
+              "presets": 10,
+              "broad-mixed": 10
+            }
+          },
+          "tournament_sha256": "50510ce78812f0d994365becce7d963759c9719e26de3a818c8463b30c57e85b",
+          "participants": [
+            {
+              "policy": {
+                "id": "teacher-context-flag-spy-diagnostic-v1-normal",
+                "name": "DIAGNOSTIC Context Teacher v1 / Flag and Spy only",
+                "description": "Diagnostic information ablation of Context Teacher v1; only enemy Flag and Spy identities known in addition to public information. Never intended for production or ordinary play.",
+                "sources": [
+                  "src/native/engine.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_TRACE",
+                  "AI_TRAINING",
+                  "AI_FEATURE_TRACE",
+                  "AI_DIAGNOSTIC_TRUTH"
+                ],
+                "difficulty": "normal",
+                "status": "diagnostic",
+                "include_dirs": [],
+                "driver": "teacher",
+                "teacher_sources": [
+                  "src/native/teacher_rollout.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "teacher_defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_ROLLOUT_CONTEXT"
+                ],
+                "driver_args": [
+                  "--samples",
+                  "8",
+                  "--depth",
+                  "4",
+                  "--blend",
+                  "correction",
+                  "--strategic",
+                  "--context",
+                  "--diagnostic-truth",
+                  "--diagnostic-knowledge",
+                  "flag-spy"
+                ],
+                "information_model": "diagnostic-flag-spy",
+                "model": "Unchanged guarded-student production model and bounded rollout correction; information intervention only.",
+                "archive": "ai/sources/ec18008d899a4764d33d62d1a509764194c16f23fb5bc2580d3803ae9637960e.zip",
+                "source_sha256": "ec18008d899a4764d33d62d1a509764194c16f23fb5bc2580d3803ae9637960e"
+              },
+              "recipe_sha256": "6a9265053bc96a2214a5e4b3c9c021a45bf93754bade11ad4e508bb0ad37b6c2",
+              "executable_sha256": "e363ff01d745e4f2e464a705f73827e27990990d8c016f88c21474063791141b",
+              "runtime_sha256": {
+                "engine": "e363ff01d745e4f2e464a705f73827e27990990d8c016f88c21474063791141b",
+                "observer": "9f371abd0f26efe3c3919d13520e04a6543f09abed1dd6d22d65bb44a26d339f",
+                "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+                "teacher_bot.py": "4616bac018730856a11f12637be38bb7493b000b15e156f26a2e6d116eb4804b",
+                "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+              },
+              "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "policy": {
+                "id": "msdos-1990-v2-normal",
+                "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+                "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+                "sources": [],
+                "defines": [],
+                "difficulty": "normal",
+                "status": "external-reference",
+                "include_dirs": [],
+                "driver": "msdos1990",
+                "driver_args": [
+                  "--level",
+                  "3"
+                ],
+                "emulator_version": "2.1.4",
+                "asset_files": [
+                  "ai/msdos1990/manifest.json",
+                  "ai/msdos1990/mz-header.bin",
+                  "ai/msdos1990/ovl5.cod",
+                  "ai/msdos1990/ovl5.rel",
+                  "ai/msdos1990/resident-image.bin"
+                ],
+                "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+                "requires_opponent_setup": true,
+                "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+                "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+              },
+              "recipe_sha256": "c7e72fffa0f05f0176157ccb579d652dc08b7f33e7a51d83732a21285ab1fc94",
+              "executable_sha256": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9",
+              "runtime_sha256": {
+                "msdos1990.py": "dfbc5dc09fdd6237b70766f8116ee13946aa33a3a27234537c4bbd8aef8cbc02",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+                "unicorn/__init__.py": "9ad32123bca674cf205c308fd4d0d2a4db877c9dc2afac4feab7c84c8cf7043b",
+                "unicorn/arm64_const.py": "92f91a2b0a36cd34deee16db4f8da4ac0c9ae35c3ea1089296e5ef9d170a5be9",
+                "unicorn/arm_const.py": "44fdb7a9f7a9d8c62be07fefaf21e20060813b2a503b6228e378e6bbff7f7b41",
+                "unicorn/lib/libunicorn.so.2": "ddb196ec82b52e502c18e4a34478bf7b9f61c83c2ebaa95c74d8ded45a95da9c",
+                "unicorn/m68k_const.py": "7503e32454751bf66bdf1fcb19dd847537bcf6a5538e18125d8f53d8d448fed9",
+                "unicorn/mips_const.py": "3a04993d82610ea5f492af2d74fa79d849224a044ac0448281033ee331b58dac",
+                "unicorn/ppc_const.py": "154aaa45f947dab3e488e58e74ad99a09c8d772766c561ff92ecb85cdedd61af",
+                "unicorn/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "unicorn/riscv_const.py": "278e10baf05cfb7c8675475081ae7f2d2037616c79cb907d51963aa2c5b490e4",
+                "unicorn/s390x_const.py": "54d7026dd70b5bfca1d02e00e7a58d652eaa974b9ea980ba49ed4b80911b9fde",
+                "unicorn/sparc_const.py": "bcdb0491b6e42c647b104ee53d61610504a97831302dd5280fd2123e05572e95",
+                "unicorn/tricore_const.py": "1b6005a147d77a3fc1ab5c81fc878eeac3b9bb0b68d518e4a4226830d1356c4c",
+                "unicorn/unicorn.py": "e823b17649d0610c6f52b665902ac9dc46962785feebcac8465a0d7c477f25b7",
+                "unicorn/unicorn_const.py": "556c6a27336dc6dd3e0d49348951bde17e1b0f69166f2217773e6b3a7199f45d",
+                "unicorn/unicorn_py2.py": "66e2555d679e4f56a0117c2b8de0895a0a138fa3827e3a8a3621255e348d145a",
+                "unicorn/unicorn_py3/__init__.py": "ee70d3a7de9ea545406d727436ee835f9d644aeb7428f0e4f1510f9190b28726",
+                "unicorn/unicorn_py3/arch/arm.py": "c28693f90d8681c091f0ff92caed0a290350a969ea0a38343bb843a26b726711",
+                "unicorn/unicorn_py3/arch/arm64.py": "62963378864bae452f7cd2a784ddcd64ab6bdc8a6a69e033d48e8faaab0b2515",
+                "unicorn/unicorn_py3/arch/intel.py": "8a04281923b5f4dd65ce5f122e222bd86df3e8efc7eae99086e0d372fd7a1a75",
+                "unicorn/unicorn_py3/arch/types.py": "2e103854e371ef576680073f44ead45b8177a73c450a6125e609b7c54e0bc844",
+                "unicorn/unicorn_py3/unicorn.py": "62ffe84341f4288e309040e06555b81798031817d32fd19a945e250813f872f0",
+                "unicorn/x86_const.py": "3b33c55b97503ab25e8ed8bbe576c1cee693f495df6785b04adc1c8ab47a79c4",
+                "original/manifest.json": "6771cacbf980b981e1297e2d349607967c8990e0df64771321b97c09c5a771dd",
+                "original/mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+                "original/ovl5.cod": "373cbdcade64489c1e53d618eea0d6f411a0b51e70711098592fcb19ce080510",
+                "original/ovl5.rel": "2022c37dd471ec7e7ce1c5d38fec3919f11972365ae0272aef18655ad1192362",
+                "original/resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+                "engine": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9"
+              },
+              "compiler": "Original 16-bit machine code; Unicorn 2.1.4"
+            }
+          ],
+          "execution_seconds": 74.18401633799999,
+          "verification": {
+            "artifact_hashes": true,
+            "python_replay_games": 140,
+            "native_replay_all_states_games": 140,
+            "qt6_review_match": 13
+          }
+        },
+        "teacher-context-truth-diagnostic-v1-normal": {
+          "summary": {
+            "status": "complete",
+            "games": 140,
+            "scored_games": 140,
+            "errors": 0,
+            "standings": {
+              "teacher-context-truth-diagnostic-v1-normal": {
+                "wins": 88,
+                "draws": 14,
+                "losses": 38,
+                "score": 0.6785714285714286
+              },
+              "msdos-1990-v2-normal": {
+                "wins": 38,
+                "draws": 14,
+                "losses": 88,
+                "score": 0.32142857142857145
+              }
+            },
+            "average_plies": 176.38571428571427,
+            "families": {
+              "broad-mixed": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.7,
+                "msdos-1990-v2-normal": 0.3
+              },
+              "decoy": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.7,
+                "msdos-1990-v2-normal": 0.3
+              },
+              "fortified": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.65,
+                "msdos-1990-v2-normal": 0.35
+              },
+              "forward": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.5,
+                "msdos-1990-v2-normal": 0.5
+              },
+              "presets": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.775,
+                "msdos-1990-v2-normal": 0.225
+              },
+              "unguarded": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.7,
+                "msdos-1990-v2-normal": 0.3
+              },
+              "uniform": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.725,
+                "msdos-1990-v2-normal": 0.275
+              }
+            },
+            "endings": {
+              "ply limit": 14,
+              "no moves": 4,
+              "flag": 122
+            }
+          },
+          "complete_pair_score": {
+            "mean": 0.6785714285714286,
+            "paired_95_percent_interval": [
+              0.6178571428571429,
+              0.7392857142857143
+            ],
+            "complete_pairs": 70,
+            "pairs_by_family": {
+              "fortified": 10,
+              "uniform": 10,
+              "unguarded": 10,
+              "forward": 10,
+              "decoy": 10,
+              "presets": 10,
+              "broad-mixed": 10
+            }
+          },
+          "tournament_sha256": "713bf997a286e2e20c3f7575e28537a75d0cf27f094889b30ac5180415da5134",
+          "participants": [
+            {
+              "policy": {
+                "id": "teacher-context-truth-diagnostic-v1-normal",
+                "name": "DIAGNOSTIC Context Teacher v1 / all enemy ranks",
+                "description": "Diagnostic information ablation of Context Teacher v1; all surviving enemy ranks known. Never intended for production or ordinary play.",
+                "sources": [
+                  "src/native/engine.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_TRACE",
+                  "AI_TRAINING",
+                  "AI_FEATURE_TRACE",
+                  "AI_DIAGNOSTIC_TRUTH"
+                ],
+                "difficulty": "normal",
+                "status": "diagnostic",
+                "include_dirs": [],
+                "driver": "teacher",
+                "teacher_sources": [
+                  "src/native/teacher_rollout.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "teacher_defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_ROLLOUT_CONTEXT"
+                ],
+                "driver_args": [
+                  "--samples",
+                  "8",
+                  "--depth",
+                  "4",
+                  "--blend",
+                  "correction",
+                  "--strategic",
+                  "--context",
+                  "--diagnostic-truth",
+                  "--diagnostic-knowledge",
+                  "all"
+                ],
+                "information_model": "diagnostic-full-enemy-ranks",
+                "model": "Unchanged guarded-student production model and bounded rollout correction; information intervention only.",
+                "archive": "ai/sources/ec18008d899a4764d33d62d1a509764194c16f23fb5bc2580d3803ae9637960e.zip",
+                "source_sha256": "ec18008d899a4764d33d62d1a509764194c16f23fb5bc2580d3803ae9637960e"
+              },
+              "recipe_sha256": "193207b13533f045c6e4d54477c6ca68c79b8c3404019f2ac3b03b16382e9a1e",
+              "executable_sha256": "a9518a1253bfd8e0f4f5f58d441b7123fdaa5fb71cbcf86f755d9b926d7c7bd3",
+              "runtime_sha256": {
+                "engine": "a9518a1253bfd8e0f4f5f58d441b7123fdaa5fb71cbcf86f755d9b926d7c7bd3",
+                "observer": "a95cafb128b9eed74dca8b5518c535b29c35b6e1a8e6a8e4d44e8a04d708e715",
+                "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+                "teacher_bot.py": "4616bac018730856a11f12637be38bb7493b000b15e156f26a2e6d116eb4804b",
+                "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+              },
+              "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "policy": {
+                "id": "msdos-1990-v2-normal",
+                "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+                "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+                "sources": [],
+                "defines": [],
+                "difficulty": "normal",
+                "status": "external-reference",
+                "include_dirs": [],
+                "driver": "msdos1990",
+                "driver_args": [
+                  "--level",
+                  "3"
+                ],
+                "emulator_version": "2.1.4",
+                "asset_files": [
+                  "ai/msdos1990/manifest.json",
+                  "ai/msdos1990/mz-header.bin",
+                  "ai/msdos1990/ovl5.cod",
+                  "ai/msdos1990/ovl5.rel",
+                  "ai/msdos1990/resident-image.bin"
+                ],
+                "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+                "requires_opponent_setup": true,
+                "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+                "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+              },
+              "recipe_sha256": "c7e72fffa0f05f0176157ccb579d652dc08b7f33e7a51d83732a21285ab1fc94",
+              "executable_sha256": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9",
+              "runtime_sha256": {
+                "msdos1990.py": "dfbc5dc09fdd6237b70766f8116ee13946aa33a3a27234537c4bbd8aef8cbc02",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+                "unicorn/__init__.py": "9ad32123bca674cf205c308fd4d0d2a4db877c9dc2afac4feab7c84c8cf7043b",
+                "unicorn/arm64_const.py": "92f91a2b0a36cd34deee16db4f8da4ac0c9ae35c3ea1089296e5ef9d170a5be9",
+                "unicorn/arm_const.py": "44fdb7a9f7a9d8c62be07fefaf21e20060813b2a503b6228e378e6bbff7f7b41",
+                "unicorn/lib/libunicorn.so.2": "ddb196ec82b52e502c18e4a34478bf7b9f61c83c2ebaa95c74d8ded45a95da9c",
+                "unicorn/m68k_const.py": "7503e32454751bf66bdf1fcb19dd847537bcf6a5538e18125d8f53d8d448fed9",
+                "unicorn/mips_const.py": "3a04993d82610ea5f492af2d74fa79d849224a044ac0448281033ee331b58dac",
+                "unicorn/ppc_const.py": "154aaa45f947dab3e488e58e74ad99a09c8d772766c561ff92ecb85cdedd61af",
+                "unicorn/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "unicorn/riscv_const.py": "278e10baf05cfb7c8675475081ae7f2d2037616c79cb907d51963aa2c5b490e4",
+                "unicorn/s390x_const.py": "54d7026dd70b5bfca1d02e00e7a58d652eaa974b9ea980ba49ed4b80911b9fde",
+                "unicorn/sparc_const.py": "bcdb0491b6e42c647b104ee53d61610504a97831302dd5280fd2123e05572e95",
+                "unicorn/tricore_const.py": "1b6005a147d77a3fc1ab5c81fc878eeac3b9bb0b68d518e4a4226830d1356c4c",
+                "unicorn/unicorn.py": "e823b17649d0610c6f52b665902ac9dc46962785feebcac8465a0d7c477f25b7",
+                "unicorn/unicorn_const.py": "556c6a27336dc6dd3e0d49348951bde17e1b0f69166f2217773e6b3a7199f45d",
+                "unicorn/unicorn_py2.py": "66e2555d679e4f56a0117c2b8de0895a0a138fa3827e3a8a3621255e348d145a",
+                "unicorn/unicorn_py3/__init__.py": "ee70d3a7de9ea545406d727436ee835f9d644aeb7428f0e4f1510f9190b28726",
+                "unicorn/unicorn_py3/arch/arm.py": "c28693f90d8681c091f0ff92caed0a290350a969ea0a38343bb843a26b726711",
+                "unicorn/unicorn_py3/arch/arm64.py": "62963378864bae452f7cd2a784ddcd64ab6bdc8a6a69e033d48e8faaab0b2515",
+                "unicorn/unicorn_py3/arch/intel.py": "8a04281923b5f4dd65ce5f122e222bd86df3e8efc7eae99086e0d372fd7a1a75",
+                "unicorn/unicorn_py3/arch/types.py": "2e103854e371ef576680073f44ead45b8177a73c450a6125e609b7c54e0bc844",
+                "unicorn/unicorn_py3/unicorn.py": "62ffe84341f4288e309040e06555b81798031817d32fd19a945e250813f872f0",
+                "unicorn/x86_const.py": "3b33c55b97503ab25e8ed8bbe576c1cee693f495df6785b04adc1c8ab47a79c4",
+                "original/manifest.json": "6771cacbf980b981e1297e2d349607967c8990e0df64771321b97c09c5a771dd",
+                "original/mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+                "original/ovl5.cod": "373cbdcade64489c1e53d618eea0d6f411a0b51e70711098592fcb19ce080510",
+                "original/ovl5.rel": "2022c37dd471ec7e7ce1c5d38fec3919f11972365ae0272aef18655ad1192362",
+                "original/resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+                "engine": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9"
+              },
+              "compiler": "Original 16-bit machine code; Unicorn 2.1.4"
+            }
+          ],
+          "execution_seconds": 113.60512650400005,
+          "verification": {
+            "artifact_hashes": true,
+            "python_replay_games": 140,
+            "native_replay_all_states_games": 140,
+            "qt6_review_match": 2
+          }
+        }
+      },
+      "matched_comparisons": {
+        "teacher-context-flag-spy-diagnostic-v1-normal_minus_teacher-context-v1-normal": {
+          "mean": 0.23550724637681159,
+          "paired_95_percent_interval": [
+            0.15217391304347827,
+            0.3188405797101449
+          ],
+          "complete_pairs": 69,
+          "pairs_by_family": {
+            "fortified": 9,
+            "uniform": 10,
+            "unguarded": 10,
+            "forward": 10,
+            "decoy": 10,
+            "presets": 10,
+            "broad-mixed": 10
+          },
+          "control": "teacher-context-v1-normal",
+          "intervention": "teacher-context-flag-spy-diagnostic-v1-normal",
+          "interpretation": "Improvement supported on this cohort."
+        },
+        "teacher-context-truth-diagnostic-v1-normal_minus_teacher-context-v1-normal": {
+          "mean": 0.3607142857142857,
+          "paired_95_percent_interval": [
+            0.2785714285714286,
+            0.44285714285714284
+          ],
+          "complete_pairs": 70,
+          "pairs_by_family": {
+            "fortified": 10,
+            "uniform": 10,
+            "unguarded": 10,
+            "forward": 10,
+            "decoy": 10,
+            "presets": 10,
+            "broad-mixed": 10
+          },
+          "control": "teacher-context-v1-normal",
+          "intervention": "teacher-context-truth-diagnostic-v1-normal",
+          "interpretation": "Improvement supported on this cohort."
+        },
+        "teacher-context-truth-diagnostic-v1-normal_minus_teacher-context-flag-spy-diagnostic-v1-normal": {
+          "mean": 0.12681159420289856,
+          "paired_95_percent_interval": [
+            0.03985507246376811,
+            0.21014492753623187
+          ],
+          "complete_pairs": 69,
+          "pairs_by_family": {
+            "fortified": 9,
+            "uniform": 10,
+            "unguarded": 10,
+            "forward": 10,
+            "decoy": 10,
+            "presets": 10,
+            "broad-mixed": 10
+          },
+          "control": "teacher-context-flag-spy-diagnostic-v1-normal",
+          "intervention": "teacher-context-truth-diagnostic-v1-normal",
+          "interpretation": "Improvement supported on this cohort."
+        }
+      },
+      "analysis_source_sha256": "17dc639bc4a5b3ba2f9a7d7edcf680ae407da490456f17845e8af7915dde849f"
+    },
+    "validation": {
+      "seed": 1941001,
+      "policies": {
+        "teacher-context-v1-normal": {
+          "summary": {
+            "status": "complete",
+            "games": 140,
+            "scored_games": 135,
+            "errors": 5,
+            "standings": {
+              "teacher-context-v1-normal": {
+                "wins": 40,
+                "draws": 0,
+                "losses": 95,
+                "score": 0.2962962962962963
+              },
+              "msdos-1990-v2-normal": {
+                "wins": 95,
+                "draws": 0,
+                "losses": 40,
+                "score": 0.7037037037037037
+              }
+            },
+            "average_plies": 140.87142857142857,
+            "families": {
+              "broad-mixed": {
+                "teacher-context-v1-normal": 0.35,
+                "msdos-1990-v2-normal": 0.65
+              },
+              "decoy": {
+                "teacher-context-v1-normal": 0.4,
+                "msdos-1990-v2-normal": 0.6
+              },
+              "fortified": {
+                "teacher-context-v1-normal": 0.0,
+                "msdos-1990-v2-normal": 1.0
+              },
+              "forward": {
+                "teacher-context-v1-normal": 0.45,
+                "msdos-1990-v2-normal": 0.55
+              },
+              "presets": {
+                "teacher-context-v1-normal": 0.058823529411764705,
+                "msdos-1990-v2-normal": 0.9411764705882353
+              },
+              "unguarded": {
+                "teacher-context-v1-normal": 0.2631578947368421,
+                "msdos-1990-v2-normal": 0.7368421052631579
+              },
+              "uniform": {
+                "teacher-context-v1-normal": 0.5,
+                "msdos-1990-v2-normal": 0.5
+              }
+            },
+            "endings": {
+              "no moves": 5,
+              "flag": 130,
+              "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 5
+            }
+          },
+          "complete_pair_score": {
+            "mean": 0.3076923076923077,
+            "paired_95_percent_interval": [
+              0.24615384615384617,
+              0.36923076923076925
+            ],
+            "complete_pairs": 65,
+            "pairs_by_family": {
+              "fortified": 9,
+              "uniform": 10,
+              "unguarded": 9,
+              "forward": 10,
+              "decoy": 10,
+              "presets": 7,
+              "broad-mixed": 10
+            }
+          },
+          "tournament_sha256": "42d872439506adf58ae85044adfb100ccabf23d720765aa4f8703cf14563308b",
+          "participants": [
+            {
+              "policy": {
+                "id": "teacher-context-v1-normal",
+                "name": "Context Rollout Teacher v1 / Normal",
+                "description": "Eight-world four-ply masked rollout using the guarded student, retaining public root goals, quiet history and piece identities; simulated public events update memory.",
+                "sources": [
+                  "src/native/engine.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_TRACE",
+                  "AI_TRAINING",
+                  "AI_FEATURE_TRACE"
+                ],
+                "difficulty": "normal",
+                "status": "desktop",
+                "include_dirs": [],
+                "archive": "ai/sources/ae77185d660238c8972fcb094c4c900bdbf62c2df1681a7c584859437309a0c8.zip",
+                "source_sha256": "ae77185d660238c8972fcb094c4c900bdbf62c2df1681a7c584859437309a0c8",
+                "driver": "teacher",
+                "teacher_sources": [
+                  "src/native/teacher_rollout.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "teacher_defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_ROLLOUT_CONTEXT"
+                ],
+                "driver_args": [
+                  "--samples",
+                  "8",
+                  "--depth",
+                  "4",
+                  "--blend",
+                  "correction",
+                  "--strategic",
+                  "--context"
+                ]
+              },
+              "recipe_sha256": "a6e278980429ad6e620c7c3b9e25d9b2b97014b20e829efe10c177d8d97b6c9d",
+              "executable_sha256": "ac2fd37e8914b9fcd5e88a32f5f82d01172aaf81110c6fbbee9f107f92a9ec31",
+              "runtime_sha256": {
+                "engine": "ac2fd37e8914b9fcd5e88a32f5f82d01172aaf81110c6fbbee9f107f92a9ec31",
+                "observer": "44cd6aeebedc46cbba92b071e23a8169f93143702bfb2352029ab534dac71141",
+                "teacher": "448e989277967fe06a8a94b98fc1f3b13ee5903d5f38964ffdf6d70dd9f285a0",
+                "teacher_bot.py": "1000dd723e58ef09fb2626a67f6796151c8136bdc915604506ff04a5bdc6fee0",
+                "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+              },
+              "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "policy": {
+                "id": "msdos-1990-v2-normal",
+                "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+                "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+                "sources": [],
+                "defines": [],
+                "difficulty": "normal",
+                "status": "external-reference",
+                "include_dirs": [],
+                "driver": "msdos1990",
+                "driver_args": [
+                  "--level",
+                  "3"
+                ],
+                "emulator_version": "2.1.4",
+                "asset_files": [
+                  "ai/msdos1990/manifest.json",
+                  "ai/msdos1990/mz-header.bin",
+                  "ai/msdos1990/ovl5.cod",
+                  "ai/msdos1990/ovl5.rel",
+                  "ai/msdos1990/resident-image.bin"
+                ],
+                "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+                "requires_opponent_setup": true,
+                "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+                "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+              },
+              "recipe_sha256": "c7e72fffa0f05f0176157ccb579d652dc08b7f33e7a51d83732a21285ab1fc94",
+              "executable_sha256": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9",
+              "runtime_sha256": {
+                "msdos1990.py": "dfbc5dc09fdd6237b70766f8116ee13946aa33a3a27234537c4bbd8aef8cbc02",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+                "unicorn/__init__.py": "9ad32123bca674cf205c308fd4d0d2a4db877c9dc2afac4feab7c84c8cf7043b",
+                "unicorn/arm64_const.py": "92f91a2b0a36cd34deee16db4f8da4ac0c9ae35c3ea1089296e5ef9d170a5be9",
+                "unicorn/arm_const.py": "44fdb7a9f7a9d8c62be07fefaf21e20060813b2a503b6228e378e6bbff7f7b41",
+                "unicorn/lib/libunicorn.so.2": "ddb196ec82b52e502c18e4a34478bf7b9f61c83c2ebaa95c74d8ded45a95da9c",
+                "unicorn/m68k_const.py": "7503e32454751bf66bdf1fcb19dd847537bcf6a5538e18125d8f53d8d448fed9",
+                "unicorn/mips_const.py": "3a04993d82610ea5f492af2d74fa79d849224a044ac0448281033ee331b58dac",
+                "unicorn/ppc_const.py": "154aaa45f947dab3e488e58e74ad99a09c8d772766c561ff92ecb85cdedd61af",
+                "unicorn/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "unicorn/riscv_const.py": "278e10baf05cfb7c8675475081ae7f2d2037616c79cb907d51963aa2c5b490e4",
+                "unicorn/s390x_const.py": "54d7026dd70b5bfca1d02e00e7a58d652eaa974b9ea980ba49ed4b80911b9fde",
+                "unicorn/sparc_const.py": "bcdb0491b6e42c647b104ee53d61610504a97831302dd5280fd2123e05572e95",
+                "unicorn/tricore_const.py": "1b6005a147d77a3fc1ab5c81fc878eeac3b9bb0b68d518e4a4226830d1356c4c",
+                "unicorn/unicorn.py": "e823b17649d0610c6f52b665902ac9dc46962785feebcac8465a0d7c477f25b7",
+                "unicorn/unicorn_const.py": "556c6a27336dc6dd3e0d49348951bde17e1b0f69166f2217773e6b3a7199f45d",
+                "unicorn/unicorn_py2.py": "66e2555d679e4f56a0117c2b8de0895a0a138fa3827e3a8a3621255e348d145a",
+                "unicorn/unicorn_py3/__init__.py": "ee70d3a7de9ea545406d727436ee835f9d644aeb7428f0e4f1510f9190b28726",
+                "unicorn/unicorn_py3/arch/arm.py": "c28693f90d8681c091f0ff92caed0a290350a969ea0a38343bb843a26b726711",
+                "unicorn/unicorn_py3/arch/arm64.py": "62963378864bae452f7cd2a784ddcd64ab6bdc8a6a69e033d48e8faaab0b2515",
+                "unicorn/unicorn_py3/arch/intel.py": "8a04281923b5f4dd65ce5f122e222bd86df3e8efc7eae99086e0d372fd7a1a75",
+                "unicorn/unicorn_py3/arch/types.py": "2e103854e371ef576680073f44ead45b8177a73c450a6125e609b7c54e0bc844",
+                "unicorn/unicorn_py3/unicorn.py": "62ffe84341f4288e309040e06555b81798031817d32fd19a945e250813f872f0",
+                "unicorn/x86_const.py": "3b33c55b97503ab25e8ed8bbe576c1cee693f495df6785b04adc1c8ab47a79c4",
+                "original/manifest.json": "6771cacbf980b981e1297e2d349607967c8990e0df64771321b97c09c5a771dd",
+                "original/mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+                "original/ovl5.cod": "373cbdcade64489c1e53d618eea0d6f411a0b51e70711098592fcb19ce080510",
+                "original/ovl5.rel": "2022c37dd471ec7e7ce1c5d38fec3919f11972365ae0272aef18655ad1192362",
+                "original/resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+                "engine": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9"
+              },
+              "compiler": "Original 16-bit machine code; Unicorn 2.1.4"
+            }
+          ],
+          "execution_seconds": 127.20498170100018,
+          "verification": {
+            "artifact_hashes": true,
+            "python_replay_games": 140,
+            "native_replay_all_states_games": 140,
+            "qt6_review_match": 24
+          }
+        },
+        "teacher-context-flag-spy-diagnostic-v1-normal": {
+          "summary": {
+            "status": "complete",
+            "games": 140,
+            "scored_games": 139,
+            "errors": 1,
+            "standings": {
+              "teacher-context-flag-spy-diagnostic-v1-normal": {
+                "wins": 64,
+                "draws": 4,
+                "losses": 71,
+                "score": 0.4748201438848921
+              },
+              "msdos-1990-v2-normal": {
+                "wins": 71,
+                "draws": 4,
+                "losses": 64,
+                "score": 0.5251798561151079
+              }
+            },
+            "average_plies": 149.88571428571427,
+            "families": {
+              "broad-mixed": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.6,
+                "msdos-1990-v2-normal": 0.4
+              },
+              "decoy": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.6,
+                "msdos-1990-v2-normal": 0.4
+              },
+              "fortified": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.225,
+                "msdos-1990-v2-normal": 0.775
+              },
+              "forward": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.45,
+                "msdos-1990-v2-normal": 0.55
+              },
+              "presets": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.42105263157894735,
+                "msdos-1990-v2-normal": 0.5789473684210527
+              },
+              "unguarded": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.65,
+                "msdos-1990-v2-normal": 0.35
+              },
+              "uniform": {
+                "teacher-context-flag-spy-diagnostic-v1-normal": 0.375,
+                "msdos-1990-v2-normal": 0.625
+              }
+            },
+            "endings": {
+              "flag": 134,
+              "ply limit": 4,
+              "no moves": 1,
+              "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 1
+            }
+          },
+          "complete_pair_score": {
+            "mean": 0.4782608695652174,
+            "paired_95_percent_interval": [
+              0.42028985507246375,
+              0.5398550724637681
+            ],
+            "complete_pairs": 69,
+            "pairs_by_family": {
+              "fortified": 10,
+              "uniform": 10,
+              "unguarded": 10,
+              "forward": 10,
+              "decoy": 10,
+              "presets": 9,
+              "broad-mixed": 10
+            }
+          },
+          "tournament_sha256": "3e6371b4123e4439d4073877c95eac8566584c597284087913a8e43b8500a1a4",
+          "participants": [
+            {
+              "policy": {
+                "id": "teacher-context-flag-spy-diagnostic-v1-normal",
+                "name": "DIAGNOSTIC Context Teacher v1 / Flag and Spy only",
+                "description": "Diagnostic information ablation of Context Teacher v1; only enemy Flag and Spy identities known in addition to public information. Never intended for production or ordinary play.",
+                "sources": [
+                  "src/native/engine.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_TRACE",
+                  "AI_TRAINING",
+                  "AI_FEATURE_TRACE",
+                  "AI_DIAGNOSTIC_TRUTH"
+                ],
+                "difficulty": "normal",
+                "status": "diagnostic",
+                "include_dirs": [],
+                "driver": "teacher",
+                "teacher_sources": [
+                  "src/native/teacher_rollout.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "teacher_defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_ROLLOUT_CONTEXT"
+                ],
+                "driver_args": [
+                  "--samples",
+                  "8",
+                  "--depth",
+                  "4",
+                  "--blend",
+                  "correction",
+                  "--strategic",
+                  "--context",
+                  "--diagnostic-truth",
+                  "--diagnostic-knowledge",
+                  "flag-spy"
+                ],
+                "information_model": "diagnostic-flag-spy",
+                "model": "Unchanged guarded-student production model and bounded rollout correction; information intervention only.",
+                "archive": "ai/sources/ec18008d899a4764d33d62d1a509764194c16f23fb5bc2580d3803ae9637960e.zip",
+                "source_sha256": "ec18008d899a4764d33d62d1a509764194c16f23fb5bc2580d3803ae9637960e"
+              },
+              "recipe_sha256": "6a9265053bc96a2214a5e4b3c9c021a45bf93754bade11ad4e508bb0ad37b6c2",
+              "executable_sha256": "e363ff01d745e4f2e464a705f73827e27990990d8c016f88c21474063791141b",
+              "runtime_sha256": {
+                "engine": "e363ff01d745e4f2e464a705f73827e27990990d8c016f88c21474063791141b",
+                "observer": "9f371abd0f26efe3c3919d13520e04a6543f09abed1dd6d22d65bb44a26d339f",
+                "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+                "teacher_bot.py": "4616bac018730856a11f12637be38bb7493b000b15e156f26a2e6d116eb4804b",
+                "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+              },
+              "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "policy": {
+                "id": "msdos-1990-v2-normal",
+                "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+                "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+                "sources": [],
+                "defines": [],
+                "difficulty": "normal",
+                "status": "external-reference",
+                "include_dirs": [],
+                "driver": "msdos1990",
+                "driver_args": [
+                  "--level",
+                  "3"
+                ],
+                "emulator_version": "2.1.4",
+                "asset_files": [
+                  "ai/msdos1990/manifest.json",
+                  "ai/msdos1990/mz-header.bin",
+                  "ai/msdos1990/ovl5.cod",
+                  "ai/msdos1990/ovl5.rel",
+                  "ai/msdos1990/resident-image.bin"
+                ],
+                "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+                "requires_opponent_setup": true,
+                "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+                "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+              },
+              "recipe_sha256": "c7e72fffa0f05f0176157ccb579d652dc08b7f33e7a51d83732a21285ab1fc94",
+              "executable_sha256": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9",
+              "runtime_sha256": {
+                "msdos1990.py": "dfbc5dc09fdd6237b70766f8116ee13946aa33a3a27234537c4bbd8aef8cbc02",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+                "unicorn/__init__.py": "9ad32123bca674cf205c308fd4d0d2a4db877c9dc2afac4feab7c84c8cf7043b",
+                "unicorn/arm64_const.py": "92f91a2b0a36cd34deee16db4f8da4ac0c9ae35c3ea1089296e5ef9d170a5be9",
+                "unicorn/arm_const.py": "44fdb7a9f7a9d8c62be07fefaf21e20060813b2a503b6228e378e6bbff7f7b41",
+                "unicorn/lib/libunicorn.so.2": "ddb196ec82b52e502c18e4a34478bf7b9f61c83c2ebaa95c74d8ded45a95da9c",
+                "unicorn/m68k_const.py": "7503e32454751bf66bdf1fcb19dd847537bcf6a5538e18125d8f53d8d448fed9",
+                "unicorn/mips_const.py": "3a04993d82610ea5f492af2d74fa79d849224a044ac0448281033ee331b58dac",
+                "unicorn/ppc_const.py": "154aaa45f947dab3e488e58e74ad99a09c8d772766c561ff92ecb85cdedd61af",
+                "unicorn/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "unicorn/riscv_const.py": "278e10baf05cfb7c8675475081ae7f2d2037616c79cb907d51963aa2c5b490e4",
+                "unicorn/s390x_const.py": "54d7026dd70b5bfca1d02e00e7a58d652eaa974b9ea980ba49ed4b80911b9fde",
+                "unicorn/sparc_const.py": "bcdb0491b6e42c647b104ee53d61610504a97831302dd5280fd2123e05572e95",
+                "unicorn/tricore_const.py": "1b6005a147d77a3fc1ab5c81fc878eeac3b9bb0b68d518e4a4226830d1356c4c",
+                "unicorn/unicorn.py": "e823b17649d0610c6f52b665902ac9dc46962785feebcac8465a0d7c477f25b7",
+                "unicorn/unicorn_const.py": "556c6a27336dc6dd3e0d49348951bde17e1b0f69166f2217773e6b3a7199f45d",
+                "unicorn/unicorn_py2.py": "66e2555d679e4f56a0117c2b8de0895a0a138fa3827e3a8a3621255e348d145a",
+                "unicorn/unicorn_py3/__init__.py": "ee70d3a7de9ea545406d727436ee835f9d644aeb7428f0e4f1510f9190b28726",
+                "unicorn/unicorn_py3/arch/arm.py": "c28693f90d8681c091f0ff92caed0a290350a969ea0a38343bb843a26b726711",
+                "unicorn/unicorn_py3/arch/arm64.py": "62963378864bae452f7cd2a784ddcd64ab6bdc8a6a69e033d48e8faaab0b2515",
+                "unicorn/unicorn_py3/arch/intel.py": "8a04281923b5f4dd65ce5f122e222bd86df3e8efc7eae99086e0d372fd7a1a75",
+                "unicorn/unicorn_py3/arch/types.py": "2e103854e371ef576680073f44ead45b8177a73c450a6125e609b7c54e0bc844",
+                "unicorn/unicorn_py3/unicorn.py": "62ffe84341f4288e309040e06555b81798031817d32fd19a945e250813f872f0",
+                "unicorn/x86_const.py": "3b33c55b97503ab25e8ed8bbe576c1cee693f495df6785b04adc1c8ab47a79c4",
+                "original/manifest.json": "6771cacbf980b981e1297e2d349607967c8990e0df64771321b97c09c5a771dd",
+                "original/mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+                "original/ovl5.cod": "373cbdcade64489c1e53d618eea0d6f411a0b51e70711098592fcb19ce080510",
+                "original/ovl5.rel": "2022c37dd471ec7e7ce1c5d38fec3919f11972365ae0272aef18655ad1192362",
+                "original/resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+                "engine": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9"
+              },
+              "compiler": "Original 16-bit machine code; Unicorn 2.1.4"
+            }
+          ],
+          "execution_seconds": 70.52945021800019,
+          "verification": {
+            "artifact_hashes": true,
+            "python_replay_games": 140,
+            "native_replay_all_states_games": 140,
+            "qt6_review_match": 5
+          }
+        },
+        "teacher-context-truth-diagnostic-v1-normal": {
+          "summary": {
+            "status": "complete",
+            "games": 140,
+            "scored_games": 140,
+            "errors": 0,
+            "standings": {
+              "teacher-context-truth-diagnostic-v1-normal": {
+                "wins": 82,
+                "draws": 9,
+                "losses": 49,
+                "score": 0.6178571428571429
+              },
+              "msdos-1990-v2-normal": {
+                "wins": 49,
+                "draws": 9,
+                "losses": 82,
+                "score": 0.3821428571428571
+              }
+            },
+            "average_plies": 157.35,
+            "families": {
+              "broad-mixed": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.6,
+                "msdos-1990-v2-normal": 0.4
+              },
+              "decoy": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.6,
+                "msdos-1990-v2-normal": 0.4
+              },
+              "fortified": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.675,
+                "msdos-1990-v2-normal": 0.325
+              },
+              "forward": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.55,
+                "msdos-1990-v2-normal": 0.45
+              },
+              "presets": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.5,
+                "msdos-1990-v2-normal": 0.5
+              },
+              "unguarded": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.7,
+                "msdos-1990-v2-normal": 0.3
+              },
+              "uniform": {
+                "teacher-context-truth-diagnostic-v1-normal": 0.7,
+                "msdos-1990-v2-normal": 0.3
+              }
+            },
+            "endings": {
+              "flag": 129,
+              "no moves": 2,
+              "ply limit": 9
+            }
+          },
+          "complete_pair_score": {
+            "mean": 0.6178571428571429,
+            "paired_95_percent_interval": [
+              0.5571428571428572,
+              0.6821428571428572
+            ],
+            "complete_pairs": 70,
+            "pairs_by_family": {
+              "fortified": 10,
+              "uniform": 10,
+              "unguarded": 10,
+              "forward": 10,
+              "decoy": 10,
+              "presets": 10,
+              "broad-mixed": 10
+            }
+          },
+          "tournament_sha256": "8f0bf8b73b92578c10d8bef1b52c83c056767023e8d10e012e446c8babacace0",
+          "participants": [
+            {
+              "policy": {
+                "id": "teacher-context-truth-diagnostic-v1-normal",
+                "name": "DIAGNOSTIC Context Teacher v1 / all enemy ranks",
+                "description": "Diagnostic information ablation of Context Teacher v1; all surviving enemy ranks known. Never intended for production or ordinary play.",
+                "sources": [
+                  "src/native/engine.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_TRACE",
+                  "AI_TRAINING",
+                  "AI_FEATURE_TRACE",
+                  "AI_DIAGNOSTIC_TRUTH"
+                ],
+                "difficulty": "normal",
+                "status": "diagnostic",
+                "include_dirs": [],
+                "driver": "teacher",
+                "teacher_sources": [
+                  "src/native/teacher_rollout.c",
+                  "src/core/pieces.c",
+                  "src/core/board.c",
+                  "src/core/rules.c",
+                  "src/core/setup.c",
+                  "src/core/random.c",
+                  "src/core/ai_deploy.c",
+                  "src/core/ai.c",
+                  "src/core/ai_level.c",
+                  "src/core/ai_mission.c",
+                  "src/core/ai_memory.c",
+                  "src/core/ai_student.c"
+                ],
+                "teacher_defines": [
+                  "AI_MISSIONS",
+                  "AI_MEMORY",
+                  "AI_STUDENT",
+                  "AI_STUDENT_V2",
+                  "AI_STUDENT_PRODUCTION",
+                  "AI_STUDENT_COOP_GUARD",
+                  "AI_TEST",
+                  "AI_DIAGNOSTICS",
+                  "AI_ROLLOUT_CONTEXT"
+                ],
+                "driver_args": [
+                  "--samples",
+                  "8",
+                  "--depth",
+                  "4",
+                  "--blend",
+                  "correction",
+                  "--strategic",
+                  "--context",
+                  "--diagnostic-truth",
+                  "--diagnostic-knowledge",
+                  "all"
+                ],
+                "information_model": "diagnostic-full-enemy-ranks",
+                "model": "Unchanged guarded-student production model and bounded rollout correction; information intervention only.",
+                "archive": "ai/sources/ec18008d899a4764d33d62d1a509764194c16f23fb5bc2580d3803ae9637960e.zip",
+                "source_sha256": "ec18008d899a4764d33d62d1a509764194c16f23fb5bc2580d3803ae9637960e"
+              },
+              "recipe_sha256": "193207b13533f045c6e4d54477c6ca68c79b8c3404019f2ac3b03b16382e9a1e",
+              "executable_sha256": "a9518a1253bfd8e0f4f5f58d441b7123fdaa5fb71cbcf86f755d9b926d7c7bd3",
+              "runtime_sha256": {
+                "engine": "a9518a1253bfd8e0f4f5f58d441b7123fdaa5fb71cbcf86f755d9b926d7c7bd3",
+                "observer": "a95cafb128b9eed74dca8b5518c535b29c35b6e1a8e6a8e4d44e8a04d708e715",
+                "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+                "teacher_bot.py": "4616bac018730856a11f12637be38bb7493b000b15e156f26a2e6d116eb4804b",
+                "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+              },
+              "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "policy": {
+                "id": "msdos-1990-v2-normal",
+                "name": "MS-DOS Stratego 1990 v2 / Colonel (fast)",
+                "description": "Original 1990 16-bit AI with fast native-block JIT execution and per-call watchdog. Colonel3; original hidden-rank knowledge retained, Classic referee, common deployments. Exact state/choice parity with v1 checked; not full DOS UI emulation.",
+                "sources": [],
+                "defines": [],
+                "difficulty": "normal",
+                "status": "external-reference",
+                "include_dirs": [],
+                "driver": "msdos1990",
+                "driver_args": [
+                  "--level",
+                  "3"
+                ],
+                "emulator_version": "2.1.4",
+                "asset_files": [
+                  "ai/msdos1990/manifest.json",
+                  "ai/msdos1990/mz-header.bin",
+                  "ai/msdos1990/ovl5.cod",
+                  "ai/msdos1990/ovl5.rel",
+                  "ai/msdos1990/resident-image.bin"
+                ],
+                "information_model": "Original physical-rank access, including hidden Flag/Spy and other original disclosure paths. Opponent initial army supplied only to this reference adapter.",
+                "requires_opponent_setup": true,
+                "archive": "ai/sources/b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f.zip",
+                "source_sha256": "b7d8ddaa9518a1e759143431bf5b4924bfd4e6cb3e82ac5ea9155040b7e9cb8f"
+              },
+              "recipe_sha256": "c7e72fffa0f05f0176157ccb579d652dc08b7f33e7a51d83732a21285ab1fc94",
+              "executable_sha256": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9",
+              "runtime_sha256": {
+                "msdos1990.py": "dfbc5dc09fdd6237b70766f8116ee13946aa33a3a27234537c4bbd8aef8cbc02",
+                "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+                "unicorn/__init__.py": "9ad32123bca674cf205c308fd4d0d2a4db877c9dc2afac4feab7c84c8cf7043b",
+                "unicorn/arm64_const.py": "92f91a2b0a36cd34deee16db4f8da4ac0c9ae35c3ea1089296e5ef9d170a5be9",
+                "unicorn/arm_const.py": "44fdb7a9f7a9d8c62be07fefaf21e20060813b2a503b6228e378e6bbff7f7b41",
+                "unicorn/lib/libunicorn.so.2": "ddb196ec82b52e502c18e4a34478bf7b9f61c83c2ebaa95c74d8ded45a95da9c",
+                "unicorn/m68k_const.py": "7503e32454751bf66bdf1fcb19dd847537bcf6a5538e18125d8f53d8d448fed9",
+                "unicorn/mips_const.py": "3a04993d82610ea5f492af2d74fa79d849224a044ac0448281033ee331b58dac",
+                "unicorn/ppc_const.py": "154aaa45f947dab3e488e58e74ad99a09c8d772766c561ff92ecb85cdedd61af",
+                "unicorn/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "unicorn/riscv_const.py": "278e10baf05cfb7c8675475081ae7f2d2037616c79cb907d51963aa2c5b490e4",
+                "unicorn/s390x_const.py": "54d7026dd70b5bfca1d02e00e7a58d652eaa974b9ea980ba49ed4b80911b9fde",
+                "unicorn/sparc_const.py": "bcdb0491b6e42c647b104ee53d61610504a97831302dd5280fd2123e05572e95",
+                "unicorn/tricore_const.py": "1b6005a147d77a3fc1ab5c81fc878eeac3b9bb0b68d518e4a4226830d1356c4c",
+                "unicorn/unicorn.py": "e823b17649d0610c6f52b665902ac9dc46962785feebcac8465a0d7c477f25b7",
+                "unicorn/unicorn_const.py": "556c6a27336dc6dd3e0d49348951bde17e1b0f69166f2217773e6b3a7199f45d",
+                "unicorn/unicorn_py2.py": "66e2555d679e4f56a0117c2b8de0895a0a138fa3827e3a8a3621255e348d145a",
+                "unicorn/unicorn_py3/__init__.py": "ee70d3a7de9ea545406d727436ee835f9d644aeb7428f0e4f1510f9190b28726",
+                "unicorn/unicorn_py3/arch/arm.py": "c28693f90d8681c091f0ff92caed0a290350a969ea0a38343bb843a26b726711",
+                "unicorn/unicorn_py3/arch/arm64.py": "62963378864bae452f7cd2a784ddcd64ab6bdc8a6a69e033d48e8faaab0b2515",
+                "unicorn/unicorn_py3/arch/intel.py": "8a04281923b5f4dd65ce5f122e222bd86df3e8efc7eae99086e0d372fd7a1a75",
+                "unicorn/unicorn_py3/arch/types.py": "2e103854e371ef576680073f44ead45b8177a73c450a6125e609b7c54e0bc844",
+                "unicorn/unicorn_py3/unicorn.py": "62ffe84341f4288e309040e06555b81798031817d32fd19a945e250813f872f0",
+                "unicorn/x86_const.py": "3b33c55b97503ab25e8ed8bbe576c1cee693f495df6785b04adc1c8ab47a79c4",
+                "original/manifest.json": "6771cacbf980b981e1297e2d349607967c8990e0df64771321b97c09c5a771dd",
+                "original/mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+                "original/ovl5.cod": "373cbdcade64489c1e53d618eea0d6f411a0b51e70711098592fcb19ce080510",
+                "original/ovl5.rel": "2022c37dd471ec7e7ce1c5d38fec3919f11972365ae0272aef18655ad1192362",
+                "original/resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+                "engine": "bfc4110da588b19ebcf83294e78b8c2934903681bad332e90bdb5c7ac88217f9"
+              },
+              "compiler": "Original 16-bit machine code; Unicorn 2.1.4"
+            }
+          ],
+          "execution_seconds": 100.114434996,
+          "verification": {
+            "artifact_hashes": true,
+            "python_replay_games": 140,
+            "native_replay_all_states_games": 140,
+            "qt6_review_match": 1
+          }
+        }
+      },
+      "matched_comparisons": {
+        "teacher-context-flag-spy-diagnostic-v1-normal_minus_teacher-context-v1-normal": {
+          "mean": 0.16538461538461538,
+          "paired_95_percent_interval": [
+            0.08846153846153847,
+            0.24615384615384617
+          ],
+          "complete_pairs": 65,
+          "pairs_by_family": {
+            "fortified": 9,
+            "uniform": 10,
+            "unguarded": 9,
+            "forward": 10,
+            "decoy": 10,
+            "presets": 7,
+            "broad-mixed": 10
+          },
+          "control": "teacher-context-v1-normal",
+          "intervention": "teacher-context-flag-spy-diagnostic-v1-normal",
+          "interpretation": "Improvement supported on this cohort."
+        },
+        "teacher-context-truth-diagnostic-v1-normal_minus_teacher-context-v1-normal": {
+          "mean": 0.3038461538461538,
+          "paired_95_percent_interval": [
+            0.2153846153846154,
+            0.3923076923076923
+          ],
+          "complete_pairs": 65,
+          "pairs_by_family": {
+            "fortified": 9,
+            "uniform": 10,
+            "unguarded": 9,
+            "forward": 10,
+            "decoy": 10,
+            "presets": 7,
+            "broad-mixed": 10
+          },
+          "control": "teacher-context-v1-normal",
+          "intervention": "teacher-context-truth-diagnostic-v1-normal",
+          "interpretation": "Improvement supported on this cohort."
+        },
+        "teacher-context-truth-diagnostic-v1-normal_minus_teacher-context-flag-spy-diagnostic-v1-normal": {
+          "mean": 0.13405797101449277,
+          "paired_95_percent_interval": [
+            0.05434782608695652,
+            0.21014492753623187
+          ],
+          "complete_pairs": 69,
+          "pairs_by_family": {
+            "fortified": 10,
+            "uniform": 10,
+            "unguarded": 10,
+            "forward": 10,
+            "decoy": 10,
+            "presets": 9,
+            "broad-mixed": 10
+          },
+          "control": "teacher-context-flag-spy-diagnostic-v1-normal",
+          "intervention": "teacher-context-truth-diagnostic-v1-normal",
+          "interpretation": "Improvement supported on this cohort."
+        }
+      },
+      "analysis_source_sha256": "17dc639bc4a5b3ba2f9a7d7edcf680ae407da490456f17845e8af7915dde849f"
+    }
+  },
+  "uncertainty": "10000 percentile bootstrap resamples of complete paired blocks within layout families; seed 1940002. Matched differences exclude any pair with an error in either arm. Error-related exclusions may be selective. Pilot is descriptive; conclusions use fresh validation. Intervals are individual comparisons, without multiplicity correction.",
+  "framework_source_sha256": "d368c5aff3239ced2a1b0d2c94141f682a981538fa053a8a424400d4cd823f0c",
+  "analysis_source_sha256": "17dc639bc4a5b3ba2f9a7d7edcf680ae407da490456f17845e8af7915dde849f",
+  "checks": {
+    "tests-context.log": {
+      "sha256": "685c46d0c352bf6abd5d84e33a5728ecc39ef8adb20147d93af90d007dab90f5",
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.146s\n\nOK\n"
+    },
+    "tests-dos-framework.log": {
+      "sha256": "d08f595e5831392b637615538e76f578e319380c436e0670d52b1a587af20b6a",
+      "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 6.665s\n\nOK\n"
+    },
+    "tests-final-audit.log": {
+      "sha256": "8fec3eeda02f872e4cc0b2c80b6e3296b20f6cc922ddd26e30cc4fc319a45aca",
+      "output": "840 attempts verified by Python and native replay; all artifact hashes validated.\n7 unscored errors, all the previously documented original DOS fatal-exit path.\nAll 51 previous policy records and production core files unchanged.\n"
+    },
+    "tests-invariants.log": {
+      "sha256": "b81710d9b029c1d8bb4de3eac6c9428b30b783269f99845e65fdd053767688c3",
+      "output": "All 51 existing policy records unchanged.\nProduction core files unchanged.\nCurrent ordinary native engine rejects diagnostic command:\nid name cx16-feldmarschall\nid author Ivo Filot\nok\nerror unknown command\n"
+    },
+    "tests-native-build.log": {
+      "sha256": "8b8119cd72e88aa02bbe0e08867563a9196ab8b78ffa3b554504848a90318fd0",
+      "output": "mkdir -p build\ngcc -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_PRODUCTION -DAI_STUDENT_COOP_GUARD -Isrc/core -o build/feldmarschall-engine src/native/engine.c src/core/pieces.c src/core/board.c src/core/rules.c src/core/setup.c src/core/random.c src/core/ai.c src/core/ai_level.c src/core/ai_deploy.c src/core/ai_mission.c src/core/ai_memory.c src/core/ai_student.c\n"
+    },
+    "tests-tournaments.log": {
+      "sha256": "2e0a731efdcf4639d6ad97201f795fe8bf3332ee9cea3a7db840f47f1b1b6e85",
+      "output": "...src/native/broken.c:1:2: error: #error deliberate preflight failure\n    1 | #error deliberate preflight failure\n      |  ^~~~~\n......\n----------------------------------------------------------------------\nRan 9 tests in 27.468s\n\nOK\n"
+    },
+    "tests-truth.log": {
+      "sha256": "e0a6ba03cf2f28563f0d6ed8166dfbc8b0576620a565510d0819b547aae4b08c",
+      "output": "....{\"event\": \"progress\", \"completed\": 1, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 2, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 3, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 4, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 1, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 2, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 3, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 4, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 1, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 2, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 3, \"total\": 4}\n{\"event\": \"progress\", \"completed\": 4, \"total\": 4}\n...\n----------------------------------------------------------------------\nRan 7 tests in 39.478s\n\nOK\n"
+    }
+  }
+}

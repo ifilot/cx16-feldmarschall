@@ -1,0 +1,525 @@
+{
+  "candidates": {
+    "teacher-info-lifetime-v1-normal": {
+      "strategy": "Bounded costs for Scouts/Sergeants initiating known losing attacks or newly entering disclosed lethal reach. Preserve their opportunity for a later new disclosure; no reward merely for sacrificing. Other tactical value can override the cost.",
+      "decision": "not_promoted",
+      "reason": "Fresh validation does not support improvement on both predeclared strength endpoints.",
+      "dos_score": {
+        "wins": 78,
+        "draws": 5,
+        "losses": 193,
+        "score": 0.2916666666666667
+      },
+      "dos_errors": 4,
+      "matched_dos_score_difference": {
+        "mean": -0.011111111111111112,
+        "interval_95": [
+          -0.037037037037037035,
+          0.014814814814814815
+        ],
+        "interval_98_3333": [
+          -0.04259259259259259,
+          0.020370370370370372
+        ]
+      },
+      "predecessor_score": {
+        "wins": 75,
+        "draws": 3,
+        "losses": 62,
+        "score": 0.5464285714285714
+      },
+      "predecessor_interval": {
+        "mean": 0.5464285714285714,
+        "interval_95": [
+          0.4928571428571429,
+          0.6035714285714285
+        ],
+        "interval_98_3333": [
+          0.4785714285714286,
+          0.6142857142857143
+        ]
+      },
+      "strength_gate_passed": false,
+      "observed_behavior": {
+        "games": 276,
+        "by_rank": {
+          "5": {
+            "unit_appearances": 1104,
+            "casualties": 386,
+            "zero_disclosure_casualties": 141,
+            "known_enemy_terminal_deaths": 160,
+            "concealed_enemy_attacks": 172,
+            "surviving_target_disclosures": 87,
+            "new_enemy_disclosures": 390,
+            "known_losing_attack_deaths": 8,
+            "probe_next_turn_reached": 85,
+            "probe_target_survived_reply": 84,
+            "favorable_followup_available": 2,
+            "favorable_followup_taken": 1
+          },
+          "6": {
+            "unit_appearances": 1104,
+            "casualties": 423,
+            "zero_disclosure_casualties": 157,
+            "known_enemy_terminal_deaths": 169,
+            "concealed_enemy_attacks": 136,
+            "surviving_target_disclosures": 89,
+            "new_enemy_disclosures": 352,
+            "known_losing_attack_deaths": 4,
+            "probe_next_turn_reached": 89,
+            "probe_target_survived_reply": 87,
+            "favorable_followup_available": 2,
+            "favorable_followup_taken": 2
+          },
+          "8": {
+            "unit_appearances": 2208,
+            "casualties": 1232,
+            "zero_disclosure_casualties": 222,
+            "known_enemy_terminal_deaths": 225,
+            "concealed_enemy_attacks": 723,
+            "surviving_target_disclosures": 582,
+            "new_enemy_disclosures": 1061,
+            "known_losing_attack_deaths": 6,
+            "probe_next_turn_reached": 574,
+            "probe_target_survived_reply": 573,
+            "favorable_followup_available": 4,
+            "favorable_followup_taken": 3
+          }
+        },
+        "weak": {
+          "unit_appearances": 4416,
+          "casualties": 2041,
+          "zero_disclosure_casualties": 520,
+          "known_enemy_terminal_deaths": 554,
+          "concealed_enemy_attacks": 1031,
+          "surviving_target_disclosures": 758,
+          "new_enemy_disclosures": 1803,
+          "known_losing_attack_deaths": 18,
+          "probe_next_turn_reached": 748,
+          "probe_target_survived_reply": 744,
+          "favorable_followup_available": 8,
+          "favorable_followup_taken": 6
+        },
+        "miners_lost": 521,
+        "own_weak_moves": 6338,
+        "own_moves": 19923,
+        "plies": 39905,
+        "per_game": {
+          "new_enemy_disclosures": 6.532608695652174,
+          "zero_disclosure_casualties": 1.8840579710144927,
+          "known_losing_attack_deaths": 0.06521739130434782,
+          "casualties": 7.394927536231884
+        },
+        "disclosures_per_100_weak_moves": 28.44745976648785,
+        "fraction_casualties_without_personal_disclosure": 0.25477707006369427
+      },
+      "behavior_difference": {
+        "score": {
+          "mean": -0.011111111111111112,
+          "interval_95": [
+            -0.037037037037037035,
+            0.014814814814814815
+          ],
+          "interval_98_3333": [
+            -0.04259259259259259,
+            0.020370370370370372
+          ]
+        },
+        "new_enemy_disclosures": {
+          "mean": 0.07037037037037037,
+          "interval_95": [
+            -0.11481481481481481,
+            0.26296296296296295
+          ],
+          "interval_98_3333": [
+            -0.15185185185185185,
+            0.3
+          ]
+        },
+        "zero_disclosure_casualties": {
+          "mean": -0.11481481481481481,
+          "interval_95": [
+            -0.24444444444444444,
+            0.018518518518518517
+          ],
+          "interval_98_3333": [
+            -0.2740740740740741,
+            0.05185185185185185
+          ]
+        },
+        "known_losing_attack_deaths": {
+          "mean": -0.1259259259259259,
+          "interval_95": [
+            -0.18518518518518517,
+            -0.07037037037037037
+          ],
+          "interval_98_3333": [
+            -0.2,
+            -0.05925925925925926
+          ]
+        },
+        "casualties": {
+          "mean": -0.05555555555555555,
+          "interval_95": [
+            -0.25925925925925924,
+            0.14444444444444443
+          ],
+          "interval_98_3333": [
+            -0.3,
+            0.18888888888888888
+          ]
+        }
+      }
+    },
+    "teacher-info-corridor-v1-normal": {
+      "strategy": "Route expendable Scouts/Sergeants/Lieutenants to uncertain Flag-region screens supported by an accessible combat unit/Miner. Uses public candidate masks and weak positional priors, not true Flag position.",
+      "decision": "not_promoted",
+      "reason": "Fresh validation does not support improvement on both predeclared strength endpoints.",
+      "dos_score": {
+        "wins": 64,
+        "draws": 3,
+        "losses": 207,
+        "score": 0.23905109489051096
+      },
+      "dos_errors": 6,
+      "matched_dos_score_difference": {
+        "mean": -0.06628787878787878,
+        "interval_95": [
+          -0.11553030303030302,
+          -0.01893939393939394
+        ],
+        "interval_98_3333": [
+          -0.1268939393939394,
+          -0.00946969696969697
+        ]
+      },
+      "predecessor_score": {
+        "wins": 68,
+        "draws": 1,
+        "losses": 71,
+        "score": 0.48928571428571427
+      },
+      "predecessor_interval": {
+        "mean": 0.48928571428571427,
+        "interval_95": [
+          0.4357142857142857,
+          0.5428571428571428
+        ],
+        "interval_98_3333": [
+          0.42142857142857143,
+          0.5571428571428572
+        ]
+      },
+      "strength_gate_passed": false,
+      "observed_behavior": {
+        "games": 274,
+        "by_rank": {
+          "5": {
+            "unit_appearances": 1096,
+            "casualties": 393,
+            "zero_disclosure_casualties": 146,
+            "known_enemy_terminal_deaths": 157,
+            "concealed_enemy_attacks": 153,
+            "surviving_target_disclosures": 82,
+            "new_enemy_disclosures": 391,
+            "known_losing_attack_deaths": 14,
+            "probe_next_turn_reached": 81,
+            "probe_target_survived_reply": 81,
+            "favorable_followup_available": 1,
+            "favorable_followup_taken": 0
+          },
+          "6": {
+            "unit_appearances": 1096,
+            "casualties": 463,
+            "zero_disclosure_casualties": 156,
+            "known_enemy_terminal_deaths": 161,
+            "concealed_enemy_attacks": 149,
+            "surviving_target_disclosures": 98,
+            "new_enemy_disclosures": 413,
+            "known_losing_attack_deaths": 40,
+            "probe_next_turn_reached": 98,
+            "probe_target_survived_reply": 96,
+            "favorable_followup_available": 2,
+            "favorable_followup_taken": 1
+          },
+          "8": {
+            "unit_appearances": 2192,
+            "casualties": 1237,
+            "zero_disclosure_casualties": 223,
+            "known_enemy_terminal_deaths": 224,
+            "concealed_enemy_attacks": 699,
+            "surviving_target_disclosures": 576,
+            "new_enemy_disclosures": 1054,
+            "known_losing_attack_deaths": 19,
+            "probe_next_turn_reached": 571,
+            "probe_target_survived_reply": 571,
+            "favorable_followup_available": 1,
+            "favorable_followup_taken": 0
+          }
+        },
+        "weak": {
+          "unit_appearances": 4384,
+          "casualties": 2093,
+          "zero_disclosure_casualties": 525,
+          "known_enemy_terminal_deaths": 542,
+          "concealed_enemy_attacks": 1001,
+          "surviving_target_disclosures": 756,
+          "new_enemy_disclosures": 1858,
+          "known_losing_attack_deaths": 73,
+          "probe_next_turn_reached": 750,
+          "probe_target_survived_reply": 748,
+          "favorable_followup_available": 4,
+          "favorable_followup_taken": 1
+        },
+        "miners_lost": 525,
+        "own_weak_moves": 6374,
+        "own_moves": 20360,
+        "plies": 40793,
+        "per_game": {
+          "new_enemy_disclosures": 6.781021897810219,
+          "zero_disclosure_casualties": 1.916058394160584,
+          "known_losing_attack_deaths": 0.2664233576642336,
+          "casualties": 7.638686131386861
+        },
+        "disclosures_per_100_weak_moves": 29.149670536554755,
+        "fraction_casualties_without_personal_disclosure": 0.2508361204013378
+      },
+      "behavior_difference": {
+        "score": {
+          "mean": -0.06628787878787878,
+          "interval_95": [
+            -0.11553030303030302,
+            -0.01893939393939394
+          ],
+          "interval_98_3333": [
+            -0.1268939393939394,
+            -0.00946969696969697
+          ]
+        },
+        "new_enemy_disclosures": {
+          "mean": 0.3787878787878788,
+          "interval_95": [
+            0.09848484848484848,
+            0.6628787878787878
+          ],
+          "interval_98_3333": [
+            0.03787878787878788,
+            0.7234848484848485
+          ]
+        },
+        "zero_disclosure_casualties": {
+          "mean": -0.06439393939393939,
+          "interval_95": [
+            -0.2537878787878788,
+            0.12121212121212122
+          ],
+          "interval_98_3333": [
+            -0.29545454545454547,
+            0.16287878787878787
+          ]
+        },
+        "known_losing_attack_deaths": {
+          "mean": 0.06060606060606061,
+          "interval_95": [
+            -0.015151515151515152,
+            0.13636363636363635
+          ],
+          "interval_98_3333": [
+            -0.03409090909090909,
+            0.15151515151515152
+          ]
+        },
+        "casualties": {
+          "mean": 0.2689393939393939,
+          "interval_95": [
+            -0.022727272727272728,
+            0.5606060606060606
+          ],
+          "interval_98_3333": [
+            -0.08333333333333333,
+            0.625
+          ]
+        }
+      }
+    },
+    "teacher-info-followthrough-v1-normal": {
+      "strategy": "Charge expendable hidden-target attacks an information-opportunity budget. Credit only conditional attack/abstention decisions robust to one enemy response, including escape, loss of beneficiary, recapture, and terminal Flag loss.",
+      "decision": "not_promoted",
+      "reason": "Fresh validation does not support improvement on both predeclared strength endpoints.",
+      "dos_score": {
+        "wins": 71,
+        "draws": 6,
+        "losses": 200,
+        "score": 0.26714801444043323
+      },
+      "dos_errors": 3,
+      "matched_dos_score_difference": {
+        "mean": -0.03888888888888889,
+        "interval_95": [
+          -0.07777777777777778,
+          0.001851851851851852
+        ],
+        "interval_98_3333": [
+          -0.08703703703703704,
+          0.011111111111111112
+        ]
+      },
+      "predecessor_score": {
+        "wins": 75,
+        "draws": 0,
+        "losses": 65,
+        "score": 0.5357142857142857
+      },
+      "predecessor_interval": {
+        "mean": 0.5357142857142857,
+        "interval_95": [
+          0.4785714285714286,
+          0.5928571428571429
+        ],
+        "interval_98_3333": [
+          0.4642857142857143,
+          0.6071428571428571
+        ]
+      },
+      "strength_gate_passed": false,
+      "observed_behavior": {
+        "games": 277,
+        "by_rank": {
+          "5": {
+            "unit_appearances": 1108,
+            "casualties": 381,
+            "zero_disclosure_casualties": 130,
+            "known_enemy_terminal_deaths": 142,
+            "concealed_enemy_attacks": 139,
+            "surviving_target_disclosures": 69,
+            "new_enemy_disclosures": 399,
+            "known_losing_attack_deaths": 10,
+            "probe_next_turn_reached": 65,
+            "probe_target_survived_reply": 65,
+            "favorable_followup_available": 0,
+            "favorable_followup_taken": 0
+          },
+          "6": {
+            "unit_appearances": 1108,
+            "casualties": 413,
+            "zero_disclosure_casualties": 165,
+            "known_enemy_terminal_deaths": 179,
+            "concealed_enemy_attacks": 104,
+            "surviving_target_disclosures": 62,
+            "new_enemy_disclosures": 325,
+            "known_losing_attack_deaths": 29,
+            "probe_next_turn_reached": 62,
+            "probe_target_survived_reply": 62,
+            "favorable_followup_available": 0,
+            "favorable_followup_taken": 0
+          },
+          "8": {
+            "unit_appearances": 2216,
+            "casualties": 1267,
+            "zero_disclosure_casualties": 271,
+            "known_enemy_terminal_deaths": 272,
+            "concealed_enemy_attacks": 673,
+            "surviving_target_disclosures": 537,
+            "new_enemy_disclosures": 1048,
+            "known_losing_attack_deaths": 15,
+            "probe_next_turn_reached": 532,
+            "probe_target_survived_reply": 530,
+            "favorable_followup_available": 0,
+            "favorable_followup_taken": 0
+          }
+        },
+        "weak": {
+          "unit_appearances": 4432,
+          "casualties": 2061,
+          "zero_disclosure_casualties": 566,
+          "known_enemy_terminal_deaths": 593,
+          "concealed_enemy_attacks": 916,
+          "surviving_target_disclosures": 668,
+          "new_enemy_disclosures": 1772,
+          "known_losing_attack_deaths": 54,
+          "probe_next_turn_reached": 659,
+          "probe_target_survived_reply": 657,
+          "favorable_followup_available": 0,
+          "favorable_followup_taken": 0
+        },
+        "miners_lost": 533,
+        "own_weak_moves": 6790,
+        "own_moves": 21096,
+        "plies": 42257,
+        "per_game": {
+          "new_enemy_disclosures": 6.397111913357401,
+          "zero_disclosure_casualties": 2.0433212996389893,
+          "known_losing_attack_deaths": 0.19494584837545126,
+          "casualties": 7.44043321299639
+        },
+        "disclosures_per_100_weak_moves": 26.09720176730486,
+        "fraction_casualties_without_personal_disclosure": 0.27462396894711305
+      },
+      "behavior_difference": {
+        "score": {
+          "mean": -0.03888888888888889,
+          "interval_95": [
+            -0.07777777777777778,
+            0.001851851851851852
+          ],
+          "interval_98_3333": [
+            -0.08703703703703704,
+            0.011111111111111112
+          ]
+        },
+        "new_enemy_disclosures": {
+          "mean": -0.037037037037037035,
+          "interval_95": [
+            -0.24444444444444444,
+            0.17037037037037037
+          ],
+          "interval_98_3333": [
+            -0.28888888888888886,
+            0.21481481481481482
+          ]
+        },
+        "zero_disclosure_casualties": {
+          "mean": 0.1037037037037037,
+          "interval_95": [
+            -0.022222222222222223,
+            0.22592592592592592
+          ],
+          "interval_98_3333": [
+            -0.05185185185185185,
+            0.2518518518518518
+          ]
+        },
+        "known_losing_attack_deaths": {
+          "mean": -0.003703703703703704,
+          "interval_95": [
+            -0.05555555555555555,
+            0.044444444444444446
+          ],
+          "interval_98_3333": [
+            -0.06666666666666667,
+            0.05555555555555555
+          ]
+        },
+        "casualties": {
+          "mean": 0.06296296296296296,
+          "interval_95": [
+            -0.1259259259259259,
+            0.24814814814814815
+          ],
+          "interval_98_3333": [
+            -0.17037037037037037,
+            0.29259259259259257
+          ]
+        }
+      }
+    }
+  },
+  "baseline_dos_score": {
+    "wins": 80,
+    "draws": 7,
+    "losses": 191,
+    "score": 0.30035971223021585
+  },
+  "conclusion": "None of these three fixed fair strategies establishes a strength improvement. Preserving investigators reduces knowingly losing weak attacks; corridor reconnaissance increases disclosures but reduces DOS score. This tests these specific root heuristics, not the value of information in general.",
+  "limits": "DOS retains its original hidden-rank access. Scored rates omit errors; paired comparisons omit entire pairs affected in either arm. Counts of deaths without personal disclosures do not prove mistakes. No policy or parameter changes followed pilot results. Production unchanged."
+}

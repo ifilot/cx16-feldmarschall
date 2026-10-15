@@ -1,0 +1,20 @@
+{
+  "roots": 280,
+  "nonwinning_roots": 280,
+  "temperature_top_tier_mass": {
+    "2": 0.8595820584391825,
+    "4": 0.7323954547240025,
+    "8": 0.5468915837461757,
+    "16": 0.34922552315167654,
+    "32": 0.20831529890384057,
+    "64": 0.12609296469341702
+  },
+  "selected_temperature": 2,
+  "control_mean_kl": 7.597953136039046,
+  "target_mean_kl": 3.798976568019523,
+  "selected_kl_budget": 1.0,
+  "settings_sha256": {
+    "native-root-probability-control-v1.json": "f5192c8413270d1e2060c0cdb742ff9e611fa6ea335240e5414bdfcc8fd0f6ea",
+    "native-root-kl-restrained-v1.json": "97a1f9725066e46dcbf595e66a3b18aea168321984ab22727d44a84e3c28eeca"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 57,
+  "new_policies": [
+    "teacher-probability-control-v1-normal",
+    "teacher-kl-restrained-v1-normal"
+  ],
+  "settings_differ_only_in_constraint": true,
+  "development_public_roots": 280,
+  "exact_frozen_parent_parity_roots": 140,
+  "original_sampler_eight_worlds": true,
+  "unchanged_four_ply_search": true,
+  "separate_selection_rng": true,
+  "runtime_hashes_reproduced_from_clean_archives": true,
+  "validation_games": 2100,
+  "replayed_validation_states": 339625,
+  "unscored_original_dos_errors": 26,
+  "fresh_cohorts": true,
+  "matched_dos_armies_and_seeds": true,
+  "matched_head_armies_and_seeds": true,
+  "qt6_validation_captures": 6,
+  "development_games_replayed": 140,
+  "original_flag_spy_knowledge_rechecked_both_orientations": true,
+  "mechanism_supported": false,
+  "practical_gain_supported": false,
+  "strength_gate_passed": false
+}

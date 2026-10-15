@@ -1,0 +1,6 @@
+Running teacher-context-v1-normal
+Verified teacher-context-v1-normal {'wins': 72, 'draws': 6, 'losses': 198, 'score': 0.2717391304347826}
+Running teacher-context-flag-diagnostic-v1-normal
+Verified teacher-context-flag-diagnostic-v1-normal {'wins': 119, 'draws': 7, 'losses': 153, 'score': 0.4390681003584229}
+Running teacher-context-flag-spy-diagnostic-v1-normal
+Verified teacher-context-flag-spy-diagnostic-v1-normal {'wins': 113, 'draws': 7, 'losses': 158, 'score': 0.41906474820143885}

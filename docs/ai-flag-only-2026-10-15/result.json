@@ -1,0 +1,132 @@
+{
+  "question": "How well does the unchanged Context Teacher play against original DOS when only the enemy Flag is identified, while the Spy and other concealed ranks remain unknown?",
+  "standings": {
+    "baseline": {
+      "wins": 72,
+      "draws": 6,
+      "losses": 198,
+      "score": 0.2717391304347826
+    },
+    "candidate": {
+      "wins": 119,
+      "draws": 7,
+      "losses": 153,
+      "score": 0.4390681003584229
+    },
+    "flag_spy": {
+      "wins": 113,
+      "draws": 7,
+      "losses": 158,
+      "score": 0.41906474820143885
+    }
+  },
+  "comparisons": {
+    "flag_minus_honest": {
+      "complete_pairs": 135,
+      "pairs_by_family": {
+        "fortified": 19,
+        "uniform": 20,
+        "unguarded": 20,
+        "forward": 20,
+        "decoy": 20,
+        "presets": 16,
+        "broad-mixed": 20
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.1537037037037037,
+          "interval_95": [
+            0.10185185185185185,
+            0.20555555555555555
+          ],
+          "interval_98_3333": [
+            0.09074074074074075,
+            0.21851851851851853
+          ]
+        }
+      }
+    },
+    "flag_spy_minus_flag": {
+      "complete_pairs": 137,
+      "pairs_by_family": {
+        "fortified": 19,
+        "uniform": 20,
+        "unguarded": 20,
+        "forward": 20,
+        "decoy": 20,
+        "presets": 18,
+        "broad-mixed": 20
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.014598540145985401,
+          "interval_95": [
+            -0.058394160583941604,
+            0.03102189781021898
+          ],
+          "interval_98_3333": [
+            -0.06751824817518248,
+            0.040145985401459854
+          ]
+        }
+      }
+    },
+    "flag_spy_minus_honest": {
+      "complete_pairs": 135,
+      "pairs_by_family": {
+        "fortified": 20,
+        "uniform": 20,
+        "unguarded": 20,
+        "forward": 20,
+        "decoy": 20,
+        "presets": 15,
+        "broad-mixed": 20
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.14629629629629629,
+          "interval_95": [
+            0.09259259259259259,
+            0.2
+          ],
+          "interval_98_3333": [
+            0.08148148148148149,
+            0.2111111111111111
+          ]
+        }
+      }
+    }
+  },
+  "paired_effects_percentage_points": {
+    "flag_minus_honest": {
+      "mean": 15.37037037037037,
+      "interval_95": [
+        10.185185185185185,
+        20.555555555555554
+      ],
+      "complete_pairs": 135
+    },
+    "flag_spy_minus_flag": {
+      "mean": -1.4598540145985401,
+      "interval_95": [
+        -5.839416058394161,
+        3.102189781021898
+      ],
+      "complete_pairs": 137
+    },
+    "flag_spy_minus_honest": {
+      "mean": 14.629629629629628,
+      "interval_95": [
+        9.25925925925926,
+        20.0
+      ],
+      "complete_pairs": 135
+    }
+  },
+  "attempts": 840,
+  "unscored_errors": 7,
+  "primary_flag_gain_supported": true,
+  "incremental_spy_gain_supported": false,
+  "production": "Unchanged; Flag-only policy remains explicitly diagnostic.",
+  "limits": "This is a privileged-information diagnostic, not an honest production strategy. Flag identification also activates known-piece heuristics. It does not remove original DOS privilege or estimate its causal contribution. Fresh Flag+Spy results replace comparisons across different historical cohorts."
+}

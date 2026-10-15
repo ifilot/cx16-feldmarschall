@@ -187,7 +187,7 @@ preserved by `new`, `think`, and AI history resets.
 
 ## Original DOS reference extension
 
-Only policies explicitly registered with `driver=msdos1990` receive
+Policies explicitly registered with `driver=msdos1990` receive
 `opponent-setup <40 glyphs>` after their ordinary `setup`. This supplies the
 physical board expected by the original software, including its privileged
 rank access. Standard Feldmarschall policies never receive this extension.
@@ -195,3 +195,17 @@ DOS public notifications are followed by `isready` / `readyok` so an original
 execution error is recorded at the event that triggers it. Such failures are
 unscored schema-2 tournament records, not draws or losses. Terminal Flag
 captures end the match before further AI notification is necessary.
+
+The information pilot also grants this extension to teacher policies explicitly
+registered with `information_model=diagnostic-flag`, `diagnostic-flag-spy` or
+`diagnostic-full-enemy-ranks` and the `--diagnostic-truth` adapter argument.
+The adapter tracks the physical position from both setups and public events.
+An observer compiled with `AI_DIAGNOSTIC_TRUTH` accepts `diagnostic-flag`,
+`diagnostic-flag-spy` or `diagnostic-truth` followed by 100 physical board bytes in hexadecimal.
+It checks occupancy, ownership and own ranks before making the selected enemy
+ranks known. Flag-only mode identifies only the Flag and leaves the hidden Spy
+masked. Flag/Spy mode retains public disclosures and masks other private
+ranks. These are diagnostic policies, not production upgrades; Qt6 labels
+their extra knowledge. Simulated opponent policies retain their ordinary
+masked views of our army. The legacy worker field `original_dos_setup` also
+carries this explicitly granted diagnostic setup and notification acknowledgment.

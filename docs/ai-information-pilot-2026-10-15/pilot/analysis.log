@@ -1,0 +1,3 @@
+Verified pilot teacher-context-v1-normal {'wins': 44, 'draws': 1, 'losses': 95, 'score': 0.31785714285714284} errors 0
+Verified pilot teacher-context-flag-spy-diagnostic-v1-normal {'wins': 75, 'draws': 2, 'losses': 62, 'score': 0.5467625899280576} errors 1
+Verified pilot teacher-context-truth-diagnostic-v1-normal {'wins': 88, 'draws': 14, 'losses': 38, 'score': 0.6785714285714286} errors 0

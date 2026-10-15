@@ -1,0 +1,1760 @@
+{
+  "kind": "forced-public-prefix-parent-parity-diagnostic",
+  "strength_evidence": false,
+  "passed": true,
+  "tested_decisions": 140,
+  "orientations": {
+    "0": 70,
+    "1": 70
+  },
+  "families": {
+    "broad-mixed": 20,
+    "decoy": 20,
+    "fortified": 20,
+    "forward": 20,
+    "presets": 20,
+    "unguarded": 20,
+    "uniform": 20
+  },
+  "samples": 8,
+  "depth": 4,
+  "blend": "correction",
+  "strategic": true,
+  "context": true,
+  "information_strategy": null,
+  "compared": "chosen action, entire last_report, root public board and strategic context",
+  "public_input": "own setup and public moves/battles only; no enemy setup",
+  "tournament": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-calibrated-beliefs-2026-10-15/development.fmtour",
+  "tournament_sha256": "253d062f15e167d8c03f0f998a4714663273e5a691bdc23bb59df596006b599c",
+  "baseline": "teacher-context-v1-normal",
+  "candidate_parent": "teacher-context-flag-diagnostic-v1-normal",
+  "allowed_extra_defines": [
+    "AI_DIAGNOSTIC_TRUTH"
+  ],
+  "actual_extra_defines": [
+    "AI_DIAGNOSTIC_TRUTH"
+  ],
+  "native_receipts": [
+    {
+      "policy": {
+        "id": "teacher-context-v1-normal",
+        "name": "Context Rollout Teacher v1 / Normal",
+        "description": "Eight-world four-ply masked rollout using the guarded student, retaining public root goals, quiet history and piece identities; simulated public events update memory.",
+        "sources": [
+          "src/native/engine.c",
+          "src/core/pieces.c",
+          "src/core/board.c",
+          "src/core/rules.c",
+          "src/core/setup.c",
+          "src/core/random.c",
+          "src/core/ai_deploy.c",
+          "src/core/ai.c",
+          "src/core/ai_level.c",
+          "src/core/ai_mission.c",
+          "src/core/ai_memory.c",
+          "src/core/ai_student.c"
+        ],
+        "defines": [
+          "AI_MISSIONS",
+          "AI_MEMORY",
+          "AI_STUDENT",
+          "AI_STUDENT_V2",
+          "AI_STUDENT_PRODUCTION",
+          "AI_STUDENT_COOP_GUARD",
+          "AI_TEST",
+          "AI_DIAGNOSTICS",
+          "AI_TRACE",
+          "AI_TRAINING",
+          "AI_FEATURE_TRACE"
+        ],
+        "difficulty": "normal",
+        "status": "desktop",
+        "include_dirs": [],
+        "archive": "ai/sources/ae77185d660238c8972fcb094c4c900bdbf62c2df1681a7c584859437309a0c8.zip",
+        "source_sha256": "ae77185d660238c8972fcb094c4c900bdbf62c2df1681a7c584859437309a0c8",
+        "driver": "teacher",
+        "teacher_sources": [
+          "src/native/teacher_rollout.c",
+          "src/core/pieces.c",
+          "src/core/board.c",
+          "src/core/rules.c",
+          "src/core/setup.c",
+          "src/core/random.c",
+          "src/core/ai_deploy.c",
+          "src/core/ai.c",
+          "src/core/ai_level.c",
+          "src/core/ai_mission.c",
+          "src/core/ai_memory.c",
+          "src/core/ai_student.c"
+        ],
+        "teacher_defines": [
+          "AI_MISSIONS",
+          "AI_MEMORY",
+          "AI_STUDENT",
+          "AI_STUDENT_V2",
+          "AI_STUDENT_PRODUCTION",
+          "AI_STUDENT_COOP_GUARD",
+          "AI_TEST",
+          "AI_DIAGNOSTICS",
+          "AI_ROLLOUT_CONTEXT"
+        ],
+        "driver_args": [
+          "--samples",
+          "8",
+          "--depth",
+          "4",
+          "--blend",
+          "correction",
+          "--strategic",
+          "--context"
+        ]
+      },
+      "recipe_sha256": "a6e278980429ad6e620c7c3b9e25d9b2b97014b20e829efe10c177d8d97b6c9d",
+      "executable_sha256": "ac2fd37e8914b9fcd5e88a32f5f82d01172aaf81110c6fbbee9f107f92a9ec31",
+      "runtime_sha256": {
+        "engine": "ac2fd37e8914b9fcd5e88a32f5f82d01172aaf81110c6fbbee9f107f92a9ec31",
+        "observer": "44cd6aeebedc46cbba92b071e23a8169f93143702bfb2352029ab534dac71141",
+        "teacher": "448e989277967fe06a8a94b98fc1f3b13ee5903d5f38964ffdf6d70dd9f285a0",
+        "teacher_bot.py": "1000dd723e58ef09fb2626a67f6796151c8136bdc915604506ff04a5bdc6fee0",
+        "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+      },
+      "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    },
+    {
+      "policy": {
+        "id": "teacher-context-flag-diagnostic-v1-normal",
+        "name": "DIAGNOSTIC Flag-only Context Teacher v1 / Normal",
+        "description": "Privileged-information ablation: identify only enemy Flag, leaving Spy and every other concealed rank masked. Original Context Teacher search unchanged.",
+        "sources": [
+          "src/native/engine.c",
+          "src/core/pieces.c",
+          "src/core/board.c",
+          "src/core/rules.c",
+          "src/core/setup.c",
+          "src/core/random.c",
+          "src/core/ai_deploy.c",
+          "src/core/ai.c",
+          "src/core/ai_level.c",
+          "src/core/ai_mission.c",
+          "src/core/ai_memory.c",
+          "src/core/ai_student.c"
+        ],
+        "defines": [
+          "AI_MISSIONS",
+          "AI_MEMORY",
+          "AI_STUDENT",
+          "AI_STUDENT_V2",
+          "AI_STUDENT_PRODUCTION",
+          "AI_STUDENT_COOP_GUARD",
+          "AI_TEST",
+          "AI_DIAGNOSTICS",
+          "AI_TRACE",
+          "AI_TRAINING",
+          "AI_FEATURE_TRACE",
+          "AI_DIAGNOSTIC_TRUTH"
+        ],
+        "difficulty": "normal",
+        "status": "diagnostic",
+        "include_dirs": [],
+        "driver": "teacher",
+        "teacher_sources": [
+          "src/native/teacher_rollout.c",
+          "src/core/pieces.c",
+          "src/core/board.c",
+          "src/core/rules.c",
+          "src/core/setup.c",
+          "src/core/random.c",
+          "src/core/ai_deploy.c",
+          "src/core/ai.c",
+          "src/core/ai_level.c",
+          "src/core/ai_mission.c",
+          "src/core/ai_memory.c",
+          "src/core/ai_student.c"
+        ],
+        "teacher_defines": [
+          "AI_MISSIONS",
+          "AI_MEMORY",
+          "AI_STUDENT",
+          "AI_STUDENT_V2",
+          "AI_STUDENT_PRODUCTION",
+          "AI_STUDENT_COOP_GUARD",
+          "AI_TEST",
+          "AI_DIAGNOSTICS",
+          "AI_ROLLOUT_CONTEXT"
+        ],
+        "driver_args": [
+          "--samples",
+          "8",
+          "--depth",
+          "4",
+          "--blend",
+          "correction",
+          "--strategic",
+          "--context",
+          "--diagnostic-truth",
+          "--diagnostic-knowledge",
+          "flag"
+        ],
+        "information_model": "diagnostic-flag",
+        "model": "Unchanged Context Teacher v1 guarded student, eight worlds and four-ply masked continuation; Flag-only disclosure intervention.",
+        "archive": "ai/sources/72f221065c3a391f17e56d5fd20db683d60854f1e411210fd21891060ee6e2cb.zip",
+        "source_sha256": "72f221065c3a391f17e56d5fd20db683d60854f1e411210fd21891060ee6e2cb"
+      },
+      "recipe_sha256": "8bd648efb927a0dcb645f8c83957586a820359d6ba3512eb26394045cc816f85",
+      "executable_sha256": "99ccb34c3f3bc1ae98e953afddf3dfe1d28f7648219f8989a3e5d678ea67cd37",
+      "runtime_sha256": {
+        "engine": "99ccb34c3f3bc1ae98e953afddf3dfe1d28f7648219f8989a3e5d678ea67cd37",
+        "observer": "b4ad8bdd0077e31e53ebd23632030097116ac84e4401230f446ffff4567dccaf",
+        "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+        "teacher_bot.py": "3c2834e07d0d5688246255bfc582bf53a10e72f8da68edae34a75f9c63955f0f",
+        "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+      },
+      "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    }
+  ],
+  "decisions": [
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 80,
+      "selected": [
+        50,
+        51
+      ],
+      "report_sha256": "bcf678f52ff9a124b806ee6f74096c8e0f2247cabeb5b0b2e7b64e7e3ce5919f"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 148,
+      "selected": [
+        98,
+        97
+      ],
+      "report_sha256": "5412491708b9dcf6e89ca270a6a067274775218bf97b101cbcc81c7624e9d9f3"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 182,
+      "selected": [
+        51,
+        61
+      ],
+      "report_sha256": "ff57c30d7ca2f10c944b10e27c173adfc8c6cb0bdcba4b81511935dda9008601"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 226,
+      "selected": [
+        94,
+        93
+      ],
+      "report_sha256": "83d75dd104ba15d920424fb7efb986443e9fd62dd2eddd9c9f8f6dfe811558d4"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 228,
+      "selected": [
+        94,
+        95
+      ],
+      "report_sha256": "9044c699d89060f1343fc993a06c15303aa448752f6407e32b76d6bea28a2713"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 412,
+      "selected": [
+        83,
+        93
+      ],
+      "report_sha256": "574deab8e35c30a553201e49d6ad5d97b1d992f60cbb5a45d3c8adb20b22fc56"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 414,
+      "selected": [
+        98,
+        99
+      ],
+      "report_sha256": "8ef64535e3cab9c5bd5074344ccce8386c0d555da1ad29994b009e72bade287c"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 426,
+      "selected": [
+        86,
+        85
+      ],
+      "report_sha256": "fd4de652066d25d652c80e4ec739b787d33583565dee67ed362b06226bf09778"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 464,
+      "selected": [
+        61,
+        62
+      ],
+      "report_sha256": "c73f97eea170193e2cb7caa983d63c55c664f52d2ce77f19cb2e0835709bdec8"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 0,
+      "ply": 484,
+      "selected": [
+        98,
+        97
+      ],
+      "report_sha256": "1423a4e3306cff8f2457f7eea675819f7d7979abab4c033509830a8d32764368"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 117,
+      "selected": [
+        58,
+        68
+      ],
+      "report_sha256": "5b3e8baf8f46c8372c62370da68ecf46eef63a859fda060135ecdbefac88d8ab"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 125,
+      "selected": [
+        58,
+        68
+      ],
+      "report_sha256": "354e33fbd7e2b3cb4375765a038e75ea7ed445740b07edf9ed38a5de25a7efd0"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 267,
+      "selected": [
+        58,
+        68
+      ],
+      "report_sha256": "1463ee61007c9c0a27f1fbd96daf70181b94039f0f57486c597ebb41a3dd1d23"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 317,
+      "selected": [
+        45,
+        44
+      ],
+      "report_sha256": "acaecafe205b0ff0d3060654e83c968bbd16bf0ab1fd03e4b1d1f67970a35f2d"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 323,
+      "selected": [
+        45,
+        44
+      ],
+      "report_sha256": "9a3633e6bf0808f323f0cf10a42ac713f623b3f3cb360aedce1ae0019f9f03c0"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 387,
+      "selected": [
+        45,
+        44
+      ],
+      "report_sha256": "2e2777ee4778cd48f76713ea1657cb4eaa268deca6b37a8ee616f18af96343b9"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 391,
+      "selected": [
+        45,
+        44
+      ],
+      "report_sha256": "a0399fe7899055141bf7661888c44871e0be1929241acd0794f9de7bdfc4b606"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 401,
+      "selected": [
+        45,
+        44
+      ],
+      "report_sha256": "9486c5948620638cfc9b9cf93a28ebe462a04fefab3c3aceaf079af77c3ffbd9"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 429,
+      "selected": [
+        58,
+        68
+      ],
+      "report_sha256": "a98296e113a1b883769af649e48398b3c00c97468637b6c46b3484d53c58dd0d"
+    },
+    {
+      "game": 257,
+      "family": "broad-mixed",
+      "army": 1,
+      "ply": 437,
+      "selected": [
+        58,
+        68
+      ],
+      "report_sha256": "33b6d1ced3e911fea260206e20d7f7e9da4266882d8bc0abed36c4aecf1c0653"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 34,
+      "selected": [
+        65,
+        55
+      ],
+      "report_sha256": "5deb63b050d1147f87895aaf4159c64d5183e34be035ee907f68dc1d21009fac"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 112,
+      "selected": [
+        96,
+        86
+      ],
+      "report_sha256": "10eba3f04efcc1fea484248a785e072a4b978efba157e1c591a79feca033fa97"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 144,
+      "selected": [
+        73,
+        74
+      ],
+      "report_sha256": "9df6be604b7a061275315494393fb7909b69183da7f889c121e7b53228201839"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 146,
+      "selected": [
+        77,
+        67
+      ],
+      "report_sha256": "b548a3068116e9a9978b9fa233293d9cf83aef53780bd40f8eb216fc2212b0ab"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 148,
+      "selected": [
+        67,
+        68
+      ],
+      "report_sha256": "ef60d03b8dda4573e8d5b2809ebff514c9ab286684b80b292e9e086a7a2c9133"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 196,
+      "selected": [
+        67,
+        68
+      ],
+      "report_sha256": "a0208e3202d290ce9e4c809c2e0b96289a2c4693a4e27649842b73f7f781526a"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 314,
+      "selected": [
+        48,
+        38
+      ],
+      "report_sha256": "fa8de60198f9c2eae5231dff4fa973579158e5205bb7661832b1a2231083c6a6"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 326,
+      "selected": [
+        6,
+        5
+      ],
+      "report_sha256": "9d78776730ad67323aae4f786ec768f3ff82ffe2c606c1edcfeb7096c054f61d"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 348,
+      "selected": [
+        58,
+        48
+      ],
+      "report_sha256": "c4135bbd8b511d7f68b98d563a9b199c2034ef1caa2987484b35476ae30a6e14"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 0,
+      "ply": 368,
+      "selected": [
+        6,
+        5
+      ],
+      "report_sha256": "5fa89306e2a1041defade4448c0e1d6257c15b3172cebc322bf418e7db7f197c"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 49,
+      "selected": [
+        41,
+        61
+      ],
+      "report_sha256": "e370858fb1947ebad8d269a45cc227d1b2f28d3705639001a25ae2c79a695bd4"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 81,
+      "selected": [
+        54,
+        64
+      ],
+      "report_sha256": "435fe72299c9e334856a8629599b15b6565d4a83ac6f5d0dd707ce8a597508fa"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 157,
+      "selected": [
+        41,
+        61
+      ],
+      "report_sha256": "81a11d1022672e9d93a82c8239fc85f5f9681c437332b5c7f58403bcc159a0c6"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 245,
+      "selected": [
+        41,
+        61
+      ],
+      "report_sha256": "4390a15511e67bd5543f761abf890091a0127e82080eec5ed5a4ec048e71f281"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 271,
+      "selected": [
+        13,
+        3
+      ],
+      "report_sha256": "84cd74cda88f09ce343fe13111c808631bd1591037e0d2a4f80c4492360b8193"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 317,
+      "selected": [
+        35,
+        36
+      ],
+      "report_sha256": "87f71bfc7605850f80ac4c362a608620563d87f73d9b3d6e0f7a0214e5044d2b"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 331,
+      "selected": [
+        16,
+        26
+      ],
+      "report_sha256": "c329500cd97123272af0d8fc406919ee556093a42d894dc51b429f37d6de3ab0"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 427,
+      "selected": [
+        37,
+        27
+      ],
+      "report_sha256": "55d013c9768435affa1d4bd7b56bdff48e7b70d4138e8be07849b7fd38800a55"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 447,
+      "selected": [
+        13,
+        19
+      ],
+      "report_sha256": "cd668b1e522f32bf386b261c4a8dd66308e9e2cee1a394587e4deb44b35b3029"
+    },
+    {
+      "game": 187,
+      "family": "decoy",
+      "army": 1,
+      "ply": 465,
+      "selected": [
+        76,
+        79
+      ],
+      "report_sha256": "a2649619d633ebc507e6197ab3796960c25ff5ac6b56bf1ac60216f60c89dac3"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 2,
+      "selected": [
+        62,
+        61
+      ],
+      "report_sha256": "a43dcab3d5809bd9e57fa31c820a48f41feb21b7201e702783031f72d0d01d02"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 16,
+      "selected": [
+        49,
+        39
+      ],
+      "report_sha256": "bcdbed83f02ad04f4cc0f787691f514821a47d5d1af1da980c4245711683a5f2"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 18,
+      "selected": [
+        49,
+        39
+      ],
+      "report_sha256": "053fdba07fc77e51df6457edb746e2d0eb30ac3200c0c5a7bc23a9b168d2d674"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 134,
+      "selected": [
+        60,
+        50
+      ],
+      "report_sha256": "d1514faef20af7528e9e9a8828f2260011aaa8b2c80b9d8588bc2986e218216c"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 162,
+      "selected": [
+        64,
+        65
+      ],
+      "report_sha256": "800890ee077d2fdeef3ac63d29f7ec276d320a2ced1d5094d16f7383274f9215"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 256,
+      "selected": [
+        60,
+        50
+      ],
+      "report_sha256": "6b45fca7b703fc147ce5d0682cc2c3c6e6f391f8b7df662aef2e022a7169233f"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 294,
+      "selected": [
+        65,
+        64
+      ],
+      "report_sha256": "5407c05755831f53615c051483b84cdf3c1c44652e25b1eaaa6ff0cdfe673489"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 352,
+      "selected": [
+        60,
+        50
+      ],
+      "report_sha256": "62c7984ff46d35a000a319563870746bf7c806b79b30585d5e94812f77cec39c"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 396,
+      "selected": [
+        61,
+        51
+      ],
+      "report_sha256": "ee56b4b734b44bdea1125ab6086a54a9b259d907aa70a82633a350b0beac75d9"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 0,
+      "ply": 494,
+      "selected": [
+        61,
+        51
+      ],
+      "report_sha256": "75ad0140e3cbf93a8b2c0e5de91d4ef19b9d336e01ac6dba9930bf3210dc70d0"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 15,
+      "selected": [
+        21,
+        31
+      ],
+      "report_sha256": "b85def73bef2f48186b937b92f510bf2f83cee0fb202ea8739b3eae4166bcfca"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 145,
+      "selected": [
+        51,
+        50
+      ],
+      "report_sha256": "089fd6f31c084da090e2d2949fa94ffbe6ad195dfede1e7272a4c686692364a2"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 293,
+      "selected": [
+        50,
+        51
+      ],
+      "report_sha256": "9086169e70aaa60f7634e7feeed70497b6b9be94c392a1408cbd28f51a4cbbdf"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 331,
+      "selected": [
+        55,
+        54
+      ],
+      "report_sha256": "11bb52945e1c0e58d70ff8f8714e541a9b2570333f74fde33681b3b3263a97f5"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 355,
+      "selected": [
+        55,
+        54
+      ],
+      "report_sha256": "ef5be95bc62cef8d85d8df2ea014f831b167a03ba80b52eacffe09e37be88f09"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 369,
+      "selected": [
+        54,
+        55
+      ],
+      "report_sha256": "2b611b0b70264976e5ab90c5165f3def7c1c4f0ee3095cea32c839df8d2e978a"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 371,
+      "selected": [
+        51,
+        50
+      ],
+      "report_sha256": "e38782782286517eb3a6e5a7f88d6285388e0970043945dc9e7cc9c97089d073"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 377,
+      "selected": [
+        54,
+        55
+      ],
+      "report_sha256": "d75b0f5a6ae60b7e61cfae6eebcf7e62034b30d8c3afebcfc6984c3b82121715"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 385,
+      "selected": [
+        54,
+        55
+      ],
+      "report_sha256": "a4012c7c743f290862fca7b8847576dac49ecc28e3d1aaa9b75fca5759086e02"
+    },
+    {
+      "game": 26,
+      "family": "fortified",
+      "army": 1,
+      "ply": 455,
+      "selected": [
+        50,
+        51
+      ],
+      "report_sha256": "9e309df09c9fbbf152f5752b8e2c4469883228f9bac1c6a83249a3bf202c08ce"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 16,
+      "selected": [
+        59,
+        69
+      ],
+      "report_sha256": "d25ab9e79cda6e50933a562043c97d5bb744f2be12436f57b90a6d622316da04"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 20,
+      "selected": [
+        55,
+        45
+      ],
+      "report_sha256": "0b9107f51f19dd4aedec38c53c8fa80721bb6a22149c7ff58c2e2caa13fac36d"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 24,
+      "selected": [
+        34,
+        35
+      ],
+      "report_sha256": "118a5caa2e0f2545d1764e9558d43993fdff587e01cbfc5bc4aa308dbdf4cb74"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 54,
+      "selected": [
+        71,
+        61
+      ],
+      "report_sha256": "86a6b3fcfecb6d7535fa7b1a2869e87d47900ea143d0415d8e4a397e3602d0d1"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 90,
+      "selected": [
+        77,
+        78
+      ],
+      "report_sha256": "b67fae435fc44d2961f3d0cd63cdabee25d343b437b133324c0e025a62ec8961"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 102,
+      "selected": [
+        19,
+        17
+      ],
+      "report_sha256": "ba50e1571be7e4dc76fea8c7d02b386d416524af59719c134c10841f52660cb0"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 122,
+      "selected": [
+        78,
+        38
+      ],
+      "report_sha256": "dd88d5a12845c1394a05252f42672b59cb78439b33720092b0d3ed4aba86eb14"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 130,
+      "selected": [
+        38,
+        39
+      ],
+      "report_sha256": "9ed1abd888536abf7404fb44b1b87072d7c8628d5dccaf92ad9b5447b11f93d4"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 138,
+      "selected": [
+        61,
+        60
+      ],
+      "report_sha256": "16cb052e49f400d2a248531ce0f82397561202531f0edc713577485fd61b1a24"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 0,
+      "ply": 146,
+      "selected": [
+        5,
+        15
+      ],
+      "report_sha256": "cc55192a2b728183689f74d54450bc677f5ebf5c40124bd2b8e45dc6833b8d98"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 17,
+      "selected": [
+        41,
+        51
+      ],
+      "report_sha256": "c78b5f36f9342e8d09d36a8c344e0412d830e18986e9c92cd4153678fd012873"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 25,
+      "selected": [
+        32,
+        33
+      ],
+      "report_sha256": "d7ab6b5ce181fb7eb24dcd79d6691a55ba170baf74897e1f99fdff4912b148c7"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 39,
+      "selected": [
+        38,
+        39
+      ],
+      "report_sha256": "61d70c324506314e405fc9c3a38b56c75cc5cecaf39c99e6774d264b613b6def"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 59,
+      "selected": [
+        0,
+        40
+      ],
+      "report_sha256": "e2f556e41f787c3110057601224fbbde02e7c93d7b9150cffd57606aff9be1e6"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 65,
+      "selected": [
+        40,
+        41
+      ],
+      "report_sha256": "d4b5b8f8fc871e06795dc74815ccb60573b06b3aebf2ff424756eba1c6ee8aa8"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 71,
+      "selected": [
+        21,
+        20
+      ],
+      "report_sha256": "a918a4ac9e28e8f7848bac3d7a7ee5cb6cb59f3b2ca0e86ad3e0fb5cf9cb6d91"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 111,
+      "selected": [
+        6,
+        7
+      ],
+      "report_sha256": "a586b9b4e69f43cf42ce696ccd2955733990a384a36ffcbfb6eb4a7076b0eef0"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 113,
+      "selected": [
+        6,
+        7
+      ],
+      "report_sha256": "16f5a5df48d22c6cf79d530bce9d8ccf15f9727a09a17bc501b1cfecf934cb13"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 127,
+      "selected": [
+        27,
+        29
+      ],
+      "report_sha256": "19cf2eee4a2b82d33d6f762c8add432daf6545f44a39502f4ee30a5abd05e2e8"
+    },
+    {
+      "game": 135,
+      "family": "forward",
+      "army": 1,
+      "ply": 141,
+      "selected": [
+        37,
+        38
+      ],
+      "report_sha256": "dcbf0ef8131ec621788336f26d835662f3f23ff2036f440b7c0b2d5497dffecb"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 16,
+      "selected": [
+        59,
+        39
+      ],
+      "report_sha256": "ed5976c99deefd869fe85eb5d49fed1b5edf3f3a4b137e7d36fb7f3daddb397d"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 58,
+      "selected": [
+        59,
+        39
+      ],
+      "report_sha256": "ee11350efadd539fb6e639154ce784091c6373171c1226e12bd96f49709ed0cc"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 60,
+      "selected": [
+        99,
+        89
+      ],
+      "report_sha256": "7dae15202d22995b0ad990d9ec11a0af156557c0be7f7592eda1fffb9867026c"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 244,
+      "selected": [
+        75,
+        76
+      ],
+      "report_sha256": "ea22842392f11767c08ff8f111e4307bcd5e57f4380995937b79aa396210fe82"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 246,
+      "selected": [
+        13,
+        3
+      ],
+      "report_sha256": "a74acf74af85acd35c05d2c2dba30d6fba6c637dd821f51dbbf17174824f0df9"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 266,
+      "selected": [
+        61,
+        51
+      ],
+      "report_sha256": "e5479f26e945bc4ac3e47d6f9cc4780d3d96a9cf0e59a5f6338e50a015d64b3c"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 288,
+      "selected": [
+        13,
+        3
+      ],
+      "report_sha256": "078d40ea650205cf31ce2b9f29a9c4de9e31623e0dde0faa421f55472a7a3275"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 290,
+      "selected": [
+        61,
+        60
+      ],
+      "report_sha256": "c996ce4c0aba739ace1146f3fed13631f4a32f7172216fc218c07065120b820e"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 294,
+      "selected": [
+        13,
+        12
+      ],
+      "report_sha256": "e08d4f1ab07a0b3b073bef3cae2cf3e92e77ce92aa65d84678c576a92d35e0fe"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 0,
+      "ply": 458,
+      "selected": [
+        82,
+        72
+      ],
+      "report_sha256": "dc2ed3d9dd32aa04d6a6fc4c74f611e28760d149fc7afb8dd731d9e50954a6d8"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 3,
+      "selected": [
+        30,
+        60
+      ],
+      "report_sha256": "abef3aec10ca76e271f20077db5ba26ae90f29eb278ec2325627611d08aed354"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 77,
+      "selected": [
+        31,
+        30
+      ],
+      "report_sha256": "bb87e92d19ebd8b4a877b55fd711f8c84bec3186a41627b77b47245f61dd121b"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 131,
+      "selected": [
+        55,
+        54
+      ],
+      "report_sha256": "a32802d3749777033d2ab0a22e927d1f7a08cc83920e63c4e5c18eb9d70dfca6"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 167,
+      "selected": [
+        76,
+        86
+      ],
+      "report_sha256": "54c250bb10847967c89b9dd376d660775407c6b04e76560eefa2526927a47b93"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 181,
+      "selected": [
+        15,
+        25
+      ],
+      "report_sha256": "49459f8adb55801b231b80cb36485bd282957fcecdd442d1bc52dc7a2baa5a52"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 189,
+      "selected": [
+        23,
+        24
+      ],
+      "report_sha256": "4f71c41dc15728a5c9ee5d13b52605c4fce08210ad0b8e127377c0b7dff2d6b4"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 257,
+      "selected": [
+        20,
+        30
+      ],
+      "report_sha256": "ebdbbbdfe61f3c667ff177c7c25fabeab801f84ed77a8c299f8264bbd823aaf3"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 309,
+      "selected": [
+        80,
+        90
+      ],
+      "report_sha256": "4992c83917bb09af589ae60e705f53a5d4d58369f5976d477df3183c1fa61b06"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 357,
+      "selected": [
+        80,
+        90
+      ],
+      "report_sha256": "0c85e19d86bbd72fbea1812254b8ff2e50244f68761d25fcc6539a6610364dfa"
+    },
+    {
+      "game": 206,
+      "family": "presets",
+      "army": 1,
+      "ply": 463,
+      "selected": [
+        87,
+        97
+      ],
+      "report_sha256": "1a1b5e9842f1ebb13f000593e2bbc7ea166c008abdd726cb617d502a6c01d749"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 30,
+      "selected": [
+        35,
+        25
+      ],
+      "report_sha256": "b5e4c8d8c0cf4a29cc6f5232e8f3f854b993b5eb739b046ed57c941c8ee45026"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 104,
+      "selected": [
+        10,
+        12
+      ],
+      "report_sha256": "4cf8888493118e800671b3f04d6e51eed10044ea74cdf7dfa800bf5fe8a21694"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 158,
+      "selected": [
+        60,
+        50
+      ],
+      "report_sha256": "cde7854a4f6298cca1fc49e168a08fb5b09fd93b1d54dedfb4a909ebb985892a"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 200,
+      "selected": [
+        40,
+        30
+      ],
+      "report_sha256": "0109b6f7e48095202782b16199970214f0e3c22954d3a5fed61a4843752554a3"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 246,
+      "selected": [
+        50,
+        40
+      ],
+      "report_sha256": "6908f3862c87a937f09f6b7db4e8515d6dd6b4a20eb8b6246bff7e872f5b36f2"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 250,
+      "selected": [
+        30,
+        20
+      ],
+      "report_sha256": "1524b8cf82e630a402aab71c4210f4ea73f9fd55e0c7b1baad0cb0de806b952b"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 258,
+      "selected": [
+        94,
+        93
+      ],
+      "report_sha256": "fe1c7b0de2afcadf6fe71ae949ab96ea146f0dfd509cace3a2076080bccc4d7d"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 338,
+      "selected": [
+        10,
+        20
+      ],
+      "report_sha256": "dcda94e1aae7e148067a76f8926874640498377574061ac234acfef313737b81"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 356,
+      "selected": [
+        20,
+        10
+      ],
+      "report_sha256": "089630dda3af1ab2e39b47876ff7421f1f1f71c9583a2c71dd6dcffd90eb4125"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 0,
+      "ply": 466,
+      "selected": [
+        40,
+        30
+      ],
+      "report_sha256": "f847d0a55198cb508268a5f221281a5a3cee713704f43db72a54e63a02a4bb28"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 7,
+      "selected": [
+        25,
+        55
+      ],
+      "report_sha256": "331a492ba455eaad7f3203522cb80306268c207f74f14e03e2f98edd8e235316"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 21,
+      "selected": [
+        28,
+        38
+      ],
+      "report_sha256": "a9253335d2cd3f29271430d3a354731e13233d59beb799e5f686b7b73af503b8"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 59,
+      "selected": [
+        22,
+        32
+      ],
+      "report_sha256": "772d55082df8df7e453f074cd21762bb64a0e4c191a20b27d8297b5dae65f89c"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 93,
+      "selected": [
+        58,
+        59
+      ],
+      "report_sha256": "f97aef9788e04b89ad42deadfb22a87ad92ccadc6714d41cb3f50d45beadf95d"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 117,
+      "selected": [
+        29,
+        39
+      ],
+      "report_sha256": "c8d2a290a816ebc3b94520cfe4666c020b0112c76cef8d23e2a61ad225f6a793"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 173,
+      "selected": [
+        38,
+        48
+      ],
+      "report_sha256": "fbea8d4bb93e65ecfbe5bff5264898527dc29dff4efb6a8cf9c2d95d8f402914"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 323,
+      "selected": [
+        7,
+        17
+      ],
+      "report_sha256": "75ecfc818ceea9f69df43c573187c6443cf2dbb8cac601a9d899d9d081bf064a"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 461,
+      "selected": [
+        25,
+        15
+      ],
+      "report_sha256": "a6f9ce60d7c62d5e28c62f6b0acaae18437f6382bc9a4a1bce38068502732c33"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 469,
+      "selected": [
+        58,
+        59
+      ],
+      "report_sha256": "9077ce131c475be895825c183ee94090de593a56dd08b767a27fca408800ae79"
+    },
+    {
+      "game": 101,
+      "family": "unguarded",
+      "army": 1,
+      "ply": 471,
+      "selected": [
+        38,
+        48
+      ],
+      "report_sha256": "2a24bd6ade221c52f2a795be0e7139176ae910fbe7798b4dc409d3d36d4696bd"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 28,
+      "selected": [
+        41,
+        40
+      ],
+      "report_sha256": "824eb9e6b2b40b5e36f806add903ef5737284bc401197cc9ba9a1a2e4166545c"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 30,
+      "selected": [
+        41,
+        40
+      ],
+      "report_sha256": "312606aa62bc8c9c8355f8afd896190adf73a4f5f9dfdf707b3e423a35098539"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 58,
+      "selected": [
+        41,
+        40
+      ],
+      "report_sha256": "7aa1772816859cef2d3f6e9e952ff5e8c38a620a104c05891b382af83f2a9820"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 78,
+      "selected": [
+        88,
+        89
+      ],
+      "report_sha256": "ba2239409599bfb419267c641fd49e994eec320cd756d1af0893847d065d891a"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 138,
+      "selected": [
+        41,
+        40
+      ],
+      "report_sha256": "c0c994c6661f1ed1521c16d8524da1de734b2c2178849d401d356ac6e7a2abfa"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 192,
+      "selected": [
+        41,
+        40
+      ],
+      "report_sha256": "bd70f68f2dfbaa4710821bb2009b1744a079b0d128d8c817a4c441d83d705fc3"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 222,
+      "selected": [
+        40,
+        30
+      ],
+      "report_sha256": "c16fae66a10a39c11aa383528ab94fc6516e827894420d45295f48e5877daa04"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 230,
+      "selected": [
+        40,
+        30
+      ],
+      "report_sha256": "1ee0ab79f79c14717013353b764c2bf4856af1aa5fa91ed407f79b02d5cbcf48"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 464,
+      "selected": [
+        40,
+        30
+      ],
+      "report_sha256": "d319f05f43aa63b59c92b8a4ea46271327582ede4b2fbf029fc1ea53065e9861"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 0,
+      "ply": 474,
+      "selected": [
+        40,
+        30
+      ],
+      "report_sha256": "259f9776b775731bf69aa555ffa57d3df6a3436942b21bc4495eeca9ce11eac3"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 89,
+      "selected": [
+        5,
+        15
+      ],
+      "report_sha256": "77e2a7662e470a9c55f96aebd6d08c6af479acccba74d8dc4c63d6a24ff8a713"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 145,
+      "selected": [
+        45,
+        55
+      ],
+      "report_sha256": "deace0fd7fae85a36d5886b82020e02a2bae0300adb518fe631ae8638a6aa41a"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 163,
+      "selected": [
+        48,
+        49
+      ],
+      "report_sha256": "d07d85e1dd6c59863d59ebebcc5587dfc5c237d11452812a9397c80f4ffa9b79"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 267,
+      "selected": [
+        77,
+        87
+      ],
+      "report_sha256": "d38c04723f6785037ee0a70726243f2fb7d2b57a3e29a727622218c0bec6ca6c"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 273,
+      "selected": [
+        5,
+        15
+      ],
+      "report_sha256": "3c7c5c6b8a9eb186039c294e6b60cfc24e6eea3a9d8bdbe5ee85be69439675cb"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 287,
+      "selected": [
+        27,
+        29
+      ],
+      "report_sha256": "387ec42ecebf305bd5850850f8d4c71edbd5f02a42b031928b125214941c402b"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 355,
+      "selected": [
+        55,
+        54
+      ],
+      "report_sha256": "408b588fd6775b6c9b339e0dffdd201e2481f9f850cea573ff027a7e6bbd6f5a"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 365,
+      "selected": [
+        74,
+        73
+      ],
+      "report_sha256": "f8b0e26bfc092dc1bccde0e17bf3fed018c1da0eaf9c3c3eb2387bcb334a1c5a"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 371,
+      "selected": [
+        13,
+        23
+      ],
+      "report_sha256": "ca5ec97e144f34d72fcd0f03a76fec7e2c3d2578ffdd2fbf57f68de450870813"
+    },
+    {
+      "game": 78,
+      "family": "uniform",
+      "army": 1,
+      "ply": 411,
+      "selected": [
+        25,
+        35
+      ],
+      "report_sha256": "db69cb101847039f008098970c0df3d48ef50c8b39c22c7517eb8563942f1a6b"
+    }
+  ],
+  "reference_adapter": "Frozen original Context Teacher; diagnostic overlay disabled in candidate"
+}

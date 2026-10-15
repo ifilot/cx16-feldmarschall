@@ -1,0 +1,127 @@
+Verified validation teacher-context-v1-normal {'wins': 40, 'draws': 0, 'losses': 95, 'score': 0.2962962962962963} errors 5
+Verified validation teacher-context-flag-spy-diagnostic-v1-normal {'wins': 64, 'draws': 4, 'losses': 71, 'score': 0.4748201438848921} errors 1
+Verified validation teacher-context-truth-diagnostic-v1-normal {'wins': 82, 'draws': 9, 'losses': 49, 'score': 0.6178571428571429} errors 0
+pilot {
+  "teacher-context-flag-spy-diagnostic-v1-normal_minus_teacher-context-v1-normal": {
+    "mean": 0.23550724637681159,
+    "paired_95_percent_interval": [
+      0.15217391304347827,
+      0.3188405797101449
+    ],
+    "complete_pairs": 69,
+    "pairs_by_family": {
+      "fortified": 9,
+      "uniform": 10,
+      "unguarded": 10,
+      "forward": 10,
+      "decoy": 10,
+      "presets": 10,
+      "broad-mixed": 10
+    },
+    "control": "teacher-context-v1-normal",
+    "intervention": "teacher-context-flag-spy-diagnostic-v1-normal",
+    "interpretation": "Improvement supported on this cohort."
+  },
+  "teacher-context-truth-diagnostic-v1-normal_minus_teacher-context-v1-normal": {
+    "mean": 0.3607142857142857,
+    "paired_95_percent_interval": [
+      0.2785714285714286,
+      0.44285714285714284
+    ],
+    "complete_pairs": 70,
+    "pairs_by_family": {
+      "fortified": 10,
+      "uniform": 10,
+      "unguarded": 10,
+      "forward": 10,
+      "decoy": 10,
+      "presets": 10,
+      "broad-mixed": 10
+    },
+    "control": "teacher-context-v1-normal",
+    "intervention": "teacher-context-truth-diagnostic-v1-normal",
+    "interpretation": "Improvement supported on this cohort."
+  },
+  "teacher-context-truth-diagnostic-v1-normal_minus_teacher-context-flag-spy-diagnostic-v1-normal": {
+    "mean": 0.12681159420289856,
+    "paired_95_percent_interval": [
+      0.03985507246376811,
+      0.21014492753623187
+    ],
+    "complete_pairs": 69,
+    "pairs_by_family": {
+      "fortified": 9,
+      "uniform": 10,
+      "unguarded": 10,
+      "forward": 10,
+      "decoy": 10,
+      "presets": 10,
+      "broad-mixed": 10
+    },
+    "control": "teacher-context-flag-spy-diagnostic-v1-normal",
+    "intervention": "teacher-context-truth-diagnostic-v1-normal",
+    "interpretation": "Improvement supported on this cohort."
+  }
+}
+validation {
+  "teacher-context-flag-spy-diagnostic-v1-normal_minus_teacher-context-v1-normal": {
+    "mean": 0.16538461538461538,
+    "paired_95_percent_interval": [
+      0.08846153846153847,
+      0.24615384615384617
+    ],
+    "complete_pairs": 65,
+    "pairs_by_family": {
+      "fortified": 9,
+      "uniform": 10,
+      "unguarded": 9,
+      "forward": 10,
+      "decoy": 10,
+      "presets": 7,
+      "broad-mixed": 10
+    },
+    "control": "teacher-context-v1-normal",
+    "intervention": "teacher-context-flag-spy-diagnostic-v1-normal",
+    "interpretation": "Improvement supported on this cohort."
+  },
+  "teacher-context-truth-diagnostic-v1-normal_minus_teacher-context-v1-normal": {
+    "mean": 0.3038461538461538,
+    "paired_95_percent_interval": [
+      0.2153846153846154,
+      0.3923076923076923
+    ],
+    "complete_pairs": 65,
+    "pairs_by_family": {
+      "fortified": 9,
+      "uniform": 10,
+      "unguarded": 9,
+      "forward": 10,
+      "decoy": 10,
+      "presets": 7,
+      "broad-mixed": 10
+    },
+    "control": "teacher-context-v1-normal",
+    "intervention": "teacher-context-truth-diagnostic-v1-normal",
+    "interpretation": "Improvement supported on this cohort."
+  },
+  "teacher-context-truth-diagnostic-v1-normal_minus_teacher-context-flag-spy-diagnostic-v1-normal": {
+    "mean": 0.13405797101449277,
+    "paired_95_percent_interval": [
+      0.05434782608695652,
+      0.21014492753623187
+    ],
+    "complete_pairs": 69,
+    "pairs_by_family": {
+      "fortified": 10,
+      "uniform": 10,
+      "unguarded": 10,
+      "forward": 10,
+      "decoy": 10,
+      "presets": 9,
+      "broad-mixed": 10
+    },
+    "control": "teacher-context-flag-spy-diagnostic-v1-normal",
+    "intervention": "teacher-context-truth-diagnostic-v1-normal",
+    "interpretation": "Improvement supported on this cohort."
+  }
+}

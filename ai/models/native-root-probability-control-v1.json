@@ -1,0 +1,8 @@
+{
+  "schema": "native-prior-kl-root-policy-v1",
+  "mode": "probability-control",
+  "temperature": 2,
+  "kl_budget": 1.0,
+  "calibration_roots_sha256": "ff63892a11852219a6d489850d85885e2b13f10cf01e7451dd9d4cadc4b96521",
+  "calibration": "Temperature from native score-tier probabilities; KL budget halves mean control change, subject to prespecified bounds. No win labels or validation data."
+}

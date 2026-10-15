@@ -1,0 +1,31 @@
+{
+  "attempts": 2030,
+  "unscored_dos_errors": 18,
+  "cohorts": {
+    "pilot": 490,
+    "validation": 1540
+  },
+  "board_states_compared_python_native": 313159,
+  "previous_policies_unchanged": 53,
+  "frozen_strategy_sources_match": true,
+  "same_teacher_build_settings_and_model": true,
+  "only_public_inputs": true,
+  "activity_bounds_passed": true,
+  "error_reasons": {
+    "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 18
+  },
+  "checks_sha256": {
+    "adapter.log": "28eac79fb0947c7f3163777550e5bd7f4390232c19e4ba316547a4ceb8e8bd1a",
+    "cache-integrity.log": "2f6fa9dd5e14801178ef4a73ac0d063dbdb65ab7a756c19c8bf88c154f0868c6",
+    "context.log": "188b408a64f26e077a165fd3c2a5fea6cd582f1b68fe093f3813ad511d79d3ac",
+    "followthrough-valid-game.log": "8c4b1532288f3c2237a75b4778a19116380135ed2658033225c3d1a1a8446867",
+    "frozen-policies.log": "1bd8896df9dda5a29e008d538d7614db29bd21516fabc403ef1914898b337e02",
+    "mechanisms.log": "804a46212eddf19904d0925884c94cd57d737138b8b266a8a96be329568fea40",
+    "native-parent-parity.log": "8758bce6092cb88a92a262a6227e8788e3b90750b0a1f34b88b88ca0ce4563b1",
+    "prior-diagnostics.log": "40cc7448f2462c34eb3dc89aa9dee4f0e863aa750a4dae93b68fb49be6caadf6",
+    "statistics-review.log": "bc63619309c0714b558f68d08c8ccb82ddd952f7336fe2f2904c4277997d65c3"
+  },
+  "audit_source_sha256": "cb1f857e36accd6b08c5cae1687ef844fbf3f2f24a24652b2f2ec633a9bedce4",
+  "report_sha256": "61f68bebc573833997863641fe1d637d039f7c829a37d726d9a84d3c4a44fda7",
+  "parent_parity_decisions": 140
+}

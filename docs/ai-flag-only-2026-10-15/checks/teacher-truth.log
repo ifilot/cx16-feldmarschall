@@ -1,0 +1,24 @@
+test_flag_spy_choices_ignore_other_private_rank_assignments (test_teacher_truth.TruthTeacher.test_flag_spy_choices_ignore_other_private_rank_assignments) ... ok
+test_flag_spy_only_keeps_other_ranks_masked (test_teacher_truth.TruthTeacher.test_flag_spy_only_keeps_other_ranks_masked) ... ok
+test_missing_and_inconsistent_truth_fail_explicitly (test_teacher_truth.TruthTeacher.test_missing_and_inconsistent_truth_fail_explicitly) ... ok
+test_only_explicit_diagnostic_and_dos_receive_enemy_setup (test_teacher_truth.TruthTeacher.test_only_explicit_diagnostic_and_dos_receive_enemy_setup) ... ok
+test_python_native_and_pool_reuse_match (test_teacher_truth.TruthTeacher.test_python_native_and_pool_reuse_match) ... {"event": "progress", "completed": 1, "total": 4}
+{"event": "progress", "completed": 2, "total": 4}
+{"event": "progress", "completed": 3, "total": 4}
+{"event": "progress", "completed": 4, "total": 4}
+{"event": "progress", "completed": 1, "total": 4}
+{"event": "progress", "completed": 2, "total": 4}
+{"event": "progress", "completed": 3, "total": 4}
+{"event": "progress", "completed": 4, "total": 4}
+{"event": "progress", "completed": 1, "total": 4}
+{"event": "progress", "completed": 2, "total": 4}
+{"event": "progress", "completed": 3, "total": 4}
+{"event": "progress", "completed": 4, "total": 4}
+ok
+test_rollout_masks_our_unrevealed_ranks_from_opponent (test_teacher_truth.TruthTeacher.test_rollout_masks_our_unrevealed_ranks_from_opponent) ... ok
+test_truth_history_both_sides_and_reset (test_teacher_truth.TruthTeacher.test_truth_history_both_sides_and_reset) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 13.108s
+
+OK

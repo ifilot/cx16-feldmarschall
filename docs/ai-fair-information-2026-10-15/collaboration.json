@@ -1,0 +1,44 @@
+{
+  "requested_subagents": 3,
+  "agents": [
+    {
+      "task": "information_lifetime",
+      "strategy": "preserve investigators for future disclosures",
+      "files": [
+        "tools/info_lifetime.py",
+        "tools/test_info_lifetime.py"
+      ],
+      "additional_work": [
+        "tools/analyze_info_activity.py",
+        "tools/test_info_activity.py"
+      ]
+    },
+    {
+      "task": "information_objectives",
+      "strategy": "reconnoitre supported uncertain Flag approaches",
+      "files": [
+        "tools/info_objectives.py",
+        "tools/test_info_objectives.py"
+      ],
+      "additional_work": [
+        "tools/test_information_parent_parity.py",
+        "independent integration and statistics review"
+      ]
+    },
+    {
+      "task": "information_followthrough",
+      "strategy": "response-aware value of a sacrificial probe",
+      "files": [
+        "tools/info_followthrough.py",
+        "tools/test_info_followthrough.py"
+      ]
+    }
+  ],
+  "root_work": [
+    "public-only adapter integration",
+    "immutable policy registration",
+    "experiment plan and matched tournaments",
+    "paired statistical analysis",
+    "replay and artifact audit"
+  ]
+}

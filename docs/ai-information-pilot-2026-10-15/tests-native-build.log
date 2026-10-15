@@ -1,0 +1,2 @@
+mkdir -p build
+gcc -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -DAI_MISSIONS -DAI_MEMORY -DAI_STUDENT -DAI_STUDENT_V2 -DAI_STUDENT_PRODUCTION -DAI_STUDENT_COOP_GUARD -Isrc/core -o build/feldmarschall-engine src/native/engine.c src/core/pieces.c src/core/board.c src/core/rules.c src/core/setup.c src/core/random.c src/core/ai.c src/core/ai_level.c src/core/ai_deploy.c src/core/ai_mission.c src/core/ai_memory.c src/core/ai_student.c

@@ -1,0 +1,30 @@
+{
+  "question": "Do established desktop rollout teachers perform better than production against the original 1990 Colonel AI?",
+  "idea": "Masked-world lookahead can avoid tactical losses and improve strategic choices despite the DOS opponent retaining hidden-rank access.",
+  "policies": [
+    "student-guard-v1-normal",
+    "teacher-rollout-v1-normal",
+    "teacher-context-v1-normal"
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "seed": 1930001,
+  "rounds": 10,
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "backend": "openmp",
+  "jobs": 4,
+  "max_plies": 1000,
+  "planned_attempts": 420,
+  "comparison": "Same armies and seeds across all three matchups; swapped sides within each pair.",
+  "analysis": "Report scored wins/draws/losses, unscored errors, per-family scores, paired 95% bootstrap intervals and matched differences versus production using only pairs scored in both matchups. Resample paired blocks within families; 10000 resamples with analysis seed 1930002.",
+  "limits": "Original DOS hidden-rank access is preserved. Errors excluded from scores and reported separately. No tuning or policy changes; this is a comparison against this adapter, not an equal-information strength claim.",
+  "source_commit": "1a3832c20c5b781f0d86f3eafff44667bb36c8c3",
+  "emulator_setup": "Unicorn 2.1.4 runtime restored from hash-verified artifacts in docs/msdos-1990-framework-2026-10-15/reference.fmtour because pip is unavailable."
+}

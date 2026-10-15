@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "idea": "Infer enemy ranks more accurately from public movement history and deployment geometry, replacing the teacher's hand-written approach/retreat multiplier. No reconnaissance score bonuses or search changes.",
+  "baseline": "teacher-context-v1-normal",
+  "candidate": "teacher-calibrated-beliefs-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "families": ["fortified", "uniform", "unguarded", "forward", "decoy", "presets", "broad-mixed"],
+  "development": {"seed": 1990001, "rounds": 20, "training_rounds_per_family": 14, "calibration_rounds_per_family": 6, "snapshot_stride": 20, "max_snapshot_ply": 400},
+  "validation": {"dos_seed": 2010001, "dos_rounds": 30, "head_seed": 2011001, "head_rounds": 20, "prediction_seed": 2012001},
+  "backend": "openmp",
+  "jobs": 4,
+  "max_plies": 1000,
+  "fit": "Smoothed categorical rank-conditional public-history likelihoods. Calibrate their strength on separate complete game pairs. Preserve exact rank inventory and hard public constraints. No family label, opponent setup, current concealed rank, game result or future event is a runtime input.",
+  "sampling": "Eight shared sampled worlds and unchanged four-ply Context Teacher search. Learned sampling must enforce exact rank counts, use positive soft likelihoods, and document proposal correction or MCMC approximation. Verify against enumerable small posteriors before registration.",
+  "analysis": "Primary: matched DOS score difference on common complete side-swapped pairs, stratified by seven families; 20000 paired bootstrap replicates, 95% confidence intervals. Secondary: direct predecessor score; require both lower bounds to exceed zero gain / 50% for supported general improvement. Errors unscored and retained. Do not tune on validation; retain policy regardless of outcome.",
+  "prediction": "Game-grouped training/calibration split. Report log loss, Brier score and top-rank accuracy for all concealed pieces, separately Flag, Spy, moved and unmoved. Final prediction evaluation uses fresh validation games and no refit. Truth labels are offline only.",
+  "evidence": "Immutable model plus source archive and recipe registered before saved candidate matches. Replay all strength traces with Python and native referee; capture matches with existing Qt6 companion. Preserve earlier policies and evidence.",
+  "scope": "One calibrated-belief strategy, desktop Classic pilot. No production promotion without supported strength gains. Opponent DOS retains original privileged knowledge. Ataraxos integration and other research proposals are separate future work."
+}

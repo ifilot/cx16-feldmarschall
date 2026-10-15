@@ -1,0 +1,40 @@
+{
+  "sha256": {
+    "checks/clean-rebuild.json": "dbdca31fea799294574275a8178920c3876bd992ae026d07d0a379a280c58896",
+    "checks/clean-rebuild.log": "bd7150e1140c1e858676c52da77414f4e8936e63fe7ad7669753bca30925da12",
+    "checks/flag-only.log": "5a8e9d22efc7e2d94f5eff5359e469388802752c316b75f3f4d815bd9deff4d2",
+    "checks/parent-parity.json": "b843c9834d7fa9163770cbca2cf62a5c00729e4186032509703ed667c4282e0d",
+    "checks/parent-parity.log": "e2045e3bc31a4956c5214fb0a46209934a532d3ffa8d9881597c794bedd172a4",
+    "checks/qt-build.log": "303ebbf51acd462b5e46f068faf994579351e913c03f54e66dc46f8569a35ce5",
+    "checks/teacher-truth.log": "9e4c3792d7e8663c3dc030aa84a66e671996b13c3a1f0d09c95cf23b20d15d8f",
+    "completion-audit.json": "e73e966d7508549824ef8fe56fddd9373b7288cb798e7bec4c2ead6629fd8d9e",
+    "flag-only-comparison.json": "96839d866975a70693c65e90e7888fd577a7cc4755e2726f278db1429350fe79",
+    "framework-source.zip": "5389481460e8f98649956dbb27e4370d227972e7e05ccd751d25620e1f65b766",
+    "frozen-policies.json": "5ad80d62851f1c2320f437214d6865a7ea965fc2f8911a0847906455cbcbf5a0",
+    "plan.json": "b80f86ca5de972e1689512eb3adabc118dd020b3c319687e2af37b323e5ed74f",
+    "policy-spec.json": "19afa499af6e963171f8321d4a562685ba1686a1578e3e615ae431a1ec2f7fa4",
+    "registration.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "registry-before.json": "24997ae252850b94e31259c07fad5a4a1634c4570215a11cb0e6e8ac169e3978",
+    "result.json": "e7aeac54da29ae72ac51c8c94a7a5ae78495ebadbdba058154eaee7e6e61749f",
+    "run.log": "751269eda828e53bc6604bf90b206475e03cad0352bd5e7ea905e51908f2ee4d",
+    "strength-report.json": "228af455d1a53606bc10c59ed7c54a16f908346ae50f6febf31ae875680a1933",
+    "teacher-context-flag-diagnostic-v1-normal.fmtour": "8e6c5013dc216c4db3c66bbab594ec91ca2254e72e85e8d18ecc637d4399ca94",
+    "teacher-context-flag-diagnostic-v1-normal.log": "4a98fe5de05cab6bb8e44cdfee387096740aa217afcc99b506a5df79693f3498",
+    "teacher-context-flag-diagnostic-v1-normal.png": "0df9b6d8575d3e2e44202a4cee9ef2111ad36b8a9c19a48d628cc10d190d44ad",
+    "teacher-context-flag-diagnostic-v1-normal.report.json": "97d1b3a2470bf6447e60816408b00f051fffc6a8262174f8527840e60c32253f",
+    "teacher-context-flag-diagnostic-v1-normal.review.log": "31ef831540038ffe9ba794965c33031c7ef60591786e4ced6a2b8fb5f2a7e03c",
+    "teacher-context-flag-spy-diagnostic-v1-normal.fmtour": "f8e4f5e58377f5e36481abc3624ec26c16324529abf2b75c72dbe1521c489834",
+    "teacher-context-flag-spy-diagnostic-v1-normal.log": "244e1dc3dce84fd96b970567abc1739eab72213c677a82ee7d31a3948984ab70",
+    "teacher-context-flag-spy-diagnostic-v1-normal.png": "994431c0b647d3cee16c2242678526a312fa90f5d980bcdc85e2443dec19d4b4",
+    "teacher-context-flag-spy-diagnostic-v1-normal.report.json": "b10dc224050db6c7b9cd1710fbe0953bf4087010c93838f1e7ce7525f29ab709",
+    "teacher-context-flag-spy-diagnostic-v1-normal.review.log": "31ef831540038ffe9ba794965c33031c7ef60591786e4ced6a2b8fb5f2a7e03c",
+    "teacher-context-v1-normal.fmtour": "1de2ff22f28d80d426bf01aa38242459c2e2f8073aef3975ed8befc3951871d2",
+    "teacher-context-v1-normal.log": "1d2a2a698b894a8be8895ed05e4a4d8c8035493547b0b51b12bc6b0579e6592d",
+    "teacher-context-v1-normal.png": "7a2b6bfe80f1edba44253462f747ddb2e08f42d5e403c296e2bb6714d919c96a",
+    "teacher-context-v1-normal.report.json": "1e0328d5c6ba942f5f51b47e6189e0d2c6e1ce00f1e02db24a64752c902e70cf",
+    "teacher-context-v1-normal.review.log": "31ef831540038ffe9ba794965c33031c7ef60591786e4ced6a2b8fb5f2a7e03c"
+  },
+  "external_sha256": {
+    "ai/sources/72f221065c3a391f17e56d5fd20db683d60854f1e411210fd21891060ee6e2cb.zip": "72f221065c3a391f17e56d5fd20db683d60854f1e411210fd21891060ee6e2cb"
+  }
+}

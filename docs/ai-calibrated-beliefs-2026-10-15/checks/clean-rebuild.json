@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "all_runtime_hashes_reproduced": true,
+  "runtime_sha256": {
+    "engine": "fa1dbe03f8e08237b8a37772e36d8e36cb75c05582cfb4015cb08876c6c021e6",
+    "observer": "3bea2854a3620c3df8ef26265de1902664ec76b58b87d698c6badec12c938663",
+    "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+    "teacher_bot.py": "a4af2e1f678feb04e00ee9999999d15e616dc50104b33e117152fc61247bc57b",
+    "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+    "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+    "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+    "public-history-beliefs-v1.json": "3327ec168d4834c45e62e4f0576c47fd41e716904b4df4c8bee8d9ec2bd0f38b"
+  },
+  "recipe_sha256": "a2597cd8345acc23d729654ffb6420f27e47823d5d69c06472236a8d44490848"
+}

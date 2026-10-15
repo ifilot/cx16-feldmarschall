@@ -248,6 +248,13 @@ void Desk::openTournament(const QString &path) {
     const auto errors = std::count_if(tournament->games.begin(), tournament->games.end(), [](const Match &g) { return g.result == "error"; });
     if (errors) lines.append(QString("%1 unscored engine errors; excluded from win rates.").arg(errors));
     for (const auto &participant : participants)
+        if (participant.toObject()["policy"].toObject()["information_model"].toString() == "diagnostic-full-enemy-ranks")
+            lines.append("DIAGNOSTIC ONLY: teacher knows all surviving enemy ranks; unsuitable for normal play.");
+        else if (participant.toObject()["policy"].toObject()["information_model"].toString() == "diagnostic-flag-spy")
+            lines.append("DIAGNOSTIC ONLY: teacher knows the enemy Flag and Spy; unsuitable for normal play.");
+        else if (participant.toObject()["policy"].toObject()["information_model"].toString() == "diagnostic-flag")
+            lines.append("DIAGNOSTIC ONLY: teacher knows the enemy Flag; Spy and other concealed ranks stay hidden.");
+    for (const auto &participant : participants)
         if (participant.toObject()["policy"].toObject()["driver"].toString() == "msdos1990") {
             lines.append("MS-DOS 1990 uses its original access to hidden enemy ranks.");
             break;

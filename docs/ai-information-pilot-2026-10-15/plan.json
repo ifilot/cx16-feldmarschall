@@ -1,0 +1,33 @@
+{
+  "question": "How much does knowledge of enemy Flag/Spy, or all enemy ranks, improve Context Teacher against DOS?",
+  "idea": "Flag/Spy knowledge removes uncertainty about the objective and Spy risk. Exact-rank knowledge additionally removes uncertainty about battles. Compare with unchanged masked teacher to locate information-related weakness.",
+  "policies": [
+    "teacher-context-v1-normal",
+    "teacher-context-flag-spy-diagnostic-v1-normal",
+    "teacher-context-truth-diagnostic-v1-normal"
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "cohorts": {
+    "pilot": 1940001,
+    "validation": 1941001
+  },
+  "rounds": 10,
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "backend": "openmp",
+  "jobs": 4,
+  "max_plies": 1000,
+  "planned_attempts": 840,
+  "comparison": "All three policies use identical armies and seeds within each cohort; swapped sides in every pair. No tuning after pilot. Run fresh validation with the same frozen policies.",
+  "analysis": "Report all scored wins/draws/losses and unscored errors. Stratified paired bootstrap with 10000 resamples, analysis seed 1940002: each score on complete scored pairs; matched differences on pairs fully scored in both arms. Report pilot and validation separately. Positive validation difference interval establishes improvement for this diagnostic, not suitability for production.",
+  "limits": "DOS has initial Flag/Spy knowledge plus conditional access to other true ranks. Flag/Spy arm isolates initial identities, not the full DOS knowledge schedule. All-rank arm is a broader intervention. Our simulated opponent still has masked knowledge of our ranks. Privileged enemy ranks are represented with the existing revealed bit, so this also changes known-piece heuristics. No production change or fairness claim.",
+  "privacy": "Only named diagnostic policies receive opponent-setup in addition to original DOS policies. Ordinary policy IDs and frozen sources remain unchanged.",
+  "settings": "Both diagnostics retain eight samples, depth four, correction blend, strategic utility and root context. In the all-rank arm all eight worlds coincide; the simulated opponent does not become the actual DOS policy."
+}

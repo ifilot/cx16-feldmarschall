@@ -1,0 +1,226 @@
+{
+  "partition": "calibration",
+  "model_sha256": "3327ec168d4834c45e62e4f0576c47fd41e716904b4df4c8bee8d9ec2bd0f38b",
+  "corpus_sha256": "1ed8f86dbb3242e89bcde3dd2bc90237243bafcc01bd5bbc3a83321ea0da81dd",
+  "snapshots": 298,
+  "games": 84,
+  "sampling": {
+    "baseline_8": {
+      "metrics": {
+        "all": {
+          "games": 84,
+          "pieces": 8302,
+          "log_loss": 3.023657494609,
+          "brier": 0.9518680434613871,
+          "accuracy": 0.1940480680512915
+        },
+        "unmoved": {
+          "games": 84,
+          "pieces": 7241,
+          "log_loss": 3.0199610659223617,
+          "brier": 0.9447690142420706,
+          "accuracy": 0.20704322203130265
+        },
+        "flag": {
+          "games": 84,
+          "pieces": 298,
+          "log_loss": 5.08777125097396,
+          "brier": 1.1558788781424016,
+          "accuracy": 0.01488095238095238
+        },
+        "moved": {
+          "games": 65,
+          "pieces": 1061,
+          "log_loss": 3.0187175493012735,
+          "brier": 0.9783454266494622,
+          "accuracy": 0.15715086770848824
+        },
+        "spy": {
+          "games": 82,
+          "pieces": 231,
+          "log_loss": 5.257047049931748,
+          "brier": 1.1690711272227885,
+          "accuracy": 0.0
+        }
+      },
+      "mean_effective_samples": 7.806546186633562,
+      "minimum_effective_samples": 5.540983606557377
+    },
+    "learned_8": {
+      "metrics": {
+        "all": {
+          "games": 84,
+          "pieces": 8302,
+          "log_loss": 3.006842912362354,
+          "brier": 0.9692576743132081,
+          "accuracy": 0.17643432415649854
+        },
+        "unmoved": {
+          "games": 84,
+          "pieces": 7241,
+          "log_loss": 3.0286818291230215,
+          "brier": 0.9675858784226651,
+          "accuracy": 0.1774020853413315
+        },
+        "flag": {
+          "games": 84,
+          "pieces": 298,
+          "log_loss": 4.590051660777748,
+          "brier": 1.122283700059319,
+          "accuracy": 0.05952380952380952
+        },
+        "moved": {
+          "games": 65,
+          "pieces": 1061,
+          "log_loss": 2.878692674383789,
+          "brier": 0.9648475731755126,
+          "accuracy": 0.19463646690310685
+        },
+        "spy": {
+          "games": 82,
+          "pieces": 231,
+          "log_loss": 4.785411064756762,
+          "brier": 1.141064235400924,
+          "accuracy": 0.06707317073170732
+        }
+      },
+      "mean_effective_samples": 6.363534157460399,
+      "minimum_effective_samples": 2.903648306726695
+    },
+    "baseline_256": {
+      "metrics": {
+        "all": {
+          "games": 84,
+          "pieces": 8302,
+          "log_loss": 2.1471303657983682,
+          "brier": 0.859342691054738,
+          "accuracy": 0.23095025669431032
+        },
+        "unmoved": {
+          "games": 84,
+          "pieces": 7241,
+          "log_loss": 2.1506106010813477,
+          "brier": 0.8545243248214279,
+          "accuracy": 0.2448284090914826
+        },
+        "flag": {
+          "games": 84,
+          "pieces": 298,
+          "log_loss": 3.1699893791235842,
+          "brier": 1.049901396279571,
+          "accuracy": 0.005952380952380952
+        },
+        "moved": {
+          "games": 65,
+          "pieces": 1061,
+          "log_loss": 2.110111263124027,
+          "brier": 0.8774152741927816,
+          "accuracy": 0.18052026115901051
+        },
+        "spy": {
+          "games": 82,
+          "pieces": 231,
+          "log_loss": 3.3383971966550288,
+          "brier": 1.0554032754372489,
+          "accuracy": 0.0
+        }
+      },
+      "mean_effective_samples": 249.18562923136187,
+      "minimum_effective_samples": 182.01658310836868
+    },
+    "learned_256": {
+      "metrics": {
+        "all": {
+          "games": 84,
+          "pieces": 8302,
+          "log_loss": 2.124458028859734,
+          "brier": 0.8548748644260845,
+          "accuracy": 0.2407347314493618
+        },
+        "unmoved": {
+          "games": 84,
+          "pieces": 7241,
+          "log_loss": 2.1303469897975043,
+          "brier": 0.8511361617227815,
+          "accuracy": 0.24923034318185555
+        },
+        "flag": {
+          "games": 84,
+          "pieces": 298,
+          "log_loss": 2.8292822480482007,
+          "brier": 1.0034433344423088,
+          "accuracy": 0.011904761904761904
+        },
+        "moved": {
+          "games": 65,
+          "pieces": 1061,
+          "log_loss": 2.0869184662386715,
+          "brier": 0.8691270918820643,
+          "accuracy": 0.20759653123173155
+        },
+        "spy": {
+          "games": 82,
+          "pieces": 231,
+          "log_loss": 3.2462337337384506,
+          "brier": 1.0424711066125503,
+          "accuracy": 0.024390243902439025
+        }
+      },
+      "mean_effective_samples": 191.29237257128676,
+      "minimum_effective_samples": 144.0785934407721
+    }
+  },
+  "paired_log_loss": {
+    "8": {
+      "complete_pairs": 42,
+      "pairs_by_family": {
+        "fortified": 6,
+        "uniform": 6,
+        "unguarded": 6,
+        "forward": 6,
+        "decoy": 6,
+        "presets": 6,
+        "broad-mixed": 6
+      },
+      "metrics": {
+        "log_loss_difference": {
+          "mean": -0.016814582246646073,
+          "interval_95": [
+            -0.06732095906907472,
+            0.03482463704051847
+          ],
+          "interval_98_3333": [
+            -0.07849542560610648,
+            0.04552138109601117
+          ]
+        }
+      }
+    },
+    "256": {
+      "complete_pairs": 42,
+      "pairs_by_family": {
+        "fortified": 6,
+        "uniform": 6,
+        "unguarded": 6,
+        "forward": 6,
+        "decoy": 6,
+        "presets": 6,
+        "broad-mixed": 6
+      },
+      "metrics": {
+        "log_loss_difference": {
+          "mean": -0.02267233693863443,
+          "interval_95": [
+            -0.033357175502751864,
+            -0.012212222427226284
+          ],
+          "interval_98_3333": [
+            -0.03570861203481074,
+            -0.00996036485544852
+          ]
+        }
+      }
+    }
+  },
+  "scoring": "Game-weighted all-concealed-piece metrics; 5% inventory prior smoothing for sparse sampled probabilities. Negative paired log-loss difference favors learned beliefs. 256 samples are offline diagnostic only; playing uses eight."
+}

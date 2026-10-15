@@ -1,0 +1,14 @@
+test_portable_model_and_no_privileged_transport (test_calibrated_beliefs.FrozenPolicyTests.test_portable_model_and_no_privileged_transport) ... ok
+test_python_native_reused_match_parity (test_calibrated_beliefs.FrozenPolicyTests.test_python_native_reused_match_parity) ... ok
+test_all_known_world (test_calibrated_beliefs.PosteriorTests.test_all_known_world) ... ok
+test_concealed_nibbles_never_change_features_or_drawn_ranks (test_calibrated_beliefs.PosteriorTests.test_concealed_nibbles_never_change_features_or_drawn_ranks) ... ok
+test_importance_correction_matches_enumerated_posterior (test_calibrated_beliefs.PosteriorTests.test_importance_correction_matches_enumerated_posterior) ... ok
+test_invalid_model_inventory_and_histories_fail (test_calibrated_beliefs.PosteriorTests.test_invalid_model_inventory_and_histories_fail) ... ok
+test_known_enemy_ranks_and_own_army_preserved (test_calibrated_beliefs.PosteriorTests.test_known_enemy_ranks_and_own_army_preserved) ... ok
+test_narrow_masks_correct_after_dead_end_rejection (test_calibrated_beliefs.PosteriorTests.test_narrow_masks_correct_after_dead_end_rejection) ... ok
+test_orientation_normalization (test_calibrated_beliefs.PosteriorTests.test_orientation_normalization) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 4.682s
+
+OK

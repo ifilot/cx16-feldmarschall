@@ -31,6 +31,14 @@ def get_policy(identity):
     raise ValueError(f'Unknown AI: {identity}')
 
 
+def receives_opponent_setup(policy):
+    """Only original DOS or the explicitly labelled information ablation."""
+    return policy.get('driver') == 'msdos1990' or (
+        policy.get('driver') == 'teacher' and
+        policy.get('information_model') in ('diagnostic-full-enemy-ranks', 'diagnostic-flag-spy', 'diagnostic-flag') and
+        '--diagnostic-truth' in policy.get('driver_args', []))
+
+
 def register(spec):
     """Freeze all build inputs; publish a new ID only after its archive exists."""
     identity = spec['id']
@@ -127,13 +135,46 @@ def build_policy(identity, policy=None):
                 shutil_path = directory / name
                 shutil_path.write_bytes((source / 'tools' / name).read_bytes())
                 runtime.append(name)
+            if '--information-strategy' in policy.get('driver_args', []):
+                for name in ('info_common.py', 'info_lifetime.py', 'info_objectives.py', 'info_followthrough.py'):
+                    (directory / name).write_bytes((source / 'tools' / name).read_bytes())
+                    runtime.append(name)
+            if '--belief-model' in policy.get('driver_args', []):
+                name = 'calibrated_beliefs.py'
+                (directory / name).write_bytes((source / 'tools' / name).read_bytes())
+                runtime.append(name)
+                model_path = policy['belief_model']
+                if digest((source / model_path).read_bytes()) != policy['belief_model_sha256']:
+                    raise ValueError('Belief model failed integrity check')
+                model_name = Path(model_path).name
+                (directory / model_name).write_bytes((source / model_path).read_bytes())
+                runtime.append(model_name)
+            if '--root-policy' in policy.get('driver_args', []):
+                name = 'root_policy.py'
+                (directory / name).write_bytes((source / 'tools' / name).read_bytes())
+                runtime.append(name)
+                settings_path = policy['root_policy']
+                if digest((source / settings_path).read_bytes()) != policy['root_policy_sha256']:
+                    raise ValueError('Root policy settings failed integrity check')
+                settings_name = Path(settings_path).name
+                (directory / settings_name).write_bytes((source / settings_path).read_bytes())
+                runtime.append(settings_name)
+            driver_arguments = repr(policy['driver_args'])
+            if '--belief-model' in policy.get('driver_args', []):
+                # The tournament copies runtimes into a temporary directory;
+                # resolve the model beside that portable launcher, not cwd.
+                driver_arguments = ('[' + ', '.join('str(p / '+repr(arg)+')' if arg == model_name else repr(arg)
+                                                   for arg in policy['driver_args']) + ']')
+            if '--root-policy' in policy.get('driver_args', []):
+                driver_arguments = ('[' + ', '.join('str(p / '+repr(arg)+')' if arg == settings_name else repr(arg)
+                                                   for arg in policy['driver_args']) + ']')
             # The adapter locates its siblings relative to this preserved launcher.
             executable.write_text('#!/usr/bin/env python3\nimport os, pathlib, sys\n'
                 'p = pathlib.Path(__file__).resolve().parent\n'
                 f'if sys.argv[1:] == ["--identity"]:\n    print({identity!r})\n    raise SystemExit\n'
                 'os.execv(sys.executable, [sys.executable, str(p / "teacher_bot.py"), '
                 '"--observer", str(p / "observer"), "--teacher", str(p / "teacher"), '
-                f'*{policy["driver_args"]!r}, *sys.argv[1:]])\n')
+                f'*{driver_arguments}, *sys.argv[1:]])\n')
             executable.chmod(0o755)
     metadata = dict(policy=policy, recipe_sha256=recipe_sha,
                     executable_sha256=digest(executable.read_bytes()),
