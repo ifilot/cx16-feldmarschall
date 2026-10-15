@@ -1,0 +1,55 @@
+test_concealed_rank_nibble_permutations_cannot_change_goals_scores_or_move (test_campaign_native_beliefs.NativeBeliefObjectives.test_concealed_rank_nibble_permutations_cannot_change_goals_scores_or_move) ... ok
+test_counts_and_joint_fixed_point_expectations_match_exact_rational_means (test_campaign_native_beliefs.NativeBeliefObjectives.test_counts_and_joint_fixed_point_expectations_match_exact_rational_means) ... ok
+test_default_macro_off_binary_matches_immutable_original_core (test_campaign_native_beliefs.NativeBeliefObjectives.test_default_macro_off_binary_matches_immutable_original_core) ... ok
+test_invalid_setter_is_transactional_and_reset_clears_all_prior_state (test_campaign_native_beliefs.NativeBeliefObjectives.test_invalid_setter_is_transactional_and_reset_clears_all_prior_state) ... ok
+test_probabilities_change_persistent_goal_and_quiet_move_without_disclosure (test_campaign_native_beliefs.NativeBeliefObjectives.test_probabilities_change_persistent_goal_and_quiet_move_without_disclosure) ... ok
+test_save_load_restores_prior_owner_arrays_and_original_memory (test_campaign_native_beliefs.NativeBeliefObjectives.test_save_load_restores_prior_owner_arrays_and_original_memory) ... ok
+test_wrong_army_easy_and_hard_ignore_priors (test_campaign_native_beliefs.NativeBeliefObjectives.test_wrong_army_easy_and_hard_ignore_priors) ... ok
+test_actual_public_events_and_played_confirmation_are_forwarded (test_campaign_native_belief_driver.NativeBeliefTests.test_actual_public_events_and_played_confirmation_are_forwarded) ... ok
+test_bare_setup_is_recorded_as_own_private_setup (test_campaign_native_belief_driver.NativeBeliefTests.test_bare_setup_is_recorded_as_own_private_setup) ... ok
+test_concealed_nibbles_cannot_change_decision_packet_or_report (test_campaign_native_belief_driver.NativeBeliefTests.test_concealed_nibbles_cannot_change_decision_packet_or_report) ... ok
+test_controlled_rounding_preserves_exact_mass_when_no_mobile_rank_remains (test_campaign_native_belief_driver.NativeBeliefTests.test_controlled_rounding_preserves_exact_mass_when_no_mobile_rank_remains) ... ok
+test_one_public_posterior_packet_then_native_go_without_rollouts (test_campaign_native_belief_driver.NativeBeliefTests.test_one_public_posterior_packet_then_native_go_without_rollouts) ... ok
+test_private_setups_and_optional_rules_are_rejected_before_forwarding (test_campaign_native_belief_driver.NativeBeliefTests.test_private_setups_and_optional_rules_are_rejected_before_forwarding) ... ok
+test_protocol_bare_setup_and_new_reset (test_campaign_native_belief_driver.NativeBeliefTests.test_protocol_bare_setup_and_new_reset) ... ok
+test_default_engine_binary_is_identical_to_frozen_student (test_campaign_prior_protocol.PriorProtocol.test_default_engine_binary_is_identical_to_frozen_student) ... ok
+test_invalid_packets_leave_entire_prior_and_memory_state_unchanged (test_campaign_prior_protocol.PriorProtocol.test_invalid_packets_leave_entire_prior_and_memory_state_unchanged) ... ok
+test_macro_off_rejects_command_and_preserves_strategy (test_campaign_prior_protocol.PriorProtocol.test_macro_off_rejects_command_and_preserves_strategy) ... ok
+test_new_game_and_position_reset_clear_every_prior_byte (test_campaign_prior_protocol.PriorProtocol.test_new_game_and_position_reset_clear_every_prior_byte) ... ok
+test_valid_packet_routes_quiet_move_for_both_armies_without_disclosure (test_campaign_prior_protocol.PriorProtocol.test_valid_packet_routes_quiet_move_for_both_armies_without_disclosure) ... ok
+test_archive_receipt_model_and_current_driver_identity (test_campaign_native_belief_portable.NativeBeliefPortableTests.test_archive_receipt_model_and_current_driver_identity) ... ok
+test_frozen_launchers_identity_setup_and_public_history_outside_checkout (test_campaign_native_belief_portable.NativeBeliefPortableTests.test_frozen_launchers_identity_setup_and_public_history_outside_checkout) ... Traceback (most recent call last):
+  File "/tmp/portable-native-beliefs-tvuohijx/runtime/campaign_native_beliefs.py", line 154, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/portable-native-beliefs-tvuohijx/runtime/campaign_native_beliefs.py", line 151, in main
+    NativeBeliefBot(args.observer,args.model,args.mode,args.difficulty).run()
+  File "/tmp/portable-native-beliefs-tvuohijx/runtime/campaign_native_beliefs.py", line 132, in run
+    self.model.observe(words);move=self.choose()
+                                   ^^^^^^^^^^^^^
+  File "/tmp/portable-native-beliefs-tvuohijx/runtime/campaign_native_beliefs.py", line 100, in choose
+    army_text,board,lost,shuttle=self.observer.ask('public','public').split()
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/portable-native-beliefs-tvuohijx/runtime/feldmarschall.py", line 235, in ask
+    raise RuntimeError(f'{self.name}: {answer} (after "{line}")')
+RuntimeError: /tmp/portable-native-beliefs-tvuohijx/runtime/observer: error unknown command (after "public")
+ERROR
+
+======================================================================
+ERROR: test_frozen_launchers_identity_setup_and_public_history_outside_checkout (test_campaign_native_belief_portable.NativeBeliefPortableTests.test_frozen_launchers_identity_setup_and_public_history_outside_checkout)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/test_campaign_native_belief_portable.py", line 65, in test_frozen_launchers_identity_setup_and_public_history_outside_checkout
+    first=bot.ask('go','move');self.assertEqual(len(first.split()),2)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/feldmarschall.py", line 231, in ask
+    answer = self.read()
+             ^^^^^^^^^^^
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/feldmarschall.py", line 225, in read
+    raise RuntimeError(f'{self.name} stopped')
+RuntimeError: /tmp/portable-native-beliefs-tvuohijx/runtime/engine stopped
+
+----------------------------------------------------------------------
+Ran 21 tests in 12.653s
+
+FAILED (errors=1)

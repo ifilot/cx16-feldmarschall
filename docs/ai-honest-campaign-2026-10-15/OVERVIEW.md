@@ -102,3 +102,8 @@ Evidence: [cycle-07-exact-contact-risk](cycle-07-exact-contact-risk/result.json)
 - student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +3.3 percentage points; 95% paired interval [-1.3, +8.0].
 - teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal: +1.4 percentage points; 95% paired interval [-2.6, +5.5].
 
+
+**Preflight failures, without DOS strength results:**
+
+- Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
+

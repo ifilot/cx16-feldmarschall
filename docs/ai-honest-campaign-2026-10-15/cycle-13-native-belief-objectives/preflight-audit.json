@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "claim": "Both unchanged frozen v1 runtimes reproducibly fail required public query before their first move; not a strength test.",
+  "no_tournaments": true,
+  "records": [
+    {
+      "policy": "student-counts-belief-objectives-v1-normal",
+      "returncode": 1,
+      "protocol": [
+        "feldmarschall",
+        "new red",
+        "seed 719",
+        "setup 12334445555666677778888899999999SBBBBBBF",
+        "go",
+        "quit"
+      ],
+      "stdout": "id name public-native-beliefs\nid author cx16-feldmarschall tools\nok\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/failed-native-v1-z6g61l3a/runtime/campaign_native_beliefs.py\", line 154, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/tmp/failed-native-v1-z6g61l3a/runtime/campaign_native_beliefs.py\", line 151, in main\n    NativeBeliefBot(args.observer,args.model,args.mode,args.difficulty).run()\n  File \"/tmp/failed-native-v1-z6g61l3a/runtime/campaign_native_beliefs.py\", line 132, in run\n    self.model.observe(words);move=self.choose()\n                                   ^^^^^^^^^^^^^\n  File \"/tmp/failed-native-v1-z6g61l3a/runtime/campaign_native_beliefs.py\", line 100, in choose\n    army_text,board,lost,shuttle=self.observer.ask('public','public').split()\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/failed-native-v1-z6g61l3a/runtime/feldmarschall.py\", line 235, in ask\n    raise RuntimeError(f'{self.name}: {answer} (after \"{line}\")')\nRuntimeError: /tmp/failed-native-v1-z6g61l3a/runtime/observer: error unknown command (after \"public\")\n",
+      "recipe": {
+        "id": "student-counts-belief-objectives-v1-normal",
+        "name": "student-counts-belief-objectives-v1-normal",
+        "description": "Use counts public rank marginals in native quiet target planning and immediate capture evaluation, without rollouts.",
+        "sources": [
+          "src/native/engine.c",
+          "src/core/pieces.c",
+          "src/core/board.c",
+          "src/core/rules.c",
+          "src/core/setup.c",
+          "src/core/random.c",
+          "src/core/ai_deploy.c",
+          "src/core/ai.c",
+          "src/core/ai_level.c",
+          "src/core/ai_mission.c",
+          "src/core/ai_memory.c",
+          "src/core/ai_student.c"
+        ],
+        "defines": [
+          "AI_MISSIONS",
+          "AI_MEMORY",
+          "AI_STUDENT",
+          "AI_STUDENT_V2",
+          "AI_STUDENT_PRODUCTION",
+          "AI_STUDENT_COOP_GUARD",
+          "AI_BELIEF_PRIORS"
+        ],
+        "difficulty": "normal",
+        "status": "experimental",
+        "include_dirs": [],
+        "driver": "native-beliefs",
+        "model": "Q12 public Flag/Bomb marginals in native expected combat gain; counts prior, exchangeable remaining mobile ranks.",
+        "information_model": "Own army and public events only; masked enemy ranks and exact public inventory. No enemy setup.",
+        "joint_belief_model": "ai/models/joint-flag-bomb-beliefs-v1.json",
+        "joint_belief_model_sha256": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8",
+        "asset_files": [
+          "ai/models/joint-flag-bomb-beliefs-v1.json"
+        ],
+        "driver_args": [
+          "--model",
+          "joint-flag-bomb-beliefs-v1.json",
+          "--mode",
+          "counts"
+        ],
+        "archive": "ai/sources/f1de824b70d427ede222f1bac08d14e810af32828d008e1b75038b74f3ffea26.zip",
+        "source_sha256": "f1de824b70d427ede222f1bac08d14e810af32828d008e1b75038b74f3ffea26"
+      },
+      "runtime_sha256": {
+        "engine": "f8504c9a479974a60e91da3d79e9d79efb0d310bcd1804b467752b9a99031591",
+        "observer": "542ea52737154c1c9089e44492a3c32395456db85209d1ff644073d17a5e528f",
+        "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+        "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+        "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+        "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+        "joint-flag-bomb-beliefs-v1.json": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8"
+      }
+    },
+    {
+      "policy": "student-joint-belief-objectives-v1-normal",
+      "returncode": 1,
+      "protocol": [
+        "feldmarschall",
+        "new red",
+        "seed 719",
+        "setup 12334445555666677778888899999999SBBBBBBF",
+        "go",
+        "quit"
+      ],
+      "stdout": "id name public-native-beliefs\nid author cx16-feldmarschall tools\nok\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/failed-native-v1-h74rhan_/runtime/campaign_native_beliefs.py\", line 154, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/tmp/failed-native-v1-h74rhan_/runtime/campaign_native_beliefs.py\", line 151, in main\n    NativeBeliefBot(args.observer,args.model,args.mode,args.difficulty).run()\n  File \"/tmp/failed-native-v1-h74rhan_/runtime/campaign_native_beliefs.py\", line 132, in run\n    self.model.observe(words);move=self.choose()\n                                   ^^^^^^^^^^^^^\n  File \"/tmp/failed-native-v1-h74rhan_/runtime/campaign_native_beliefs.py\", line 100, in choose\n    army_text,board,lost,shuttle=self.observer.ask('public','public').split()\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/failed-native-v1-h74rhan_/runtime/feldmarschall.py\", line 235, in ask\n    raise RuntimeError(f'{self.name}: {answer} (after \"{line}\")')\nRuntimeError: /tmp/failed-native-v1-h74rhan_/runtime/observer: error unknown command (after \"public\")\n",
+      "recipe": {
+        "id": "student-joint-belief-objectives-v1-normal",
+        "name": "student-joint-belief-objectives-v1-normal",
+        "description": "Use joint public rank marginals in native quiet target planning and immediate capture evaluation, without rollouts.",
+        "sources": [
+          "src/native/engine.c",
+          "src/core/pieces.c",
+          "src/core/board.c",
+          "src/core/rules.c",
+          "src/core/setup.c",
+          "src/core/random.c",
+          "src/core/ai_deploy.c",
+          "src/core/ai.c",
+          "src/core/ai_level.c",
+          "src/core/ai_mission.c",
+          "src/core/ai_memory.c",
+          "src/core/ai_student.c"
+        ],
+        "defines": [
+          "AI_MISSIONS",
+          "AI_MEMORY",
+          "AI_STUDENT",
+          "AI_STUDENT_V2",
+          "AI_STUDENT_PRODUCTION",
+          "AI_STUDENT_COOP_GUARD",
+          "AI_BELIEF_PRIORS"
+        ],
+        "difficulty": "normal",
+        "status": "experimental",
+        "include_dirs": [],
+        "driver": "native-beliefs",
+        "model": "Q12 public Flag/Bomb marginals in native expected combat gain; joint prior, exchangeable remaining mobile ranks.",
+        "information_model": "Own army and public events only; masked enemy ranks and exact public inventory. No enemy setup.",
+        "joint_belief_model": "ai/models/joint-flag-bomb-beliefs-v1.json",
+        "joint_belief_model_sha256": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8",
+        "asset_files": [
+          "ai/models/joint-flag-bomb-beliefs-v1.json"
+        ],
+        "driver_args": [
+          "--model",
+          "joint-flag-bomb-beliefs-v1.json",
+          "--mode",
+          "joint"
+        ],
+        "archive": "ai/sources/f1de824b70d427ede222f1bac08d14e810af32828d008e1b75038b74f3ffea26.zip",
+        "source_sha256": "f1de824b70d427ede222f1bac08d14e810af32828d008e1b75038b74f3ffea26"
+      },
+      "runtime_sha256": {
+        "engine": "0e37d37ec20cedc7f0c8edfac9c7e5ccf1e3d967296fa54fccaca63dd72fe6e4",
+        "observer": "bf321c72eb6521627db6169617293c6cde7491d64881589411faac6f9f422585",
+        "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+        "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+        "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+        "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+        "joint-flag-bomb-beliefs-v1.json": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8"
+      }
+    }
+  ]
+}

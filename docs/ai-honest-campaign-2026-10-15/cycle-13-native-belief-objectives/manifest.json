@@ -1,0 +1,12 @@
+{
+  "CONCLUSION.md": "18b49925886bb63ad566d9ebbc83721c0c16385ec16e770d62fd75b9b7dc6eb9",
+  "checks-v1-recipe-failure.log": "8e429a624a5578580b409c0022f60877f7a53653fcaa6dbeb928ddffe045a846",
+  "checks.log": "8e429a624a5578580b409c0022f60877f7a53653fcaa6dbeb928ddffe045a846",
+  "frozen-policies.json": "c53367020b78275621af502583d410dc87634220299bbe4c21190e4c2d8cc417",
+  "native-frozen-integrity.json": "044c4de372ac5d518e0cf7c9d5aa6dd7ca7f0d83d5eb22637e5709d40d1127a3",
+  "plan.json": "940e3929820a2f33bba0a98f80688f2b6fd31252ad468882177902d559842929",
+  "preflight-audit.json": "64730597607a6870f3996a8c9d3f4a2a53f918a419c6e3d25db7ff238d447cbc",
+  "preflight-result.json": "66124bd02f3d5c12af27c7068864cf90ff4af7db8d4f15a74311ceff3a97b54c",
+  "registration.json": "d871c35a8ea5e0ee56cb20653f9233b31f3c8b6ccc78a93925409c38eb0c1f48",
+  "registry-before.json": "9262b39a73e5d4109c304232c4b8f31f13fe77610891e29953a85e10ef31fcc5"
+}
