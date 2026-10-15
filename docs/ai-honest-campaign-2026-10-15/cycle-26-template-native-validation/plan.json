@@ -1,0 +1,30 @@
+{
+  "cycle": 26,
+  "baseline": "student-validated-deployment-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-validated-deployment-v1-normal",
+    "student-template-flag-bomb-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 2360001,
+  "rounds": 500,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "Independently validate the unchanged source-informed template Flag/Bomb prior against the same native move policy without external priors."
+  ],
+  "contrasts": [
+    [
+      "student-template-flag-bomb-v1-normal",
+      "student-validated-deployment-v1-normal"
+    ]
+  ],
+  "analysis": "Frozen after cycles22/23 completed and the three native cycle21 arms completed, before any new validation games. No policy, model or coefficient retuning. Fresh seeds distinct from screening. Score is wins plus half draws, unscored engine errors retained; paired inference and missing-score bounds required. Single primary95% paired interval. Screening native scores37.98% versus14.05% motivate validation but do not establish generality. Desktop prototype; current AI bank does not fit. No decisions based on this cohort until all2000 attempts finish.",
+  "evidence": "Cycle21 native arms only; same frozen models, archives and recipes. Teacher arms still pending at registration."
+}

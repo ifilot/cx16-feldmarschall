@@ -1,0 +1,35 @@
+{
+  "cycle": 28,
+  "baseline": "student-validated-deployment-v1-normal",
+  "opponent": "student-guard-v1-normal",
+  "policies": [
+    "student-validated-deployment-v1-normal",
+    "student-template-flag-bomb-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 2380001,
+  "rounds": 100,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "hypotheses": [
+    "Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population."
+  ],
+  "contrasts": [
+    [
+      "student-template-flag-bomb-v1-normal",
+      "student-validated-deployment-v1-normal"
+    ]
+  ],
+  "analysis": "Frozen after cycles22/23 completed and the three native cycle21 arms completed, before any new validation games. No policy, model or coefficient retuning. Fresh seeds distinct from screening. Score is wins plus half draws, unscored engine errors retained; paired inference and missing-score bounds required. Generality screen on seven fixed stress families against honest native guard. Referee forces identical armies across policies, so the validated-deployment alias is an identical-move baseline for guard and its expected score is50% under color-paired symmetric play. Single paired95% interval; report family breakdowns. Failure here precludes a general-strength promotion even if DOS-specific gain validates. A source-specific prior can be mistaken on unfamiliar armies; this is the intended stress test.",
+  "evidence": "Cycle21 native signal; immutable eight-template80% prior plus20% uniform background, no model adaptation to this population."
+}
