@@ -1,0 +1,22 @@
+{
+  "cycle": 15,
+  "status": "failed-preflight",
+  "attempts": 0,
+  "hypotheses": [
+    "Connect public Flag/Bomb beliefs to native persistent objectives, quiet routes and nonlinear capture evaluation without a rollout engine.",
+    "Separate correct moved/unmoved count conditioning from the learned joint setup prior."
+  ],
+  "policies": [
+    "student-guard-v1-normal",
+    "student-counts-belief-objectives-v2-normal",
+    "student-joint-belief-objectives-v2-normal"
+  ],
+  "new_policies": [
+    "student-counts-belief-objectives-v2-normal",
+    "student-joint-belief-objectives-v2-normal"
+  ],
+  "reason": "AI_TEST alone did not enable public queries; missing outer AI_DIAGNOSTICS guard. No saved tournament executed.",
+  "next_cycle": 16,
+  "unchanged_models": true,
+  "failed_recipes_preserved": true
+}

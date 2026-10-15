@@ -106,4 +106,5 @@ Evidence: [cycle-07-exact-contact-risk](cycle-07-exact-contact-risk/result.json)
 **Preflight failures, without DOS strength results:**
 
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
+- Cycle 15: AI_TEST alone did not enable public queries; missing outer AI_DIAGNOSTICS guard. No saved tournament executed. [Preserved evidence](cycle-15-native-belief-objectives-v2/CONCLUSION.md).
 

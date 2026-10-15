@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "scope": "Unpublished v2+AI_DIAGNOSTICS recipe, fresh compiled native observer and frozen minimal runtime/model; process cwd outside checkout.",
+  "test_source_sha256": "128d2e14e8288a0e7acddf6a0bfafa1e32deb27aa568dec9c8a840d461ef67f7",
+  "recipes": [
+    {
+      "mode": "counts",
+      "provisional_identity": "provisional-counts-beliefs-v3-normal",
+      "registered": false,
+      "source_archive_sha256": "ab0041bd968339bec6bb1c70a3a53f68aa8c3d9a518151e92f4a7c801777efe4",
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS"
+      ],
+      "cases": [
+        {
+          "army": 0,
+          "initial": "a4 a7",
+          "after80": "j3 i3",
+          "reset_repeats": true,
+          "bare_setup_passed": true
+        },
+        {
+          "army": 1,
+          "initial": "j7 j6",
+          "after80": "f5 f4",
+          "reset_repeats": true,
+          "bare_setup_passed": true
+        }
+      ],
+      "minimal_runtime_sha256": {
+        "engine": "92a1f2a318314fd78573847d4a5de52f355839ba118f4df73502c4febaa3770d",
+        "observer": "8f117ae53034977f5b4b0ac9e153895fee22c44acefe39a80e2a948e45a866fd",
+        "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+        "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+        "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+        "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+        "joint-flag-bomb-beliefs-v1.json": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8"
+      }
+    },
+    {
+      "mode": "joint",
+      "provisional_identity": "provisional-joint-beliefs-v3-normal",
+      "registered": false,
+      "source_archive_sha256": "97f9ddee7184416461031cc34c7a0798fefd14d6bd4d75a721e18c3ddd9de12f",
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS"
+      ],
+      "cases": [
+        {
+          "army": 0,
+          "initial": "a4 a7",
+          "after80": "j3 i3",
+          "reset_repeats": true,
+          "bare_setup_passed": true
+        },
+        {
+          "army": 1,
+          "initial": "j7 j6",
+          "after80": "f5 f4",
+          "reset_repeats": true,
+          "bare_setup_passed": true
+        }
+      ],
+      "minimal_runtime_sha256": {
+        "engine": "a981ef176fbd4053933ce8d2c550ef19b8031bf3899708e6fd70985815519401",
+        "observer": "3d81b53440ea7497ea29d6ffbb16fe05540b2b5aa92ed4c96bedd720e325c438",
+        "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+        "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+        "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+        "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+        "joint-flag-bomb-beliefs-v1.json": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8"
+      }
+    }
+  ]
+}

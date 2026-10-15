@@ -1,0 +1,14 @@
+{
+  "CONCLUSION.md": "f12c96c1f6de9c85261b2614c641d770f03a724c37898a2f3decb2794c0e91e6",
+  "checks.log": "d3ad688884002ec9eff37c39b99b3e05395d86c2c6d243947ce0d3021da36ea2",
+  "frozen-policies.json": "d26f2ab6a21c7a259310cecbffe66b37ec343ea947de02bb05ed44b9e1c4a5f1",
+  "native-frozen-integrity.json": "08c641c66063c286c14e8ed8e04cfd570834f51a66d86e49259b50628363a53d",
+  "plan.json": "9561e768c47789b805d9b68b7f55b69cbc9579c9ecab473b513d479394cf4480",
+  "preflight-audit.json": "dbbbb4c3eeba41df380b67147897a8c580981b213fedbdb27d15648d55c4c104",
+  "preflight-result.json": "13e3a8cdad09955c39a6fd523195215e05d737ff43eac1db501ff6f1ea004c41",
+  "provisional-v3-portable-qualification.json": "48a74532fe360abb7cf830535e3f009c2b8a7ec51a719534e0f0d6dfd318f6a1",
+  "provisional-v3-portable-qualification.log": "48a74532fe360abb7cf830535e3f009c2b8a7ec51a719534e0f0d6dfd318f6a1",
+  "provisional-v3-preflight.json": "f49f4f4637b5521e7c9a5bf95ec3a28f8d3e52b34e7d7fd4b0ee64deb9d3c452",
+  "registration.json": "031d532f052233f3d4a61607eb3511c5be64e93d7a97fbb693421ef50f782b8c",
+  "registry-before.json": "ff6fccb235e92da2fd3d9702805bd2266449fcbdad8e623d8a2e83d9208eb16a"
+}

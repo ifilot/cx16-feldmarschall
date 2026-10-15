@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "provisional_defines": [
+    "AI_MISSIONS",
+    "AI_MEMORY",
+    "AI_STUDENT",
+    "AI_STUDENT_V2",
+    "AI_STUDENT_PRODUCTION",
+    "AI_STUDENT_COOP_GUARD",
+    "AI_BELIEF_PRIORS",
+    "AI_TEST",
+    "AI_DIAGNOSTICS"
+  ],
+  "source_archive_sha256": "97f9ddee7184416461031cc34c7a0798fefd14d6bd4d75a721e18c3ddd9de12f",
+  "real_driver_go_cases": [
+    {
+      "mode": "counts",
+      "army": 0,
+      "initial": "a4 a7",
+      "after80": "j3 i3",
+      "public_army": 0
+    },
+    {
+      "mode": "counts",
+      "army": 1,
+      "initial": "j7 j6",
+      "after80": "f5 f4",
+      "public_army": 1
+    },
+    {
+      "mode": "joint",
+      "army": 0,
+      "initial": "a4 a7",
+      "after80": "j3 i3",
+      "public_army": 0
+    },
+    {
+      "mode": "joint",
+      "army": 1,
+      "initial": "j7 j6",
+      "after80": "f5 f4",
+      "public_army": 1
+    }
+  ]
+}
