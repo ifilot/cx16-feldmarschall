@@ -1,0 +1,53 @@
+test_duplicate_missing_and_wrong_owner_records_are_rejected (test_campaign_setup_store.SetupStore.test_duplicate_missing_and_wrong_owner_records_are_rejected) ... ok
+test_explicit_rotated_mode_is_exact_board_rotation_and_keeps_raw_records (test_campaign_setup_store.SetupStore.test_explicit_rotated_mode_is_exact_board_rotation_and_keeps_raw_records) ... ok
+test_hash_valid_artifact_with_corrupted_record_is_rejected (test_campaign_setup_store.SetupStore.test_hash_valid_artifact_with_corrupted_record_is_rejected) ... ok
+test_legacy_missing_or_explicit_referee_mode_keeps_physical_armies (test_campaign_setup_store.SetupStore.test_legacy_missing_or_explicit_referee_mode_keeps_physical_armies) ... ok
+test_missing_or_wrong_named_setup_artifact_is_rejected (test_campaign_setup_store.SetupStore.test_missing_or_wrong_named_setup_artifact_is_rejected) ... ok
+test_policy_owned_armies_follow_participants_and_verify (test_campaign_setup_store.SetupStore.test_policy_owned_armies_follow_participants_and_verify) ... ok
+test_rotated_and_original_owned_modes_cannot_be_relabelled (test_campaign_setup_store.SetupStore.test_rotated_and_original_owned_modes_cannot_be_relabelled) ... ok
+test_unknown_mode_and_wrong_pairing_mode_are_rejected (test_campaign_setup_store.SetupStore.test_unknown_mode_and_wrong_pairing_mode_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.355s
+
+OK
+test_extra_enemy_input_and_missing_protocol_are_rejected (test_audit_policy_setups.SetupAuditTests.test_extra_enemy_input_and_missing_protocol_are_rejected) ... ok
+test_missing_setup_source_artifact_fails (test_audit_policy_setups.SetupAuditTests.test_missing_setup_source_artifact_fails) ... ok
+test_repeatable_stdout_or_stderr_mismatch_fails (test_audit_policy_setups.SetupAuditTests.test_repeatable_stdout_or_stderr_mismatch_fails) ... ok
+test_replays_every_record_from_frozen_runtime_with_nested_asset (test_audit_policy_setups.SetupAuditTests.test_replays_every_record_from_frozen_runtime_with_nested_asset) ... ok
+test_rotated_mode_replays_raw_red_protocol_and_binds_rotated_blue_army (test_audit_policy_setups.SetupAuditTests.test_rotated_mode_replays_raw_red_protocol_and_binds_rotated_blue_army) ... ok
+test_runtime_path_cannot_escape_temporary_directory (test_audit_policy_setups.SetupAuditTests.test_runtime_path_cannot_escape_temporary_directory) ... ok
+test_variable_stderr_is_reported_without_exact_claim (test_audit_policy_setups.SetupAuditTests.test_variable_stderr_is_reported_without_exact_claim) ... ok
+test_wrong_frozen_setup_is_rejected_despite_valid_saved_armies (test_audit_policy_setups.SetupAuditTests.test_wrong_frozen_setup_is_rejected_despite_valid_saved_armies) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.529s
+
+OK
+test_dos_driver_cannot_be_relabelled_an_honest_control (test_campaign_dos_setup_runtime.FrozenDeploymentRuntime.test_dos_driver_cannot_be_relabelled_an_honest_control) ... ok
+test_hash_valid_tampered_seed_or_audit_rejected_by_regeneration (test_campaign_dos_setup_runtime.FrozenDeploymentRuntime.test_hash_valid_tampered_seed_or_audit_rejected_by_regeneration) ... ok
+test_honest_opponent_uses_original_army_only_with_explicit_context (test_campaign_dos_setup_runtime.FrozenDeploymentRuntime.test_honest_opponent_uses_original_army_only_with_explicit_context) ... ok
+test_policy_owned_overwrites_a_and_b_follows_dos_identity (test_campaign_dos_setup_runtime.FrozenDeploymentRuntime.test_policy_owned_overwrites_a_and_b_follows_dos_identity) ... ok
+test_referee_two_slots_replay_only_frozen_bundle_and_preserve_prefixes (test_campaign_dos_setup_runtime.FrozenDeploymentRuntime.test_referee_two_slots_replay_only_frozen_bundle_and_preserve_prefixes) ... ok
+test_rotated_original_b_matches_blue_raw_and_red_reflection (test_campaign_dos_setup_runtime.FrozenDeploymentRuntime.test_rotated_original_b_matches_blue_raw_and_red_reflection) ... ok
+test_runtime_blob_corruption_rejected_before_worker_execution (test_campaign_dos_setup_runtime.FrozenDeploymentRuntime.test_runtime_blob_corruption_rejected_before_worker_execution) ... ok
+test_unsafe_runtime_paths_and_missing_original_slots_rejected (test_campaign_dos_setup_runtime.FrozenDeploymentRuntime.test_unsafe_runtime_paths_and_missing_original_slots_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 65.831s
+
+OK
+test_all_error_cohort_is_bounded_not_scored_as_losses (test_campaign_error_sensitivity.ErrorSensitivity.test_all_error_cohort_is_bounded_not_scored_as_losses) ... ok
+test_cross_arm_seed_setup_opponent_and_pair_mismatches_rejected (test_campaign_error_sensitivity.ErrorSensitivity.test_cross_arm_seed_setup_opponent_and_pair_mismatches_rejected) ... ok
+test_errors_in_opposite_games_and_per_family_keep_complete_planned_denominator (test_campaign_error_sensitivity.ErrorSensitivity.test_errors_in_opposite_games_and_per_family_keep_complete_planned_denominator) ... ok
+test_errors_in_same_game_are_independent_unknowns_and_unscored_officially (test_campaign_error_sensitivity.ErrorSensitivity.test_errors_in_same_game_are_independent_unknowns_and_unscored_officially) ... ok
+test_exact_direction_diagnostic_ignores_ties_and_is_not_mean_test (test_campaign_error_sensitivity.ErrorSensitivity.test_exact_direction_diagnostic_ignores_ties_and_is_not_mean_test) ... ok
+test_explicit_policy_owned_mode_permits_only_candidate_army_changes (test_campaign_error_sensitivity.ErrorSensitivity.test_explicit_policy_owned_mode_permits_only_candidate_army_changes) ... ok
+test_incomplete_planned_pairs_are_not_silently_dropped_and_files_read_only (test_campaign_error_sensitivity.ErrorSensitivity.test_incomplete_planned_pairs_are_not_silently_dropped_and_files_read_only) ... ok
+test_no_error_collapses_to_ordinary_paired_mean_and_draws_are_half (test_campaign_error_sensitivity.ErrorSensitivity.test_no_error_collapses_to_ordinary_paired_mean_and_draws_are_half) ... ok
+test_rotated_comparison_permits_own_treatment_and_matches_dos_per_orientation (test_campaign_error_sensitivity.ErrorSensitivity.test_rotated_comparison_permits_own_treatment_and_matches_dos_per_orientation) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.413s
+
+OK

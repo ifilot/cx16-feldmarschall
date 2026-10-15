@@ -1,0 +1,6 @@
+{
+  "passed": false,
+  "cause": "Final checks.log existence assertion: per-game replay, Qt and all frozen setup audits had completed successfully, but this directory lacked a retained aggregate unittest log.",
+  "games_rerun": 0,
+  "remedy": "Run setup/store/runtime/error-sensitivity regression suites into checks.log, then rerun unchanged standard audit."
+}

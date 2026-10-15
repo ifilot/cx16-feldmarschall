@@ -43,6 +43,10 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 16 | Fixed armies, seven stress families | student-guard-v1-normal | 172 / 32 / 345 | 34.2% | 11 |
 | 16 | Fixed armies, seven stress families | student-counts-belief-objectives-v3-normal | 163 / 27 / 360 | 32.1% | 10 |
 | 16 | Fixed armies, seven stress families | student-joint-belief-objectives-v3-normal | 181 / 38 / 339 | 35.8% | 2 |
+| 19 | Own setup, original DOS, rotated | student-guard-v1-normal | 23 / 24 / 336 | 9.1% | 17 |
+| 19 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 58 / 39 / 265 | 21.4% | 38 |
+| 19 | Own setup, original DOS, rotated | teacher-context-v1-normal | 20 / 12 / 349 | 6.8% | 19 |
+| 19 | Own setup, original DOS, rotated | teacher-validated-deployment-v1-normal | 43 / 15 / 298 | 14.2% | 44 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -143,6 +147,18 @@ Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectiv
 - student-joint-belief-objectives-v3-normal minus student-counts-belief-objectives-v3-normal: +3.4 percentage points; 95% paired interval [-0.6, +7.4].
 
 
+**Cycle 19 hypotheses:** Measure honest deployment-plus-play against armies drawn by the actual unchanged DOS level3 deployment instructions, rather than seven stress families.; Test validated own deployments against protected random own setups with identical DOS armies and move seeds.
+
+Evidence: [cycle-19-original-dos-deployments](cycle-19-original-dos-deployments/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-validated-deployment-v1-normal minus student-guard-v1-normal: +13.3 percentage points; 95% paired interval [+7.9, +18.6].
+- teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: +6.1 percentage points; 95% paired interval [+1.7, +10.7].
+
+
 **Preflight failures, without DOS strength results:**
 
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
@@ -171,4 +187,10 @@ Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectiv
 - Cycle 10: Prevent known two-turn Flag threats by deploying and retaining rank-capable interception coverage before immediate danger. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-10-preventive-flag-interception/plan.json).
 - Cycle 11: Connect public setup beliefs to hidden-capture values that the continuation correction currently subtracts.; Compare count-conditioned marginals against correlated setup marginals with identical frozen joint-sampled futures. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-11-belief-capture-values/plan.json).
 - Cycle 14: Independently validate whether joint probability of any lethal concealed contact improves the native guard against DOS. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-14-native-contact-validation/plan.json).
+- Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
+- Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
+- Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).
+- Cycle 21: Recognize possible enemy formations from public evidence using an honest source-informed opening prior.; Compare native Flag/Bomb objectives against a count-conditioning control, and correlated teacher worlds against an unweighted uniform control. 2,400 planned attempts; no completed strength result. [Frozen plan](cycle-21-template-opening-prior/plan.json).
+- Cycle 22: Requiring a surviving enemy Miner to clear two distinct unavoidable Bomb barriers can improve own Flag defence against an opponent that knows its location.; Separate the three-swap deployment package from fixing Fortress instead of the existing validated mixture. 1,200 planned attempts; no completed strength result. [Frozen plan](cycle-22-double-bomb-shell/plan.json).
+- Cycle 23: Test whether the same fixed three-swap deployment package helps against an honest native opponent, using the original DOS army distribution as a controlled common deployment.; Separate an opponent-specific response from a deployment improvement that also transfers to an honest opponent. 1,200 planned attempts; no completed strength result. [Frozen plan](cycle-23-honest-deployment-control/plan.json).
 
