@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "scope": "Separate public replay/split review by same research agent; not a third-party review.",
+  "full_prefixes_checked": 1024,
+  "own_random_choices_reconstructed_from_public_board": 2560,
+  "captured_enemy_disclosures_retained_across_prefixes": 392,
+  "first_action_negative_scope": "v1 fixed first own move only; does not contradict v2 positive in other first-own-action contexts.",
+  "qualifications": [
+    "Only DOS RNG is held out in v2; own RNG is fixed per formation.",
+    "Four fixed own armies and eight known templates are controlled contexts, not heldout army generalization.",
+    "All sampled DOS seeds produce the same paths within context.128 heldout rows/step are not128 independent formations.",
+    "Fixed full-prefix frequency classifier is not a calibrated exact original-engine likelihood.",
+    "No original source-engine query or rank-truth board was required by this replay audit."
+  ],
+  "result_sha256": "4d097ed6d9c6ae38bd18ffd712795f586461a12ee472b902a7a2f7f0e86d3ec0",
+  "review_source_sha256": "4e0114468c3e286d32b21d7855e02f3d3fe5f40d0771e7821898426b3f16f541"
+}

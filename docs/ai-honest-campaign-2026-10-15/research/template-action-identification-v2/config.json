@@ -1,0 +1,57 @@
+{
+  "hypothesis": "Cumulative passive template identification from2nd\u20134th DOS actions beyond ALL public rank/movement facts.",
+  "frozen_before_queries": true,
+  "v1_result_sha256": "313dddab6be84308a8cade931ec62a7ecb202785cd2c6f3fc383f4b822c20ad8",
+  "templates": [
+    "45263497697BS78185B6B5969B593B99878498BF",
+    "96794362546B58187SB7B395B9695BFB89487899",
+    "45964392697B5918S876B596895B3B987894BFB7",
+    "9629346954678S8195B7B3B598695B7BFB498789",
+    "596943959473S7287869B765B4B15B98989BFB86",
+    "49593496959687827S37B51B4B567B68BFB98989",
+    "5969439594735B817S29B68697B58B98984BFB76",
+    "495934969592S718B537B85B79686B67BFB48989"
+  ],
+  "own_formations": {
+    "Fortress": "94959969496271358975B869753SB8FB8B748B6B",
+    "Evolved2": "9B95996949627S398975B8657531B8FB8B74846B",
+    "Evolved3": "1S2999596968384795847B5B637B9588BFB64B97",
+    "DoubleShellFortress": "9495996949B271358975BB69753S68FBB874886B"
+  },
+  "dos_private_research_rng": [
+    60,
+    609,
+    7680,
+    59797,
+    61286,
+    34390,
+    24960,
+    45736
+  ],
+  "own_private_research_rng_by_formation": {
+    "Fortress": 17268571146722672521,
+    "Evolved2": 17559163340011603275,
+    "Evolved3": 17678924807659948609,
+    "DoubleShellFortress": 17207509471200787144
+  },
+  "trajectories": 256,
+  "max_DOS_decisions": 4,
+  "max_total_move_queries": 1024,
+  "rules": "Classic; original Colonel level3; DOSBlue follows ownRed",
+  "own_policy": "Uniform random among legal public moves using own ranks and enemy occupancy/revealed ranks only; one independent own RNG seed per formation, reset for each hypothetical trajectory as common random numbers.",
+  "split": "DOS RNG indices0..3 training,4..7 heldout. Own-policy RNG is controlled/fixed per formation and not a heldout generalization axis.",
+  "baseline": "Uniform source-template foreground conditioned on ALL historical public origin/rank/mobility facts, retaining captured disclosures.",
+  "classifier": "Fixed add-one COMPLETE-public-prefix frequency classifier, independently per formation/decision step. Exact unseen prefix gives uniform hard posterior. No sequential multiplication, independent-action assumption or parameter search.",
+  "primary_endpoint": "Heldout cumulative Flag log-score gain beyond full hard posterior at each of decisions1,2,3,4; diagnostic only, no strength claim.",
+  "orientation": "DOSRed first-player sequences not modeled; do not infer full orientation generalization from Blue sequences.",
+  "exclusions": {
+    "saved_files": 144,
+    "saved_move_seeds": 7089
+  },
+  "source_sha256": {
+    "docs/ai-honest-campaign-2026-10-15/research/template-action-identification-v2/audit_prefixes.py": "7d084e6a2d109c3c61bd8e84b171c6c09a5d0e10f3c1b52f3da5cc961244684b",
+    "tools/msdos1990.py": "dfbc5dc09fdd6237b70766f8116ee13946aa33a3a27234537c4bbd8aef8cbc02",
+    "tools/campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+    "tools/campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539"
+  }
+}

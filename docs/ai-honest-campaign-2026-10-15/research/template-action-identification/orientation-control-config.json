@@ -1,0 +1,26 @@
+{
+  "purpose": "Additional mechanical first-player control after zero-increment main audit; no fitting, RNG generalization or symmetry equivalence claimed.",
+  "template_hypotheses": [
+    "96794362546B58187SB7B395B9695BFB89487899",
+    "45263497697BS78185B6B5969B593B99878498BF",
+    "9629346954678S8195B7B3B598695B7BFB498789",
+    "45964392697B5918S876B596895B3B987894BFB7",
+    "49593496959687827S37B51B4B567B68BFB98989",
+    "596943959473S7287869B765B4B15B98989BFB86",
+    "495934969592S718B537B85B79686B67BFB48989",
+    "5969439594735B817S29B68697B58B98984BFB76"
+  ],
+  "own_formations": {
+    "Fortress": "949699594957985317268BS357968BB6B847B8BF",
+    "Evolved2": "94969959B9579893S7268B1357568BB64847B8BF",
+    "Evolved3": "96959992S1485974838659B736B5B779B46BFB88",
+    "DoubleShellFortress": "9496995949579853172B86S35796BBB688478BBF"
+  },
+  "seed": 21758,
+  "calls": 32,
+  "dos_side": 0,
+  "first_own_move": null,
+  "reflection": "Horizontal row reflection of BOTH canonical armies creates physical180-degree counterpart under Position.setup_squares and OriginalAI.local.",
+  "reason": "DOSRed moves first; DOSBlue main experiment instead observes a legal ownRed quiet first move. These are different conditioning contexts.",
+  "source_sha256": "e7f0aea119eea9032c5eb2773d1a50516fe8f6338189a6c9f0de1f5e1237b16b"
+}

@@ -1,0 +1,45 @@
+completed Fortress
+completed Evolved2
+completed Evolved3
+completed DoubleShellFortress
+{
+  "timing": {
+    "total": 17.454918791019736,
+    "mean": 0.06818327652742084,
+    "maximum": 0.3956962350021058
+  },
+  "summaries": {
+    "Fortress": {
+      "hard_flag_entropy_bits": 1.0,
+      "action_flag_entropy_bits": 1.0,
+      "flag_logscore_gain_bits": 0.0,
+      "template_logscore_gain_bits": 0.0,
+      "action_top_flag_tie_accuracy": 0.5,
+      "hard_top_flag_tie_accuracy": 0.5
+    },
+    "Evolved2": {
+      "hard_flag_entropy_bits": 1.0,
+      "action_flag_entropy_bits": 1.0,
+      "flag_logscore_gain_bits": 0.0,
+      "template_logscore_gain_bits": 0.0,
+      "action_top_flag_tie_accuracy": 0.5,
+      "hard_top_flag_tie_accuracy": 0.5
+    },
+    "Evolved3": {
+      "hard_flag_entropy_bits": 1.0,
+      "action_flag_entropy_bits": 1.0,
+      "flag_logscore_gain_bits": 0.0,
+      "template_logscore_gain_bits": 0.0,
+      "action_top_flag_tie_accuracy": 0.5,
+      "hard_top_flag_tie_accuracy": 0.5
+    },
+    "DoubleShellFortress": {
+      "hard_flag_entropy_bits": 1.0,
+      "action_flag_entropy_bits": 1.0,
+      "flag_logscore_gain_bits": 0.0,
+      "template_logscore_gain_bits": 0.0,
+      "action_top_flag_tie_accuracy": 0.5,
+      "hard_top_flag_tie_accuracy": 0.5
+    }
+  }
+}

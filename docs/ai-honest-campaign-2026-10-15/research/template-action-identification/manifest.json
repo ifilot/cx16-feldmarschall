@@ -1,0 +1,13 @@
+{
+  "audit_opening_actions.py": "3399787d8524e72d67284ef0f90e9da5dff5e713884955a83d0e77ba5f8f9019",
+  "config.json": "bd2bd656dff2442010940c127bf240395c4993b1861ef592cf107692d0a76b08",
+  "orientation-control-config.json": "3280062d3d33b1e761f8b2408ad9e516072374394a563310c655ec9762791927",
+  "orientation-control-result.json": "632f6bfd9a63decdeebeaea927f589da00cc0aa632a0e7ac506c64ae350f3b88",
+  "orientation-control.log": "f4cce63b66fb0d5cbb97f6945bbfe5cc39560ebe9fe0d45fc5f02e9e5b1f2aa2",
+  "orientation_control.py": "e7f0aea119eea9032c5eb2773d1a50516fe8f6338189a6c9f0de1f5e1237b16b",
+  "proposal-and-conclusion.json": "ed3e7ed9356bab813bf7d9c033178c295ab192c2a38599510bb636105ac1ba79",
+  "result.json": "313dddab6be84308a8cade931ec62a7ecb202785cd2c6f3fc383f4b822c20ad8",
+  "run.log": "6d46ff78c52f09a66b542c2e2372a21130e7b0f081573b70c655abfc52732020",
+  "test_audit.py": "6825c447084137318ed5ddd0650f4fbdf04e1e2a28bef3bcc175dfb20a21323e",
+  "tests.log": "66893293401a69172358cbb2a76ac79e096ff1b85144fe7bbc65f57896713542"
+}

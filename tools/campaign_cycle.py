@@ -207,6 +207,7 @@ def overview(through_cycle=None):
         ('Persistent Miner escorts', 'Existing missions already clear disclosed guards; most observed recapturers were concealed. No distinct executable handoff established.', 'research/miner-assault/proposal.json'),
         ('Irreplaceable Miner trap avoidance', 'A public proof refutes all 30 rescue replies and a retreat preserves the Miner for two turns; only one of 552 old games would change. Deferred for sparse coverage, not rejected on playing strength.', 'research/miner-assault/last-miner-trap-proposal.json'),
         ('Motion conditioned on our Spy location', 'Historical model selection chose zero Spy-factor strength; retained as a rejected prediction hypothesis, without a separate playing-strength claim.', 'research/inverse-objectives/README.md'),
+        ('Passive opening-action inference', 'A fixed first-move study added no information beyond public rank facts; controlled random own play later showed predictive information. Under actual frozen native play, the extra Flag log-score gain shrank to 0.010–0.043 bits over four opening decisions, with declining prefix coverage and procedural-army overconfidence. Runtime lookup deferred; no strength tournament.', 'research/template-action-identification-v3/proposal-and-conclusion.json'),
     ]
     available = [row for row in deferred if (BASE/row[2]).exists()]
     if available:
@@ -217,6 +218,8 @@ def overview(through_cycle=None):
         lines += ['', '**Target cost evidence:**', '',
                   '- Native belief interface: desktop prototype; the unchanged CX16 production link overflows the AI bank by 1,198 bytes. [Evidence](research/native-belief-target-fit/README.md).',
                   '- Double-shell deployment: full CX16 link passes with 395 bytes free in the mission bank; 282 extra code bytes, no extra storage. [Evidence](research/deployment-double-shell/full-target-link.json).', '']
+    if (BASE/'research/native-belief-main-fit/README.md').exists():
+        lines += ['- Moving the prior interface into unbanked memory resolves the AI-bank limit but overflows main memory by 748 bytes. Simple relocation is insufficient; no production source changed. [Evidence](research/native-belief-main-fit/README.md).', '']
     pending = []
     for path in sorted(BASE.glob('cycle-*/plan.json')):
         if (path.parent/'result.json').exists() or (path.parent/'preflight-result.json').exists():

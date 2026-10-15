@@ -1,0 +1,11 @@
+test_actual_results_have_no_increment_and_preserve_true_template (test_audit.OpeningAudit.test_actual_results_have_no_increment_and_preserve_true_template) ... ok
+test_analyzer_detects_extra_action_information (test_audit.OpeningAudit.test_analyzer_detects_extra_action_information) ... ok
+test_hard_constraint_includes_revealed_scout (test_audit.OpeningAudit.test_hard_constraint_includes_revealed_scout) ... ok
+test_identical_action_has_no_classifier_information (test_audit.OpeningAudit.test_identical_action_has_no_classifier_information) ... ok
+test_original_config_and_source_hashes_unchanged (test_audit.OpeningAudit.test_original_config_and_source_hashes_unchanged) ... ok
+test_own_first_move_uses_only_public_enemy_occupancy (test_audit.OpeningAudit.test_own_first_move_uses_only_public_enemy_occupancy) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.065s
+
+OK

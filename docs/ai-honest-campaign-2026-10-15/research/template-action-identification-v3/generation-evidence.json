@@ -1,0 +1,3089 @@
+{
+  "attempts": [
+    {
+      "seed": 3925010194,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 2324891371,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 4094034627,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 3219730968,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 853360529,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2490228161,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 682696896,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 1916262901,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 1201999062,
+      "branch": "original-procedural",
+      "setup_sha256": "66c780fb24b3d64902b5c9c757343123093c4edb4c5a10a4b1af97e47fb218f4"
+    },
+    {
+      "seed": 1771791611,
+      "branch": "original-procedural",
+      "setup_sha256": "6cec8c5e859cf15d7f67d14bb5f8edc6849beceb38154beb970d3c415e346fb4"
+    },
+    {
+      "seed": 4078190366,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2163394301,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 2962545572,
+      "branch": "original-procedural",
+      "setup_sha256": "da7c206d5f7d94975dc7be641339b14dd53ab64452946362595bdd44cc5323bb"
+    },
+    {
+      "seed": 1332474324,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 3745175535,
+      "branch": "original-procedural",
+      "setup_sha256": "506e2caee0bc886c78bb375249584d77be5345e25f32b4cd1afd7f575325ca10"
+    },
+    {
+      "seed": 1271554160,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 523936803,
+      "branch": "original-procedural",
+      "setup_sha256": "f506770ab41e942a0761ad565edfd780a590864469e7c2023df5e1e43734cc19"
+    },
+    {
+      "seed": 1905381352,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3616783406,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3136614631,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 3876030011,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 1333005033,
+      "branch": "original-procedural",
+      "setup_sha256": "088a214129367c5f0c77f914622bd5fc6a5c80870805f88a1310ef1b4f30cc82"
+    },
+    {
+      "seed": 3253640771,
+      "branch": "original-procedural",
+      "setup_sha256": "902613b9cf21680bc9a2bffc61aa27793457bc0d35cdc4a4bb24ce088d1aa40e"
+    },
+    {
+      "seed": 2972604510,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3692223868,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 4238257273,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 1539180264,
+      "branch": "original-procedural",
+      "setup_sha256": "e47683812e280f43bb95837999d24ab42294047a9f971433ac941ea1d22fae1c"
+    },
+    {
+      "seed": 2871588438,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 1093964360,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 1263412848,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 282147840,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 686643726,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 224173767,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 4254006964,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 327473934,
+      "branch": "original-procedural",
+      "setup_sha256": "07df477dcf0255e73f8a94b07c0c2704445e3704a0ee29ef6fe6bc76570985db"
+    },
+    {
+      "seed": 3659975087,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 457499459,
+      "branch": "original-procedural",
+      "setup_sha256": "36490fd92d5498ab704b52d3c5029d073ae3f2570667735f836c7609fbc1cf17"
+    },
+    {
+      "seed": 2632682814,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 3820277122,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 3221800712,
+      "branch": "original-procedural",
+      "setup_sha256": "edd8299b8e3639b6ba224adbdf9ef9b7b9159ea3b22326f34964ec8024390bcc"
+    },
+    {
+      "seed": 1169306395,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 2380066443,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 3115498048,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 1145069809,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 1215794185,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 386072967,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 98477312,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 3655012987,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 3416161191,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 4196023855,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 4060526091,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 533846665,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 1407202795,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 2752926101,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 435776429,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 2225940612,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2877033015,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 3388334137,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 1920046458,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3339992035,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 1627686992,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3986725623,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 2176507815,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3298388197,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 960649990,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 2403233876,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3265405686,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 3285887193,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3022668618,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 3912031400,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 165478524,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 952246634,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 736159239,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 1411033290,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 1656924006,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 4107559660,
+      "branch": "original-procedural",
+      "setup_sha256": "9f90090681792abee3f1b084b2d3d56689c3207e857efac3838692a4d9d70703"
+    },
+    {
+      "seed": 2519098045,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2354486326,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 2173601497,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 180186085,
+      "branch": "original-procedural",
+      "setup_sha256": "b3ff29704069d5825a92b4114656371786365267c3785b76f1e9a23879780c26"
+    },
+    {
+      "seed": 3174856425,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 1386198021,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 1478759058,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 4152167398,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 875726139,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 499827349,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 1753620046,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 285304359,
+      "branch": "original-procedural",
+      "setup_sha256": "878099223324c2870d00d805d6b0e306df8c3162db8650d18894f799495b3996"
+    },
+    {
+      "seed": 3026051299,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 2121856237,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 748608077,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 2158400057,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 2021909961,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 751409924,
+      "branch": "original-procedural",
+      "setup_sha256": "212a6537074fdff93f4052ad5e11e608b2d4e94d227994e92f116dd66822a390"
+    },
+    {
+      "seed": 1216182179,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 275353844,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 2416523832,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 2085513780,
+      "branch": "original-procedural",
+      "setup_sha256": "ddfc7c37cb861d6e475ef10a02e015cc48ef1bc68c872f4d1836739188c0ed48"
+    },
+    {
+      "seed": 3155875617,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 2438401539,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2260431591,
+      "branch": "original-procedural",
+      "setup_sha256": "55a13dfbd1eb1b1d3f748a81f7efdb827fc88cdb24be45cae763854b55d3f14e"
+    },
+    {
+      "seed": 3031090541,
+      "branch": "original-procedural",
+      "setup_sha256": "1c9650df8a2fb454cdff0adf7ee0859e2099c8333423b38b5fd1c761db597d33"
+    },
+    {
+      "seed": 2098947321,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3313506666,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 2523099287,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 251397524,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 213608107,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 3200492372,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 318886678,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 325966075,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 4260549421,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 3482433869,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 3147503038,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 1788527782,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 2435659207,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 1124751510,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 2508409456,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2267666120,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 992745500,
+      "branch": "original-procedural",
+      "setup_sha256": "298cc5edf0b42c8c1b4f27ab0d00a27057627bc7bc8004b210e93bc5b82a92a8"
+    },
+    {
+      "seed": 2936585555,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 3831227234,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 869019421,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3132490036,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 1961402827,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 3887745318,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 1011157029,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 2372103153,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3748402072,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 1638779457,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 2641830680,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 2070134650,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 2456541580,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 2392683257,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 286233534,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 624356427,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 1381826389,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 541225005,
+      "branch": "original-procedural",
+      "setup_sha256": "f5a92cb86d3611634ba1989ccc5e688ef857a86d487e760af289feb9c01579de"
+    },
+    {
+      "seed": 377956197,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 2252186485,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3898517147,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 4132412007,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 3570849983,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3504493007,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 3555589045,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 2089716281,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 1697227332,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2878397475,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 2095993934,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 1488275748,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 2146031690,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 1825450255,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 3284175056,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 495327442,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 1333923935,
+      "branch": "original-procedural",
+      "setup_sha256": "65ce387e3031c74a3e00683083903106201702e40289391c6447abae69f08b31"
+    },
+    {
+      "seed": 3146684146,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 1353099305,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 225291825,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 481809254,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 1018032516,
+      "branch": "original-procedural",
+      "setup_sha256": "423aa9342bfb07e6e75ca912cf108d3538461a152b0f5c05f7faac1d38d77dac"
+    },
+    {
+      "seed": 2561880648,
+      "branch": "original-procedural",
+      "setup_sha256": "4f920e0c12d0324977b5cc7d1fbbd01f4fd18b8930e5135d309d9709c198caf3"
+    },
+    {
+      "seed": 664532662,
+      "branch": "original-procedural",
+      "setup_sha256": "63673620995717917ae19814733a1c4f057cd5f07a6fd4f6ac837b2f08e968e8"
+    },
+    {
+      "seed": 121187076,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 917264321,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 3811892455,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 306152136,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 2910470918,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 1002039124,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 1824119735,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 3300568950,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 3599407960,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 458753873,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 855988797,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3732229442,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 2124947337,
+      "branch": "original-procedural",
+      "setup_sha256": "20b8ac7918b31b6dc18b48f0c77ebe99f4e7e33b9fb4330a096b8d31514c935a"
+    },
+    {
+      "seed": 3457952274,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3659848749,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 4055414010,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 2900201165,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 2961878768,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 570170158,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 174735011,
+      "branch": "original-procedural",
+      "setup_sha256": "d18702267d4126a29b4bae28d0d6877e3d42617280157f267a251911321883b9"
+    },
+    {
+      "seed": 4060534786,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 424761459,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 3072270889,
+      "branch": "original-procedural",
+      "setup_sha256": "8bfa7ab792713182f7095f7f9b7fb11ac8897610c5f0835d147a64fbe263d79a"
+    },
+    {
+      "seed": 982700525,
+      "branch": "original-procedural",
+      "setup_sha256": "41ea079039e657726e0140c771fe02ae8b74ba7ba23e7cf67786b7dad741ca24"
+    },
+    {
+      "seed": 1570991889,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 909762254,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3117691440,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2552190467,
+      "branch": "original-procedural",
+      "setup_sha256": "036b9b993ac54e2bd088079775ed6baf0712118a8994625be78b6d5a9b7af2d6"
+    },
+    {
+      "seed": 3179968448,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2686358997,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2146273445,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 1736086580,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 2308003142,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2887898501,
+      "branch": "original-template",
+      "setup_sha256": "af8c071fe90a440a778792862cc2ba72c81f9e0a97d4d4a8dea893dd833dd25b"
+    },
+    {
+      "seed": 3903242158,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 875749391,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 2699962027,
+      "branch": "original-template",
+      "setup_sha256": "5c1ed018a69fc50fd904f643ce785484e205cb1b7cd9504faff88aa872c6fb2f"
+    },
+    {
+      "seed": 189210927,
+      "branch": "original-template",
+      "setup_sha256": "1be78e4c87c765bc9138b9a21e012d1c21c19dfd563cee4a8f34ea9f66788c24"
+    },
+    {
+      "seed": 1642637769,
+      "branch": "original-template",
+      "setup_sha256": "5a66893ccf3788bff2051757f015ae3b8104d6a9c5749e45382e5f6431c75847"
+    },
+    {
+      "seed": 3486323096,
+      "branch": "original-template",
+      "setup_sha256": "3ecaa396cd9bd9d4a7e5d2e49393a1112286d099140f2655e77ac23bae4b1544"
+    },
+    {
+      "seed": 1198565678,
+      "branch": "original-template",
+      "setup_sha256": "ab7de39f5e3f92e83636db08849eefb26d0b43126a9ed22df74f6511489d4be3"
+    },
+    {
+      "seed": 2681031848,
+      "branch": "original-template",
+      "setup_sha256": "2e16dd4752a5f9c2420515572ef3e5a385a3e57c92c97792a0b0837629b294bc"
+    },
+    {
+      "seed": 740083045,
+      "branch": "original-template",
+      "setup_sha256": "7c64dc9507c1b4cb2ab08550074b1f1b857b3d29dee52277798d720908a7afe2"
+    },
+    {
+      "seed": 4176860408,
+      "branch": "original-procedural",
+      "setup_sha256": "03bc3dce2d8976244cc42243841d304c18cb7ef91ed4a3bdf1cb2a6ff47bb618"
+    },
+    {
+      "seed": 371352063,
+      "branch": "original-procedural",
+      "setup_sha256": "caae9a43026e81f5882528324ea401ff11de3cf2600287c9fcbfea701f94b550"
+    },
+    {
+      "seed": 2163047075,
+      "branch": "original-procedural",
+      "setup_sha256": "27d713454c561dd66c48bff1d33350ef980530bc9e6ab50ef12ac7fdb626edd8"
+    }
+  ],
+  "selected": [
+    {
+      "setup": "395765179979795684528B4B3S6B68498B89BFB9",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 1201999062,
+        "post_rng_state": 2604013028,
+        "physical_ranks": [
+          4,
+          9,
+          8,
+          11,
+          8,
+          9,
+          11,
+          0,
+          11,
+          9,
+          8,
+          11,
+          4,
+          11,
+          3,
+          10,
+          6,
+          11,
+          6,
+          8,
+          7,
+          9,
+          7,
+          9,
+          5,
+          6,
+          8,
+          4,
+          5,
+          2,
+          3,
+          9,
+          5,
+          7,
+          6,
+          5,
+          1,
+          7,
+          9,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9729979734658645179BB38B6S85B59848B99B6F",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 1771791611,
+        "post_rng_state": 1309258497,
+        "physical_ranks": [
+          9,
+          8,
+          4,
+          8,
+          11,
+          9,
+          9,
+          11,
+          6,
+          0,
+          11,
+          3,
+          8,
+          11,
+          6,
+          10,
+          8,
+          5,
+          11,
+          5,
+          6,
+          5,
+          8,
+          6,
+          4,
+          5,
+          1,
+          7,
+          9,
+          11,
+          9,
+          7,
+          2,
+          9,
+          9,
+          7,
+          9,
+          7,
+          3,
+          4
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "47279639596785414766B38SB8B5B59898999BFB",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 2962545572,
+        "post_rng_state": 2387339549,
+        "physical_ranks": [
+          9,
+          8,
+          9,
+          8,
+          9,
+          9,
+          9,
+          11,
+          0,
+          11,
+          11,
+          3,
+          8,
+          10,
+          11,
+          8,
+          11,
+          5,
+          11,
+          5,
+          6,
+          7,
+          8,
+          5,
+          4,
+          1,
+          4,
+          7,
+          6,
+          6,
+          4,
+          7,
+          2,
+          7,
+          9,
+          6,
+          3,
+          9,
+          5,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "7969767379B52B5941583S896B586984B4BFB998",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 3745175535,
+        "post_rng_state": 2756646487,
+        "physical_ranks": [
+          8,
+          4,
+          11,
+          4,
+          11,
+          0,
+          11,
+          9,
+          9,
+          8,
+          3,
+          10,
+          8,
+          9,
+          6,
+          11,
+          5,
+          8,
+          6,
+          9,
+          11,
+          5,
+          2,
+          11,
+          5,
+          9,
+          4,
+          1,
+          5,
+          8,
+          7,
+          9,
+          6,
+          9,
+          7,
+          6,
+          7,
+          3,
+          7,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "4319962767958B578994S68576B54398B89BFBB9",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 523936803,
+        "post_rng_state": 3346524649,
+        "physical_ranks": [
+          9,
+          8,
+          11,
+          8,
+          9,
+          11,
+          0,
+          11,
+          11,
+          9,
+          10,
+          6,
+          8,
+          5,
+          7,
+          6,
+          11,
+          5,
+          4,
+          3,
+          9,
+          5,
+          8,
+          11,
+          5,
+          7,
+          8,
+          9,
+          9,
+          4,
+          4,
+          3,
+          1,
+          9,
+          9,
+          6,
+          2,
+          7,
+          6,
+          7
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "962399697957856471B8475B53B86S99BFB984B8",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 1333005033,
+        "post_rng_state": 1455532095,
+        "physical_ranks": [
+          9,
+          9,
+          11,
+          0,
+          11,
+          9,
+          8,
+          4,
+          11,
+          8,
+          4,
+          7,
+          5,
+          11,
+          5,
+          3,
+          11,
+          8,
+          6,
+          10,
+          5,
+          7,
+          8,
+          5,
+          6,
+          4,
+          7,
+          1,
+          11,
+          8,
+          9,
+          6,
+          2,
+          3,
+          9,
+          9,
+          6,
+          9,
+          7,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "93299991977685667867455B58434S99BFBBB8B8",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 3253640771,
+        "post_rng_state": 4030278632,
+        "physical_ranks": [
+          9,
+          9,
+          11,
+          0,
+          11,
+          11,
+          11,
+          8,
+          11,
+          8,
+          4,
+          5,
+          5,
+          11,
+          5,
+          8,
+          4,
+          3,
+          4,
+          10,
+          7,
+          6,
+          8,
+          5,
+          6,
+          6,
+          7,
+          8,
+          6,
+          7,
+          9,
+          3,
+          2,
+          9,
+          9,
+          9,
+          9,
+          1,
+          9,
+          7
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "39179992944585B7787656S685B6438B8B9BFB99",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 1539180264,
+        "post_rng_state": 1489420454,
+        "physical_ranks": [
+          8,
+          11,
+          8,
+          11,
+          9,
+          11,
+          0,
+          11,
+          9,
+          9,
+          5,
+          6,
+          10,
+          6,
+          8,
+          5,
+          11,
+          6,
+          4,
+          3,
+          4,
+          5,
+          8,
+          5,
+          11,
+          7,
+          7,
+          8,
+          7,
+          6,
+          3,
+          9,
+          1,
+          7,
+          9,
+          9,
+          9,
+          2,
+          9,
+          4
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "7376962999B5454788513B6B6457S899BFB98B89",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 327473934,
+        "post_rng_state": 1187970396,
+        "physical_ranks": [
+          9,
+          9,
+          11,
+          0,
+          11,
+          9,
+          8,
+          11,
+          8,
+          9,
+          3,
+          11,
+          6,
+          11,
+          6,
+          4,
+          5,
+          7,
+          10,
+          8,
+          11,
+          5,
+          4,
+          5,
+          4,
+          7,
+          8,
+          8,
+          5,
+          1,
+          7,
+          3,
+          7,
+          6,
+          9,
+          6,
+          2,
+          9,
+          9,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9919972793B585778656634B85B6S48B984BFB99",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 457499459,
+        "post_rng_state": 1288268331,
+        "physical_ranks": [
+          8,
+          11,
+          9,
+          8,
+          4,
+          11,
+          0,
+          11,
+          9,
+          9,
+          6,
+          3,
+          4,
+          11,
+          8,
+          5,
+          11,
+          6,
+          10,
+          4,
+          11,
+          5,
+          8,
+          5,
+          7,
+          7,
+          8,
+          6,
+          5,
+          6,
+          9,
+          9,
+          1,
+          9,
+          9,
+          7,
+          2,
+          7,
+          9,
+          3
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9729999153648776B87B5386B565S4894BFB9B98",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 3221800712,
+        "post_rng_state": 4013149183,
+        "physical_ranks": [
+          8,
+          9,
+          4,
+          11,
+          0,
+          11,
+          9,
+          11,
+          9,
+          8,
+          5,
+          3,
+          8,
+          6,
+          11,
+          5,
+          6,
+          5,
+          10,
+          4,
+          6,
+          4,
+          8,
+          7,
+          7,
+          6,
+          11,
+          8,
+          7,
+          11,
+          9,
+          7,
+          2,
+          9,
+          9,
+          9,
+          9,
+          1,
+          5,
+          3
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "6974792399548B1586757B3684S5B68989B99BFB",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 4107559660,
+        "post_rng_state": 1022211077,
+        "physical_ranks": [
+          8,
+          9,
+          8,
+          9,
+          11,
+          9,
+          9,
+          11,
+          0,
+          11,
+          7,
+          11,
+          3,
+          6,
+          8,
+          4,
+          10,
+          5,
+          11,
+          6,
+          5,
+          4,
+          8,
+          11,
+          1,
+          5,
+          8,
+          6,
+          7,
+          5,
+          6,
+          9,
+          7,
+          4,
+          7,
+          9,
+          2,
+          3,
+          9,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9713999277578665B8B5465B683S4B94BFB98998",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 180186085,
+        "post_rng_state": 256518669,
+        "physical_ranks": [
+          9,
+          4,
+          11,
+          0,
+          11,
+          9,
+          8,
+          9,
+          9,
+          8,
+          4,
+          6,
+          5,
+          11,
+          6,
+          8,
+          3,
+          10,
+          4,
+          11,
+          5,
+          7,
+          8,
+          6,
+          6,
+          5,
+          11,
+          8,
+          11,
+          5,
+          9,
+          7,
+          1,
+          3,
+          9,
+          9,
+          9,
+          2,
+          7,
+          7
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9927694739768517B6654S8B8B35B59898949BFB",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 285304359,
+        "post_rng_state": 824306253,
+        "physical_ranks": [
+          9,
+          8,
+          9,
+          8,
+          9,
+          4,
+          9,
+          11,
+          0,
+          11,
+          4,
+          10,
+          8,
+          11,
+          8,
+          11,
+          3,
+          5,
+          11,
+          5,
+          7,
+          6,
+          8,
+          5,
+          1,
+          7,
+          11,
+          6,
+          6,
+          5,
+          9,
+          9,
+          2,
+          7,
+          6,
+          9,
+          4,
+          7,
+          3,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "7371692999756845857B96B5S84B369BFB9B9848",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 751409924,
+        "post_rng_state": 2487767948,
+        "physical_ranks": [
+          9,
+          11,
+          0,
+          11,
+          9,
+          11,
+          9,
+          8,
+          4,
+          8,
+          9,
+          6,
+          11,
+          5,
+          10,
+          8,
+          4,
+          11,
+          3,
+          6,
+          7,
+          5,
+          6,
+          8,
+          4,
+          5,
+          8,
+          5,
+          7,
+          11,
+          7,
+          3,
+          7,
+          1,
+          6,
+          9,
+          2,
+          9,
+          9,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "971996479356825775646B584BS83BBFB9989B98",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 2085513780,
+        "post_rng_state": 66846445,
+        "physical_ranks": [
+          11,
+          0,
+          11,
+          9,
+          9,
+          8,
+          9,
+          11,
+          9,
+          8,
+          6,
+          11,
+          5,
+          8,
+          4,
+          11,
+          10,
+          8,
+          3,
+          11,
+          5,
+          6,
+          8,
+          2,
+          5,
+          7,
+          7,
+          5,
+          6,
+          4,
+          9,
+          7,
+          1,
+          9,
+          9,
+          6,
+          4,
+          7,
+          9,
+          3
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9915372975578B768B4B64686B53S48999BFB989",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 2260431591,
+        "post_rng_state": 124425650,
+        "physical_ranks": [
+          8,
+          9,
+          9,
+          9,
+          11,
+          0,
+          11,
+          9,
+          8,
+          9,
+          6,
+          4,
+          6,
+          8,
+          6,
+          11,
+          5,
+          3,
+          10,
+          4,
+          5,
+          7,
+          8,
+          11,
+          7,
+          6,
+          8,
+          11,
+          4,
+          11,
+          9,
+          9,
+          1,
+          5,
+          3,
+          7,
+          2,
+          9,
+          7,
+          5
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "79139929967687468575B4S585B6349B8B8BFB99",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 3031090541,
+        "post_rng_state": 3984633123,
+        "physical_ranks": [
+          9,
+          11,
+          8,
+          11,
+          8,
+          11,
+          0,
+          11,
+          9,
+          9,
+          11,
+          4,
+          10,
+          5,
+          8,
+          5,
+          11,
+          6,
+          3,
+          4,
+          7,
+          6,
+          8,
+          7,
+          4,
+          6,
+          8,
+          5,
+          7,
+          5,
+          7,
+          9,
+          1,
+          3,
+          9,
+          9,
+          2,
+          9,
+          9,
+          6
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "5617947397728856B545489S993B6B89B89B96BF",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 992745500,
+        "post_rng_state": 3251962656,
+        "physical_ranks": [
+          8,
+          9,
+          11,
+          8,
+          9,
+          11,
+          9,
+          6,
+          11,
+          0,
+          4,
+          8,
+          9,
+          10,
+          9,
+          9,
+          3,
+          11,
+          6,
+          11,
+          7,
+          2,
+          8,
+          8,
+          5,
+          6,
+          11,
+          5,
+          4,
+          5,
+          5,
+          6,
+          1,
+          7,
+          9,
+          4,
+          7,
+          3,
+          9,
+          7
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "3797472995851B5684696S897435B698B8B99BFB",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 541225005,
+        "post_rng_state": 3084711578,
+        "physical_ranks": [
+          9,
+          8,
+          11,
+          8,
+          11,
+          9,
+          9,
+          11,
+          0,
+          11,
+          6,
+          10,
+          8,
+          9,
+          7,
+          4,
+          3,
+          5,
+          11,
+          6,
+          8,
+          5,
+          1,
+          11,
+          5,
+          6,
+          8,
+          4,
+          6,
+          9,
+          3,
+          7,
+          9,
+          7,
+          4,
+          7,
+          2,
+          9,
+          9,
+          5
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "7929739197B58664585B6B43B57BS8F6B9498989",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 1333923935,
+        "post_rng_state": 178134986,
+        "physical_ranks": [
+          0,
+          6,
+          11,
+          9,
+          4,
+          9,
+          8,
+          9,
+          8,
+          9,
+          6,
+          11,
+          4,
+          3,
+          11,
+          5,
+          7,
+          11,
+          10,
+          8,
+          11,
+          5,
+          8,
+          6,
+          6,
+          4,
+          5,
+          8,
+          5,
+          11,
+          7,
+          9,
+          2,
+          9,
+          7,
+          3,
+          9,
+          1,
+          9,
+          7
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "7993999999185775426586765B683S48B4BFBBB8",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 1018032516,
+        "post_rng_state": 2467641868,
+        "physical_ranks": [
+          4,
+          8,
+          11,
+          4,
+          11,
+          0,
+          11,
+          11,
+          11,
+          8,
+          8,
+          6,
+          7,
+          6,
+          5,
+          11,
+          6,
+          8,
+          3,
+          10,
+          1,
+          8,
+          5,
+          7,
+          7,
+          5,
+          4,
+          2,
+          6,
+          5,
+          7,
+          9,
+          9,
+          3,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9317697965BB85B84B526B745374S8F6B9989989",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 2561880648,
+        "post_rng_state": 239683135,
+        "physical_ranks": [
+          0,
+          6,
+          11,
+          9,
+          9,
+          8,
+          9,
+          9,
+          8,
+          9,
+          6,
+          11,
+          7,
+          4,
+          5,
+          3,
+          7,
+          4,
+          10,
+          8,
+          11,
+          11,
+          8,
+          5,
+          11,
+          8,
+          4,
+          11,
+          5,
+          2,
+          9,
+          3,
+          1,
+          7,
+          6,
+          9,
+          7,
+          9,
+          6,
+          5
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "951993727669875B58473B89B5S6B64894899BFB",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 664532662,
+        "post_rng_state": 1186299076,
+        "physical_ranks": [
+          4,
+          8,
+          9,
+          4,
+          8,
+          9,
+          9,
+          11,
+          0,
+          11,
+          3,
+          11,
+          8,
+          9,
+          11,
+          5,
+          10,
+          6,
+          11,
+          6,
+          6,
+          9,
+          8,
+          7,
+          5,
+          11,
+          5,
+          8,
+          4,
+          7,
+          9,
+          5,
+          1,
+          9,
+          9,
+          3,
+          7,
+          2,
+          7,
+          6
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9329969967998787647165545B53S88B49BFBB8B",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 2124947337,
+        "post_rng_state": 2200951775,
+        "physical_ranks": [
+          8,
+          11,
+          4,
+          9,
+          11,
+          0,
+          11,
+          11,
+          8,
+          11,
+          6,
+          5,
+          5,
+          4,
+          5,
+          11,
+          5,
+          3,
+          10,
+          8,
+          9,
+          9,
+          8,
+          7,
+          8,
+          7,
+          6,
+          4,
+          7,
+          1,
+          9,
+          3,
+          2,
+          9,
+          9,
+          6,
+          9,
+          9,
+          6,
+          7
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9377997469515768B542486B5S63B899BFB98B89",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 174735011,
+        "post_rng_state": 163856779,
+        "physical_ranks": [
+          9,
+          9,
+          11,
+          0,
+          11,
+          9,
+          8,
+          11,
+          8,
+          9,
+          4,
+          8,
+          6,
+          11,
+          5,
+          10,
+          6,
+          3,
+          11,
+          8,
+          5,
+          1,
+          5,
+          7,
+          6,
+          8,
+          11,
+          5,
+          4,
+          2,
+          9,
+          3,
+          7,
+          7,
+          9,
+          9,
+          7,
+          4,
+          6,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "4919952635758599897B8B397S67B648B8B49B6F",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 3072270889,
+        "post_rng_state": 3604659532,
+        "physical_ranks": [
+          4,
+          8,
+          11,
+          8,
+          11,
+          4,
+          9,
+          11,
+          6,
+          0,
+          8,
+          11,
+          3,
+          9,
+          7,
+          10,
+          6,
+          7,
+          11,
+          6,
+          7,
+          5,
+          8,
+          5,
+          9,
+          9,
+          8,
+          9,
+          7,
+          11,
+          4,
+          9,
+          1,
+          9,
+          9,
+          5,
+          2,
+          6,
+          3,
+          5
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "45926973796B6875B85139S5B69798984BFB98B4",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 982700525,
+        "post_rng_state": 2392171939,
+        "physical_ranks": [
+          9,
+          8,
+          4,
+          11,
+          0,
+          11,
+          9,
+          8,
+          11,
+          4,
+          3,
+          9,
+          10,
+          5,
+          11,
+          6,
+          9,
+          7,
+          9,
+          8,
+          6,
+          11,
+          6,
+          8,
+          7,
+          5,
+          11,
+          8,
+          5,
+          1,
+          4,
+          5,
+          9,
+          2,
+          6,
+          9,
+          7,
+          3,
+          7,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "37177799995684542B5BS686B685B3899BFB9984",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 2552190467,
+        "post_rng_state": 4094635688,
+        "physical_ranks": [
+          8,
+          9,
+          9,
+          11,
+          0,
+          11,
+          9,
+          9,
+          8,
+          4,
+          10,
+          6,
+          8,
+          6,
+          11,
+          6,
+          8,
+          5,
+          11,
+          3,
+          5,
+          6,
+          8,
+          4,
+          5,
+          4,
+          2,
+          11,
+          5,
+          11,
+          3,
+          7,
+          1,
+          7,
+          7,
+          7,
+          9,
+          9,
+          9,
+          9
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "67149723979685768594B43B85B65S9B889BFB99",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 4176860408,
+        "post_rng_state": 334698550,
+        "physical_ranks": [
+          9,
+          11,
+          8,
+          8,
+          9,
+          11,
+          0,
+          11,
+          9,
+          9,
+          11,
+          4,
+          3,
+          11,
+          8,
+          5,
+          11,
+          6,
+          5,
+          10,
+          9,
+          6,
+          8,
+          5,
+          7,
+          6,
+          8,
+          5,
+          9,
+          4,
+          6,
+          7,
+          1,
+          4,
+          9,
+          7,
+          2,
+          3,
+          9,
+          7
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "9927741397B58566876B4B83B4S6B58999899B5F",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 371352063,
+        "post_rng_state": 1959261797,
+        "physical_ranks": [
+          8,
+          9,
+          9,
+          9,
+          8,
+          9,
+          9,
+          11,
+          5,
+          0,
+          4,
+          11,
+          8,
+          3,
+          11,
+          4,
+          10,
+          6,
+          11,
+          5,
+          11,
+          5,
+          8,
+          5,
+          6,
+          6,
+          8,
+          7,
+          6,
+          11,
+          9,
+          9,
+          2,
+          7,
+          7,
+          4,
+          1,
+          3,
+          9,
+          7
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    },
+    {
+      "setup": "99613729946558458B4576B678S37B9BFB9B8989",
+      "audit": {
+        "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+        "level": 3,
+        "pre_rng_state": 2163047075,
+        "post_rng_state": 2250087529,
+        "physical_ranks": [
+          9,
+          11,
+          0,
+          11,
+          9,
+          11,
+          8,
+          9,
+          8,
+          9,
+          7,
+          6,
+          11,
+          6,
+          7,
+          8,
+          10,
+          3,
+          7,
+          11,
+          6,
+          5,
+          5,
+          8,
+          4,
+          5,
+          8,
+          11,
+          4,
+          5,
+          9,
+          9,
+          6,
+          1,
+          3,
+          7,
+          2,
+          9,
+          9,
+          4
+        ],
+        "branch": "original-procedural",
+        "template_index": null,
+        "mirrored": null,
+        "assets_sha256": {
+          "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+          "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+          "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+          "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+        },
+        "table_bytes_sha256": "ceee2332497f433969489d503c53cf5b133ec04c90a3446c15de14278f08cae9",
+        "execution": "Unchanged overlay6:1DDD ->1D1A ->0C7B, original helpers and resident RNG; no UI or enemy setup.",
+        "canonical_orientation": "front-first physical rows4..1, columns1..10; original computer top/Blue",
+        "move_rng_boundary": "Existing DOS adapter reseeds move AI independently; post-deployment RNG is returned but not installed by this generator."
+      }
+    }
+  ]
+}

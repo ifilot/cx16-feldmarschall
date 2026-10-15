@@ -1,0 +1,11 @@
+test_all_hard_predictions_replay_using_only_public_events (test_native_audit.NativeAudit.test_all_hard_predictions_replay_using_only_public_events) ... ok
+test_frozen_native_moves_reproduce_from_heldout_public_prefixes (test_native_audit.NativeAudit.test_frozen_native_moves_reproduce_from_heldout_public_prefixes) ... ok
+test_frozen_protocol_sources_and_both_rng_splits (test_native_audit.NativeAudit.test_frozen_protocol_sources_and_both_rng_splits) ... ok
+test_lookup_has_exact_unseen_fallback_and_preserves_background (test_native_audit.NativeAudit.test_lookup_has_exact_unseen_fallback_and_preserves_background) ... ok
+test_original_procedural_receipts_not_template_nonmembership (test_native_audit.NativeAudit.test_original_procedural_receipts_not_template_nonmembership) ... ok
+test_proper_score_and_confident_error_controls (test_native_audit.NativeAudit.test_proper_score_and_confident_error_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.881s
+
+OK
