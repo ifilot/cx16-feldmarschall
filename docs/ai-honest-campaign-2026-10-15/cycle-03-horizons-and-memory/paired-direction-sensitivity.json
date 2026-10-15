@@ -1,0 +1,29 @@
+{
+  "results": {
+    "teacher-capture-quiescence-v1-normal": {
+      "positive_pairs": 32,
+      "negative_pairs": 43,
+      "tied_pairs": 129,
+      "exact_two_sided_direction_p": 0.24804574189252795
+    },
+    "teacher-sparse-depth-v1-normal": {
+      "positive_pairs": 31,
+      "negative_pairs": 37,
+      "tied_pairs": 138,
+      "exact_two_sided_direction_p": 0.5446122234192591
+    },
+    "teacher-recurrence-escape-v1-normal": {
+      "positive_pairs": 0,
+      "negative_pairs": 5,
+      "tied_pairs": 202,
+      "exact_two_sided_direction_p": 0.0625
+    },
+    "teacher-uniform-worlds-v1-normal": {
+      "positive_pairs": 9,
+      "negative_pairs": 12,
+      "tied_pairs": 185,
+      "exact_two_sided_direction_p": 0.6636238098144531
+    }
+  },
+  "interpretation": "Exact binomial test of equal positive/negative directions among non-tied pair scores. It does not test effect magnitudes. Sparse discordance can make percentile bootstrap intervals misleading; these exploratory results never establish promotion."
+}

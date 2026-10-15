@@ -1,0 +1,159 @@
+{
+  "cycle": 3,
+  "hypotheses": [
+    "Finish policy-selected exchanges beyond four plies, stopping before a quiet move, with at most four extra masked decisions.",
+    "Spend eight plies only when public root mobility has at most twelve legal actions, retaining four otherwise.",
+    "Remember repeated friendly formations across actors and escape long quiet loops when a similarly valued fresh continuation exists.",
+    "Ablate handwritten approach/retreat weights while retaining exactly the same IID count-consistent world proposal; negative-control belief test."
+  ],
+  "standings": {
+    "teacher-context-v1-normal": {
+      "wins": 118,
+      "draws": 4,
+      "losses": 295,
+      "score": 0.28776978417266186,
+      "errors": 3
+    },
+    "teacher-capture-quiescence-v1-normal": {
+      "wins": 107,
+      "draws": 4,
+      "losses": 305,
+      "score": 0.2620192307692308,
+      "errors": 4
+    },
+    "teacher-sparse-depth-v1-normal": {
+      "wins": 114,
+      "draws": 7,
+      "losses": 298,
+      "score": 0.28042959427207637,
+      "errors": 1
+    },
+    "teacher-recurrence-escape-v1-normal": {
+      "wins": 116,
+      "draws": 2,
+      "losses": 300,
+      "score": 0.2799043062200957,
+      "errors": 2
+    },
+    "teacher-uniform-worlds-v1-normal": {
+      "wins": 118,
+      "draws": 3,
+      "losses": 295,
+      "score": 0.28725961538461536,
+      "errors": 4
+    }
+  },
+  "execution_seconds": {
+    "teacher-context-v1-normal": 202.21934228300233,
+    "teacher-capture-quiescence-v1-normal": 243.3020751719996,
+    "teacher-sparse-depth-v1-normal": 247.08323501300038,
+    "teacher-recurrence-escape-v1-normal": 215.90312506600094,
+    "teacher-uniform-worlds-v1-normal": 207.02320823899936
+  },
+  "comparisons": {
+    "teacher-capture-quiescence-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 204,
+      "pairs_by_family": {
+        "fortified": 28,
+        "uniform": 29,
+        "unguarded": 30,
+        "forward": 30,
+        "decoy": 30,
+        "presets": 27,
+        "broad-mixed": 30
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.029411764705882353,
+          "interval_95": [
+            -0.06985294117647059,
+            0.011029411764705883
+          ],
+          "interval_98_3333": [
+            -0.0784313725490196,
+            0.0196078431372549
+          ]
+        }
+      }
+    },
+    "teacher-sparse-depth-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 206,
+      "pairs_by_family": {
+        "fortified": 30,
+        "uniform": 30,
+        "unguarded": 30,
+        "forward": 30,
+        "decoy": 30,
+        "presets": 26,
+        "broad-mixed": 30
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.007281553398058253,
+          "interval_95": [
+            -0.04975728155339806,
+            0.03640776699029126
+          ],
+          "interval_98_3333": [
+            -0.05946601941747573,
+            0.04733009708737864
+          ]
+        }
+      }
+    },
+    "teacher-recurrence-escape-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 207,
+      "pairs_by_family": {
+        "fortified": 30,
+        "uniform": 30,
+        "unguarded": 30,
+        "forward": 30,
+        "decoy": 30,
+        "presets": 27,
+        "broad-mixed": 30
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.00966183574879227,
+          "interval_95": [
+            -0.01932367149758454,
+            -0.0024154589371980675
+          ],
+          "interval_98_3333": [
+            -0.021739130434782608,
+            -0.0012077294685990338
+          ]
+        }
+      }
+    },
+    "teacher-uniform-worlds-v1-normal minus teacher-context-v1-normal": {
+      "complete_pairs": 206,
+      "pairs_by_family": {
+        "fortified": 30,
+        "uniform": 30,
+        "unguarded": 30,
+        "forward": 30,
+        "decoy": 30,
+        "presets": 26,
+        "broad-mixed": 30
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.0012135922330097086,
+          "interval_95": [
+            -0.021844660194174758,
+            0.02063106796116505
+          ],
+          "interval_98_3333": [
+            -0.02669902912621359,
+            0.025485436893203883
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 2100,
+  "errors": 14,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 2100
+}
