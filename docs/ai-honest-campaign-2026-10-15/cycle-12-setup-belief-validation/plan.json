@@ -1,0 +1,44 @@
+{
+  "cycle": 12,
+  "baseline": "teacher-context-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "teacher-context-v1-normal",
+    "teacher-flag-row-control-v1-normal",
+    "teacher-joint-setup-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 2200001,
+  "rounds": 150,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "hypotheses": [
+    "Independently validate the frozen Flag-position and joint Flag/Bomb belief models after the cycle5 screening signal."
+  ],
+  "contrasts": [
+    [
+      "teacher-flag-row-control-v1-normal",
+      "teacher-context-v1-normal"
+    ],
+    [
+      "teacher-joint-setup-v1-normal",
+      "teacher-context-v1-normal"
+    ],
+    [
+      "teacher-joint-setup-v1-normal",
+      "teacher-flag-row-control-v1-normal"
+    ]
+  ],
+  "analysis": "Untouched fresh validation cohort. Models and policies remain exactly the cycle5 registered snapshots. Three prespecified paired contrasts; use 98.3333% intervals for familywise 95% interpretation. No tuning on these games. Any proposed policy promotion also requires honest-opponent tests and compute/correctness review.",
+  "evidence": "cycle-05-joint-setup-beliefs/result.json; source and models frozen before original screening."
+}

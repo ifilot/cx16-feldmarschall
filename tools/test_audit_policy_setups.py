@@ -9,7 +9,7 @@ import unittest
 
 from audit_policy_setups import audit
 from feldmarschall import GLYPHS, COUNTS, Position, random_setup
-from tournament_store import Tournament
+from tournament_store import Tournament,mirror_setup
 
 
 class SetupAuditTests(unittest.TestCase):
@@ -21,7 +21,7 @@ class SetupAuditTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
-    def fixture(self, variable_stderr=False, change=None, unsafe_runtime=False):
+    def fixture(self, variable_stderr=False, change=None, unsafe_runtime=False, mode='policy-owned'):
         pool = ''.join(g*n for g, n in zip(GLYPHS, COUNTS))
         engine = self.directory/'engine'
         (self.directory/'assets').mkdir(exist_ok=True)
@@ -73,12 +73,13 @@ print('pid='+str(os.getpid()) if VARIABLE else 'frozen setup fixture',file=sys.s
             setup_sources = {name: tournament.artifact('setup/'+name, (name+' frozen source').encode())
                              for name in ('tournament.py', 'arena.py', 'feldmarschall.py')}
             tournament.set_metadata(dict(participants=participants, families=['uniform'], planned_games=4,
-                                         max_plies=1, setup_mode='policy-owned', setup_owner='first',
+                                         max_plies=1, setup_mode=mode, setup_owner='first',
                                          setup_records_artifact='setup/policy-owned-v1.json',
                                          setup_records_sha256=document_sha, setup_source_sha256=setup_sources))
             for record in records:
                 for index, names in enumerate((('first', 'second'), ('second', 'first'))):
                     setups = ((record['owner_setup'], opponent) if index == 0 else (opponent, record['owner_setup']))
+                    if mode=='policy-owned-rotated-v1' and index:setups=tuple(map(mirror_setup,setups))
                     position = Position()
                     for army, setup in enumerate(setups):
                         position.place(army, setup)
@@ -103,6 +104,16 @@ print('pid='+str(os.getpid()) if VARIABLE else 'frozen setup fixture',file=sys.s
             self.assertTrue(row['setup_matches'])
             self.assertTrue(row['streams']['stdout']['exact_recorded_match'])
             self.assertTrue(row['streams']['stderr']['exact_recorded_match'])
+
+    def test_rotated_mode_replays_raw_red_protocol_and_binds_rotated_blue_army(self):
+        self.fixture(mode='policy-owned-rotated-v1')
+        (self.directory/'engine').unlink()
+        (self.directory/'assets/pool.txt').unlink()
+        result=audit(self.path)
+        self.assertTrue(result['passed']);self.assertEqual(result['setup_mode'],'policy-owned-rotated-v1')
+        self.assertEqual(result['records'],2)
+        self.assertTrue(result['no_opponent_input'])
+        self.assertTrue(result['all_streams_repeatable'])
 
     def test_wrong_frozen_setup_is_rejected_despite_valid_saved_armies(self):
         replacement = random_setup(random.Random(8888))

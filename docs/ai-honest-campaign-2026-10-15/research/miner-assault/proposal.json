@@ -1,0 +1,40 @@
+{
+  "kind": "persistent-miner-assault-feasibility",
+  "decision": "defer new runtime policy; evidence does not establish a distinct temporal coordination opportunity",
+  "existing_mechanisms": {
+    "default_missions": "Remembers objective; selects lead Miner; clears first friendly obstruction; assigns Scout to undisclosed obstruction; chooses capable support for disclosed combat obstruction. Recomputed each root.",
+    "AI_MISSION_ESCORT": "Before Miner attacks a known Bomb, targets a disclosed adjacent mobile recapture threat if another piece can beat it. Already a clear-guard-before-breach sequence.",
+    "AI_MISSION_PRESERVE": "Last Miner plus known Bombs triggers non-Miner reconnaissance and extra cost for Miner attacks on non-Bomb targets; not a distinct new persistent role.",
+    "AI_PLAN_CYCLE": "Tracks public actor identity, stalled objective and cooldown, but does not lock escort/Miner identities as a completed joint option."
+  },
+  "prior_rejections": {
+    "escort_normal": "280 development games vs frozen missions:50.36%,95% paired interval50.0\u201351.07%; no reliable gain or established18-case diagnostic improvement.",
+    "escort_hard": "280 development games:50.36%,95% interval49.29\u201351.79%; not promoted.",
+    "preserve_normal": "280 development games:49.29%,95% interval47.14\u201351.43%; not promoted."
+  },
+  "observed": "278 scored OLD baseline games:138Bomb defuses;55 immediate Miner recaptures, including37losses/13wins/5draws.49/55 recapturers concealed at preceding ownroot. Only3cases have any own rank-capable escort,1has an immediate legal pre-breach guard capture,0actual immediate escort recaptures. This does not establish55preventable failures.",
+  "mechanical_findings": "18legal quiet preparations all leave an adjacent known guard able to kill the Miner after its Bomb defuse. Threatening recapture imposes no zone of control. Explicit guard capture\u2192Miner defuse\u2192Flag capture works, but duplicates existingAI_MISSION_ESCORT.",
+  "future_option_if_new_evidence": "A legitimate distinct option would retain specific Miner/escort identities across clear-guard, breach and finish phases, with public success/abort conditions and tactical interruptions. It must show a real missed executable handoff, not merely keep the same target longer or add an escort bonus.",
+  "future_budget": "Possible state budget6\u20138bytes per army: objective, MinerID, escortID, phase, first blocker, termination/progress flags. At most3board floods, each100vertices/400neighbor checks, reusing existing mission-bank scratch. These are design bounds, not measured implementation/X16 timings.",
+  "future_control": "Compare unchanged stateless role pipeline against identical pipeline with identity/phase memory, holding utilities and tactical overrides fixed. Freeze separateIDs before any games; no current implementation authorized by this evidence.",
+  "primary_source": {
+    "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning",
+    "authors": "Sutton,Precup,Singh",
+    "year": 1999,
+    "url": "https://people.cs.umass.edu/~barto/courses/cs687/Sutton-Precup-Singh-AIJ99.pdf",
+    "doi": "10.1016/S0004-3702(99)00052-1",
+    "use": "Initiation, persistent internal policy and termination define a temporally extended option. This motivates explicit phases and interruption, but supplies no Stratego strength guarantee."
+  },
+  "limits": [
+    "One archived stress-family baseline cohort; no active campaign validation.",
+    "Captured or surviving rank labels are offline combat evidence; policy-eligible escort tests use only own ranks and previously disclosed enemy ranks.",
+    "This audit does not prove that hidden killers can be safely predicted or that sacrificing a Miner is always wrong.",
+    "A previously rejected score adjustment cannot be relabeled as temporal coordination."
+  ],
+  "source_sha256": {
+    "src/core/ai_mission.c": "515955410737ebfc14f68bde573efa9fa5d83e63abca040c7296f1d68db2ddfc",
+    "docs/ai-experiments.json": "13aff2491bd14d1a25467587ff96bdd6a9d958957fe3cd346d70aaee0f9d6e3c",
+    "docs/ai-honest-campaign-2026-10-15/research/miner-assault/miner_assault_audit.py": "47edfb64e5001751fc9788f6159d05a00e2b4894ad820e93abc360a308af68f2",
+    "docs/ai-honest-campaign-2026-10-15/research/miner-assault/mechanical_tests.py": "69d770a5d375c79aab6f5fea8caed6886e2b642db300747eee67b333afc29bbc"
+  }
+}

@@ -12,7 +12,7 @@ import math
 from pathlib import Path
 
 from feldmarschall import valid_setup
-from tournament_store import Tournament
+from tournament_store import Tournament, mirror_setup
 
 
 def _score(game, policy):
@@ -38,9 +38,9 @@ def _load(path, policy):
     if type(planned) is not int or planned <= 0 or planned % 2 or len(rows) != planned:
         raise ValueError('every planned game, including error prefixes, is required')
     mode = metadata.get('setup_mode', 'referee')
-    if mode not in ('referee', 'policy-owned'):
+    if mode not in ('referee', 'policy-owned', 'policy-owned-rotated-v1'):
         raise ValueError('unknown setup mode')
-    if mode == 'policy-owned' and metadata.get('setup_owner') != policy:
+    if mode in ('policy-owned','policy-owned-rotated-v1') and metadata.get('setup_owner') != policy:
         raise ValueError('candidate must own the policy-owned setup treatment')
     pairs = defaultdict(dict)
     opponents = set()
@@ -66,8 +66,10 @@ def _load(path, policy):
             raise ValueError('pair family or move seed mismatch')
         if mode == 'referee':
             matching = a['red_setup'] == b['red_setup'] and a['blue_setup'] == b['blue_setup']
-        else:
+        elif mode == 'policy-owned':
             matching = a['red_setup'] == b['blue_setup'] and a['blue_setup'] == b['red_setup']
+        else:
+            matching = a['red_setup'] == mirror_setup(b['blue_setup']) and a['blue_setup'] == mirror_setup(b['red_setup'])
         if not matching:
             raise ValueError('paired armies violate declared setup mode')
     return dict(path=str(path), sha256=hashlib.sha256(Path(path).read_bytes()).hexdigest(),

@@ -51,10 +51,11 @@ def validate_metadata(path, match, plan, frozen):
         assert metadata['seed'] == match['seed'] and metadata['rounds'] == match['rounds']
         assert metadata['max_plies'] == plan['max_plies']
         assert metadata['families'] == plan['families']
+        assert metadata.get('setup_mode','referee') == plan.get('setup_mode','referee')
         assert metadata['rules'] == 'classic' and metadata['backend'] == plan['backend']
         policies = [participant['policy'] for participant in metadata['participants']]
         assert policies == [frozen[match['policy']], frozen[match['opponent']]]
-        assert len(tournament.games()) == 14*match['rounds']
+        assert len(tournament.games()) == 2*len(plan['families'])*match['rounds']
 
 
 def score(game, policy):

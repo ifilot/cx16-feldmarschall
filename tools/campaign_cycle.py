@@ -35,6 +35,27 @@ def freeze(directory):
     write(directory/'registration.json', dict(epoch=time.time(), plan_sha256=digest(directory/'plan.json')))
 
 
+def revise_setup_mode_before_games(directory, mode, reason):
+    """Preserve a superseded design before any saved matches, without changing policies."""
+    assert mode == 'policy-owned-rotated-v1'
+    assert not list(directory.glob('*.fmtour')) and not (directory/'result.json').exists()
+    registration = json.loads((directory/'registration.json').read_text())
+    assert registration['plan_sha256'] == digest(directory/'plan.json')
+    plan = json.loads((directory/'plan.json').read_text())
+    assert plan.get('setup_mode') == 'policy-owned'
+    revision = directory/'plan-revisions/v1'
+    revision.mkdir(parents=True, exist_ok=False)
+    for name in ('plan.json','registration.json','frozen-policies.json','registry-before.json'):
+        (revision/name).write_bytes((directory/name).read_bytes())
+    plan['setup_mode'] = mode
+    plan['prerun_revision'] = reason
+    write(directory/'plan.json', plan)
+    write(directory/'registration.json', dict(epoch=time.time(), revision=2,
+          plan_sha256=digest(directory/'plan.json'),
+          supersedes_plan_sha256=registration['plan_sha256'], reason=reason,
+          policy_ids_and_sources_unchanged=True, saved_matches_before_revision=0))
+
+
 def evaluate(directory):
     plan = json.loads((directory/'plan.json').read_text())
     frozen = json.loads((directory/'frozen-policies.json').read_text())
@@ -62,7 +83,7 @@ def evaluate(directory):
         report, complete, current = analyze_match(path, match, plan, frozen)
         with Tournament(path) as tournament:
             assert tournament.metadata().get('setup_mode','referee') == plan.get('setup_mode','referee')
-            if plan.get('setup_mode') == 'policy-owned':
+            if plan.get('setup_mode','referee') != 'referee':
                 # Own deployments are the treatment; only DOS armies must match across arms.
                 current = [(g['id'],g['pair_id'],g['family'],g['seed'],
                             g['red_setup'] if g['red']==plan['opponent'] else g['blue_setup'])
@@ -92,7 +113,7 @@ def evaluate(directory):
             (pairs[base8][key][0], dict(score=
              pairs[learned32][key][1]['score'] - pairs[base32][key][1]['score'] -
              pairs[learned8][key][1]['score'] + pairs[base8][key][1]['score'])) for key in common])
-    result = dict(cycle=plan['cycle'], hypotheses=plan['hypotheses'], setup_mode=plan.get('setup_mode','referee'),
+    result = dict(cycle=plan['cycle'], hypotheses=plan['hypotheses'], opponent=plan['opponent'], families=plan['families'], setup_mode=plan.get('setup_mode','referee'),
                   standings={p:dict(r['summary']['standings'][p], errors=r['summary']['errors'])
                              for p,r in reports.items()},
                   execution_seconds={p:r['execution_seconds'] for p,r in reports.items()},
@@ -112,24 +133,52 @@ def overview(through_cycle=None):
     lines = ['# Honest AI campaign: cumulative DOS results', '',
              'Scores count wins plus half of draws; original DOS errors are excluded. '
              'Compare policies within their matched cycle. Screening results do not establish promotion.', '',
-             '| Cycle / hypothesis | Policy | W / D / L | DOS score | Errors |',
-             '|---|---|---:|---:|---:|']
+             '| Cycle | Setup context | Policy | W / D / L | DOS score | Errors |',
+             '|---|---|---|---:|---:|---:|']
     details = []
     for path in sorted(BASE.glob('cycle-*/result.json')):
         result = json.loads(path.read_text())
         if through_cycle is not None and result['cycle']>through_cycle:
             continue
+        if result.get('independent_honest_heads'):
+            details += ['', '**Cycle 17: independent honest opponents**', '',
+                        'These scores are against honest references, so their comparison point is 50%; they are excluded from the DOS table.', '']
+            for name, endpoint in result['endpoints'].items():
+                standing=endpoint['official_scored']
+                metric=endpoint['paired_score']
+                interval=metric['interval_98_3333'] if metric else None
+                details += [f"- {name}: {standing['wins']} wins / {standing['draws']} draws / {standing['losses']} losses; "
+                            f"score {standing['score']:.1%}; {endpoint['error_games']} unscored errors. "
+                            +(f"98.3333% paired interval [{interval[0]:.1%}, {interval[1]:.1%}]." if interval else 'No complete pairs.')]
+            details += ['', 'Evidence: ['+path.parent.name+']('+path.parent.name+'/result.json).', '']
+            continue
+        plan = json.loads((path.parent/'plan.json').read_text())
+        frozen = json.loads((path.parent/'frozen-policies.json').read_text())
+        is_dos = frozen[plan['opponent']].get('driver') == 'msdos1990'
+        mode = plan.get('setup_mode','referee')
+        setup_context = ('Fixed armies, seven stress families' if mode=='referee' else
+                         'Own setup, original DOS, rotated' if 'original-dos' in plan['families'] else
+                         'Own setup, seven stress families')
+        honest_rows = []
         for policy, standing in result['standings'].items():
             # Standings preserve the canonical tournament schema.
             wins, draws, losses = (standing[k] for k in ('wins','draws','losses'))
             count = wins+draws+losses
             score = (wins+.5*draws)/count if count else 0
-            lines.append(f"| {result['cycle']} | {policy} | {wins} / {draws} / {losses} | {score:.1%} | {standing['errors']} |")
+            if is_dos:
+                lines.append(f"| {result['cycle']} | {setup_context} | {policy} | {wins} / {draws} / {losses} | {score:.1%} | {standing['errors']} |")
+            else:
+                honest_rows.append(f"- {policy}: {wins} wins / {draws} draws / {losses} losses; score {score:.1%}; {standing['errors']} unscored errors.")
         details += ['', '**Cycle '+str(result['cycle'])+' hypotheses:** '+
                   '; '.join(result['hypotheses']), '',
                   'Evidence: ['+path.parent.name+']('+path.parent.name+'/result.json).', '']
-        if result.get('setup_mode') == 'policy-owned':
+        if not is_dos:
+            details += ['Opponent: '+plan['opponent']+'. These are honest-opponent results, excluded from the DOS table. '
+                        'Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.', '', *honest_rows, '']
+        if result.get('setup_mode','referee') != 'referee':
             details += ['Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.', '']
+        if mode == 'policy-owned-rotated-v1':
+            details += ['Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.', '']
         for name, contrast in result['comparisons'].items():
             metric = contrast['metrics']['score']
             low, high = metric['interval_95']
@@ -151,6 +200,22 @@ def overview(through_cycle=None):
                      f"[Preserved evidence]({path.parent.name}/CONCLUSION.md)."]
     if failures:
         lines += ['', '**Preflight failures, without DOS strength results:**', '', *failures, '']
+    deferred = [
+        ('Lower-tail risk optimization', 'Eight worlds leave only one or two tail samples, and nonlinear aggregation changes the correction reference; deferred before strength tests.', 'research/horizon/cvar-decision.json'),
+        ('Exact public-belief endgame proofs', 'Eligibility occurred in only two of 552 old games; bounded search found no win proof. This does not rule out deeper wins.', 'research/endgame-feasibility-decision.json'),
+        ('Scout probes to identify the opening', 'Opening probes identify formations but almost always lose the Scout; no tested immediate Miner followup route. Information gain alone is insufficient.', 'research/template-identification-proposal.json'),
+        ('Persistent Miner escorts', 'Existing missions already clear disclosed guards; most observed recapturers were concealed. No distinct executable handoff established.', 'research/miner-assault/proposal.json'),
+        ('Motion conditioned on our Spy location', 'Historical model selection chose zero Spy-factor strength; retained as a rejected prediction hypothesis, without a separate playing-strength claim.', 'research/inverse-objectives/README.md'),
+    ]
+    available = [row for row in deferred if (BASE/row[2]).exists()]
+    if available:
+        lines += ['', '**Research screened before tournaments; no DOS strength score:**', '']
+        lines += [f'- {name}: {finding} [Evidence]({source}).' for name,finding,source in available]
+        lines.append('')
+    if (BASE/'research/native-belief-target-fit/audit.json').exists():
+        lines += ['', '**Target cost evidence:**', '',
+                  '- Native belief interface: desktop prototype; the unchanged CX16 production link overflows the AI bank by 1,198 bytes. [Evidence](research/native-belief-target-fit/README.md).',
+                  '- Double-shell deployment: full CX16 link passes with 395 bytes free in the mission bank; 282 extra code bytes, no extra storage. [Evidence](research/deployment-double-shell/full-target-link.json).', '']
     (BASE/'OVERVIEW.md').write_text('\n'.join(lines)+'\n')
 
 
@@ -161,7 +226,8 @@ def audit(directory):
     assert catalog()[:len(before)] == before
     assert all(get_policy(p) == spec for p, spec in frozen.items())
     result = json.loads((directory/'result.json').read_text())
-    assert result['attempts'] == result['verified_games'] == 14*plan['rounds']*len(plan['policies'])
+    games_per_policy = 2*len(plan['families'])*plan['rounds']
+    assert result['attempts'] == result['verified_games'] == games_per_policy*len(plan['policies'])
     reproduced = {}
     for spec in plan['new_policies']:
         policy = frozen[spec['id']]
@@ -177,12 +243,15 @@ def audit(directory):
         path = directory/(policy+'.fmtour')
         report = json.loads(path.with_suffix('.report.json').read_text())
         assert report['tournament_sha256'] == digest(path)
-        assert report['verification']['python_replayed'] == 14*plan['rounds']
-        assert report['verification']['native_replayed_all_states'] == 14*plan['rounds']
+        assert report['verification']['python_replayed'] == games_per_policy
+        assert report['verification']['native_replayed_all_states'] == games_per_policy
         assert path.with_suffix('.png').is_file()
-        if plan.get('setup_mode') == 'policy-owned':
+        if plan.get('setup_mode','referee') != 'referee':
             from audit_policy_setups import audit as audit_setups
             write(path.with_suffix('.setups-audit.json'), audit_setups(path))
+        if 'original-dos' in plan['families']:
+            from campaign_dos_setup_runtime import audit_original_setups
+            write(path.with_suffix('.original-dos-setups-audit.json'), audit_original_setups(path))
     tests = directory/'checks.log'
     assert tests.is_file()
     test_text = tests.read_text()

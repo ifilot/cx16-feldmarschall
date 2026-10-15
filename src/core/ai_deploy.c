@@ -6,6 +6,10 @@
 #include "random.h"
 #include "ai.h"
 
+#if defined(AI_DEPLOY_DOUBLE_SHELL) && !defined(AI_DEPLOY_FORTRESS_ONLY)
+#error AI_DEPLOY_DOUBLE_SHELL requires the matched AI_DEPLOY_FORTRESS_ONLY control
+#endif
+
 #ifdef BANKED_AI
 #pragma code-name ("MISSIONCODE")
 #pragma rodata-name ("MISSIONRODATA")
@@ -36,9 +40,25 @@ void setup_ai(uint8_t blue) {
     do { draw = random_next(); } while(draw > 65530u);
     ticket = (uint8_t)((draw - 1u) % 10u);
     layout = ticket < (ai_difficulty == AI_HARD ? 4 : 5) ? 0 : ticket < 9 ? 1 : 2;
+#ifdef AI_DEPLOY_FORTRESS_ONLY
+    /* Retain the same RNG draw as the validated mixture in both arms. */
+    layout = 0;
+#endif
     army = blue ? CELL_BLUE : 0;
     for(i=0; i<ARMY_SIZE; i++) {
         sq = blue ? (3 - i / BOARD_SIZE) * BOARD_SIZE + i % BOARD_SIZE : RED_HOME0 + i;
         board[sq] = layouts[layout][i] | army;
     }
+#ifdef AI_DEPLOY_DOUBLE_SHELL
+    /* Own coordinates: a3<->i2, b2<->d1, c1<->h1. The Flag at a1
+     * has disjoint inner {a2,b1} and outer {a3,b2,c1} Bomb cuts.
+     * Three fixed swaps; no opponent input or extra RNG draw. */
+#define DEPLOY_SQUARE(n) (blue ? (3 - (n) / BOARD_SIZE) * BOARD_SIZE + (n) % BOARD_SIZE : RED_HOME0 + (n))
+#define DEPLOY_SWAP(a,b) do { i = board[DEPLOY_SQUARE(a)]; board[DEPLOY_SQUARE(a)] = board[DEPLOY_SQUARE(b)]; board[DEPLOY_SQUARE(b)] = i; } while(0)
+    DEPLOY_SWAP(10,28);
+    DEPLOY_SWAP(21,33);
+    DEPLOY_SWAP(32,37);
+#undef DEPLOY_SWAP
+#undef DEPLOY_SQUARE
+#endif
 }

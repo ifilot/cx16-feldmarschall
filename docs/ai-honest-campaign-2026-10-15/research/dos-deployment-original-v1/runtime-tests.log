@@ -1,0 +1,12 @@
+Command: python3 -m unittest discover -s tools -p test_campaign_dos_setup_runtime.py -v
+Recorded final passing run; no source edits afterward.
+
+test_hash_valid_tampered_seed_or_audit_rejected_by_regeneration ... ok
+test_policy_owned_overwrites_a_and_b_follows_dos_identity ... ok
+test_referee_two_slots_replay_only_frozen_bundle_and_preserve_prefixes ... ok
+test_runtime_blob_corruption_rejected_before_worker_execution ... ok
+test_unsafe_runtime_paths_and_missing_original_slots_rejected ... ok
+
+Ran 5 tests in 36.333s
+
+OK

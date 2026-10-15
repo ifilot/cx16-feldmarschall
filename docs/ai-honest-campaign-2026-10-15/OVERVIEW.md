@@ -134,3 +134,18 @@ Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectiv
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
 - Cycle 15: AI_TEST alone did not enable public queries; missing outer AI_DIAGNOSTICS guard. No saved tournament executed. [Preserved evidence](cycle-15-native-belief-objectives-v2/CONCLUSION.md).
 
+
+**Research screened before tournaments; no DOS strength score:**
+
+- Lower-tail risk optimization: Eight worlds leave only one or two tail samples, and nonlinear aggregation changes the correction reference; deferred before strength tests. [Evidence](research/horizon/cvar-decision.json).
+- Exact public-belief endgame proofs: Eligibility occurred in only two of 552 old games; bounded search found no win proof. This does not rule out deeper wins. [Evidence](research/endgame-feasibility-decision.json).
+- Scout probes to identify the opening: Opening probes identify formations but almost always lose the Scout; no tested immediate Miner followup route. Information gain alone is insufficient. [Evidence](research/template-identification-proposal.json).
+- Persistent Miner escorts: Existing missions already clear disclosed guards; most observed recapturers were concealed. No distinct executable handoff established. [Evidence](research/miner-assault/proposal.json).
+- Motion conditioned on our Spy location: Historical model selection chose zero Spy-factor strength; retained as a rejected prediction hypothesis, without a separate playing-strength claim. [Evidence](research/inverse-objectives/README.md).
+
+
+**Target cost evidence:**
+
+- Native belief interface: desktop prototype; the unchanged CX16 production link overflows the AI bank by 1,198 bytes. [Evidence](research/native-belief-target-fit/README.md).
+- Double-shell deployment: full CX16 link passes with 395 bytes free in the mission bank; 282 extra code bytes, no extra storage. [Evidence](research/deployment-double-shell/full-target-link.json).
+

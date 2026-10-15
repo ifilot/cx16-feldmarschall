@@ -4937,6 +4937,79 @@
       "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
       "archive": "ai/sources/4a4e6fcf3d5a0a7c50f8e394ad5cb4e37502e3960e7632e5a96b73b157c3226c.zip",
       "source_sha256": "4a4e6fcf3d5a0a7c50f8e394ad5cb4e37502e3960e7632e5a96b73b157c3226c"
+    },
+    {
+      "id": "student-fortress-deployment-v1-normal",
+      "name": "student-fortress-deployment-v1-normal",
+      "description": "Fix the existing Fortress formation as a strict deployment control, retaining the validated mixture RNG draw.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_DEPLOY_FORTRESS_ONLY"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Same guarded native move policy; Fortress-only setup; unchanged formation.",
+      "information_model": "Own-army constant placement only; zero opponent inputs, extra randomness or move-time work.",
+      "archive": "ai/sources/0dab76a02cb3ed187ae4058fe62c5d5d46481f47241a7ed368fda72ba5e85293.zip",
+      "source_sha256": "0dab76a02cb3ed187ae4058fe62c5d5d46481f47241a7ed368fda72ba5e85293"
+    },
+    {
+      "id": "student-double-bomb-shell-v1-normal",
+      "name": "student-double-bomb-shell-v1-normal",
+      "description": "Three fixed own-army swaps create two disjoint Bomb barriers around the Flag and free a trapped Lieutenant.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_DEPLOY_DOUBLE_SHELL"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Same guarded native move policy; Fortress-only setup with swaps a3/i2,b2/d1,c1/h1.",
+      "information_model": "Own-army constant placement only; zero opponent inputs, extra randomness or move-time work.",
+      "archive": "ai/sources/0dab76a02cb3ed187ae4058fe62c5d5d46481f47241a7ed368fda72ba5e85293.zip",
+      "source_sha256": "0dab76a02cb3ed187ae4058fe62c5d5d46481f47241a7ed368fda72ba5e85293"
     }
   ]
 }

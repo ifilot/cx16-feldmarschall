@@ -1,0 +1,507 @@
+{
+  "resident_sha256": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+  "dgroup_segment_relative_to_resident": "1FE5",
+  "table_offset": "DS:190E",
+  "table_bytes": 320,
+  "original_tables": [
+    {
+      "index": 0,
+      "original_rank_rows": [
+        [
+          0,
+          11,
+          6,
+          8,
+          9,
+          7,
+          7,
+          7,
+          8,
+          9
+        ],
+        [
+          11,
+          7,
+          4,
+          9,
+          4,
+          11,
+          8,
+          9,
+          6,
+          11
+        ],
+        [
+          1,
+          8,
+          5,
+          6,
+          5,
+          9,
+          5,
+          10,
+          8,
+          9
+        ],
+        [
+          4,
+          3,
+          9,
+          5,
+          11,
+          11,
+          6,
+          9,
+          2,
+          3
+        ]
+      ],
+      "flag_row": 1,
+      "flag_col": 1,
+      "adjacent_bombs": 2,
+      "adjacent_board_squares": 2
+    },
+    {
+      "index": 1,
+      "original_rank_rows": [
+        [
+          9,
+          9,
+          8,
+          7,
+          5,
+          9,
+          8,
+          6,
+          11,
+          0
+        ],
+        [
+          11,
+          6,
+          7,
+          5,
+          8,
+          9,
+          11,
+          3,
+          9,
+          11
+        ],
+        [
+          5,
+          8,
+          10,
+          7,
+          5,
+          4,
+          9,
+          6,
+          8,
+          1
+        ],
+        [
+          4,
+          2,
+          9,
+          6,
+          11,
+          11,
+          7,
+          9,
+          3,
+          4
+        ]
+      ],
+      "flag_row": 1,
+      "flag_col": 10,
+      "adjacent_bombs": 2,
+      "adjacent_board_squares": 2
+    },
+    {
+      "index": 2,
+      "original_rank_rows": [
+        [
+          9,
+          9,
+          8,
+          7,
+          5,
+          9,
+          8,
+          6,
+          11,
+          0
+        ],
+        [
+          11,
+          6,
+          7,
+          10,
+          8,
+          9,
+          5,
+          2,
+          9,
+          11
+        ],
+        [
+          5,
+          8,
+          11,
+          7,
+          11,
+          4,
+          6,
+          9,
+          8,
+          1
+        ],
+        [
+          4,
+          3,
+          9,
+          6,
+          5,
+          7,
+          11,
+          9,
+          3,
+          4
+        ]
+      ],
+      "flag_row": 1,
+      "flag_col": 10,
+      "adjacent_bombs": 2,
+      "adjacent_board_squares": 2
+    },
+    {
+      "index": 3,
+      "original_rank_rows": [
+        [
+          9,
+          8,
+          9,
+          9,
+          8,
+          5,
+          11,
+          0,
+          11,
+          7
+        ],
+        [
+          11,
+          6,
+          7,
+          8,
+          7,
+          9,
+          3,
+          11,
+          5,
+          11
+        ],
+        [
+          5,
+          8,
+          10,
+          9,
+          5,
+          4,
+          9,
+          6,
+          8,
+          1
+        ],
+        [
+          4,
+          2,
+          9,
+          6,
+          11,
+          7,
+          6,
+          9,
+          3,
+          4
+        ]
+      ],
+      "flag_row": 1,
+      "flag_col": 8,
+      "adjacent_bombs": 3,
+      "adjacent_board_squares": 3
+    },
+    {
+      "index": 4,
+      "original_rank_rows": [
+        [
+          9,
+          9,
+          8,
+          7,
+          8,
+          4,
+          9,
+          8,
+          11,
+          0
+        ],
+        [
+          11,
+          5,
+          9,
+          6,
+          9,
+          11,
+          5,
+          9,
+          3,
+          11
+        ],
+        [
+          7,
+          11,
+          10,
+          7,
+          8,
+          1,
+          8,
+          5,
+          11,
+          6
+        ],
+        [
+          4,
+          5,
+          2,
+          6,
+          3,
+          4,
+          9,
+          7,
+          6,
+          9
+        ]
+      ],
+      "flag_row": 1,
+      "flag_col": 10,
+      "adjacent_bombs": 2,
+      "adjacent_board_squares": 2
+    },
+    {
+      "index": 5,
+      "original_rank_rows": [
+        [
+          9,
+          8,
+          7,
+          8,
+          9,
+          4,
+          11,
+          0,
+          11,
+          7
+        ],
+        [
+          11,
+          5,
+          9,
+          6,
+          8,
+          9,
+          5,
+          11,
+          3,
+          11
+        ],
+        [
+          7,
+          11,
+          5,
+          9,
+          1,
+          8,
+          10,
+          8,
+          7,
+          6
+        ],
+        [
+          4,
+          5,
+          9,
+          6,
+          4,
+          3,
+          9,
+          2,
+          6,
+          9
+        ]
+      ],
+      "flag_row": 1,
+      "flag_col": 8,
+      "adjacent_bombs": 3,
+      "adjacent_board_squares": 3
+    },
+    {
+      "index": 6,
+      "original_rank_rows": [
+        [
+          9,
+          8,
+          9,
+          8,
+          9,
+          11,
+          0,
+          11,
+          8,
+          6
+        ],
+        [
+          11,
+          7,
+          6,
+          5,
+          11,
+          4,
+          11,
+          1,
+          5,
+          11
+        ],
+        [
+          7,
+          3,
+          10,
+          7,
+          2,
+          8,
+          7,
+          8,
+          6,
+          9
+        ],
+        [
+          5,
+          9,
+          6,
+          9,
+          4,
+          3,
+          9,
+          5,
+          9,
+          4
+        ]
+      ],
+      "flag_row": 1,
+      "flag_col": 7,
+      "adjacent_bombs": 3,
+      "adjacent_board_squares": 3
+    },
+    {
+      "index": 7,
+      "original_rank_rows": [
+        [
+          9,
+          8,
+          9,
+          8,
+          4,
+          11,
+          0,
+          11,
+          7,
+          6
+        ],
+        [
+          11,
+          6,
+          8,
+          6,
+          9,
+          7,
+          11,
+          5,
+          8,
+          11
+        ],
+        [
+          7,
+          3,
+          5,
+          11,
+          8,
+          1,
+          7,
+          10,
+          2,
+          9
+        ],
+        [
+          5,
+          9,
+          6,
+          9,
+          4,
+          3,
+          9,
+          5,
+          9,
+          4
+        ]
+      ],
+      "flag_row": 1,
+      "flag_col": 7,
+      "adjacent_bombs": 3,
+      "adjacent_board_squares": 3
+    }
+  ],
+  "colonel_templates": [
+    {
+      "table": 4,
+      "mirrored": false,
+      "canonical_setup": "45263497697BS78185B6B5969B593B99878498BF"
+    },
+    {
+      "table": 4,
+      "mirrored": true,
+      "canonical_setup": "96794362546B58187SB7B395B9695BFB89487899"
+    },
+    {
+      "table": 5,
+      "mirrored": false,
+      "canonical_setup": "45964392697B5918S876B596895B3B987894BFB7"
+    },
+    {
+      "table": 5,
+      "mirrored": true,
+      "canonical_setup": "9629346954678S8195B7B3B598695B7BFB498789"
+    },
+    {
+      "table": 6,
+      "mirrored": false,
+      "canonical_setup": "596943959473S7287869B765B4B15B98989BFB86"
+    },
+    {
+      "table": 6,
+      "mirrored": true,
+      "canonical_setup": "49593496959687827S37B51B4B567B68BFB98989"
+    },
+    {
+      "table": 7,
+      "mirrored": false,
+      "canonical_setup": "5969439594735B817S29B68697B58B98984BFB76"
+    },
+    {
+      "table": 7,
+      "mirrored": true,
+      "canonical_setup": "495934969592S718B537B85B79686B67BFB48989"
+    }
+  ],
+  "orientation": "Original computer top/Blue; front-first physical rows4..1, columns1..10."
+}

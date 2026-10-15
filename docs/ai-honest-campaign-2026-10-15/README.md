@@ -8,15 +8,28 @@ Existing experiments were preserved in baseline commit `209d3ef`.
 All candidates receive their own setup and public moves/battles only. The DOS
 opponent retains its original information advantage. Concealed referee ranks may
 be used for offline assessment, never for a candidate's decision. Classic rules,
-seven setup families, paired side swaps and frozen source-backed policies apply.
+paired side swaps and frozen source-backed policies apply. Each plan specifies
+its deployment context: seven stress families or the original DOS generator,
+and common referee armies or armies selected by the honest policy itself.
+Scores from those different contexts must not be compared as one difficulty.
 Production selection stays unchanged unless separate fresh validation supports
 a promotion. Original DOS crashes are preserved and unscored.
 
 See [the cumulative overview](OVERVIEW.md) for every completed cycle. Each cycle
-directory contains its prespecified plan, registration time, immutable recipes,
+directory contains its prespecified plan, registration time and immutable recipes.
+Completed tournament cycles also preserve
 portable `.fmtour` matches, independent full Python/native replays, Qt6 review
 captures and a SHA-256 manifest. Exploratory confidence intervals are descriptive;
 trying many hypotheses requires fresh validation before claiming a strength gain.
+
+Original-DOS deployment cycles run the unchanged level-three setup instructions,
+including their template/procedural mixture. A separate private setup seed never
+reaches the honest player. The explicit `policy-owned-rotated-v1` setup mode
+rotates both armies 180 degrees when colors swap, preserving the DOS-local army.
+The existing move adapter independently reseeds its random stream; these are not
+claims of bit-for-bit reproduction of an entire original UI game. Superseded
+setup-mode registrations for cycles 19 and 21 are retained under `plan-revisions`;
+both revisions preceded any saved matches and changed no policy identity.
 
 ## Initial hypotheses
 

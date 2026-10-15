@@ -1,0 +1,8 @@
+test_frozen_integrity_receipts_and_models (tools.test_campaign_frozen_public_portable.Cycle20PortableTests.test_frozen_integrity_receipts_and_models) ... ok
+test_frozen_only_concealed_rank_invariance_after_public_history (tools.test_campaign_frozen_public_portable.Cycle20PortableTests.test_frozen_only_concealed_rank_invariance_after_public_history) ... ok
+test_portable_launcher_bare_setup_go_and_public_history (tools.test_campaign_frozen_public_portable.Cycle20PortableTests.test_portable_launcher_bare_setup_go_and_public_history) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 6.394s
+
+OK

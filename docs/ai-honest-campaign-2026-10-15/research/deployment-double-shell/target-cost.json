@@ -1,0 +1,691 @@
+{
+  "passed": true,
+  "source_sha256": "73fb906cb4db1889b028d88e994a582607da716858fe813556a4cf17a821f19e",
+  "script_sha256": "1e97e4acf944ee8bf584a47a569d79cb6c0477a4dacf4b798ff71f65b8a886fe",
+  "versions": {
+    "cc65": "cc65 V2.18 - Ubuntu 2.19-1",
+    "ca65": "ca65 V2.18 - Ubuntu 2.19-1",
+    "cl65": "cl65 V2.18 - Ubuntu 2.19-1",
+    "sim65": "sim65 V2.18 - Ubuntu 2.19-1"
+  },
+  "recipe": "src/Makefile CFLAGS -O -t cx16; same production AI flags; isolated compile and assemble of ai_deploy.c only.",
+  "target_objects": {
+    "plain-mixture": {
+      "segments": {
+        "CODE": 244,
+        "RODATA": 120,
+        "BSS": 7,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0
+      },
+      "object_sha256": "4a34899a84df07da13b8d96844d056d32e5553efb7f5575a609b5bc36a66e0c0",
+      "assembly_sha256": "accdb47a4dce9f77dd80a97bebc62b31a82e9afb2b2ef98eb8e901f340086e59",
+      "flags": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT"
+      ]
+    },
+    "plain-fortress": {
+      "segments": {
+        "CODE": 247,
+        "RODATA": 120,
+        "BSS": 7,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0
+      },
+      "object_sha256": "13d1fa3b475b39c5344a4af2392e24e4333a4bb677b81119e6a55606ea023522",
+      "assembly_sha256": "88fd445e13ed67838d23993c9ca358ebb3d279a272da692f4598638f66a6aadb",
+      "flags": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_DEPLOY_FORTRESS_ONLY"
+      ]
+    },
+    "plain-double-shell": {
+      "segments": {
+        "CODE": 529,
+        "RODATA": 120,
+        "BSS": 7,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0
+      },
+      "object_sha256": "6d4db4097f6361951ef897dbc996c146c073ff19042bd6c327ee5d64bfc2235b",
+      "assembly_sha256": "9a0b289723596777e0f8ac48012f16cf329e9759f2a9b070a362a36e0247ac18",
+      "flags": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_DEPLOY_DOUBLE_SHELL"
+      ]
+    },
+    "banked-mixture": {
+      "segments": {
+        "CODE": 0,
+        "RODATA": 0,
+        "BSS": 0,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0,
+        "MISSIONRODATA": 120,
+        "MISSIONCODE": 244,
+        "MISSIONBSS": 7
+      },
+      "object_sha256": "d9183f300d59dbeaaa6aeddcf534b2ea83e5cffbd6362d89563ec85ec57ab335",
+      "assembly_sha256": "79fecc630914db6e2db3635fdf4aceb89ac244a9be30438e29df30c43c38ee2c",
+      "flags": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "BANKED_AI"
+      ]
+    },
+    "banked-fortress": {
+      "segments": {
+        "CODE": 0,
+        "RODATA": 0,
+        "BSS": 0,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0,
+        "MISSIONRODATA": 120,
+        "MISSIONCODE": 247,
+        "MISSIONBSS": 7
+      },
+      "object_sha256": "ec1acdfa7440e36ffca6c9bf6af9aba0869196931f516a899b22a345361cd631",
+      "assembly_sha256": "435976356d83ad972380a797c073250e585f5710ce927bc92df581a6b36270da",
+      "flags": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "BANKED_AI"
+      ]
+    },
+    "banked-double-shell": {
+      "segments": {
+        "CODE": 0,
+        "RODATA": 0,
+        "BSS": 0,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0,
+        "MISSIONRODATA": 120,
+        "MISSIONCODE": 529,
+        "MISSIONBSS": 7
+      },
+      "object_sha256": "4ca3eaa9042830c0955721d6140083b9ec79747cdf773d8f9609509ab3695ea5",
+      "assembly_sha256": "70a70542e6b91dc5e67a2438a53feebeba950500ddfab6910bc740e71fece89a",
+      "flags": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_DEPLOY_DOUBLE_SHELL",
+        "BANKED_AI"
+      ]
+    }
+  },
+  "candidate_minus_fortress_segment_bytes": {
+    "plain": {
+      "DATA": 0,
+      "BSS": 0,
+      "ZEROPAGE": 0,
+      "CODE": 282,
+      "NULL": 0,
+      "RODATA": 0
+    },
+    "banked": {
+      "NULL": 0,
+      "CODE": 0,
+      "DATA": 0,
+      "MISSIONRODATA": 0,
+      "MISSIONCODE": 282,
+      "MISSIONBSS": 0,
+      "BSS": 0,
+      "ZEROPAGE": 0,
+      "RODATA": 0
+    }
+  },
+  "sim65c02": {
+    "mixture": {
+      "0": {
+        "total_cycles": 20829578,
+        "calls": 1000,
+        "output": "1000 253\n20829578 cycles\n"
+      },
+      "1": {
+        "total_cycles": 76108583,
+        "calls": 1000,
+        "output": "1000 893\n76108583 cycles\n"
+      }
+    },
+    "fortress": {
+      "0": {
+        "total_cycles": 20833487,
+        "calls": 1000,
+        "output": "1000 253\n20833487 cycles\n"
+      },
+      "1": {
+        "total_cycles": 76074492,
+        "calls": 1000,
+        "output": "1000 893\n76074492 cycles\n"
+      }
+    },
+    "double-shell": {
+      "0": {
+        "total_cycles": 21181974,
+        "calls": 1000,
+        "output": "1000 253\n21181974 cycles\n"
+      },
+      "1": {
+        "total_cycles": 77685978,
+        "calls": 1000,
+        "output": "1000 893\n77685978 cycles\n"
+      }
+    }
+  },
+  "candidate_minus_fortress_cycles_per_setup": {
+    "0": 348.487,
+    "1": 1611.486
+  },
+  "limitations": [
+    "Object size is exact for this cc65 recipe; full CX16 image linking/bank capacity was not tested.",
+    "sim65c02 cycle differences use nonbanked real setup_ai with deterministic RNG stub and1000 calls. Full hardware runtime and bank gateway were not measured.",
+    "Whole simulator harness delta may include small code-placement/page-crossing effects; not an instruction-by-instruction cycle proof.",
+    "No production object/executable, core source, registry or frozen archive was changed."
+  ],
+  "commands": [
+    {
+      "command": [
+        "cc65",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "cc65 V2.18 - Ubuntu 2.19-1\n"
+    },
+    {
+      "command": [
+        "ca65",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "ca65 V2.18 - Ubuntu 2.19-1\n"
+    },
+    {
+      "command": [
+        "cl65",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "cl65 V2.18 - Ubuntu 2.19-1\n"
+    },
+    {
+      "command": [
+        "sim65",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sim65 V2.18 - Ubuntu 2.19-1\n"
+    },
+    {
+      "command": [
+        "cc65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-mixture.s",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ca65",
+        "-t",
+        "cx16",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-mixture.o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-mixture.s"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "od65",
+        "-S",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-mixture.o"
+      ],
+      "returncode": 0,
+      "stdout": "/tmp/double-shell-cc65-uxa4b3en/plain-mixture.o:\n  Segment sizes:\n    CODE:                       244\n    RODATA:                     120\n    BSS:                          7\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cc65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-DAI_DEPLOY_FORTRESS_ONLY",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-fortress.s",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ca65",
+        "-t",
+        "cx16",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-fortress.o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-fortress.s"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "od65",
+        "-S",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-fortress.o"
+      ],
+      "returncode": 0,
+      "stdout": "/tmp/double-shell-cc65-uxa4b3en/plain-fortress.o:\n  Segment sizes:\n    CODE:                       247\n    RODATA:                     120\n    BSS:                          7\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cc65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-DAI_DEPLOY_FORTRESS_ONLY",
+        "-DAI_DEPLOY_DOUBLE_SHELL",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-double-shell.s",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ca65",
+        "-t",
+        "cx16",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-double-shell.o",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-double-shell.s"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "od65",
+        "-S",
+        "/tmp/double-shell-cc65-uxa4b3en/plain-double-shell.o"
+      ],
+      "returncode": 0,
+      "stdout": "/tmp/double-shell-cc65-uxa4b3en/plain-double-shell.o:\n  Segment sizes:\n    CODE:                       529\n    RODATA:                     120\n    BSS:                          7\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cc65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-DBANKED_AI",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-mixture.s",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ca65",
+        "-t",
+        "cx16",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-mixture.o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-mixture.s"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "od65",
+        "-S",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-mixture.o"
+      ],
+      "returncode": 0,
+      "stdout": "/tmp/double-shell-cc65-uxa4b3en/banked-mixture.o:\n  Segment sizes:\n    CODE:                         0\n    RODATA:                       0\n    BSS:                          0\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n    MISSIONRODATA:              120\n    MISSIONCODE:                244\n    MISSIONBSS:                   7\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cc65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-DAI_DEPLOY_FORTRESS_ONLY",
+        "-DBANKED_AI",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-fortress.s",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ca65",
+        "-t",
+        "cx16",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-fortress.o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-fortress.s"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "od65",
+        "-S",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-fortress.o"
+      ],
+      "returncode": 0,
+      "stdout": "/tmp/double-shell-cc65-uxa4b3en/banked-fortress.o:\n  Segment sizes:\n    CODE:                         0\n    RODATA:                       0\n    BSS:                          0\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n    MISSIONRODATA:              120\n    MISSIONCODE:                247\n    MISSIONBSS:                   7\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cc65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-DAI_DEPLOY_FORTRESS_ONLY",
+        "-DAI_DEPLOY_DOUBLE_SHELL",
+        "-DBANKED_AI",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-double-shell.s",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ca65",
+        "-t",
+        "cx16",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-double-shell.o",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-double-shell.s"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "od65",
+        "-S",
+        "/tmp/double-shell-cc65-uxa4b3en/banked-double-shell.o"
+      ],
+      "returncode": 0,
+      "stdout": "/tmp/double-shell-cc65-uxa4b3en/banked-double-shell.o:\n  Segment sizes:\n    CODE:                         0\n    RODATA:                       0\n    BSS:                          0\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n    MISSIONRODATA:              120\n    MISSIONCODE:                529\n    MISSIONBSS:                   7\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cl65",
+        "-O",
+        "-t",
+        "sim65c02",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-mixture",
+        "/tmp/double-shell-cc65-uxa4b3en/cost-harness.c",
+        "/tmp/double-shell-cc65-uxa4b3en/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sim65",
+        "-c",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-mixture",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "1000 253\n20829578 cycles\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sim65",
+        "-c",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-mixture",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "1000 893\n76108583 cycles\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cl65",
+        "-O",
+        "-t",
+        "sim65c02",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-DAI_DEPLOY_FORTRESS_ONLY",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-fortress",
+        "/tmp/double-shell-cc65-uxa4b3en/cost-harness.c",
+        "/tmp/double-shell-cc65-uxa4b3en/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sim65",
+        "-c",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-fortress",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "1000 253\n20833487 cycles\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sim65",
+        "-c",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-fortress",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "1000 893\n76074492 cycles\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cl65",
+        "-O",
+        "-t",
+        "sim65c02",
+        "-I",
+        "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_POLICY_DEPLOYMENT",
+        "-DAI_DEPLOY_FORTRESS_ONLY",
+        "-DAI_DEPLOY_DOUBLE_SHELL",
+        "-o",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-double-shell",
+        "/tmp/double-shell-cc65-uxa4b3en/cost-harness.c",
+        "/tmp/double-shell-cc65-uxa4b3en/ai_deploy.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sim65",
+        "-c",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-double-shell",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "1000 253\n21181974 cycles\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sim65",
+        "-c",
+        "/tmp/double-shell-cc65-uxa4b3en/sim-double-shell",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "1000 893\n77685978 cycles\n",
+      "stderr": ""
+    }
+  ]
+}

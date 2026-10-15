@@ -1,0 +1,40 @@
+{
+  "cycle": 23,
+  "baseline": "student-validated-deployment-v1-normal",
+  "opponent": "student-guard-v1-normal",
+  "policies": [
+    "student-validated-deployment-v1-normal",
+    "student-fortress-deployment-v1-normal",
+    "student-double-bomb-shell-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 2330001,
+  "rounds": 200,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "Test whether the same fixed three-swap deployment package helps against an honest native opponent, using the original DOS army distribution as a controlled common deployment.",
+    "Separate an opponent-specific response from a deployment improvement that also transfers to an honest opponent."
+  ],
+  "contrasts": [
+    [
+      "student-double-bomb-shell-v1-normal",
+      "student-fortress-deployment-v1-normal"
+    ],
+    [
+      "student-double-bomb-shell-v1-normal",
+      "student-validated-deployment-v1-normal"
+    ],
+    [
+      "student-fortress-deployment-v1-normal",
+      "student-validated-deployment-v1-normal"
+    ]
+  ],
+  "analysis": "Prespecified before cycle22 strength games or outcomes. Same three frozen policies, no retuning, original DOS-generated opponent armies and rotated sides. The opponent here uses honest guard moves and receives no private enemy setup. Its own army legitimately comes from the original DOS generator; this isolates move-opponent context from army distribution. Compare candidate-minus-control and candidate-minus-mixture effects. Absolute50% is NOT a fair-null benchmark because deployment distributions differ. Three contrasts are exploratory; report95% and98.3333% intervals; independent DOS validation needed before promotion.",
+  "evidence": "Frozen cycle22 designs and mechanistic evidence only. Both players are honest; generator private seed is referee-only. This is auxiliary honest-opponent validation, not another DOS strength result."
+}

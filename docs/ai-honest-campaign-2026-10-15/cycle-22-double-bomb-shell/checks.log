@@ -1,0 +1,24 @@
+test_candidate_requires_matched_fixed_fortress_control (tools.test_campaign_double_shell.DoubleShellTests.test_candidate_requires_matched_fixed_fortress_control) ... ok
+test_classic_both_sides_many_seeds_exact_arm_and_unchanged_rng (tools.test_campaign_double_shell.DoubleShellTests.test_classic_both_sides_many_seeds_exact_arm_and_unchanged_rng) ... ok
+test_default_binary_byte_identical_to_frozen_validated_deployment (tools.test_campaign_double_shell.DoubleShellTests.test_default_binary_byte_identical_to_frozen_validated_deployment) ... ok
+test_easy_and_optional_rules_keep_default_random_setup (tools.test_campaign_double_shell.DoubleShellTests.test_easy_and_optional_rules_keep_default_random_setup) ... ok
+test_exact_three_swaps_inventory_fixed_flag_spy_and_front_row (tools.test_campaign_double_shell.DoubleShellTests.test_exact_three_swaps_inventory_fixed_flag_spy_and_front_row) ... ok
+test_real_setup_function_independent_of_enemy_board_contents (tools.test_campaign_double_shell.DoubleShellTests.test_real_setup_function_independent_of_enemy_board_contents) ... ok
+test_two_disjoint_bomb_vertex_cuts (tools.test_campaign_double_shell.DoubleShellTests.test_two_disjoint_bomb_vertex_cuts) ... ok
+test_default_observer_binary_is_byte_identical_before_and_after_guard (tools.test_campaign_policy_deployment.PolicyDeployment.test_default_observer_binary_is_byte_identical_before_and_after_guard) ... ok
+test_easy_keeps_legacy_random_setup_exactly (tools.test_campaign_policy_deployment.PolicyDeployment.test_easy_keeps_legacy_random_setup_exactly) ... ok
+test_fixed_armies_keep_120_forced_history_moves_identical (tools.test_campaign_policy_deployment.PolicyDeployment.test_fixed_armies_keep_120_forced_history_moves_identical) ... ok
+test_normal_and_hard_select_only_validated_mixture_on_both_sides (tools.test_campaign_policy_deployment.PolicyDeployment.test_normal_and_hard_select_only_validated_mixture_on_both_sides) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 18.182s
+
+OK
+test_frozen_receipts_sources_and_archive_integrity (tools.test_campaign_double_shell_portable.FrozenDoubleShellPortableTests.test_frozen_receipts_sources_and_archive_integrity) ... ok
+test_outside_checkout_identity_exact_own_setup_and_legal_initial_moves (tools.test_campaign_double_shell_portable.FrozenDoubleShellPortableTests.test_outside_checkout_identity_exact_own_setup_and_legal_initial_moves) ... ok
+test_public_history_strict_move_and_rng_parity_after_identical_own_setup (tools.test_campaign_double_shell_portable.FrozenDoubleShellPortableTests.test_public_history_strict_move_and_rng_parity_after_identical_own_setup) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.505s
+
+OK

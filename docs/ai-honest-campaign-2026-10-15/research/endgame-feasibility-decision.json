@@ -1,0 +1,37 @@
+{
+  "kind": "bounded-exact-endgame-feasibility-decision",
+  "decision": "defer; no selectable policy registered",
+  "primary_sources": [
+    {
+      "title": "Strong planning under partial observability",
+      "authors": "Bertoli, Cimatti, Roveri, Traverso",
+      "year": 2006,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0004370206000075",
+      "doi": "10.1016/j.artint.2006.01.004",
+      "connection": "AND-OR search in belief space seeks a plan that succeeds for every compatible state and nondeterministic outcome."
+    },
+    {
+      "title": "Proof-number search",
+      "authors": "Allis, van der Meulen, van den Herik",
+      "year": 1994,
+      "url": "https://www.sciencedirect.com/science/article/pii/0004370294900043",
+      "doi": "10.1016/0004-3702(94)90004-3",
+      "connection": "Motivates proving game-theoretic wins rather than trusting interim value estimates. Prototype is bounded memoized AND-OR, not proof-number selection."
+    }
+  ],
+  "audit": "552 scored historical games,39933 honest roots.378 eligible roots arise in only2 games, both long ply-limit draws. Both have1 deduced Flag world; no multiworld Flag/Bomb opportunity observed.",
+  "pilot": "First eligible public root of each game, fixed depths4/6/8,node cap5000. No terminal-win proof found. This does not refute deeper or later-position wins.",
+  "algorithm": "Own nodes OR over common public legal actions; each action AND over observation-partitioned compatible outcomes. Opponent nodes AND over every legal action and outcome, allowing opponent knowledge of our army and its own Flag. Exact Classic battle, Scout movement, public shuttle and terminal Flag/no-moves checks. Horizon/node exhaustion yields unknown and never authorizes an override. Remaining public ply budget caps horizon.",
+  "public_contract": "Own ranks, disclosed enemy ranks, enemy public loss counts, exact public shuttle. Hidden enemy low nibbles ignored; enumerate only Flag/Bomb placements logically consistent with remaining counts. No sampled true arrangement or per-world action fusion.",
+  "tests": "7 meaningful fixtures pass: deduced Flag capture, two-world root strategy-fusion refusal, hidden-nibble invariance, shuttle ban, node/horizon fallback, unresolved mobile rejection, no-move/double-no-move terminal semantics.",
+  "limits": [
+    "No shared integration or saved matches.",
+    "Only two first-eligible positions searched; zero proof is limited feasibility evidence.",
+    "Python prototype optional future research, not an approved strength improvement."
+  ],
+  "source_sha256": {
+    "tools/analyze_campaign_endgame.py": "121ea6456adcc3c549e72aeb9f9c8c8670da2fb0c4082d8ddf920b2bc30bd3ac",
+    "tools/campaign_endgame_proof.py": "a36a8088dbb861ea171995f09eb69efb28e2f7533968239a5a236387d8f014f0",
+    "tools/test_campaign_endgame_proof.py": "0bfe3a05b9642dc7d46ce03ae110d16e04384a82d2292e9760bdf2daef04562a"
+  }
+}

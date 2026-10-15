@@ -1,5 +1,6 @@
 """Run named Classic AIs in paired tournaments; inspect and verify .fmtour files."""
 import argparse
+import contextlib
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import json
@@ -18,9 +19,10 @@ import uuid
 from ai_registry import ROOT, build_policy, catalog, digest, receives_opponent_setup
 from arena import deployments
 from feldmarschall import new_rng, valid_setup
-from tournament_store import Tournament, verify
+from tournament_store import Tournament, verify, mirror_setup
 
 FAMILIES = ('fortified', 'uniform', 'unguarded', 'forward', 'decoy', 'presets', 'broad-mixed')
+SETUP_FAMILIES = (*FAMILIES, 'original-dos')
 DEFAULT_WORKER = ROOT / 'build/desktop/feldmarschall-tournament-worker'
 
 
@@ -90,9 +92,9 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
         backend='python', worker=DEFAULT_WORKER, reuse_processes=None, setup_mode='referee'):
     if first == second:
         raise ValueError('Choose two different AI versions')
-    if setup_mode not in ('referee','policy-owned'):
+    if setup_mode not in ('referee','policy-owned','policy-owned-rotated-v1'):
         raise ValueError('Unknown setup mode')
-    if rounds < 1 or jobs < 1 or max_plies < 1 or not families or any(f not in FAMILIES for f in families):
+    if rounds < 1 or jobs < 1 or max_plies < 1 or not families or any(f not in SETUP_FAMILIES for f in families):
         raise ValueError('Positive rounds, workers and ply limit, and known layout families required')
     if Path(out).exists():
         raise FileExistsError(f'Tournament already exists: {out}')
@@ -109,7 +111,7 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
             raise ValueError('Native worker build integrity mismatch; rebuild the desktop targets')
     built = [build_policy(identity) for identity in (first, second)]
     participants = [receipt for _, receipt in built]
-    if setup_mode=='policy-owned' and receives_opponent_setup(participants[0]['policy']):
+    if setup_mode!='referee' and receives_opponent_setup(participants[0]['policy']):
         raise ValueError('Policy-owned deployment requires an honest first participant')
     if reuse_processes is None:
         reuse_processes = backend == 'openmp' and any(p['policy'].get('driver') == 'msdos1990' for p in participants)
@@ -122,9 +124,11 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
                 setup_mode=setup_mode,
                 comparison=('move policies with common referee-generated deployments; swapped sides'
                             if setup_mode=='referee' else
+                            'first policy chooses its own army; both armies rotate 180 degrees across sides'
+                            if setup_mode=='policy-owned-rotated-v1' else
                             'first policy chooses its own army; second uses referee army; armies follow participants across sides'),
                 score='win=1, draw=0.5, loss=0; paired games share deployments and seed')
-    with Tournament(out, create=True, metadata=plan) as tournament, tempfile.TemporaryDirectory(prefix='fmtour-') as temp:
+    with Tournament(out, create=True, metadata=plan) as tournament, tempfile.TemporaryDirectory(prefix='fmtour-') as temp, contextlib.ExitStack() as setup_stack:
         working = Path(temp)
         commands, argv_commands, original_dos = {}, {}, {}
         for (executable, receipt), identity in zip(built, (first, second)):
@@ -160,14 +164,36 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
                                          worker_build=worker_receipt))
         else:
             play_game = load_referee(referee)
-        queue, descriptions, setup_records = [], [], []
+        queue, descriptions, setup_records, dos_setup_records = [], [], [], []
+        dos_generator = None
+        if 'original-dos' in families:
+            from campaign_dos_setup_runtime import FrozenDOSSetups
+            dos_generator = setup_stack.enter_context(FrozenDOSSetups(tournament,working))
         rng = new_rng(seed)
         for family in families:
             for _ in range(rounds):
-                setups = (deployments(family, rng), deployments(family, rng))
-                move_seed = rng.randrange(1, 60000)
                 pair_id = len(descriptions) // 2 + 1
-                if setup_mode=='policy-owned':
+                if family=='original-dos':
+                    armies=[]
+                    for slot in ('A','B'):
+                        # Independent private draw: never derived from the move
+                        # seed supplied to the honest policy.
+                        private_seed=rng.getrandbits(32)
+                        try:
+                            army,setup_audit=dos_generator.generate(private_seed,3)
+                        except BaseException as error:
+                            tournament.set_metadata(dict(status='failed',error='Original DOS setup: '+str(error),
+                                failed_setup_request=dict(pair_id=pair_id,slot=slot,seed=private_seed,level=3)))
+                            raise
+                        armies.append(army)
+                        dos_setup_records.append(dict(pair_id=pair_id,slot=slot,
+                            used_in_games=setup_mode=='referee' or slot=='B',setup=army,
+                            private_seed=private_seed,audit=setup_audit))
+                    setups=tuple(armies)
+                else:
+                    setups = (deployments(family, rng), deployments(family, rng))
+                move_seed = rng.randrange(1, 60000)
+                if setup_mode!='referee':
                     setup_seed=(move_seed*109+0x5e7a)%65535+1
                     try:
                         owner_setup, transcript=policy_setup(argv_commands[first],participants[0]['policy']['difficulty'],setup_seed)
@@ -180,18 +206,36 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
                 for names in ((first, second), (second, first)):
                     game_setups=(setups if setup_mode=='referee' else
                                  (owner_setup,setups[1]) if names[0]==first else (setups[1],owner_setup))
+                    if setup_mode=='policy-owned-rotated-v1' and names[0]!=first:
+                        game_setups=tuple(mirror_setup(army) for army in game_setups)
                     recording = dict(record_moves=True,original_dos_setup=[original_dos[n] for n in names]) if any(original_dos.values()) else True
                     queue.append((names, tuple(commands[n] for n in names), game_setups, move_seed, max_plies, recording))
                     descriptions.append((pair_id, family, game_setups))
-        if setup_mode=='policy-owned':
+        if dos_setup_records:
+            artifact='setup/original-dos-records-v1.json'
+            data=json.dumps(dict(schema='original-dos-setups-v1',records=dos_setup_records),indent=2).encode()
+            sha=tournament.artifact(artifact,data)
+            tournament.set_metadata(dict(original_dos_setup_records_artifact=artifact,
+                original_dos_setup_records_sha256=sha,
+                original_dos_setup_move_context=('original-dos-opponent' if participants[1]['policy'].get('driver')=='msdos1990' else 'honest-opponent-control-v1'),
+                original_dos_setup_boundary=('Original level3 deployment instructions; move RNG independently seeded by existing DOS adapter.'
+                    if participants[1]['policy'].get('driver')=='msdos1990' else
+                    'Original level3 deployment instructions only; opponent moves use the recorded honest policy, not DOS AI.'),
+                original_dos_setup_orientation=('DOS local formation preserved under 180-degree side rotation.'
+                    if setup_mode=='policy-owned-rotated-v1' else
+                    'Canonical Blue deployment reused unchanged; Red DOS local formation is horizontally reflected.')))
+        if setup_mode!='referee':
             artifact='setup/policy-owned-v1.json'
             data=json.dumps(dict(schema='classic-policy-owned-setups-v1',owner=first,
                                  opponent=second,records=setup_records),indent=2).encode()
             sha=tournament.artifact(artifact,data)
             tournament.set_metadata(dict(setup_owner=first,setup_records_artifact=artifact,
                                          setup_records_sha256=sha))
+            source_names=('tournament.py','arena.py','feldmarschall.py')
+            if setup_mode=='policy-owned-rotated-v1':
+                source_names+=('tournament_store.py',)
             setup_sources={name:tournament.artifact('setup/'+name,(ROOT/'tools'/name).read_bytes())
-                           for name in ('tournament.py','arena.py','feldmarschall.py')}
+                           for name in source_names}
             tournament.set_metadata(dict(setup_source_sha256=setup_sources))
         execution_started = time.perf_counter()
         try:
@@ -239,9 +283,10 @@ def main():
                       help='parallel matches (default: OMP_NUM_THREADS, otherwise 4)')
     play.add_argument('--backend', choices=('python', 'openmp'), default='python')
     play.add_argument('--worker', type=Path, default=DEFAULT_WORKER, help='compiled OpenMP worker executable')
-    play.add_argument('--families', nargs='+', choices=FAMILIES, default=FAMILIES)
+    play.add_argument('--families', nargs='+', choices=SETUP_FAMILIES, default=FAMILIES,
+                      help='original-dos uses the unchanged level3 deployment generator; default is seven stress families')
     play.add_argument('--max-plies', type=int, default=1000)
-    play.add_argument('--setup-mode', choices=('referee','policy-owned'), default='referee',
+    play.add_argument('--setup-mode', choices=('referee','policy-owned','policy-owned-rotated-v1'), default='referee',
                       help='compare moves on fixed armies, or let the first policy choose its army')
     actions.add_parser('show').add_argument('path', type=Path)
     actions.add_parser('verify').add_argument('path', type=Path)

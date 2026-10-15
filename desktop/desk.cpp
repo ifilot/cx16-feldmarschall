@@ -233,6 +233,9 @@ void Desk::openTournament(const QString &path) {
     if (tournament->metadata["setup_mode"].toString() == "policy-owned")
         lines.append(QString("Deployment comparison: %1 chooses its army; armies follow players across sides.")
                      .arg(tournament->metadata["setup_owner"].toString()));
+    if (tournament->metadata["setup_mode"].toString() == "policy-owned-rotated-v1")
+        lines.append(QString("Deployment comparison: %1 chooses its army; both armies rotate 180 degrees across sides.")
+                     .arg(tournament->metadata["setup_owner"].toString()));
     QMap<QString, std::array<double, 2>> families; QMap<QString, int> endings; double totalPlies = 0;
     for (int n = 0; n < 2; ++n) {
         QString id = participants[n].toObject()["policy"].toObject()["id"].toString();

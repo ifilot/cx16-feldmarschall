@@ -1,0 +1,600 @@
+{
+  "scope": "Historical calibration follow-up only; all strength/model/group choices fixed by previous development selection. No campaign/validation outcomes read.",
+  "candidate": "Flag-only extra features; selected strength retained unchanged.",
+  "strength": 0.5,
+  "mirrored_control": "Same selected Flag-only feature indices and identical selected strength; separately trained mirrored-file feature tables.",
+  "metrics": {
+    "base-IS8": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.9417080454602944,
+        "brier": 0.995405936567592,
+        "accuracy": 0.1680038643356964
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.9417080454602944,
+        "brier": 0.995405936567592,
+        "accuracy": 0.1680038643356964
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 3.8798559455420385,
+        "brier": 1.0893994287491797,
+        "accuracy": 0.09695220604311514,
+        "location": {
+          "top_accuracy": 0.14384100747737114,
+          "mean_reciprocal_rank": 0.3165375590984927,
+          "log_loss": 3.8857572736786707
+        }
+      }
+    },
+    "base-swap4-8": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.8547858496028065,
+        "brier": 0.9594716314867713,
+        "accuracy": 0.19021312020566902
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.8547858496028065,
+        "brier": 0.9594716314867713,
+        "accuracy": 0.19021312020566902
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 3.7381442152822473,
+        "brier": 1.0657696236904741,
+        "accuracy": 0.07382373518737155,
+        "location": {
+          "top_accuracy": 0.18035167694258603,
+          "mean_reciprocal_rank": 0.37140596285141636,
+          "log_loss": 3.74404554341888
+        }
+      }
+    },
+    "base-IS256": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.06642414613761,
+        "brier": 0.8693205184233858,
+        "accuracy": 0.1851771828213812
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.06642414613761,
+        "brier": 0.8693205184233858,
+        "accuracy": 0.1851771828213812
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 2.610931869051732,
+        "brier": 0.9786587051627877,
+        "accuracy": 0.0769524246796974,
+        "location": {
+          "top_accuracy": 0.2517031789759062,
+          "mean_reciprocal_rank": 0.4133660904991562,
+          "log_loss": 2.616833197188364
+        }
+      }
+    },
+    "flag-IS8": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.8718868892787217,
+        "brier": 0.9816854910553373,
+        "accuracy": 0.20167976527770895
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.8718868892787217,
+        "brier": 0.9816854910553373,
+        "accuracy": 0.20167976527770895
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 3.9445009655701124,
+        "brier": 1.1167845323235572,
+        "accuracy": 0.09737308146399055,
+        "location": {
+          "top_accuracy": 0.13139512003148365,
+          "mean_reciprocal_rank": 0.3041933815785587,
+          "log_loss": 3.950402293706745
+        }
+      }
+    },
+    "flag-swap4-8": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.734670578880399,
+        "brier": 0.9429051436048735,
+        "accuracy": 0.2157415361293062
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.734670578880399,
+        "brier": 0.9429051436048735,
+        "accuracy": 0.2157415361293062
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 3.5023151162350588,
+        "brier": 1.0331673654692501,
+        "accuracy": 0.07495517950063404,
+        "location": {
+          "top_accuracy": 0.20829908026877722,
+          "mean_reciprocal_rank": 0.40690274781684754,
+          "log_loss": 3.508216444371691
+        }
+      }
+    },
+    "flag-IS256": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.0340502019328506,
+        "brier": 0.8648899446479484,
+        "accuracy": 0.19903182034801903
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.0340502019328506,
+        "brier": 0.8648899446479484,
+        "accuracy": 0.19903182034801903
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 2.568304881884796,
+        "brier": 0.9834250454341669,
+        "accuracy": 0.07820411911321003,
+        "location": {
+          "top_accuracy": 0.244904674450129,
+          "mean_reciprocal_rank": 0.41409332636634844,
+          "log_loss": 2.574206210021429
+        }
+      }
+    },
+    "mirrored-flag-IS8": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.891551128024931,
+        "brier": 0.9841240039902066,
+        "accuracy": 0.19175299059492834
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.891551128024931,
+        "brier": 0.9841240039902066,
+        "accuracy": 0.19175299059492834
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 3.76777386751621,
+        "brier": 1.0830910650903673,
+        "accuracy": 0.10464821373912282,
+        "location": {
+          "top_accuracy": 0.1645732213914032,
+          "mean_reciprocal_rank": 0.3308990004061453,
+          "log_loss": 3.7736751956528427
+        }
+      }
+    },
+    "mirrored-flag-swap4-8": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.804915742789743,
+        "brier": 0.9489182727929516,
+        "accuracy": 0.21355837923853016
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.804915742789743,
+        "brier": 0.9489182727929516,
+        "accuracy": 0.21355837923853016
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 3.6124707173872554,
+        "brier": 1.059251771133301,
+        "accuracy": 0.060175346538982905,
+        "location": {
+          "top_accuracy": 0.17403417289780926,
+          "mean_reciprocal_rank": 0.37539321432599204,
+          "log_loss": 3.618372045523888
+        }
+      }
+    },
+    "mirrored-flag-IS256": {
+      "all": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.046878362113102,
+        "brier": 0.8646765829979322,
+        "accuracy": 0.20137394525607227
+      },
+      "moved": {
+        "games": 63,
+        "pieces": 2756,
+        "log_loss": 2.046878362113102,
+        "brier": 0.8646765829979322,
+        "accuracy": 0.20137394525607227
+      },
+      "spy": {
+        "games": 33,
+        "pieces": 175,
+        "log_loss": 2.5800400296514634,
+        "brier": 0.9712954680081722,
+        "accuracy": 0.08368643141370415,
+        "location": {
+          "top_accuracy": 0.27117276662731205,
+          "mean_reciprocal_rank": 0.4368306087213191,
+          "log_loss": 2.585941357788096
+        }
+      }
+    }
+  },
+  "timing": {
+    "base-IS8": {
+      "seconds": 0.42146614996818244,
+      "milliseconds_per_root": 0.6385850757093674
+    },
+    "base-swap4-8": {
+      "seconds": 0.9883515720175637,
+      "milliseconds_per_root": 1.4975023818447937
+    },
+    "base-IS256": {
+      "seconds": 8.965040972019779,
+      "milliseconds_per_root": 13.58339541215118
+    },
+    "flag-IS8": {
+      "seconds": 0.4615533770083857,
+      "milliseconds_per_root": 0.6993232984975541
+    },
+    "flag-swap4-8": {
+      "seconds": 0.9642791440273868,
+      "milliseconds_per_root": 1.4610290061021012
+    },
+    "flag-IS256": {
+      "seconds": 10.855048188961518,
+      "milliseconds_per_root": 16.447042710547755
+    },
+    "mirrored-flag-IS8": {
+      "seconds": 0.6542817779700272,
+      "milliseconds_per_root": 0.991336027227314
+    },
+    "mirrored-flag-swap4-8": {
+      "seconds": 0.9500070470203354,
+      "milliseconds_per_root": 1.439404616697478
+    },
+    "mirrored-flag-IS256": {
+      "seconds": 9.986827225984598,
+      "milliseconds_per_root": 15.131556403006968
+    }
+  },
+  "weight_ess": {
+    "base-IS8": {
+      "mean": 6.291365836770676,
+      "minimum": 3.0700965179339206
+    },
+    "base-swap4-8": {
+      "mean": 8.0,
+      "minimum": 8.0
+    },
+    "base-IS256": {
+      "mean": 190.6792867826989,
+      "minimum": 62.14763470854791
+    },
+    "flag-IS8": {
+      "mean": 6.279909230601064,
+      "minimum": 2.862527323399738
+    },
+    "flag-swap4-8": {
+      "mean": 8.0,
+      "minimum": 8.0
+    },
+    "flag-IS256": {
+      "mean": 189.37843962078483,
+      "minimum": 66.70157103317558
+    },
+    "mirrored-flag-IS8": {
+      "mean": 6.2974820381178125,
+      "minimum": 2.2244113519564683
+    },
+    "mirrored-flag-swap4-8": {
+      "mean": 8.0,
+      "minimum": 8.0
+    },
+    "mirrored-flag-IS256": {
+      "mean": 190.23922604521672,
+      "minimum": 60.9405795134169
+    }
+  },
+  "comparisons": {
+    "flag minus base IS8": {
+      "complete_pairs": 34,
+      "pairs_by_family": {
+        "broad-mixed": 5,
+        "forward": 3,
+        "fortified": 6,
+        "presets": 6,
+        "decoy": 2,
+        "uniform": 6,
+        "unguarded": 6
+      },
+      "metrics": {
+        "log_loss_delta": {
+          "mean": -0.07699985430878765,
+          "interval_95": [
+            -0.12088246844800027,
+            -0.03400908852094498
+          ],
+          "interval_98_3333": [
+            -0.12970690036096602,
+            -0.025119667966389654
+          ]
+        },
+        "brier_delta": {
+          "mean": -0.014657030718641528,
+          "interval_95": [
+            -0.028006513305339265,
+            -0.0032195076548422593
+          ],
+          "interval_98_3333": [
+            -0.03126735808874724,
+            -0.0012025215390154636
+          ]
+        }
+      }
+    },
+    "flag minus mirrored-flag IS8": {
+      "complete_pairs": 34,
+      "pairs_by_family": {
+        "broad-mixed": 5,
+        "forward": 3,
+        "fortified": 6,
+        "presets": 6,
+        "decoy": 2,
+        "uniform": 6,
+        "unguarded": 6
+      },
+      "metrics": {
+        "log_loss_delta": {
+          "mean": -0.026500089843455813,
+          "interval_95": [
+            -0.07757491183797695,
+            0.023633771324300015
+          ],
+          "interval_98_3333": [
+            -0.08838982523811492,
+            0.03340465690755042
+          ]
+        },
+        "brier_delta": {
+          "mean": -0.004377550584761409,
+          "interval_95": [
+            -0.013705478272356466,
+            0.005191820552941796
+          ],
+          "interval_98_3333": [
+            -0.015690080801084482,
+            0.007523717088171478
+          ]
+        }
+      }
+    },
+    "flag minus base swap4-8": {
+      "complete_pairs": 34,
+      "pairs_by_family": {
+        "broad-mixed": 5,
+        "forward": 3,
+        "fortified": 6,
+        "presets": 6,
+        "decoy": 2,
+        "uniform": 6,
+        "unguarded": 6
+      },
+      "metrics": {
+        "log_loss_delta": {
+          "mean": -0.15441170678914665,
+          "interval_95": [
+            -0.42442484150493387,
+            0.06278438881788495
+          ],
+          "interval_98_3333": [
+            -0.4674106381650809,
+            0.09025441966120776
+          ]
+        },
+        "brier_delta": {
+          "mean": -0.021482275730863795,
+          "interval_95": [
+            -0.05404703007432689,
+            0.005604012698985366
+          ],
+          "interval_98_3333": [
+            -0.060668814465440944,
+            0.008878904167486087
+          ]
+        }
+      }
+    },
+    "flag minus mirrored-flag swap4-8": {
+      "complete_pairs": 34,
+      "pairs_by_family": {
+        "broad-mixed": 5,
+        "forward": 3,
+        "fortified": 6,
+        "presets": 6,
+        "decoy": 2,
+        "uniform": 6,
+        "unguarded": 6
+      },
+      "metrics": {
+        "log_loss_delta": {
+          "mean": -0.08185776576793169,
+          "interval_95": [
+            -0.35620858522542537,
+            0.15453162647867358
+          ],
+          "interval_98_3333": [
+            -0.4152129763471522,
+            0.18878654127699623
+          ]
+        },
+        "brier_delta": {
+          "mean": -0.007459817035951133,
+          "interval_95": [
+            -0.04015707943479356,
+            0.021402811054517225
+          ],
+          "interval_98_3333": [
+            -0.04728825464693838,
+            0.025368925271957096
+          ]
+        }
+      }
+    },
+    "flag minus base IS256": {
+      "complete_pairs": 34,
+      "pairs_by_family": {
+        "broad-mixed": 5,
+        "forward": 3,
+        "fortified": 6,
+        "presets": 6,
+        "decoy": 2,
+        "uniform": 6,
+        "unguarded": 6
+      },
+      "metrics": {
+        "log_loss_delta": {
+          "mean": -0.04458323312742622,
+          "interval_95": [
+            -0.08908807786627117,
+            -0.007349330005750763
+          ],
+          "interval_98_3333": [
+            -0.10045922106972538,
+            -0.002069737605335902
+          ]
+        },
+        "brier_delta": {
+          "mean": -0.006831891122846307,
+          "interval_95": [
+            -0.0135585873260769,
+            0.0001432922794280615
+          ],
+          "interval_98_3333": [
+            -0.014991606810747342,
+            0.0017494568637261973
+          ]
+        }
+      }
+    },
+    "flag minus mirrored-flag IS256": {
+      "complete_pairs": 34,
+      "pairs_by_family": {
+        "broad-mixed": 5,
+        "forward": 3,
+        "fortified": 6,
+        "presets": 6,
+        "decoy": 2,
+        "uniform": 6,
+        "unguarded": 6
+      },
+      "metrics": {
+        "log_loss_delta": {
+          "mean": -0.016508582121072587,
+          "interval_95": [
+            -0.04771990852682868,
+            0.011798998721795802
+          ],
+          "interval_98_3333": [
+            -0.054530325695108066,
+            0.016830005757118058
+          ]
+        },
+        "brier_delta": {
+          "mean": -0.0006352865014161696,
+          "interval_95": [
+            -0.00680625493420521,
+            0.005740381217824953
+          ],
+          "interval_98_3333": [
+            -0.007980475704151876,
+            0.007258060167567498
+          ]
+        }
+      }
+    }
+  },
+  "fixed_strength_fractional_flag_minus_mirrored": {
+    "complete_pairs": 34,
+    "pairs_by_family": {
+      "broad-mixed": 5,
+      "forward": 3,
+      "fortified": 6,
+      "presets": 6,
+      "decoy": 2,
+      "uniform": 6,
+      "unguarded": 6
+    },
+    "metrics": {
+      "log_loss_delta": {
+        "mean": -0.02085095156596515,
+        "interval_95": [
+          -0.051818767948422405,
+          0.0036571731857089783
+        ],
+        "interval_98_3333": [
+          -0.058510324598154535,
+          0.006456717932237974
+        ]
+      },
+      "brier_delta": {
+        "mean": -0.0005068634184888673,
+        "interval_95": [
+          -0.005020664989126335,
+          0.0040274742411891586
+        ],
+        "interval_98_3333": [
+          -0.006094149831360781,
+          0.005015213395535329
+        ]
+      }
+    }
+  },
+  "calibration_games": 84,
+  "eligible_games": 63,
+  "calibration_views": 660,
+  "corpus_sha256": "1ed8f86dbb3242e89bcde3dd2bc90237243bafcc01bd5bbc3a83321ea0da81dd",
+  "base_model_sha256": "3327ec168d4834c45e62e4f0576c47fd41e716904b4df4c8bee8d9ec2bd0f38b",
+  "candidate_models_sha256": "9955723d00084b745f69585f32f27d73296419551156bffbb3abc71beb9d2bb2",
+  "module_sha256": "3c0ebf4a8f096c591a49b10b8ab881680e3ef42f85f23929fdb60aa0119d9958",
+  "analysis_sha256": "d321229645b205be4c4474051b2aa5e35a1eae20846130f6d2960952b79ea103",
+  "seconds": 42.12453486000231,
+  "limitations": "Selected on historical calibration; intervals descriptive, not unbiased validation. Eight-world estimates are sparse and use fixed5% inventory mixture for scoring. Swap chains finite-burn-in approximate; equal weights do not establish convergence. Correlated spatial features do not prove causal opponent planning."
+}

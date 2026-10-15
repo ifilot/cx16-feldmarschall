@@ -1,0 +1,76 @@
+{
+  "kind": "proposal-only-active-template-identification",
+  "decision": "Defer runtime policy until main frozen prior benchmark and evidence of a reachable consequential followup; no score bonus proposed.",
+  "primary_sources": [
+    {
+      "title": "Active sequential hypothesis testing",
+      "authors": "Mohammad Naghshvar and Tara Javidi",
+      "year": 2013,
+      "url": "https://arxiv.org/abs/1203.4626",
+      "doi": "10.1214/13-AOS1144",
+      "connection": "Choose sensing actions adaptively using current hypothesis probabilities while accounting for observation cost and decision error; asymptotic guarantees do not transfer to adversarial Stratego."
+    },
+    {
+      "title": "Experience matters: Information acquisition optimizes probability gain",
+      "authors": "Nelson, McKenzie, Cottrell, Sejnowski",
+      "year": 2010,
+      "url": "https://pages.ucsd.edu/~mckenzie/NelsonetalInPressPsychScience.pdf",
+      "doi": "10.1177/0956797610372637",
+      "connection": "Distinguishes expected reduction in decision error from entropy reduction. Probability gain is appropriate only for equal-reward category identification; guessing a Flag location is not equivalent to winning a Stratego game."
+    }
+  ],
+  "previous_work_review": {
+    "lifetime": "Bounded fixed penalties preserve expendable units; no information reward. Rejected strength gate.",
+    "corridor": "Weak hand-set Flag/Bomb screen priors with reachable beneficiary and fixed progress bonuses. Rejected strength gate.",
+    "followthrough": "Local discovered-target material continuation after every plausible enemy reply, minus optimistic blind comparator and sacrifice cost. Rejected strength gate.",
+    "difference": "The new potential observation changes the JOINT posterior over global Flag/Bomb/mobile formation, even if the revealed front piece itself has no profitable followup. Fixed source templates supply long-range correlations absent from earlier independent/count priors."
+  },
+  "exact_diagnostics": {
+    "joint": "P(observed rank r,Flag origin f)=sum_template posterior(t)*I[t[q]=r,tFlag=f] + uniform-background joint.",
+    "flag_entropy_information": "H(F) \u2212 sum_r P(r) H(F|r). Diagnostic only; not a native-score bonus.",
+    "flag_identification_probability_gain": "sum_r max_f P(r,F=f) \u2212 max_f P(F=f). Expected improvement in the best single Flag-location guess, not game EVSI.",
+    "actionable_decision_value": "For a finite set of ACTUALLY executable future missions A and a justified common terminal/mission utility U, EVSI=sum_r P(r) max_a E[U(a,H)|r] \u2212 max_a E[U(a,H)]. Positive Flag entropy alone is insufficient; the best mission must change and remain legally executable after the probe and opponent reply."
+  },
+  "audit": {
+    "public_openings": 8,
+    "legal_scout_capture_options": 12,
+    "hypothesis_post_probe_states": 96,
+    "flag_information_bits": "1.422\u20131.459 per immediately legal opening capture",
+    "flag_identification_probability_gain": ".205\u2013.305",
+    "scout_death_probability": 0.99,
+    "expected_scout_value_lost": 9.9,
+    "expected_material_net_excluding_terminal_flag_capture": "\u22125 forfiles1/8;\u22127 forfiles0/9, using unchanged native material values. Flag-capture probability .005 reported separately, not treated as information.",
+    "static_miner_routes_to_flag": 0,
+    "strong_frontier_capture_followups": 72,
+    "best_information_unreachable_front_origins": [
+      2,
+      7
+    ],
+    "best_information_unreachable_bits": 1.972,
+    "within_opening_probe_choice": "Each own opening has either one candidate or two reflected candidates with identical information and material expectations. Identification metrics cannot select a better opening capture among these legal choices."
+  },
+  "proposed_future_mechanism": [
+    "Keep existing tactical evaluation and frozen prior unchanged.",
+    "First audit later PUBLIC positions where at least two genuinely different Miner/strong-unit route commitments are currently executable and observation changes which route has better predicted outcome. Use only tracked origins and compatible template/background hypotheses.",
+    "Compute conditional mission choice using explicit common terminal/mission outcomes, including probe combat, opportunity cost and enemy reply. Require an unchanged-utility comparison with the best unprobed alternative. Do not convert entropy bits or identification probability into material by a fitted coefficient.",
+    "If this executable decision class lacks cheap positive-EVSI examples, stop; do not replace the missing outcome utility with a generic information bonus. Any eventual policy needs a new immutable ID and frozen independent validation."
+  ],
+  "why_defer": [
+    "The immediate opening experiments are highly discriminative but almost certainly consume a Scout.",
+    "No tested opening has an immediately executable solo Miner Flag route after the probe, even under the optimistic frozen-enemy model. Coordination/route preparation is the missing capability.",
+    "Seventy-two strong-unit frontier followups are mostly the same local material mechanism already investigated by followthrough; they do not establish global Flag information value.",
+    "The procedural20% prior is approximate and early recognition can be confidently wrong. Do not exploit that uncertainty as assumed ground truth."
+  ],
+  "limits": [
+    "This is an exact public opening prior calculation, not a replay of legal complete games or a strength comparison.",
+    "Future templates are hypotheses, not enemy truth. The uniform component stays present in all information calculations.",
+    "Frozen-opponent reachability ignores enemy replies; failure to find a path is narrower than impossibility after coordinated play.",
+    "Own initial army sample is eight fixed source templates, not the full original deployment distribution."
+  ],
+  "validation": "3 diagnostic tests pass, including all10 front origins\u00d712 rank outcomes matching the unchanged full posterior, entropy/probability nonnegativity and route obstacle/capture semantics.",
+  "source_sha256": {
+    "tools/analyze_campaign_template_identification.py": "f0c707dce2df1f66ffd7e75790cd5a810045467e826a1f8e5f785318ee43f4a0",
+    "tools/test_campaign_template_identification.py": "a208e26bc1534df050d3404978408085b766c3bd587bd2e3026d6bb111c982ce",
+    "tools/campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c"
+  }
+}

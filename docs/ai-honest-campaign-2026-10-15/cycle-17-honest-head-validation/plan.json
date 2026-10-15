@@ -1,0 +1,61 @@
+{
+  "cycle": 17,
+  "phase": "independent honest opponent validation",
+  "rules": "classic",
+  "setup_mode": "referee",
+  "new_policies": [],
+  "rounds": 100,
+  "games_per_match": 1400,
+  "planned_games": 4200,
+  "jobs": 4,
+  "backend": "openmp",
+  "max_plies": 1000,
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "matches": [
+    {
+      "name": "row-prior-vs-context",
+      "group": "head",
+      "policy": "teacher-flag-row-control-v1-normal",
+      "opponent": "teacher-context-v1-normal",
+      "seed": 2250001,
+      "rounds": 100
+    },
+    {
+      "name": "joint-vs-context",
+      "group": "head",
+      "policy": "teacher-joint-setup-v1-normal",
+      "opponent": "teacher-context-v1-normal",
+      "seed": 2260001,
+      "rounds": 100
+    },
+    {
+      "name": "native-contact-vs-guard",
+      "group": "head",
+      "policy": "student-exact-contact-risk-v1-normal",
+      "opponent": "student-guard-v1-normal",
+      "seed": 2270001,
+      "rounds": 100
+    }
+  ],
+  "hypotheses": [
+    "The frozen learned Flag-row Teacher improves against the honest Context Teacher.",
+    "The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.",
+    "The frozen native exact-contact policy improves against the honest native guard."
+  ],
+  "null_score": 0.5,
+  "intervals": [
+    0.95,
+    0.9833333333333333
+  ],
+  "analysis": "Each direct candidate-versus-reference match has a fair-null score of 0.5. Report win/draw/loss scores, all planned attempts/errors, paired-family bootstrap 95% and 98.3333% intervals and differences from 0.5. The latter intervals account for three prespecified endpoints by Bonferroni, subject to bootstrap limitations. Complete error-free pairs are the bootstrap units; also report all-attempt missing-score bounds. No self-play control, parameter tuning or policy changes on this cohort.",
+  "promotion": "No promotion from honest heads alone. Independent DOS validation in cycles12/14, honest-opponent results, correctness and cost all require joint review.",
+  "evidence": "Existing immutable policy IDs and original source/model recipes only. All failed attempts and legal error prefixes are preserved; no error is scored as a loss."
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "pinned-public-template-mixture-correctness",
+  "strength_evidence": false,
+  "passed": true,
+  "source_repository": "https://github.com/ifilot/stratego-decompilation",
+  "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+  "pinned_original_assets": {
+    "resident-image.bin": "cd8c40e2f305f2bd3656b35aa31e7baa55535db19b745e307d98e43d7ca1904f",
+    "mz-header.bin": "99beff6347a4c55c8c8fa50a71c76cc6e424d7445e7eefff3c9532f031a90a99",
+    "ovl6.cod": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+    "ovl6.rel": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e"
+  },
+  "template_memory_location": {
+    "dgroup": "1fe5",
+    "offset": "0x190e",
+    "table_indices": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "canonical_templates": [
+    "45263497697BS78185B6B5969B593B99878498BF",
+    "96794362546B58187SB7B395B9695BFB89487899",
+    "45964392697B5918S876B596895B3B987894BFB7",
+    "9629346954678S8195B7B3B598695B7BFB498789",
+    "596943959473S7287869B765B4B15B98989BFB86",
+    "49593496959687827S37B51B4B567B68BFB98989",
+    "5969439594735B817S29B68697B58B98984BFB76",
+    "495934969592S718B537B85B79686B67BFB48989"
+  ],
+  "provenance_matches_runtime": true,
+  "background_exact_enumeration_cases": 544,
+  "background_likelihood_maximum_absolute_error": 1.1102230246251565e-16,
+  "initial_component_probabilities": [
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.19999999999999996
+  ],
+  "initial_posterior_report": {
+    "template_probabilities": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "background_probability": 0.19999999999999996,
+    "background_log_evidence": 0,
+    "known_origins": 0,
+    "moved_unknown_origins": 0
+  },
+  "initial_eight_world_sampling_mean_seconds": 0.00015203815899803884,
+  "initial_rank_marginals_mean_seconds": 0.00020250960200064583,
+  "source_sha256": {
+    "tools/campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+    "tools/test_campaign_template_beliefs.py": "64faa4662743b2733d9a52d12349f96e482068d0eb783b5f1532a6cbb2a3969e",
+    "tools/audit_campaign_template_beliefs.py": "dbb1ef69132c1ac670ff03fb5f80a7c9064b0dbe5f18f46815b5e56f6e0921c6"
+  }
+}

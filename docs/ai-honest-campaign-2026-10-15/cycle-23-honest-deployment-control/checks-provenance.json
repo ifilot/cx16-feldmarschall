@@ -1,0 +1,7 @@
+{
+  "policy_mechanism_and_portability": "First11+3tests copied unchanged from cycle22: identical frozen policies, no new policy here.",
+  "context_tests": "Eight original-generator audit tests run specifically after adding explicitly labelled honest-opponent use.",
+  "context_test_source_sha256": "ab3ecb4007a729a8bb7cadba715f184aea3132326fe6450f63e7b3a7649c752b",
+  "initial_harness_failure": "Separate preserved log: tests attempted corruption through readonly API. Test fixtures now mutate with direct SQLite connection; public readers remain readonly.",
+  "smoke": "Two40-ply honest-opponent matches, Python/native all-state replay and Qtcapture; not strength evidence."
+}

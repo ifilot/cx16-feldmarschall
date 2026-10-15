@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/ifilot/stratego-decompilation",
+  "commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+  "files": {
+    "ovl6.cod": {
+      "sha256": "51276baf4fc81a427731c3bdfc6f519c30659f27892bb7d8bd6d0b6e6d87c4b8",
+      "git_blob_sha1": "ae297a887c14b074f0a6abb029fb5e934304583f",
+      "size": 8483
+    },
+    "ovl6.rel": {
+      "sha256": "c1635b9e54df94ef9f13f5e4d2298a24522590bf4c4e77414abd32a86f61cd3e",
+      "git_blob_sha1": "3fe5f511abf1ed054f4941b11822d9842c3b0a19",
+      "size": 134
+    },
+    "BOARD-ENTRY-DS.BIN": {
+      "sha256": "6656e1591176efb58e5f78c16aabe18221eb4a8d78347d8c49e64fc1fe0a337f",
+      "git_blob_sha1": "c22a1dc1a353ce09f30bb4637c1ac9cfb7b6a6d0",
+      "size": 18432,
+      "source_path": "analysis/snapshots/2026-10-12-scan-input-and-real-board-init/captures/BOARD-ENTRY-DS.BIN"
+    },
+    "BOARD-RETURN-DS.BIN": {
+      "sha256": "1958ffea95187486cad49cef292fc0455d29236bcd8288f3aa735ed14e0bdeb3",
+      "git_blob_sha1": "42dfac27f03758d14ccc315ae6c343684f8116e2",
+      "size": 18432,
+      "source_path": "analysis/snapshots/2026-10-12-scan-input-and-real-board-init/captures/BOARD-RETURN-DS.BIN"
+    }
+  }
+}

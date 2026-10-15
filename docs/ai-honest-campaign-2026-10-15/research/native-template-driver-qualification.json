@@ -1,0 +1,22 @@
+{
+  "kind": "native-template-marginal-driver-qualification",
+  "passed": true,
+  "tests": 6,
+  "observer_policy": "student-counts-belief-objectives-v3-normal",
+  "observer_source_sha256": "ad2791bafd6132654d4fc08b58b04730847709ee4b18bd253892185da08bbe3b",
+  "observer_executable_sha256": "919534bb42d0254f62d3c1104026c7795aa59c934590db968b5fcc1a4f318839",
+  "cases": [
+    "Real archived public combat/movement prefixes, both armies; concealed-rank mutation preserves exact packet, report and choice.",
+    "Exact Q12 Flag/Bomb inventories and all-rank marginal inventories.",
+    "Native-generated own setup retained by public-origin tracker; new clears native and model priors; reset gives identical move.",
+    "One Q12 packet then one native go, no rollout or opponent setup.",
+    "Publicly deduced adjacent Flag capture chosen for both armies.",
+    "New CLI bare setup protocol requires only observer and difficulty; no model file.",
+    "Existing native-beliefs base driver byte-identical to frozen v3 source."
+  ],
+  "approximation": "Native receives only template-mixture Flag/Bomb marginals and assumes exchangeable hidden mobile ranks. It does not receive full template mobile-rank correlations; teacher sampler does.",
+  "source_sha256": {
+    "tools/campaign_native_template.py": "5e50ddcc182ef92345db60894bdac3fd2b67c68acc9eda7f8b6eebeb43662d98",
+    "tools/test_campaign_native_template.py": "9b6354ec87c7eeb1563a42f8ed30f2749c815c0927fa254541a41b764ddc8001"
+  }
+}

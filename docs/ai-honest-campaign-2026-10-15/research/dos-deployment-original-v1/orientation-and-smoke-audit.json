@@ -1,0 +1,396 @@
+{
+  "schema": "dos-original-orientation-independent-audit-v1",
+  "strength_evidence": false,
+  "orientation_fixture": {
+    "seed": 4,
+    "level": 3,
+    "branch": "original-procedural",
+    "canonical_setup": "36279971965985765899S76B58B3B494BFB498B8",
+    "reflected_setup": "691799726399856758954B3B85B67S8B894BFB49",
+    "observations": [
+      {
+        "dos_side": "blue",
+        "applied": "same-canonical",
+        "differing_own_rank_cells": 0,
+        "local_physical_ranks": [
+          9,
+          4,
+          11,
+          0,
+          11,
+          4,
+          9,
+          8,
+          11,
+          8,
+          10,
+          7,
+          6,
+          11,
+          5,
+          8,
+          11,
+          3,
+          11,
+          4,
+          5,
+          9,
+          8,
+          5,
+          7,
+          6,
+          5,
+          8,
+          9,
+          9,
+          3,
+          6,
+          2,
+          7,
+          9,
+          9,
+          7,
+          1,
+          9,
+          6
+        ]
+      },
+      {
+        "dos_side": "red",
+        "applied": "same-canonical",
+        "differing_own_rank_cells": 28,
+        "local_physical_ranks": [
+          8,
+          11,
+          8,
+          9,
+          4,
+          11,
+          0,
+          11,
+          4,
+          9,
+          4,
+          11,
+          3,
+          11,
+          8,
+          5,
+          11,
+          6,
+          7,
+          10,
+          9,
+          9,
+          8,
+          5,
+          6,
+          7,
+          5,
+          8,
+          9,
+          5,
+          6,
+          9,
+          1,
+          7,
+          9,
+          9,
+          7,
+          2,
+          6,
+          3
+        ]
+      },
+      {
+        "dos_side": "red",
+        "applied": "reflected",
+        "differing_own_rank_cells": 0,
+        "local_physical_ranks": [
+          9,
+          4,
+          11,
+          0,
+          11,
+          4,
+          9,
+          8,
+          11,
+          8,
+          10,
+          7,
+          6,
+          11,
+          5,
+          8,
+          11,
+          3,
+          11,
+          4,
+          5,
+          9,
+          8,
+          5,
+          7,
+          6,
+          5,
+          8,
+          9,
+          9,
+          3,
+          6,
+          2,
+          7,
+          9,
+          9,
+          7,
+          1,
+          9,
+          6
+        ]
+      }
+    ],
+    "conclusion": "Same canonical string gives the exact generated own physical ranks only for Blue. Red needs each10-glyph row reflected. This is exact seeded-array evidence; full population reflection symmetry is not claimed."
+  },
+  "primary_code": {
+    "canonical_conversion": "tools/campaign_dos_deployment.py: generate_setup returns physical rows4..1, cols1..10",
+    "placement": "tools/feldmarschall.py: setup_squares reverses row order for Blue but retains columns for both armies",
+    "dos_local": "tools/msdos1990.py: OriginalAI.local returns square for Blue and99-square for Red",
+    "original_procedural": "sources/reconstruction/ovl6/PLAC.C and SEARCH.C preserve increasing-column/fallback scans and do not add a final random reflection"
+  },
+  "current_mode": "policy-owned keeps exactly the same canonical string per participant across colors; it is therefore a side-reflected original-generator benchmark, plus independently reseeded move RNG.",
+  "explicit_future_mode": "policy-owned-rotated-v1: first(ownerRed=o,DOSBlue=b); swapped(DOSRed=mirror(b),ownerBlue=mirror(o)). This rotates both armies180 degrees while preserving the generated DOS-local own array and honest owner relative deployment.",
+  "referee_future": "An explicit original-DOS-local orientation/family can reflect generatedslotA before placing it Red, leaveB Blue, and retain fixed physical armies under policy swap. Audit must transform raw generator records according to the declared orientation.",
+  "reports": {
+    "python": {
+      "path": "/tmp/original-dos-family-python.fmtour",
+      "sha256": "ea5b2afe59aeb1ad0a5c2c301dbbb7650f5b8883b153d8ac9eb6b5de6e4f5b98",
+      "games": 2,
+      "plies": [
+        40,
+        40
+      ],
+      "native_states_compared": 82,
+      "python_and_native_every_state_identical": true,
+      "original_setup_audit": {
+        "passed": true,
+        "regenerated_records": 2,
+        "matched_game_armies": 2,
+        "runtime_files": 28,
+        "setup_mode": "policy-owned",
+        "source": "Only frozen embedded generator/emulator/asset bytes executed; all private seeds and audits reproduced.",
+        "move_rng_boundary": "Existing move adapter reseeds independently; deployment post-RNG is preserved in records."
+      },
+      "own_setup_audit": {
+        "passed": true,
+        "kind": "frozen-policy-owned-setup-replay-audit",
+        "tournament": "/tmp/original-dos-family-python.fmtour",
+        "tournament_sha256": "ea5b2afe59aeb1ad0a5c2c301dbbb7650f5b8883b153d8ac9eb6b5de6e4f5b98",
+        "owner": "student-validated-deployment-v1-normal",
+        "records": 1,
+        "expected_records": 1,
+        "records_audited": [
+          {
+            "pair_id": 1,
+            "family": "original-dos",
+            "setup_seed": 34453,
+            "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+            "setup_matches": true,
+            "protocol_sha256": "05ceffc0b8a87d7470039f3427676fb9570f1688d1ede302324185da29d85621",
+            "streams": {
+              "stdout": {
+                "repeatable": true,
+                "exact_recorded_match": true,
+                "recorded_sha256": "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946",
+                "replay_sha256": [
+                  "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946",
+                  "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946"
+                ]
+              },
+              "stderr": {
+                "repeatable": true,
+                "exact_recorded_match": true,
+                "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "replay_sha256": [
+                  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                ]
+              }
+            }
+          }
+        ],
+        "repetitions": 2,
+        "verified_games": 2,
+        "policy_source_sha256": "9d4592c4067f768f44f559176590f3a3d754dce7303f924bf1b5ba0fbf826a6d",
+        "runtime_sha256": {
+          "engine": "93f34319d055b3d670db34d927b8f8eee441f3b5a6048699d072531ac15c4b25"
+        },
+        "setup_source_sha256": {
+          "tournament.py": "f39f8b6f8e31cb59a30966a7ff5b9d8590794f931e899839baaf1ec36f961f9d",
+          "arena.py": "a04a4da77b56b7afebf1638bb6b4f2b752a03d0a1244a8859ba797de24a73b3e",
+          "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+        },
+        "setup_records_sha256": "d209e2d76d9c6a082608e1e64da18bb376cbc8696b4ceb42d844e800f731ea61",
+        "all_setup_sources_present": true,
+        "no_opponent_input": true,
+        "all_streams_repeatable": true,
+        "audit_source_sha256": "0b6669e7475a2628331e89ecd979195e722c73fc514b1ee5751cd4372141a8e3",
+        "limitation": "Repeatability is observed over the specified repeats; variable streams do not receive an exact transcript claim."
+      },
+      "qt_screenshot": "docs/ai-honest-campaign-2026-10-15/research/dos-deployment-original-v1/independent-python-smoke.png",
+      "qt_stdout": "",
+      "qt_stderr": "This plugin does not support propagateSizeHints()\nThis plugin does not support propagateSizeHints()\n",
+      "summary": {
+        "status": "complete",
+        "games": 2,
+        "scored_games": 2,
+        "errors": 0,
+        "standings": {
+          "student-validated-deployment-v1-normal": {
+            "wins": 0,
+            "draws": 2,
+            "losses": 0,
+            "score": 0.5
+          },
+          "msdos-1990-v2-normal": {
+            "wins": 0,
+            "draws": 2,
+            "losses": 0,
+            "score": 0.5
+          }
+        },
+        "average_plies": 40.0,
+        "families": {
+          "original-dos": {
+            "student-validated-deployment-v1-normal": 0.5,
+            "msdos-1990-v2-normal": 0.5
+          }
+        },
+        "endings": {
+          "ply limit": 2
+        }
+      },
+      "setup_mode": "policy-owned",
+      "original_boundary": "Original level3 deployment instructions; move RNG independently seeded by existing DOS adapter."
+    },
+    "openmp": {
+      "path": "/tmp/original-dos-family-openmp.fmtour",
+      "sha256": "33ac0a130bcf2f27deba8f3c29a417d219f43d2d85809df9bb38996e9801c012",
+      "games": 2,
+      "plies": [
+        40,
+        40
+      ],
+      "native_states_compared": 82,
+      "python_and_native_every_state_identical": true,
+      "original_setup_audit": {
+        "passed": true,
+        "regenerated_records": 2,
+        "matched_game_armies": 2,
+        "runtime_files": 28,
+        "setup_mode": "policy-owned",
+        "source": "Only frozen embedded generator/emulator/asset bytes executed; all private seeds and audits reproduced.",
+        "move_rng_boundary": "Existing move adapter reseeds independently; deployment post-RNG is preserved in records."
+      },
+      "own_setup_audit": {
+        "passed": true,
+        "kind": "frozen-policy-owned-setup-replay-audit",
+        "tournament": "/tmp/original-dos-family-openmp.fmtour",
+        "tournament_sha256": "33ac0a130bcf2f27deba8f3c29a417d219f43d2d85809df9bb38996e9801c012",
+        "owner": "student-validated-deployment-v1-normal",
+        "records": 1,
+        "expected_records": 1,
+        "records_audited": [
+          {
+            "pair_id": 1,
+            "family": "original-dos",
+            "setup_seed": 34453,
+            "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+            "setup_matches": true,
+            "protocol_sha256": "05ceffc0b8a87d7470039f3427676fb9570f1688d1ede302324185da29d85621",
+            "streams": {
+              "stdout": {
+                "repeatable": true,
+                "exact_recorded_match": true,
+                "recorded_sha256": "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946",
+                "replay_sha256": [
+                  "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946",
+                  "2a29e00f498411612a3b8ba6fbe3d04cee612bf1ec834076deaa0b193c255946"
+                ]
+              },
+              "stderr": {
+                "repeatable": true,
+                "exact_recorded_match": true,
+                "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "replay_sha256": [
+                  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                ]
+              }
+            }
+          }
+        ],
+        "repetitions": 2,
+        "verified_games": 2,
+        "policy_source_sha256": "9d4592c4067f768f44f559176590f3a3d754dce7303f924bf1b5ba0fbf826a6d",
+        "runtime_sha256": {
+          "engine": "93f34319d055b3d670db34d927b8f8eee441f3b5a6048699d072531ac15c4b25"
+        },
+        "setup_source_sha256": {
+          "tournament.py": "f39f8b6f8e31cb59a30966a7ff5b9d8590794f931e899839baaf1ec36f961f9d",
+          "arena.py": "a04a4da77b56b7afebf1638bb6b4f2b752a03d0a1244a8859ba797de24a73b3e",
+          "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+        },
+        "setup_records_sha256": "d209e2d76d9c6a082608e1e64da18bb376cbc8696b4ceb42d844e800f731ea61",
+        "all_setup_sources_present": true,
+        "no_opponent_input": true,
+        "all_streams_repeatable": true,
+        "audit_source_sha256": "0b6669e7475a2628331e89ecd979195e722c73fc514b1ee5751cd4372141a8e3",
+        "limitation": "Repeatability is observed over the specified repeats; variable streams do not receive an exact transcript claim."
+      },
+      "qt_screenshot": "docs/ai-honest-campaign-2026-10-15/research/dos-deployment-original-v1/independent-openmp-smoke.png",
+      "qt_stdout": "",
+      "qt_stderr": "This plugin does not support propagateSizeHints()\nThis plugin does not support propagateSizeHints()\n",
+      "summary": {
+        "status": "complete",
+        "games": 2,
+        "scored_games": 2,
+        "errors": 0,
+        "standings": {
+          "student-validated-deployment-v1-normal": {
+            "wins": 0,
+            "draws": 2,
+            "losses": 0,
+            "score": 0.5
+          },
+          "msdos-1990-v2-normal": {
+            "wins": 0,
+            "draws": 2,
+            "losses": 0,
+            "score": 0.5
+          }
+        },
+        "average_plies": 40.0,
+        "families": {
+          "original-dos": {
+            "student-validated-deployment-v1-normal": 0.5,
+            "msdos-1990-v2-normal": 0.5
+          }
+        },
+        "endings": {
+          "ply limit": 2
+        }
+      },
+      "setup_mode": "policy-owned",
+      "original_boundary": "Original level3 deployment instructions; move RNG independently seeded by existing DOS adapter."
+    }
+  },
+  "backends_game_records_identical": true,
+  "source_sha256": {
+    "tools/tournament.py": "f39f8b6f8e31cb59a30966a7ff5b9d8590794f931e899839baaf1ec36f961f9d",
+    "tools/feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+    "tools/msdos1990.py": "dfbc5dc09fdd6237b70766f8116ee13946aa33a3a27234537c4bbd8aef8cbc02",
+    "tools/campaign_dos_deployment.py": "8ad9ec0ed2fde081943ac77a590a07ebb0d3c8d2864f99df8844eeeba33f0547",
+    "tools/campaign_dos_setup_runtime.py": "ad99092dcde3d0f11e44eb046b6492f61b0a1a5d5627e0bb08977fd5ea9d0592"
+  }
+}

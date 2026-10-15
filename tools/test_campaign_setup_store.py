@@ -8,7 +8,7 @@ import tempfile
 import unittest
 
 from feldmarschall import Position,random_setup
-from tournament_store import Tournament,verify
+from tournament_store import Tournament,verify,mirror_setup
 
 
 class SetupStore(unittest.TestCase):
@@ -37,13 +37,14 @@ class SetupStore(unittest.TestCase):
                                          runtime_sha256={'engine':runtime}))
             metadata=dict(participants=participants,families=['uniform'],planned_games=2,max_plies=1)
             if setup_mode_metadata:metadata['setup_mode']=mode
-            if mode=='policy-owned':
+            if mode in ('policy-owned','policy-owned-rotated-v1'):
                 sha=tournament.artifact('setup/policy-owned-v1.json',json.dumps(document or self.document).encode())
                 metadata.update(setup_owner='first',setup_records_artifact='setup/policy-owned-v1.json',setup_records_sha256=sha)
             tournament.set_metadata(metadata)
-            if swap_armies is None:swap_armies=mode=='policy-owned'
+            if swap_armies is None:swap_armies=mode in ('policy-owned','policy-owned-rotated-v1')
             for index,names in enumerate((('first','second'),('second','first'))):
                 setups=(self.opponent,self.own) if index and swap_armies else (self.own,self.opponent)
+                if index and swap_armies and mode=='policy-owned-rotated-v1':setups=tuple(map(mirror_setup,setups))
                 position=Position()
                 for army,setup in enumerate(setups):position.place(army,setup)
                 move=position.moves(0)[0]
@@ -54,6 +55,29 @@ class SetupStore(unittest.TestCase):
     def test_policy_owned_armies_follow_participants_and_verify(self):
         self.fixture()
         self.assertEqual(verify(self.path)['scored_games'],2)
+
+    def test_explicit_rotated_mode_is_exact_board_rotation_and_keeps_raw_records(self):
+        self.fixture('policy-owned-rotated-v1')
+        self.assertEqual(verify(self.path)['scored_games'],2)
+        with Tournament(self.path) as tournament:
+            first,second=tournament.game(1),tournament.game(2)
+        self.assertEqual(second['red_setup'],mirror_setup(first['blue_setup']))
+        self.assertEqual(second['blue_setup'],mirror_setup(first['red_setup']))
+        self.assertEqual(mirror_setup(mirror_setup(self.own)),self.own)
+        self.assertNotEqual(mirror_setup(self.own),self.own)
+        for bad in ('',self.own[:-1],'F'*40,None):
+            with self.assertRaises(ValueError):mirror_setup(bad)
+        with sqlite3.connect(self.path) as db:
+            db.execute('UPDATE games SET blue_setup=? WHERE id=2',(self.own,))
+        with self.assertRaisesRegex(ValueError,'army'):verify(self.path)
+
+    def test_rotated_and_original_owned_modes_cannot_be_relabelled(self):
+        for original,changed in (('policy-owned','policy-owned-rotated-v1'),('policy-owned-rotated-v1','policy-owned')):
+            self.fixture(original)
+            with sqlite3.connect(self.path) as db:
+                db.execute('UPDATE metadata SET value=? WHERE key=?',(json.dumps(changed),'setup_mode'))
+            with self.assertRaises(ValueError):verify(self.path)
+            self.path.unlink()
 
     def test_legacy_missing_or_explicit_referee_mode_keeps_physical_armies(self):
         for explicit in (False,True):

@@ -1,0 +1,14 @@
+{
+  "prepared_utc": "2026-10-15T22:10:41.701970+00:00",
+  "state": "prepared only; no games started",
+  "plan_sha256": "fb8a12bdc35892ee928338f34a1e80b15315c3e964ad162698b9d1e89fef0a34",
+  "catalog_prefix_sha256": "ea969cf7f42c19d51a96c7d88a563d17d72217d67db1426e624da9cd5074178f",
+  "frozen_policies_sha256": "3e00dcabe51d3c89edd217ff20ab38f4f890779e05e61c14e2e3ad8ec965a09e",
+  "policy_sources": {
+    "teacher-flag-row-control-v1-normal": "1a3ea822e5f8b2c432a8e4317b72d2dbfa301c59549b1e4a221695708347ed9e",
+    "teacher-context-v1-normal": "ae77185d660238c8972fcb094c4c900bdbf62c2df1681a7c584859437309a0c8",
+    "teacher-joint-setup-v1-normal": "d01fbea438282905460966b17119da3e36f52278ef81d754b943c2777d757f59",
+    "student-exact-contact-risk-v1-normal": "2e12a48a079df14e74d39e04a3556f830a161529b0c235586b7eceb53fd31721",
+    "student-guard-v1-normal": "e58aa722d6e49abb88a5eef383a32b2838c709fedf05af4b3f842b32d75db953"
+  }
+}

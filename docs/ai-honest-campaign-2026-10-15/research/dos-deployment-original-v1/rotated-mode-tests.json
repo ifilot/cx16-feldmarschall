@@ -1,0 +1,45 @@
+{
+  "schema": "explicit-rotated-setup-mode-tests-v1",
+  "setup_mode": "policy-owned-rotated-v1",
+  "semantics": "First(ownerRed=o,DOSBlue=b); second(DOSRed=mirror_setup(b),ownerBlue=mirror_setup(o)). Canonical artifact records remaino andb; old modes unchanged.",
+  "suites": {
+    "test_campaign_setup_store.py": {
+      "tests": 8,
+      "seconds": 3.237,
+      "result": "PASS"
+    },
+    "test_campaign_error_sensitivity.py": {
+      "tests": 9,
+      "seconds": 2.053,
+      "result": "PASS"
+    },
+    "test_audit_policy_setups.py": {
+      "tests": 8,
+      "seconds": 3.157,
+      "result": "PASS"
+    },
+    "test_campaign_dos_setup_runtime.py": {
+      "tests": 6,
+      "seconds": 37.194,
+      "result": "PASS"
+    }
+  },
+  "old_real_smokes_after_new_verifier": {
+    "python": {
+      "sha256": "ea5b2afe59aeb1ad0a5c2c301dbbb7650f5b8883b153d8ac9eb6b5de6e4f5b98",
+      "verified_games": 2,
+      "old_setup_mode": "policy-owned",
+      "own_setup_audit": true,
+      "original_setup_audit": true,
+      "unchanged_file": true
+    },
+    "openmp": {
+      "sha256": "33ac0a130bcf2f27deba8f3c29a417d219f43d2d85809df9bb38996e9801c012",
+      "verified_games": 2,
+      "old_setup_mode": "policy-owned",
+      "own_setup_audit": true,
+      "original_setup_audit": true,
+      "unchanged_file": true
+    }
+  }
+}

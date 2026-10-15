@@ -54,7 +54,7 @@ def audit(path, repeats=2, timeout=15):
     summary = verify(path)
     with Tournament(path) as tournament:
         metadata = tournament.metadata()
-        if metadata.get('setup_mode') != 'policy-owned':
+        if metadata.get('setup_mode') not in ('policy-owned','policy-owned-rotated-v1'):
             raise ValueError('Expected policy-owned setup mode')
         if metadata['status'] != 'complete':
             raise ValueError('Setup audit requires a complete tournament')
@@ -128,7 +128,7 @@ def audit(path, repeats=2, timeout=15):
                              streams=streams))
     return dict(passed=True, kind='frozen-policy-owned-setup-replay-audit',
                 tournament=str(path), tournament_sha256=sha(path.read_bytes()),
-                owner=owner, records=len(rows), expected_records=metadata['planned_games']//2,
+                owner=owner, setup_mode=metadata['setup_mode'], records=len(rows), expected_records=metadata['planned_games']//2,
                 records_audited=rows, repetitions=repeats, verified_games=summary['games'],
                 policy_source_sha256=source_hash, runtime_sha256=participant['runtime_sha256'],
                 setup_source_sha256=source_records, setup_records_sha256=document_hash,

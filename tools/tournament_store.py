@@ -14,6 +14,13 @@ from feldmarschall import BLUE, FLAG, GLYPHS, RED, Position, square_name, valid_
 SCHEMA = 2
 
 
+def mirror_setup(setup):
+    """Reflect columns within each front-first row; an involution on armies."""
+    if not isinstance(setup,str) or not valid_setup(setup):
+        raise ValueError('valid Classic army required for row reflection')
+    return ''.join(setup[index:index+10][::-1] for index in range(0,40,10))
+
+
 class Tournament:
     def __init__(self, path, create=False, metadata=None):
         self.path = Path(path)
@@ -186,11 +193,11 @@ def verify(path):
             if key in metadata and metadata[key] not in artifacts:
                 raise ValueError('Missing native worker executable or source archive')
         setup_mode = metadata.get('setup_mode', 'referee')
-        if setup_mode not in ('referee', 'policy-owned'):
+        if setup_mode not in ('referee', 'policy-owned', 'policy-owned-rotated-v1'):
             raise ValueError('Unknown tournament setup mode')
         setup_records = {}
         setup_owner = None
-        if setup_mode == 'policy-owned':
+        if setup_mode in ('policy-owned', 'policy-owned-rotated-v1'):
             setup_owner = metadata.get('setup_owner')
             if (setup_owner not in identities or len(identities) != 2 or
                     setup_owner != metadata['participants'][0]['policy']['id']):
@@ -248,13 +255,16 @@ def verify(path):
                 raise ValueError('Unknown game participant')
             if game['plies'] > metadata['max_plies'] or (game['reason'] == 'ply limit' and game['plies'] != metadata['max_plies']):
                 raise ValueError('Incorrect move limit')
-            if setup_mode == 'policy-owned':
+            if setup_mode in ('policy-owned', 'policy-owned-rotated-v1'):
                 record = setup_records.get(game['pair_id'])
                 if record is None or game['family'] != record['family'] or game['seed'] != record['move_seed']:
                     raise ValueError('Game does not match policy-owned setup record')
                 owned = game['red_setup'] if game['red'] == setup_owner else game['blue_setup']
                 opponent = game['blue_setup'] if game['red'] == setup_owner else game['red_setup']
-                if owned != record['owner_setup'] or opponent != record['opponent_setup']:
+                expected_owned, expected_opponent = record['owner_setup'], record['opponent_setup']
+                if setup_mode == 'policy-owned-rotated-v1' and game['blue'] == setup_owner:
+                    expected_owned, expected_opponent = mirror_setup(expected_owned), mirror_setup(expected_opponent)
+                if owned != expected_owned or opponent != expected_opponent:
                     raise ValueError('Game army does not match policy-owned setup artifact')
             pairs.setdefault(game['pair_id'], []).append(game)
         for pair in pairs.values():
@@ -267,7 +277,10 @@ def verify(path):
                     any(a[key] != b[key] for key in ('family', 'seed')) or
                     (setup_mode == 'referee' and any(a[key] != b[key] for key in ('red_setup', 'blue_setup'))) or
                     (setup_mode == 'policy-owned' and
-                     (a['red_setup'] != b['blue_setup'] or a['blue_setup'] != b['red_setup']))):
+                     (a['red_setup'] != b['blue_setup'] or a['blue_setup'] != b['red_setup'])) or
+                    (setup_mode == 'policy-owned-rotated-v1' and
+                     (a['red_setup'] != mirror_setup(b['blue_setup']) or
+                      a['blue_setup'] != mirror_setup(b['red_setup'])))):
                 raise ValueError('Mismatched paired round')
         if metadata['status'] == 'complete' and len(tournament.games()) != metadata['planned_games']:
             raise ValueError('Incomplete tournament')

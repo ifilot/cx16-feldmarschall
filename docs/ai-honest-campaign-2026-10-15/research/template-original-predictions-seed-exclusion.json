@@ -1,0 +1,13 @@
+{
+  "kind": "research-private-seed-isolation-audit",
+  "passed": true,
+  "research_armies": 256,
+  "source_sha256": "637308e3b016ba85b9d7c397c97a4deff10422d336b4b1957b26483adadd3af4",
+  "saved_tournaments": 129,
+  "saved_game_seed_count": 6299,
+  "saved_deployment_seed_count": 418,
+  "metadata_seed_count": 40,
+  "setup_artifacts_checked": 6,
+  "overlap_count": 0,
+  "script_sha256": "d7b691020859a32f1e8de4008fba17b45a48c8124bbd4ed27d65b9782bba85f7"
+}

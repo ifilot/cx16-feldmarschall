@@ -8,7 +8,7 @@ import unittest
 
 from campaign_error_sensitivity import compare
 from feldmarschall import random_setup
-from tournament_store import Tournament
+from tournament_store import Tournament, mirror_setup
 
 
 class ErrorSensitivity(unittest.TestCase):
@@ -33,7 +33,8 @@ class ErrorSensitivity(unittest.TestCase):
                 elif score == 1: result = side
                 else: result = 'blue' if side == 'red' else 'red'
                 setups = (own or self.own, self.enemy)
-                if mode == 'policy-owned' and side == 'blue': setups = tuple(reversed(setups))
+                if mode in ('policy-owned','policy-owned-rotated-v1') and side == 'blue': setups = tuple(reversed(setups))
+                if mode == 'policy-owned-rotated-v1' and side == 'blue': setups=tuple(map(mirror_setup,setups))
                 game = dict(red=names[0], blue=names[1], seed=100+index//2, result=result,
                             reason='fixture', plies=0, moves=[])
                 store.add_game(game, index//2+1, 'one' if index < 2 else 'two', setups)
@@ -92,6 +93,17 @@ class ErrorSensitivity(unittest.TestCase):
             db.execute('UPDATE games SET blue_setup=? WHERE red=?',(self.alternative,'b'))
             db.execute('UPDATE games SET red_setup=? WHERE blue=?',(self.alternative,'b'))
         with self.assertRaises(ValueError): compare(a,'a',b,'b')
+
+    def test_rotated_comparison_permits_own_treatment_and_matches_dos_per_orientation(self):
+        mode='policy-owned-rotated-v1'
+        a=self.fixture('a',[None,1],mode=mode)
+        b=self.fixture('b',[0,None],mode=mode,own=self.alternative)
+        result=compare(a,'a',b,'b')
+        self.assertEqual(result['summary']['paired_cohort_effect_bounds'],[0,1])
+        with sqlite3.connect(b) as db:
+            # Both strings are valid armies, but raw unreflected red DOS is wrong.
+            db.execute('UPDATE games SET red_setup=? WHERE blue=?',(self.enemy,'b'))
+        with self.assertRaises(ValueError):compare(a,'a',b,'b')
 
     def test_incomplete_planned_pairs_are_not_silently_dropped_and_files_read_only(self):
         a = self.fixture('a', [1,0]); b = self.fixture('b', [1,0])

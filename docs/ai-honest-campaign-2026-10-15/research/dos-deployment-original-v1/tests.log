@@ -1,0 +1,12 @@
+test_all_eight_fixed_original_tables_have_complete_adjacent_bomb_screens (test_campaign_dos_deployment.OriginalDeployment.test_all_eight_fixed_original_tables_have_complete_adjacent_bomb_screens) ... ok
+test_changed_original_assets_rejected_before_execution_and_files_unchanged (test_campaign_dos_deployment.OriginalDeployment.test_changed_original_assets_rejected_before_execution_and_files_unchanged) ... ok
+test_colonel_table_branch_matches_exact_table_mirror_and_three_rng_draws (test_campaign_dos_deployment.OriginalDeployment.test_colonel_table_branch_matches_exact_table_mirror_and_three_rng_draws) ... ok
+test_entire_captured_real_startup_dgroup_matches_original_return (test_campaign_dos_deployment.OriginalDeployment.test_entire_captured_real_startup_dgroup_matches_original_return) ... ok
+test_frozen_asset_archive_is_portable_and_identical_without_split_paths (test_campaign_dos_deployment.OriginalDeployment.test_frozen_asset_archive_is_portable_and_identical_without_split_paths) ... ok
+test_only_own_private_rng_and_difficulty_are_inputs_and_calls_are_deterministic (test_campaign_dos_deployment.OriginalDeployment.test_only_own_private_rng_and_difficulty_are_inputs_and_calls_are_deterministic) ... ok
+test_procedural_and_template_paths_all_difficulties_return_legal_inventory (test_campaign_dos_deployment.OriginalDeployment.test_procedural_and_template_paths_all_difficulties_return_legal_inventory) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 15.520s
+
+OK
