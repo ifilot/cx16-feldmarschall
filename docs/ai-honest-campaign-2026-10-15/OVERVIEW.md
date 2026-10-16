@@ -366,6 +366,21 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-backrow-only-v1-normal minus student-validated-deployment-v1-normal: +11.2 percentage points; 95% paired interval [+7.4, +15.1].
 
 
+**Cycle 32 hypotheses:** A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16.
+
+Evidence: [cycle-32-compact-backrow-honest-generality](cycle-32-compact-backrow-honest-generality/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Both treatments use the same forced army population; compare their matched effects against this reference.
+
+- student-validated-deployment-v1-normal: 275 wins / 10 draws / 275 losses; score 50.0%; 0 unscored errors.
+- student-backrow-only-v1-normal: 239 wins / 12 draws / 309 losses; score 43.8%; 0 unscored errors.
+- student-compact-backrow-v1-normal: 238 wins / 6 draws / 316 losses; score 43.0%; 0 unscored errors.
+
+- student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: -7.0 percentage points; 95% paired interval [-10.6, -3.4].
+- student-compact-backrow-v1-normal minus student-backrow-only-v1-normal: -0.7 percentage points; 95% paired interval [-2.6, +1.2].
+- student-backrow-only-v1-normal minus student-validated-deployment-v1-normal: -6.2 percentage points; 95% paired interval [-9.9, -2.7].
+
+
 **Cycle 36 hypotheses:** Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction.
 
 Evidence: [cycle-36-home-interception-v2-honest-generality](cycle-36-home-interception-v2-honest-generality/result.json).
@@ -471,7 +486,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned comparison attempts; registered; no completed strength result. [Plan](cycle-20-own-objective-beliefs/plan.json).
 - Cycle 30: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 2,240 planned comparison attempts; registered; no completed strength result. [Plan](cycle-30-procedural-background-honest-generality/plan.json).
-- Cycle 32: A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16. 1,680 planned comparison attempts; registered; no completed strength result. [Plan](cycle-32-compact-backrow-honest-generality/plan.json).
 - Cycle 35: Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-35-home-interception-v2-dos-screen/plan.json).
 - Cycle 37: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-37-template-mobile-capture-dos-screen/plan.json).
 - Cycle 39: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 3,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-39-quiet-contact-dos-screen/plan.json).
