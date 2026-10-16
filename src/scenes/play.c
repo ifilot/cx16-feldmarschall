@@ -716,6 +716,7 @@ static void result_restore(void) {
 
 /* A black result screen, with native-resolution artwork and live controls. */
 static void result_open(void) {
+    entries = over_entries;
     result_shown = 1;
     plate_count = 3;
     pause_choice = 0;

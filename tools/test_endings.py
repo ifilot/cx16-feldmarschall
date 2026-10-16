@@ -14,8 +14,8 @@ from PIL import Image
 
 from distribute import runtime_files
 from test_colors import ROOT, start, choose, click, read_vram
-from test_flow import text, board
-from test_variants import drag
+from test_flow import text, board, symbol
+from test_variants import drag, position, write
 
 # Reason text is dynamic on layer 1; artwork and the large title are layer 0.
 REASON = 42
@@ -43,6 +43,17 @@ def result(session, title, reason, key):
         expected = (ROOT / 'src' / resource).read_bytes()
         assert read_vram(session, address, len(expected)) == expected, resource
     assert read_vram(session, 0x1FA00, 2) == bytes(2), 'backdrop must be pure black'
+    # Hover every result action after a pause menu has been used. Only the
+    # result choices may change; stale pause buttons must never reappear.
+    before = read_vram(session, 0xC000, 60*256)
+    for y in (392, 416, 368):
+        session.move_mouse(300, y)
+        session.emu.advance(2)
+        after = read_vram(session, 0xC000, 60*256)
+        for row in range(60):
+            if row not in (46, 49, 52):
+                assert before[row*256:(row+1)*256] == after[row*256:(row+1)*256], \
+                    f'scenario {key}: result hover drew stale menu buttons on row {row}'
     session.move_mouse(10, 10)
     session.emu.advance(2)
     shot = ROOT / f'build/test-shots/ending-{key}.png'
@@ -78,6 +89,8 @@ def main():
                 scenario(session, key)
                 if move:
                     assert text(session, 9) == 'YOUR TURN', f'scenario {key} should start with Red'
+                    choose(session, 'Escape')
+                    choose(session, '1')        # Resume before the winning move.
                     drag(session, *move, wait=400)
                 else:
                     session.emu.advance(400)    # Blue thinks, moves and its battle plays out
@@ -106,6 +119,27 @@ def main():
                     assert read_vram(session, 0x8000, 60*256) == field_map
                     assert read_vram(session, 0x1FA00, 512) == palette
                 assert text(session, 11) == 'TEST SCENARIOS'
+
+            # Prove the shipped banked AI can choose and execute a seven-square
+            # Scout attack, including its animation and flag-capture result.
+            for level in range(3):
+                reset = symbol('ai_reset')
+                session.emu.request('breakpoint', address=reset)
+                scenario(session, '5')  # Blue moves first; stop before AI reset.
+                position(session, {0: 255, 9: 0x1B, 10: 0x18, 80: 0x2B, 95: 0, 99: 255})
+                lost = bytearray([1, 1, 2, 3, 4, 4, 4, 5, 8, 1, 6, 1] * 2)
+                lost[0] -= 1
+                lost[11] -= 1
+                lost[12 + 8] -= 1
+                lost[12 + 11] -= 1
+                write(session, 'rules_lost', lost)
+                write(session, 'rules_known_lost', lost)
+                write(session, 'ai_difficulty', [level])
+                session.emu.request('breakpoint', action='remove', address=reset)
+                session.emu.advance(600)
+                assert board(session)[10] == 255 and board(session)[80] & 31 == 0x18
+                result(session, 'DEFEAT', 'OPPONENT CAPTURED YOUR FLAG', f'scout-{level}')
+                choose(session, 'Escape')
 
             # Rescue: Red's major reaches Blue's back row.
             scenario(session, '6')

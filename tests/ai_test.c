@@ -24,6 +24,31 @@ static void decide(uint16_t seed) {
     ai_move(0, lost, &from, &to);
 }
 
+static void scout_long_range(void) {
+    static const uint8_t sources[] = {80, 10, 81, 88};
+    static const uint8_t destinations[] = {10, 80, 88, 81};
+    uint8_t side, direction, i, n, targets[MAX_TARGETS], reachable;
+    uint16_t seed;
+    for(side=0; side<2; side++) for(direction=0; direction<4; direction++) {
+        fresh();
+        board[sources[direction]] = PIECE_SCOUT | (side ? CELL_BLUE : 0);
+        board[99] = PIECE_FLAG | (side ? CELL_BLUE : 0);
+        board[destinations[direction]] = PIECE_FLAG | CELL_REVEALED | (side ? 0 : CELL_BLUE);
+        board[9] = PIECE_SPY | CELL_REVEALED | (side ? 0 : CELL_BLUE);
+        lost[PIECE_FLAG]--; lost[PIECE_SPY]--;
+        n = rules_targets(sources[direction], targets);
+        reachable = 0;
+        for(i=0; i<n; i++) if(targets[i] == destinations[direction]) reachable = 1;
+        CHECK(reachable, "scout can attack a distant enemy along a clear row or column");
+        for(seed=1; seed<=32; seed++) {
+            ai_reset(); random_seed(seed);
+            ai_move(side ? CELL_BLUE : 0, lost, &from, &to);
+            CHECK(from == sources[direction] && to == destinations[direction],
+                  "scout chooses a long-range flag capture on either army and every difficulty");
+        }
+    }
+}
+
 static void tactical(void) {
     uint16_t seed;
     for(seed=1; seed<=32; seed++) {
@@ -588,6 +613,7 @@ int main(void) {
     uint8_t level;
     for(level=0; level<AI_LEVELS; level++) {
         ai_difficulty = level;
+        scout_long_range();
         tactical();
         variants();
     }
