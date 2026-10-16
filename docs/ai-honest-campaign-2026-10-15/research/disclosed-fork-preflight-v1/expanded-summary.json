@@ -1,0 +1,19 @@
+{
+  "evaluated_actions": 656,
+  "per_action_mean_nodes": 7716.16006097561,
+  "per_action_max_nodes": 18906,
+  "combined_root_mean_nodes": 15109.853731343284,
+  "combined_root_max_nodes": 37812,
+  "combined_root_median_ms": 517.2787999981665,
+  "combined_root_mean_ms": 644.1205747103243,
+  "combined_root_max_ms": 2484.5676780023496,
+  "new_opportunity_minimum_bounds": [
+    10,
+    15,
+    20,
+    25,
+    40,
+    60
+  ],
+  "elapsed_seconds": 217.39640578999388
+}

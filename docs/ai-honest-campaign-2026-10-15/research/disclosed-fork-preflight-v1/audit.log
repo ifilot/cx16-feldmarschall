@@ -1,0 +1,24 @@
+{
+  "kind": "disclosed-fork-public-geometric-upper-bound",
+  "strength_evidence": false,
+  "forcing_certificate": false,
+  "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-template-flag-bomb-v1-normal.fmtour",
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "counts": {
+    "roots": 85971,
+    "quiet_moves": 2140711,
+    "geometry_roots": 340,
+    "geometry_moves": 342,
+    "eligible_roots": 335,
+    "eligible_moves": 336,
+    "selected_eligible_roots": 124,
+    "games": 400,
+    "eligible_games": 72
+  },
+  "eligible_orientations": {
+    "0": 256,
+    "1": 79
+  },
+  "private_nibble_invariance_roots": 20,
+  "elapsed_seconds": 19.769181051997293
+}

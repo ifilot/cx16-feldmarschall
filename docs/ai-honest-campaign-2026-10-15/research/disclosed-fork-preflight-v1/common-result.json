@@ -1,0 +1,4416 @@
+{
+  "kind": "fixed20-common-public-response-control",
+  "strength_evidence": false,
+  "counts": {
+    "candidates": 20,
+    "fork_certified": 4,
+    "native_certified": 3,
+    "new_certified_opportunities": 1,
+    "inconclusive_evaluations": 0
+  },
+  "new_opportunity_games": 1,
+  "sources": {
+    "docs/ai-honest-campaign-2026-10-15/research/disclosed-fork-preflight-v1/audit_common.py": "534ab281707d8c9319fe22babc8603263c7c5fc3417793286877fc548f27708e",
+    "docs/ai-honest-campaign-2026-10-15/research/disclosed-fork-preflight-v1/certificate_common.py": "6739a67c48bb93f3568015011f0de3148edcb2a1ea14b583993c38e931a59a48",
+    "docs/ai-honest-campaign-2026-10-15/research/disclosed-fork-preflight-v1/certificate.py": "da0c6b8048ac9900b87612426e8640ff5a5223e638b885d0c64f7dcc5d4ce00e",
+    "docs/ai-honest-campaign-2026-10-15/research/disclosed-fork-preflight-v1/CONTROL-PROTOCOL.json": "8f96f9cb1ebe748071f9efa3c16460a42e4be9489bf9fdd419bd602fb0a3b094",
+    "docs/ai-honest-campaign-2026-10-15/research/disclosed-fork-preflight-v1/certificate-result.json": "9942e4845eeff8efc2559eb5fa244b489728d24c8dfaca42a92eb0f14dffca8c"
+  },
+  "results": [
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 114,
+      "fork": [
+        64,
+        65
+      ],
+      "native": [
+        76,
+        77
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              13,
+              3
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                65,
+                55
+              ],
+              "minimum_net_material": 0,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  3,
+                  2
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                65,
+                66
+              ],
+              "minimum_net_material": -155,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  3,
+                  2
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 1834,
+          "first_public_outcomes": 69
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              5,
+              15
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [],
+          "enemy_nodes": 67,
+          "first_public_outcomes": 67
+        }
+      },
+      "timing_ms": {
+        "fork": 113.97326000587782,
+        "native": 2.75770799635211
+      }
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 37,
+      "fork": [
+        45,
+        55
+      ],
+      "native": [
+        45,
+        55
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              54,
+              44
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                55,
+                65
+              ],
+              "minimum_net_material": -200,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  66,
+                  65
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 510,
+          "first_public_outcomes": 38
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              54,
+              44
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                55,
+                65
+              ],
+              "minimum_net_material": -200,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  66,
+                  65
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 510,
+          "first_public_outcomes": 38
+        }
+      },
+      "timing_ms": {
+        "fork": 65.74398000520887,
+        "native": 55.65987499721814
+      }
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 113,
+      "fork": [
+        38,
+        48
+      ],
+      "native": [
+        51,
+        61
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              39
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -190,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  68,
+                  58
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 118,
+          "first_public_outcomes": 56
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              59
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [],
+          "enemy_nodes": 113,
+          "first_public_outcomes": 56
+        }
+      },
+      "timing_ms": {
+        "fork": 6.710949994158,
+        "native": 4.526115000771824
+      }
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 115,
+      "fork": [
+        38,
+        48
+      ],
+      "native": [
+        61,
+        71
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              39
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -190,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  68,
+                  58
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 136,
+          "first_public_outcomes": 65
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              59
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [],
+          "enemy_nodes": 119,
+          "first_public_outcomes": 59
+        }
+      },
+      "timing_ms": {
+        "fork": 7.620707001478877,
+        "native": 5.142730995430611
+      }
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 117,
+      "fork": [
+        38,
+        48
+      ],
+      "native": [
+        71,
+        81
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              39
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -190,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  68,
+                  58
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 124,
+          "first_public_outcomes": 59
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              59
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [],
+          "enemy_nodes": 145,
+          "first_public_outcomes": 72
+        }
+      },
+      "timing_ms": {
+        "fork": 5.7784079981502146,
+        "native": 6.2999790025060065
+      }
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 119,
+      "fork": [
+        38,
+        48
+      ],
+      "native": [
+        22,
+        32
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              39
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -20,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  39,
+                  29
+                ],
+                "rank": 2,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 115,
+          "first_public_outcomes": 55
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              59
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [],
+          "enemy_nodes": 113,
+          "first_public_outcomes": 56
+        }
+      },
+      "timing_ms": {
+        "fork": 4.684034000092652,
+        "native": 4.538339002465364
+      }
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 121,
+      "fork": [
+        38,
+        48
+      ],
+      "native": [
+        34,
+        44
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              39
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -20,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  39,
+                  29
+                ],
+                "rank": 2,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 117,
+          "first_public_outcomes": 56
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              59
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [],
+          "enemy_nodes": 115,
+          "first_public_outcomes": 57
+        }
+      },
+      "timing_ms": {
+        "fork": 4.001534005510621,
+        "native": 5.012330999306869
+      }
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 123,
+      "fork": [
+        38,
+        48
+      ],
+      "native": [
+        38,
+        48
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              39
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -20,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  39,
+                  29
+                ],
+                "rank": 2,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 121,
+          "first_public_outcomes": 58
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              49,
+              39
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -20,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  39,
+                  29
+                ],
+                "rank": 2,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 121,
+          "first_public_outcomes": 58
+        }
+      },
+      "timing_ms": {
+        "fork": 4.726934006612282,
+        "native": 8.37963500089245
+      }
+    },
+    {
+      "game": 5,
+      "army": 0,
+      "ply": 10,
+      "fork": [
+        64,
+        54
+      ],
+      "native": [
+        61,
+        51
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              38,
+              48
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                54,
+                44
+              ],
+              "minimum_net_material": -60,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  48,
+                  58
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                54,
+                55
+              ],
+              "minimum_net_material": -45,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  48,
+                  58
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 1250,
+          "first_public_outcomes": 29
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              20,
+              30
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [],
+          "enemy_nodes": 28,
+          "first_public_outcomes": 28
+        }
+      },
+      "timing_ms": {
+        "fork": 307.45410599774914,
+        "native": 4.2713920047390275
+      }
+    },
+    {
+      "game": 16,
+      "army": 1,
+      "ply": 227,
+      "fork": [
+        65,
+        66
+      ],
+      "native": [
+        65,
+        66
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              58,
+              48
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                66,
+                67
+              ],
+              "minimum_net_material": -70,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  77,
+                  67
+                ],
+                "rank": 1,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                66,
+                76
+              ],
+              "minimum_net_material": -55,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  77,
+                  76
+                ],
+                "rank": 1,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 236,
+          "first_public_outcomes": 66
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              58,
+              48
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                66,
+                67
+              ],
+              "minimum_net_material": -70,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  77,
+                  67
+                ],
+                "rank": 1,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                66,
+                76
+              ],
+              "minimum_net_material": -55,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  77,
+                  76
+                ],
+                "rank": 1,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 236,
+          "first_public_outcomes": 66
+        }
+      },
+      "timing_ms": {
+        "fork": 12.38611099688569,
+        "native": 14.479488003416918
+      }
+    },
+    {
+      "game": 35,
+      "army": 0,
+      "ply": 220,
+      "fork": [
+        25,
+        35
+      ],
+      "native": [
+        25,
+        24
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": true,
+      "reports": {
+        "fork": {
+          "certified": true,
+          "minimum_net_material": 15,
+          "terminal_win": false,
+          "first_public_outcomes": 25,
+          "enemy_nodes": 1003,
+          "responses": [
+            {
+              "enemy": {
+                "move": [
+                  11,
+                  12
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 30,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  16,
+                  6
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  16,
+                  17
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  16,
+                  26
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  16,
+                  15
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  27,
+                  17
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  27,
+                  37
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  27,
+                  26
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  33,
+                  23
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  33,
+                  32
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  34,
+                  24
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                36
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  34,
+                  35
+                ],
+                "rank": 3,
+                "quiet": false
+              },
+              "response": [
+                35,
+                36
+              ],
+              "minimum_net_material": 90,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  34,
+                  44
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                36
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  36,
+                  26
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  36,
+                  37
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  36,
+                  35
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 90,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  38,
+                  39
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  38,
+                  48
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  38,
+                  37
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  41,
+                  31
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 35,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  41,
+                  51
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 75,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  41,
+                  40
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 35,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  92,
+                  82
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 60,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  92,
+                  93
+                ],
+                "rank": 1,
+                "quiet": false
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 275,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  92,
+                  91
+                ],
+                "rank": 1,
+                "quiet": false
+              },
+              "response": [
+                35,
+                34
+              ],
+              "minimum_net_material": 275,
+              "terminal_win": false
+            }
+          ]
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              34,
+              24
+            ],
+            "rank": 3,
+            "quiet": false
+          },
+          "responses": [],
+          "enemy_nodes": 253,
+          "first_public_outcomes": 25
+        }
+      },
+      "timing_ms": {
+        "fork": 90.54673500213539,
+        "native": 12.785496001015417
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 193,
+      "fork": [
+        62,
+        61
+      ],
+      "native": [
+        62,
+        61
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              38,
+              28
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                14,
+                15
+              ],
+              "minimum_net_material": -355,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  28,
+                  27
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                40,
+                50
+              ],
+              "minimum_net_material": -390,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  28,
+                  27
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                61,
+                51
+              ],
+              "minimum_net_material": -355,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  28,
+                  27
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                61,
+                60
+              ],
+              "minimum_net_material": -390,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  28,
+                  27
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 936,
+          "first_public_outcomes": 35
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              38,
+              28
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                14,
+                15
+              ],
+              "minimum_net_material": -355,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  28,
+                  27
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                40,
+                50
+              ],
+              "minimum_net_material": -390,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  28,
+                  27
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                61,
+                51
+              ],
+              "minimum_net_material": -355,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  28,
+                  27
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                61,
+                60
+              ],
+              "minimum_net_material": -390,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  28,
+                  27
+                ],
+                "rank": 9,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 936,
+          "first_public_outcomes": 35
+        }
+      },
+      "timing_ms": {
+        "fork": 50.49387500184821,
+        "native": 50.49180400237674
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 263,
+      "fork": [
+        38,
+        48
+      ],
+      "native": [
+        38,
+        48
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": true,
+          "minimum_net_material": 10,
+          "terminal_win": false,
+          "first_public_outcomes": 21,
+          "enemy_nodes": 482,
+          "responses": [
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  39
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                29,
+                39
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  59
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 10,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  48
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  48
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  59
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  68
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  78
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  70,
+                  60
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  61
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  72
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  90
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  77
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  79
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  95
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  98,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            }
+          ]
+        },
+        "native": {
+          "certified": true,
+          "minimum_net_material": 10,
+          "terminal_win": false,
+          "first_public_outcomes": 21,
+          "enemy_nodes": 482,
+          "responses": [
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  39
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                29,
+                39
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  59
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 10,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  48
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  48
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  59
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  68
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  78
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  70,
+                  60
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  61
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  72
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  90
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  77
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  79
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  95
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  98,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            }
+          ]
+        }
+      },
+      "timing_ms": {
+        "fork": 30.086717997619417,
+        "native": 26.522072999796364
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 269,
+      "fork": [
+        69,
+        59
+      ],
+      "native": [
+        29,
+        39
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              60,
+              50
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": -30,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  50,
+                  40
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -35,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  50,
+                  40
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                59,
+                49
+              ],
+              "minimum_net_material": -30,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  50,
+                  40
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                59,
+                58
+              ],
+              "minimum_net_material": -35,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  50,
+                  40
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 495,
+          "first_public_outcomes": 26
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              60,
+              50
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": -30,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  50,
+                  40
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                48,
+                49
+              ],
+              "minimum_net_material": -30,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  50,
+                  40
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": -35,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  50,
+                  40
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 465,
+          "first_public_outcomes": 26
+        }
+      },
+      "timing_ms": {
+        "fork": 30.545020999852568,
+        "native": 19.110070999886375
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 271,
+      "fork": [
+        69,
+        59
+      ],
+      "native": [
+        23,
+        33
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": true,
+          "minimum_net_material": 15,
+          "terminal_win": false,
+          "first_public_outcomes": 25,
+          "enemy_nodes": 1564,
+          "responses": [
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  39
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  59
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  48
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  48
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  59
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  68
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  78
+                ],
+                "rank": 8,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  88
+                ],
+                "rank": 8,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  61,
+                  51
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  61,
+                  62
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  61,
+                  60
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  72
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  70
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  70
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  90
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  77
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  79
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  95
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  98,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            }
+          ]
+        },
+        "native": {
+          "certified": true,
+          "minimum_net_material": 15,
+          "terminal_win": false,
+          "first_public_outcomes": 25,
+          "enemy_nodes": 1069,
+          "responses": [
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  39
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  59
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                69,
+                59
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  48
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  48
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  59
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  68
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  78
+                ],
+                "rank": 8,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  88
+                ],
+                "rank": 8,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  61,
+                  51
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  61,
+                  62
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  61,
+                  60
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  72
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  70
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  70
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  90
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  77
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  79
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  95
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  98,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            }
+          ]
+        }
+      },
+      "timing_ms": {
+        "fork": 85.62674599670572,
+        "native": 36.85594200214837
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 273,
+      "fork": [
+        69,
+        59
+      ],
+      "native": [
+        69,
+        79
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": true,
+          "minimum_net_material": 15,
+          "terminal_win": false,
+          "first_public_outcomes": 26,
+          "enemy_nodes": 1598,
+          "responses": [
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  39
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  59
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  48
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  48
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  59
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  68
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  78
+                ],
+                "rank": 8,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  88
+                ],
+                "rank": 8,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  62,
+                  63
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  62,
+                  72
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  62,
+                  61
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  61
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  72
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  70
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  70
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  90
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  77
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  79
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  95
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  98,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            }
+          ]
+        },
+        "native": {
+          "certified": true,
+          "minimum_net_material": 10,
+          "terminal_win": false,
+          "first_public_outcomes": 26,
+          "enemy_nodes": 1044,
+          "responses": [
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  39
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  59
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 10,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  49,
+                  48
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                48,
+                58
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  48
+                ],
+                "rank": 8,
+                "quiet": false
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 25,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  59
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  68
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  78
+                ],
+                "rank": 8,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  58,
+                  88
+                ],
+                "rank": 8,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  62,
+                  63
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  62,
+                  72
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  62,
+                  61
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  61
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  72
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  71,
+                  70
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  70
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  81
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  80,
+                  90
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  77
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  87,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  79
+                ],
+                "rank": 6,
+                "quiet": false
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 30,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  89,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  86
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  96,
+                  95
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            },
+            {
+              "enemy": {
+                "move": [
+                  98,
+                  88
+                ],
+                "rank": null,
+                "quiet": true
+              },
+              "response": [
+                39,
+                49
+              ],
+              "minimum_net_material": 15,
+              "terminal_win": false
+            }
+          ]
+        }
+      },
+      "timing_ms": {
+        "fork": 76.84568600234343,
+        "native": 44.51402499398682
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 311,
+      "fork": [
+        48,
+        58
+      ],
+      "native": [
+        76,
+        86
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              67,
+              77
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                49,
+                59
+              ],
+              "minimum_net_material": -60,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  77,
+                  76
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                58,
+                59
+              ],
+              "minimum_net_material": -60,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  77,
+                  76
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                58,
+                68
+              ],
+              "minimum_net_material": -65,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  77,
+                  76
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 164,
+          "first_public_outcomes": 24
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              59,
+              49
+            ],
+            "rank": 6,
+            "quiet": false
+          },
+          "responses": [],
+          "enemy_nodes": 25,
+          "first_public_outcomes": 25
+        }
+      },
+      "timing_ms": {
+        "fork": 3.3720360006554984,
+        "native": 0.21275200560921803
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 313,
+      "fork": [
+        48,
+        58
+      ],
+      "native": [
+        86,
+        85
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              66,
+              76
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                49,
+                59
+              ],
+              "minimum_net_material": -60,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  76,
+                  86
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                58,
+                59
+              ],
+              "minimum_net_material": -60,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  76,
+                  86
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                58,
+                68
+              ],
+              "minimum_net_material": -65,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  76,
+                  86
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 240,
+          "first_public_outcomes": 26
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              59,
+              49
+            ],
+            "rank": 6,
+            "quiet": false
+          },
+          "responses": [],
+          "enemy_nodes": 27,
+          "first_public_outcomes": 27
+        }
+      },
+      "timing_ms": {
+        "fork": 9.741721994942054,
+        "native": 0.3025370024261065
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 315,
+      "fork": [
+        48,
+        58
+      ],
+      "native": [
+        41,
+        51
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              71,
+              61
+            ],
+            "rank": null,
+            "quiet": true
+          },
+          "responses": [
+            {
+              "response": [
+                49,
+                59
+              ],
+              "minimum_net_material": -25,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  61,
+                  60
+                ],
+                "rank": 6,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                58,
+                59
+              ],
+              "minimum_net_material": -25,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  61,
+                  60
+                ],
+                "rank": 6,
+                "quiet": false
+              }
+            },
+            {
+              "response": [
+                58,
+                68
+              ],
+              "minimum_net_material": -30,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  61,
+                  60
+                ],
+                "rank": 6,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 840,
+          "first_public_outcomes": 34
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              59,
+              49
+            ],
+            "rank": 6,
+            "quiet": false
+          },
+          "responses": [],
+          "enemy_nodes": 35,
+          "first_public_outcomes": 35
+        }
+      },
+      "timing_ms": {
+        "fork": 38.19060800014995,
+        "native": 4.510629005380906
+      }
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 317,
+      "fork": [
+        48,
+        58
+      ],
+      "native": [
+        85,
+        75
+      ],
+      "root_flag_win": false,
+      "root_flag_threat": false,
+      "new_opportunity": false,
+      "reports": {
+        "fork": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              59,
+              49
+            ],
+            "rank": 6,
+            "quiet": false
+          },
+          "responses": [
+            {
+              "response": [
+                58,
+                68
+              ],
+              "minimum_net_material": -50,
+              "terminal_refutation": false,
+              "enemy_response": {
+                "move": [
+                  86,
+                  85
+                ],
+                "rank": 0,
+                "quiet": false
+              }
+            }
+          ],
+          "enemy_nodes": 45,
+          "first_public_outcomes": 30
+        },
+        "native": {
+          "certified": false,
+          "reason": "no-positive-bounded-conversion",
+          "counterexample": {
+            "move": [
+              59,
+              49
+            ],
+            "rank": 6,
+            "quiet": false
+          },
+          "responses": [],
+          "enemy_nodes": 31,
+          "first_public_outcomes": 31
+        }
+      },
+      "timing_ms": {
+        "fork": 0.47600700054317713,
+        "native": 0.18767500296235085
+      }
+    }
+  ]
+}

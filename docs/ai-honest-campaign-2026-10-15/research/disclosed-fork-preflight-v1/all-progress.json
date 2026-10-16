@@ -1,0 +1,20 @@
+{
+  "completed_roots": 320,
+  "elapsed_seconds": 214.01311983900086,
+  "counts": {
+    "roots": 320,
+    "native_quiet_roots": 307,
+    "native_capture_preserved_roots": 13,
+    "native_positive_roots": 90,
+    "native_inconclusive_roots": 0,
+    "root_flagwin_filtered": 0,
+    "root_flagthreat_filtered": 0,
+    "first20_exact_parity": 20,
+    "candidate_moves": 321,
+    "fork_positive_candidates": 193,
+    "fork_inconclusive_candidates": 0,
+    "new_opportunity_candidates": 98,
+    "new_opportunity_roots": 97,
+    "new_opportunity_roots_within_proposed_global_budget": 97
+  }
+}

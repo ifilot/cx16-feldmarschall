@@ -1,0 +1,9773 @@
+{
+  "kind": "disclosed-fork-public-geometric-upper-bound",
+  "strength_evidence": false,
+  "forcing_certificate": false,
+  "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-template-flag-bomb-v1-normal.fmtour",
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "counts": {
+    "roots": 85971,
+    "quiet_moves": 2140711,
+    "geometry_roots": 340,
+    "geometry_moves": 342,
+    "eligible_roots": 335,
+    "eligible_moves": 336,
+    "selected_eligible_roots": 124,
+    "games": 400,
+    "eligible_games": 72
+  },
+  "eligible_orientations": {
+    "0": 256,
+    "1": 79
+  },
+  "private_nibble_invariance_roots": 20,
+  "elapsed_seconds": 19.769181051997293,
+  "sources": {
+    "docs/ai-honest-campaign-2026-10-15/research/disclosed-fork-preflight-v1/audit.py": "c9370d7cd4b1952da08af21e0eb2add2476a0b9b7aef174e271a1970332d3dde",
+    "docs/ai-honest-campaign-2026-10-15/research/disclosed-fork-preflight-v1/PROTOCOL.json": "9baeefb637f8098695f9782f9719965bf9b444c4fa908b0aac34eb076a9c20b5",
+    "src/core/ai.c": "2326021b753f8b9edfdc84973b61b5f6af4ba5742c03d92f2764e429cc81689a",
+    "src/core/ai_mission.c": "515955410737ebfc14f68bde573efa9fa5d83e63abca040c7296f1d68db2ddfc",
+    "tools/feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+  },
+  "records": [
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 114,
+      "selected": [
+        76,
+        77
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            64,
+            65
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 55,
+              "rank": 1
+            },
+            {
+              "square": 66,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 37,
+      "selected": [
+        45,
+        55
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            45,
+            55
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 2
+            },
+            {
+              "square": 65,
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 113,
+      "selected": [
+        51,
+        61
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            38,
+            48
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 8
+            },
+            {
+              "square": 49,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 115,
+      "selected": [
+        61,
+        71
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            38,
+            48
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 8
+            },
+            {
+              "square": 49,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 117,
+      "selected": [
+        71,
+        81
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            38,
+            48
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 8
+            },
+            {
+              "square": 49,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 119,
+      "selected": [
+        22,
+        32
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            38,
+            48
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 8
+            },
+            {
+              "square": 49,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 121,
+      "selected": [
+        34,
+        44
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            38,
+            48
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 8
+            },
+            {
+              "square": 49,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 123,
+      "selected": [
+        38,
+        48
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            38,
+            48
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 8
+            },
+            {
+              "square": 49,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 5,
+      "army": 0,
+      "ply": 10,
+      "selected": [
+        61,
+        51
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            64,
+            54
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 6
+            },
+            {
+              "square": 55,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 16,
+      "army": 1,
+      "ply": 227,
+      "selected": [
+        65,
+        66
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            65,
+            66
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 76,
+              "rank": 4
+            },
+            {
+              "square": 67,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 35,
+      "army": 0,
+      "ply": 220,
+      "selected": [
+        25,
+        24
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            25,
+            35
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 3
+            },
+            {
+              "square": 36,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 193,
+      "selected": [
+        62,
+        61
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            62,
+            61
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 51,
+              "rank": 4
+            },
+            {
+              "square": 60,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 263,
+      "selected": [
+        38,
+        48
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            38,
+            48
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 8
+            },
+            {
+              "square": 49,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 269,
+      "selected": [
+        29,
+        39
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            69,
+            59
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 49,
+              "rank": 6
+            },
+            {
+              "square": 58,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 271,
+      "selected": [
+        23,
+        33
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            69,
+            59
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 49,
+              "rank": 6
+            },
+            {
+              "square": 58,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 273,
+      "selected": [
+        69,
+        79
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            69,
+            59
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 49,
+              "rank": 6
+            },
+            {
+              "square": 58,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 311,
+      "selected": [
+        76,
+        86
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            48,
+            58
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 8
+            },
+            {
+              "square": 59,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 313,
+      "selected": [
+        86,
+        85
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            48,
+            58
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 8
+            },
+            {
+              "square": 59,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 315,
+      "selected": [
+        41,
+        51
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            48,
+            58
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 8
+            },
+            {
+              "square": 59,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 317,
+      "selected": [
+        85,
+        75
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            48,
+            58
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 8
+            },
+            {
+              "square": 59,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 319,
+      "selected": [
+        75,
+        76
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            48,
+            58
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 8
+            },
+            {
+              "square": 59,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 327,
+      "selected": [
+        48,
+        58
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            48,
+            58
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 8
+            },
+            {
+              "square": 59,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 47,
+      "army": 0,
+      "ply": 154,
+      "selected": [
+        48,
+        38
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            48,
+            38
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 28,
+              "rank": 4
+            },
+            {
+              "square": 37,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 47,
+      "army": 0,
+      "ply": 178,
+      "selected": [
+        48,
+        38
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            48,
+            38
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 28,
+              "rank": 4
+            },
+            {
+              "square": 37,
+              "rank": 8
+            },
+            {
+              "square": 39,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 47,
+      "army": 0,
+      "ply": 182,
+      "selected": [
+        98,
+        97
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            28,
+            38
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 37,
+              "rank": 8
+            },
+            {
+              "square": 48,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 57,
+      "army": 0,
+      "ply": 354,
+      "selected": [
+        39,
+        29
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            39,
+            38
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 28,
+              "rank": 8
+            },
+            {
+              "square": 37,
+              "rank": 8
+            },
+            {
+              "square": 48,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 59,
+      "army": 0,
+      "ply": 254,
+      "selected": [
+        41,
+        31
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            27,
+            28
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 18,
+              "rank": 8
+            },
+            {
+              "square": 38,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 59,
+      "army": 0,
+      "ply": 256,
+      "selected": [
+        27,
+        28
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            27,
+            28
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 18,
+              "rank": 8
+            },
+            {
+              "square": 38,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 59,
+      "army": 0,
+      "ply": 262,
+      "selected": [
+        32,
+        33
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            27,
+            28
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 18,
+              "rank": 8
+            },
+            {
+              "square": 38,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 59,
+      "army": 0,
+      "ply": 264,
+      "selected": [
+        33,
+        34
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            27,
+            28
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 18,
+              "rank": 8
+            },
+            {
+              "square": 38,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 59,
+      "army": 0,
+      "ply": 266,
+      "selected": [
+        27,
+        28
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            27,
+            28
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 18,
+              "rank": 8
+            },
+            {
+              "square": 38,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 59,
+      "army": 0,
+      "ply": 272,
+      "selected": [
+        24,
+        34
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            27,
+            28
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 18,
+              "rank": 8
+            },
+            {
+              "square": 38,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 59,
+      "army": 0,
+      "ply": 274,
+      "selected": [
+        27,
+        28
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            27,
+            28
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 18,
+              "rank": 8
+            },
+            {
+              "square": 38,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 67,
+      "army": 0,
+      "ply": 266,
+      "selected": [
+        39,
+        29
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            66,
+            65
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 55,
+              "rank": 4
+            },
+            {
+              "square": 64,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 67,
+      "army": 0,
+      "ply": 270,
+      "selected": [
+        76,
+        86
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            66,
+            65
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 55,
+              "rank": 4
+            },
+            {
+              "square": 75,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 67,
+      "army": 0,
+      "ply": 282,
+      "selected": [
+        74,
+        64
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            66,
+            65
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 55,
+              "rank": 4
+            },
+            {
+              "square": 75,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 67,
+      "army": 0,
+      "ply": 286,
+      "selected": [
+        63,
+        73
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            66,
+            65
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 64,
+              "rank": 4
+            },
+            {
+              "square": 75,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 76,
+      "army": 1,
+      "ply": 147,
+      "selected": [
+        64,
+        63
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            64,
+            63
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 62,
+              "rank": 8
+            },
+            {
+              "square": 73,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 83,
+      "army": 0,
+      "ply": 158,
+      "selected": [
+        75,
+        65
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            63,
+            64
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 3
+            },
+            {
+              "square": 65,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 85,
+      "army": 0,
+      "ply": 10,
+      "selected": [
+        69,
+        59
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            63,
+            64
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 65,
+              "rank": 6
+            }
+          ]
+        },
+        {
+          "move": [
+            74,
+            64
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 65,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 88,
+      "army": 1,
+      "ply": 331,
+      "selected": [
+        23,
+        22
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            34
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 24,
+              "rank": 4
+            },
+            {
+              "square": 35,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 88,
+      "army": 1,
+      "ply": 335,
+      "selected": [
+        32,
+        31
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            34
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 33,
+              "rank": 4
+            },
+            {
+              "square": 35,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 90,
+      "army": 1,
+      "ply": 127,
+      "selected": [
+        23,
+        33
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            55,
+            54
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 7
+            },
+            {
+              "square": 64,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 90,
+      "army": 1,
+      "ply": 129,
+      "selected": [
+        35,
+        45
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            55,
+            54
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 7
+            },
+            {
+              "square": 64,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 99,
+      "army": 0,
+      "ply": 218,
+      "selected": [
+        75,
+        65
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            87,
+            88
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 78,
+              "rank": 7
+            },
+            {
+              "square": 89,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 99,
+      "army": 0,
+      "ply": 220,
+      "selected": [
+        65,
+        55
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            87,
+            88
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 78,
+              "rank": 7
+            },
+            {
+              "square": 89,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 99,
+      "army": 0,
+      "ply": 222,
+      "selected": [
+        55,
+        45
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            87,
+            88
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 78,
+              "rank": 7
+            },
+            {
+              "square": 89,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 99,
+      "army": 0,
+      "ply": 224,
+      "selected": [
+        87,
+        86
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            87,
+            88
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 78,
+              "rank": 7
+            },
+            {
+              "square": 89,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 99,
+      "army": 0,
+      "ply": 236,
+      "selected": [
+        77,
+        67
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            77,
+            78
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 88,
+              "rank": 3
+            },
+            {
+              "square": 79,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 310,
+      "selected": [
+        86,
+        85
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 312,
+      "selected": [
+        72,
+        71
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 314,
+      "selected": [
+        73,
+        74
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 316,
+      "selected": [
+        97,
+        87
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 318,
+      "selected": [
+        71,
+        81
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 320,
+      "selected": [
+        81,
+        71
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 322,
+      "selected": [
+        71,
+        72
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 324,
+      "selected": [
+        72,
+        73
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 326,
+      "selected": [
+        74,
+        64
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 109,
+      "army": 0,
+      "ply": 328,
+      "selected": [
+        67,
+        68
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 1
+            },
+            {
+              "square": 69,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 114,
+      "army": 1,
+      "ply": 263,
+      "selected": [
+        68,
+        69
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            68,
+            58
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 4
+            },
+            {
+              "square": 59,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 114,
+      "army": 1,
+      "ply": 267,
+      "selected": [
+        39,
+        38
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            69,
+            59
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 49,
+              "rank": 4
+            },
+            {
+              "square": 58,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 114,
+      "army": 1,
+      "ply": 269,
+      "selected": [
+        69,
+        79
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            69,
+            59
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 49,
+              "rank": 4
+            },
+            {
+              "square": 58,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 114,
+      "army": 1,
+      "ply": 275,
+      "selected": [
+        39,
+        38
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            69,
+            59
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 49,
+              "rank": 4
+            },
+            {
+              "square": 58,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 114,
+      "army": 1,
+      "ply": 277,
+      "selected": [
+        69,
+        68
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            69,
+            59
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 49,
+              "rank": 4
+            },
+            {
+              "square": 58,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 114,
+      "army": 1,
+      "ply": 283,
+      "selected": [
+        37,
+        36
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            69,
+            59
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 49,
+              "rank": 4
+            },
+            {
+              "square": 58,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 116,
+      "army": 1,
+      "ply": 49,
+      "selected": [
+        49,
+        59
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            49,
+            59
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 58,
+              "rank": 6
+            },
+            {
+              "square": 69,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 116,
+      "army": 1,
+      "ply": 73,
+      "selected": [
+        58,
+        68
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            58,
+            68
+          ],
+          "rank": 5,
+          "victims": [
+            {
+              "square": 67,
+              "rank": 7
+            },
+            {
+              "square": 78,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 123,
+      "army": 0,
+      "ply": 194,
+      "selected": [
+        64,
+        65
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 3
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 123,
+      "army": 0,
+      "ply": 196,
+      "selected": [
+        34,
+        24
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 3
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 130,
+      "army": 1,
+      "ply": 141,
+      "selected": [
+        24,
+        34
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            39,
+            38
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 28,
+              "rank": 6
+            },
+            {
+              "square": 48,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 134,
+      "army": 1,
+      "ply": 161,
+      "selected": [
+        78,
+        77
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            78,
+            77
+          ],
+          "rank": 7,
+          "victims": [
+            {
+              "square": 67,
+              "rank": 8
+            },
+            {
+              "square": 76,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 149,
+      "army": 0,
+      "ply": 262,
+      "selected": [
+        96,
+        86
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            33,
+            34
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 8
+            },
+            {
+              "square": 35,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 149,
+      "army": 0,
+      "ply": 304,
+      "selected": [
+        28,
+        29
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            28,
+            38
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 7
+            },
+            {
+              "square": 39,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 149,
+      "army": 0,
+      "ply": 308,
+      "selected": [
+        39,
+        38
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            39,
+            49
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 7
+            },
+            {
+              "square": 59,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 159,
+      "army": 0,
+      "ply": 218,
+      "selected": [
+        1,
+        2
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            83,
+            73
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 63,
+              "rank": 1
+            },
+            {
+              "square": 74,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 159,
+      "army": 0,
+      "ply": 220,
+      "selected": [
+        27,
+        17
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            83,
+            73
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 63,
+              "rank": 1
+            },
+            {
+              "square": 74,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 159,
+      "army": 0,
+      "ply": 222,
+      "selected": [
+        17,
+        7
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            83,
+            73
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 63,
+              "rank": 1
+            },
+            {
+              "square": 74,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 160,
+      "army": 1,
+      "ply": 153,
+      "selected": [
+        22,
+        21
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            22,
+            21
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 20,
+              "rank": 7
+            },
+            {
+              "square": 31,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 164,
+      "army": 1,
+      "ply": 257,
+      "selected": [
+        31,
+        30
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            31,
+            41
+          ],
+          "rank": 6,
+          "victims": [
+            {
+              "square": 40,
+              "rank": 7
+            },
+            {
+              "square": 51,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 284,
+      "selected": [
+        65,
+        64
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 286,
+      "selected": [
+        66,
+        76
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 288,
+      "selected": [
+        76,
+        77
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 290,
+      "selected": [
+        64,
+        74
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 292,
+      "selected": [
+        74,
+        73
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 294,
+      "selected": [
+        73,
+        83
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 296,
+      "selected": [
+        83,
+        82
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 298,
+      "selected": [
+        77,
+        67
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 300,
+      "selected": [
+        72,
+        62
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 302,
+      "selected": [
+        63,
+        73
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 165,
+      "army": 0,
+      "ply": 304,
+      "selected": [
+        44,
+        54
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 168,
+      "army": 1,
+      "ply": 25,
+      "selected": [
+        38,
+        48
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 168,
+      "army": 1,
+      "ply": 27,
+      "selected": [
+        41,
+        40
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 168,
+      "army": 1,
+      "ply": 29,
+      "selected": [
+        40,
+        50
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 168,
+      "army": 1,
+      "ply": 31,
+      "selected": [
+        50,
+        60
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 168,
+      "army": 1,
+      "ply": 33,
+      "selected": [
+        31,
+        41
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 168,
+      "army": 1,
+      "ply": 35,
+      "selected": [
+        10,
+        20
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 168,
+      "army": 1,
+      "ply": 37,
+      "selected": [
+        37,
+        39
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 6
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 179,
+      "army": 0,
+      "ply": 244,
+      "selected": [
+        24,
+        34
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            24,
+            34
+          ],
+          "rank": 5,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 8
+            },
+            {
+              "square": 35,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 181,
+      "army": 0,
+      "ply": 140,
+      "selected": [
+        25,
+        26
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            25,
+            35
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 7
+            },
+            {
+              "square": 45,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 183,
+      "army": 0,
+      "ply": 84,
+      "selected": [
+        74,
+        64
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            77,
+            78
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 6
+            },
+            {
+              "square": 79,
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 184,
+      "army": 1,
+      "ply": 183,
+      "selected": [
+        64,
+        65
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            64,
+            65
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 55,
+              "rank": 8
+            },
+            {
+              "square": 66,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 24,
+      "selected": [
+        54,
+        44
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            54,
+            44
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 6
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 206,
+      "army": 1,
+      "ply": 133,
+      "selected": [
+        24,
+        34
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            35,
+            45
+          ],
+          "rank": 7,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 8
+            },
+            {
+              "square": 55,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 206,
+      "army": 1,
+      "ply": 135,
+      "selected": [
+        35,
+        45
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            35,
+            45
+          ],
+          "rank": 7,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 8
+            },
+            {
+              "square": 55,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 207,
+      "army": 0,
+      "ply": 142,
+      "selected": [
+        63,
+        62
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            77,
+            78
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 6
+            },
+            {
+              "square": 79,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 208,
+      "army": 1,
+      "ply": 85,
+      "selected": [
+        39,
+        49
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            48,
+            58
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 4
+            },
+            {
+              "square": 59,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 208,
+      "army": 1,
+      "ply": 87,
+      "selected": [
+        48,
+        58
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            48,
+            58
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 4
+            },
+            {
+              "square": 59,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 216,
+      "army": 1,
+      "ply": 175,
+      "selected": [
+        20,
+        30
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            37,
+            38
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 2
+            },
+            {
+              "square": 39,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 216,
+      "army": 1,
+      "ply": 179,
+      "selected": [
+        30,
+        40
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            37,
+            38
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 28,
+              "rank": 4
+            },
+            {
+              "square": 48,
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 221,
+      "army": 0,
+      "ply": 20,
+      "selected": [
+        54,
+        44
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            54,
+            44
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 4
+            },
+            {
+              "square": 45,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 226,
+      "army": 1,
+      "ply": 73,
+      "selected": [
+        60,
+        61
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            35,
+            45
+          ],
+          "rank": 6,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 7
+            },
+            {
+              "square": 55,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 228,
+      "army": 1,
+      "ply": 15,
+      "selected": [
+        39,
+        49
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            39,
+            49
+          ],
+          "rank": 5,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 8
+            },
+            {
+              "square": 59,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 233,
+      "army": 0,
+      "ply": 164,
+      "selected": [
+        27,
+        26
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            27,
+            26
+          ],
+          "rank": 6,
+          "victims": [
+            {
+              "square": 25,
+              "rank": 7
+            },
+            {
+              "square": 36,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 233,
+      "army": 0,
+      "ply": 182,
+      "selected": [
+        45,
+        44
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            45,
+            35
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 7
+            },
+            {
+              "square": 36,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 240,
+      "army": 1,
+      "ply": 611,
+      "selected": [
+        71,
+        81
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            71,
+            61
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 51,
+              "rank": 2
+            },
+            {
+              "square": 62,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 240,
+      "army": 1,
+      "ply": 617,
+      "selected": [
+        71,
+        61
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            71,
+            61
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 51,
+              "rank": 2
+            },
+            {
+              "square": 62,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 244,
+      "army": 1,
+      "ply": 93,
+      "selected": [
+        58,
+        68
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            58,
+            68
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 67,
+              "rank": 7
+            },
+            {
+              "square": 78,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 251,
+      "army": 0,
+      "ply": 282,
+      "selected": [
+        61,
+        51
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            61,
+            51
+          ],
+          "rank": 6,
+          "victims": [
+            {
+              "square": 41,
+              "rank": 8
+            },
+            {
+              "square": 50,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 251,
+      "army": 0,
+      "ply": 286,
+      "selected": [
+        80,
+        70
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            50,
+            51
+          ],
+          "rank": 6,
+          "victims": [
+            {
+              "square": 41,
+              "rank": 8
+            },
+            {
+              "square": 61,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 251,
+      "army": 0,
+      "ply": 288,
+      "selected": [
+        50,
+        51
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            50,
+            51
+          ],
+          "rank": 6,
+          "victims": [
+            {
+              "square": 41,
+              "rank": 8
+            },
+            {
+              "square": 61,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 255,
+      "army": 0,
+      "ply": 174,
+      "selected": [
+        37,
+        27
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            37,
+            38
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 7
+            },
+            {
+              "square": 39,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 261,
+      "army": 0,
+      "ply": 286,
+      "selected": [
+        34,
+        24
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            34,
+            24
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 23,
+              "rank": 7
+            },
+            {
+              "square": 25,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 281,
+      "army": 0,
+      "ply": 242,
+      "selected": [
+        35,
+        25
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            35,
+            34
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 24,
+              "rank": 6
+            },
+            {
+              "square": 33,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 282,
+      "army": 1,
+      "ply": 323,
+      "selected": [
+        64,
+        74
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            64,
+            54
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 5
+            },
+            {
+              "square": 55,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 282,
+      "army": 1,
+      "ply": 339,
+      "selected": [
+        64,
+        65
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            64,
+            54
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 5
+            },
+            {
+              "square": 55,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 283,
+      "army": 0,
+      "ply": 88,
+      "selected": [
+        58,
+        48
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            58,
+            48
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 38,
+              "rank": 1
+            },
+            {
+              "square": 49,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 283,
+      "army": 0,
+      "ply": 108,
+      "selected": [
+        67,
+        68
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            70,
+            60
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 50,
+              "rank": 4
+            },
+            {
+              "square": 61,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 283,
+      "army": 0,
+      "ply": 116,
+      "selected": [
+        60,
+        50
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            60,
+            50
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 40,
+              "rank": 4
+            },
+            {
+              "square": 51,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 288,
+      "army": 1,
+      "ply": 89,
+      "selected": [
+        24,
+        34
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            22,
+            21
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 20,
+              "rank": 2
+            },
+            {
+              "square": 31,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 288,
+      "army": 1,
+      "ply": 99,
+      "selected": [
+        22,
+        21
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            22,
+            21
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 20,
+              "rank": 2
+            },
+            {
+              "square": 31,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 290,
+      "army": 1,
+      "ply": 197,
+      "selected": [
+        62,
+        61
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            32,
+            31
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 30,
+              "rank": 1
+            },
+            {
+              "square": 41,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 290,
+      "army": 1,
+      "ply": 199,
+      "selected": [
+        61,
+        71
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            32,
+            31
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 30,
+              "rank": 1
+            },
+            {
+              "square": 41,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 293,
+      "army": 0,
+      "ply": 254,
+      "selected": [
+        44,
+        34
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            45
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 35,
+              "rank": 8
+            },
+            {
+              "square": 55,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 297,
+      "army": 0,
+      "ply": 570,
+      "selected": [
+        19,
+        18
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            19,
+            18
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 17,
+              "rank": 3
+            },
+            {
+              "square": 28,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 298,
+      "army": 1,
+      "ply": 147,
+      "selected": [
+        36,
+        35
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            33,
+            34
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 44,
+              "rank": 3
+            },
+            {
+              "square": 35,
+              "rank": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 299,
+      "army": 0,
+      "ply": 176,
+      "selected": [
+        34,
+        24
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            34,
+            44
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 54,
+              "rank": 7
+            },
+            {
+              "square": 45,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 303,
+      "army": 0,
+      "ply": 464,
+      "selected": [
+        67,
+        68
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            41,
+            31
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 21,
+              "rank": 7
+            },
+            {
+              "square": 32,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 303,
+      "army": 0,
+      "ply": 466,
+      "selected": [
+        58,
+        48
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            41,
+            31
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 21,
+              "rank": 7
+            },
+            {
+              "square": 32,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 303,
+      "army": 0,
+      "ply": 468,
+      "selected": [
+        68,
+        58
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            41,
+            31
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 21,
+              "rank": 7
+            },
+            {
+              "square": 32,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 304,
+      "army": 1,
+      "ply": 221,
+      "selected": [
+        54,
+        64
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            54,
+            64
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 63,
+              "rank": 4
+            },
+            {
+              "square": 74,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 308,
+      "army": 1,
+      "ply": 69,
+      "selected": [
+        14,
+        24
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            39,
+            49
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 4
+            },
+            {
+              "square": 59,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 308,
+      "army": 1,
+      "ply": 71,
+      "selected": [
+        20,
+        30
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            39,
+            49
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 4
+            },
+            {
+              "square": 59,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 308,
+      "army": 1,
+      "ply": 73,
+      "selected": [
+        44,
+        54
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            39,
+            49
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 4
+            },
+            {
+              "square": 59,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 308,
+      "army": 1,
+      "ply": 75,
+      "selected": [
+        39,
+        49
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            39,
+            49
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 48,
+              "rank": 4
+            },
+            {
+              "square": 59,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 312,
+      "army": 1,
+      "ply": 175,
+      "selected": [
+        61,
+        71
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            61,
+            62
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 72,
+              "rank": 5
+            },
+            {
+              "square": 63,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 314,
+      "army": 1,
+      "ply": 729,
+      "selected": [
+        97,
+        98
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            77,
+            78
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 68,
+              "rank": 8
+            },
+            {
+              "square": 88,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 317,
+      "army": 0,
+      "ply": 228,
+      "selected": [
+        62,
+        72
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            70,
+            60
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 50,
+              "rank": 4
+            },
+            {
+              "square": 61,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 317,
+      "army": 0,
+      "ply": 230,
+      "selected": [
+        2,
+        1
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            70,
+            60
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 50,
+              "rank": 4
+            },
+            {
+              "square": 61,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 317,
+      "army": 0,
+      "ply": 232,
+      "selected": [
+        70,
+        60
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            70,
+            60
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 50,
+              "rank": 4
+            },
+            {
+              "square": 61,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 317,
+      "army": 0,
+      "ply": 390,
+      "selected": [
+        96,
+        95
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            76,
+            77
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 87,
+              "rank": 7
+            },
+            {
+              "square": 78,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 323,
+      "army": 0,
+      "ply": 178,
+      "selected": [
+        76,
+        77
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            76,
+            77
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 67,
+              "rank": 4
+            },
+            {
+              "square": 87,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 325,
+      "army": 0,
+      "ply": 388,
+      "selected": [
+        1,
+        0
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            24,
+            23
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 22,
+              "rank": 8
+            },
+            {
+              "square": 33,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 325,
+      "army": 0,
+      "ply": 390,
+      "selected": [
+        24,
+        23
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            24,
+            23
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 22,
+              "rank": 8
+            },
+            {
+              "square": 33,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 325,
+      "army": 0,
+      "ply": 446,
+      "selected": [
+        21,
+        22
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            21,
+            31
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 41,
+              "rank": 8
+            },
+            {
+              "square": 32,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 340,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 344,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 348,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 352,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 356,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 360,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 364,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 368,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 372,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 376,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 380,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 384,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 388,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 392,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 396,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 400,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 404,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 408,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 412,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 416,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 420,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 424,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 428,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 432,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 436,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 440,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 444,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 448,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 452,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 456,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 460,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 464,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 468,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 472,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 476,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 480,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 484,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 488,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 492,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 496,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 500,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 504,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 508,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 512,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 516,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 520,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 524,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 528,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 532,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 536,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 540,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 544,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 548,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 552,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 556,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 560,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 564,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 568,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 572,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 576,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 580,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 584,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 588,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 592,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 596,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 600,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 604,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 608,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 612,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 616,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 620,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 624,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 628,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 632,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 636,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 640,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 644,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 648,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 652,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 656,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 660,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 664,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 668,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 672,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 676,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 680,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 684,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 688,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 692,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 696,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 700,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 704,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 708,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 712,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 716,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 720,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 724,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 728,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 732,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 736,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 740,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 744,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 748,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 752,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 756,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 760,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 764,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 768,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 772,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 776,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 780,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 784,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 788,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 792,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 796,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 800,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 804,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 808,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 812,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 816,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 820,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 824,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 828,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 832,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 836,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 840,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 844,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 848,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 852,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 856,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 860,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 864,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 868,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 872,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 876,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 880,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 884,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 888,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 892,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 896,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 900,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 904,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 908,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 912,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 916,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 920,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 924,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 928,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 932,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 936,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 940,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 944,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 948,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 952,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 956,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 960,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 964,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 968,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 972,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 976,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 980,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 984,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 988,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 992,
+      "selected": [
+        3,
+        13
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            3,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 329,
+      "army": 0,
+      "ply": 996,
+      "selected": [
+        14,
+        4
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            14,
+            13
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 12,
+              "rank": 8
+            },
+            {
+              "square": 23,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 332,
+      "army": 1,
+      "ply": 19,
+      "selected": [
+        35,
+        45
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            54
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 64,
+              "rank": 6
+            },
+            {
+              "square": 55,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 332,
+      "army": 1,
+      "ply": 21,
+      "selected": [
+        21,
+        31
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            54
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 64,
+              "rank": 6
+            },
+            {
+              "square": 55,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 332,
+      "army": 1,
+      "ply": 23,
+      "selected": [
+        20,
+        30
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            54
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 64,
+              "rank": 6
+            },
+            {
+              "square": 55,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 332,
+      "army": 1,
+      "ply": 25,
+      "selected": [
+        38,
+        48
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            54
+          ],
+          "rank": 4,
+          "victims": [
+            {
+              "square": 64,
+              "rank": 6
+            },
+            {
+              "square": 55,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 336,
+      "army": 1,
+      "ply": 341,
+      "selected": [
+        65,
+        66
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            65,
+            66
+          ],
+          "rank": 3,
+          "victims": [
+            {
+              "square": 76,
+              "rank": 6
+            },
+            {
+              "square": 67,
+              "rank": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 350,
+      "army": 1,
+      "ply": 181,
+      "selected": [
+        54,
+        64
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            54,
+            64
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 63,
+              "rank": 5
+            },
+            {
+              "square": 65,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 358,
+      "army": 1,
+      "ply": 241,
+      "selected": [
+        71,
+        81
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            71,
+            72
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 62,
+              "rank": 8
+            },
+            {
+              "square": 82,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 358,
+      "army": 1,
+      "ply": 245,
+      "selected": [
+        82,
+        92
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            82,
+            72
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 62,
+              "rank": 8
+            },
+            {
+              "square": 71,
+              "rank": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 358,
+      "army": 1,
+      "ply": 257,
+      "selected": [
+        71,
+        70
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            71,
+            61
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 60,
+              "rank": 7
+            },
+            {
+              "square": 62,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 366,
+      "army": 1,
+      "ply": 147,
+      "selected": [
+        87,
+        86
+      ],
+      "selected_eligible": true,
+      "candidates": [
+        {
+          "move": [
+            87,
+            86
+          ],
+          "rank": 1,
+          "victims": [
+            {
+              "square": 76,
+              "rank": 8
+            },
+            {
+              "square": 85,
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 371,
+      "army": 0,
+      "ply": 298,
+      "selected": [
+        35,
+        25
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            35,
+            36
+          ],
+          "rank": 2,
+          "victims": [
+            {
+              "square": 26,
+              "rank": 3
+            },
+            {
+              "square": 37,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 377,
+      "army": 0,
+      "ply": 78,
+      "selected": [
+        60,
+        50
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            54,
+            44
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 1
+            },
+            {
+              "square": 45,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 377,
+      "army": 0,
+      "ply": 80,
+      "selected": [
+        61,
+        51
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            54,
+            44
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 1
+            },
+            {
+              "square": 45,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 377,
+      "army": 0,
+      "ply": 82,
+      "selected": [
+        51,
+        41
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            54,
+            44
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 1
+            },
+            {
+              "square": 45,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 377,
+      "army": 0,
+      "ply": 84,
+      "selected": [
+        41,
+        31
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            54,
+            44
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 34,
+              "rank": 1
+            },
+            {
+              "square": 45,
+              "rank": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 399,
+      "army": 0,
+      "ply": 306,
+      "selected": [
+        58,
+        48
+      ],
+      "selected_eligible": false,
+      "candidates": [
+        {
+          "move": [
+            44,
+            34
+          ],
+          "rank": 0,
+          "victims": [
+            {
+              "square": 24,
+              "rank": 6
+            },
+            {
+              "square": 35,
+              "rank": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

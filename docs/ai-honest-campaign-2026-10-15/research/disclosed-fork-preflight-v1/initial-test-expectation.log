@@ -1,0 +1,17 @@
+...F..
+======================================================================
+FAIL: test_own_flag_counterwin_refutes_geometric_fork (__main__.CertificateTests.test_own_flag_counterwin_refutes_geometric_fork)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/disclosed-fork-preflight-v1/test_certificate.py", line 39, in test_own_flag_counterwin_refutes_geometric_fork
+    self.assertFalse(proof['certified']);self.assertEqual(proof['reason'],'first-enemy-terminal-counterwin-or-own-immobility')
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'no-positive-bounded-conversion' != 'first-enemy-terminal-counterwin-or-own-immobility'
+- no-positive-bounded-conversion
++ first-enemy-terminal-counterwin-or-own-immobility
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.061s
+
+FAILED (failures=1)

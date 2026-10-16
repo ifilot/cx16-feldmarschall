@@ -1,0 +1,9 @@
+{
+  "stage": "research-only opportunity upper bound, frozen before sampling; no policy implementation",
+  "cohort": "All own decision roots in the completed C21 student-template-flag-bomb-v1-normal screening file, no validation or other cohort.",
+  "gate": "A legal quiet move places our mobile actor adjacent to at least two distinct disclosed enemy mobile pieces which it captures and survives. On resulting occupancy, no disclosed enemy or count-possible concealed enemy can legally capture/remove the actor immediately, including first-contact Scout rays and exact current enemy two-square restriction. Known and count-possible equal exchanges also refute actor safety.",
+  "selection": "All roots and legal quiet moves; no gate widening after incidence. Record selected-vs-unselected opportunities. No outcome-based selection.",
+  "boundary": "Own ranks, public disclosed ranks, movement/captured inventory, occupancy and shuttle only. Referee setup is used to replay and derive public combat facts, never to select a concealed rank in the gate. Unknown ranks use remaining-count support conservatively.",
+  "interpretation": "This is NOT a forcing conversion certificate: enemy countercapture of other friendly pieces, terminal counterwins, victim movement and postcapture recaptures remain to check before any strategy proposal. If gate is sparse or duplicates existing pursuit, defer. No runtime, score change or saved games.",
+  "research": "Allis, van den Herik and Huntjens1993, Go-Moku Solved by New Search Techniques, https://cdn.aaai.org/Symposia/Fall/1993/FS-93-02/FS93-02-001.pdf. Threat-space sequences and double threats motivate a forcing-pattern audit; no Stratego efficacy claim. Already cited repository source."
+}
