@@ -1,0 +1,34 @@
+{
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry/CONCLUSION.md": {
+    "sha256": "0f29ae8625d0084221d6a22cfa053b4ae373c0248153238661f274ee5fc9b099",
+    "bytes": 2991
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry/PROTOCOL.json": {
+    "sha256": "021dbf8a7b8648bd76d554be98c55bbd2c09856e380732f5f53f9bcb0425f1f6",
+    "bytes": 2004
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry/audit.log": {
+    "sha256": "8a1ee95c82e03cb7b84f4245fc35c8e06d301211eda163c7797a7974559b85fa",
+    "bytes": 2643
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry/independent-review.json": {
+    "sha256": "75d209f75fe31ed21a3494ffa3a7e329f28ce50db8afa4ef0facd125c449da7b",
+    "bytes": 576
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry/result.json": {
+    "sha256": "e8860cececb45d58ea99e922c3652f2c75fa15b6fe8cfb9a6487f4e679056433",
+    "bytes": 214624
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry/tests.log": {
+    "sha256": "44825f24cdbd1bcc73113cc0e880161c602c66296af8171cc29ead1360391377",
+    "bytes": 102
+  },
+  "tools/new_campaign_full_position_symmetry.py": {
+    "sha256": "4de55316a64f033d877e9d3722e88a9214a592a42a3c168663c563ab4bc290bf",
+    "bytes": 7279
+  },
+  "tools/test_new_campaign_full_position_symmetry.py": {
+    "sha256": "0f05c42ccdd5e6a15b2f3b67b8925014ec74a173ffbffd18b515fd19c83efa4a",
+    "bytes": 1440
+  }
+}
