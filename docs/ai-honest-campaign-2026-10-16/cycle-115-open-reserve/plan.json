@@ -1,0 +1,71 @@
+{
+  "cycle": 115,
+  "baseline": "student-fortress-template-flag-bomb-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-fortress-template-flag-bomb-v1-normal",
+    "student-fortress-open-reserve-template-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-fortress-open-reserve-template-v1-normal",
+      "name": "Fortress Student with open Lieutenant reserve v1 / Normal",
+      "description": "Release the initially Bomb-isolated Lieutenant by one28\u219438swap, preserving the Flag inner barrier and ordinary movement/inference policy.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "tools/new_campaign_open_reserve_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_FORTRESS_OPEN_RESERVE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchangedsource-templateFlag/BombmodelandnativeGuardmovement. OnefixedClassicNormalFortressswap28Bombwith38Lieutenant5:33/33potentialmobilefrontaccessvs32/33baseline. InnerBombs20/31,Flag30,Spy27,centralguard21andRNGunchanged;oneouterBombrelocated,noguaranteeoffullgamedominance.",
+      "information_model": "Own deployment geometry and publicplay/sourceprior only; no opponent information in setup.",
+      "driver": "native-template",
+      "driver_args": []
+    }
+  ],
+  "seed": 3115001,
+  "rounds": 128,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "Activate the otherwise permanently isolated Fortress Lieutenant by relocating one outer Bomb into its old pocket, preserving the inner Flag barrier and the movement policy. The extra usable soldier may outweigh the altered outer defense."
+  ],
+  "contrasts": [
+    [
+      "student-fortress-open-reserve-template-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed256attemptsperarm exploratoryscreen;matchedoriginalDOSarmies/moveseeds,ownformationtreatmentrotatedacrosscolors. Primarypaired95%interval+finiteerrorbounds;noinfiniteFlagdefenseorstrengthclaimfromgeometry. InitialguardplacementisUNCHANGEDsothisisnotcombinedwithC110. No layouttuningorvalidationinspection. Ownarmiesdifferent,sonosame-roottrajectorymechanismclaim.",
+  "evidence": "research/open-reserve/README.md; sixmechanicaltests, legalnativecorridorvacancyandLieutenantactivation, exactmacrooffbinary,RNGandotherdifficultyparity,bothcolors/reflections. Oldresearch_deployment_double_shell.pyalreadyproposedMobilityOnlyFortressgeometry;C22testedthethree-swapDoubleShellpackage,notthisisolatedswap. No noveltyclaimforgeometry."
+}

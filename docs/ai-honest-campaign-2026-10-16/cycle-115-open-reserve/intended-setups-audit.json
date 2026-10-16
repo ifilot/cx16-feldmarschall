@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "attempts": 512,
+  "games_per_arm": 256,
+  "treatment": "Only own origins28/38 swap; normalize rotated Blue armies before comparison",
+  "expected_baseline": "94959969496271358975B869753SB8FB8B748B6B",
+  "expected_candidate": "94959969496271358975B869753S68FB8B748BBB",
+  "opponent_armies_seeds_sides_all_matched": true,
+  "every_actual_own_setup_matches_frozen_treatment": true,
+  "tournament_sha256": {
+    "student-fortress-template-flag-bomb-v1-normal": "e94b3aaea732a62c9b9fff147d214ee58b160e2e71a4e53ffe4f4f85be9b66c3",
+    "student-fortress-open-reserve-template-v1-normal": "4c9ce72c25bff6d334d4b8d86918839786ecf1aad44f192e3fd6a4e4bf8e257f"
+  },
+  "audit_source_sha256": "cbe253acd76cf6cb79d889f677a438a88b46a7a0e2a89d3146fc542f767af70e"
+}

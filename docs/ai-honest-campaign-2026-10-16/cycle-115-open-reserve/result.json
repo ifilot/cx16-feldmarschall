@@ -1,0 +1,120 @@
+{
+  "cycle": 115,
+  "hypotheses": [
+    "Activate the otherwise permanently isolated Fortress Lieutenant by relocating one outer Bomb into its old pocket, preserving the inner Flag barrier and the movement policy. The extra usable soldier may outweigh the altered outer defense."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 79,
+      "draws": 59,
+      "losses": 114,
+      "score": 0.4305555555555556,
+      "errors": 4
+    },
+    "student-fortress-open-reserve-template-v1-normal": {
+      "wins": 70,
+      "draws": 51,
+      "losses": 127,
+      "score": 0.3850806451612903,
+      "errors": 8
+    }
+  },
+  "execution_seconds": {
+    "student-fortress-template-flag-bomb-v1-normal": 212.0497443380009,
+    "student-fortress-open-reserve-template-v1-normal": 214.24261284499516
+  },
+  "comparisons": {
+    "student-fortress-open-reserve-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 118,
+      "pairs_by_family": {
+        "original-dos": 118
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.048728813559322036,
+          "interval_95": [
+            -0.11228813559322035,
+            0.014830508474576272
+          ],
+          "interval_98_3333": [
+            -0.1271186440677966,
+            0.029661016949152543
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 512,
+  "error_sensitivity": {
+    "student-fortress-open-reserve-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 34,
+        "negative_pairs": 50,
+        "zero_pairs": 34,
+        "non_tied_pairs": 84,
+        "exact_two_sided_binomial_sign_p": 0.10113634213880453,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 128,
+      "error_games_a": 8,
+      "error_games_b": 4,
+      "pairs_with_any_error": 10,
+      "arms": {
+        "a": {
+          "attempted_games": 256,
+          "error_games": 8,
+          "scored_games": 248,
+          "wins": 70,
+          "draws": 51,
+          "losses": 127,
+          "official_scored_score": 0.3850806451612903,
+          "all_attempt_score_bounds": [
+            0.373046875,
+            0.404296875
+          ]
+        },
+        "b": {
+          "attempted_games": 256,
+          "error_games": 4,
+          "scored_games": 252,
+          "wins": 79,
+          "draws": 59,
+          "losses": 114,
+          "official_scored_score": 0.4305555555555556,
+          "all_attempt_score_bounds": [
+            0.423828125,
+            0.439453125
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.06640625,
+        -0.01953125
+      ],
+      "complete_case_pairs": 118,
+      "complete_case_paired_effect": -0.048728813559322036
+    }
+  },
+  "errors": 12,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 512,
+  "family_standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "original-dos": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.4305555555555556,
+        "msdos-1990-v2-normal": 0.5694444444444444
+      }
+    },
+    "student-fortress-open-reserve-template-v1-normal": {
+      "original-dos": {
+        "student-fortress-open-reserve-template-v1-normal": 0.3850806451612903,
+        "msdos-1990-v2-normal": 0.6149193548387096
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "method": "Independent direct-SQL outcome arithmetic; no runner analysis helpers",
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 79,
+      "draws": 59,
+      "losses": 114,
+      "errors": 4,
+      "score": 0.4305555555555556
+    },
+    "student-fortress-open-reserve-template-v1-normal": {
+      "wins": 70,
+      "draws": 51,
+      "losses": 127,
+      "errors": 8,
+      "score": 0.3850806451612903
+    }
+  },
+  "comparisons": {
+    "student-fortress-open-reserve-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 118,
+      "planned_pairs": 128,
+      "paired_mean": -0.048728813559322036,
+      "finite_error_bounds": [
+        -0.06640625,
+        -0.01953125
+      ],
+      "directions": {
+        "positive": 34,
+        "negative": 50,
+        "error_pairs": 10,
+        "tied": 34
+      },
+      "all_roots_seeds_sides_exactly_matched": false,
+      "all_opponent_armies_seeds_sides_exactly_matched": true,
+      "own_setup_difference_explicitly_allowed": true,
+      "games_with_different_own_setups": 256
+    }
+  },
+  "hashes": {
+    "plan.json": "cf7975481f6a2723e6af657d14e4c75f279556bf4ca2031a1b18938e04f195d9",
+    "result.json": "e41ffd1b7dd7102ea9207eb2f7497753547d3574da41e233f8dcb2f84d359d57",
+    "student-fortress-template-flag-bomb-v1-normal.fmtour": "e94b3aaea732a62c9b9fff147d214ee58b160e2e71a4e53ffe4f4f85be9b66c3",
+    "student-fortress-open-reserve-template-v1-normal.fmtour": "4c9ce72c25bff6d334d4b8d86918839786ecf1aad44f192e3fd6a4e4bf8e257f"
+  },
+  "limitation": "Checks outcome statistics and pairing, not policy correctness or state replay; those have separate qualification artifacts."
+}

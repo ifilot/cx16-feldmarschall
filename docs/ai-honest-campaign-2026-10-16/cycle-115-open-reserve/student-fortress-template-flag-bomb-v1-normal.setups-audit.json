@@ -1,0 +1,3622 @@
+{
+  "passed": true,
+  "kind": "frozen-policy-owned-setup-replay-audit",
+  "tournament": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-16/cycle-115-open-reserve/student-fortress-template-flag-bomb-v1-normal.fmtour",
+  "tournament_sha256": "e94b3aaea732a62c9b9fff147d214ee58b160e2e71a4e53ffe4f4f85be9b66c3",
+  "owner": "student-fortress-template-flag-bomb-v1-normal",
+  "setup_mode": "policy-owned-rotated-v1",
+  "records": 128,
+  "expected_records": 128,
+  "records_audited": [
+    {
+      "pair_id": 1,
+      "family": "original-dos",
+      "setup_seed": 37281,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "74afdd466f23f55fadc307761d439f774c7174575bb45881a58a7c80a3d7e29a",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 2,
+      "family": "original-dos",
+      "setup_seed": 8105,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "b4f5d85f72f7b7fee40547e89fc269219ca260cea56fe702d54c3ed49ebd7300",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 3,
+      "family": "original-dos",
+      "setup_seed": 21330,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "0a342451040cd38a515c258adbd1510612d12c8d16e1c0a8b11c02c5cf47da68",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 4,
+      "family": "original-dos",
+      "setup_seed": 53236,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "0d4eda27dedff8ded1e57d669bb617a4a6a5c49e797725d649c9a4b943acb93e",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 5,
+      "family": "original-dos",
+      "setup_seed": 20756,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "48660f4c29fafbd35ac3fe2c02d57bb2ef6d92de86cc3a907ad04ef9a6f36d46",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 6,
+      "family": "original-dos",
+      "setup_seed": 33560,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "090e5b1e976dbc6872d6150deef33ea6f7b918e0ce666035c59426350710eedf",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 7,
+      "family": "original-dos",
+      "setup_seed": 63284,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "a90bc1ecf59f8754f63eb20441f4f631611711ba3a16f43b45085384f9ece702",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 8,
+      "family": "original-dos",
+      "setup_seed": 36111,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "8fcc77f0220e6bccfd48eac2888fec9d69be6c63eb3823b60c1fee3eeadc200c",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 9,
+      "family": "original-dos",
+      "setup_seed": 58611,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "f4ad636eef5c30416dcb7d9c6cec2cb2b2dfab161af6e49f551c57c00d35b3e0",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 10,
+      "family": "original-dos",
+      "setup_seed": 265,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "b7df6bf85a68740d33d052ed974ae1718b8fa702985b710cea189cc767b565dc",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 11,
+      "family": "original-dos",
+      "setup_seed": 57171,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "0a4b0572274ab7ea5a7d1178499b3802f759c62ff3391224051ef83f8bc35866",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 12,
+      "family": "original-dos",
+      "setup_seed": 19580,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "6fe94aa1294e317672549c94f9420b9359bfa7acb531516335690264f00ac56a",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 13,
+      "family": "original-dos",
+      "setup_seed": 57049,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "4976d4aea188181fe992a06ccbb08a107ea81cf62585a659069ccfe52336404e",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 14,
+      "family": "original-dos",
+      "setup_seed": 37215,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "989f2984c5b2d26df406d3384e547c77e8a37627667533cef92e5a5908b562e1",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 15,
+      "family": "original-dos",
+      "setup_seed": 43429,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "9ea0947eb7fc2780af5f3e494dc99feaa57b3c32993564504e0196ce9e919ec4",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 16,
+      "family": "original-dos",
+      "setup_seed": 45060,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "97e6534f8cbd71385df57a911bc3177e75b995981a7e2996208f696004d7ae58",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 17,
+      "family": "original-dos",
+      "setup_seed": 6219,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "e302aead29b0e84d1d82d1e6ec16a36c32e387223a2cb3d48c4537d9b3b299a7",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 18,
+      "family": "original-dos",
+      "setup_seed": 36721,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "046aba065c82bc412d5d25be237dd47f76ae631c71a30d79963c884d9f2026f6",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 19,
+      "family": "original-dos",
+      "setup_seed": 59474,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "bfd725ad68f8827270d1d7d63437b4dd4f4147ccc22ca7e5b9115255367b990e",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 20,
+      "family": "original-dos",
+      "setup_seed": 46346,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "2ed17c2d069f5a4cd18a4565a14908724915a36ee060934f98e8fec551a55c5b",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 21,
+      "family": "original-dos",
+      "setup_seed": 15164,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "7f8a164f18672f9cf348f8414b0d55a6f76a06bf1384a76a0ebd46409bd30d91",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 22,
+      "family": "original-dos",
+      "setup_seed": 27436,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "a92a3e1fc21b46b4baefa1ab5e8e81af19e7931c213933f902784cf200579806",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 23,
+      "family": "original-dos",
+      "setup_seed": 39703,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "ccc64464fa315c6e6d091ffe7dde7ccc47bfb77c7e24eed0ecdb4390b72b6055",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 24,
+      "family": "original-dos",
+      "setup_seed": 4298,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "6ad95e8841636d81a6f84489d4d71cad81268cd9782d933b041ac9e3481e71d1",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 25,
+      "family": "original-dos",
+      "setup_seed": 43665,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "7e7881a4a3b1995b2b214267961ebda54c16be2c59860ca2c3f35fcbfe24b4f2",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 26,
+      "family": "original-dos",
+      "setup_seed": 14901,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "9ff08feeec1854e4607d2a611fbd06a7016125ddb0336dbd9146ff3ab7cc957a",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 27,
+      "family": "original-dos",
+      "setup_seed": 23788,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "06cd2bd992c912b5d94dfe767574b9398e4b40522e8cd5cbf039756d5acac8ac",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 28,
+      "family": "original-dos",
+      "setup_seed": 1328,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "6e3b261c180ab86b0d1859efd8cca4ffe8eb82402ee096aedc7165a4b4330182",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 29,
+      "family": "original-dos",
+      "setup_seed": 47158,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "6ac19f455a3450dc672be38a354eb8eb15aaed83a25d75b2beca06268f69a022",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 30,
+      "family": "original-dos",
+      "setup_seed": 15966,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "a9724b14d543dbd4742c170f24e5077ab150085c8dc7ec763cb9d202772ddfde",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 31,
+      "family": "original-dos",
+      "setup_seed": 8002,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "447e02f0bfd2804c9056f63e69dae29fd31979ae2b649b463c8f6daff37cce88",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 32,
+      "family": "original-dos",
+      "setup_seed": 7690,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "ecc58916e616c9ab41416597807fc7d596b39d5d77cc03c644a86833fd79b5d6",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 33,
+      "family": "original-dos",
+      "setup_seed": 31059,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "edbf9f39c9daa9810ab5ae59cc579e956ea5bf73af59ab9759cdf413b3678947",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 34,
+      "family": "original-dos",
+      "setup_seed": 45,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "72a87f970830e3c13eebeaf6e33a3a1606f1ba0fb6cfa0a92853c07f078b526a",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 35,
+      "family": "original-dos",
+      "setup_seed": 32941,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "d4721b21cfa3801acd2878cd2fd80221b6af669f6f091cdff6168f11e2601a22",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 36,
+      "family": "original-dos",
+      "setup_seed": 26103,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "f943115ac7149ff36338d6a723fb69bc084c2ab1165b8867cee8921946d556cf",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 37,
+      "family": "original-dos",
+      "setup_seed": 7871,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "4499c1e985105ff88991ee77c985042a5db7cf6ff776fac98cd83d0151f71c02",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 38,
+      "family": "original-dos",
+      "setup_seed": 6701,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "7d48cd9af43140813f92ff995b1338b4910cb1a4d0ff94514d1fcb3f78c287af",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 39,
+      "family": "original-dos",
+      "setup_seed": 4826,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "e676ded29a21a673a153845041f452184271d1d60873476d98fce69accca57d9",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 40,
+      "family": "original-dos",
+      "setup_seed": 17208,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "501b5d8cbd5bf73bb48a56834b42ca52adb03fde2fba05ec0348e94a31ec7343",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 41,
+      "family": "original-dos",
+      "setup_seed": 36663,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "6e1c3934fd968af503839910048fa15b4e5152f167a258ec38b8eb61f842a378",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 42,
+      "family": "original-dos",
+      "setup_seed": 56703,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "d207e6dce1923d4fbfec3417703421d9752384ebde8ec76938256587507cb1fe",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 43,
+      "family": "original-dos",
+      "setup_seed": 16767,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "ced3699e441a4a7c087465a702fd436831bed9b0b4124e5e84575dbac2cc50d6",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 44,
+      "family": "original-dos",
+      "setup_seed": 5087,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "7ddada4077d6ab724558468882be15fd661077e2cae815719c7b46615ccf6de4",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 45,
+      "family": "original-dos",
+      "setup_seed": 168,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "9687252f06ed7b0c7be5cefa05a75e604866d7196b36b2ea8034b5d6ab69bf52",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 46,
+      "family": "original-dos",
+      "setup_seed": 29563,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "d6c775a15e3a08df579f474a0f6983e9ad2a3e5ed9d1f667a961b7f2307340ae",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 47,
+      "family": "original-dos",
+      "setup_seed": 51542,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "f19afd1b4ecc9bfbb4148486ba547b03b3610bdd16e08a5c6b7be32fb37a4d96",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 48,
+      "family": "original-dos",
+      "setup_seed": 41012,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "99eae94c4b5b0c832cdf7ef1133ededfd7f4178d1accb71ebc741ce688e379fe",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 49,
+      "family": "original-dos",
+      "setup_seed": 30843,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "8085939e8d544327bfff516d77cce42c0dc90f0ec82ed611986901ab84c38003",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 50,
+      "family": "original-dos",
+      "setup_seed": 22532,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "cdb0692448019d08a89e946bbc3da4d5c4b4010136f4a36a917553f5d9667130",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 51,
+      "family": "original-dos",
+      "setup_seed": 51173,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "e98aa27726983b506394cec7162f5df0d9927a18fccf711d249a16c214dd92f6",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 52,
+      "family": "original-dos",
+      "setup_seed": 33812,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "cb3063fb1d44544fae05264daad3d1c46f7bd02609126e2e43f3376f5e5cbdd1",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 53,
+      "family": "original-dos",
+      "setup_seed": 25353,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "d71df8f7e8564dd771736ea5bbed117ae63a563b142d282c3118b10d48d54cdb",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 54,
+      "family": "original-dos",
+      "setup_seed": 37865,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "beb8fec44512a7efe2926859f8d49990ebe1d7d29041a2e735f655208febef21",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 55,
+      "family": "original-dos",
+      "setup_seed": 19208,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "3c397525f638a7acaa081572119847c37725f909008e2053a79d450cb7db090d",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 56,
+      "family": "original-dos",
+      "setup_seed": 11541,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "91ca2329e8b275c01aeb8e370fad33952eb8a0d7999ecb0ba6562bf213d0f5e6",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 57,
+      "family": "original-dos",
+      "setup_seed": 54509,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "20c3a2587243ba3944034fbf746ad0fea78bd5675406cc0b9203f6aac1e763d7",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 58,
+      "family": "original-dos",
+      "setup_seed": 22021,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "de59f70417e4ee0587a7e8120f6397c382aceb58f28ccde40bc1151a7c8a9198",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 59,
+      "family": "original-dos",
+      "setup_seed": 48294,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "462f6ea021dadb48444ebbc83b4aed095a01f14f3c2b5fd8d083de96415a7fac",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 60,
+      "family": "original-dos",
+      "setup_seed": 17768,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "18a98a16982615fc2611c94bf4d6c6d9ea6e24134ac6968ffbbbaf6a19af9494",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 61,
+      "family": "original-dos",
+      "setup_seed": 38847,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "908448e7c45aa95984ef905ea84624f88f0280cda31e4dea21e57066d76b24ab",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 62,
+      "family": "original-dos",
+      "setup_seed": 64672,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "7bc4a1384eadc796aecc932bba3aefe954952e9b88ce740747df93834ebc1093",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 63,
+      "family": "original-dos",
+      "setup_seed": 539,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "bfab6162a91469889ab6fb4564ffe6f570e863ae86caaacb43d78cd9a3e2090d",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 64,
+      "family": "original-dos",
+      "setup_seed": 24192,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "35aaeee6eb7f6238520410b8a5f9edcf30748d349de5fe2dc4ceccc41c8b04ef",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 65,
+      "family": "original-dos",
+      "setup_seed": 33280,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "134439b46cfa078c7000b94520c0ca8ee13eb9ee5906d226e2b5f580aaadb4fd",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 66,
+      "family": "original-dos",
+      "setup_seed": 7077,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "1ffa77a61149b0c33c9294fc7b366eec3782a373134330d2623f6c0ab5116a1d",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 67,
+      "family": "original-dos",
+      "setup_seed": 27743,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "c5290c6931bfab1921cdee2ba80e08cf3ff46a263bb37dae2dd6337a31b55712",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 68,
+      "family": "original-dos",
+      "setup_seed": 17157,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "e5f473a687cf5d2811328bf08f5ac7ce11b6da6f0bff24da54dd922e8c2da5b2",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 69,
+      "family": "original-dos",
+      "setup_seed": 7711,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "b96b478fba1bf344acbc970ad6ce5a1e8f0fd5c0c1339fb582ac61f7abccc3e9",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 70,
+      "family": "original-dos",
+      "setup_seed": 64490,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "3a3cfe749bde601db47ba16a37f283459fe57ea26c792b4ce1fe0474acae7a30",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 71,
+      "family": "original-dos",
+      "setup_seed": 64858,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "c596d227088db7ff86773e8166c6fe9177f253390b3b08b5d50e1cbbfe912e76",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 72,
+      "family": "original-dos",
+      "setup_seed": 26461,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "0f49b32b221865609ade15786d2c697b2d7317d2aedbb84a11087849b91c7243",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 73,
+      "family": "original-dos",
+      "setup_seed": 23006,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "d3b7e0559024fe7d5dc6b6fa8f39105d44327b368c106d6fcab2652c11989910",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 74,
+      "family": "original-dos",
+      "setup_seed": 24263,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "b023221dca2c629bd3ad16f0cc7be8a71f3f6d93df7a39fd1037e87d675b6861",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 75,
+      "family": "original-dos",
+      "setup_seed": 15783,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "538c96834fd88e6176684245f98f089e0526461d2bf2de77ad99e6ecac49fe57",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 76,
+      "family": "original-dos",
+      "setup_seed": 7859,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "6e2f056a30fd495afbcb743a0ad6cbff48f46b4af109c2ee6017d4395c0998ce",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 77,
+      "family": "original-dos",
+      "setup_seed": 57716,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "f575ebf0e97d40dc7ccf271477577063a5e4894f4edad911bc1aeec213db03e2",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 78,
+      "family": "original-dos",
+      "setup_seed": 35752,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "dd251db727f290c2bf3004bf570a4ef098d9ed44ff462403b0897800d29be1f1",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 79,
+      "family": "original-dos",
+      "setup_seed": 7852,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "07d6df11f8fad4799724f0b870bdab2f5ec2a279b7c79f42a66170f2281f5381",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 80,
+      "family": "original-dos",
+      "setup_seed": 27568,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "5f4eaff6e622f2e606a1c0556825730e078ad89da602d50dfb5f6927defc724b",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 81,
+      "family": "original-dos",
+      "setup_seed": 12444,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "64d8be6395c350ce09d89327f176739d35b7130a7aa14fe8bc9f25de02f0427d",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 82,
+      "family": "original-dos",
+      "setup_seed": 57845,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "fa750d2ef9c289e5b17daf6dd113456c6b21977223233db75f57b1caf1fff28d",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 83,
+      "family": "original-dos",
+      "setup_seed": 22447,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "73fcbf9f66077bed5181f59b4577635a08b266171b4ca026ff4ce2a37726b7b0",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 84,
+      "family": "original-dos",
+      "setup_seed": 44777,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "6e7eb45aea80b2b44c8ed37d51a5ac7fcfc61e1154deb3fed736f5e4d239f5f9",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 85,
+      "family": "original-dos",
+      "setup_seed": 31765,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "02036b3e989d52b3b9452cd118be942ebfa0f0e9333de9c68d7b37100a2e1b75",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 86,
+      "family": "original-dos",
+      "setup_seed": 37413,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "69940053b79ff74afb4b4d232a621ebc30fae7ba6d075cec8d342091e34ef560",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 87,
+      "family": "original-dos",
+      "setup_seed": 4981,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "e6f6eab23b19bc4ce493e77deb42f06bb2144ad44711515b83a482ac35e6196d",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 88,
+      "family": "original-dos",
+      "setup_seed": 60314,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "de8458defacb181a46c4e31cb6b1df002d357c81e9c9335ffe7937cda4066117",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 89,
+      "family": "original-dos",
+      "setup_seed": 29930,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "dc05f170ced3cc2f43ddf74f9ef866fed21ea273038fb607cad780b2b662b1d4",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 90,
+      "family": "original-dos",
+      "setup_seed": 25250,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "ba6d48bf6f8773f58ca410c7c4eed4e30db5dd0f1333b6df1e43d99707b50e39",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 91,
+      "family": "original-dos",
+      "setup_seed": 38172,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "75348fffd9cc576d7b4c5d90124ccfbdb2341d07da6a71cf6f156e019cfe5970",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 92,
+      "family": "original-dos",
+      "setup_seed": 47091,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "5a34f0275f439acadc1b392d423b5a553143bb78b0bab5bf9f39f760a4b5ade2",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 93,
+      "family": "original-dos",
+      "setup_seed": 54700,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "7a5fc366135ccc6ffd77aa6f0ca27f439506d864c52c0797189a3747a0f37176",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 94,
+      "family": "original-dos",
+      "setup_seed": 1608,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "e45491342f5938c920989142d8050a29c6973d093a372801a88b641ea3ba92a4",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 95,
+      "family": "original-dos",
+      "setup_seed": 48132,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "13469cbcd55ce59101ca4addfce282011e5854e578a68dc36dcfb7d17bbb8b9d",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 96,
+      "family": "original-dos",
+      "setup_seed": 5666,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "6d6b09498b170b351340f11b052420e63d989ba878baea7dfe84765b40aaa9bb",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 97,
+      "family": "original-dos",
+      "setup_seed": 60345,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "2e7825d05c94facba8ce1dc91bbafed7f708d8e253a75547668d9ab280369cef",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 98,
+      "family": "original-dos",
+      "setup_seed": 31187,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "0b0576356424204994bdc7fe17288cd4f907d0787d1884d30c8c76c89c162120",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 99,
+      "family": "original-dos",
+      "setup_seed": 36913,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "72079234ceb76ff2317833a3405de5e2f77b6693789ca76ccb6603aa257a9de6",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 100,
+      "family": "original-dos",
+      "setup_seed": 12967,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "8e524f91c93218daca383c9ec9ad399a83f8548fd0fffbb78fa9fcfc9b0e766c",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 101,
+      "family": "original-dos",
+      "setup_seed": 12021,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "d01cd48489eaae127570808833ff5037f909d39f61fde48c5d3119e19adba715",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 102,
+      "family": "original-dos",
+      "setup_seed": 11515,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "546c6c5da96bc4f46133ab80f1d1dd13cc4318f7138545adc386e43d134e9d29",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 103,
+      "family": "original-dos",
+      "setup_seed": 47195,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "71594997d50e8a6425bd6dfadc662c6261f7dc3d8831e9d0d93bd0fd0f12ad22",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 104,
+      "family": "original-dos",
+      "setup_seed": 31272,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "119dc99100ad2a20b504d6d41da9337336fa1986428ea2bdc9e9ed88b09e02ec",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 105,
+      "family": "original-dos",
+      "setup_seed": 40466,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "e5468cdd2ac9a142485b249cede9d29d941f2712f45e02b6755c13240d917ad4",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 106,
+      "family": "original-dos",
+      "setup_seed": 42235,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "8d4c0ce99ddd7d3104834c5d3ceb32f4f780cbb41ebfff962019e2b7c0523558",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 107,
+      "family": "original-dos",
+      "setup_seed": 15745,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "a4c24a68dee6b49077875fde98ca2bc5132e6c5bc174b68892e231541e476522",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 108,
+      "family": "original-dos",
+      "setup_seed": 57141,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "88303dde89511a6488135acda0318f48414060ae5192bba3c9ef8bb9b1187cf2",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 109,
+      "family": "original-dos",
+      "setup_seed": 27273,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "0f05af112b17e3196f881d45ac625371fe2bd1702f1c5557ac6eca95396e7bdb",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 110,
+      "family": "original-dos",
+      "setup_seed": 62070,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "2a026719e7db931483dfe908cfe026227247d3e16c922daa50eb6d389685f005",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 111,
+      "family": "original-dos",
+      "setup_seed": 42750,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "697682a376ace8a595b0f989bb1a860d599d2ef0f71c2088292b4507338dfd81",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 112,
+      "family": "original-dos",
+      "setup_seed": 3763,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "babd2fd0e8251f394a363bd42bd8cf27b6664d1ab0695137b722610283438bcb",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 113,
+      "family": "original-dos",
+      "setup_seed": 62480,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "f70c7adaf659bd5ebb7d8b0c67ac1cb1309883e27a7c355816b1a1a97dd6cbc1",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 114,
+      "family": "original-dos",
+      "setup_seed": 57350,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "abe5a443cfc5102c6ea440aee829c7b73f118c80e8b1ac96d74768c26e938927",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 115,
+      "family": "original-dos",
+      "setup_seed": 27336,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "265ebbfcc76e01eb17dbfefbc6dcf754a1ba6afc7e2e4226c754e198b782ce07",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 116,
+      "family": "original-dos",
+      "setup_seed": 36669,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "4e4fb4d6263dec0b0e061e5d777f8681247f98cd3d3905cee1d81ac9c191ed7b",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 117,
+      "family": "original-dos",
+      "setup_seed": 43450,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "c8b9b03bfdf9a2185f77c1b5e260cd4ad31a0109ca034f56839c47d443e0ab23",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 118,
+      "family": "original-dos",
+      "setup_seed": 1798,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "f9d3636e50c58d51763f3162046fd6103b16c56c3c5967dff796736e86164a7f",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 119,
+      "family": "original-dos",
+      "setup_seed": 3068,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "4abe867ab9595e969d98cd0f185387382c5cec6e300c88a0b62740e583f7f9f1",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 120,
+      "family": "original-dos",
+      "setup_seed": 42192,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "fea7eb07183e9a59b3fff87fdcb4429f80c9a5658ce897eb9f03b6f25f326134",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 121,
+      "family": "original-dos",
+      "setup_seed": 3165,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "ed06b63b26ef6bfcfe1d59d1c526330504cf529d4d1342fdf06e4577b8415057",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 122,
+      "family": "original-dos",
+      "setup_seed": 39954,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "7064391a46cb4754beae0a4e6874f9680622ba00292b0348b4300c2d31c35bec",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 123,
+      "family": "original-dos",
+      "setup_seed": 33886,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "ac05fc1dea5c1b70f92267bf588415af2d2c96392e46bcc41b361e2cd8148335",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 124,
+      "family": "original-dos",
+      "setup_seed": 39371,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "1cc0d05e190cda38d22ddf1778af84ee7168f30154d3853b0eb5cc8e55c0df4f",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 125,
+      "family": "original-dos",
+      "setup_seed": 14302,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "004c1feda0629366398d90eb1df226cf3645696775dcd27868879368ed7d85ca",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 126,
+      "family": "original-dos",
+      "setup_seed": 21103,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "d26d40202546cdae95f467962eb868b0ef0507fa9ef07e7821da7250df7abb54",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 127,
+      "family": "original-dos",
+      "setup_seed": 22527,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "92b42776bfb9a0b5c4dbfde8cb125954fcd5f9585809945e2a84ff20e3694155",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 128,
+      "family": "original-dos",
+      "setup_seed": 35297,
+      "owner_setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "setup_matches": true,
+      "protocol_sha256": "fc57ded808553450216cb5a7936e4a4e6d867a670cf799bbde29bace4348a56a",
+      "streams": {
+        "stdout": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+          "replay_sha256": [
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0",
+            "a3fb267676f7804d8cd60fafadb9c3b66f09abb4e2ebedf50233ec789c3128c0"
+          ]
+        },
+        "stderr": {
+          "repeatable": true,
+          "exact_recorded_match": true,
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "replay_sha256": [
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          ]
+        }
+      }
+    }
+  ],
+  "repetitions": 2,
+  "verified_games": 256,
+  "policy_source_sha256": "3d9897c48be4ab61ac9821fc8ff0c4c65042b2a55f079c248089d079b08c2836",
+  "runtime_sha256": {
+    "engine": "465d81fb03a38ff729db74c058f84afc2ec9a1139d0e62b2158463927fc48c96",
+    "observer": "60646ad1d5cad646b435b13bc63009cab4050f94f6e8379eb5469ab2e77875fc",
+    "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+    "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+    "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+    "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+    "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+    "campaign_native_template.py": "5e50ddcc182ef92345db60894bdac3fd2b67c68acc9eda7f8b6eebeb43662d98",
+    "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c"
+  },
+  "setup_source_sha256": {
+    "tournament.py": "f91a3f995691969a230235ad0fc021b3339113efe3cf61e71dc706078b2dfce5",
+    "arena.py": "a04a4da77b56b7afebf1638bb6b4f2b752a03d0a1244a8859ba797de24a73b3e",
+    "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+    "tournament_store.py": "3069588f7abcc1cacc2854df49d719378fed6fba94b7f8fa2e07bf189b21cb78"
+  },
+  "setup_records_sha256": "a59ff819832b982e592e29da6b5a26dbf7fb902d5ab146a12b9c2a779e6cffab",
+  "all_setup_sources_present": true,
+  "no_opponent_input": true,
+  "all_streams_repeatable": true,
+  "audit_source_sha256": "6fb4557559e055823bcee3533b0672beef5599349b3d5147c90390795a7d4dba",
+  "limitation": "Repeatability is observed over the specified repeats; variable streams do not receive an exact transcript claim."
+}
