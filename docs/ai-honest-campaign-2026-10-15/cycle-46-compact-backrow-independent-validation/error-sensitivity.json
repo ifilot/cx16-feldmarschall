@@ -1,0 +1,9622 @@
+{
+  "student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal": {
+    "schema": "planned-cohort-engine-error-sensitivity-v1",
+    "interpretation": "Finite-cohort A-minus-B bounds, not confidence intervals. Error prefixes remain unscored in official standings; their unknown scores range independently over [0,1] only for this sensitivity calculation.",
+    "comparison": "student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal",
+    "setup_mode": "policy-owned-rotated-v1",
+    "sources": {
+      "a": {
+        "path": "docs/ai-honest-campaign-2026-10-15/cycle-46-compact-backrow-independent-validation/student-compact-backrow-v1-normal.fmtour",
+        "sha256": "60f5fa3871b995a0f74cf807af1ea7c32041d96611b1d5ab6d9352eee1f80413",
+        "policy": "student-compact-backrow-v1-normal",
+        "opponent": "msdos-1990-v2-normal"
+      },
+      "b": {
+        "path": "docs/ai-honest-campaign-2026-10-15/cycle-46-compact-backrow-independent-validation/student-validated-deployment-v1-normal.fmtour",
+        "sha256": "e306b77fe350194c7152e96a63cb1deb31c1054d739571293bd27d087f818862",
+        "policy": "student-validated-deployment-v1-normal",
+        "opponent": "msdos-1990-v2-normal"
+      }
+    },
+    "summary": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 200,
+        "negative_pairs": 72,
+        "zero_pairs": 129,
+        "non_tied_pairs": 272,
+        "exact_two_sided_binomial_sign_p": 4.1524159750282945e-15,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 500,
+      "error_games_a": 55,
+      "error_games_b": 64,
+      "pairs_with_any_error": 99,
+      "arms": {
+        "a": {
+          "attempted_games": 1000,
+          "error_games": 55,
+          "scored_games": 945,
+          "wins": 258,
+          "draws": 125,
+          "losses": 562,
+          "official_scored_score": 0.33915343915343915,
+          "all_attempt_score_bounds": [
+            0.3205,
+            0.3755
+          ]
+        },
+        "b": {
+          "attempted_games": 1000,
+          "error_games": 64,
+          "scored_games": 936,
+          "wins": 124,
+          "draws": 64,
+          "losses": 748,
+          "official_scored_score": 0.16666666666666666,
+          "all_attempt_score_bounds": [
+            0.156,
+            0.22
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        0.1005,
+        0.2195
+      ],
+      "complete_case_pairs": 401,
+      "complete_case_paired_effect": 0.17830423940149626
+    },
+    "families": {
+      "original-dos": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 200,
+          "negative_pairs": 72,
+          "zero_pairs": 129,
+          "non_tied_pairs": 272,
+          "exact_two_sided_binomial_sign_p": 4.1524159750282945e-15,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 500,
+        "error_games_a": 55,
+        "error_games_b": 64,
+        "pairs_with_any_error": 99,
+        "arms": {
+          "a": {
+            "attempted_games": 1000,
+            "error_games": 55,
+            "scored_games": 945,
+            "wins": 258,
+            "draws": 125,
+            "losses": 562,
+            "official_scored_score": 0.33915343915343915,
+            "all_attempt_score_bounds": [
+              0.3205,
+              0.3755
+            ]
+          },
+          "b": {
+            "attempted_games": 1000,
+            "error_games": 64,
+            "scored_games": 936,
+            "wins": 124,
+            "draws": 64,
+            "losses": 748,
+            "official_scored_score": 0.16666666666666666,
+            "all_attempt_score_bounds": [
+              0.156,
+              0.22
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.1005,
+          0.2195
+        ],
+        "complete_case_pairs": 401,
+        "complete_case_paired_effect": 0.17830423940149626
+      }
+    },
+    "pairs": [
+      {
+        "pair_id": 1,
+        "family": "original-dos",
+        "move_seed": 18755,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 2,
+        "family": "original-dos",
+        "move_seed": 31680,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 3,
+        "family": "original-dos",
+        "move_seed": 38648,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 4,
+        "family": "original-dos",
+        "move_seed": 59483,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 5,
+        "family": "original-dos",
+        "move_seed": 31112,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 6,
+        "family": "original-dos",
+        "move_seed": 30206,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 7,
+        "family": "original-dos",
+        "move_seed": 56174,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 8,
+        "family": "original-dos",
+        "move_seed": 50046,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 9,
+        "family": "original-dos",
+        "move_seed": 14572,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 10,
+        "family": "original-dos",
+        "move_seed": 49843,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 11,
+        "family": "original-dos",
+        "move_seed": 45320,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 12,
+        "family": "original-dos",
+        "move_seed": 6403,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 13,
+        "family": "original-dos",
+        "move_seed": 47442,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 14,
+        "family": "original-dos",
+        "move_seed": 11158,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 15,
+        "family": "original-dos",
+        "move_seed": 10838,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 16,
+        "family": "original-dos",
+        "move_seed": 12997,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 17,
+        "family": "original-dos",
+        "move_seed": 14201,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 18,
+        "family": "original-dos",
+        "move_seed": 19883,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 19,
+        "family": "original-dos",
+        "move_seed": 44293,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 20,
+        "family": "original-dos",
+        "move_seed": 11856,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 21,
+        "family": "original-dos",
+        "move_seed": 51862,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 22,
+        "family": "original-dos",
+        "move_seed": 16796,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 23,
+        "family": "original-dos",
+        "move_seed": 50547,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 24,
+        "family": "original-dos",
+        "move_seed": 27324,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 25,
+        "family": "original-dos",
+        "move_seed": 26090,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 26,
+        "family": "original-dos",
+        "move_seed": 40595,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 27,
+        "family": "original-dos",
+        "move_seed": 32039,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 28,
+        "family": "original-dos",
+        "move_seed": 30696,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 29,
+        "family": "original-dos",
+        "move_seed": 3166,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 30,
+        "family": "original-dos",
+        "move_seed": 22081,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 31,
+        "family": "original-dos",
+        "move_seed": 742,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 32,
+        "family": "original-dos",
+        "move_seed": 44734,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 33,
+        "family": "original-dos",
+        "move_seed": 31781,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 34,
+        "family": "original-dos",
+        "move_seed": 46065,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 35,
+        "family": "original-dos",
+        "move_seed": 53943,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 36,
+        "family": "original-dos",
+        "move_seed": 15996,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 37,
+        "family": "original-dos",
+        "move_seed": 21671,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 38,
+        "family": "original-dos",
+        "move_seed": 10538,
+        "scores_a": [
+          0.5,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 39,
+        "family": "original-dos",
+        "move_seed": 55984,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 40,
+        "family": "original-dos",
+        "move_seed": 52399,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 41,
+        "family": "original-dos",
+        "move_seed": 54145,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 42,
+        "family": "original-dos",
+        "move_seed": 53829,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 43,
+        "family": "original-dos",
+        "move_seed": 41971,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 44,
+        "family": "original-dos",
+        "move_seed": 2224,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 45,
+        "family": "original-dos",
+        "move_seed": 21306,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 46,
+        "family": "original-dos",
+        "move_seed": 46741,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 47,
+        "family": "original-dos",
+        "move_seed": 59043,
+        "scores_a": [
+          null,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 48,
+        "family": "original-dos",
+        "move_seed": 14723,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 49,
+        "family": "original-dos",
+        "move_seed": 38952,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 50,
+        "family": "original-dos",
+        "move_seed": 50003,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 51,
+        "family": "original-dos",
+        "move_seed": 55287,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 52,
+        "family": "original-dos",
+        "move_seed": 12387,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 53,
+        "family": "original-dos",
+        "move_seed": 30284,
+        "scores_a": [
+          0.5,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 54,
+        "family": "original-dos",
+        "move_seed": 46986,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 55,
+        "family": "original-dos",
+        "move_seed": 6237,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 56,
+        "family": "original-dos",
+        "move_seed": 50334,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 57,
+        "family": "original-dos",
+        "move_seed": 43283,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 58,
+        "family": "original-dos",
+        "move_seed": 5196,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 59,
+        "family": "original-dos",
+        "move_seed": 14668,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 60,
+        "family": "original-dos",
+        "move_seed": 40824,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 61,
+        "family": "original-dos",
+        "move_seed": 28579,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 62,
+        "family": "original-dos",
+        "move_seed": 20665,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.75,
+          -0.75
+        ]
+      },
+      {
+        "pair_id": 63,
+        "family": "original-dos",
+        "move_seed": 41477,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 64,
+        "family": "original-dos",
+        "move_seed": 55596,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 65,
+        "family": "original-dos",
+        "move_seed": 20191,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 66,
+        "family": "original-dos",
+        "move_seed": 24217,
+        "scores_a": [
+          null,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 67,
+        "family": "original-dos",
+        "move_seed": 23892,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 68,
+        "family": "original-dos",
+        "move_seed": 25615,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 69,
+        "family": "original-dos",
+        "move_seed": 31838,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 70,
+        "family": "original-dos",
+        "move_seed": 39036,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 71,
+        "family": "original-dos",
+        "move_seed": 59540,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 72,
+        "family": "original-dos",
+        "move_seed": 30645,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 73,
+        "family": "original-dos",
+        "move_seed": 18526,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      {
+        "pair_id": 74,
+        "family": "original-dos",
+        "move_seed": 30070,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 75,
+        "family": "original-dos",
+        "move_seed": 44797,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 76,
+        "family": "original-dos",
+        "move_seed": 23604,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 77,
+        "family": "original-dos",
+        "move_seed": 52189,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 78,
+        "family": "original-dos",
+        "move_seed": 19819,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 79,
+        "family": "original-dos",
+        "move_seed": 47586,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 80,
+        "family": "original-dos",
+        "move_seed": 32238,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 81,
+        "family": "original-dos",
+        "move_seed": 52946,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 82,
+        "family": "original-dos",
+        "move_seed": 1216,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 83,
+        "family": "original-dos",
+        "move_seed": 44280,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 84,
+        "family": "original-dos",
+        "move_seed": 28455,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 85,
+        "family": "original-dos",
+        "move_seed": 16507,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 86,
+        "family": "original-dos",
+        "move_seed": 13432,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 87,
+        "family": "original-dos",
+        "move_seed": 2280,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 88,
+        "family": "original-dos",
+        "move_seed": 26365,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 89,
+        "family": "original-dos",
+        "move_seed": 21214,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 90,
+        "family": "original-dos",
+        "move_seed": 27309,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 91,
+        "family": "original-dos",
+        "move_seed": 36772,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 92,
+        "family": "original-dos",
+        "move_seed": 49015,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 93,
+        "family": "original-dos",
+        "move_seed": 20405,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 94,
+        "family": "original-dos",
+        "move_seed": 48249,
+        "scores_a": [
+          null,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 95,
+        "family": "original-dos",
+        "move_seed": 37137,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 96,
+        "family": "original-dos",
+        "move_seed": 6709,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 97,
+        "family": "original-dos",
+        "move_seed": 32517,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 98,
+        "family": "original-dos",
+        "move_seed": 1454,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 99,
+        "family": "original-dos",
+        "move_seed": 49367,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 100,
+        "family": "original-dos",
+        "move_seed": 47577,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 101,
+        "family": "original-dos",
+        "move_seed": 15481,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 102,
+        "family": "original-dos",
+        "move_seed": 50471,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      {
+        "pair_id": 103,
+        "family": "original-dos",
+        "move_seed": 38531,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 104,
+        "family": "original-dos",
+        "move_seed": 10046,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 105,
+        "family": "original-dos",
+        "move_seed": 126,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 106,
+        "family": "original-dos",
+        "move_seed": 23969,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 107,
+        "family": "original-dos",
+        "move_seed": 46416,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 108,
+        "family": "original-dos",
+        "move_seed": 11758,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 109,
+        "family": "original-dos",
+        "move_seed": 52842,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 110,
+        "family": "original-dos",
+        "move_seed": 45214,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 111,
+        "family": "original-dos",
+        "move_seed": 10087,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 2,
+        "effect_bounds": [
+          -1.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 112,
+        "family": "original-dos",
+        "move_seed": 24114,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 113,
+        "family": "original-dos",
+        "move_seed": 59589,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 114,
+        "family": "original-dos",
+        "move_seed": 31395,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 115,
+        "family": "original-dos",
+        "move_seed": 40083,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 116,
+        "family": "original-dos",
+        "move_seed": 2405,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 117,
+        "family": "original-dos",
+        "move_seed": 123,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 118,
+        "family": "original-dos",
+        "move_seed": 46033,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 119,
+        "family": "original-dos",
+        "move_seed": 38512,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 120,
+        "family": "original-dos",
+        "move_seed": 30316,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 121,
+        "family": "original-dos",
+        "move_seed": 49559,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 122,
+        "family": "original-dos",
+        "move_seed": 4584,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 123,
+        "family": "original-dos",
+        "move_seed": 34258,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 124,
+        "family": "original-dos",
+        "move_seed": 12599,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 125,
+        "family": "original-dos",
+        "move_seed": 4651,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 126,
+        "family": "original-dos",
+        "move_seed": 29984,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 127,
+        "family": "original-dos",
+        "move_seed": 38766,
+        "scores_a": [
+          null,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 2,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 128,
+        "family": "original-dos",
+        "move_seed": 14636,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 129,
+        "family": "original-dos",
+        "move_seed": 10519,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 130,
+        "family": "original-dos",
+        "move_seed": 40381,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 131,
+        "family": "original-dos",
+        "move_seed": 748,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 132,
+        "family": "original-dos",
+        "move_seed": 587,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 133,
+        "family": "original-dos",
+        "move_seed": 20665,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 134,
+        "family": "original-dos",
+        "move_seed": 14854,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 135,
+        "family": "original-dos",
+        "move_seed": 50887,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 136,
+        "family": "original-dos",
+        "move_seed": 13929,
+        "scores_a": [
+          0.5,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 137,
+        "family": "original-dos",
+        "move_seed": 40031,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 138,
+        "family": "original-dos",
+        "move_seed": 27478,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 139,
+        "family": "original-dos",
+        "move_seed": 55217,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 140,
+        "family": "original-dos",
+        "move_seed": 41941,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.75,
+          -0.75
+        ]
+      },
+      {
+        "pair_id": 141,
+        "family": "original-dos",
+        "move_seed": 44211,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 142,
+        "family": "original-dos",
+        "move_seed": 2057,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 143,
+        "family": "original-dos",
+        "move_seed": 44190,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 144,
+        "family": "original-dos",
+        "move_seed": 18487,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 145,
+        "family": "original-dos",
+        "move_seed": 15226,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 146,
+        "family": "original-dos",
+        "move_seed": 49310,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 147,
+        "family": "original-dos",
+        "move_seed": 20529,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.75,
+          -0.75
+        ]
+      },
+      {
+        "pair_id": 148,
+        "family": "original-dos",
+        "move_seed": 58126,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 149,
+        "family": "original-dos",
+        "move_seed": 38055,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 150,
+        "family": "original-dos",
+        "move_seed": 33565,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 151,
+        "family": "original-dos",
+        "move_seed": 17153,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 152,
+        "family": "original-dos",
+        "move_seed": 57908,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 153,
+        "family": "original-dos",
+        "move_seed": 5956,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 154,
+        "family": "original-dos",
+        "move_seed": 43092,
+        "scores_a": [
+          0.5,
+          0.5
+        ],
+        "scores_b": [
+          null,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 155,
+        "family": "original-dos",
+        "move_seed": 42754,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 156,
+        "family": "original-dos",
+        "move_seed": 33339,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 157,
+        "family": "original-dos",
+        "move_seed": 26982,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 158,
+        "family": "original-dos",
+        "move_seed": 43858,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 159,
+        "family": "original-dos",
+        "move_seed": 26077,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 160,
+        "family": "original-dos",
+        "move_seed": 27815,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 161,
+        "family": "original-dos",
+        "move_seed": 55327,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 162,
+        "family": "original-dos",
+        "move_seed": 45584,
+        "scores_a": [
+          1.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 163,
+        "family": "original-dos",
+        "move_seed": 43143,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 164,
+        "family": "original-dos",
+        "move_seed": 46138,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 165,
+        "family": "original-dos",
+        "move_seed": 12624,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 166,
+        "family": "original-dos",
+        "move_seed": 23940,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 167,
+        "family": "original-dos",
+        "move_seed": 28901,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 168,
+        "family": "original-dos",
+        "move_seed": 26875,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 169,
+        "family": "original-dos",
+        "move_seed": 42447,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 170,
+        "family": "original-dos",
+        "move_seed": 31058,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 171,
+        "family": "original-dos",
+        "move_seed": 25396,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 172,
+        "family": "original-dos",
+        "move_seed": 51353,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 173,
+        "family": "original-dos",
+        "move_seed": 2640,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 174,
+        "family": "original-dos",
+        "move_seed": 30831,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 175,
+        "family": "original-dos",
+        "move_seed": 33701,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 176,
+        "family": "original-dos",
+        "move_seed": 44262,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 177,
+        "family": "original-dos",
+        "move_seed": 45154,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 2,
+        "effect_bounds": [
+          -1.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 178,
+        "family": "original-dos",
+        "move_seed": 44337,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 179,
+        "family": "original-dos",
+        "move_seed": 51783,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 180,
+        "family": "original-dos",
+        "move_seed": 35748,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 181,
+        "family": "original-dos",
+        "move_seed": 25241,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 182,
+        "family": "original-dos",
+        "move_seed": 17026,
+        "scores_a": [
+          null,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 183,
+        "family": "original-dos",
+        "move_seed": 9538,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 184,
+        "family": "original-dos",
+        "move_seed": 42154,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 185,
+        "family": "original-dos",
+        "move_seed": 31950,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 186,
+        "family": "original-dos",
+        "move_seed": 53291,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 187,
+        "family": "original-dos",
+        "move_seed": 3374,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 188,
+        "family": "original-dos",
+        "move_seed": 296,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 189,
+        "family": "original-dos",
+        "move_seed": 53921,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 190,
+        "family": "original-dos",
+        "move_seed": 4699,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 191,
+        "family": "original-dos",
+        "move_seed": 41687,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 192,
+        "family": "original-dos",
+        "move_seed": 11878,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 193,
+        "family": "original-dos",
+        "move_seed": 18515,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 194,
+        "family": "original-dos",
+        "move_seed": 27742,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 195,
+        "family": "original-dos",
+        "move_seed": 1960,
+        "scores_a": [
+          1.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 196,
+        "family": "original-dos",
+        "move_seed": 10759,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 197,
+        "family": "original-dos",
+        "move_seed": 40894,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 198,
+        "family": "original-dos",
+        "move_seed": 56773,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 199,
+        "family": "original-dos",
+        "move_seed": 770,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 200,
+        "family": "original-dos",
+        "move_seed": 57338,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 201,
+        "family": "original-dos",
+        "move_seed": 11590,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 202,
+        "family": "original-dos",
+        "move_seed": 2852,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 203,
+        "family": "original-dos",
+        "move_seed": 59093,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 204,
+        "family": "original-dos",
+        "move_seed": 6921,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 205,
+        "family": "original-dos",
+        "move_seed": 28100,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 206,
+        "family": "original-dos",
+        "move_seed": 24840,
+        "scores_a": [
+          null,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 207,
+        "family": "original-dos",
+        "move_seed": 48522,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 208,
+        "family": "original-dos",
+        "move_seed": 42025,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 209,
+        "family": "original-dos",
+        "move_seed": 4376,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 210,
+        "family": "original-dos",
+        "move_seed": 52798,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 211,
+        "family": "original-dos",
+        "move_seed": 30855,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 212,
+        "family": "original-dos",
+        "move_seed": 57139,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 213,
+        "family": "original-dos",
+        "move_seed": 40928,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 214,
+        "family": "original-dos",
+        "move_seed": 2094,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 215,
+        "family": "original-dos",
+        "move_seed": 31386,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 216,
+        "family": "original-dos",
+        "move_seed": 43217,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 217,
+        "family": "original-dos",
+        "move_seed": 54218,
+        "scores_a": [
+          1.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 218,
+        "family": "original-dos",
+        "move_seed": 35771,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 219,
+        "family": "original-dos",
+        "move_seed": 10977,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 220,
+        "family": "original-dos",
+        "move_seed": 32506,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 221,
+        "family": "original-dos",
+        "move_seed": 41700,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 222,
+        "family": "original-dos",
+        "move_seed": 26167,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 223,
+        "family": "original-dos",
+        "move_seed": 28366,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 224,
+        "family": "original-dos",
+        "move_seed": 39385,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 225,
+        "family": "original-dos",
+        "move_seed": 49359,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 226,
+        "family": "original-dos",
+        "move_seed": 14376,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 227,
+        "family": "original-dos",
+        "move_seed": 20521,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 228,
+        "family": "original-dos",
+        "move_seed": 42729,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 229,
+        "family": "original-dos",
+        "move_seed": 23627,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 230,
+        "family": "original-dos",
+        "move_seed": 35255,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 231,
+        "family": "original-dos",
+        "move_seed": 46548,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 232,
+        "family": "original-dos",
+        "move_seed": 43736,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 233,
+        "family": "original-dos",
+        "move_seed": 41301,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 234,
+        "family": "original-dos",
+        "move_seed": 4347,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 235,
+        "family": "original-dos",
+        "move_seed": 17866,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 236,
+        "family": "original-dos",
+        "move_seed": 2337,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 237,
+        "family": "original-dos",
+        "move_seed": 32768,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 238,
+        "family": "original-dos",
+        "move_seed": 40226,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 239,
+        "family": "original-dos",
+        "move_seed": 37927,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 240,
+        "family": "original-dos",
+        "move_seed": 40389,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 241,
+        "family": "original-dos",
+        "move_seed": 12509,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 242,
+        "family": "original-dos",
+        "move_seed": 20415,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 243,
+        "family": "original-dos",
+        "move_seed": 3443,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 244,
+        "family": "original-dos",
+        "move_seed": 12736,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 245,
+        "family": "original-dos",
+        "move_seed": 12971,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 246,
+        "family": "original-dos",
+        "move_seed": 22216,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 247,
+        "family": "original-dos",
+        "move_seed": 54251,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 248,
+        "family": "original-dos",
+        "move_seed": 34344,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 249,
+        "family": "original-dos",
+        "move_seed": 46247,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 250,
+        "family": "original-dos",
+        "move_seed": 58493,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 251,
+        "family": "original-dos",
+        "move_seed": 16276,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 252,
+        "family": "original-dos",
+        "move_seed": 47277,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 253,
+        "family": "original-dos",
+        "move_seed": 57726,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 254,
+        "family": "original-dos",
+        "move_seed": 46997,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 255,
+        "family": "original-dos",
+        "move_seed": 29958,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 256,
+        "family": "original-dos",
+        "move_seed": 22335,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 257,
+        "family": "original-dos",
+        "move_seed": 55338,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 258,
+        "family": "original-dos",
+        "move_seed": 27104,
+        "scores_a": [
+          0.5,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 259,
+        "family": "original-dos",
+        "move_seed": 33325,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 260,
+        "family": "original-dos",
+        "move_seed": 16894,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 261,
+        "family": "original-dos",
+        "move_seed": 30748,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 262,
+        "family": "original-dos",
+        "move_seed": 43811,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 263,
+        "family": "original-dos",
+        "move_seed": 50937,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 264,
+        "family": "original-dos",
+        "move_seed": 3396,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 265,
+        "family": "original-dos",
+        "move_seed": 49527,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 266,
+        "family": "original-dos",
+        "move_seed": 20352,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 267,
+        "family": "original-dos",
+        "move_seed": 53879,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 268,
+        "family": "original-dos",
+        "move_seed": 3075,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 269,
+        "family": "original-dos",
+        "move_seed": 38258,
+        "scores_a": [
+          1.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 270,
+        "family": "original-dos",
+        "move_seed": 27162,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 271,
+        "family": "original-dos",
+        "move_seed": 25800,
+        "scores_a": [
+          0.5,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 272,
+        "family": "original-dos",
+        "move_seed": 18797,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 273,
+        "family": "original-dos",
+        "move_seed": 46270,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 274,
+        "family": "original-dos",
+        "move_seed": 30149,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 275,
+        "family": "original-dos",
+        "move_seed": 30913,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 276,
+        "family": "original-dos",
+        "move_seed": 889,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 277,
+        "family": "original-dos",
+        "move_seed": 20183,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 278,
+        "family": "original-dos",
+        "move_seed": 37680,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 279,
+        "family": "original-dos",
+        "move_seed": 59787,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          null,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 2,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 280,
+        "family": "original-dos",
+        "move_seed": 31967,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 281,
+        "family": "original-dos",
+        "move_seed": 6294,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 282,
+        "family": "original-dos",
+        "move_seed": 44133,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 283,
+        "family": "original-dos",
+        "move_seed": 52845,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 284,
+        "family": "original-dos",
+        "move_seed": 13250,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 285,
+        "family": "original-dos",
+        "move_seed": 57135,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 286,
+        "family": "original-dos",
+        "move_seed": 19623,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 287,
+        "family": "original-dos",
+        "move_seed": 53881,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 288,
+        "family": "original-dos",
+        "move_seed": 41162,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 289,
+        "family": "original-dos",
+        "move_seed": 49030,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 290,
+        "family": "original-dos",
+        "move_seed": 29837,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 291,
+        "family": "original-dos",
+        "move_seed": 38584,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 2,
+        "effect_bounds": [
+          -1.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 292,
+        "family": "original-dos",
+        "move_seed": 5645,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 293,
+        "family": "original-dos",
+        "move_seed": 36819,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 294,
+        "family": "original-dos",
+        "move_seed": 15988,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 295,
+        "family": "original-dos",
+        "move_seed": 6617,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 296,
+        "family": "original-dos",
+        "move_seed": 10111,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 297,
+        "family": "original-dos",
+        "move_seed": 22434,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 298,
+        "family": "original-dos",
+        "move_seed": 51912,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 299,
+        "family": "original-dos",
+        "move_seed": 19019,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 300,
+        "family": "original-dos",
+        "move_seed": 48971,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 301,
+        "family": "original-dos",
+        "move_seed": 17621,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 302,
+        "family": "original-dos",
+        "move_seed": 27082,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 303,
+        "family": "original-dos",
+        "move_seed": 27021,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 304,
+        "family": "original-dos",
+        "move_seed": 55231,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 305,
+        "family": "original-dos",
+        "move_seed": 7275,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 306,
+        "family": "original-dos",
+        "move_seed": 30409,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 307,
+        "family": "original-dos",
+        "move_seed": 9885,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 308,
+        "family": "original-dos",
+        "move_seed": 29721,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 309,
+        "family": "original-dos",
+        "move_seed": 3702,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 310,
+        "family": "original-dos",
+        "move_seed": 30822,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 311,
+        "family": "original-dos",
+        "move_seed": 57499,
+        "scores_a": [
+          null,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 2,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 312,
+        "family": "original-dos",
+        "move_seed": 6895,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 313,
+        "family": "original-dos",
+        "move_seed": 18945,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 314,
+        "family": "original-dos",
+        "move_seed": 20510,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 315,
+        "family": "original-dos",
+        "move_seed": 45438,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 316,
+        "family": "original-dos",
+        "move_seed": 8829,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 317,
+        "family": "original-dos",
+        "move_seed": 54587,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 318,
+        "family": "original-dos",
+        "move_seed": 42917,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 319,
+        "family": "original-dos",
+        "move_seed": 42382,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 320,
+        "family": "original-dos",
+        "move_seed": 29368,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 321,
+        "family": "original-dos",
+        "move_seed": 33199,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 322,
+        "family": "original-dos",
+        "move_seed": 1271,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 323,
+        "family": "original-dos",
+        "move_seed": 15088,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 324,
+        "family": "original-dos",
+        "move_seed": 4186,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 325,
+        "family": "original-dos",
+        "move_seed": 54500,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 326,
+        "family": "original-dos",
+        "move_seed": 43146,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 327,
+        "family": "original-dos",
+        "move_seed": 36800,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 328,
+        "family": "original-dos",
+        "move_seed": 47101,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 329,
+        "family": "original-dos",
+        "move_seed": 6077,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 330,
+        "family": "original-dos",
+        "move_seed": 6205,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 331,
+        "family": "original-dos",
+        "move_seed": 30220,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 332,
+        "family": "original-dos",
+        "move_seed": 34329,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 333,
+        "family": "original-dos",
+        "move_seed": 28718,
+        "scores_a": [
+          null,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 334,
+        "family": "original-dos",
+        "move_seed": 49677,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 335,
+        "family": "original-dos",
+        "move_seed": 8132,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 336,
+        "family": "original-dos",
+        "move_seed": 44618,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 337,
+        "family": "original-dos",
+        "move_seed": 45998,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 338,
+        "family": "original-dos",
+        "move_seed": 50091,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 339,
+        "family": "original-dos",
+        "move_seed": 30429,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 340,
+        "family": "original-dos",
+        "move_seed": 25391,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 341,
+        "family": "original-dos",
+        "move_seed": 16126,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 342,
+        "family": "original-dos",
+        "move_seed": 37796,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 343,
+        "family": "original-dos",
+        "move_seed": 57591,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 344,
+        "family": "original-dos",
+        "move_seed": 43101,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 345,
+        "family": "original-dos",
+        "move_seed": 23737,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 346,
+        "family": "original-dos",
+        "move_seed": 41217,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 347,
+        "family": "original-dos",
+        "move_seed": 34720,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 348,
+        "family": "original-dos",
+        "move_seed": 46797,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 349,
+        "family": "original-dos",
+        "move_seed": 19796,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 350,
+        "family": "original-dos",
+        "move_seed": 18989,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 351,
+        "family": "original-dos",
+        "move_seed": 2902,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 352,
+        "family": "original-dos",
+        "move_seed": 52375,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 353,
+        "family": "original-dos",
+        "move_seed": 13037,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 354,
+        "family": "original-dos",
+        "move_seed": 55407,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 355,
+        "family": "original-dos",
+        "move_seed": 35598,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 356,
+        "family": "original-dos",
+        "move_seed": 52821,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 357,
+        "family": "original-dos",
+        "move_seed": 8423,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 358,
+        "family": "original-dos",
+        "move_seed": 13515,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 359,
+        "family": "original-dos",
+        "move_seed": 59769,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 360,
+        "family": "original-dos",
+        "move_seed": 347,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 361,
+        "family": "original-dos",
+        "move_seed": 56409,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 362,
+        "family": "original-dos",
+        "move_seed": 23016,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 363,
+        "family": "original-dos",
+        "move_seed": 18739,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 364,
+        "family": "original-dos",
+        "move_seed": 51923,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 365,
+        "family": "original-dos",
+        "move_seed": 56712,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 366,
+        "family": "original-dos",
+        "move_seed": 25536,
+        "scores_a": [
+          0.5,
+          null
+        ],
+        "scores_b": [
+          null,
+          0.5
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 367,
+        "family": "original-dos",
+        "move_seed": 7966,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 368,
+        "family": "original-dos",
+        "move_seed": 44173,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 369,
+        "family": "original-dos",
+        "move_seed": 10329,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 370,
+        "family": "original-dos",
+        "move_seed": 34678,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 371,
+        "family": "original-dos",
+        "move_seed": 27605,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 372,
+        "family": "original-dos",
+        "move_seed": 30560,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 373,
+        "family": "original-dos",
+        "move_seed": 31067,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 374,
+        "family": "original-dos",
+        "move_seed": 55950,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 375,
+        "family": "original-dos",
+        "move_seed": 23691,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 376,
+        "family": "original-dos",
+        "move_seed": 20088,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 377,
+        "family": "original-dos",
+        "move_seed": 30608,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 378,
+        "family": "original-dos",
+        "move_seed": 31872,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 379,
+        "family": "original-dos",
+        "move_seed": 44545,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 380,
+        "family": "original-dos",
+        "move_seed": 54170,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 381,
+        "family": "original-dos",
+        "move_seed": 9684,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 382,
+        "family": "original-dos",
+        "move_seed": 58983,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 383,
+        "family": "original-dos",
+        "move_seed": 30280,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 384,
+        "family": "original-dos",
+        "move_seed": 48044,
+        "scores_a": [
+          0.5,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 385,
+        "family": "original-dos",
+        "move_seed": 2332,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 386,
+        "family": "original-dos",
+        "move_seed": 26456,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 387,
+        "family": "original-dos",
+        "move_seed": 48541,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 388,
+        "family": "original-dos",
+        "move_seed": 3547,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 389,
+        "family": "original-dos",
+        "move_seed": 23341,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 390,
+        "family": "original-dos",
+        "move_seed": 72,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 391,
+        "family": "original-dos",
+        "move_seed": 15195,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 392,
+        "family": "original-dos",
+        "move_seed": 25783,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 393,
+        "family": "original-dos",
+        "move_seed": 51486,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 394,
+        "family": "original-dos",
+        "move_seed": 11714,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 395,
+        "family": "original-dos",
+        "move_seed": 41077,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 396,
+        "family": "original-dos",
+        "move_seed": 20685,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 397,
+        "family": "original-dos",
+        "move_seed": 59411,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 398,
+        "family": "original-dos",
+        "move_seed": 31183,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 399,
+        "family": "original-dos",
+        "move_seed": 47416,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 400,
+        "family": "original-dos",
+        "move_seed": 56485,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 401,
+        "family": "original-dos",
+        "move_seed": 41066,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 402,
+        "family": "original-dos",
+        "move_seed": 27683,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 403,
+        "family": "original-dos",
+        "move_seed": 14156,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 404,
+        "family": "original-dos",
+        "move_seed": 3004,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 405,
+        "family": "original-dos",
+        "move_seed": 59744,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 406,
+        "family": "original-dos",
+        "move_seed": 37252,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 407,
+        "family": "original-dos",
+        "move_seed": 38861,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 408,
+        "family": "original-dos",
+        "move_seed": 23596,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          null,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 409,
+        "family": "original-dos",
+        "move_seed": 10005,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 410,
+        "family": "original-dos",
+        "move_seed": 39534,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 411,
+        "family": "original-dos",
+        "move_seed": 50603,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 412,
+        "family": "original-dos",
+        "move_seed": 49403,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 413,
+        "family": "original-dos",
+        "move_seed": 25173,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 414,
+        "family": "original-dos",
+        "move_seed": 49194,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 415,
+        "family": "original-dos",
+        "move_seed": 37518,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 416,
+        "family": "original-dos",
+        "move_seed": 56096,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 417,
+        "family": "original-dos",
+        "move_seed": 47209,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 418,
+        "family": "original-dos",
+        "move_seed": 34698,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 419,
+        "family": "original-dos",
+        "move_seed": 8447,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 420,
+        "family": "original-dos",
+        "move_seed": 51398,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 421,
+        "family": "original-dos",
+        "move_seed": 16344,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 422,
+        "family": "original-dos",
+        "move_seed": 52683,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 423,
+        "family": "original-dos",
+        "move_seed": 14332,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 424,
+        "family": "original-dos",
+        "move_seed": 56089,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 425,
+        "family": "original-dos",
+        "move_seed": 56030,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 426,
+        "family": "original-dos",
+        "move_seed": 25962,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 427,
+        "family": "original-dos",
+        "move_seed": 31815,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 428,
+        "family": "original-dos",
+        "move_seed": 21036,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 429,
+        "family": "original-dos",
+        "move_seed": 25223,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 430,
+        "family": "original-dos",
+        "move_seed": 21945,
+        "scores_a": [
+          0.5,
+          null
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.25,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 431,
+        "family": "original-dos",
+        "move_seed": 34587,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 432,
+        "family": "original-dos",
+        "move_seed": 10118,
+        "scores_a": [
+          0.5,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 433,
+        "family": "original-dos",
+        "move_seed": 56327,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 434,
+        "family": "original-dos",
+        "move_seed": 56946,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 435,
+        "family": "original-dos",
+        "move_seed": 5893,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 436,
+        "family": "original-dos",
+        "move_seed": 18372,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 437,
+        "family": "original-dos",
+        "move_seed": 27654,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 438,
+        "family": "original-dos",
+        "move_seed": 19859,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 439,
+        "family": "original-dos",
+        "move_seed": 20731,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 440,
+        "family": "original-dos",
+        "move_seed": 14125,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 441,
+        "family": "original-dos",
+        "move_seed": 28568,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 442,
+        "family": "original-dos",
+        "move_seed": 34353,
+        "scores_a": [
+          null,
+          null
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 2,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 443,
+        "family": "original-dos",
+        "move_seed": 13490,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 444,
+        "family": "original-dos",
+        "move_seed": 13404,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 445,
+        "family": "original-dos",
+        "move_seed": 47509,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.75,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 446,
+        "family": "original-dos",
+        "move_seed": 11989,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 447,
+        "family": "original-dos",
+        "move_seed": 27674,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 448,
+        "family": "original-dos",
+        "move_seed": 5753,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 449,
+        "family": "original-dos",
+        "move_seed": 42192,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 450,
+        "family": "original-dos",
+        "move_seed": 10364,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 451,
+        "family": "original-dos",
+        "move_seed": 49728,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 452,
+        "family": "original-dos",
+        "move_seed": 24687,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      {
+        "pair_id": 453,
+        "family": "original-dos",
+        "move_seed": 21778,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 454,
+        "family": "original-dos",
+        "move_seed": 51104,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 455,
+        "family": "original-dos",
+        "move_seed": 38046,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 456,
+        "family": "original-dos",
+        "move_seed": 20493,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 457,
+        "family": "original-dos",
+        "move_seed": 58002,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 458,
+        "family": "original-dos",
+        "move_seed": 18238,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 459,
+        "family": "original-dos",
+        "move_seed": 35367,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 460,
+        "family": "original-dos",
+        "move_seed": 38573,
+        "scores_a": [
+          null,
+          null
+        ],
+        "scores_b": [
+          null,
+          0.5
+        ],
+        "errors_a": 2,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 461,
+        "family": "original-dos",
+        "move_seed": 33187,
+        "scores_a": [
+          0.0,
+          null
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 462,
+        "family": "original-dos",
+        "move_seed": 10333,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 463,
+        "family": "original-dos",
+        "move_seed": 5976,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 464,
+        "family": "original-dos",
+        "move_seed": 11580,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 465,
+        "family": "original-dos",
+        "move_seed": 21779,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 466,
+        "family": "original-dos",
+        "move_seed": 10099,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.5
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.75,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 467,
+        "family": "original-dos",
+        "move_seed": 37188,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 468,
+        "family": "original-dos",
+        "move_seed": 14163,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 469,
+        "family": "original-dos",
+        "move_seed": 21594,
+        "scores_a": [
+          0.5,
+          null
+        ],
+        "scores_b": [
+          1.0,
+          null
+        ],
+        "errors_a": 1,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.75,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 470,
+        "family": "original-dos",
+        "move_seed": 41681,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 471,
+        "family": "original-dos",
+        "move_seed": 20242,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 472,
+        "family": "original-dos",
+        "move_seed": 14617,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 473,
+        "family": "original-dos",
+        "move_seed": 18546,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 474,
+        "family": "original-dos",
+        "move_seed": 48933,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 475,
+        "family": "original-dos",
+        "move_seed": 4502,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 476,
+        "family": "original-dos",
+        "move_seed": 41658,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 477,
+        "family": "original-dos",
+        "move_seed": 55413,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 478,
+        "family": "original-dos",
+        "move_seed": 36644,
+        "scores_a": [
+          1.0,
+          null
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 479,
+        "family": "original-dos",
+        "move_seed": 18414,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          null,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 480,
+        "family": "original-dos",
+        "move_seed": 35210,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 481,
+        "family": "original-dos",
+        "move_seed": 9774,
+        "scores_a": [
+          null,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 1,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 482,
+        "family": "original-dos",
+        "move_seed": 29883,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.5
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      },
+      {
+        "pair_id": 483,
+        "family": "original-dos",
+        "move_seed": 48550,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          1.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 484,
+        "family": "original-dos",
+        "move_seed": 28971,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 485,
+        "family": "original-dos",
+        "move_seed": 31618,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 486,
+        "family": "original-dos",
+        "move_seed": 44172,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 487,
+        "family": "original-dos",
+        "move_seed": 2390,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 488,
+        "family": "original-dos",
+        "move_seed": 45529,
+        "scores_a": [
+          0.5,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "pair_id": 489,
+        "family": "original-dos",
+        "move_seed": 24,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 490,
+        "family": "original-dos",
+        "move_seed": 2044,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 491,
+        "family": "original-dos",
+        "move_seed": 27455,
+        "scores_a": [
+          1.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 492,
+        "family": "original-dos",
+        "move_seed": 3516,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          null
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 493,
+        "family": "original-dos",
+        "move_seed": 1657,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 494,
+        "family": "original-dos",
+        "move_seed": 37326,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          null,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 1,
+        "effect_bounds": [
+          -0.5,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 495,
+        "family": "original-dos",
+        "move_seed": 17476,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.5,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "pair_id": 496,
+        "family": "original-dos",
+        "move_seed": 18975,
+        "scores_a": [
+          0.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "pair_id": 497,
+        "family": "original-dos",
+        "move_seed": 54603,
+        "scores_a": [
+          1.0,
+          1.0
+        ],
+        "scores_b": [
+          0.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pair_id": 498,
+        "family": "original-dos",
+        "move_seed": 53376,
+        "scores_a": [
+          1.0,
+          0.5
+        ],
+        "scores_b": [
+          0.5,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": 499,
+        "family": "original-dos",
+        "move_seed": 52156,
+        "scores_a": [
+          0.0,
+          0.0
+        ],
+        "scores_b": [
+          1.0,
+          0.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      {
+        "pair_id": 500,
+        "family": "original-dos",
+        "move_seed": 32098,
+        "scores_a": [
+          0.0,
+          0.5
+        ],
+        "scores_b": [
+          0.0,
+          1.0
+        ],
+        "errors_a": 0,
+        "errors_b": 0,
+        "effect_bounds": [
+          -0.25,
+          -0.25
+        ]
+      }
+    ]
+  }
+}

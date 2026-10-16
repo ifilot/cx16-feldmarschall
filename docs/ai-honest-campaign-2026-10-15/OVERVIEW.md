@@ -85,6 +85,8 @@ Scores count wins plus half of draws; engine errors remain unscored. Compare pol
 | 42 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 122 / 91 / 710 | 18.1% | 77 |
 | 42 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 279 / 202 / 483 | 39.4% | 36 |
 | 42 | Own setup, original DOS, rotated | student-template-q24-native-v1-normal | 278 / 203 / 484 | 39.3% | 35 |
+| 46 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 124 / 64 / 748 | 16.7% | 64 |
+| 46 | Own setup, original DOS, rotated | student-compact-backrow-v1-normal | 258 / 125 / 562 | 33.9% | 55 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -460,6 +462,17 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +22.5 percentage points; 95% paired interval [+18.5, +26.4].
 
 
+**Cycle 46 hypotheses:** The unchanged compact honest back-row population prior retains its DOS improvement over unchanged native play on a fresh independent fixed cohort.
+
+Evidence: [cycle-46-compact-backrow-independent-validation](cycle-46-compact-backrow-independent-validation/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: +17.8 percentage points; 95% paired interval [+13.8, +21.8].
+
+
 **Preflight failures, without DOS strength results:**
 
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
@@ -522,7 +535,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 43: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-43-public-forks-dos-screen/plan.json).
 - Cycle 44: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-44-public-forks-honest-generality/plan.json).
 - Cycle 45: Exact public-evidence caching preserves native Q24 playing decisions and DOS outcomes while reducing inference preparation cost when evidence is unchanged. 800 planned comparison attempts; registered; no completed strength result. [Plan](cycle-45-template-exact-cache-bridge/plan.json).
-- Cycle 46: The unchanged compact honest back-row population prior retains its DOS improvement over unchanged native play on a fresh independent fixed cohort. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-46-compact-backrow-independent-validation/plan.json).
 - Cycle 47: A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-47-capture-net-shared-control-screen/plan.json).
 - Cycle 48: A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-48-capture-net-honest-generality/plan.json).
 

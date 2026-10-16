@@ -1,0 +1,32 @@
+{
+  "scope": "Source-bound metadata-only operational diagnosis; no moves/positions/setups queried.",
+  "method_source": "docs/ai-honest-campaign-2026-10-15/research/terminal-error-actors-v1/audit.py",
+  "files": [
+    {
+      "file": "docs/ai-honest-campaign-2026-10-15/cycle-46-compact-backrow-independent-validation/student-compact-backrow-v1-normal.fmtour",
+      "bindings": {
+        "referee/openmp-worker": "b59624b034a42a38b3ab4cef9d737218befc431ab27ee03a524d46784eff28b3",
+        "referee/worker-sources.zip": "5dffbe15f5e45a4ea3e0e879a0af12e7db8b07f519069aa39acd0964365c06b3",
+        "desktop/worker.cpp": "4845a3caa6ba0e5e77b93a23d41de88386e5d640c13c52ee4172b0c9ab1851f8"
+      },
+      "reasons": {
+        "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 55
+      },
+      "illegal_actors": {},
+      "illegal_records": []
+    },
+    {
+      "file": "docs/ai-honest-campaign-2026-10-15/cycle-46-compact-backrow-independent-validation/student-validated-deployment-v1-normal.fmtour",
+      "bindings": {
+        "referee/openmp-worker": "b59624b034a42a38b3ab4cef9d737218befc431ab27ee03a524d46784eff28b3",
+        "referee/worker-sources.zip": "5dffbe15f5e45a4ea3e0e879a0af12e7db8b07f519069aa39acd0964365c06b3",
+        "desktop/worker.cpp": "4845a3caa6ba0e5e77b93a23d41de88386e5d640c13c52ee4172b0c9ab1851f8"
+      },
+      "reasons": {
+        "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 64
+      },
+      "illegal_actors": {},
+      "illegal_records": []
+    }
+  ]
+}
