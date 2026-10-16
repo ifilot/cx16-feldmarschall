@@ -1,0 +1,15 @@
+Running student-template-flag-bomb-v1-normal
+Verified student-template-flag-bomb-v1-normal {'wins': 275, 'draws': 209, 'losses': 482, 'score': 0.39285714285714285}
+Traceback (most recent call last):
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/campaign_cycle.py", line 638, in <module>
+    audit(args.directory)
+^^^^^^
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/campaign_cycle.py", line 630, in main
+    print(init_contact_risk())
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/campaign_cycle.py", line 90, in evaluate
+    validate_metadata(path, match, plan, frozen)
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/information_strategy_cycle.py", line 50, in validate_metadata
+    assert metadata['status'] == 'complete', f'Incomplete evidence is preserved: {path}'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Incomplete evidence is preserved: docs/ai-honest-campaign-2026-10-15/cycle-43-public-forks-dos-screen/student-template-public-forks-v1-normal.fmtour

@@ -1,0 +1,106 @@
+{
+  "cycle": 43,
+  "hypotheses": [
+    "A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-template-flag-bomb-v1-normal": {
+      "wins": 275,
+      "draws": 209,
+      "losses": 482,
+      "score": 0.39285714285714285,
+      "errors": 34
+    },
+    "student-template-public-forks-v1-normal": {
+      "wins": 276,
+      "draws": 206,
+      "losses": 485,
+      "score": 0.39193381592554294,
+      "errors": 33
+    }
+  },
+  "execution_seconds": {
+    "student-template-flag-bomb-v1-normal": 1444.4923406529997,
+    "student-template-public-forks-v1-normal": 1208.893221831997
+  },
+  "comparisons": {
+    "student-template-public-forks-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_pairs": 469,
+      "pairs_by_family": {
+        "original-dos": 469
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.0005330490405117271,
+          "interval_95": [
+            -0.006396588486140725,
+            0.005330490405117271
+          ],
+          "interval_98_3333": [
+            -0.007462686567164179,
+            0.006929637526652452
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 2000,
+  "error_sensitivity": {
+    "student-template-public-forks-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 6,
+        "negative_pairs": 7,
+        "zero_pairs": 456,
+        "non_tied_pairs": 13,
+        "exact_two_sided_binomial_sign_p": 1.0,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 500,
+      "error_games_a": 33,
+      "error_games_b": 34,
+      "pairs_with_any_error": 31,
+      "arms": {
+        "a": {
+          "attempted_games": 1000,
+          "error_games": 33,
+          "scored_games": 967,
+          "wins": 276,
+          "draws": 206,
+          "losses": 485,
+          "official_scored_score": 0.39193381592554294,
+          "all_attempt_score_bounds": [
+            0.379,
+            0.412
+          ]
+        },
+        "b": {
+          "attempted_games": 1000,
+          "error_games": 34,
+          "scored_games": 966,
+          "wins": 275,
+          "draws": 209,
+          "losses": 482,
+          "official_scored_score": 0.39285714285714285,
+          "all_attempt_score_bounds": [
+            0.3795,
+            0.4135
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.0345,
+        0.0325
+      ],
+      "complete_case_pairs": 469,
+      "complete_case_paired_effect": -0.0005330490405117271
+    }
+  },
+  "errors": 67,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 2000
+}

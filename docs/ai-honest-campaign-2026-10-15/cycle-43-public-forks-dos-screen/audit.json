@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 111,
+  "attempts": 2000,
+  "errors_preserved_unscored": 67,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 2,
+  "exact_rebuild_runtime_sha256": {
+    "student-template-public-forks-v1-normal": {
+      "engine": "2c89000ffb45a28f1518bd54045db85dec08594abf402e47a339cf4b699411fd",
+      "observer": "cd493e42a0bc6d97277b83005b0dc36515a54d34cd3446bcf3a26618e1926594",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_native_template.py": "c7d7f448d1a7b9c840ed990caad8e0e2c02d6318da489351d1e12579c90810aa",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+      "campaign_native_mobile.py": "0b2d4cf7fe8c3899f0559c529be00eb9129862515d7885e402e4669351a5aec3",
+      "campaign_mobile_capture.py": "3222678e4e2ec8beef63e5cacf4df4a4f638db0687541e86fc83986be86a71cf"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    31
+  ],
+  "test_skip_summaries": []
+}
