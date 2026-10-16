@@ -129,7 +129,7 @@ def evaluate(directory):
     return result
 
 
-def overview(through_cycle=None):
+def overview(through_cycle=None, exclude_results=()):
     lines = ['# Honest AI campaign: cumulative DOS results', '',
              'Scores count wins plus half of draws; original DOS errors are excluded. '
              'Compare policies within their matched cycle. Screening results do not establish promotion.', '',
@@ -138,6 +138,8 @@ def overview(through_cycle=None):
     details = []
     for path in sorted(BASE.glob('cycle-*/result.json')):
         result = json.loads(path.read_text())
+        if result['cycle'] in exclude_results:
+            continue
         if through_cycle is not None and result['cycle']>through_cycle:
             continue
         if result.get('independent_honest_heads'):
@@ -223,9 +225,9 @@ def overview(through_cycle=None):
         lines += ['- Moving the prior interface into unbanked memory resolves the AI-bank limit but overflows main memory by 748 bytes. Simple relocation is insufficient; no production source changed. [Evidence](research/native-belief-main-fit/README.md).', '']
     pending = []
     for path in sorted(BASE.glob('cycle-*/plan.json')):
-        if (path.parent/'result.json').exists() or (path.parent/'preflight-result.json').exists():
-            continue
         plan = json.loads(path.read_text())
+        if ((path.parent/'result.json').exists() and plan['cycle'] not in exclude_results) or (path.parent/'preflight-result.json').exists():
+            continue
         if through_cycle is not None and plan['cycle']>through_cycle:
             continue
         count = plan.get('planned_games',2*len(plan['families'])*plan['rounds']*len(plan.get('policies',[])))

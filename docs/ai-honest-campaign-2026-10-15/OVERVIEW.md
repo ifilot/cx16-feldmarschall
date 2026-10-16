@@ -40,6 +40,8 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 12 | Fixed armies, seven stress families | teacher-context-v1-normal | 563 / 33 / 1473 | 28.0% | 31 |
 | 12 | Fixed armies, seven stress families | teacher-flag-row-control-v1-normal | 575 / 36 / 1448 | 28.8% | 41 |
 | 12 | Fixed armies, seven stress families | teacher-joint-setup-v1-normal | 585 / 35 / 1450 | 29.1% | 30 |
+| 14 | Fixed armies, seven stress families | student-guard-v1-normal | 617 / 72 / 1381 | 31.5% | 30 |
+| 14 | Fixed armies, seven stress families | student-exact-contact-risk-v1-normal | 631 / 74 / 1373 | 32.1% | 22 |
 | 16 | Fixed armies, seven stress families | student-guard-v1-normal | 172 / 32 / 345 | 34.2% | 11 |
 | 16 | Fixed armies, seven stress families | student-counts-belief-objectives-v3-normal | 163 / 27 / 360 | 32.1% | 10 |
 | 16 | Fixed armies, seven stress families | student-joint-belief-objectives-v3-normal | 181 / 38 / 339 | 35.8% | 2 |
@@ -141,6 +143,13 @@ Evidence: [cycle-12-setup-belief-validation](cycle-12-setup-belief-validation/re
 Prespecified independent validation: interpret the three contrasts with the 98.3333% intervals recorded in result.json; no tuning on this cohort.
 
 
+**Cycle 14 hypotheses:** Independently validate whether joint probability of any lethal concealed contact improves the native guard against DOS.
+
+Evidence: [cycle-14-native-contact-validation](cycle-14-native-contact-validation/result.json).
+
+- student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +0.4 percentage points; 95% paired interval [-1.6, +2.4].
+
+
 **Cycle 16 hypotheses:** Connect public Flag/Bomb beliefs to native persistent objectives, quiet routes and nonlinear capture evaluation without a rollout engine.; Separate correct moved/unmoved count conditioning from the learned joint setup prior.
 
 Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectives-v3/result.json).
@@ -225,7 +234,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 8: Reduce finite-eight-world importance-weight noise without increasing native rollout count.; Separate equal-weight proposal control from approximate posterior correction by rank-swap rejuvenation. 2,240 planned attempts; no completed strength result. [Frozen plan](cycle-08-rank-swap-beliefs/plan.json).
 - Cycle 10: Prevent known two-turn Flag threats by deploying and retaining rank-capable interception coverage before immediate danger. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-10-preventive-flag-interception/plan.json).
 - Cycle 11: Connect public setup beliefs to hidden-capture values that the continuation correction currently subtracts.; Compare count-conditioned marginals against correlated setup marginals with identical frozen joint-sampled futures. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-11-belief-capture-values/plan.json).
-- Cycle 14: Independently validate whether joint probability of any lethal concealed contact improves the native guard against DOS. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-14-native-contact-validation/plan.json).
 - Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).

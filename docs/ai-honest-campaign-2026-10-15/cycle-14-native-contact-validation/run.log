@@ -1,0 +1,4 @@
+Running student-guard-v1-normal
+Verified student-guard-v1-normal {'wins': 617, 'draws': 72, 'losses': 1381, 'score': 0.3154589371980676}
+Running student-exact-contact-risk-v1-normal
+Verified student-exact-contact-risk-v1-normal {'wins': 631, 'draws': 74, 'losses': 1373, 'score': 0.32146294513955725}

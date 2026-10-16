@@ -1,0 +1,118 @@
+{
+  "cycle": 14,
+  "hypotheses": [
+    "Independently validate whether joint probability of any lethal concealed contact improves the native guard against DOS."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "standings": {
+    "student-guard-v1-normal": {
+      "wins": 617,
+      "draws": 72,
+      "losses": 1381,
+      "score": 0.3154589371980676,
+      "errors": 30
+    },
+    "student-exact-contact-risk-v1-normal": {
+      "wins": 631,
+      "draws": 74,
+      "losses": 1373,
+      "score": 0.32146294513955725,
+      "errors": 22
+    }
+  },
+  "execution_seconds": {
+    "student-guard-v1-normal": 559.7614546300028,
+    "student-exact-contact-risk-v1-normal": 552.8580414219978
+  },
+  "comparisons": {
+    "student-exact-contact-risk-v1-normal minus student-guard-v1-normal": {
+      "complete_pairs": 1006,
+      "pairs_by_family": {
+        "fortified": 136,
+        "uniform": 149,
+        "unguarded": 149,
+        "forward": 150,
+        "decoy": 150,
+        "presets": 129,
+        "broad-mixed": 143
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.003727634194831014,
+          "interval_95": [
+            -0.016153081510934395,
+            0.02360834990059642
+          ],
+          "interval_98_3333": [
+            -0.020377733598409543,
+            0.027833001988071572
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 4200,
+  "error_sensitivity": {
+    "student-exact-contact-risk-v1-normal minus student-guard-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 206,
+        "negative_pairs": 204,
+        "zero_pairs": 596,
+        "non_tied_pairs": 410,
+        "exact_two_sided_binomial_sign_p": 0.9606193101436141,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 1050,
+      "error_games_a": 22,
+      "error_games_b": 30,
+      "pairs_with_any_error": 44,
+      "arms": {
+        "a": {
+          "attempted_games": 2100,
+          "error_games": 22,
+          "scored_games": 2078,
+          "wins": 631,
+          "draws": 74,
+          "losses": 1373,
+          "official_scored_score": 0.32146294513955725,
+          "all_attempt_score_bounds": [
+            0.3180952380952381,
+            0.32857142857142857
+          ]
+        },
+        "b": {
+          "attempted_games": 2100,
+          "error_games": 30,
+          "scored_games": 2070,
+          "wins": 617,
+          "draws": 72,
+          "losses": 1381,
+          "official_scored_score": 0.3154589371980676,
+          "all_attempt_score_bounds": [
+            0.310952380952381,
+            0.3252380952380952
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.007142857142857143,
+        0.017619047619047618
+      ],
+      "complete_case_pairs": 1006,
+      "complete_case_paired_effect": 0.003727634194831014
+    }
+  },
+  "errors": 52,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 4200
+}
