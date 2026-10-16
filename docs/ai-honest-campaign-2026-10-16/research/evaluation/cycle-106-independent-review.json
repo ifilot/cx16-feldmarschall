@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "cycle": 106,
+  "scope": "Independent read-only SQLite row accounting and artifact hashes; checks retained full-replay receipts but does not rerun replay.",
+  "manifest_files": 24,
+  "attempts": 512,
+  "errors_preserved_unscored": 3,
+  "artifacts_verified": {
+    "student-fortress-template-flag-bomb-v1-normal": 51,
+    "student-fortress-template-missed-background-v2-normal": 54
+  },
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 77,
+      "draws": 49,
+      "losses": 129,
+      "errors": 1,
+      "score": 0.3980392156862745
+    },
+    "student-fortress-template-missed-background-v2-normal": {
+      "wins": 76,
+      "draws": 49,
+      "losses": 129,
+      "errors": 2,
+      "score": 0.3956692913385827
+    }
+  },
+  "contrasts": {
+    "student-fortress-template-missed-background-v2-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "planned_pairs": 128,
+      "complete_pairs": 126,
+      "paired_effect": -0.003968253968253968,
+      "directions": {
+        "tied": 125,
+        "error_pairs": 2,
+        "negative": 1
+      },
+      "finite_missing_score_bounds": [
+        -0.0078125,
+        0.00390625
+      ]
+    }
+  },
+  "source_manifest_sha256": "b07e85ae1f0921e9bb680c0e4ef2c70175662f8a38f78f6a183566757f9bdf6d"
+}
