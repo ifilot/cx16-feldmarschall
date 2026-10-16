@@ -1,0 +1,181 @@
+{
+  "returncode": 0,
+  "command": [
+    "cl65",
+    "-O",
+    "-t",
+    "cx16",
+    "-I",
+    ".",
+    "-I",
+    "core",
+    "-I",
+    "ui",
+    "-I",
+    "scenes",
+    "-DBANKED_AI",
+    "-DAI_MISSIONS",
+    "-DAI_MEMORY",
+    "-DAI_STUDENT",
+    "-DAI_STUDENT_V2",
+    "-DAI_STUDENT_PRODUCTION",
+    "-DAI_STUDENT_COOP_GUARD",
+    "--asm-define",
+    "AI_MEMORY",
+    "-Wl",
+    "-D,__STACKSIZE__=0x0400",
+    "-C",
+    "feldmarschall.cfg",
+    "-o",
+    "FELDMARS.PRG",
+    "-m",
+    "FELDMARS.map",
+    "main.c",
+    "core/ai.c",
+    "core/ai_deploy.c",
+    "core/ai_level.c",
+    "core/ai_memory.c",
+    "core/ai_mission.c",
+    "core/ai_student.c",
+    "core/board.c",
+    "core/pieces.c",
+    "core/presets.c",
+    "core/random.c",
+    "core/rules.c",
+    "core/setup.c",
+    "core/store.c",
+    "ui/boardview.c",
+    "ui/button.c",
+    "ui/colors.c",
+    "ui/dialog.c",
+    "ui/drag.c",
+    "ui/input.c",
+    "ui/panel.c",
+    "ui/sound.c",
+    "ui/video.c",
+    "scenes/about.c",
+    "scenes/deploy.c",
+    "scenes/deploy_dialog.c",
+    "scenes/dev.c",
+    "scenes/game_settings.c",
+    "scenes/menu.c",
+    "scenes/options.c",
+    "scenes/play.c",
+    "ui/ai_bank.s",
+    "ui/input_low.s",
+    "ui/mission_bank.s",
+    "ui/sound_low.s",
+    "scenes/play_bank.s",
+    "vendor/zsmkit.lib"
+  ],
+  "stdout": "",
+  "stderr": "",
+  "segments": {
+    "ZEROPAGE": {
+      "start": 34,
+      "end": 59,
+      "size": 26
+    },
+    "LOADADDR": {
+      "start": 2047,
+      "end": 2048,
+      "size": 2
+    },
+    "EXEHDR": {
+      "start": 2049,
+      "end": 2060,
+      "size": 12
+    },
+    "STARTUP": {
+      "start": 2061,
+      "end": 2100,
+      "size": 40
+    },
+    "CODE": {
+      "start": 2101,
+      "end": 26783,
+      "size": 24683
+    },
+    "ZSMKITLIB": {
+      "start": 26784,
+      "end": 32771,
+      "size": 5988
+    },
+    "RODATA": {
+      "start": 32772,
+      "end": 36961,
+      "size": 4190
+    },
+    "DATA": {
+      "start": 36962,
+      "end": 37074,
+      "size": 113
+    },
+    "INIT": {
+      "start": 37075,
+      "end": 37076,
+      "size": 2
+    },
+    "BSS": {
+      "start": 37077,
+      "end": 39094,
+      "size": 2018
+    },
+    "ONCE": {
+      "start": 37077,
+      "end": 37142,
+      "size": 66
+    },
+    "AICODE": {
+      "start": 40960,
+      "end": 47478,
+      "size": 6519
+    },
+    "MISSIONCODE": {
+      "start": 40960,
+      "end": 46776,
+      "size": 5817
+    },
+    "PLAYCODE": {
+      "start": 40960,
+      "end": 47590,
+      "size": 6631
+    },
+    "ZSMKITBANK": {
+      "start": 40960,
+      "end": 47202,
+      "size": 6243
+    },
+    "MISSIONRODATA": {
+      "start": 46777,
+      "end": 47090,
+      "size": 314
+    },
+    "MISSIONBSS": {
+      "start": 47091,
+      "end": 48471,
+      "size": 1381
+    },
+    "AIRODATA": {
+      "start": 47479,
+      "end": 47902,
+      "size": 424
+    },
+    "PLAYRODATA": {
+      "start": 47591,
+      "end": 48991,
+      "size": 1401
+    },
+    "AIBSS": {
+      "start": 47903,
+      "end": 49106,
+      "size": 1204
+    }
+  },
+  "free_bytes": {
+    "AI": 45,
+    "MISSION": 680,
+    "PLAY": 160,
+    "MAIN": 585
+  }
+}

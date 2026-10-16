@@ -1,0 +1,42 @@
+{
+  "CONCLUSION.md": {
+    "bytes": 4835,
+    "sha256": "3f3b48eaf0a3a0b831121d897f4ea3fe6f4b6f12508d8d8cbc5bf95875b546ce"
+  },
+  "HANDOFF.md": {
+    "bytes": 1444,
+    "sha256": "f6747c1e07afadb0af1831b30381fb3f909401c689ef64b34efc479ef1669639"
+  },
+  "PROTOCOL.json": {
+    "bytes": 3535,
+    "sha256": "eec9cb37db7503a7c0dcbc4a18d5538bed5dfee844e037780a1773b0259f4a46"
+  },
+  "audit.py": {
+    "bytes": 6463,
+    "sha256": "b73251a1faf6d7eff75ca4479c1cb1a25dae88f279743d8e886ffb970571f9d3"
+  },
+  "result.json": {
+    "bytes": 1718176,
+    "sha256": "b0a81d23754f2b5cfe3e5c77d369d1d18f73cc73fe31f0f58389881f158419b1"
+  },
+  "risk.py": {
+    "bytes": 3282,
+    "sha256": "a289d7e6a020f963b5731149abf066874c7afd209c3148c999aa4d8fc467557e"
+  },
+  "source-inputs.json": {
+    "bytes": 4561,
+    "sha256": "8a02169719537dca3b1b08975078f94e6f2b9211112af80c6e9b5bd074502d32"
+  },
+  "source-inputs.zip": {
+    "bytes": 73979,
+    "sha256": "b4ca3ace395f6f78fb505440b4b27b8eebcc54342d08902025cdc5c265cfbd0f"
+  },
+  "test_native_risk.py": {
+    "bytes": 4132,
+    "sha256": "231033cb76ce80c8c33e8fd1c0473f6f39f0b32b0c7f9fcbb39025d2ea757493"
+  },
+  "tests.log": {
+    "bytes": 102,
+    "sha256": "073b794ba5cb44a59c65e07604a3cc19a580f919b547b7b29315711be8b2f879"
+  }
+}

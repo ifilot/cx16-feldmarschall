@@ -327,6 +327,8 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Cheap procedural back-row control: A post-hoc ablation recovered nearly the same Flag prediction gain using only the source back-row constraint: -0.246 versus -0.250 nats. The richer model improved secondary Bomb prediction. Both fixed alternatives need fresh strength tests; reused prediction data do not confirm the new control. [Evidence](research/procedural-backrow-ablation/README.md).
 - Earlier home interception: A public stationary-piece scheduling audit found 232 selected quiet moves across 37 screening games which lost time to deploy a guard against a disclosed Miner. All were outside the existing local interceptor. A mechanical fixture proves one avoidable invasion, but repeated retrospective opportunities are not saved games or a strength estimate. [Evidence](research/home-miner-interceptor-v1/CONCLUSION.md).
 - Paired Miner breach: A forcing two-entry assault works in a public mechanical fixture, but none of 85,971 screening decisions had two Miners within three actions of distinct disclosed Bomb entries. Deferred for sparse short-horizon coverage; no gate relaxation, runtime or strength claim. [Evidence](research/paired-miner-breach-v1/CONCLUSION.md).
+- Two-square tempo windows: A forcing public fixture works, but 693,230 screening decisions contain no strict eligible breakthrough. Five apparent last-piece traps were already lost after checking every alternative and both terminal objectives. Deferred without changing the gate or playing-strength claim. [Evidence](research/shuttle-tempo-v1/CONCLUSION.md).
+- Belief-conditioned quiet approaches: A frozen 117-root screening audit found strict danger-order reversals at 13 roots from mobile occupancy and 34 additional roots from token-specific mobile ranks. Native threat parity passed 2,880 public comparisons. These are component changes, not selected moves or a strength result; separate runtime comparisons are required. [Evidence](research/quiet-contact-risk-v1/CONCLUSION.md).
 
 
 **Target cost evidence:**
@@ -337,6 +339,8 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Moving the prior interface into unbanked memory resolves the AI-bank limit but overflows main memory by 748 bytes. Simple relocation is insufficient; no production source changed. [Evidence](research/native-belief-main-fit/README.md).
 
 - Compact native back-row prior: full CX16 link passes with 97 AI-bank bytes and 41 MAIN bytes free below the reserved stack. All 80 banked decisions match native execution; 18 public simulator fixtures add about 52 ms on average at an assumed 8 MHz. Strength remains untested. [Evidence](research/compact-backrow-native-v1/README.md).
+
+- Full source-template target interface: an isolated complete link with a nonfunctional inference stub leaves 154 MAIN bytes and 4,724 bytes in a new inference bank. This establishes interface space only; the actual inference algorithm, numerical policy and banked runtime remain to be qualified. [Evidence](research/template-target-port-feasibility/README.md).
 
 
 **Registered experiments awaiting completed results:**

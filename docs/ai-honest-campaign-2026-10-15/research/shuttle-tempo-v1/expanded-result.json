@@ -1,0 +1,1080 @@
+{
+  "kind": "completed-screening-public-last-mobile-shuttle-terminal-audit",
+  "counters": {
+    "cohort_files": 11,
+    "games": 4400,
+    "own_roots": 693230,
+    "selected_quiet_reversal_reaches5": 165,
+    "last_mobile_reversals": 6,
+    "certified_last_mobile_wait_traps": 5,
+    "all_root_choices_publicly_refuted": 5,
+    "enemy_active_shuttle_roots": 146,
+    "enemy_disclosed_strong_ban_roots": 53
+  },
+  "records": [
+    {
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-19-original-dos-deployments/student-validated-deployment-v1-normal.fmtour",
+      "game": 140,
+      "ply": 295,
+      "army": 1,
+      "selected": [
+        89,
+        99
+      ],
+      "own_shuttle": [
+        99,
+        89,
+        4
+      ],
+      "proof": {
+        "enemy_wait": [
+          5,
+          15
+        ],
+        "all_friendly_terminal_losing_replies": [
+          [
+            99,
+            98
+          ]
+        ]
+      },
+      "root_refutations": {
+        "89:79": {
+          "reason": "enemy-terminal-Flag-capture",
+          "reply": [
+            5,
+            6
+          ]
+        },
+        "89:99": {
+          "reason": "enemy-terminal-Flag-capture",
+          "reply": [
+            5,
+            6
+          ]
+        },
+        "89:88": {
+          "reason": "enemy-terminal-Flag-capture",
+          "reply": [
+            5,
+            6
+          ]
+        }
+      },
+      "nonrefuted_quiet_alternatives": [],
+      "public_board_hex": "ffff1affff671b1affffff681affffff1aff1affffffffffff60fffffffffffffffffffffffffffffffffefefffffefeffff66fffefefffffefeffffff4cffffffffff4c65ff0cffffffffffffffffff0c4cffffffffff0cff700c0c0c0c2a0c2a0c2aff",
+      "public_shuttle": {
+        "0": [
+          15,
+          5,
+          1
+        ],
+        "1": [
+          99,
+          89,
+          4
+        ]
+      },
+      "result": "red",
+      "reason": "flag"
+    },
+    {
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-template-flag-bomb-v1-normal.fmtour",
+      "game": 201,
+      "ply": 318,
+      "army": 0,
+      "selected": [
+        6,
+        5
+      ],
+      "own_shuttle": [
+        5,
+        6,
+        4
+      ],
+      "proof": {
+        "enemy_wait": [
+          19,
+          9
+        ],
+        "all_friendly_terminal_losing_replies": [
+          [
+            5,
+            15
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      },
+      "root_refutations": {
+        "6:7": {
+          "reason": "own-terminal-losing-capture"
+        },
+        "6:16": {
+          "reason": "enemy-terminal-capture",
+          "reply": [
+            26,
+            16
+          ]
+        },
+        "6:5": {
+          "reason": "enemy-waiting-shuttle-trap",
+          "enemy_wait": [
+            19,
+            9
+          ],
+          "all_friendly_terminal_losing_replies": [
+            [
+              5,
+              15
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        }
+      },
+      "nonrefuted_quiet_alternatives": [],
+      "public_board_hex": "ffff3a1c3aff603affffffffff3aff3affffff5cffffffffffff70ff3afffffffffffffffffffffffffffefefffffefefffffffffefefffffefeffffffffffffffffffffffffffffffffffffffffffff0affffffffffffff2aff0b0a7577ffffff72ff0a",
+      "public_shuttle": {
+        "0": [
+          5,
+          6,
+          4
+        ],
+        "1": [
+          16,
+          26,
+          2
+        ]
+      },
+      "result": "blue",
+      "reason": "no moves"
+    },
+    {
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-validated-counts-v1-normal.fmtour",
+      "game": 174,
+      "ply": 371,
+      "army": 1,
+      "selected": [
+        80,
+        90
+      ],
+      "own_shuttle": [
+        90,
+        80,
+        4
+      ],
+      "proof": {
+        "enemy_wait": [
+          21,
+          22
+        ],
+        "all_friendly_terminal_losing_replies": [
+          [
+            90,
+            91
+          ]
+        ]
+      },
+      "root_refutations": {
+        "80:70": {
+          "reason": "enemy-terminal-capture",
+          "reply": [
+            71,
+            70
+          ]
+        },
+        "80:81": {
+          "reason": "enemy-terminal-capture",
+          "reply": [
+            71,
+            81
+          ]
+        },
+        "80:90": {
+          "reason": "enemy-waiting-shuttle-trap",
+          "enemy_wait": [
+            21,
+            22
+          ],
+          "all_friendly_terminal_losing_replies": [
+            [
+              90,
+              91
+            ]
+          ]
+        }
+      },
+      "nonrefuted_quiet_alternatives": [],
+      "public_board_hex": "1affffffffff1aff1a1bff1affffffffffffff1aff64fffffffffffffffffffffffffffffffffffffffffefefffffefefffffffffefefffffefe68ffffff4cffffffffffffffff60ffffffffffff2aff70ff2affff68ffff4cffff2a0c2affff27ffffff",
+      "public_shuttle": {
+        "0": [
+          81,
+          71,
+          2
+        ],
+        "1": [
+          90,
+          80,
+          4
+        ]
+      },
+      "result": "red",
+      "reason": "no moves"
+    },
+    {
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-validated-deployment-v1-normal.fmtour",
+      "game": 174,
+      "ply": 371,
+      "army": 1,
+      "selected": [
+        80,
+        90
+      ],
+      "own_shuttle": [
+        90,
+        80,
+        4
+      ],
+      "proof": {
+        "enemy_wait": [
+          21,
+          22
+        ],
+        "all_friendly_terminal_losing_replies": [
+          [
+            90,
+            91
+          ]
+        ]
+      },
+      "root_refutations": {
+        "80:70": {
+          "reason": "enemy-terminal-capture",
+          "reply": [
+            71,
+            70
+          ]
+        },
+        "80:81": {
+          "reason": "enemy-terminal-capture",
+          "reply": [
+            71,
+            81
+          ]
+        },
+        "80:90": {
+          "reason": "enemy-waiting-shuttle-trap",
+          "enemy_wait": [
+            21,
+            22
+          ],
+          "all_friendly_terminal_losing_replies": [
+            [
+              90,
+              91
+            ]
+          ]
+        }
+      },
+      "nonrefuted_quiet_alternatives": [],
+      "public_board_hex": "1affffffffff1aff1a1bff1affffffffffffff1aff64fffffffffffffffffffffffffffffffffffffffffefefffffefefffffffffefefffffefe68ffffff4cffffffffffffffff60ffffffffffff2aff70ff2affff68ffff4cffff2a0c2affff27ffffff",
+      "public_shuttle": {
+        "0": [
+          81,
+          71,
+          2
+        ],
+        "1": [
+          90,
+          80,
+          4
+        ]
+      },
+      "result": "red",
+      "reason": "no moves"
+    },
+    {
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-22-double-bomb-shell/student-validated-deployment-v1-normal.fmtour",
+      "game": 382,
+      "ply": 383,
+      "army": 1,
+      "selected": [
+        80,
+        90
+      ],
+      "own_shuttle": [
+        90,
+        80,
+        4
+      ],
+      "proof": {
+        "enemy_wait": [
+          16,
+          17
+        ],
+        "all_friendly_terminal_losing_replies": [
+          [
+            90,
+            91
+          ]
+        ]
+      },
+      "root_refutations": {
+        "80:70": {
+          "reason": "enemy-terminal-capture",
+          "reply": [
+            71,
+            70
+          ]
+        },
+        "80:81": {
+          "reason": "enemy-terminal-capture",
+          "reply": [
+            71,
+            81
+          ]
+        },
+        "80:90": {
+          "reason": "enemy-waiting-shuttle-trap",
+          "enemy_wait": [
+            16,
+            17
+          ],
+          "all_friendly_terminal_losing_replies": [
+            [
+              90,
+              91
+            ]
+          ]
+        }
+      },
+      "nonrefuted_quiet_alternatives": [],
+      "public_board_hex": "1affffffffff1aff1a1bff1affffffff68ffff1affffffffffff68fffffffffffffffffffffffffffffffefe4cfffefefffffffffefefffffefeffffffffffff4cffffffffffff60ffffffffffff2aff70ff2a4cffffffff4c0cff2a0c0cffffff4c4cff",
+      "public_shuttle": {
+        "0": [
+          81,
+          71,
+          2
+        ],
+        "1": [
+          90,
+          80,
+          4
+        ]
+      },
+      "result": "red",
+      "reason": "no moves"
+    }
+  ],
+  "enemy_tempo_rows": [
+    {
+      "enemy_shuttle": [
+        75,
+        74,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 10,
+      "ply": 117,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        74,
+        75,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 10,
+      "ply": 129,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        55,
+        54,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 52,
+      "ply": 177,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        58,
+        59,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 59,
+      "ply": 208,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        58,
+        59,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 59,
+      "ply": 224,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        37,
+        38,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 141,
+      "ply": 194,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 180,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 192,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 204,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 216,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 228,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 240,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 270,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 282,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 294,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 308,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 320,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 332,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 344,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 356,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 368,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 380,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 183,
+      "ply": 392,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        55,
+        54,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 299,
+      "ply": 126,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        54,
+        55,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 299,
+      "ply": 138,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        35,
+        34,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 325,
+      "ply": 126,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 343,
+      "ply": 146,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        44,
+        45,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 343,
+      "ply": 162,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        62,
+        63,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 388,
+      "ply": 139,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        62,
+        63,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 388,
+      "ply": 189,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        62,
+        63,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 388,
+      "ply": 267,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        62,
+        63,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 388,
+      "ply": 285,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        62,
+        63,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour",
+      "game": 388,
+      "ply": 301,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        33,
+        32,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 45,
+      "ply": 212,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        64,
+        65,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 144,
+      "ply": 171,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        65,
+        66,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 127,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        65,
+        66,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 169,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        65,
+        66,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 193,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        66,
+        65,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 205,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        65,
+        66,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 231,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        55,
+        54,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 344,
+      "ply": 163,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        54,
+        55,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour",
+      "game": 344,
+      "ply": 175,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        33,
+        32,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 45,
+      "ply": 212,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        65,
+        66,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 127,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        65,
+        66,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 169,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        65,
+        66,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 193,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        66,
+        65,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 205,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        65,
+        66,
+        5
+      ],
+      "disclosed_defender_rank": 3,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 216,
+      "ply": 231,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        45,
+        44,
+        5
+      ],
+      "disclosed_defender_rank": 2,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 255,
+      "ply": 192,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        55,
+        54,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 344,
+      "ply": 163,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        54,
+        55,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 344,
+      "ply": 175,
+      "army": 1
+    },
+    {
+      "enemy_shuttle": [
+        40,
+        41,
+        5
+      ],
+      "disclosed_defender_rank": 1,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 357,
+      "ply": 318,
+      "army": 0
+    },
+    {
+      "enemy_shuttle": [
+        32,
+        33,
+        5
+      ],
+      "disclosed_defender_rank": 0,
+      "entries": [],
+      "cohort": "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour",
+      "game": 373,
+      "ply": 310,
+      "army": 0
+    }
+  ],
+  "sources": {
+    "docs/ai-honest-campaign-2026-10-15/cycle-19-original-dos-deployments/student-guard-v1-normal.fmtour": "d345ce6a4e91d3c6640ffbb8e0fc7822b4fd5b29200167e96cafd13e75aca4ba",
+    "docs/ai-honest-campaign-2026-10-15/cycle-19-original-dos-deployments/student-validated-deployment-v1-normal.fmtour": "3827a834fe1599456c7de571f79bf23a56f67bc12a9bf47857b799a4659dc57d",
+    "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-template-flag-bomb-v1-normal.fmtour": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+    "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-validated-counts-v1-normal.fmtour": "55117e78c0666195bbe42ba742462da6f6f5507f82d5e1cd8780090fd171c669",
+    "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-validated-deployment-v1-normal.fmtour": "3cf7392ecb3603c26a05de3e6e91ef461f59eec3d78bb17663945fc5d800a468",
+    "docs/ai-honest-campaign-2026-10-15/cycle-22-double-bomb-shell/student-double-bomb-shell-v1-normal.fmtour": "713ea72b4d0dc6f6b9c5055f5ccbfa25f9285e6d7946e569e132d6374c8cfd0b",
+    "docs/ai-honest-campaign-2026-10-15/cycle-22-double-bomb-shell/student-fortress-deployment-v1-normal.fmtour": "cbfa5b97f0eb2f1f84ef6451198d8bb12ee0efabe23d6e3feac7811f8202f0ea",
+    "docs/ai-honest-campaign-2026-10-15/cycle-22-double-bomb-shell/student-validated-deployment-v1-normal.fmtour": "9dc001c45fc978b285ceddee92f2cf9f44860739220182ad1fdb775bdbe6d2f9",
+    "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-double-bomb-shell-v1-normal.fmtour": "122b76df52c81140a68463103c52e8424e5f21fdfe498bca04682360ed18d5b0",
+    "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-fortress-deployment-v1-normal.fmtour": "92d261cf4351a8d6715d4fac0213d27140cb44667872e77234c692a91f08046f",
+    "docs/ai-honest-campaign-2026-10-15/cycle-23-honest-deployment-control/student-validated-deployment-v1-normal.fmtour": "22d0207ba4e6dd932cc538ea21e9d56612adebc2efa658999119fe3412079d93"
+  },
+  "source_code_sha256": "22b206ac159a379bbc3700b1f12be5f8e4833627016e72315789b4dd1cd8fa5f",
+  "limits": "Existential known/legal quiet enemy wait plus universal friendly terminal-loss certificate. Nonrefuted alternative is not a global safety proof. No validation files, native scores, fitting, games or runtime."
+}

@@ -1,0 +1,105 @@
+{
+  "kind": "public-shuttle-tempo-screening-preflight",
+  "games": 400,
+  "counters": {
+    "own_roots": 85971,
+    "actual_selected_reversal_reaches5_roots": 1,
+    "own_active_shuttle_roots": 1
+  },
+  "rows": [],
+  "own_diagnostics": [
+    {
+      "game": 201,
+      "ply": 318,
+      "army": 0,
+      "own_shuttle": [
+        5,
+        6,
+        4
+      ],
+      "selected": [
+        6,
+        5
+      ],
+      "shuttle_actor": [
+        0,
+        0,
+        true,
+        true
+      ],
+      "legal_actor_moves": [
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          16
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "next_actual_moves": [
+        [
+          6,
+          5
+        ],
+        [
+          26,
+          25
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "public_board_hex": "ffff3a1c3aff603affffffffff3aff3affffff5cffffffffffff70ff3afffffffffffffffffffffffffffefefffffefefffffffffefefffffefeffffffffffffffffffffffffffffffffffffffffffff0affffffffffffff2aff0b0a7577ffffff72ff0a"
+    },
+    {
+      "game": 201,
+      "ply": 320,
+      "army": 0,
+      "own_shuttle": [
+        6,
+        5,
+        5
+      ],
+      "selected": [
+        5,
+        4
+      ],
+      "shuttle_actor": [
+        0,
+        0,
+        true,
+        true
+      ],
+      "legal_actor_moves": [
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "next_actual_moves": [
+        [
+          5,
+          4
+        ],
+        [
+          97,
+          98
+        ]
+      ],
+      "public_board_hex": "ffff3a1c3a60ff3affffffffff3aff3affffff5cffffffffff70ffff3afffffffffffffffffffffffffffefefffffefefffffffffefefffffefeffffffffffffffffffffffffffffffffffffffffffff0affffffffffffff2aff0b0a7577ffffff72ff0a"
+    }
+  ],
+  "source_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "source_code_sha256": "21a13b5a966d630cfe0314f0293456870ffcdd2f3f1e3d473fc5b6e6c9da8302",
+  "limits": "Public banned-square geometry only, not global safety or strength. Other enemy moves reset the ban; actor/Flag races and hidden defenders require further proof. Truth is used only for referee replay, immediately masked before predicate."
+}

@@ -1,0 +1,147 @@
+{
+  "scope": "Interface object-size probes only; not linked into game, no inference algorithm implemented or port-fit claim.",
+  "probes": {
+    "main_transfer": {
+      "segments": {
+        "CODE": 43,
+        "RODATA": 0,
+        "BSS": 202,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0
+      },
+      "commands": [
+        {
+          "argv": [
+            "cc65",
+            "-O",
+            "-t",
+            "cx16",
+            "-I",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+            "-o",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/main_transfer.s",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/main_transfer.c"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "ca65",
+            "-t",
+            "cx16",
+            "-o",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/main_transfer.o",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/main_transfer.s"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "od65",
+            "-S",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/main_transfer.o"
+          ],
+          "returncode": 0,
+          "stdout": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/main_transfer.o:\n  Segment sizes:\n    CODE:                        43\n    RODATA:                       0\n    BSS:                        202\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n",
+          "stderr": ""
+        }
+      ],
+      "source_sha256": "f6a01ab299b5cf80863ecc461aa3c9a00c49af20fb0c0eabac3ddd60242cb72a"
+    },
+    "mission_export": {
+      "segments": {
+        "CODE": 0,
+        "RODATA": 0,
+        "BSS": 0,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0,
+        "MISSIONBSS": 5,
+        "MISSIONCODE": 348
+      },
+      "commands": [
+        {
+          "argv": [
+            "cc65",
+            "-O",
+            "-t",
+            "cx16",
+            "-I",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/src/core",
+            "-o",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/mission_export.s",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/mission_export.c"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "ca65",
+            "-t",
+            "cx16",
+            "-o",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/mission_export.o",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/mission_export.s"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "od65",
+            "-S",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/mission_export.o"
+          ],
+          "returncode": 0,
+          "stdout": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/mission_export.o:\n  Segment sizes:\n    CODE:                         0\n    RODATA:                       0\n    BSS:                          0\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n    MISSIONBSS:                   5\n    MISSIONCODE:                348\n",
+          "stderr": ""
+        }
+      ],
+      "source_sha256": "c713ae2ce5499a3ac52c7184187d207ccde56529918da32b0025809ef1ecde30"
+    },
+    "gateway": {
+      "segments": {
+        "CODE": 60,
+        "RODATA": 0,
+        "BSS": 2,
+        "DATA": 0,
+        "ZEROPAGE": 0,
+        "NULL": 0
+      },
+      "commands": [
+        {
+          "argv": [
+            "ca65",
+            "-t",
+            "cx16",
+            "-o",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/gateway.o",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/gateway.s"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "od65",
+            "-S",
+            "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/gateway.o"
+          ],
+          "returncode": 0,
+          "stdout": "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-port-feasibility/gateway.o:\n  Segment sizes:\n    CODE:                        60\n    RODATA:                       0\n    BSS:                          2\n    DATA:                         0\n    ZEROPAGE:                     0\n    NULL:                         0\n",
+          "stderr": ""
+        }
+      ],
+      "source_sha256": "6c8b868090bf324269f7a77dc2d955e1fabe91d0fc2ec87982a972d98bf59410"
+    }
+  }
+}

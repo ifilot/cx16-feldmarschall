@@ -1,0 +1,3089 @@
+Modules list:
+-------------
+main.o:
+    CODE              Offs=000000  Size=000142  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=00005A  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=00000D  Align=00001  Fill=0000
+ai.o:
+    AIRODATA          Offs=000000  Size=0001A8  Align=00001  Fill=0000
+    AIBSS             Offs=000000  Size=0004B4  Align=00001  Fill=0000
+    AICODE            Offs=000000  Size=001977  Align=00001  Fill=0000
+ai_deploy.o:
+    MISSIONRODATA     Offs=000000  Size=000078  Align=00001  Fill=0000
+    MISSIONCODE       Offs=000000  Size=0000F4  Align=00001  Fill=0000
+    MISSIONBSS        Offs=000000  Size=000007  Align=00001  Fill=0000
+ai_level.o:
+    CODE              Offs=000142  Size=00004D  Align=00001  Fill=0000
+    RODATA            Offs=00005A  Size=000017  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000001  Align=00001  Fill=0000
+ai_memory.o:
+    MISSIONBSS        Offs=000007  Size=0003C6  Align=00001  Fill=0000
+    MISSIONCODE       Offs=0000F4  Size=0006FF  Align=00001  Fill=0000
+ai_mission.o:
+    MISSIONRODATA     Offs=000078  Size=000004  Align=00001  Fill=0000
+    MISSIONBSS        Offs=0003CD  Size=000155  Align=00001  Fill=0000
+    MISSIONCODE       Offs=0007F3  Size=000783  Align=00001  Fill=0000
+ai_student.o:
+    MISSIONRODATA     Offs=00007C  Size=0000BE  Align=00001  Fill=0000
+    MISSIONBSS        Offs=000522  Size=000011  Align=00001  Fill=0000
+    MISSIONCODE       Offs=000F76  Size=000520  Align=00001  Fill=0000
+board.o:
+    CODE              Offs=00018F  Size=0000A2  Align=00001  Fill=0000
+    BSS               Offs=00000D  Size=000068  Align=00001  Fill=0000
+pieces.o:
+    CODE              Offs=000231  Size=0000A0  Align=00001  Fill=0000
+    RODATA            Offs=000071  Size=0000B0  Align=00001  Fill=0000
+    BSS               Offs=000075  Size=000001  Align=00001  Fill=0000
+presets.o:
+    CODE              Offs=0002D1  Size=00006C  Align=00001  Fill=0000
+    RODATA            Offs=000121  Size=000230  Align=00001  Fill=0000
+    BSS               Offs=000076  Size=000004  Align=00001  Fill=0000
+random.o:
+    CODE              Offs=00033D  Size=000065  Align=00001  Fill=0000
+    DATA              Offs=000001  Size=000002  Align=00001  Fill=0000
+rules.o:
+    CODE              Offs=0003A2  Size=000946  Align=00001  Fill=0000
+    RODATA            Offs=000351  Size=000008  Align=00001  Fill=0000
+    BSS               Offs=00007A  Size=0000CB  Align=00001  Fill=0000
+setup.o:
+    CODE              Offs=000CE8  Size=000062  Align=00001  Fill=0000
+    BSS               Offs=000145  Size=00002A  Align=00001  Fill=0000
+    MISSIONBSS        Offs=000533  Size=000032  Align=00001  Fill=0000
+    MISSIONCODE       Offs=001496  Size=000223  Align=00001  Fill=0000
+store.o:
+    CODE              Offs=000D4A  Size=000491  Align=00001  Fill=0000
+    RODATA            Offs=000359  Size=00004E  Align=00001  Fill=0000
+    BSS               Offs=00016F  Size=000392  Align=00001  Fill=0000
+boardview.o:
+    CODE              Offs=0011DB  Size=0001D1  Align=00001  Fill=0000
+    BSS               Offs=000501  Size=000006  Align=00001  Fill=0000
+button.o:
+    CODE              Offs=0013AC  Size=00022C  Align=00001  Fill=0000
+    BSS               Offs=000507  Size=000008  Align=00001  Fill=0000
+colors.o:
+    CODE              Offs=0015D8  Size=0006AC  Align=00001  Fill=0000
+    RODATA            Offs=0003A7  Size=000255  Align=00001  Fill=0000
+    BSS               Offs=00050F  Size=00001C  Align=00001  Fill=0000
+dialog.o:
+    CODE              Offs=001C84  Size=000158  Align=00001  Fill=0000
+    RODATA            Offs=0005FC  Size=0000A2  Align=00001  Fill=0000
+    BSS               Offs=00052B  Size=000006  Align=00001  Fill=0000
+drag.o:
+    CODE              Offs=001DDC  Size=0000B5  Align=00001  Fill=0000
+    BSS               Offs=000531  Size=000008  Align=00001  Fill=0000
+input.o:
+    CODE              Offs=001E91  Size=000200  Align=00001  Fill=0000
+    BSS               Offs=000539  Size=00000E  Align=00001  Fill=0000
+panel.o:
+    CODE              Offs=002091  Size=000568  Align=00001  Fill=0000
+    RODATA            Offs=00069E  Size=000019  Align=00001  Fill=0000
+    BSS               Offs=000547  Size=000052  Align=00001  Fill=0000
+sound.o:
+    CODE              Offs=0025F9  Size=0001BF  Align=00001  Fill=0000
+    RODATA            Offs=0006B7  Size=000093  Align=00001  Fill=0000
+    BSS               Offs=000599  Size=000009  Align=00001  Fill=0000
+    DATA              Offs=000003  Size=000002  Align=00001  Fill=0000
+video.o:
+    CODE              Offs=0027B8  Size=0008F2  Align=00001  Fill=0000
+    RODATA            Offs=00074A  Size=0000F0  Align=00001  Fill=0000
+    BSS               Offs=0005A2  Size=00000F  Align=00001  Fill=0000
+about.o:
+    CODE              Offs=0030AA  Size=000196  Align=00001  Fill=0000
+    RODATA            Offs=00083A  Size=0000A2  Align=00001  Fill=0000
+    BSS               Offs=0005B1  Size=000002  Align=00001  Fill=0000
+deploy.o:
+    CODE              Offs=003240  Size=0006D5  Align=00001  Fill=0000
+    RODATA            Offs=0008DC  Size=0000A2  Align=00001  Fill=0000
+    BSS               Offs=0005B3  Size=00002C  Align=00001  Fill=0000
+    DATA              Offs=000005  Size=00000A  Align=00001  Fill=0000
+deploy_dialog.o:
+    CODE              Offs=003915  Size=000A4F  Align=00001  Fill=0000
+    RODATA            Offs=00097E  Size=0000CD  Align=00001  Fill=0000
+    BSS               Offs=0005DF  Size=00007E  Align=00001  Fill=0000
+    DATA              Offs=00000F  Size=000001  Align=00001  Fill=0000
+dev.o:
+    CODE              Offs=004364  Size=0000A8  Align=00001  Fill=0000
+    RODATA            Offs=000A4B  Size=000102  Align=00001  Fill=0000
+    BSS               Offs=00065D  Size=000002  Align=00001  Fill=0000
+game_settings.o:
+    CODE              Offs=00440C  Size=0005C3  Align=00001  Fill=0000
+    RODATA            Offs=000B4D  Size=0002F1  Align=00001  Fill=0000
+    BSS               Offs=00065F  Size=00000B  Align=00001  Fill=0000
+    DATA              Offs=000010  Size=000001  Align=00001  Fill=0000
+menu.o:
+    CODE              Offs=0049CF  Size=0003B8  Align=00001  Fill=0000
+    RODATA            Offs=000E3E  Size=0000BB  Align=00001  Fill=0000
+    BSS               Offs=00066A  Size=00000D  Align=00001  Fill=0000
+    DATA              Offs=000011  Size=000004  Align=00001  Fill=0000
+options.o:
+    CODE              Offs=004D87  Size=0004A1  Align=00001  Fill=0000
+    RODATA            Offs=000EF9  Size=0000F7  Align=00001  Fill=0000
+    BSS               Offs=000677  Size=000010  Align=00001  Fill=0000
+play.o:
+    CODE              Offs=005228  Size=000285  Align=00001  Fill=0000
+    RODATA            Offs=000FF0  Size=000014  Align=00001  Fill=0000
+    BSS               Offs=000687  Size=000153  Align=00001  Fill=0000
+    DATA              Offs=000015  Size=000004  Align=00001  Fill=0000
+    PLAYRODATA        Offs=000000  Size=000579  Align=00001  Fill=0000
+    PLAYCODE          Offs=000000  Size=0019E7  Align=00001  Fill=0000
+ai_bank.o:
+    CODE              Offs=0054AD  Size=000026  Align=00001  Fill=0000
+    BSS               Offs=0007DA  Size=000001  Align=00001  Fill=0000
+input_low.o:
+    CODE              Offs=0054D3  Size=00000D  Align=00001  Fill=0000
+mission_bank.o:
+    CODE              Offs=0054E0  Size=00004A  Align=00001  Fill=0000
+    BSS               Offs=0007DB  Size=000001  Align=00001  Fill=0000
+sound_low.o:
+    CODE              Offs=00552A  Size=000080  Align=00001  Fill=0000
+    BSS               Offs=0007DC  Size=000002  Align=00001  Fill=0000
+play_bank.o:
+    CODE              Offs=0055AA  Size=00004A  Align=00001  Fill=0000
+    BSS               Offs=0007DE  Size=000001  Align=00001  Fill=0000
+vendor/zsmkit.lib(zsmkit.o):
+    ZSMKITLIB         Offs=000000  Size=001764  Align=00001  Fill=0000
+    ZSMKITBANK        Offs=000000  Size=001863  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(_directerrno.o):
+    CODE              Offs=0055F4  Size=000009  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(_file.o):
+    DATA              Offs=000019  Size=00001E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(_mappederrno.o):
+    CODE              Offs=0055FD  Size=00000F  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(_oserror.o):
+    BSS               Offs=0007DF  Size=000001  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(_seterrno.o):
+    CODE              Offs=00560C  Size=000009  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(add.o):
+    CODE              Offs=005615  Size=000018  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(addeqsp.o):
+    CODE              Offs=00562D  Size=000011  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(addysp.o):
+    CODE              Offs=00563E  Size=00000E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(along.o):
+    CODE              Offs=00564C  Size=00000D  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(and.o):
+    CODE              Offs=005659  Size=00000F  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(aslax1.o):
+    CODE              Offs=005668  Size=000008  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(aslax2.o):
+    CODE              Offs=005670  Size=00000B  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(aslax3.o):
+    CODE              Offs=00567B  Size=00000E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(aslax4.o):
+    CODE              Offs=005689  Size=000011  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(asleax3.o):
+    CODE              Offs=00569A  Size=00001A  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(asrax1.o):
+    CODE              Offs=0056B4  Size=00000A  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(asrax2.o):
+    CODE              Offs=0056BE  Size=00000F  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(axlong.o):
+    CODE              Offs=0056CD  Size=00000D  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(bneg.o):
+    CODE              Offs=0056DA  Size=00000E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(c_close.o):
+    CODE              Offs=0056E8  Size=000004  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(c_getin.o):
+    CODE              Offs=0056EC  Size=000006  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(c_load.o):
+    CODE              Offs=0056F2  Size=00001D  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(c_open.o):
+    CODE              Offs=00570F  Size=000009  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(c_setlfs.o):
+    CODE              Offs=005718  Size=00000E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(c_setnam.o):
+    CODE              Offs=005726  Size=000013  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(callmain.o):
+    CODE              Offs=005739  Size=000017  Align=00001  Fill=0000
+    DATA              Offs=000037  Size=000004  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(cbm_close.o):
+/usr/share/cc65/lib/cx16.lib(cbm_open.o):
+    CODE              Offs=005750  Size=000016  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(cbm_read.o):
+    CODE              Offs=005766  Size=00005D  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(cbm_write.o):
+    CODE              Offs=0057C3  Size=00004C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(compl.o):
+    CODE              Offs=00580F  Size=000009  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(condes.o):
+    CODE              Offs=005818  Size=00000C  Align=00001  Fill=0000
+    DATA              Offs=00003B  Size=000025  Align=00001  Fill=0000
+    ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(crt0.o):
+    STARTUP           Offs=000000  Size=000028  Align=00001  Fill=0000
+    ONCE              Offs=00000C  Size=000023  Align=00001  Fill=0000
+    INIT              Offs=000000  Size=000002  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(decax1.o):
+    CODE              Offs=005824  Size=000007  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(decax2.o):
+    CODE              Offs=00582B  Size=000007  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(decax4.o):
+    CODE              Offs=005832  Size=000007  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(decax8.o):
+    CODE              Offs=005839  Size=000007  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(decaxy.o):
+    CODE              Offs=005840  Size=000009  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(decsp2.o):
+    CODE              Offs=005849  Size=00000D  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(decsp4.o):
+    CODE              Offs=005856  Size=00000D  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(div.o):
+    CODE              Offs=005863  Size=000015  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(errno.o):
+    BSS               Offs=0007E0  Size=000002  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(exehdr.o):
+    EXEHDR            Offs=000000  Size=00000C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(filedes.o):
+    CODE              Offs=005878  Size=00000E  Align=00001  Fill=0000
+    DATA              Offs=000060  Size=000010  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(icmp.o):
+    CODE              Offs=005886  Size=00002E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incax2.o):
+    CODE              Offs=0058B4  Size=000007  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incax3.o):
+    CODE              Offs=0058BB  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incax5.o):
+    CODE              Offs=0058C0  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incax6.o):
+    CODE              Offs=0058C5  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incax7.o):
+    CODE              Offs=0058CA  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incax8.o):
+    CODE              Offs=0058CF  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incaxy.o):
+    CODE              Offs=0058D4  Size=00000B  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incsp1.o):
+    CODE              Offs=0058DF  Size=000007  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incsp2.o):
+    CODE              Offs=0058E6  Size=000015  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incsp3.o):
+    CODE              Offs=0058FB  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incsp4.o):
+    CODE              Offs=005900  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incsp5.o):
+    CODE              Offs=005905  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incsp6.o):
+    CODE              Offs=00590A  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incsp7.o):
+    CODE              Offs=00590F  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(incsp8.o):
+    CODE              Offs=005914  Size=000005  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(kernal.o):
+/usr/share/cc65/lib/cx16.lib(ladd.o):
+    CODE              Offs=005919  Size=000024  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(laddeq.o):
+    CODE              Offs=00593D  Size=00002C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(ldai.o):
+    CODE              Offs=005969  Size=00000C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(ldaxi.o):
+    CODE              Offs=005975  Size=00000D  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(ldaxsp.o):
+    CODE              Offs=005982  Size=000009  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(ldeaxysp.o):
+    CODE              Offs=00598B  Size=000013  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(ldiv.o):
+    CODE              Offs=00599E  Size=00001C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(lmul.o):
+    CODE              Offs=0059BA  Size=000059  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(lneg.o):
+    CODE              Offs=005A13  Size=00001E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(loadaddr.o):
+    LOADADDR          Offs=000000  Size=000002  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(lpush.o):
+    CODE              Offs=005A31  Size=00001E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(lshelp.o):
+    CODE              Offs=005A4F  Size=000052  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(ludiv.o):
+    CODE              Offs=005AA1  Size=000077  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(makebool.o):
+    CODE              Offs=005B18  Size=00002C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(memcmp.o):
+    CODE              Offs=005B44  Size=000036  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(memcpy.o):
+    CODE              Offs=005B7A  Size=00003C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(memset.o):
+    CODE              Offs=005BB6  Size=00005D  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(mul.o):
+    CODE              Offs=005C13  Size=000045  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(mul8.o):
+    CODE              Offs=005C58  Size=00003A  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(mulax10.o):
+    CODE              Offs=005C92  Size=000019  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(mulax3.o):
+    CODE              Offs=005CAB  Size=000011  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(mulax5.o):
+    CODE              Offs=005CBC  Size=000014  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(mulax6.o):
+    CODE              Offs=005CD0  Size=000016  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(negabs.o):
+    CODE              Offs=005CE6  Size=000012  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(or.o):
+    CODE              Offs=005CF8  Size=000011  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(oserror.o):
+    CODE              Offs=005D09  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=001004  Size=00005A  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(popa.o):
+    CODE              Offs=005D1F  Size=00000A  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(popptr1.o):
+    CODE              Offs=005D29  Size=00000E  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(pusha.o):
+    CODE              Offs=005D37  Size=000016  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(pushax.o):
+    CODE              Offs=005D4D  Size=00001A  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(pushw.o):
+    CODE              Offs=005D67  Size=00000F  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(pushwsp.o):
+    CODE              Offs=005D76  Size=00001C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(puts.o):
+    CODE              Offs=005D92  Size=000065  Align=00001  Fill=0000
+    DATA              Offs=000070  Size=000001  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(return0.o):
+    CODE              Offs=005DF7  Size=000004  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(rwcommon.o):
+    CODE              Offs=005DFB  Size=00001C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(shelp.o):
+    CODE              Offs=005E17  Size=000020  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(shl.o):
+    CODE              Offs=005E37  Size=000030  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(shrax1.o):
+    CODE              Offs=005E67  Size=000008  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(shreax1.o):
+    CODE              Offs=005E6F  Size=00000C  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(shreax4.o):
+    CODE              Offs=005E7B  Size=000011  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(staspidx.o):
+    CODE              Offs=005E8C  Size=000016  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(staxsp.o):
+    CODE              Offs=005EA2  Size=00000B  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(staxspi.o):
+    CODE              Offs=005EAD  Size=00001A  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(strcat.o):
+    CODE              Offs=005EC7  Size=00002F  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(strcpy.o):
+    CODE              Offs=005EF6  Size=00001F  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(strlen.o):
+    CODE              Offs=005F15  Size=000016  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(strncpy.o):
+    CODE              Offs=005F2B  Size=000044  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(sub.o):
+    CODE              Offs=005F6F  Size=000014  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(udiv.o):
+    CODE              Offs=005F83  Size=00004F  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(umod.o):
+    CODE              Offs=005FD2  Size=000011  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(write.o):
+    CODE              Offs=005FE3  Size=000054  Align=00001  Fill=0000
+    ONCE              Offs=00002F  Size=000011  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(xor.o):
+    CODE              Offs=006037  Size=000011  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(zerobss.o):
+    CODE              Offs=006048  Size=000023  Align=00001  Fill=0000
+/usr/share/cc65/lib/cx16.lib(zeropage.o):
+    ZEROPAGE          Offs=000000  Size=00001A  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+ZEROPAGE              000022  00003B  00001A  00001
+LOADADDR              0007FF  000800  000002  00001
+EXEHDR                000801  00080C  00000C  00001
+STARTUP               00080D  000834  000028  00001
+CODE                  000835  00689F  00606B  00001
+ZSMKITLIB             0068A0  008003  001764  00001
+RODATA                008004  009061  00105E  00001
+DATA                  009062  0090D2  000071  00001
+INIT                  0090D3  0090D4  000002  00001
+BSS                   0090D5  0098B6  0007E2  00001
+ONCE                  0090D5  009116  000042  00001
+AICODE                00A000  00B976  001977  00001
+MISSIONCODE           00A000  00B6B8  0016B9  00001
+PLAYCODE              00A000  00B9E6  0019E7  00001
+ZSMKITBANK            00A000  00B862  001863  00001
+MISSIONRODATA         00B6B9  00B7F2  00013A  00001
+MISSIONBSS            00B7F3  00BD57  000565  00001
+AIRODATA              00B977  00BB1E  0001A8  00001
+PLAYRODATA            00B9E7  00BF5F  000579  00001
+AIBSS                 00BB1F  00BFD2  0004B4  00001
+
+
+Exports list by name:
+---------------------
+BASIN                     00FFCF RLA    BSOUT                     00FFD2 RLA    
+CHKIN                     00FFC6 RLA    CHROUT                    00FFD2 RLA    
+CKOUT                     00FFC9 RLA    CLOSE                     00FFC3 RLA    
+CLRCH                     00FFCC RLA    GETIN                     00FFE4 RLA    
+LOAD                      00FFD5 RLA    OPEN                      00FFC0 RLA    
+READST                    00FFB7 RLA    SETLFS                    00FFBA RLA    
+SETNAM                    00FFBD RLA    __BSS_RUN__               0090D5 RLA    
+__BSS_SIZE__              0007E2 REA    __CONSTRUCTOR_COUNT__     000001 REA    
+__CONSTRUCTOR_TABLE__     009115 RLA    __DESTRUCTOR_COUNT__      000000 REA    
+__DESTRUCTOR_TABLE__      009062 RLA    __EXEHDR__                000001 REA    
+__HEADER_LAST__           00080D RLA    __HIMEM__                 009F00 REA    
+__LOADADDR__              000001 REA    __MAIN_SIZE__             0096F3 REA    
+__MAIN_START__            00080D RLA    __ONCE_RUN__              0090D5 RLA    
+__STARTUP__               000001 REA    __bzero                   0063EB RLA    
+__directerrno             005E29 RLA    __errno                   0098B5 RLA    
+__mappederrno             005E32 RLA    __oserror                 0098B4 RLA    
+__osmaperrno              00653E RLA    __seterrno                005E41 RLA    
+_about_enter              0038DF RLA    _about_update             0039BE RLA    
+_ai_difficulty            009062 RLA    _ai_level_names           00805E RLA    
+_ai_mask                  000977 RLA    _ai_memory_history        00A250 RLA    
+_ai_memory_identity       00A237 RLA    _ai_memory_observe        005D56 RLA    
+_ai_memory_observe_banked 00A4D3 RLA    _ai_memory_reset_banked   00A3FE RLA    
+_ai_memory_sync           00A0F4 RLA    _ai_mission_begin         005D29 RLA    
+_ai_mission_begin_banked  00AA59 RLA    _ai_mission_reset         005D3B RLA    
+_ai_mission_reset_banked  00AA4D RLA    _ai_mission_score         005D32 RLA    
+_ai_mission_score_banked  00AF23 RLA    _ai_move                  005CF6 RLA    
+_ai_move_banked           00B4C9 RLA    _ai_reset                 005CFF RLA    
+_ai_reset_banked          00B484 RLA    _ai_student_begin         00AF76 RLA    
+_ai_student_score         00B324 RLA    _board                    0090E2 RLA    
+_board_clear              0009C4 RLA    _board_count              0009F6 RLA    
+_board_home               000A45 RLA    _button_draw              001BF2 RLA    
+_button_draw_width        001C4C RLA    _button_hit               001D09 RLA    
+_button_toggle            001CA2 RLA    _button_width             001BE1 RLA    
+_cbm_close                005F1D REA    _cbm_k_close              005F1D RLA    
+_cbm_k_getin              005F21 RLA    _cbm_k_load               005F27 RLA    
+_cbm_k_open               005F44 RLA    _cbm_k_setlfs             005F4D RLA    
+_cbm_k_setnam             005F5B RLA    _cbm_open                 005F85 RLA    
+_cbm_read                 005F9B RLA    _cbm_write                005FF8 RLA    
+_colors_armies            0095E5 RLA    _colors_count             00234F RLA    
+_colors_current           00236D RLA    _colors_field             0095E4 RLA    
+_colors_init              001E0D RLA    _colors_name              002308 RLA    
+_colors_restore_field     002255 RLA    _colors_save              002270 RLA    
+_colors_select            00238E RLA    _deploy_enter             003A75 RLA    
+_deploy_update            003ABE RLA    _deployment_name          0096B4 RLA    
+_deployment_slot          009071 RLA    _dev_names                008A4F RLA    
+_dev_start                004B99 RLA    _dialog_centred           0025D6 RLA    
+_dialog_load_open         00414A RLA    _dialog_plate             0024B9 RLA    
+_dialog_rule              002520 RLA    _dialog_save_open         0041BF RLA    
+_dialog_saved             0096C5 RLA    _dialog_title             00254C RLA    
+_dialog_update            004268 RLA    _drag_begin               002611 RLA    
+_drag_cx                  009606 RLA    _drag_cy                  009608 RLA    
+_drag_end                 0026C1 RLA    _drag_follow              00265F RLA    
+_drag_place               00268B RLA    _game_rules               00914F RLA    
+_game_settings_enter      004C41 RLA    _game_settings_update     004CB8 RLA    
+_input                    0090D5 RLA    _input_poll_pad           005D08 RLA    
+_input_read               0026C6 RLA    _main                     0008C8 RLA    
+_memcmp                   006379 RLA    _memcpy                   0063AF RLA    
+_memset                   0063F3 RLA    _menu_enter               005204 RLA    
+_menu_update              0052DD RLA    _options_enter            0055BC RLA    
+_options_update           00569F RLA    _pad_high                 00960F RLA    
+_pad_low                  00960E RLA    _pad_present              009610 RLA    
+_panel_bar                002CF1 RLA    _panel_battle             002D33 RLA    
+_panel_clear_selected     0029C1 RLA    _panel_info               0028C6 RLA    
+_panel_number             002D88 RLA    _panel_selected           0028EC RLA    
+_panel_slot_at            002C13 RLA    _panel_slot_x             002CAC RLA    
+_panel_slot_y             002CD4 RLA    _panel_tray_clear         002AC6 RLA    
+_panel_tray_count         002BE9 RLA    _panel_tray_draw          002ADE RLA    
+_panel_tray_fallen        002A51 RLA    _panel_tray_home          002B8C RLA    
+_panel_tray_put           002BCD RLA    _panel_tray_reserve       0029E9 RLA    
+_panel_tray_slot          002AF1 RLA    _panel_tray_take          002B6B RLA    
+_piece_counts             008075 RLA    _piece_glyphs             008081 RLA    
+_piece_names              00808E RLA    _piece_rank               000A66 RLA    
+_piece_rank_key           000AA8 RLA    _piece_ranking            00914A RLA    
+_play_demo                005E20 RLA    _play_demo_banked         00B7B2 RLA    
+_play_enter               005DF3 RLA    _play_enter_banked        00B7AC RLA    
+_play_load                005E05 RLA    _play_load_banked         00B866 RLA    
+_play_position            005DFC RLA    _play_position_banked     00B7BA RLA    
+_play_resume              005E0E RLA    _play_resume_banked       00B86D RLA    
+_play_update              005E17 RLA    _play_update_banked       00B8C0 RLA    
+_preset_load              000B06 RLA    _preset_names             008125 RLA    
+_puts                     0065C7 RLA    _random_next              000B8D RLA    
+_random_seed              000B72 RLA    _rules_apply              000F30 RLA    
+_rules_battle             000E64 RLA    _rules_can_rescue         0010FD RLA    
+_rules_flag_arrived       0010AB RLA    _rules_has_move           000E13 RLA    
+_rules_known_lost         009168 RLA    _rules_lost               009150 RLA    
+_rules_rescue             0011F1 RLA    _rules_rescues            009180 RLA    
+_rules_reset              000D54 RLA    _rules_reveal_battle      000EF0 RLA    
+_rules_state_load         0013E5 RLA    _rules_state_save         00132D RLA    
+_rules_targets            000BD7 RLA    _setup_ai                 005D44 RLA    
+_setup_ai_banked          00A000 RLA    _setup_load               001538 RLA    
+_setup_random             005D4D RLA    _setup_random_banked      00B496 RLA    
+_setup_store              00151D RLA    _sound_effects_enabled    009066 RLA    
+_sound_engine_init        005D5F RLA    _sound_init               002E2E RLA    
+_sound_last_sfx           009670 RLA    _sound_music              005D86 RLA    
+_sound_music_enabled      009065 RLA    _sound_ready              00966E RLA    
+_sound_result             002F1C RLA    _sound_scene              002EBE RLA    
+_sound_sfx                005DA7 RLA    _sound_stop               005D72 RLA    
+_sound_stop_effects       005D81 RLA    _sound_stop_music         005D7C RLA    
+_sound_toggle_effects     002F6F RLA    _sound_toggle_music       002F50 RLA    
+_stdout                   009095 RLA    _store_game_read          0016D1 RLA    
+_store_game_write         001680 RLA    _store_load               00160C RLA    
+_store_name               0015E7 RLA    _store_read               00157F RLA    
+_store_save               00162F RLA    _store_used               0015D3 RLA    
+_store_write              0015B7 RLA    _strcat                   0066FC RLA    
+_strcpy                   00672B RLA    _strlen                   00674A RLA    
+_strncpy                  006760 RLA    _tray                     00961C RLA    
+_video_clear_block        0035BF RLA    _video_clear_layer1       0033A0 RLA    
+_video_cursor             00360E RLA    _video_cursor_hide        003638 RLA    
+_video_empty_square       0034E4 RLA    _video_field              003159 RLA    
+_video_init               002FED RLA    _video_marker             003587 RLA    
+_video_ranks              003330 RLA    _video_restore_game_tiles 00320B RLA    
+_video_result             003245 RLA    _video_result_restore     003322 RLA    
+_video_show               003397 RLA    _video_splash             0030E0 RLA    
+_video_sprite_hide        0036A2 RLA    _video_sprite_move        003686 RLA    
+_video_sprite_token       003646 RLA    _video_text               0033BC RLA    
+_video_text_plate         0033E3 RLA    _video_tile               00340A RLA    
+_video_tile_row           003431 RLA    _video_token              00347B RLA    
+_video_token_plain        0034AA RLA    _view_at                  001AC7 RLA    
+_view_board               001A92 RLA    _view_empty               001A70 RLA    
+_view_marker              001AA5 RLA    _view_show_all            0095D6 RLA    
+_view_square              001A2D RLA    _view_square_open         001A58 RLA    
+_view_token               001A10 RLA    _view_x                   001B5C RLA    
+_view_y                   001B79 RLA    _write                    006818 RLA    
+addeq0sp                  005E62 RLA    addysp                    005E74 RLA    
+addysp1                   005E73 RLA    aslax1                    005E9D RLA    
+aslax2                    005EA5 RLA    aslax3                    005EB0 RLA    
+aslax4                    005EBE RLA    aslaxy                    006673 RLA    
+asrax1                    005EE9 RLA    asrax2                    005EF3 RLA    
+aulong                    005E87 RLA    axlong                    005F02 RLA    
+axulong                   005F08 RLA    bnega                     005F13 RLA    
+bnegax                    005F0F RLA    booleq                    006353 RLA    
+boolne                    00634D RLA    boolult                   00636C RLA    
+callmain                  005F6E RLA    complax                   006044 RLA    
+decax1                    006059 RLA    decax2                    006060 RLA    
+decax4                    006067 RLA    decax8                    00606E RLA    
+decaxy                    006075 RLA    decsp2                    00607E RLA    
+decsp4                    00608B RLA    donelib                   00604D RLA    
+fdtab                     0090C2 RLA    getlop                    0062E5 RLA    
+incax2                    0060E9 RLA    incax3                    0060F0 RLA    
+incax4                    006109 RLA    incax5                    0060F5 RLA    
+incax6                    0060FA RLA    incax7                    0060FF RLA    
+incax8                    006104 RLA    incaxy                    00610B RLA    
+incsp1                    006114 RLA    incsp2                    006122 RLA    
+incsp3                    006130 RLA    incsp4                    006135 RLA    
+incsp5                    00613A RLA    incsp6                    00613F RLA    
+incsp7                    006144 RLA    incsp8                    006149 RLA    
+initlib                   0090D5 RLA    initstdout                009104  LAI   
+laddeq                    00617A RLA    ldaidx                    00619E RLA    
+ldax0sp                   0061B7 RLA    ldaxi                     0061AA RLA    
+ldaxidx                   0061AC RLA    ldaxysp                   0061B9 RLA    
+ldeax0sp                  0061C0 RLA    ldeaxysp                  0061C2 RLA    
+mul8x16                   00648F RLA    mul8x16a                  006499 RLA    
+mulax10                   0064C7 RLA    mulax3                    0064E0 RLA    
+mulax5                    0064F1 RLA    mulax6                    006505 RLA    
+negax                     00651F RLA    negeax                    006248 RLA    
+popa                      006554 RLA    popax                     00611B RLA    
+poplsargs                 006284 RLA    popptr1                   00655E RLA    
+popsargsudiv16            00664C RLA    ptr1                      00002A RLZ    
+ptr2                      00002C RLZ    ptr3                      00002E RLZ    
+ptr4                      000030 RLZ    push0                     006582 RLA    
+push0ax                   006269 RLA    pusha                     006570 RLA    
+pusha0                    006584 RLA    pushax                    006586 RLA    
+pusheax                   00626D RLA    pushw                     00659C RLA    
+pushw0sp                  0065AB RLA    pushwidx                  00659E RLA    
+pushwysp                  0065AD RLA    regsave                   000026 RLZ    
+return0                   00662C RLA    rwcommon                  006630 RLA    
+shlax1                    005E9D RLA    shlax2                    005EA5 RLA    
+shlax3                    005EB0 RLA    shlax4                    005EBE RLA    
+shlaxy                    006673 RLA    shleax3                   005ECF RLA    
+shrax1                    00669C RLA    shreax1                   0066A4 RLA    
+shreax4                   0066B0 RLA    sp                        000022 RLZ    
+sreg                      000024 RLZ    staspidx                  0066C1 RLA    
+stax0sp                   0066D7 RLA    staxspidx                 0066E2 RLA    
+staxysp                   0066D9 RLA    tmp1                      000032 RLZ    
+tmp2                      000033 RLZ    tmp3                      000034 RLZ    
+tmp4                      000035 RLZ    tosadda0                  005E4A RLA    
+tosaddax                  005E4C RLA    tosaddeax                 006154 RLA    
+tosandax                  005E90 RLA    tosdiva0                  006098 RLA    
+tosdivax                  00609A RLA    tosdiveax                 0061D9 RLA    
+tosicmp                   0060BD RLA    tosicmp0                  0060BB RLA    
+tosmula0                  00648D RLA    tosmulax                  006448 RLA    
+tosmuleax                 0061F3 RLA    tosorax                   00652F RLA    
+tossuba0                  0067A4 RLA    tossubax                  0067A6 RLA    
+tosudiva0                 0067B8 RLA    tosumoda0                 006807 RLA    
+tosumodax                 006809 RLA    tosumula0                 00648D RLA    
+tosumulax                 006448 RLA    tosxora0                  00686C RLA    
+udiv16                    0067C9 RLA    udiv32                    006308 RLA    
+zerobss                   00687D RLA    zsm_init_engine           0068E3 RLA    
+zsm_play                  007614 RLA    zsm_setloop               0073A8 RLA    
+zsm_setmem                007BD5 RLA    zsm_stop                  0075A4 RLA    
+zsmkit_setisr             00694D RLA    
+
+
+Exports list by value:
+----------------------
+__DESTRUCTOR_COUNT__      000000 REA    __CONSTRUCTOR_COUNT__     000001 REA    
+__EXEHDR__                000001 REA    __LOADADDR__              000001 REA    
+__STARTUP__               000001 REA    sp                        000022 RLZ    
+sreg                      000024 RLZ    regsave                   000026 RLZ    
+ptr1                      00002A RLZ    ptr2                      00002C RLZ    
+ptr3                      00002E RLZ    ptr4                      000030 RLZ    
+tmp1                      000032 RLZ    tmp2                      000033 RLZ    
+tmp3                      000034 RLZ    tmp4                      000035 RLZ    
+__BSS_SIZE__              0007E2 REA    __HEADER_LAST__           00080D RLA    
+__MAIN_START__            00080D RLA    _main                     0008C8 RLA    
+_ai_mask                  000977 RLA    _board_clear              0009C4 RLA    
+_board_count              0009F6 RLA    _board_home               000A45 RLA    
+_piece_rank               000A66 RLA    _piece_rank_key           000AA8 RLA    
+_preset_load              000B06 RLA    _random_seed              000B72 RLA    
+_random_next              000B8D RLA    _rules_targets            000BD7 RLA    
+_rules_reset              000D54 RLA    _rules_has_move           000E13 RLA    
+_rules_battle             000E64 RLA    _rules_reveal_battle      000EF0 RLA    
+_rules_apply              000F30 RLA    _rules_flag_arrived       0010AB RLA    
+_rules_can_rescue         0010FD RLA    _rules_rescue             0011F1 RLA    
+_rules_state_save         00132D RLA    _rules_state_load         0013E5 RLA    
+_setup_store              00151D RLA    _setup_load               001538 RLA    
+_store_read               00157F RLA    _store_write              0015B7 RLA    
+_store_used               0015D3 RLA    _store_name               0015E7 RLA    
+_store_load               00160C RLA    _store_save               00162F RLA    
+_store_game_write         001680 RLA    _store_game_read          0016D1 RLA    
+_view_token               001A10 RLA    _view_square              001A2D RLA    
+_view_square_open         001A58 RLA    _view_empty               001A70 RLA    
+_view_board               001A92 RLA    _view_marker              001AA5 RLA    
+_view_at                  001AC7 RLA    _view_x                   001B5C RLA    
+_view_y                   001B79 RLA    _button_width             001BE1 RLA    
+_button_draw              001BF2 RLA    _button_draw_width        001C4C RLA    
+_button_toggle            001CA2 RLA    _button_hit               001D09 RLA    
+_colors_init              001E0D RLA    _colors_restore_field     002255 RLA    
+_colors_save              002270 RLA    _colors_name              002308 RLA    
+_colors_count             00234F RLA    _colors_current           00236D RLA    
+_colors_select            00238E RLA    _dialog_plate             0024B9 RLA    
+_dialog_rule              002520 RLA    _dialog_title             00254C RLA    
+_dialog_centred           0025D6 RLA    _drag_begin               002611 RLA    
+_drag_follow              00265F RLA    _drag_place               00268B RLA    
+_drag_end                 0026C1 RLA    _input_read               0026C6 RLA    
+_panel_info               0028C6 RLA    _panel_selected           0028EC RLA    
+_panel_clear_selected     0029C1 RLA    _panel_tray_reserve       0029E9 RLA    
+_panel_tray_fallen        002A51 RLA    _panel_tray_clear         002AC6 RLA    
+_panel_tray_draw          002ADE RLA    _panel_tray_slot          002AF1 RLA    
+_panel_tray_take          002B6B RLA    _panel_tray_home          002B8C RLA    
+_panel_tray_put           002BCD RLA    _panel_tray_count         002BE9 RLA    
+_panel_slot_at            002C13 RLA    _panel_slot_x             002CAC RLA    
+_panel_slot_y             002CD4 RLA    _panel_bar                002CF1 RLA    
+_panel_battle             002D33 RLA    _panel_number             002D88 RLA    
+_sound_init               002E2E RLA    _sound_scene              002EBE RLA    
+_sound_result             002F1C RLA    _sound_toggle_music       002F50 RLA    
+_sound_toggle_effects     002F6F RLA    _video_init               002FED RLA    
+_video_splash             0030E0 RLA    _video_field              003159 RLA    
+_video_restore_game_tiles 00320B RLA    _video_result             003245 RLA    
+_video_result_restore     003322 RLA    _video_ranks              003330 RLA    
+_video_show               003397 RLA    _video_clear_layer1       0033A0 RLA    
+_video_text               0033BC RLA    _video_text_plate         0033E3 RLA    
+_video_tile               00340A RLA    _video_tile_row           003431 RLA    
+_video_token              00347B RLA    _video_token_plain        0034AA RLA    
+_video_empty_square       0034E4 RLA    _video_marker             003587 RLA    
+_video_clear_block        0035BF RLA    _video_cursor             00360E RLA    
+_video_cursor_hide        003638 RLA    _video_sprite_token       003646 RLA    
+_video_sprite_move        003686 RLA    _video_sprite_hide        0036A2 RLA    
+_about_enter              0038DF RLA    _about_update             0039BE RLA    
+_deploy_enter             003A75 RLA    _deploy_update            003ABE RLA    
+_dialog_load_open         00414A RLA    _dialog_save_open         0041BF RLA    
+_dialog_update            004268 RLA    _dev_start                004B99 RLA    
+_game_settings_enter      004C41 RLA    _game_settings_update     004CB8 RLA    
+_menu_enter               005204 RLA    _menu_update              0052DD RLA    
+_options_enter            0055BC RLA    _options_update           00569F RLA    
+_ai_move                  005CF6 RLA    _ai_reset                 005CFF RLA    
+_input_poll_pad           005D08 RLA    _ai_mission_begin         005D29 RLA    
+_ai_mission_score         005D32 RLA    _ai_mission_reset         005D3B RLA    
+_setup_ai                 005D44 RLA    _setup_random             005D4D RLA    
+_ai_memory_observe        005D56 RLA    _sound_engine_init        005D5F RLA    
+_sound_stop               005D72 RLA    _sound_stop_music         005D7C RLA    
+_sound_stop_effects       005D81 RLA    _sound_music              005D86 RLA    
+_sound_sfx                005DA7 RLA    _play_enter               005DF3 RLA    
+_play_position            005DFC RLA    _play_load                005E05 RLA    
+_play_resume              005E0E RLA    _play_update              005E17 RLA    
+_play_demo                005E20 RLA    __directerrno             005E29 RLA    
+__mappederrno             005E32 RLA    __seterrno                005E41 RLA    
+tosadda0                  005E4A RLA    tosaddax                  005E4C RLA    
+addeq0sp                  005E62 RLA    addysp1                   005E73 RLA    
+addysp                    005E74 RLA    aulong                    005E87 RLA    
+tosandax                  005E90 RLA    aslax1                    005E9D RLA    
+shlax1                    005E9D RLA    aslax2                    005EA5 RLA    
+shlax2                    005EA5 RLA    aslax3                    005EB0 RLA    
+shlax3                    005EB0 RLA    aslax4                    005EBE RLA    
+shlax4                    005EBE RLA    shleax3                   005ECF RLA    
+asrax1                    005EE9 RLA    asrax2                    005EF3 RLA    
+axlong                    005F02 RLA    axulong                   005F08 RLA    
+bnegax                    005F0F RLA    bnega                     005F13 RLA    
+_cbm_close                005F1D REA    _cbm_k_close              005F1D RLA    
+_cbm_k_getin              005F21 RLA    _cbm_k_load               005F27 RLA    
+_cbm_k_open               005F44 RLA    _cbm_k_setlfs             005F4D RLA    
+_cbm_k_setnam             005F5B RLA    callmain                  005F6E RLA    
+_cbm_open                 005F85 RLA    _cbm_read                 005F9B RLA    
+_cbm_write                005FF8 RLA    complax                   006044 RLA    
+donelib                   00604D RLA    decax1                    006059 RLA    
+decax2                    006060 RLA    decax4                    006067 RLA    
+decax8                    00606E RLA    decaxy                    006075 RLA    
+decsp2                    00607E RLA    decsp4                    00608B RLA    
+tosdiva0                  006098 RLA    tosdivax                  00609A RLA    
+tosicmp0                  0060BB RLA    tosicmp                   0060BD RLA    
+incax2                    0060E9 RLA    incax3                    0060F0 RLA    
+incax5                    0060F5 RLA    incax6                    0060FA RLA    
+incax7                    0060FF RLA    incax8                    006104 RLA    
+incax4                    006109 RLA    incaxy                    00610B RLA    
+incsp1                    006114 RLA    popax                     00611B RLA    
+incsp2                    006122 RLA    incsp3                    006130 RLA    
+incsp4                    006135 RLA    incsp5                    00613A RLA    
+incsp6                    00613F RLA    incsp7                    006144 RLA    
+incsp8                    006149 RLA    tosaddeax                 006154 RLA    
+laddeq                    00617A RLA    ldaidx                    00619E RLA    
+ldaxi                     0061AA RLA    ldaxidx                   0061AC RLA    
+ldax0sp                   0061B7 RLA    ldaxysp                   0061B9 RLA    
+ldeax0sp                  0061C0 RLA    ldeaxysp                  0061C2 RLA    
+tosdiveax                 0061D9 RLA    tosmuleax                 0061F3 RLA    
+negeax                    006248 RLA    push0ax                   006269 RLA    
+pusheax                   00626D RLA    poplsargs                 006284 RLA    
+getlop                    0062E5 RLA    udiv32                    006308 RLA    
+boolne                    00634D RLA    booleq                    006353 RLA    
+boolult                   00636C RLA    _memcmp                   006379 RLA    
+_memcpy                   0063AF RLA    __bzero                   0063EB RLA    
+_memset                   0063F3 RLA    tosmulax                  006448 RLA    
+tosumulax                 006448 RLA    tosmula0                  00648D RLA    
+tosumula0                 00648D RLA    mul8x16                   00648F RLA    
+mul8x16a                  006499 RLA    mulax10                   0064C7 RLA    
+mulax3                    0064E0 RLA    mulax5                    0064F1 RLA    
+mulax6                    006505 RLA    negax                     00651F RLA    
+tosorax                   00652F RLA    __osmaperrno              00653E RLA    
+popa                      006554 RLA    popptr1                   00655E RLA    
+pusha                     006570 RLA    push0                     006582 RLA    
+pusha0                    006584 RLA    pushax                    006586 RLA    
+pushw                     00659C RLA    pushwidx                  00659E RLA    
+pushw0sp                  0065AB RLA    pushwysp                  0065AD RLA    
+_puts                     0065C7 RLA    return0                   00662C RLA    
+rwcommon                  006630 RLA    popsargsudiv16            00664C RLA    
+aslaxy                    006673 RLA    shlaxy                    006673 RLA    
+shrax1                    00669C RLA    shreax1                   0066A4 RLA    
+shreax4                   0066B0 RLA    staspidx                  0066C1 RLA    
+stax0sp                   0066D7 RLA    staxysp                   0066D9 RLA    
+staxspidx                 0066E2 RLA    _strcat                   0066FC RLA    
+_strcpy                   00672B RLA    _strlen                   00674A RLA    
+_strncpy                  006760 RLA    tossuba0                  0067A4 RLA    
+tossubax                  0067A6 RLA    tosudiva0                 0067B8 RLA    
+udiv16                    0067C9 RLA    tosumoda0                 006807 RLA    
+tosumodax                 006809 RLA    _write                    006818 RLA    
+tosxora0                  00686C RLA    zerobss                   00687D RLA    
+zsm_init_engine           0068E3 RLA    zsmkit_setisr             00694D RLA    
+zsm_setloop               0073A8 RLA    zsm_stop                  0075A4 RLA    
+zsm_play                  007614 RLA    zsm_setmem                007BD5 RLA    
+_ai_level_names           00805E RLA    _piece_counts             008075 RLA    
+_piece_glyphs             008081 RLA    _piece_names              00808E RLA    
+_preset_names             008125 RLA    _dev_names                008A4F RLA    
+__DESTRUCTOR_TABLE__      009062 RLA    _ai_difficulty            009062 RLA    
+_sound_music_enabled      009065 RLA    _sound_effects_enabled    009066 RLA    
+_deployment_slot          009071 RLA    _stdout                   009095 RLA    
+fdtab                     0090C2 RLA    __BSS_RUN__               0090D5 RLA    
+__ONCE_RUN__              0090D5 RLA    _input                    0090D5 RLA    
+initlib                   0090D5 RLA    _board                    0090E2 RLA    
+initstdout                009104  LAI   __CONSTRUCTOR_TABLE__     009115 RLA    
+_piece_ranking            00914A RLA    _game_rules               00914F RLA    
+_rules_lost               009150 RLA    _rules_known_lost         009168 RLA    
+_rules_rescues            009180 RLA    _view_show_all            0095D6 RLA    
+_colors_field             0095E4 RLA    _colors_armies            0095E5 RLA    
+_drag_cx                  009606 RLA    _drag_cy                  009608 RLA    
+_pad_low                  00960E RLA    _pad_high                 00960F RLA    
+_pad_present              009610 RLA    _tray                     00961C RLA    
+_sound_ready              00966E RLA    _sound_last_sfx           009670 RLA    
+_deployment_name          0096B4 RLA    _dialog_saved             0096C5 RLA    
+__MAIN_SIZE__             0096F3 REA    __oserror                 0098B4 RLA    
+__errno                   0098B5 RLA    __HIMEM__                 009F00 REA    
+_setup_ai_banked          00A000 RLA    _ai_memory_sync           00A0F4 RLA    
+_ai_memory_identity       00A237 RLA    _ai_memory_history        00A250 RLA    
+_ai_memory_reset_banked   00A3FE RLA    _ai_memory_observe_banked 00A4D3 RLA    
+_ai_mission_reset_banked  00AA4D RLA    _ai_mission_begin_banked  00AA59 RLA    
+_ai_mission_score_banked  00AF23 RLA    _ai_student_begin         00AF76 RLA    
+_ai_student_score         00B324 RLA    _ai_reset_banked          00B484 RLA    
+_setup_random_banked      00B496 RLA    _ai_move_banked           00B4C9 RLA    
+_play_enter_banked        00B7AC RLA    _play_demo_banked         00B7B2 RLA    
+_play_position_banked     00B7BA RLA    _play_load_banked         00B866 RLA    
+_play_resume_banked       00B86D RLA    _play_update_banked       00B8C0 RLA    
+READST                    00FFB7 RLA    SETLFS                    00FFBA RLA    
+SETNAM                    00FFBD RLA    OPEN                      00FFC0 RLA    
+CLOSE                     00FFC3 RLA    CHKIN                     00FFC6 RLA    
+CKOUT                     00FFC9 RLA    CLRCH                     00FFCC RLA    
+BASIN                     00FFCF RLA    BSOUT                     00FFD2 RLA    
+CHROUT                    00FFD2 RLA    LOAD                      00FFD5 RLA    
+GETIN                     00FFE4 RLA    
+
+
+Imports list:
+-------------
+BASIN (kernal.o):
+    cbm_read.o                cbm/cbm.inc(47)
+BSOUT (kernal.o):
+    write.o                   cbm/cbm.inc(49)
+    cbm_write.o               cbm/cbm.inc(49)
+CHKIN (kernal.o):
+    cbm_read.o                cbm/cbm.inc(44)
+CHROUT (kernal.o):
+    crt0.o                    cx16/crt0.s(10)
+CKOUT (kernal.o):
+    write.o                   cbm/cbm.inc(45)
+    cbm_write.o               cbm/cbm.inc(45)
+CLOSE (kernal.o):
+    c_close.o                 cbm/cbm.inc(36)
+CLRCH (kernal.o):
+    write.o                   cbm/cbm.inc(46)
+    cbm_write.o               cbm/cbm.inc(46)
+    cbm_read.o                cbm/cbm.inc(46)
+GETIN (kernal.o):
+    c_getin.o                 cbm/cbm.inc(52)
+LOAD (kernal.o):
+    c_load.o                  cbm/cbm.inc(37)
+OPEN (kernal.o):
+    c_open.o                  cbm/cbm.inc(35)
+    write.o                   cbm/cbm.inc(35)
+READST (kernal.o):
+    write.o                   cbm/cbm.inc(32)
+    cbm_write.o               cbm/cbm.inc(32)
+    cbm_read.o                cbm/cbm.inc(32)
+SETLFS (kernal.o):
+    write.o                   cbm/cbm.inc(33)
+    c_setlfs.o                cbm/cbm.inc(33)
+SETNAM (kernal.o):
+    c_setnam.o                cbm/cbm.inc(34)
+__BSS_RUN__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__BSS_SIZE__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__CONSTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__CONSTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__DESTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__DESTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__EXEHDR__ (exehdr.o):
+    [linker generated]        feldmarschall.cfg(6)
+__HEADER_LAST__ ([linker generated]):
+    [linker generated]        feldmarschall.cfg(14)
+    [linker generated]        feldmarschall.cfg(14)
+__HIMEM__ ([linker generated]):
+    [linker generated]        feldmarschall.cfg(19)
+    [linker generated]        feldmarschall.cfg(14)
+__LOADADDR__ (loadaddr.o):
+    [linker generated]        feldmarschall.cfg(5)
+__MAIN_SIZE__ ([linker generated]):
+    crt0.o                    cx16/crt0.s(11)
+__MAIN_START__ ([linker generated]):
+    crt0.o                    cx16/crt0.s(11)
+__ONCE_RUN__ ([linker generated]):
+    [linker generated]        feldmarschall.cfg(19)
+    [linker generated]        feldmarschall.cfg(19)
+__STARTUP__ (crt0.o):
+    main.o                    main.s(13)
+__bzero (memset.o):
+    store.o                   core/store.s(776)
+    ai_memory.o               core/ai_memory.s(975)
+    ai.o                      core/ai.s(3735)
+__directerrno (_directerrno.o):
+    write.o                   /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(10)
+__errno (errno.o):
+    _seterrno.o               /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(7)
+__mappederrno (_mappederrno.o):
+    write.o                   /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(10)
+__oserror (_oserror.o):
+    _mappederrno.o            /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(7)
+    _directerrno.o            /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(7)
+    write.o                   /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(7)
+    cbm_write.o               cbm/cbm_write.s(36)
+    cbm_read.o                cbm/cbm_read.s(44)
+    cbm_open.o                cbm/cbm_open.s(24)
+    c_load.o                  cbm/c_load.s(10)
+__osmaperrno (oserror.o):
+    _mappederrno.o            /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(8)
+__seterrno (_seterrno.o):
+    _mappederrno.o            /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(9)
+    _directerrno.o            /build/cc65-5FfAbq/cc65-2.19/asminc/errno.inc(9)
+_about_enter (about.o):
+    main.o                    main.s(32)
+_about_update (about.o):
+    main.o                    main.s(33)
+_ai_difficulty (ai_level.o):
+    play.o                    scenes/play.s(39)
+    game_settings.o           scenes/game_settings.s(15)
+    ai_student.o              core/ai_student.s(19)
+    ai_deploy.o               core/ai_deploy.s(17)
+    ai.o                      core/ai.s(15)
+_ai_level_names (ai_level.o):
+    game_settings.o           scenes/game_settings.s(16)
+_ai_mask (ai_level.o):
+    play.o                    scenes/play.s(40)
+_ai_memory_history (ai_memory.o):
+    ai_student.o              core/ai_student.s(18)
+_ai_memory_identity (ai_memory.o):
+    ai_student.o              core/ai_student.s(17)
+_ai_memory_observe (mission_bank.o):
+    rules.o                   core/rules.s(34)
+_ai_memory_observe_banked (ai_memory.o):
+    mission_bank.o            ui/mission_bank.s(14)
+_ai_memory_reset_banked (ai_memory.o):
+    ai_mission.o              core/ai_mission.s(19)
+_ai_memory_sync (ai_memory.o):
+    ai_student.o              core/ai_student.s(16)
+_ai_mission_begin (mission_bank.o):
+    ai.o                      core/ai.s(25)
+_ai_mission_begin_banked (ai_mission.o):
+    mission_bank.o            ui/mission_bank.s(3)
+_ai_mission_reset (mission_bank.o):
+    ai.o                      core/ai.s(24)
+_ai_mission_reset_banked (ai_mission.o):
+    mission_bank.o            ui/mission_bank.s(3)
+_ai_mission_score (mission_bank.o):
+    ai.o                      core/ai.s(26)
+_ai_mission_score_banked (ai_mission.o):
+    mission_bank.o            ui/mission_bank.s(3)
+_ai_move (ai_bank.o):
+    play.o                    scenes/play.s(41)
+_ai_move_banked (ai.o):
+    ai_bank.o                 ui/ai_bank.s(3)
+_ai_reset (ai_bank.o):
+    play.o                    scenes/play.s(42)
+_ai_reset_banked (ai.o):
+    ai_bank.o                 ui/ai_bank.s(3)
+_ai_student_begin (ai_student.o):
+    ai_mission.o              core/ai_mission.s(17)
+_ai_student_score (ai_student.o):
+    ai_mission.o              core/ai_mission.s(18)
+_board (board.o):
+    play.o                    scenes/play.s(21)
+    dev.o                     scenes/dev.s(15)
+    deploy_dialog.o           scenes/deploy_dialog.s(29)
+    deploy.o                  scenes/deploy.s(26)
+    boardview.o               ui/boardview.s(23)
+    store.o                   core/store.s(29)
+    setup.o                   core/setup.s(19)
+    rules.o                   core/rules.s(15)
+    presets.o                 core/presets.s(16)
+    ai_student.o              core/ai_student.s(20)
+    ai_mission.o              core/ai_mission.s(14)
+    ai_memory.o               core/ai_memory.s(18)
+    ai_level.o                core/ai_level.s(16)
+    ai_deploy.o               core/ai_deploy.s(14)
+    ai.o                      core/ai.s(17)
+_board_clear (board.o):
+    play.o                    scenes/play.s(22)
+    options.o                 scenes/options.s(16)
+    menu.o                    scenes/menu.s(18)
+    game_settings.o           scenes/game_settings.s(18)
+    dev.o                     scenes/dev.s(16)
+    deploy.o                  scenes/deploy.s(27)
+    about.o                   scenes/about.s(16)
+_board_count (board.o):
+    play.o                    scenes/play.s(23)
+    panel.o                   ui/panel.s(38)
+_board_home (board.o):
+    play.o                    scenes/play.s(24)
+    deploy.o                  scenes/deploy.s(28)
+    rules.o                   core/rules.s(16)
+_button_draw (button.o):
+    play.o                    scenes/play.s(96)
+    options.o                 scenes/options.s(18)
+    game_settings.o           scenes/game_settings.s(24)
+    deploy_dialog.o           scenes/deploy_dialog.s(33)
+    deploy.o                  scenes/deploy.s(40)
+    about.o                   scenes/about.s(18)
+_button_draw_width (button.o):
+    play.o                    scenes/play.s(97)
+    menu.o                    scenes/menu.s(24)
+    game_settings.o           scenes/game_settings.s(25)
+_button_hit (button.o):
+    play.o                    scenes/play.s(98)
+    options.o                 scenes/options.s(19)
+    game_settings.o           scenes/game_settings.s(27)
+    deploy_dialog.o           scenes/deploy_dialog.s(34)
+    deploy.o                  scenes/deploy.s(41)
+    about.o                   scenes/about.s(19)
+_button_toggle (button.o):
+    game_settings.o           scenes/game_settings.s(26)
+_button_width (button.o):
+    deploy.o                  scenes/deploy.s(39)
+_cbm_close (cbm_close.o):
+    colors.o                  ui/colors.s(14)
+    store.o                   core/store.s(14)
+_cbm_k_close (c_close.o):
+    cbm_close.o               cbm/cbm_close.s(7)
+_cbm_k_getin (c_getin.o):
+    input.o                   ui/input.s(13)
+_cbm_k_load (c_load.o):
+    video.o                   ui/video.s(13)
+_cbm_k_open (c_open.o):
+    cbm_open.o                cbm/cbm_open.s(23)
+_cbm_k_setlfs (c_setlfs.o):
+    cbm_open.o                cbm/cbm_open.s(23)
+    video.o                   ui/video.s(14)
+    sound.o                   ui/sound.s(13)
+_cbm_k_setnam (c_setnam.o):
+    cbm_open.o                cbm/cbm_open.s(23)
+    video.o                   ui/video.s(15)
+    sound.o                   ui/sound.s(14)
+_cbm_open (cbm_open.o):
+    colors.o                  ui/colors.s(13)
+    store.o                   core/store.s(13)
+_cbm_read (cbm_read.o):
+    colors.o                  ui/colors.s(15)
+    store.o                   core/store.s(15)
+_cbm_write (cbm_write.o):
+    colors.o                  ui/colors.s(16)
+    store.o                   core/store.s(16)
+_colors_armies (colors.o):
+    options.o                 scenes/options.s(21)
+_colors_count (colors.o):
+    options.o                 scenes/options.s(24)
+_colors_current (colors.o):
+    options.o                 scenes/options.s(25)
+_colors_field (colors.o):
+    options.o                 scenes/options.s(20)
+_colors_init (colors.o):
+    video.o                   ui/video.s(39)
+_colors_name (colors.o):
+    options.o                 scenes/options.s(23)
+_colors_restore_field (colors.o):
+    video.o                   ui/video.s(40)
+_colors_save (colors.o):
+    options.o                 scenes/options.s(22)
+_colors_select (colors.o):
+    options.o                 scenes/options.s(26)
+_deploy_enter (deploy.o):
+    main.o                    main.s(24)
+_deploy_update (deploy.o):
+    main.o                    main.s(25)
+_deployment_name (deploy_dialog.o):
+    deploy.o                  scenes/deploy.s(19)
+_deployment_slot (deploy_dialog.o):
+    deploy.o                  scenes/deploy.s(20)
+_dev_names (dev.o):
+    menu.o                    scenes/menu.s(15)
+_dev_start (dev.o):
+    menu.o                    scenes/menu.s(16)
+_dialog_centred (dialog.o):
+    play.o                    scenes/play.s(58)
+    menu.o                    scenes/menu.s(23)
+    game_settings.o           scenes/game_settings.s(23)
+    deploy_dialog.o           scenes/deploy_dialog.s(36)
+    about.o                   scenes/about.s(21)
+_dialog_load_open (deploy_dialog.o):
+    deploy.o                  scenes/deploy.s(22)
+_dialog_plate (dialog.o):
+    play.o                    scenes/play.s(55)
+    options.o                 scenes/options.s(27)
+    menu.o                    scenes/menu.s(20)
+    game_settings.o           scenes/game_settings.s(20)
+    deploy_dialog.o           scenes/deploy_dialog.s(35)
+    about.o                   scenes/about.s(20)
+_dialog_rule (dialog.o):
+    play.o                    scenes/play.s(56)
+    menu.o                    scenes/menu.s(21)
+    game_settings.o           scenes/game_settings.s(21)
+_dialog_save_open (deploy_dialog.o):
+    deploy.o                  scenes/deploy.s(23)
+_dialog_saved (deploy_dialog.o):
+    deploy.o                  scenes/deploy.s(21)
+_dialog_title (dialog.o):
+    play.o                    scenes/play.s(57)
+    menu.o                    scenes/menu.s(22)
+    game_settings.o           scenes/game_settings.s(22)
+_dialog_update (deploy_dialog.o):
+    deploy.o                  scenes/deploy.s(24)
+_drag_begin (drag.o):
+    play.o                    scenes/play.s(61)
+    deploy.o                  scenes/deploy.s(44)
+_drag_cx (drag.o):
+    play.o                    scenes/play.s(59)
+    deploy.o                  scenes/deploy.s(42)
+_drag_cy (drag.o):
+    play.o                    scenes/play.s(60)
+    deploy.o                  scenes/deploy.s(43)
+_drag_end (drag.o):
+    play.o                    scenes/play.s(64)
+    deploy.o                  scenes/deploy.s(46)
+_drag_follow (drag.o):
+    play.o                    scenes/play.s(62)
+    deploy.o                  scenes/deploy.s(45)
+_drag_place (drag.o):
+    play.o                    scenes/play.s(63)
+_game_rules (rules.o):
+    play.o                    scenes/play.s(25)
+    game_settings.o           scenes/game_settings.s(19)
+    dev.o                     scenes/dev.s(17)
+    ai_student.o              core/ai_student.s(21)
+    ai_mission.o              core/ai_mission.s(15)
+    ai_memory.o               core/ai_memory.s(19)
+    ai_deploy.o               core/ai_deploy.s(15)
+    ai.o                      core/ai.s(19)
+_game_settings_enter (game_settings.o):
+    main.o                    main.s(34)
+_game_settings_update (game_settings.o):
+    main.o                    main.s(35)
+_input (main.o):
+    play.o                    scenes/play.s(17)
+    options.o                 scenes/options.s(15)
+    menu.o                    scenes/menu.s(17)
+    game_settings.o           scenes/game_settings.s(17)
+    deploy_dialog.o           scenes/deploy_dialog.s(28)
+    deploy.o                  scenes/deploy.s(25)
+    about.o                   scenes/about.s(15)
+    input.o                   ui/input.s(15)
+_input_poll_pad (input_low.o):
+    input.o                   ui/input.s(19)
+_input_read (input.o):
+    main.o                    main.s(40)
+_main (main.o):
+    callmain.o                runtime/callmain.s(11)
+_memcmp (memcmp.o):
+    colors.o                  ui/colors.s(17)
+    store.o                   core/store.s(18)
+_memcpy (memcpy.o):
+    play.o                    scenes/play.s(16)
+    deploy_dialog.o           scenes/deploy_dialog.s(15)
+    colors.o                  ui/colors.s(18)
+    store.o                   core/store.s(19)
+    setup.o                   core/setup.s(13)
+    rules.o                   core/rules.s(13)
+    ai.o                      core/ai.s(13)
+_memset (memset.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(16)
+    deploy.o                  scenes/deploy.s(15)
+    ai_mission.o              core/ai_mission.s(13)
+    ai_memory.o               core/ai_memory.s(13)
+    ai.o                      core/ai.s(14)
+_menu_enter (menu.o):
+    main.o                    main.s(22)
+_menu_update (menu.o):
+    main.o                    main.s(23)
+_options_enter (options.o):
+    main.o                    main.s(30)
+_options_update (options.o):
+    main.o                    main.s(31)
+_pad_high (input.o):
+    input_low.o               ui/input_low.s(3)
+_pad_low (input.o):
+    input_low.o               ui/input_low.s(3)
+_pad_present (input.o):
+    input_low.o               ui/input_low.s(3)
+_panel_bar (panel.o):
+    play.o                    scenes/play.s(77)
+    options.o                 scenes/options.s(30)
+    menu.o                    scenes/menu.s(29)
+    game_settings.o           scenes/game_settings.s(35)
+    deploy_dialog.o           scenes/deploy_dialog.s(40)
+    deploy.o                  scenes/deploy.s(60)
+    about.o                   scenes/about.s(26)
+_panel_battle (panel.o):
+    play.o                    scenes/play.s(78)
+_panel_clear_selected (panel.o):
+    play.o                    scenes/play.s(68)
+    menu.o                    scenes/menu.s(26)
+    game_settings.o           scenes/game_settings.s(32)
+    about.o                   scenes/about.s(23)
+_panel_info (panel.o):
+    play.o                    scenes/play.s(66)
+    options.o                 scenes/options.s(28)
+    menu.o                    scenes/menu.s(25)
+    game_settings.o           scenes/game_settings.s(31)
+    deploy_dialog.o           scenes/deploy_dialog.s(37)
+    deploy.o                  scenes/deploy.s(49)
+    about.o                   scenes/about.s(22)
+_panel_number (panel.o):
+    play.o                    scenes/play.s(79)
+    deploy.o                  scenes/deploy.s(61)
+_panel_selected (panel.o):
+    play.o                    scenes/play.s(67)
+    deploy.o                  scenes/deploy.s(50)
+_panel_slot_at (panel.o):
+    play.o                    scenes/play.s(74)
+    deploy.o                  scenes/deploy.s(57)
+_panel_slot_x (panel.o):
+    play.o                    scenes/play.s(75)
+    deploy.o                  scenes/deploy.s(58)
+_panel_slot_y (panel.o):
+    play.o                    scenes/play.s(76)
+    deploy.o                  scenes/deploy.s(59)
+_panel_tray_clear (panel.o):
+    play.o                    scenes/play.s(70)
+    options.o                 scenes/options.s(29)
+    menu.o                    scenes/menu.s(27)
+    game_settings.o           scenes/game_settings.s(33)
+    about.o                   scenes/about.s(24)
+_panel_tray_count (panel.o):
+    deploy.o                  scenes/deploy.s(56)
+_panel_tray_draw (panel.o):
+    play.o                    scenes/play.s(71)
+    menu.o                    scenes/menu.s(28)
+    game_settings.o           scenes/game_settings.s(34)
+    deploy_dialog.o           scenes/deploy_dialog.s(39)
+    deploy.o                  scenes/deploy.s(52)
+    about.o                   scenes/about.s(25)
+_panel_tray_fallen (panel.o):
+    play.o                    scenes/play.s(69)
+_panel_tray_home (panel.o):
+    play.o                    scenes/play.s(73)
+    deploy.o                  scenes/deploy.s(54)
+_panel_tray_put (panel.o):
+    deploy.o                  scenes/deploy.s(55)
+_panel_tray_reserve (panel.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(38)
+    deploy.o                  scenes/deploy.s(51)
+_panel_tray_slot (panel.o):
+    play.o                    scenes/play.s(72)
+_panel_tray_take (panel.o):
+    deploy.o                  scenes/deploy.s(53)
+_piece_counts (pieces.o):
+    play.o                    scenes/play.s(18)
+    panel.o                   ui/panel.s(35)
+    setup.o                   core/setup.s(18)
+    ai.o                      core/ai.s(16)
+_piece_glyphs (pieces.o):
+    presets.o                 core/presets.s(15)
+_piece_names (pieces.o):
+    play.o                    scenes/play.s(19)
+    panel.o                   ui/panel.s(36)
+_piece_rank (pieces.o):
+    panel.o                   ui/panel.s(37)
+_piece_rank_key (pieces.o):
+    play.o                    scenes/play.s(20)
+_piece_ranking (pieces.o):
+    video.o                   ui/video.s(41)
+    colors.o                  ui/colors.s(29)
+_play_demo (play_bank.o):
+    main.o                    main.s(27)
+_play_demo_banked (play.o):
+    play_bank.o               scenes/play_bank.s(4)
+_play_enter (play_bank.o):
+    main.o                    main.s(26)
+_play_enter_banked (play.o):
+    play_bank.o               scenes/play_bank.s(4)
+_play_load (play_bank.o):
+    menu.o                    scenes/menu.s(30)
+_play_load_banked (play.o):
+    play_bank.o               scenes/play_bank.s(4)
+_play_position (play_bank.o):
+    dev.o                     scenes/dev.s(18)
+_play_position_banked (play.o):
+    play_bank.o               scenes/play_bank.s(4)
+_play_resume (play_bank.o):
+    main.o                    main.s(28)
+_play_resume_banked (play.o):
+    play_bank.o               scenes/play_bank.s(5)
+_play_update (play_bank.o):
+    main.o                    main.s(29)
+_play_update_banked (play.o):
+    play_bank.o               scenes/play_bank.s(5)
+_preset_load (presets.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(31)
+_preset_names (presets.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(30)
+_puts (puts.o):
+    main.o                    main.s(14)
+_random_next (random.o):
+    setup.o                   core/setup.s(20)
+    ai_deploy.o               core/ai_deploy.s(16)
+    ai.o                      core/ai.s(18)
+_random_seed (random.o):
+    main.o                    main.s(36)
+_rules_apply (rules.o):
+    play.o                    scenes/play.s(33)
+_rules_battle (rules.o):
+    play.o                    scenes/play.s(31)
+    ai_student.o              core/ai_student.s(22)
+    ai_mission.o              core/ai_mission.s(16)
+    ai_memory.o               core/ai_memory.s(20)
+    ai.o                      core/ai.s(23)
+_rules_can_rescue (rules.o):
+    play.o                    scenes/play.s(35)
+_rules_flag_arrived (rules.o):
+    play.o                    scenes/play.s(34)
+_rules_has_move (rules.o):
+    play.o                    scenes/play.s(30)
+_rules_known_lost (rules.o):
+    play.o                    scenes/play.s(27)
+_rules_lost (rules.o):
+    play.o                    scenes/play.s(26)
+    ai.o                      core/ai.s(20)
+_rules_rescue (rules.o):
+    play.o                    scenes/play.s(36)
+_rules_rescues (rules.o):
+    ai.o                      core/ai.s(21)
+_rules_reset (rules.o):
+    play.o                    scenes/play.s(29)
+_rules_reveal_battle (rules.o):
+    play.o                    scenes/play.s(32)
+_rules_state_load (rules.o):
+    store.o                   core/store.s(31)
+_rules_state_save (rules.o):
+    store.o                   core/store.s(30)
+_rules_targets (rules.o):
+    play.o                    scenes/play.s(28)
+    ai.o                      core/ai.s(22)
+_setup_ai (mission_bank.o):
+    play.o                    scenes/play.s(37)
+    deploy.o                  scenes/deploy.s(30)
+_setup_ai_banked (ai_deploy.o):
+    mission_bank.o            ui/mission_bank.s(5)
+_setup_load (setup.o):
+    play.o                    scenes/play.s(38)
+    deploy.o                  scenes/deploy.s(32)
+_setup_random (mission_bank.o):
+    deploy.o                  scenes/deploy.s(29)
+_setup_random_banked (setup.o):
+    mission_bank.o            ui/mission_bank.s(12)
+    ai_deploy.o               core/ai_deploy.s(13)
+_setup_store (setup.o):
+    deploy.o                  scenes/deploy.s(31)
+_sound_effects_enabled (sound.o):
+    sound_low.o               ui/sound_low.s(7)
+    play.o                    scenes/play.s(95)
+_sound_engine_init (sound_low.o):
+    sound.o                   ui/sound.s(26)
+_sound_init (sound.o):
+    main.o                    main.s(37)
+_sound_last_sfx (sound.o):
+    sound_low.o               ui/sound_low.s(7)
+_sound_music (sound_low.o):
+    sound.o                   ui/sound.s(27)
+_sound_music_enabled (sound.o):
+    play.o                    scenes/play.s(94)
+_sound_ready (sound.o):
+    sound_low.o               ui/sound_low.s(7)
+_sound_result (sound.o):
+    play.o                    scenes/play.s(90)
+_sound_scene (sound.o):
+    main.o                    main.s(38)
+_sound_sfx (sound_low.o):
+    play.o                    scenes/play.s(91)
+    options.o                 scenes/options.s(35)
+    menu.o                    scenes/menu.s(32)
+    game_settings.o           scenes/game_settings.s(29)
+    deploy_dialog.o           scenes/deploy_dialog.s(42)
+    deploy.o                  scenes/deploy.s(47)
+    sound.o                   ui/sound.s(18)
+    main.o                    main.s(39)
+_sound_stop (sound_low.o):
+    sound.o                   ui/sound.s(28)
+_sound_stop_effects (sound_low.o):
+    sound.o                   ui/sound.s(30)
+_sound_stop_music (sound_low.o):
+    sound.o                   ui/sound.s(29)
+_sound_toggle_effects (sound.o):
+    play.o                    scenes/play.s(93)
+_sound_toggle_music (sound.o):
+    play.o                    scenes/play.s(92)
+_stdout (_file.o):
+    puts.o                    ../libwrk/cx16/puts.s(13)
+_store_game_read (store.o):
+    play.o                    scenes/play.s(44)
+_store_game_write (store.o):
+    play.o                    scenes/play.s(43)
+_store_load (store.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(20)
+_store_name (store.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(19)
+_store_read (store.o):
+    deploy.o                  scenes/deploy.s(18)
+_store_save (store.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(21)
+_store_used (store.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(18)
+_store_write (store.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(17)
+_strcat (strcat.o):
+    play.o                    scenes/play.s(13)
+    deploy.o                  scenes/deploy.s(13)
+    panel.o                   ui/panel.s(13)
+_strcpy (strcpy.o):
+    play.o                    scenes/play.s(14)
+    deploy_dialog.o           scenes/deploy_dialog.s(13)
+    deploy.o                  scenes/deploy.s(14)
+    panel.o                   ui/panel.s(14)
+_strlen (strlen.o):
+    puts.o                    ../libwrk/cx16/puts.s(15)
+    play.o                    scenes/play.s(15)
+    deploy_dialog.o           scenes/deploy_dialog.s(14)
+    panel.o                   ui/panel.s(15)
+    dialog.o                  ui/dialog.s(13)
+    button.o                  ui/button.s(13)
+_strncpy (strncpy.o):
+    store.o                   core/store.s(17)
+_tray (panel.o):
+    play.o                    scenes/play.s(65)
+    deploy.o                  scenes/deploy.s(48)
+_video_clear_block (video.o):
+    options.o                 scenes/options.s(34)
+    panel.o                   ui/panel.s(43)
+_video_clear_layer1 (video.o):
+    main.o                    main.s(19)
+_video_cursor (video.o):
+    play.o                    scenes/play.s(85)
+    deploy.o                  scenes/deploy.s(62)
+_video_cursor_hide (video.o):
+    play.o                    scenes/play.s(86)
+    deploy.o                  scenes/deploy.s(63)
+    main.o                    main.s(20)
+_video_empty_square (video.o):
+    boardview.o               ui/boardview.s(25)
+_video_field (video.o):
+    colors.o                  ui/colors.s(30)
+_video_init (video.o):
+    main.o                    main.s(16)
+_video_marker (video.o):
+    boardview.o               ui/boardview.s(26)
+_video_ranks (video.o):
+    colors.o                  ui/colors.s(32)
+_video_restore_game_tiles (video.o):
+    colors.o                  ui/colors.s(31)
+_video_result (video.o):
+    play.o                    scenes/play.s(80)
+_video_result_restore (video.o):
+    play.o                    scenes/play.s(81)
+_video_show (video.o):
+    play.o                    scenes/play.s(82)
+    main.o                    main.s(18)
+_video_splash (video.o):
+    main.o                    main.s(17)
+_video_sprite_hide (video.o):
+    play.o                    scenes/play.s(89)
+    drag.o                    ui/drag.s(21)
+    main.o                    main.s(21)
+_video_sprite_move (video.o):
+    play.o                    scenes/play.s(88)
+    drag.o                    ui/drag.s(20)
+_video_sprite_token (video.o):
+    play.o                    scenes/play.s(87)
+    drag.o                    ui/drag.s(19)
+_video_text (video.o):
+    play.o                    scenes/play.s(83)
+    options.o                 scenes/options.s(31)
+    panel.o                   ui/panel.s(40)
+_video_text_plate (video.o):
+    play.o                    scenes/play.s(84)
+    options.o                 scenes/options.s(32)
+    menu.o                    scenes/menu.s(31)
+    game_settings.o           scenes/game_settings.s(28)
+    deploy_dialog.o           scenes/deploy_dialog.s(41)
+    dialog.o                  ui/dialog.s(18)
+    button.o                  ui/button.s(19)
+_video_tile (video.o):
+    dialog.o                  ui/dialog.s(19)
+    button.o                  ui/button.s(20)
+_video_tile_row (video.o):
+    dialog.o                  ui/dialog.s(20)
+_video_token (video.o):
+    options.o                 scenes/options.s(33)
+    panel.o                   ui/panel.s(41)
+    boardview.o               ui/boardview.s(24)
+_video_token_plain (video.o):
+    panel.o                   ui/panel.s(42)
+_view_at (boardview.o):
+    play.o                    scenes/play.s(52)
+    deploy.o                  scenes/deploy.s(36)
+_view_board (boardview.o):
+    play.o                    scenes/play.s(50)
+    options.o                 scenes/options.s(17)
+    menu.o                    scenes/menu.s(19)
+    game_settings.o           scenes/game_settings.s(30)
+    deploy.o                  scenes/deploy.s(35)
+    about.o                   scenes/about.s(17)
+_view_empty (boardview.o):
+    play.o                    scenes/play.s(49)
+_view_marker (boardview.o):
+    play.o                    scenes/play.s(51)
+_view_show_all (boardview.o):
+    play.o                    scenes/play.s(45)
+    deploy.o                  scenes/deploy.s(33)
+_view_square (boardview.o):
+    play.o                    scenes/play.s(47)
+    deploy_dialog.o           scenes/deploy_dialog.s(32)
+    deploy.o                  scenes/deploy.s(34)
+_view_square_open (boardview.o):
+    play.o                    scenes/play.s(48)
+_view_token (boardview.o):
+    play.o                    scenes/play.s(46)
+    panel.o                   ui/panel.s(39)
+_view_x (boardview.o):
+    play.o                    scenes/play.s(53)
+    deploy.o                  scenes/deploy.s(37)
+_view_y (boardview.o):
+    play.o                    scenes/play.s(54)
+    deploy.o                  scenes/deploy.s(38)
+_write (write.o):
+    puts.o                    ../libwrk/cx16/puts.s(16)
+addeq0sp (addeqsp.o):
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+addysp (addysp.o):
+    incsp8.o                  runtime/incsp8.s(8)
+    incsp7.o                  runtime/incsp7.s(8)
+    incsp6.o                  runtime/incsp6.s(8)
+    incsp5.o                  runtime/incsp5.s(8)
+    incsp4.o                  runtime/incsp4.s(8)
+    incsp3.o                  runtime/incsp3.s(8)
+    drag.o                    ui/drag.s(164)
+addysp1 (addysp.o):
+    xor.o                     runtime/xor.s(9)
+    sub.o                     runtime/sub.s(8)
+    or.o                      runtime/or.s(9)
+    ludiv.o                   runtime/ludiv.s(9)
+    lmul.o                    runtime/lmul.s(9)
+    ladd.o                    runtime/ladd.s(8)
+    and.o                     runtime/and.s(8)
+aslax1 (aslax1.o):
+    colors.o                  ui/colors.s(1176)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+aslax2 (aslax2.o):
+    ai_mission.o              core/ai_mission.s(1049)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+aslax3 (aslax3.o):
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+aslax4 (aslax4.o):
+    colors.o                  ui/colors.s(1176)
+aslaxy (shl.o):
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+asrax1 (asrax1.o):
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+asrax2 (asrax2.o):
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+aulong (along.o):
+    video.o                   ui/video.s(1548)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+axlong (axlong.o):
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+axulong (axlong.o):
+    video.o                   ui/video.s(1548)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+bnega (bneg.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    deploy.o                  scenes/deploy.s(1201)
+    sound.o                   ui/sound.s(396)
+    sound.o                   ui/sound.s(396)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+bnegax (bneg.o):
+    play.o                    scenes/play.s(4178)
+    ai_student.o              core/ai_student.s(817)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+booleq (makebool.o):
+    play.o                    scenes/play.s(4178)
+    menu.o                    scenes/menu.s(616)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    colors.o                  ui/colors.s(1176)
+    store.o                   core/store.s(776)
+    rules.o                   core/rules.s(1388)
+boolne (makebool.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    store.o                   core/store.s(776)
+boolult (makebool.o):
+    play.o                    scenes/play.s(4178)
+    deploy.o                  scenes/deploy.s(1201)
+    panel.o                   ui/panel.s(965)
+    setup.o                   core/setup.s(414)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    board.o                   core/board.s(143)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+callmain (callmain.o):
+    crt0.o                    cx16/crt0.s(9)
+complax (compl.o):
+    input.o                   ui/input.s(266)
+decax1 (decax1.o):
+    play.o                    scenes/play.s(4178)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    panel.o                   ui/panel.s(965)
+    dialog.o                  ui/dialog.s(407)
+    button.o                  ui/button.s(360)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+decax2 (decax2.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+decax4 (decax4.o):
+    options.o                 scenes/options.s(663)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+decax8 (decax8.o):
+    play.o                    scenes/play.s(4178)
+decaxy (decaxy.o):
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    dialog.o                  ui/dialog.s(407)
+    boardview.o               ui/boardview.s(368)
+    setup.o                   core/setup.s(414)
+    pieces.o                  core/pieces.s(217)
+decsp2 (decsp2.o):
+    ai_level.o                core/ai_level.s(87)
+decsp4 (decsp4.o):
+    lpush.o                   runtime/lpush.s(12)
+donelib (condes.o):
+    crt0.o                    cx16/crt0.s(8)
+fdtab (filedes.o):
+    write.o                   cbm/filedes.inc(7)
+getlop (ludiv.o):
+    lshelp.o                  runtime/lshelp.s(11)
+incax2 (incax2.o):
+    game_settings.o           scenes/game_settings.s(989)
+    video.o                   ui/video.s(1548)
+    colors.o                  ui/colors.s(1176)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+incax3 (incax3.o):
+    button.o                  ui/button.s(360)
+incax4 (incaxy.o):
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+incax5 (incax5.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+incax6 (incax6.o):
+    game_settings.o           scenes/game_settings.s(989)
+incax7 (incax7.o):
+    video.o                   ui/video.s(1548)
+incax8 (incax8.o):
+    options.o                 scenes/options.s(663)
+incaxy (incaxy.o):
+    incax8.o                  runtime/incax8.s(8)
+    incax7.o                  runtime/incax7.s(8)
+    incax6.o                  runtime/incax6.s(8)
+    incax5.o                  runtime/incax5.s(8)
+    incax3.o                  runtime/incax3.s(8)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    drag.o                    ui/drag.s(164)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    setup.o                   core/setup.s(414)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+incsp1 (incsp1.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    dev.o                     scenes/dev.s(266)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    sound.o                   ui/sound.s(396)
+    sound.o                   ui/sound.s(396)
+    sound.o                   ui/sound.s(396)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    setup.o                   core/setup.s(414)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    presets.o                 core/presets.s(171)
+    pieces.o                  core/pieces.s(217)
+    pieces.o                  core/pieces.s(217)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    main.o                    main.s(241)
+incsp2 (incsp2.o):
+    staxspi.o                 runtime/staxspi.s(9)
+    staspidx.o                runtime/staspidx.s(8)
+    puts.o                    ../libwrk/cx16/puts.s(78)
+    popptr1.o                 runtime/popptr1.s(8)
+    play.o                    scenes/play.s(4178)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    button.o                  ui/button.s(360)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    setup.o                   core/setup.s(414)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    random.o                  core/random.s(94)
+    board.o                   core/board.s(143)
+    board.o                   core/board.s(143)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+incsp3 (incsp3.o):
+    play.o                    scenes/play.s(4178)
+    video.o                   ui/video.s(1548)
+    sound.o                   ui/sound.s(396)
+    dialog.o                  ui/dialog.s(407)
+    button.o                  ui/button.s(360)
+    store.o                   core/store.s(776)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    ai_student.o              core/ai_student.s(817)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_level.o                core/ai_level.s(87)
+    ai.o                      core/ai.s(3735)
+incsp4 (incsp4.o):
+    play.o                    scenes/play.s(4178)
+    menu.o                    scenes/menu.s(616)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    drag.o                    ui/drag.s(164)
+    drag.o                    ui/drag.s(164)
+    dialog.o                  ui/dialog.s(407)
+    dialog.o                  ui/dialog.s(407)
+    button.o                  ui/button.s(360)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    ai_memory.o               core/ai_memory.s(975)
+    ai.o                      core/ai.s(3735)
+incsp5 (incsp5.o):
+    play.o                    scenes/play.s(4178)
+    about.o                   scenes/about.s(279)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    button.o                  ui/button.s(360)
+incsp6 (incsp6.o):
+    play.o                    scenes/play.s(4178)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    dialog.o                  ui/dialog.s(407)
+    button.o                  ui/button.s(360)
+incsp7 (incsp7.o):
+    video.o                   ui/video.s(1548)
+    ai.o                      core/ai.s(3735)
+incsp8 (incsp8.o):
+    button.o                  ui/button.s(360)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+initlib (condes.o):
+    crt0.o                    cx16/crt0.s(8)
+laddeq (laddeq.o):
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+ldaidx (ldai.o):
+    rules.o                   core/rules.s(1388)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+ldax0sp (ldaxsp.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    menu.o                    scenes/menu.s(616)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    drag.o                    ui/drag.s(164)
+    drag.o                    ui/drag.s(164)
+    button.o                  ui/button.s(360)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    random.o                  core/random.s(94)
+    ai_memory.o               core/ai_memory.s(975)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+ldaxi (ldaxi.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    dev.o                     scenes/dev.s(266)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    panel.o                   ui/panel.s(965)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    presets.o                 core/presets.s(171)
+    pieces.o                  core/pieces.s(217)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+ldaxidx (ldaxi.o):
+    play.o                    scenes/play.s(4178)
+    colors.o                  ui/colors.s(1176)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+ldaxysp (ldaxsp.o):
+    puts.o                    ../libwrk/cx16/puts.s(78)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    menu.o                    scenes/menu.s(616)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    sound.o                   ui/sound.s(396)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    drag.o                    ui/drag.s(164)
+    drag.o                    ui/drag.s(164)
+    drag.o                    ui/drag.s(164)
+    dialog.o                  ui/dialog.s(407)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    rules.o                   core/rules.s(1388)
+    ai_memory.o               core/ai_memory.s(975)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+ldeax0sp (ldeaxysp.o):
+    video.o                   ui/video.s(1548)
+ldeaxysp (ldeaxysp.o):
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+mul8x16 (mul8.o):
+    mul.o                     runtime/mul.s(8)
+mul8x16a (mul8.o):
+    mul.o                     runtime/mul.s(8)
+mulax10 (mulax10.o):
+    boardview.o               ui/boardview.s(368)
+    rules.o                   core/rules.s(1388)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+mulax3 (mulax3.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    game_settings.o           scenes/game_settings.s(989)
+    button.o                  ui/button.s(360)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai.o                      core/ai.s(3735)
+mulax5 (mulax5.o):
+    options.o                 scenes/options.s(663)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    boardview.o               ui/boardview.s(368)
+mulax6 (mulax6.o):
+    ai_student.o              core/ai_student.s(817)
+    ai.o                      core/ai.s(3735)
+negax (negabs.o):
+    shelp.o                   runtime/shelp.s(11)
+    div.o                     runtime/div.s(11)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+negeax (lneg.o):
+    ldiv.o                    runtime/ldiv.s(11)
+popa (popa.o):
+    cbm_write.o               cbm/cbm_write.s(35)
+    cbm_read.o                cbm/cbm_read.s(43)
+    cbm_open.o                cbm/cbm_open.s(22)
+    c_setlfs.o                cbm/c_setlfs.s(12)
+    c_load.o                  cbm/c_load.s(11)
+popax (incsp2.o):
+    rwcommon.o                cbm/rwcommon.s(9)
+    strncpy.o                 common/strncpy.s(8)
+    strcpy.o                  common/strcpy.s(8)
+    strcat.o                  common/strcat.s(9)
+    shl.o                     runtime/shl.s(15)
+    shelp.o                   runtime/shelp.s(11)
+    memset.o                  common/memset.s(19)
+    memcpy.o                  common/memcpy.s(14)
+    memcmp.o                  common/memcmp.s(8)
+    cbm_write.o               cbm/cbm_write.s(35)
+    cbm_read.o                cbm/cbm_read.s(43)
+poplsargs (lshelp.o):
+    ldiv.o                    runtime/ldiv.s(11)
+popptr1 (popptr1.o):
+    rwcommon.o                cbm/rwcommon.s(9)
+    umod.o                    runtime/umod.s(8)
+    udiv.o                    runtime/udiv.s(9)
+    strncpy.o                 common/strncpy.s(8)
+    mul8.o                    runtime/mul8.s(9)
+    mul.o                     runtime/mul.s(9)
+    memcpy.o                  common/memcpy.s(14)
+    memcmp.o                  common/memcmp.s(8)
+popsargsudiv16 (shelp.o):
+    div.o                     runtime/div.s(11)
+ptr1 (zeropage.o):
+    zerobss.o                 common/zerobss.s(9)
+    write.o                   cbm/write.s(11)
+    udiv.o                    runtime/udiv.s(10)
+    strncpy.o                 common/strncpy.s(9)
+    strcpy.o                  common/strcpy.s(9)
+    strcat.o                  common/strcat.s(10)
+    staxspi.o                 runtime/staxspi.s(10)
+    staspidx.o                runtime/staspidx.s(9)
+    shelp.o                   runtime/shelp.s(12)
+    puts.o                    ../libwrk/cx16/puts.s(11)
+    pushw.o                   runtime/pushw.s(9)
+    popptr1.o                 runtime/popptr1.s(9)
+    mulax6.o                  runtime/mulax6.s(9)
+    mulax5.o                  runtime/mulax5.s(9)
+    mulax3.o                  runtime/mulax3.s(9)
+    mulax10.o                 runtime/mulax10.s(9)
+    mul8.o                    runtime/mul8.s(10)
+    mul.o                     runtime/mul.s(10)
+    memset.o                  common/memset.s(20)
+    memcpy.o                  common/memcpy.s(15)
+    memcmp.o                  common/memcmp.s(9)
+    ludiv.o                   runtime/ludiv.s(10)
+    lshelp.o                  runtime/lshelp.s(12)
+    lmul.o                    runtime/lmul.s(10)
+    ldiv.o                    runtime/ldiv.s(12)
+    ldaxi.o                   runtime/ldaxi.s(8)
+    ldai.o                    runtime/ldai.s(8)
+    laddeq.o                  runtime/laddeq.s(12)
+    div.o                     runtime/div.s(12)
+    cbm_write.o               cbm/cbm_write.s(34)
+    cbm_read.o                cbm/cbm_read.s(42)
+    c_setnam.o                cbm/c_setnam.s(10)
+    c_load.o                  cbm/c_load.s(12)
+    play.o                    scenes/play.s(11)
+    options.o                 scenes/options.s(11)
+    game_settings.o           scenes/game_settings.s(11)
+    dev.o                     scenes/dev.s(11)
+    deploy_dialog.o           scenes/deploy_dialog.s(11)
+    deploy.o                  scenes/deploy.s(11)
+    video.o                   ui/video.s(11)
+    panel.o                   ui/panel.s(11)
+    dialog.o                  ui/dialog.s(11)
+    colors.o                  ui/colors.s(11)
+    button.o                  ui/button.s(11)
+    store.o                   core/store.s(11)
+    setup.o                   core/setup.s(11)
+    rules.o                   core/rules.s(11)
+    random.o                  core/random.s(11)
+    presets.o                 core/presets.s(11)
+    ai_student.o              core/ai_student.s(11)
+    ai_mission.o              core/ai_mission.s(11)
+    ai_memory.o               core/ai_memory.s(11)
+    ai_level.o                core/ai_level.s(11)
+    ai_deploy.o               core/ai_deploy.s(11)
+    ai.o                      core/ai.s(11)
+ptr2 (zeropage.o):
+    rwcommon.o                cbm/rwcommon.s(10)
+    write.o                   cbm/write.s(11)
+    strncpy.o                 common/strncpy.s(9)
+    strlen.o                  common/strlen.s(12)
+    strcpy.o                  common/strcpy.s(9)
+    strcat.o                  common/strcat.s(10)
+    memset.o                  common/memset.s(20)
+    memcpy.o                  common/memcpy.s(15)
+    memcmp.o                  common/memcmp.s(9)
+    ludiv.o                   runtime/ludiv.s(10)
+    cbm_write.o               cbm/cbm_write.s(34)
+    cbm_read.o                cbm/cbm_read.s(42)
+ptr3 (zeropage.o):
+    rwcommon.o                cbm/rwcommon.s(10)
+    write.o                   cbm/write.s(11)
+    memset.o                  common/memset.s(20)
+    memcpy.o                  common/memcpy.s(15)
+    memcmp.o                  common/memcmp.s(9)
+    ludiv.o                   runtime/ludiv.s(10)
+    lshelp.o                  runtime/lshelp.s(12)
+    lmul.o                    runtime/lmul.s(10)
+    cbm_write.o               cbm/cbm_write.s(34)
+    cbm_read.o                cbm/cbm_read.s(42)
+ptr4 (zeropage.o):
+    umod.o                    runtime/umod.s(9)
+    udiv.o                    runtime/udiv.s(10)
+    shelp.o                   runtime/shelp.s(12)
+    mul8.o                    runtime/mul8.s(10)
+    mul.o                     runtime/mul.s(10)
+    ludiv.o                   runtime/ludiv.s(10)
+    lshelp.o                  runtime/lshelp.s(12)
+    lmul.o                    runtime/lmul.s(10)
+push0 (pushax.o):
+    play.o                    scenes/play.s(4178)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+push0ax (lpush.o):
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+pusha (pusha.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    dev.o                     scenes/dev.s(266)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    about.o                   scenes/about.s(279)
+    about.o                   scenes/about.s(279)
+    about.o                   scenes/about.s(279)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    sound.o                   ui/sound.s(396)
+    sound.o                   ui/sound.s(396)
+    sound.o                   ui/sound.s(396)
+    sound.o                   ui/sound.s(396)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    drag.o                    ui/drag.s(164)
+    drag.o                    ui/drag.s(164)
+    dialog.o                  ui/dialog.s(407)
+    dialog.o                  ui/dialog.s(407)
+    dialog.o                  ui/dialog.s(407)
+    dialog.o                  ui/dialog.s(407)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    setup.o                   core/setup.s(414)
+    setup.o                   core/setup.s(414)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    presets.o                 core/presets.s(171)
+    pieces.o                  core/pieces.s(217)
+    pieces.o                  core/pieces.s(217)
+    board.o                   core/board.s(143)
+    board.o                   core/board.s(143)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_level.o                core/ai_level.s(87)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    main.o                    main.s(241)
+pusha0 (pushax.o):
+    puts.o                    ../libwrk/cx16/puts.s(78)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    input.o                   ui/input.s(266)
+    dialog.o                  ui/dialog.s(407)
+    dialog.o                  ui/dialog.s(407)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    button.o                  ui/button.s(360)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    setup.o                   core/setup.s(414)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    presets.o                 core/presets.s(171)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+pushax (pushax.o):
+    callmain.o                runtime/callmain.s(11)
+    puts.o                    ../libwrk/cx16/puts.s(78)
+    pushw.o                   runtime/pushw.s(8)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    dev.o                     scenes/dev.s(266)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    about.o                   scenes/about.s(279)
+    about.o                   scenes/about.s(279)
+    about.o                   scenes/about.s(279)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    sound.o                   ui/sound.s(396)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    drag.o                    ui/drag.s(164)
+    drag.o                    ui/drag.s(164)
+    drag.o                    ui/drag.s(164)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    colors.o                  ui/colors.s(1176)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    setup.o                   core/setup.s(414)
+    setup.o                   core/setup.s(414)
+    setup.o                   core/setup.s(414)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    random.o                  core/random.s(94)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+pusheax (lpush.o):
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+pushw (pushw.o):
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    sound.o                   ui/sound.s(396)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+pushw0sp (pushwsp.o):
+    play.o                    scenes/play.s(4178)
+    menu.o                    scenes/menu.s(616)
+    panel.o                   ui/panel.s(965)
+    button.o                  ui/button.s(360)
+    store.o                   core/store.s(776)
+    rules.o                   core/rules.s(1388)
+    ai.o                      core/ai.s(3735)
+pushwidx (pushw.o):
+    play.o                    scenes/play.s(4178)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+pushwysp (pushwsp.o):
+    puts.o                    ../libwrk/cx16/puts.s(78)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    deploy.o                  scenes/deploy.s(1201)
+    about.o                   scenes/about.s(279)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    drag.o                    ui/drag.s(164)
+    drag.o                    ui/drag.s(164)
+    dialog.o                  ui/dialog.s(407)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    store.o                   core/store.s(776)
+    rules.o                   core/rules.s(1388)
+    ai.o                      core/ai.s(3735)
+regsave (zeropage.o):
+    dev.o                     scenes/dev.s(10)
+    video.o                   ui/video.s(10)
+    dialog.o                  ui/dialog.s(10)
+    button.o                  ui/button.s(10)
+    rules.o                   core/rules.s(10)
+return0 (return0.o):
+    memcmp.o                  common/memcmp.s(8)
+rwcommon (rwcommon.o):
+    write.o                   cbm/write.s(10)
+shlax1 (aslax1.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    store.o                   core/store.s(776)
+shlax2 (aslax2.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    game_settings.o           scenes/game_settings.s(989)
+shlax3 (aslax3.o):
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    button.o                  ui/button.s(360)
+    random.o                  core/random.s(94)
+shlax4 (aslax4.o):
+    store.o                   core/store.s(776)
+    random.o                  core/random.s(94)
+shlaxy (shl.o):
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+shleax3 (asleax3.o):
+    video.o                   ui/video.s(1548)
+shrax1 (shrax1.o):
+    play.o                    scenes/play.s(4178)
+    panel.o                   ui/panel.s(965)
+    dialog.o                  ui/dialog.s(407)
+    dialog.o                  ui/dialog.s(407)
+    ai_student.o              core/ai_student.s(817)
+shreax1 (shreax1.o):
+    video.o                   ui/video.s(1548)
+shreax4 (shreax4.o):
+    video.o                   ui/video.s(1548)
+sp (zeropage.o):
+    decsp4.o                  runtime/decsp4.s(8)
+    xor.o                     runtime/xor.s(10)
+    sub.o                     runtime/sub.s(9)
+    staxspi.o                 runtime/staxspi.s(10)
+    staxsp.o                  runtime/staxsp.s(8)
+    staspidx.o                runtime/staspidx.s(9)
+    pushwsp.o                 runtime/pushwsp.s(8)
+    pushax.o                  runtime/pushax.s(8)
+    pusha.o                   runtime/pusha.s(8)
+    popptr1.o                 runtime/popptr1.s(9)
+    popa.o                    runtime/popa.s(8)
+    or.o                      runtime/or.s(10)
+    memset.o                  common/memset.s(20)
+    memcpy.o                  common/memcpy.s(15)
+    ludiv.o                   runtime/ludiv.s(10)
+    lpush.o                   runtime/lpush.s(13)
+    lmul.o                    runtime/lmul.s(10)
+    ldeaxysp.o                runtime/ldeaxysp.s(12)
+    ldaxsp.o                  runtime/ldaxsp.s(8)
+    ladd.o                    runtime/ladd.s(9)
+    incsp2.o                  runtime/incsp2.s(8)
+    incsp1.o                  runtime/incsp1.s(8)
+    icmp.o                    runtime/icmp.s(9)
+    decsp2.o                  runtime/decsp2.s(8)
+    crt0.o                    /build/cc65-5FfAbq/cc65-2.19/asminc/zeropage.inc(11)
+    and.o                     runtime/and.s(9)
+    addysp.o                  runtime/addysp.s(8)
+    addeqsp.o                 runtime/addeqsp.s(8)
+    add.o                     runtime/add.s(12)
+    play.o                    scenes/play.s(10)
+    options.o                 scenes/options.s(10)
+    menu.o                    scenes/menu.s(10)
+    game_settings.o           scenes/game_settings.s(10)
+    dev.o                     scenes/dev.s(10)
+    deploy_dialog.o           scenes/deploy_dialog.s(10)
+    deploy.o                  scenes/deploy.s(10)
+    about.o                   scenes/about.s(10)
+    video.o                   ui/video.s(10)
+    sound.o                   ui/sound.s(10)
+    panel.o                   ui/panel.s(10)
+    drag.o                    ui/drag.s(10)
+    dialog.o                  ui/dialog.s(10)
+    colors.o                  ui/colors.s(10)
+    button.o                  ui/button.s(10)
+    boardview.o               ui/boardview.s(10)
+    store.o                   core/store.s(10)
+    setup.o                   core/setup.s(10)
+    rules.o                   core/rules.s(10)
+    random.o                  core/random.s(10)
+    presets.o                 core/presets.s(10)
+    pieces.o                  core/pieces.s(10)
+    board.o                   core/board.s(10)
+    ai_student.o              core/ai_student.s(10)
+    ai_mission.o              core/ai_mission.s(10)
+    ai_memory.o               core/ai_memory.s(10)
+    ai_level.o                core/ai_level.s(10)
+    ai_deploy.o               core/ai_deploy.s(10)
+    ai.o                      core/ai.s(10)
+    main.o                    main.s(10)
+sreg (zeropage.o):
+    umod.o                    runtime/umod.s(9)
+    udiv.o                    runtime/udiv.s(10)
+    shreax4.o                 runtime/shreax4.s(8)
+    shreax1.o                 runtime/shreax1.s(8)
+    ludiv.o                   runtime/ludiv.s(10)
+    lshelp.o                  runtime/lshelp.s(12)
+    lpush.o                   runtime/lpush.s(13)
+    lneg.o                    runtime/lneg.s(11)
+    lmul.o                    runtime/lmul.s(10)
+    ldiv.o                    runtime/ldiv.s(12)
+    ldeaxysp.o                runtime/ldeaxysp.s(12)
+    laddeq.o                  runtime/laddeq.s(12)
+    ladd.o                    runtime/ladd.s(9)
+    icmp.o                    runtime/icmp.s(9)
+    axlong.o                  runtime/axlong.s(9)
+    asleax3.o                 runtime/asleax3.s(8)
+    along.o                   runtime/along.s(9)
+    play.o                    scenes/play.s(10)
+    video.o                   ui/video.s(10)
+    setup.o                   core/setup.s(10)
+    ai.o                      core/ai.s(10)
+staspidx (staspidx.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    dev.o                     scenes/dev.s(266)
+    panel.o                   ui/panel.s(965)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+stax0sp (staxsp.o):
+    panel.o                   ui/panel.s(965)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+staxspidx (staxspi.o):
+    play.o                    scenes/play.s(4178)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+staxysp (staxsp.o):
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+tmp1 (zeropage.o):
+    xor.o                     runtime/xor.s(10)
+    strncpy.o                 common/strncpy.s(9)
+    staxspi.o                 runtime/staxspi.s(10)
+    staspidx.o                runtime/staspidx.s(9)
+    shreax4.o                 runtime/shreax4.s(8)
+    shreax1.o                 runtime/shreax1.s(8)
+    shrax1.o                  runtime/shrax1.s(8)
+    shl.o                     runtime/shl.s(16)
+    shelp.o                   runtime/shelp.s(12)
+    or.o                      runtime/or.s(10)
+    mul.o                     runtime/mul.s(10)
+    lshelp.o                  runtime/lshelp.s(12)
+    ldiv.o                    runtime/ldiv.s(12)
+    ladd.o                    runtime/ladd.s(9)
+    incaxy.o                  runtime/incaxy.s(8)
+    div.o                     runtime/div.s(12)
+    decaxy.o                  runtime/decaxy.s(8)
+    cbm_read.o                cbm/cbm_read.s(42)
+    c_setlfs.o                cbm/c_setlfs.s(13)
+    asrax2.o                  runtime/asrax2.s(8)
+    asrax1.o                  runtime/asrax1.s(8)
+    asleax3.o                 runtime/asleax3.s(8)
+    aslax4.o                  runtime/aslax4.s(8)
+    aslax3.o                  runtime/aslax3.s(8)
+    aslax2.o                  runtime/aslax2.s(8)
+    aslax1.o                  runtime/aslax1.s(8)
+    play.o                    scenes/play.s(11)
+    deploy_dialog.o           scenes/deploy_dialog.s(11)
+    deploy.o                  scenes/deploy.s(11)
+    colors.o                  ui/colors.s(11)
+    store.o                   core/store.s(11)
+    ai_student.o              core/ai_student.s(11)
+    ai_memory.o               core/ai_memory.s(11)
+    ai.o                      core/ai.s(11)
+tmp2 (zeropage.o):
+    rwcommon.o                cbm/rwcommon.s(10)
+    strncpy.o                 common/strncpy.s(9)
+    shelp.o                   runtime/shelp.s(12)
+    lshelp.o                  runtime/lshelp.s(12)
+    lmul.o                    runtime/lmul.s(10)
+    ldiv.o                    runtime/ldiv.s(12)
+    div.o                     runtime/div.s(12)
+tmp3 (zeropage.o):
+    strncpy.o                 common/strncpy.s(9)
+    strcat.o                  common/strcat.s(10)
+    ludiv.o                   runtime/ludiv.s(10)
+    lmul.o                    runtime/lmul.s(10)
+tmp4 (zeropage.o):
+    ludiv.o                   runtime/ludiv.s(10)
+    lmul.o                    runtime/lmul.s(10)
+tosadda0 (add.o):
+    ai.o                      core/ai.s(3735)
+tosaddax (add.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    video.o                   ui/video.s(1548)
+    dialog.o                  ui/dialog.s(407)
+    button.o                  ui/button.s(360)
+    button.o                  ui/button.s(360)
+    setup.o                   core/setup.s(414)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+tosaddeax (ladd.o):
+    video.o                   ui/video.s(1548)
+tosandax (and.o):
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+tosdiva0 (div.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    panel.o                   ui/panel.s(965)
+    boardview.o               ui/boardview.s(368)
+tosdivax (div.o):
+    play.o                    scenes/play.s(4178)
+tosdiveax (ldiv.o):
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+tosicmp (icmp.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    menu.o                    scenes/menu.s(616)
+    menu.o                    scenes/menu.s(616)
+    game_settings.o           scenes/game_settings.s(989)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    colors.o                  ui/colors.s(1176)
+    button.o                  ui/button.s(360)
+    store.o                   core/store.s(776)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+tosicmp0 (icmp.o):
+    play.o                    scenes/play.s(4178)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    colors.o                  ui/colors.s(1176)
+    presets.o                 core/presets.s(171)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+tosmula0 (mul8.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    game_settings.o           scenes/game_settings.s(989)
+    dialog.o                  ui/dialog.s(407)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+tosmulax (mul.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+tosmuleax (lmul.o):
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+tosorax (or.o):
+    input.o                   ui/input.s(266)
+    store.o                   core/store.s(776)
+tossuba0 (sub.o):
+    ai_mission.o              core/ai_mission.s(1049)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+tossubax (sub.o):
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    play.o                    scenes/play.s(4178)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    dialog.o                  ui/dialog.s(407)
+    rules.o                   core/rules.s(1388)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+tosudiva0 (udiv.o):
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    ai_student.o              core/ai_student.s(817)
+    ai_student.o              core/ai_student.s(817)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+    ai.o                      core/ai.s(3735)
+tosumoda0 (umod.o):
+    play.o                    scenes/play.s(4178)
+    options.o                 scenes/options.s(663)
+    options.o                 scenes/options.s(663)
+    game_settings.o           scenes/game_settings.s(989)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    setup.o                   core/setup.s(414)
+    rules.o                   core/rules.s(1388)
+    rules.o                   core/rules.s(1388)
+    ai_student.o              core/ai_student.s(817)
+    ai_mission.o              core/ai_mission.s(1049)
+    ai_memory.o               core/ai_memory.s(975)
+    ai_deploy.o               core/ai_deploy.s(273)
+    ai.o                      core/ai.s(3735)
+tosumodax (umod.o):
+    setup.o                   core/setup.s(414)
+tosumula0 (mul8.o):
+    deploy_dialog.o           scenes/deploy_dialog.s(1549)
+    video.o                   ui/video.s(1548)
+    video.o                   ui/video.s(1548)
+    panel.o                   ui/panel.s(965)
+    panel.o                   ui/panel.s(965)
+    boardview.o               ui/boardview.s(368)
+    boardview.o               ui/boardview.s(368)
+    store.o                   core/store.s(776)
+    ai_memory.o               core/ai_memory.s(975)
+tosumulax (mul.o):
+    ai.o                      core/ai.s(3735)
+tosxora0 (xor.o):
+    store.o                   core/store.s(776)
+udiv16 (udiv.o):
+    umod.o                    runtime/umod.s(8)
+    shelp.o                   runtime/shelp.s(11)
+udiv32 (ludiv.o):
+    ldiv.o                    runtime/ldiv.s(11)
+zerobss (zerobss.o):
+    crt0.o                    cx16/crt0.s(9)
+zsm_init_engine (zsmkit.o):
+    sound_low.o               ui/../vendor/zsmkit.inc(30)
+zsm_play (zsmkit.o):
+    sound_low.o               ui/../vendor/zsmkit.inc(32)
+zsm_setloop (zsmkit.o):
+    sound_low.o               ui/../vendor/zsmkit.inc(47)
+zsm_setmem (zsmkit.o):
+    sound_low.o               ui/../vendor/zsmkit.inc(40)
+zsm_stop (zsmkit.o):
+    sound_low.o               ui/../vendor/zsmkit.inc(33)
+zsmkit_setisr (zsmkit.o):
+    sound_low.o               ui/../vendor/zsmkit.inc(56)
+

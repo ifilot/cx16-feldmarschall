@@ -1,0 +1,11 @@
+test_banned_capture_forces_three_turn_miner_breakthrough_against_all_replies (test_mechanism.ShuttleTempoTests.test_banned_capture_forces_three_turn_miner_breakthrough_against_all_replies) ... ok
+test_count4_has_no_ban_and_rotated_count5_preserves_public_motif (test_mechanism.ShuttleTempoTests.test_count4_has_no_ban_and_rotated_count5_preserves_public_motif) ... ok
+test_immediate_flag_loss_refutes_an_apparent_mobility_escape (test_mechanism.ShuttleTempoTests.test_immediate_flag_loss_refutes_an_apparent_mobility_escape) ... ok
+test_last_mobile_pocket_all_legal_replies_die_but_root_can_already_be_forced (test_mechanism.ShuttleTempoTests.test_last_mobile_pocket_all_legal_replies_die_but_root_can_already_be_forced) ... ok
+test_possible_flag_and_concealed_rank_nibbles_remain_conditional (test_mechanism.ShuttleTempoTests.test_possible_flag_and_concealed_rank_nibbles_remain_conditional) ... ok
+test_unknown_capture_aborts_terminal_pocket_certificate (test_mechanism.ShuttleTempoTests.test_unknown_capture_aborts_terminal_pocket_certificate) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.009s
+
+OK
