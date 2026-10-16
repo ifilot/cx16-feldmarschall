@@ -1,0 +1,120 @@
+{
+  "kind": "fixed-sample-color-and-own-identity-diagnostics",
+  "game_armies": {
+    "0": 40
+  },
+  "sampled_root_armies": {
+    "0": 298
+  },
+  "red_only_sample": true,
+  "color_limitation": "All preregisteredodd IDsselectRed in swappedpairs; noBlueplaying-history/generalcolorclaim. Sample preserved unchanged; future bothcolorstudy must be preregistered.",
+  "goal_change_unique_own_piece_identities": 280,
+  "quiet_component_opportunity_unique_own_piece_identities": 16,
+  "quiet_component_opportunity_repeated_actor_roots": 1,
+  "opportunity_identities": [
+    {
+      "game": 11,
+      "ply": 200,
+      "source": 35,
+      "own_initial_square": 73
+    },
+    {
+      "game": 41,
+      "ply": 160,
+      "source": 72,
+      "own_initial_square": 82
+    },
+    {
+      "game": 41,
+      "ply": 160,
+      "source": 82,
+      "own_initial_square": 92
+    },
+    {
+      "game": 91,
+      "ply": 120,
+      "source": 67,
+      "own_initial_square": 67
+    },
+    {
+      "game": 91,
+      "ply": 120,
+      "source": 77,
+      "own_initial_square": 77
+    },
+    {
+      "game": 91,
+      "ply": 160,
+      "source": 66,
+      "own_initial_square": 66
+    },
+    {
+      "game": 101,
+      "ply": 120,
+      "source": 82,
+      "own_initial_square": 92
+    },
+    {
+      "game": 101,
+      "ply": 160,
+      "source": 67,
+      "own_initial_square": 67
+    },
+    {
+      "game": 171,
+      "ply": 160,
+      "source": 7,
+      "own_initial_square": 71
+    },
+    {
+      "game": 171,
+      "ply": 200,
+      "source": 15,
+      "own_initial_square": 71
+    },
+    {
+      "game": 241,
+      "ply": 80,
+      "source": 55,
+      "own_initial_square": 75
+    },
+    {
+      "game": 261,
+      "ply": 120,
+      "source": 78,
+      "own_initial_square": 78
+    },
+    {
+      "game": 261,
+      "ply": 160,
+      "source": 67,
+      "own_initial_square": 67
+    },
+    {
+      "game": 261,
+      "ply": 240,
+      "source": 77,
+      "own_initial_square": 98
+    },
+    {
+      "game": 321,
+      "ply": 40,
+      "source": 79,
+      "own_initial_square": 77
+    },
+    {
+      "game": 371,
+      "ply": 200,
+      "source": 21,
+      "own_initial_square": 71
+    },
+    {
+      "game": 391,
+      "ply": 160,
+      "source": 86,
+      "own_initial_square": 96
+    }
+  ],
+  "no_new_root_selection": true,
+  "privacy": "Own identity tracked from own initial deployment and public movement/combat outcomes only."
+}

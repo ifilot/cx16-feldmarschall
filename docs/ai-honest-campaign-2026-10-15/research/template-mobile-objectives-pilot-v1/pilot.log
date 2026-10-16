@@ -1,0 +1,63 @@
+{"games": 1, "sampled": 5, "opportunities": 0, "seconds": 3.565620121000393}
+{"games": 2, "sampled": 15, "opportunities": 1, "seconds": 4.526935544003209}
+{"games": 3, "sampled": 22, "opportunities": 1, "seconds": 5.474837228000979}
+{"games": 4, "sampled": 32, "opportunities": 1, "seconds": 6.526956747002259}
+{"games": 5, "sampled": 41, "opportunities": 3, "seconds": 7.502065947002848}
+{"games": 6, "sampled": 46, "opportunities": 3, "seconds": 8.17498597499798}
+{"games": 7, "sampled": 50, "opportunities": 3, "seconds": 8.83385086600174}
+{"games": 8, "sampled": 60, "opportunities": 3, "seconds": 10.107052389001183}
+{"games": 9, "sampled": 66, "opportunities": 3, "seconds": 10.843153227004223}
+{"games": 10, "sampled": 72, "opportunities": 6, "seconds": 11.500486835000629}
+{"games": 11, "sampled": 82, "opportunities": 8, "seconds": 12.389746578002814}
+{"games": 12, "sampled": 90, "opportunities": 8, "seconds": 13.19530739900074}
+{"games": 13, "sampled": 100, "opportunities": 8, "seconds": 14.027768261003075}
+{"games": 14, "sampled": 105, "opportunities": 8, "seconds": 14.83907909700065}
+{"games": 15, "sampled": 109, "opportunities": 8, "seconds": 15.47550298400165}
+{"games": 16, "sampled": 119, "opportunities": 8, "seconds": 16.410266674000013}
+{"games": 17, "sampled": 129, "opportunities": 8, "seconds": 17.381506955003715}
+{"games": 18, "sampled": 136, "opportunities": 10, "seconds": 18.147676145999867}
+{"games": 19, "sampled": 141, "opportunities": 10, "seconds": 18.865695068001514}
+{"games": 20, "sampled": 150, "opportunities": 10, "seconds": 19.988685925003665}
+{"games": 21, "sampled": 159, "opportunities": 10, "seconds": 20.80333101800352}
+{"games": 22, "sampled": 164, "opportunities": 10, "seconds": 21.682508422003593}
+{"games": 23, "sampled": 169, "opportunities": 10, "seconds": 22.40697385900421}
+{"games": 24, "sampled": 176, "opportunities": 10, "seconds": 23.52353277200018}
+{"games": 25, "sampled": 183, "opportunities": 11, "seconds": 24.419054985999537}
+{"games": 26, "sampled": 191, "opportunities": 11, "seconds": 25.839088355998683}
+{"games": 27, "sampled": 200, "opportunities": 14, "seconds": 26.867166538002493}
+{"games": 28, "sampled": 210, "opportunities": 14, "seconds": 28.142867045004095}
+{"games": 29, "sampled": 219, "opportunities": 14, "seconds": 29.259929364998243}
+{"games": 30, "sampled": 224, "opportunities": 14, "seconds": 30.052917810004146}
+{"games": 31, "sampled": 228, "opportunities": 14, "seconds": 30.759364488003484}
+{"games": 32, "sampled": 236, "opportunities": 14, "seconds": 31.774854946997948}
+{"games": 33, "sampled": 246, "opportunities": 15, "seconds": 32.7416674460037}
+{"games": 34, "sampled": 251, "opportunities": 15, "seconds": 33.62994090500433}
+{"games": 35, "sampled": 255, "opportunities": 15, "seconds": 34.39453871900332}
+{"games": 36, "sampled": 265, "opportunities": 15, "seconds": 35.20297121800104}
+{"games": 37, "sampled": 273, "opportunities": 15, "seconds": 36.24464390500361}
+{"games": 38, "sampled": 283, "opportunities": 16, "seconds": 37.22904034700332}
+{"games": 39, "sampled": 293, "opportunities": 16, "seconds": 38.07544674500241}
+{"games": 40, "sampled": 298, "opportunities": 17, "seconds": 39.10857399999804}
+{
+  "kind": "persistent-native-goal-public-component-pilot",
+  "strength_evidence": false,
+  "runtime_policy": false,
+  "counts": {
+    "persistent_prefix_decisions": 5434,
+    "sampled_roots": 298,
+    "actor_plans": 3399,
+    "goal_rows": 16060,
+    "goal_changes": 411,
+    "target_rejection_changes": 917,
+    "strict_same_actor_quiet_changes": 17,
+    "actual_native_actor_quiet_changes": 3,
+    "games": 40
+  },
+  "opportunity_games": 10,
+  "actual_native_actor_opportunity_games": 3,
+  "all_prefix_native_choices_and_public_histories_match_frozen": true,
+  "native_goal_previous_utility_gain_rejection_and_route_parity": true,
+  "workspace_src_all_hashes_unchanged": true,
+  "elapsed_seconds": 40.85412916300265,
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437"
+}

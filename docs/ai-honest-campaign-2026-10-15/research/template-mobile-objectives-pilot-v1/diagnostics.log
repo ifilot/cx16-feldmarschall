@@ -1,0 +1,30 @@
+{
+  "kind": "saved-component-opportunity-diagnostics",
+  "new_queries": 0,
+  "counts": {
+    "changed_actor_goals": 411,
+    "strict_goal_order_or_rejection_changes": 303,
+    "changed_both_hidden_goals": 253,
+    "strict_both_hidden_goal_changes": 236,
+    "best_quiet_progress_sets_differ": 46,
+    "goal_appeared_or_disappeared": 90,
+    "best_quiet_progress_sets_disjoint": 19
+  },
+  "games": {
+    "goal": 30,
+    "strict_goal": 30,
+    "hidden_strict_goal": 30,
+    "route": 24,
+    "disjoint_route": 10
+  },
+  "strict_quiet_argmax_interpretation": "Distance-progress-only component diagnostic using captured native score/RNG terms; NOT actual counterfactual native policy selection or a playing-strength result.",
+  "coefficient": 6,
+  "signed_integer_division": "Truncate toward zero; stable_trunc within1e-9of integer only for floating posterior expectation.",
+  "baseline_persistence": "Every prior ownnativego was executed and corrected to actualsavedmove before publicevent; previousgoal matched pre-root native strategy bytes.",
+  "privacy": "Stored enemy hidden nibbles all12; model receives ownsetup and publicevents only.",
+  "source_sha256": {
+    "component.py": "a4da017d654c89b1f1dc82a8f5006a6bd30f24745a3a6cb71b9f07e494753083",
+    "public-component-fixtures.json.gz": "dea781c9b2899af5a1d2a2075485abc566db9492c6cbc26c13212759b5665c70",
+    "summarize.py": "c1f8607b8ec50e7fea663a17b3ccfb30c2428d95b4bd27e68d19465ab535052d"
+  }
+}

@@ -1,0 +1,2588 @@
+{
+  "kind": "persistent-native-goal-public-component-pilot",
+  "strength_evidence": false,
+  "runtime_policy": false,
+  "counts": {
+    "persistent_prefix_decisions": 5434,
+    "sampled_roots": 298,
+    "actor_plans": 3399,
+    "goal_rows": 16060,
+    "goal_changes": 411,
+    "target_rejection_changes": 917,
+    "strict_same_actor_quiet_changes": 17,
+    "actual_native_actor_quiet_changes": 3,
+    "games": 40
+  },
+  "opportunity_games": 10,
+  "actual_native_actor_opportunity_games": 3,
+  "all_prefix_native_choices_and_public_histories_match_frozen": true,
+  "native_goal_previous_utility_gain_rejection_and_route_parity": true,
+  "workspace_src_all_hashes_unchanged": true,
+  "elapsed_seconds": 40.85412916300265,
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "sources": {
+    "docs/ai-honest-campaign-2026-10-15/research/template-mobile-objectives-pilot-v1/pilot.py": "a0333c0f28aa3d4ee7036419e13ae724edca380089a147ca58c93bac7e781b4e",
+    "docs/ai-honest-campaign-2026-10-15/research/template-mobile-objectives-pilot-v1/component.py": "a4da017d654c89b1f1dc82a8f5006a6bd30f24745a3a6cb71b9f07e494753083",
+    "docs/ai-honest-campaign-2026-10-15/research/template-mobile-objectives-pilot-v1/PROTOCOL.json": "b67febc1cc9093b3568bb2b0e84e0fa55387b9906de812af22c36878eae93eba",
+    "docs/ai-honest-campaign-2026-10-15/research/template-mobile-objectives-pilot-v1/SOURCE-FREEZE.json": "1119a5bf9e1f1f488a8ae59249d28d91d12ffc9f67a9cd7883ad8db4ba50bf09"
+  },
+  "opportunities": [
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "source": 35,
+      "rank": 0,
+      "previous": 24,
+      "oldgoal": 37,
+      "newgoal": 18,
+      "changed_expectations": 8,
+      "rejection_changes": 0,
+      "rows": [
+        {
+          "target": 2,
+          "g": 50,
+          "newg": 40,
+          "steps": 6,
+          "previous": 24,
+          "oldutility": 18,
+          "newutility": 16,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 6,
+          "g": 50,
+          "newg": 10,
+          "steps": 6,
+          "previous": 24,
+          "oldutility": 18,
+          "newutility": 8,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 7,
+          "g": 50,
+          "newg": 40,
+          "steps": 5,
+          "previous": 24,
+          "oldutility": 21,
+          "newutility": 19,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 13,
+          "g": 50,
+          "newg": 40,
+          "steps": 4,
+          "previous": 24,
+          "oldutility": 24,
+          "newutility": 22,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 15,
+          "g": -400,
+          "newg": -400,
+          "steps": 2,
+          "previous": 24,
+          "oldutility": -82,
+          "newutility": -82,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 16,
+          "g": 50,
+          "newg": 10,
+          "steps": 3,
+          "previous": 24,
+          "oldutility": 27,
+          "newutility": 17,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 18,
+          "g": 50,
+          "newg": 100,
+          "steps": 5,
+          "previous": 24,
+          "oldutility": 21,
+          "newutility": 34,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 23,
+          "g": 50,
+          "newg": 40,
+          "steps": 3,
+          "previous": 24,
+          "oldutility": 27,
+          "newutility": 25,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 28,
+          "g": -400,
+          "newg": -400,
+          "steps": 4,
+          "previous": 24,
+          "oldutility": -88,
+          "newutility": -88,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 37,
+          "g": 50,
+          "newg": 40,
+          "steps": 2,
+          "previous": 24,
+          "oldutility": 30,
+          "newutility": 28,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 66,
+          "g": 0,
+          "newg": 0,
+          "steps": 4,
+          "previous": 24,
+          "oldutility": 12,
+          "newutility": 12,
+          "oldaccepted": true,
+          "newaccepted": true
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": true,
+      "rejection_gate_change": false,
+      "oldbestquiet": [
+        35,
+        45
+      ],
+      "newbestquiet": [
+        35,
+        25
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            35,
+            25
+          ],
+          "old": -13,
+          "new": -1
+        },
+        {
+          "move": [
+            35,
+            36
+          ],
+          "old": -22,
+          "new": -22
+        },
+        {
+          "move": [
+            35,
+            45
+          ],
+          "old": -4,
+          "new": -4
+        }
+      ]
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "source": 72,
+      "rank": 5,
+      "previous": 40,
+      "oldgoal": 40,
+      "newgoal": 36,
+      "changed_expectations": 7,
+      "rejection_changes": 3,
+      "rows": [
+        {
+          "target": 7,
+          "g": 13,
+          "newg": 15,
+          "steps": 12,
+          "previous": 40,
+          "oldutility": -9,
+          "newutility": -9,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 8,
+          "g": 13,
+          "newg": 40,
+          "steps": 13,
+          "previous": 40,
+          "oldutility": -12,
+          "newutility": -5,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 14,
+          "g": 13,
+          "newg": -30,
+          "steps": 10,
+          "previous": 40,
+          "oldutility": -3,
+          "newutility": -13,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 19,
+          "g": -30,
+          "newg": -30,
+          "steps": 13,
+          "previous": 40,
+          "oldutility": -22,
+          "newutility": -22,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 23,
+          "g": 13,
+          "newg": -30,
+          "steps": 10,
+          "previous": 40,
+          "oldutility": -3,
+          "newutility": -13,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 33,
+          "g": 13,
+          "newg": 40,
+          "steps": 9,
+          "previous": 40,
+          "oldutility": 0,
+          "newutility": 7,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 36,
+          "g": 13,
+          "newg": 40,
+          "steps": 8,
+          "previous": 40,
+          "oldutility": 3,
+          "newutility": 10,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 40,
+          "g": 13,
+          "newg": -30,
+          "steps": 5,
+          "previous": 40,
+          "oldutility": 20,
+          "newutility": 10,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 44,
+          "g": 10,
+          "newg": 10,
+          "steps": 7,
+          "previous": 40,
+          "oldutility": 5,
+          "newutility": 5,
+          "oldaccepted": true,
+          "newaccepted": true
+        }
+      ],
+      "quiet_options": 2,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        72,
+        71
+      ],
+      "newbestquiet": [
+        72,
+        73
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            72,
+            73
+          ],
+          "old": -6,
+          "new": 6
+        },
+        {
+          "move": [
+            72,
+            71
+          ],
+          "old": 6,
+          "new": -6
+        }
+      ]
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "source": 82,
+      "rank": 7,
+      "previous": 40,
+      "oldgoal": 40,
+      "newgoal": 36,
+      "changed_expectations": 7,
+      "rejection_changes": 4,
+      "rows": [
+        {
+          "target": 7,
+          "g": -12,
+          "newg": -40,
+          "steps": 13,
+          "previous": 40,
+          "oldutility": -6,
+          "newutility": -13,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 8,
+          "g": -12,
+          "newg": 0,
+          "steps": 14,
+          "previous": 40,
+          "oldutility": -9,
+          "newutility": -6,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 14,
+          "g": -12,
+          "newg": -40,
+          "steps": 11,
+          "previous": 40,
+          "oldutility": 0,
+          "newutility": -7,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 19,
+          "g": 20,
+          "newg": 20,
+          "steps": 14,
+          "previous": 40,
+          "oldutility": -1,
+          "newutility": -1,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 23,
+          "g": -12,
+          "newg": -40,
+          "steps": 11,
+          "previous": 40,
+          "oldutility": 0,
+          "newutility": -7,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 33,
+          "g": -12,
+          "newg": 0,
+          "steps": 10,
+          "previous": 40,
+          "oldutility": 3,
+          "newutility": 6,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 36,
+          "g": -12,
+          "newg": 0,
+          "steps": 9,
+          "previous": 40,
+          "oldutility": 6,
+          "newutility": 9,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 40,
+          "g": -12,
+          "newg": -40,
+          "steps": 6,
+          "previous": 40,
+          "oldutility": 23,
+          "newutility": 16,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 44,
+          "g": 10,
+          "newg": 10,
+          "steps": 8,
+          "previous": 40,
+          "oldutility": 2,
+          "newutility": 2,
+          "oldaccepted": true,
+          "newaccepted": true
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        82,
+        81
+      ],
+      "newbestquiet": [
+        82,
+        83
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            82,
+            83
+          ],
+          "old": 1,
+          "new": 13
+        },
+        {
+          "move": [
+            82,
+            92
+          ],
+          "old": -4,
+          "new": -4
+        },
+        {
+          "move": [
+            82,
+            81
+          ],
+          "old": 13,
+          "new": 1
+        }
+      ]
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "source": 67,
+      "rank": 8,
+      "previous": 38,
+      "oldgoal": 38,
+      "newgoal": 9,
+      "changed_expectations": 4,
+      "rejection_changes": 3,
+      "rows": [
+        {
+          "target": 8,
+          "g": -5,
+          "newg": -10,
+          "steps": 9,
+          "previous": 38,
+          "oldutility": 8,
+          "newutility": 7,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 9,
+          "g": -5,
+          "newg": 0,
+          "steps": 8,
+          "previous": 38,
+          "oldutility": 11,
+          "newutility": 12,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 17,
+          "g": -5,
+          "newg": -10,
+          "steps": 9,
+          "previous": 38,
+          "oldutility": 8,
+          "newutility": 7,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 28,
+          "g": -10,
+          "newg": -10,
+          "steps": 7,
+          "previous": 38,
+          "oldutility": 13,
+          "newutility": 13,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 38,
+          "g": -5,
+          "newg": -10,
+          "steps": 4,
+          "previous": 38,
+          "oldutility": 31,
+          "newutility": 30,
+          "oldaccepted": true,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 2,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        67,
+        68
+      ],
+      "newbestquiet": [
+        67,
+        69
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "old": 7,
+          "new": 7
+        },
+        {
+          "move": [
+            67,
+            69
+          ],
+          "old": 2,
+          "new": 14
+        }
+      ]
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "source": 77,
+      "rank": 8,
+      "previous": 38,
+      "oldgoal": 38,
+      "newgoal": 9,
+      "changed_expectations": 4,
+      "rejection_changes": 3,
+      "rows": [
+        {
+          "target": 8,
+          "g": -5,
+          "newg": -10,
+          "steps": 10,
+          "previous": 38,
+          "oldutility": 5,
+          "newutility": 4,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 9,
+          "g": -5,
+          "newg": 0,
+          "steps": 9,
+          "previous": 38,
+          "oldutility": 8,
+          "newutility": 9,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 17,
+          "g": -5,
+          "newg": -10,
+          "steps": 10,
+          "previous": 38,
+          "oldutility": 5,
+          "newutility": 4,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 28,
+          "g": -10,
+          "newg": -10,
+          "steps": 8,
+          "previous": 38,
+          "oldutility": 10,
+          "newutility": 10,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 38,
+          "g": -5,
+          "newg": -10,
+          "steps": 5,
+          "previous": 38,
+          "oldutility": 28,
+          "newutility": 27,
+          "oldaccepted": true,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 2,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        77,
+        78
+      ],
+      "newbestquiet": [
+        77,
+        79
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            77,
+            78
+          ],
+          "old": 9,
+          "new": 9
+        },
+        {
+          "move": [
+            77,
+            79
+          ],
+          "old": 4,
+          "new": 16
+        }
+      ]
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "source": 66,
+      "rank": 5,
+      "previous": 38,
+      "oldgoal": 38,
+      "newgoal": 32,
+      "changed_expectations": 5,
+      "rejection_changes": 1,
+      "rows": [
+        {
+          "target": 1,
+          "g": -30,
+          "newg": -30,
+          "steps": 11,
+          "previous": 38,
+          "oldutility": -16,
+          "newutility": -16,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 8,
+          "g": 19,
+          "newg": 40,
+          "steps": 12,
+          "previous": 38,
+          "oldutility": -8,
+          "newutility": -2,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 10,
+          "g": -30,
+          "newg": -30,
+          "steps": 11,
+          "previous": 38,
+          "oldutility": -16,
+          "newutility": -16,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 12,
+          "g": -30,
+          "newg": -30,
+          "steps": 11,
+          "previous": 38,
+          "oldutility": -16,
+          "newutility": -16,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 17,
+          "g": 19,
+          "newg": 15,
+          "steps": 12,
+          "previous": 38,
+          "oldutility": -8,
+          "newutility": -9,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 23,
+          "g": 19,
+          "newg": -30,
+          "steps": 11,
+          "previous": 38,
+          "oldutility": -5,
+          "newutility": -16,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 28,
+          "g": -30,
+          "newg": -30,
+          "steps": 10,
+          "previous": 38,
+          "oldutility": -13,
+          "newutility": -13,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 30,
+          "g": 15,
+          "newg": 15,
+          "steps": 9,
+          "previous": 38,
+          "oldutility": 0,
+          "newutility": 0,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 32,
+          "g": 19,
+          "newg": 40,
+          "steps": 9,
+          "previous": 38,
+          "oldutility": 1,
+          "newutility": 7,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 38,
+          "g": 19,
+          "newg": 0,
+          "steps": 9,
+          "previous": 38,
+          "oldutility": 9,
+          "newutility": 5,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 54,
+          "g": -30,
+          "newg": -30,
+          "steps": 3,
+          "previous": 38,
+          "oldutility": 8,
+          "newutility": 8,
+          "oldaccepted": false,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 2,
+      "strict_order_reversal": true,
+      "rejection_gate_change": false,
+      "oldbestquiet": [
+        66,
+        67
+      ],
+      "newbestquiet": [
+        66,
+        65
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            66,
+            67
+          ],
+          "old": 7,
+          "new": -5
+        },
+        {
+          "move": [
+            66,
+            65
+          ],
+          "old": -4,
+          "new": 8
+        }
+      ]
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "source": 82,
+      "rank": 7,
+      "previous": 45,
+      "oldgoal": 45,
+      "newgoal": 22,
+      "changed_expectations": 3,
+      "rejection_changes": 0,
+      "rows": [
+        {
+          "target": 1,
+          "g": 20,
+          "newg": 20,
+          "steps": 9,
+          "previous": 45,
+          "oldutility": 14,
+          "newutility": 14,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 12,
+          "g": 20,
+          "newg": 20,
+          "steps": 9,
+          "previous": 45,
+          "oldutility": 14,
+          "newutility": 14,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 22,
+          "g": -7,
+          "newg": 100,
+          "steps": 8,
+          "previous": 45,
+          "oldutility": 11,
+          "newutility": 37,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 33,
+          "g": -7,
+          "newg": 10,
+          "steps": 8,
+          "previous": 45,
+          "oldutility": 11,
+          "newutility": 14,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 45,
+          "g": -7,
+          "newg": 0,
+          "steps": 7,
+          "previous": 45,
+          "oldutility": 22,
+          "newutility": 23,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 81,
+          "g": -40,
+          "newg": -40,
+          "steps": 1,
+          "previous": 45,
+          "oldutility": 51,
+          "newutility": 51,
+          "oldaccepted": false,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": true,
+      "rejection_gate_change": false,
+      "oldbestquiet": [
+        82,
+        83
+      ],
+      "newbestquiet": [
+        82,
+        72
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": true,
+      "quiet_scores": [
+        {
+          "move": [
+            82,
+            72
+          ],
+          "old": 43,
+          "new": 55
+        },
+        {
+          "move": [
+            82,
+            83
+          ],
+          "old": 53,
+          "new": 41
+        },
+        {
+          "move": [
+            82,
+            92
+          ],
+          "old": 37,
+          "new": 37
+        }
+      ]
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "source": 67,
+      "rank": 8,
+      "previous": 255,
+      "oldgoal": 29,
+      "newgoal": 36,
+      "changed_expectations": 3,
+      "rejection_changes": 3,
+      "rows": [
+        {
+          "target": 16,
+          "g": 0,
+          "newg": -10,
+          "steps": 8,
+          "previous": 255,
+          "oldutility": 12,
+          "newutility": 10,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 17,
+          "g": 0,
+          "newg": 0,
+          "steps": 7,
+          "previous": 255,
+          "oldutility": 15,
+          "newutility": 15,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 25,
+          "g": 0,
+          "newg": -10,
+          "steps": 8,
+          "previous": 255,
+          "oldutility": 12,
+          "newutility": 10,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 28,
+          "g": -10,
+          "newg": -10,
+          "steps": 5,
+          "previous": 255,
+          "oldutility": 19,
+          "newutility": 19,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 29,
+          "g": 0,
+          "newg": -10,
+          "steps": 6,
+          "previous": 255,
+          "oldutility": 18,
+          "newutility": 16,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 36,
+          "g": 0,
+          "newg": 0,
+          "steps": 6,
+          "previous": 255,
+          "oldutility": 18,
+          "newutility": 18,
+          "oldaccepted": true,
+          "newaccepted": true
+        }
+      ],
+      "quiet_options": 2,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        67,
+        69
+      ],
+      "newbestquiet": [
+        67,
+        68
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "old": 12,
+          "new": 12
+        },
+        {
+          "move": [
+            67,
+            69
+          ],
+          "old": 13,
+          "new": 1
+        }
+      ]
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "source": 7,
+      "rank": 1,
+      "previous": 16,
+      "oldgoal": 16,
+      "newgoal": 38,
+      "changed_expectations": 6,
+      "rejection_changes": 0,
+      "rows": [
+        {
+          "target": 1,
+          "g": -200,
+          "newg": -200,
+          "steps": 6,
+          "previous": 16,
+          "oldutility": -44,
+          "newutility": -44,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 12,
+          "g": 46,
+          "newg": 10,
+          "steps": 6,
+          "previous": 16,
+          "oldutility": 17,
+          "newutility": 8,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 14,
+          "g": -200,
+          "newg": -200,
+          "steps": 4,
+          "previous": 16,
+          "oldutility": -38,
+          "newutility": -38,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 16,
+          "g": 46,
+          "newg": 40,
+          "steps": 2,
+          "previous": 16,
+          "oldutility": 37,
+          "newutility": 36,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 19,
+          "g": -200,
+          "newg": -200,
+          "steps": 3,
+          "previous": 16,
+          "oldutility": -35,
+          "newutility": -35,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 21,
+          "g": -200,
+          "newg": -200,
+          "steps": 8,
+          "previous": 16,
+          "oldutility": -50,
+          "newutility": -50,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 24,
+          "g": 46,
+          "newg": 30,
+          "steps": 5,
+          "previous": 16,
+          "oldutility": 20,
+          "newutility": 16,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 32,
+          "g": -200,
+          "newg": -200,
+          "steps": 8,
+          "previous": 16,
+          "oldutility": -50,
+          "newutility": -50,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 35,
+          "g": 46,
+          "newg": 40,
+          "steps": 5,
+          "previous": 16,
+          "oldutility": 20,
+          "newutility": 19,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 38,
+          "g": 46,
+          "newg": 100,
+          "steps": 4,
+          "previous": 16,
+          "oldutility": 23,
+          "newutility": 37,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 44,
+          "g": 46,
+          "newg": 40,
+          "steps": 9,
+          "previous": 16,
+          "oldutility": 8,
+          "newutility": 7,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 59,
+          "g": 0,
+          "newg": 0,
+          "steps": 7,
+          "previous": 16,
+          "oldutility": 3,
+          "newutility": 3,
+          "oldaccepted": true,
+          "newaccepted": true
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": true,
+      "rejection_gate_change": false,
+      "oldbestquiet": [
+        7,
+        6
+      ],
+      "newbestquiet": [
+        7,
+        8
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": true,
+      "quiet_scores": [
+        {
+          "move": [
+            7,
+            8
+          ],
+          "old": 14,
+          "new": 26
+        },
+        {
+          "move": [
+            7,
+            17
+          ],
+          "old": 18,
+          "new": 18
+        },
+        {
+          "move": [
+            7,
+            6
+          ],
+          "old": 22,
+          "new": 10
+        }
+      ]
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "source": 15,
+      "rank": 1,
+      "previous": 45,
+      "oldgoal": 45,
+      "newgoal": 38,
+      "changed_expectations": 3,
+      "rejection_changes": 0,
+      "rows": [
+        {
+          "target": 1,
+          "g": -200,
+          "newg": -200,
+          "steps": 5,
+          "previous": 45,
+          "oldutility": -41,
+          "newutility": -41,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 11,
+          "g": 80,
+          "newg": 100,
+          "steps": 6,
+          "previous": 45,
+          "oldutility": 26,
+          "newutility": 31,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 14,
+          "g": -200,
+          "newg": -200,
+          "steps": 1,
+          "previous": 45,
+          "oldutility": -29,
+          "newutility": -29,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 19,
+          "g": -200,
+          "newg": -200,
+          "steps": 4,
+          "previous": 45,
+          "oldutility": -38,
+          "newutility": -38,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 21,
+          "g": -200,
+          "newg": -200,
+          "steps": 5,
+          "previous": 45,
+          "oldutility": -41,
+          "newutility": -41,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 31,
+          "g": -200,
+          "newg": -200,
+          "steps": 6,
+          "previous": 45,
+          "oldutility": -44,
+          "newutility": -44,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 34,
+          "g": 10,
+          "newg": 10,
+          "steps": 3,
+          "previous": 45,
+          "oldutility": 17,
+          "newutility": 17,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 38,
+          "g": 80,
+          "newg": 100,
+          "steps": 5,
+          "previous": 45,
+          "oldutility": 29,
+          "newutility": 34,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 45,
+          "g": 80,
+          "newg": 40,
+          "steps": 3,
+          "previous": 45,
+          "oldutility": 43,
+          "newutility": 33,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 68,
+          "g": 0,
+          "newg": 0,
+          "steps": 10,
+          "previous": 45,
+          "oldutility": -6,
+          "newutility": -6,
+          "oldaccepted": true,
+          "newaccepted": true
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": true,
+      "rejection_gate_change": false,
+      "oldbestquiet": [
+        15,
+        25
+      ],
+      "newbestquiet": [
+        15,
+        16
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            15,
+            5
+          ],
+          "old": 20,
+          "new": 20
+        },
+        {
+          "move": [
+            15,
+            16
+          ],
+          "old": 12,
+          "new": 24
+        },
+        {
+          "move": [
+            15,
+            25
+          ],
+          "old": 21,
+          "new": 21
+        }
+      ]
+    },
+    {
+      "game": 241,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "source": 55,
+      "rank": 4,
+      "previous": 36,
+      "oldgoal": 36,
+      "newgoal": 23,
+      "changed_expectations": 7,
+      "rejection_changes": 0,
+      "rows": [
+        {
+          "target": 1,
+          "g": -45,
+          "newg": -45,
+          "steps": 9,
+          "previous": 36,
+          "oldutility": -14,
+          "newutility": -14,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 10,
+          "g": -45,
+          "newg": -45,
+          "steps": 9,
+          "previous": 36,
+          "oldutility": -14,
+          "newutility": -14,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 12,
+          "g": -45,
+          "newg": -45,
+          "steps": 7,
+          "previous": 36,
+          "oldutility": -8,
+          "newutility": -8,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 15,
+          "g": 18,
+          "newg": 40,
+          "steps": 4,
+          "previous": 36,
+          "oldutility": 16,
+          "newutility": 22,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 16,
+          "g": 18,
+          "newg": 30,
+          "steps": 5,
+          "previous": 36,
+          "oldutility": 13,
+          "newutility": 16,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 17,
+          "g": 18,
+          "newg": 10,
+          "steps": 6,
+          "previous": 36,
+          "oldutility": 10,
+          "newutility": 8,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 23,
+          "g": 18,
+          "newg": 100,
+          "steps": 5,
+          "previous": 36,
+          "oldutility": 13,
+          "newutility": 34,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 24,
+          "g": -45,
+          "newg": -45,
+          "steps": 4,
+          "previous": 36,
+          "oldutility": 1,
+          "newutility": 1,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 28,
+          "g": -45,
+          "newg": -45,
+          "steps": 6,
+          "previous": 36,
+          "oldutility": -5,
+          "newutility": -5,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 31,
+          "g": 18,
+          "newg": 40,
+          "steps": 6,
+          "previous": 36,
+          "oldutility": 10,
+          "newutility": 16,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 36,
+          "g": 18,
+          "newg": 10,
+          "steps": 3,
+          "previous": 36,
+          "oldutility": 27,
+          "newutility": 25,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 37,
+          "g": 18,
+          "newg": 0,
+          "steps": 6,
+          "previous": 36,
+          "oldutility": 10,
+          "newutility": 6,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 40,
+          "g": -45,
+          "newg": -45,
+          "steps": 10,
+          "previous": 36,
+          "oldutility": -17,
+          "newutility": -17,
+          "oldaccepted": false,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": true,
+      "rejection_gate_change": false,
+      "oldbestquiet": [
+        55,
+        45
+      ],
+      "newbestquiet": [
+        55,
+        54
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            55,
+            45
+          ],
+          "old": 10,
+          "new": 10
+        },
+        {
+          "move": [
+            55,
+            65
+          ],
+          "old": -6,
+          "new": -6
+        },
+        {
+          "move": [
+            55,
+            54
+          ],
+          "old": 1,
+          "new": 13
+        }
+      ]
+    },
+    {
+      "game": 261,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "source": 78,
+      "rank": 6,
+      "previous": 37,
+      "oldgoal": 37,
+      "newgoal": 33,
+      "changed_expectations": 5,
+      "rejection_changes": 2,
+      "rows": [
+        {
+          "target": 1,
+          "g": -15,
+          "newg": -15,
+          "steps": 14,
+          "previous": 37,
+          "oldutility": -9,
+          "newutility": -9,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 10,
+          "g": -15,
+          "newg": -15,
+          "steps": 14,
+          "previous": 37,
+          "oldutility": -9,
+          "newutility": -9,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 12,
+          "g": -15,
+          "newg": -15,
+          "steps": 14,
+          "previous": 37,
+          "oldutility": -9,
+          "newutility": -9,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 13,
+          "g": 10,
+          "newg": -15,
+          "steps": 15,
+          "previous": 37,
+          "oldutility": -7,
+          "newutility": -12,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 14,
+          "g": 10,
+          "newg": 40,
+          "steps": 16,
+          "previous": 37,
+          "oldutility": -10,
+          "newutility": -2,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 28,
+          "g": -15,
+          "newg": -15,
+          "steps": 5,
+          "previous": 37,
+          "oldutility": 18,
+          "newutility": 18,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 33,
+          "g": 10,
+          "newg": 100,
+          "steps": 13,
+          "previous": 37,
+          "oldutility": -1,
+          "newutility": 22,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 34,
+          "g": -15,
+          "newg": -15,
+          "steps": 16,
+          "previous": 37,
+          "oldutility": -27,
+          "newutility": -27,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 37,
+          "g": 10,
+          "newg": -15,
+          "steps": 5,
+          "previous": 37,
+          "oldutility": 31,
+          "newutility": 26,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 39,
+          "g": 10,
+          "newg": 0,
+          "steps": 5,
+          "previous": 37,
+          "oldutility": 23,
+          "newutility": 21,
+          "oldaccepted": true,
+          "newaccepted": true
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        78,
+        68
+      ],
+      "newbestquiet": [
+        78,
+        77
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            78,
+            68
+          ],
+          "old": 17,
+          "new": 5
+        },
+        {
+          "move": [
+            78,
+            79
+          ],
+          "old": -6,
+          "new": -6
+        },
+        {
+          "move": [
+            78,
+            77
+          ],
+          "old": -5,
+          "new": 7
+        }
+      ]
+    },
+    {
+      "game": 261,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "source": 67,
+      "rank": 8,
+      "previous": 37,
+      "oldgoal": 37,
+      "newgoal": 33,
+      "changed_expectations": 2,
+      "rejection_changes": 1,
+      "rows": [
+        {
+          "target": 1,
+          "g": -10,
+          "newg": -10,
+          "steps": 14,
+          "previous": 37,
+          "oldutility": -8,
+          "newutility": -8,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 10,
+          "g": -10,
+          "newg": -10,
+          "steps": 14,
+          "previous": 37,
+          "oldutility": -8,
+          "newutility": -8,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 12,
+          "g": -10,
+          "newg": -10,
+          "steps": 14,
+          "previous": 37,
+          "oldutility": -8,
+          "newutility": -8,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 22,
+          "g": -10,
+          "newg": -10,
+          "steps": 13,
+          "previous": 37,
+          "oldutility": -17,
+          "newutility": -17,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 28,
+          "g": -10,
+          "newg": -10,
+          "steps": 5,
+          "previous": 37,
+          "oldutility": 19,
+          "newutility": 19,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 33,
+          "g": 1,
+          "newg": 100,
+          "steps": 13,
+          "previous": 37,
+          "oldutility": -3,
+          "newutility": 22,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 37,
+          "g": 1,
+          "newg": -10,
+          "steps": 5,
+          "previous": 37,
+          "oldutility": 29,
+          "newutility": 27,
+          "oldaccepted": true,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        67,
+        68
+      ],
+      "newbestquiet": [
+        67,
+        66
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            67,
+            68
+          ],
+          "old": 6,
+          "new": -6
+        },
+        {
+          "move": [
+            67,
+            69
+          ],
+          "old": 1,
+          "new": -11
+        },
+        {
+          "move": [
+            67,
+            66
+          ],
+          "old": -2,
+          "new": 10
+        }
+      ]
+    },
+    {
+      "game": 261,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "source": 77,
+      "rank": 5,
+      "previous": 8,
+      "oldgoal": 8,
+      "newgoal": 33,
+      "changed_expectations": 6,
+      "rejection_changes": 1,
+      "rows": [
+        {
+          "target": 1,
+          "g": -30,
+          "newg": -30,
+          "steps": 13,
+          "previous": 8,
+          "oldutility": -22,
+          "newutility": -22,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 3,
+          "g": -30,
+          "newg": -30,
+          "steps": 15,
+          "previous": 8,
+          "oldutility": -28,
+          "newutility": -28,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 5,
+          "g": 25,
+          "newg": 10,
+          "steps": 13,
+          "previous": 8,
+          "oldutility": -9,
+          "newutility": -13,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 6,
+          "g": 25,
+          "newg": 40,
+          "steps": 12,
+          "previous": 8,
+          "oldutility": -6,
+          "newutility": -2,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 8,
+          "g": 25,
+          "newg": 40,
+          "steps": 10,
+          "previous": 8,
+          "oldutility": 8,
+          "newutility": 12,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 10,
+          "g": -30,
+          "newg": -30,
+          "steps": 13,
+          "previous": 8,
+          "oldutility": -22,
+          "newutility": -22,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 12,
+          "g": -30,
+          "newg": -30,
+          "steps": 13,
+          "previous": 8,
+          "oldutility": -22,
+          "newutility": -22,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 22,
+          "g": 40,
+          "newg": 40,
+          "steps": 12,
+          "previous": 8,
+          "oldutility": -2,
+          "newutility": -2,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 24,
+          "g": 25,
+          "newg": -30,
+          "steps": 14,
+          "previous": 8,
+          "oldutility": -12,
+          "newutility": -25,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 25,
+          "g": 25,
+          "newg": 0,
+          "steps": 13,
+          "previous": 8,
+          "oldutility": -9,
+          "newutility": -15,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 27,
+          "g": 15,
+          "newg": 15,
+          "steps": 9,
+          "previous": 8,
+          "oldutility": 0,
+          "newutility": 0,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 28,
+          "g": -30,
+          "newg": -30,
+          "steps": 8,
+          "previous": 8,
+          "oldutility": -7,
+          "newutility": -7,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 33,
+          "g": 25,
+          "newg": 100,
+          "steps": 12,
+          "previous": 8,
+          "oldutility": -6,
+          "newutility": 13,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 36,
+          "g": -30,
+          "newg": -30,
+          "steps": 9,
+          "previous": 8,
+          "oldutility": -10,
+          "newutility": -10,
+          "oldaccepted": false,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": true,
+      "rejection_gate_change": false,
+      "oldbestquiet": [
+        77,
+        78
+      ],
+      "newbestquiet": [
+        77,
+        76
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            77,
+            78
+          ],
+          "old": 6,
+          "new": -6
+        },
+        {
+          "move": [
+            77,
+            87
+          ],
+          "old": -9,
+          "new": -9
+        },
+        {
+          "move": [
+            77,
+            76
+          ],
+          "old": -6,
+          "new": 6
+        }
+      ]
+    },
+    {
+      "game": 321,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "source": 79,
+      "rank": 8,
+      "previous": 18,
+      "oldgoal": 18,
+      "newgoal": 36,
+      "changed_expectations": 3,
+      "rejection_changes": 2,
+      "rows": [
+        {
+          "target": 18,
+          "g": -3,
+          "newg": -9,
+          "steps": 7,
+          "previous": 18,
+          "oldutility": 23,
+          "newutility": 21,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 19,
+          "g": -10,
+          "newg": -10,
+          "steps": 6,
+          "previous": 18,
+          "oldutility": 16,
+          "newutility": 16,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 27,
+          "g": -3,
+          "newg": -9,
+          "steps": 7,
+          "previous": 18,
+          "oldutility": 15,
+          "newutility": 13,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 36,
+          "g": -3,
+          "newg": 0,
+          "steps": 7,
+          "previous": 18,
+          "oldutility": 15,
+          "newutility": 15,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 67,
+          "g": -10,
+          "newg": -10,
+          "steps": 3,
+          "previous": 18,
+          "oldutility": 13,
+          "newutility": 13,
+          "oldaccepted": false,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 7,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        79,
+        29
+      ],
+      "newbestquiet": [
+        79,
+        39
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": true,
+      "quiet_scores": [
+        {
+          "move": [
+            79,
+            69
+          ],
+          "old": 17,
+          "new": 17
+        },
+        {
+          "move": [
+            79,
+            59
+          ],
+          "old": 27,
+          "new": 27
+        },
+        {
+          "move": [
+            79,
+            49
+          ],
+          "old": 35,
+          "new": 35
+        },
+        {
+          "move": [
+            79,
+            39
+          ],
+          "old": 57,
+          "new": 57
+        },
+        {
+          "move": [
+            79,
+            29
+          ],
+          "old": 63,
+          "new": 51
+        },
+        {
+          "move": [
+            79,
+            78
+          ],
+          "old": 6,
+          "new": 6
+        },
+        {
+          "move": [
+            79,
+            77
+          ],
+          "old": -25,
+          "new": -25
+        }
+      ]
+    },
+    {
+      "game": 371,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "source": 21,
+      "rank": 1,
+      "previous": 23,
+      "oldgoal": 23,
+      "newgoal": 33,
+      "changed_expectations": 2,
+      "rejection_changes": 1,
+      "rows": [
+        {
+          "target": 1,
+          "g": -200,
+          "newg": -200,
+          "steps": 2,
+          "previous": 23,
+          "oldutility": -32,
+          "newutility": -32,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 10,
+          "g": -200,
+          "newg": -200,
+          "steps": 2,
+          "previous": 23,
+          "oldutility": -32,
+          "newutility": -32,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 12,
+          "g": -200,
+          "newg": -200,
+          "steps": 2,
+          "previous": 23,
+          "oldutility": -32,
+          "newutility": -32,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 23,
+          "g": 1,
+          "newg": -200,
+          "steps": 2,
+          "previous": 23,
+          "oldutility": 26,
+          "newutility": -24,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 33,
+          "g": 1,
+          "newg": 10,
+          "steps": 3,
+          "previous": 23,
+          "oldutility": 15,
+          "newutility": 17,
+          "oldaccepted": true,
+          "newaccepted": true
+        }
+      ],
+      "quiet_options": 4,
+      "strict_order_reversal": true,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        21,
+        22
+      ],
+      "newbestquiet": [
+        21,
+        31
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            21,
+            11
+          ],
+          "old": 7,
+          "new": 7
+        },
+        {
+          "move": [
+            21,
+            22
+          ],
+          "old": 8,
+          "new": 8
+        },
+        {
+          "move": [
+            21,
+            31
+          ],
+          "old": 5,
+          "new": 17
+        },
+        {
+          "move": [
+            21,
+            20
+          ],
+          "old": 5,
+          "new": 5
+        }
+      ]
+    },
+    {
+      "game": 391,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "source": 86,
+      "rank": 7,
+      "previous": 44,
+      "oldgoal": 44,
+      "newgoal": 8,
+      "changed_expectations": 4,
+      "rejection_changes": 3,
+      "rows": [
+        {
+          "target": 5,
+          "g": -14,
+          "newg": -40,
+          "steps": 15,
+          "previous": 44,
+          "oldutility": -12,
+          "newutility": -19,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 7,
+          "g": -14,
+          "newg": 0,
+          "steps": 13,
+          "previous": 44,
+          "oldutility": -6,
+          "newutility": -3,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 8,
+          "g": 20,
+          "newg": 20,
+          "steps": 12,
+          "previous": 44,
+          "oldutility": 5,
+          "newutility": 5,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 15,
+          "g": 20,
+          "newg": 20,
+          "steps": 14,
+          "previous": 44,
+          "oldutility": -1,
+          "newutility": -1,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 19,
+          "g": 20,
+          "newg": 20,
+          "steps": 12,
+          "previous": 44,
+          "oldutility": 5,
+          "newutility": 5,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 26,
+          "g": 10,
+          "newg": 10,
+          "steps": 12,
+          "previous": 44,
+          "oldutility": -10,
+          "newutility": -10,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 29,
+          "g": 0,
+          "newg": 0,
+          "steps": 9,
+          "previous": 44,
+          "oldutility": -3,
+          "newutility": -3,
+          "oldaccepted": true,
+          "newaccepted": true
+        },
+        {
+          "target": 36,
+          "g": -14,
+          "newg": -40,
+          "steps": 11,
+          "previous": 44,
+          "oldutility": 0,
+          "newutility": -7,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 44,
+          "g": -14,
+          "newg": -40,
+          "steps": 6,
+          "previous": 44,
+          "oldutility": 23,
+          "newutility": 16,
+          "oldaccepted": true,
+          "newaccepted": false
+        },
+        {
+          "target": 48,
+          "g": -40,
+          "newg": -40,
+          "steps": 8,
+          "previous": 44,
+          "oldutility": -10,
+          "newutility": -10,
+          "oldaccepted": false,
+          "newaccepted": false
+        },
+        {
+          "target": 55,
+          "g": -40,
+          "newg": -40,
+          "steps": 6,
+          "previous": 44,
+          "oldutility": -4,
+          "newutility": -4,
+          "oldaccepted": false,
+          "newaccepted": false
+        }
+      ],
+      "quiet_options": 3,
+      "strict_order_reversal": false,
+      "rejection_gate_change": true,
+      "oldbestquiet": [
+        86,
+        85
+      ],
+      "newbestquiet": [
+        86,
+        76
+      ],
+      "strictquiet_choices": true,
+      "actual_native_quiet": false,
+      "quiet_scores": [
+        {
+          "move": [
+            86,
+            76
+          ],
+          "old": 2,
+          "new": 14
+        },
+        {
+          "move": [
+            86,
+            96
+          ],
+          "old": -6,
+          "new": -6
+        },
+        {
+          "move": [
+            86,
+            85
+          ],
+          "old": 11,
+          "new": -1
+        }
+      ]
+    }
+  ]
+}

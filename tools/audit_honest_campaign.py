@@ -152,8 +152,13 @@ def audit():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--require-settled-matches', action='store_true',
+                        help='Reject any saved cohort not yet represented by a completed audited result.')
     args = parser.parse_args()
     result = audit()
+    if args.require_settled_matches:
+        assert not [row for row in result['pending_or_running'] if row['saved']], 'Unsettled saved matches remain'
+        result['all_saved_matches_in_completed_audited_cycles'] = True
     if args.output:
         args.output.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result, indent=2))

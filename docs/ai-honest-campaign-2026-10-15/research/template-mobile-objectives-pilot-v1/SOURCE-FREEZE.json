@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-16T03:35:35.165061+00:00",
+  "before_cohort_queries": true,
+  "files": {
+    "PROTOCOL.json": "b67febc1cc9093b3568bb2b0e84e0fa55387b9906de812af22c36878eae93eba",
+    "component.py": "a4da017d654c89b1f1dc82a8f5006a6bd30f24745a3a6cb71b9f07e494753083",
+    "pilot.py": "a0333c0f28aa3d4ee7036419e13ae724edca380089a147ca58c93bac7e781b4e",
+    "test_component.py": "98e7f0f5da6feba2636c47283451781e8382b14bb57f14bc507bb2d96ec56f92"
+  }
+}
