@@ -1,0 +1,49 @@
+{
+  "schema": "cycle27-preregistered-five-contrast-width-v1",
+  "reason": "Plan requested95% and99% intervals for five exploratory contrasts; shared harness also retains98.3333%. No shared analysis source changed.",
+  "bootstrap_seed": 1970001,
+  "replicates": 20000,
+  "paired_95_exactly_reproduced": true,
+  "comparisons": {
+    "student-fortress-template-flag-bomb-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_pairs": 187,
+      "mean": 0.0427807486631016,
+      "interval_99": [
+        -0.0066844919786096255,
+        0.09358288770053476
+      ]
+    },
+    "student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal": {
+      "complete_pairs": 165,
+      "mean": 0.17575757575757575,
+      "interval_99": [
+        0.09545454545454546,
+        0.25606060606060604
+      ]
+    },
+    "student-fortress-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal": {
+      "complete_pairs": 173,
+      "mean": 0.23265895953757226,
+      "interval_99": [
+        0.157514450867052,
+        0.3078034682080925
+      ]
+    },
+    "student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal": {
+      "complete_pairs": 169,
+      "mean": 0.1849112426035503,
+      "interval_99": [
+        0.10355029585798817,
+        0.26627218934911245
+      ]
+    },
+    "student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal": {
+      "complete_pairs": 166,
+      "mean": 0.0572289156626506,
+      "interval_99": [
+        0.009036144578313253,
+        0.10993975903614457
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "master_seed": 2510001,
+  "planned_pairs": 1000,
+  "unique_joint_draws": 1000,
+  "compared_prior_original_dos_only_plans": [
+    {
+      "cycle": 19,
+      "pairs": 200,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 21,
+      "pairs": 200,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 22,
+      "pairs": 200,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 23,
+      "pairs": 200,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 24,
+      "pairs": 1000,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 25,
+      "pairs": 1000,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 26,
+      "pairs": 500,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 27,
+      "pairs": 200,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 29,
+      "pairs": 500,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 31,
+      "pairs": 500,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 33,
+      "pairs": 500,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 35,
+      "pairs": 500,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 37,
+      "pairs": 500,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    },
+    {
+      "cycle": 39,
+      "pairs": 500,
+      "joint_private_dos_setup_seed_and_move_seed_overlap": 0
+    }
+  ],
+  "cohort_sha256": "cb8b5394f33ab09ae8119bcbacdb2b3c446a2edd83cb7cd78e99edb2b83638b4",
+  "scope": "Design-only reconstruction of RNG draws, without opening any trajectories or outcomes. Matches tournament original-dos-only family loop (two private32bit setup draws, then move seed). Fresh independent cohort with no joint B-private-setup/move draw repeated among these prior plans. Move seeds alone have a deliberately limited16bit range and need not be globally unique; army layouts can repeat under the population by design. Exact frozen runner still generates and audits all armies at execution."
+}

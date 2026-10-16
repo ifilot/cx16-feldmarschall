@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 100,
+  "attempts": 1600,
+  "errors_preserved_unscored": 70,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 4,
+  "exact_rebuild_runtime_sha256": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "engine": "465d81fb03a38ff729db74c058f84afc2ec9a1139d0e62b2158463927fc48c96",
+      "observer": "60646ad1d5cad646b435b13bc63009cab4050f94f6e8379eb5469ab2e77875fc",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_native_template.py": "5e50ddcc182ef92345db60894bdac3fd2b67c68acc9eda7f8b6eebeb43662d98",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    17,
+    3
+  ],
+  "test_skip_summaries": []
+}

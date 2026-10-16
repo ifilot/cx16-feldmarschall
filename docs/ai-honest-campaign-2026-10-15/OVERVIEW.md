@@ -66,6 +66,10 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 24 | Own setup, original DOS, rotated | student-fortress-deployment-v1-normal | 359 / 185 / 1340 | 24.0% | 116 |
 | 26 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 135 / 73 / 705 | 18.8% | 87 |
 | 26 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 276 / 180 / 508 | 38.0% | 36 |
+| 27 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 63 / 31 / 284 | 20.8% | 22 |
+| 27 | Own setup, original DOS, rotated | student-fortress-deployment-v1-normal | 80 / 31 / 259 | 25.8% | 30 |
+| 27 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 112 / 67 / 209 | 37.5% | 12 |
+| 27 | Own setup, original DOS, rotated | student-fortress-template-flag-bomb-v1-normal | 124 / 82 / 188 | 41.9% | 6 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -281,6 +285,21 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +19.3 percentage points; 95% paired interval [+15.3, +23.4].
 
 
+**Cycle 27 hypotheses:** Improved own deployment and honest enemy formation inference address independent defence and attack limitations and can combine without cancelling their benefits.
+
+Evidence: [cycle-27-fortress-template-combination](cycle-27-fortress-template-combination/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-fortress-template-flag-bomb-v1-normal minus student-template-flag-bomb-v1-normal: +4.3 percentage points; 95% paired interval [+0.5, +8.2].
+- student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal: +17.6 percentage points; 95% paired interval [+11.5, +23.6].
+- student-fortress-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +23.3 percentage points; 95% paired interval [+17.5, +28.9].
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +18.5 percentage points; 95% paired interval [+12.3, +24.9].
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.7 percentage points; 95% paired interval [+2.1, +9.6].
+
+
 **Cycle 36 hypotheses:** Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction.
 
 Evidence: [cycle-36-home-interception-v2-honest-generality](cycle-36-home-interception-v2-honest-generality/result.json).
@@ -323,8 +342,8 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Motion conditioned on our Spy location: Historical model selection chose zero Spy-factor strength; retained as a rejected prediction hypothesis, without a separate playing-strength claim. [Evidence](research/inverse-objectives/README.md).
 - Passive opening-action inference: A fixed first-move study added no information beyond public rank facts; controlled random own play later showed predictive information. Under actual frozen native play, the extra Flag log-score gain shrank to 0.010–0.043 bits over four opening decisions, with declining prefix coverage and procedural-army overconfidence. Runtime lookup deferred; no strength tournament. [Evidence](research/template-action-identification-v3/proposal-and-conclusion.json).
 - Converting early Flag inference: In completed native-template screening games, 324 early high-confidence Flag predictions were correct, yet 148 lost and 67 drew. Of 197 own-Flag losses, 191 final attackers were Miners; no missed final-turn public survival alternative was found. The existing two-turn interceptor could demote the saved quiet move at 11 earlier roots in ten losses; this is opportunity coverage, not saved games. No new policy or strength claim. [Evidence](research/template-conversion-screen/README.md).
-- Source-structured procedural background: An independently heldout prediction study reduced Flag log loss by 0.250 nats while preserving the fixed 80% template mass. One procedural army remains confidently wrong. Predictive gate passed; this does not establish playing strength. [Evidence](research/procedural-background-v1/CONCLUSION.json).
-- Cheap procedural back-row control: A post-hoc ablation recovered nearly the same Flag prediction gain using only the source back-row constraint: -0.246 versus -0.250 nats. The richer model improved secondary Bomb prediction. Both fixed alternatives need fresh strength tests; reused prediction data do not confirm the new control. [Evidence](research/procedural-backrow-ablation/README.md).
+- Source-structured procedural background: An independently heldout prediction study reduced Flag log loss by 0.250 nats while preserving the fixed 80% template mass. One procedural army remains confidently wrong. Predictive quality and playing strength are separate; the frozen DOS strength comparison is cycle 29. [Evidence](research/procedural-background-v1/CONCLUSION.json).
+- Cheap procedural back-row control: A post-hoc ablation recovered nearly the same Flag prediction gain using only the source back-row constraint: -0.246 versus -0.250 nats. The richer model improved secondary Bomb prediction. Reused prediction data do not confirm the new control; the frozen playing-strength comparison is cycle 29, with independent final validation required for promotion. [Evidence](research/procedural-backrow-ablation/README.md).
 - Earlier home interception: A public stationary-piece scheduling audit found 232 selected quiet moves across 37 screening games which lost time to deploy a guard against a disclosed Miner. All were outside the existing local interceptor. A mechanical fixture proves one avoidable invasion, but repeated retrospective opportunities are not saved games or a strength estimate. [Evidence](research/home-miner-interceptor-v1/CONCLUSION.md).
 - Paired Miner breach: A forcing two-entry assault works in a public mechanical fixture, but none of 85,971 screening decisions had two Miners within three actions of distinct disclosed Bomb entries. Deferred for sparse short-horizon coverage; no gate relaxation, runtime or strength claim. [Evidence](research/paired-miner-breach-v1/CONCLUSION.md).
 - Two-square tempo windows: A forcing public fixture works, but 693,230 screening decisions contain no strict eligible breakthrough. Five apparent last-piece traps were already lost after checking every alternative and both terminal objectives. Deferred without changing the gate or playing-strength claim. [Evidence](research/shuttle-tempo-v1/CONCLUSION.md).
@@ -350,7 +369,6 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).
-- Cycle 27: Improved own deployment and honest enemy formation inference address independent defence and attack limitations and can combine without cancelling their benefits. 1,600 planned attempts; no completed strength result. [Frozen plan](cycle-27-fortress-template-combination/plan.json).
 - Cycle 28: Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population. 2,800 planned attempts; no completed strength result. [Frozen plan](cycle-28-template-honest-generality/plan.json).
 - Cycle 29: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-29-procedural-background-screen/plan.json).
 - Cycle 30: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 2,240 planned attempts; no completed strength result. [Frozen plan](cycle-30-procedural-background-honest-generality/plan.json).
@@ -360,4 +378,5 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Cycle 37: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-37-template-mobile-capture-dos-screen/plan.json).
 - Cycle 39: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 3,000 planned attempts; no completed strength result. [Frozen plan](cycle-39-quiet-contact-dos-screen/plan.json).
 - Cycle 40: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-40-quiet-contact-honest-generality/plan.json).
+- Cycle 41: Adding the unchanged Fortress deployment to the unchanged honest source-template native policy improves end-to-end score against the original DOS population on independent seeds. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-41-fortress-template-validation/plan.json).
 

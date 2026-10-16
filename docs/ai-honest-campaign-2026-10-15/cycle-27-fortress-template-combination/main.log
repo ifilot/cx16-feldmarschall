@@ -1,0 +1,8 @@
+Running student-validated-deployment-v1-normal
+Verified student-validated-deployment-v1-normal {'wins': 63, 'draws': 31, 'losses': 284, 'score': 0.20767195767195767}
+Running student-fortress-deployment-v1-normal
+Verified student-fortress-deployment-v1-normal {'wins': 80, 'draws': 31, 'losses': 259, 'score': 0.2581081081081081}
+Running student-template-flag-bomb-v1-normal
+Verified student-template-flag-bomb-v1-normal {'wins': 112, 'draws': 67, 'losses': 209, 'score': 0.375}
+Running student-fortress-template-flag-bomb-v1-normal
+Verified student-fortress-template-flag-bomb-v1-normal {'wins': 124, 'draws': 82, 'losses': 188, 'score': 0.41878172588832485}
