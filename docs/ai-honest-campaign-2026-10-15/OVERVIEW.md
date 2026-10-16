@@ -473,6 +473,18 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: +17.8 percentage points; 95% paired interval [+13.8, +21.8].
 
 
+**Cycle 48 hypotheses:** A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy.
+
+Evidence: [cycle-48-capture-net-honest-generality](cycle-48-capture-net-honest-generality/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Both treatments use the same forced army population; compare their matched effects against this reference.
+
+- student-template-flag-bomb-v1-normal: 267 wins / 10 draws / 283 losses; score 48.6%; 0 unscored errors.
+- student-template-capture-net-v1-normal: 266 wins / 10 draws / 284 losses; score 48.4%; 0 unscored errors.
+
+- student-template-capture-net-v1-normal minus student-template-flag-bomb-v1-normal: -0.2 percentage points; 95% paired interval [-0.9, +0.5].
+
+
 **Preflight failures, without DOS strength results:**
 
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
@@ -536,5 +548,4 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 44: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-44-public-forks-honest-generality/plan.json).
 - Cycle 45: Exact public-evidence caching preserves native Q24 playing decisions and DOS outcomes while reducing inference preparation cost when evidence is unchanged. 800 planned comparison attempts; registered; no completed strength result. [Plan](cycle-45-template-exact-cache-bridge/plan.json).
 - Cycle 47: A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-47-capture-net-shared-control-screen/plan.json).
-- Cycle 48: A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-48-capture-net-honest-generality/plan.json).
 
