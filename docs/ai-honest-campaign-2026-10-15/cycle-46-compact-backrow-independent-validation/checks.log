@@ -1,0 +1,8 @@
+test_other_difficulties_and_rule_fallback_match_unchanged_native (tools.test_compact_backrow.CompactBackrowTests.test_other_difficulties_and_rule_fallback_match_unchanged_native) ... ok
+test_private_nibbles_never_change_choices_or_rng_both_sides (tools.test_compact_backrow.CompactBackrowTests.test_private_nibbles_never_change_choices_or_rng_both_sides) ... ok
+test_values_stay_within_three_gain_points_of_exact_rational_prior (tools.test_compact_backrow.CompactBackrowTests.test_values_stay_within_three_gain_points_of_exact_rational_prior) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.945s
+
+OK

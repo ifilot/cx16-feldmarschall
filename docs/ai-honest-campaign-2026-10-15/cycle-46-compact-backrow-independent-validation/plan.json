@@ -1,0 +1,30 @@
+{
+  "cycle": 46,
+  "baseline": "student-validated-deployment-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-validated-deployment-v1-normal",
+    "student-compact-backrow-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 2560001,
+  "rounds": 500,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "The unchanged compact honest back-row population prior retains its DOS improvement over unchanged native play on a fresh independent fixed cohort."
+  ],
+  "contrasts": [
+    [
+      "student-compact-backrow-v1-normal",
+      "student-validated-deployment-v1-normal"
+    ]
+  ],
+  "analysis": "Independent final validation of unchanged compact policy after C31 exploratory screening. One prespecified primary contrast,95%paired interval and finite missing-outcome sensitivity bounds.1000attempts per arm,500paired rounds. Freeze both immutable policies, source recipes and freshseed before games. Do not tune on or use validation trajectories for development. Same original DOS population and paired opponent deployments; honest guard stress remains separate. A positive result establishes strength for this evaluated population, not general superiority or equivalence to the larger template policy.",
+  "evidence": "C31 positive compact-vs-native screening. Target link and banked decision parity predate the screening; no implementation changes for validation."
+}
