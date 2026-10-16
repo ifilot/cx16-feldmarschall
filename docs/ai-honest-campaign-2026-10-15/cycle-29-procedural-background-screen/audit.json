@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 101,
+  "attempts": 4000,
+  "errors_preserved_unscored": 148,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 4,
+  "exact_rebuild_runtime_sha256": {
+    "student-template-backrow-background-v1-normal": {
+      "engine": "b90cde4c6921cc4e53f2601419d2e9801bb6db6ad565c9bc67179e6040182f19",
+      "observer": "6211ee2d6d9802bfd249ccaebdac4b3ee1647e9dcc5a7bc3b2c307ab6c005fa4",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_native_template.py": "de3a668df0564090bcae056165fe0e1a81515af760563384c3a4a83707b912c0",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+      "dos-backrow-background-v1.json": "2afded62322e28996aa194795f5de31c4a05935f98fd419fc2448c3c12824d63",
+      "campaign_procedural_beliefs.py": "2fcece9b66937a8d7de446c812f0f70e711fa3974ac97805fd762e7d535dfb77"
+    },
+    "student-template-structured-background-v1-normal": {
+      "engine": "07dcb6dbf94fcce500411454641fa2d25bd3a6b3cd57cae8e59683667a53a165",
+      "observer": "3aa58afb430a51e77f37ffefe697074bbeec15a22c99d030b34093baca581c04",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_native_template.py": "de3a668df0564090bcae056165fe0e1a81515af760563384c3a4a83707b912c0",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+      "dos-procedural-background-v1.json": "a2053e61021d3d4d5a875576df3cf79eb2e46067fa62a93d5b72023a5b2e7f3e",
+      "campaign_procedural_beliefs.py": "2fcece9b66937a8d7de446c812f0f70e711fa3974ac97805fd762e7d535dfb77"
+    },
+    "student-backrow-only-v1-normal": {
+      "engine": "1e183b16d032a9d683c3ba7cd98e566c00eca81903eb01c0e17fcc0200900cb7",
+      "observer": "3072ece5aa7eb1cd279893e18336f5d5aeef6f8d8372a7af342cf02ed4cd0af8",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_native_template.py": "de3a668df0564090bcae056165fe0e1a81515af760563384c3a4a83707b912c0",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+      "dos-backrow-only-v1.json": "0f4cc1997908bdf9dcf74ac16295c4949e65b50dd4d2638ba82239954dc271b5",
+      "campaign_procedural_beliefs.py": "2fcece9b66937a8d7de446c812f0f70e711fa3974ac97805fd762e7d535dfb77"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    17,
+    3,
+    2
+  ],
+  "test_skip_summaries": []
+}
