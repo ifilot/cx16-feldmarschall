@@ -1,0 +1,6 @@
+....
+----------------------------------------------------------------------
+Ran 4 tests in 6.142s
+
+OK
+Public hard-elimination fixtures: ['battle a4 a7 9 B', 'battle a4 a7 9 B', 'moved b3 b6', 'moved b3 b6']

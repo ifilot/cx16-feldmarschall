@@ -1,0 +1,72 @@
+{
+  "cycle": 108,
+  "baseline": "student-fortress-template-flag-bomb-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-fortress-template-flag-bomb-v1-normal",
+    "student-fortress-template-regime-reset-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-fortress-template-regime-reset-v1-normal",
+      "name": "Fortress Student with public belief-regime goal reset v1 / Normal",
+      "description": "Reconsider persistent pursuit once public evidence rules out all source templates, without resetting missions, risk or RNG.",
+      "sources": [
+        "tools/new_campaign_regime_engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "tools/new_campaign_regime_ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged80%source-template/20%uniformbackgroundandFlag/Bombconsumer. Exactpublichardcompatibilitytrue-to-false transitionqueuesone own-goal resetbefore nextgo; ordinarypersistenceotherwiseunchanged. No addedsearch/threshold/likelihoodfit.",
+      "information_model": "Own army, publicevents and sourceprior only. Exacthardtemplatecompatibilityhasno enemytruthorprivateseed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--belief-regime-reset"
+      ]
+    }
+  ],
+  "seed": 3108001,
+  "rounds": 128,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "When public evidence eliminates all previously plausible opening templates, discard the old pursuit goals once so stale source-specific commitments do not outlive the belief model that selected them."
+  ],
+  "contrasts": [
+    [
+      "student-fortress-template-regime-reset-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed256attemptsperarm exploratoryscreen. IdenticalFortresssetupandmatchedoriginalDOSarmies/moveseeds. Singlepaired95%contrastplusfiniteerrorbounds. Novelmechanismchosenfrompublicsourceinspectionanddevelopmentgenerality, not currentDOS/validationtrajectories; onehardregimetransitiononly,no thresholdsfit. No promotionwithoutindependentvalidation.",
+  "evidence": "research/evaluation/REGIME-RESET.md; fourmechanicalqualificationtests bothcolors, controlledgoalstate/RNG/historyisolation, defaultoffparity, onego/resetlifecycle. D*Lite2002 motivatesreplanningwithnewobservations, notthis specificStrategoheuristic orperformance. DesktopprotocolqualificationnotCX16bankfit."
+}
