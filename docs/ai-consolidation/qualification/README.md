@@ -44,4 +44,12 @@ Separate native checks cover all 65,535 nonzero seeds, both colors and all
 levels, plus optional-rule/rejection-draw cases: 396,612 exact board/RNG
 comparisons preserve previous Easy/Hard and optional behavior and verify Normal
 Fortress against its historical implementation. Eleven inference/cache tests
-also passed. Fresh DOS validation and final production packaging remain pending.
+also passed. An additional native regression run passed 15,163 hidden-permutation
+decisions across every difficulty and 64 rule masks, plus 3,836 private-inventory
+comparisons. Four release-import tests reject corrupt payloads, reused identities,
+unsafe paths, missing qualification gates and edited installed sources.
+
+Packaging subsequently passed: two identical 207,178-byte ZIP archives contain
+all required banks, including BELIEF.BIN. Booting the SD-card package through
+AUTOBOOT.X16 loaded the inference bank and audio and preserved splash/menu
+artwork and palettes. Promotion still requires the separately audited DOS study.

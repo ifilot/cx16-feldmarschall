@@ -23,6 +23,9 @@ HELPERS = ['asleax1.o', 'asleax4.o', 'asreax4.o', 'land.o', 'lbneg.o',
            'lsub.o', 'lsubeqsp.o', 'steaxsp.o']
 OUTPUTS = ['FELDMARS.PRG', 'PLAY.BIN', 'AI.BIN', 'MISSION.BIN', 'BELIEF.BIN',
            'FELDMARS.map', 'FELDMARS.sym']
+RELEASE = ROOT/'ai-release/manifest.json'
+if RELEASE.exists():
+    DEFINES = json.loads(RELEASE.read_text())['target_defines']
 
 
 def sha(path):
@@ -35,6 +38,12 @@ def symbols(dump):
 
 def build(source, destination, library, defines=DEFINES):
     source, destination, library = map(lambda p: Path(p).resolve(), (source, destination, library))
+    if RELEASE.exists():
+        from ai_release import verify
+        release = verify(ROOT)
+        assert list(defines) == release['target_defines']
+        for name, checksum in release['files'].items():
+            assert sha(source/Path(name).relative_to('src')) == checksum, name
     commands = []
     inputs = sorted([*source.glob('*.c'), *source.glob('core/*.c'),
                      *source.glob('ui/*.c'), *source.glob('scenes/*.c')])

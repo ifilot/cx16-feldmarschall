@@ -8,6 +8,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ReleaseDeployment(unittest.TestCase):
+    def test_release_hidden_information_and_rule_regressions(self):
+        from build_ai_release import DEFINES
+        with tempfile.TemporaryDirectory(prefix='ai-release-native-') as temporary:
+            binary=Path(temporary)/'test'
+            core=['pieces','board','rules','setup','random','ai','ai_level',
+                  'ai_deploy','ai_mission','ai_memory','ai_student','ai_template']
+            subprocess.run(['gcc','-O2','-std=c99','-Wno-unknown-pragmas','-DAI_TEST',
+                *['-D'+flag for flag in DEFINES if flag!='BANKED_AI'],
+                '-I'+str(ROOT/'src/core'),'-o',str(binary),str(ROOT/'tests/ai_test.c'),
+                *[str(ROOT/'src/core'/(name+'.c')) for name in core]],check=True,capture_output=True)
+            result=subprocess.run([str(binary)],check=True,capture_output=True,text=True)
+            self.assertIn('15163 hidden-permutation decisions',result.stdout)
+            self.assertIn('3836 Silent Defense private-inventory comparisons',result.stdout)
+
     def test_normal_fortress_and_other_modes_preserve_boards_and_rng(self):
         with tempfile.TemporaryDirectory(prefix='ai-release-deployment-') as temporary:
             work = Path(temporary)

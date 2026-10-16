@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "autoboot": true,
+  "all_ai_banks_and_audio_loaded": true,
+  "artwork_and_palette": true,
+  "belief_bank_present": true,
+  "reproducible_zip": true,
+  "zip_sha256": "7f51eb3918bd49f98c82d3d1b162c0a5c14abefd995b8fa970e2e4314eca424f"
+}

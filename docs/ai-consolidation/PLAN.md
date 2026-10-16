@@ -53,6 +53,21 @@ reproducible production build step with verified dependency closure.
   exposes no repository-creation tool. Local extraction and all qualification can
   proceed independently of publication.
 - No production AI or historical policy has yet been changed.
+- Native candidate, initial target qualification and the honest endpoint were
+  committed as `832d9fc`. The DOS endpoint subsequently passed its frozen
+  complete-case gate: -0.05 points, 95% [-0.15, 0.00]; 41 errors remain unscored.
+  Adversarial error-completion bounds are [-2.10, +1.90] points and slightly
+  cross the margin. No claim of full-cohort noninferiority under every possible
+  error completion is made.
+- All eight release gates have receipts, including reproducible SD-card
+  packaging/autoboot. The local research repository preserves filtered history,
+  verifies 3,959 original Git blobs and independently builds/replays/reviews
+  matches. Its candidate and DOS runtime hashes reproduce the original catalog.
+- The qualified release has been exported locally. Default promotion, final
+  game cleanup, release import/build checks and research commits remain pending.
+- GitHub repository lookup returned 404; CLI authentication is invalid and the
+  connected GitHub tools expose no repository creation capability. Local work
+  continues independently; publication remains an external dependency.
 
 Completion requires evidence for every numbered requirement, not merely a clean
 split or a successful desktop benchmark. The active goal remains open until
