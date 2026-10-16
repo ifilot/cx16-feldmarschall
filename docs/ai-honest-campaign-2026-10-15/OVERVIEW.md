@@ -64,6 +64,8 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 22 | Own setup, original DOS, rotated | student-double-bomb-shell-v1-normal | 60 / 22 / 310 | 18.1% | 8 |
 | 24 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 261 / 167 / 1412 | 18.7% | 160 |
 | 24 | Own setup, original DOS, rotated | student-fortress-deployment-v1-normal | 359 / 185 / 1340 | 24.0% | 116 |
+| 26 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 135 / 73 / 705 | 18.8% | 87 |
+| 26 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 276 / 180 / 508 | 38.0% | 36 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -268,6 +270,17 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.0 percentage points; 95% paired interval [+4.9, +9.1].
 
 
+**Cycle 26 hypotheses:** Independently validate the unchanged source-informed template Flag/Bomb prior against the same native move policy without external priors.
+
+Evidence: [cycle-26-template-native-validation](cycle-26-template-native-validation/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +19.3 percentage points; 95% paired interval [+15.3, +23.4].
+
+
 **Cycle 36 hypotheses:** Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction.
 
 Evidence: [cycle-36-home-interception-v2-honest-generality](cycle-36-home-interception-v2-honest-generality/result.json).
@@ -321,7 +334,6 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).
-- Cycle 26: Independently validate the unchanged source-informed template Flag/Bomb prior against the same native move policy without external priors. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-26-template-native-validation/plan.json).
 - Cycle 27: Improved own deployment and honest enemy formation inference address independent defence and attack limitations and can combine without cancelling their benefits. 1,600 planned attempts; no completed strength result. [Frozen plan](cycle-27-fortress-template-combination/plan.json).
 - Cycle 28: Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population. 2,800 planned attempts; no completed strength result. [Frozen plan](cycle-28-template-honest-generality/plan.json).
 - Cycle 29: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-29-procedural-background-screen/plan.json).

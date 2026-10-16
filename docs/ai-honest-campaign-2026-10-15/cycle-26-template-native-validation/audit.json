@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 100,
+  "attempts": 2000,
+  "errors_preserved_unscored": 123,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 2,
+  "exact_rebuild_runtime_sha256": {},
+  "production_unchanged": true,
+  "test_counts": [
+    17
+  ],
+  "test_skip_summaries": []
+}
