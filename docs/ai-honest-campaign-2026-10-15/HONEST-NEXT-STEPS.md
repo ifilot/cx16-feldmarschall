@@ -39,16 +39,20 @@ decisions. The evidence does not establish an honest-AI ceiling.
    full persistent-policy behavior, then test fresh matches. The pilot's fixed
    sample was Red only, so the next study must specify both colors in advance.
 
-4. **Let the bounded tactical-proof experiments finish before extending them.**
-   The [public-fork plan](cycle-43-public-forks-dos-screen/plan.json) and
-   [capture-net honest-opponent plan](cycle-48-capture-net-honest-generality/plan.json)
-   test short disclosed threats with executable followthrough and conservative
-   public reply enumeration. Await their complete outcomes, audits and
-   error-sensitive comparisons. A certified short material conversion does not
-   by itself establish improved game score. Keep proof cost and fallback behavior
-   separate from playing-strength evidence.
+4. **Keep the tactical proofs as research tools until broader value is shown.**
+   Completed [DOS forks](cycle-43-public-forks-dos-screen/CONCLUSION.md),
+   [honest forks](cycle-44-public-forks-honest-generality/CONCLUSION.md) and
+   [honest capture nets](cycle-48-capture-net-honest-generality/CONCLUSION.md)
+   established no score gain. Sparse score-changing pairs do not prove
+   equivalence or that the underlying decisions are identical. A short material
+   certificate needs a clearer route to game conversion before more depth or
+   proof cost is justified.
 
 5. **Establish generality against honest opponents and unfamiliar formations.**
+   [C32](cycle-32-compact-backrow-honest-generality/CONCLUSION.md) found a clear
+   generality loss for the compact source prior, despite its fresh DOS gain in
+   [C46](cycle-46-compact-backrow-independent-validation/CONCLUSION.md). Richer
+   backgrounds also lost strength in [C30](cycle-30-procedural-background-honest-generality/CONCLUSION.md).
    Treat original-DOS strength and honest-opponent strength as separate questions.
    Compare the consolidated reference and promising additions across prespecified
    opponents and deployment families, including formations outside the source
@@ -63,3 +67,11 @@ and final validation separate, use fresh validation seeds, and preserve rejected
 policies and failures. Use the Classic runner and Qt6 companion for reviewable
 games. Confidence intervals describe sampling uncertainty; finite missing-score
 bounds address unscored failures and must remain separately visible.
+
+The [completed cache bridge](cycle-45-template-exact-cache-bridge/CONCLUSION.md)
+matched all 400 game trajectories exactly, including error prefixes. It supports
+implementation preservation on that cohort; target timing and production remain
+separate gates. The goal-only proposal now also has a
+[storage/arithmetic preflight](research/template-mobile-objectives-cost-preflight-v1/README.md)
+and an [eleven-stage exact divider](research/template-goal-bounded-division-v1/README.md).
+Neither is an implemented goal policy or a playing-strength result.

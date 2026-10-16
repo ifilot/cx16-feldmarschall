@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-10-16T04:45:08.759804+00:00",
+  "start_utc": "2026-10-15T20:44:38+00:00",
+  "deadline_utc": "2026-10-16T04:44:38+00:00",
+  "elapsed_seconds": 28830.759804,
+  "eight_hours_elapsed": true,
+  "all_launched_samples_settled": true,
+  "completed_cycles": 37,
+  "unique_saved_attempts": 85160,
+  "unscored_errors": 2169,
+  "immutable_source_archives": 36,
+  "unrun_plans": 7,
+  "preflight_rejections": 4,
+  "all_completed_cycles_committed": true,
+  "source_audit_sha256": "9d14d82abbdd53921ed7f682c905c3015e1c58286926a1a375cc1aadb6c5ecae",
+  "commit_inventory_sha256": "e89286a53a65e266cf8ac7d658ce2aa0fccbf815aa7b6c426e7a37baecdc6711",
+  "remaining_required_work": [],
+  "operational_limitations": [
+    "SIGTERM cause unknown; all affected fixed samples fully recovered with original records preserved."
+  ],
+  "production_promotion": false
+}
