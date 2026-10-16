@@ -1,0 +1,4 @@
+Running student-validated-deployment-v1-normal
+Verified student-validated-deployment-v1-normal {'wins': 689, 'draws': 22, 'losses': 689, 'score': 0.5}
+Running student-template-flag-bomb-v1-normal
+Verified student-template-flag-bomb-v1-normal {'wins': 704, 'draws': 33, 'losses': 663, 'score': 0.5146428571428572}

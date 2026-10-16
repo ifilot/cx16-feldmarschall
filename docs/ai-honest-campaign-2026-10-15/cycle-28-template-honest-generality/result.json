@@ -1,0 +1,118 @@
+{
+  "cycle": 28,
+  "hypotheses": [
+    "Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population."
+  ],
+  "opponent": "student-guard-v1-normal",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "standings": {
+    "student-validated-deployment-v1-normal": {
+      "wins": 689,
+      "draws": 22,
+      "losses": 689,
+      "score": 0.5,
+      "errors": 0
+    },
+    "student-template-flag-bomb-v1-normal": {
+      "wins": 704,
+      "draws": 33,
+      "losses": 663,
+      "score": 0.5146428571428572,
+      "errors": 0
+    }
+  },
+  "execution_seconds": {
+    "student-validated-deployment-v1-normal": 31.270547543004795,
+    "student-template-flag-bomb-v1-normal": 123.4075604719983
+  },
+  "comparisons": {
+    "student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal": {
+      "complete_pairs": 700,
+      "pairs_by_family": {
+        "fortified": 100,
+        "uniform": 100,
+        "unguarded": 100,
+        "forward": 100,
+        "decoy": 100,
+        "presets": 100,
+        "broad-mixed": 100
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.014642857142857143,
+          "interval_95": [
+            -0.0067857142857142855,
+            0.036071428571428574
+          ],
+          "interval_98_3333": [
+            -0.011785714285714287,
+            0.041428571428571426
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 2800,
+  "error_sensitivity": {
+    "student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 142,
+        "negative_pairs": 124,
+        "zero_pairs": 434,
+        "non_tied_pairs": 266,
+        "exact_two_sided_binomial_sign_p": 0.297243151297404,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 700,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 1400,
+          "error_games": 0,
+          "scored_games": 1400,
+          "wins": 704,
+          "draws": 33,
+          "losses": 663,
+          "official_scored_score": 0.5146428571428572,
+          "all_attempt_score_bounds": [
+            0.5146428571428572,
+            0.5146428571428572
+          ]
+        },
+        "b": {
+          "attempted_games": 1400,
+          "error_games": 0,
+          "scored_games": 1400,
+          "wins": 689,
+          "draws": 22,
+          "losses": 689,
+          "official_scored_score": 0.5,
+          "all_attempt_score_bounds": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        0.014642857142857143,
+        0.014642857142857143
+      ],
+      "complete_case_pairs": 700,
+      "complete_case_paired_effect": 0.014642857142857143
+    }
+  },
+  "errors": 0,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 2800
+}

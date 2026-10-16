@@ -300,6 +300,18 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.7 percentage points; 95% paired interval [+2.1, +9.6].
 
 
+**Cycle 28 hypotheses:** Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population.
+
+Evidence: [cycle-28-template-honest-generality](cycle-28-template-honest-generality/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+
+- student-validated-deployment-v1-normal: 689 wins / 22 draws / 689 losses; score 50.0%; 0 unscored errors.
+- student-template-flag-bomb-v1-normal: 704 wins / 33 draws / 663 losses; score 51.5%; 0 unscored errors.
+
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +1.5 percentage points; 95% paired interval [-0.7, +3.6].
+
+
 **Cycle 36 hypotheses:** Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction.
 
 Evidence: [cycle-36-home-interception-v2-honest-generality](cycle-36-home-interception-v2-honest-generality/result.json).
@@ -369,7 +381,6 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).
-- Cycle 28: Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population. 2,800 planned attempts; no completed strength result. [Frozen plan](cycle-28-template-honest-generality/plan.json).
 - Cycle 29: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-29-procedural-background-screen/plan.json).
 - Cycle 30: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 2,240 planned attempts; no completed strength result. [Frozen plan](cycle-30-procedural-background-honest-generality/plan.json).
 - Cycle 31: A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16. 3,000 planned attempts; no completed strength result. [Frozen plan](cycle-31-compact-backrow-dos-screen/plan.json).
