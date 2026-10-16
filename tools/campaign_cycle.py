@@ -160,10 +160,13 @@ def overview(through_cycle=None, exclude_results=()):
                 standing=endpoint['official_scored']
                 metric=endpoint['paired_score']
                 interval=metric['interval_98_3333'] if metric else None
+                interval95=metric['interval_95'] if metric else None
                 details += [f"- {name}: {standing['wins']} wins / {standing['draws']} draws / {standing['losses']} losses; "
                             f"score {standing['score']:.1%}; {endpoint['error_games']} unscored errors. "
-                            +(f"98.3333% paired interval [{interval[0]:.1%}, {interval[1]:.1%}]." if interval else 'No complete pairs.')]
+                            +(f"95% paired interval [{interval95[0]:.1%}, {interval95[1]:.1%}]; planned 98.3333% interval [{interval[0]:.1%}, {interval[1]:.1%}]." if interval else 'No complete pairs.')]
             details += ['', 'Evidence: ['+path.parent.name+']('+path.parent.name+'/result.json).', '']
+            if (path.parent/'CONCLUSION.md').exists():
+                details += ['[Interpretation and prespecified qualifications]('+path.parent.name+'/CONCLUSION.md).', '']
             continue
         plan = json.loads((path.parent/'plan.json').read_text())
         frozen = json.loads((path.parent/'frozen-policies.json').read_text())
@@ -198,7 +201,11 @@ def overview(through_cycle=None, exclude_results=()):
         for name, contrast in result['comparisons'].items():
             metric = contrast['metrics']['score']
             low, high = metric['interval_95']
-            details.append(f"- {name}: {100*metric['mean']:+.1f} percentage points; 95% paired interval [{100*low:+.1f}, {100*high:+.1f}].")
+            interval_text = f"95% paired interval [{100*low:+.1f}, {100*high:+.1f}]"
+            if 'interval_98_3333' in metric:
+                wider_low, wider_high = metric['interval_98_3333']
+                interval_text += f"; 98.3333% interval [{100*wider_low:+.1f}, {100*wider_high:+.1f}]"
+            details.append(f"- {name}: {100*metric['mean']:+.1f} percentage points; {interval_text}.")
         if result['cycle'] == 3:
             details += ['', 'Recurrence caveat: only five pair scores changed. The exact two-sided direction test is p=0.0625; its sparse bootstrap interval alone does not establish a regression.']
         if result['cycle'] == 5:
@@ -209,8 +216,16 @@ def overview(through_cycle=None, exclude_results=()):
             details += ['', 'Missing-outcome qualification: 276 original-DOS errors leave finite planned-cohort effect bounds of [-2.65, +11.15] percentage points. These are sensitivity bounds, not confidence intervals; the positive complete-case validation interval alone does not settle the effect with missing outcomes.']
         if result['cycle'] == 27:
             details += ['', 'Five-contrast screening qualification: combination minus template is +4.28 points, but its 99% paired interval is [-0.67, +9.36]. The positive 95% interval is suggestive; fresh cycle 41 tests the unchanged combination independently. See the retained 99% supplement and conclusion.']
+        if result['cycle'] == 39:
+            details += ['', 'Three-contrast screening qualification: use the planned 98.3333% intervals. Mobile ranks beat occupancy alone, but mobile versus the unchanged book remains inconclusive despite its positive 95% interval. Finite missing-score bounds are a separate uncertainty measure.']
+        if result['cycle'] in (42, 44, 48):
+            details += ['', 'Sparse bridge/tactical score differences and intervals containing zero do not establish policy equivalence. See the conclusion for non-tied pair counts, numerical scope and target-cost limits.']
+        if (path.parent/'CONCLUSION.md').exists():
+            details += ['', '[Interpretation and prespecified qualifications]('+path.parent.name+'/CONCLUSION.md).']
         details.append('')
     lines += details
+    if (BASE/'research/validation-summary-figure-v1/README.md').exists():
+        lines += ['', '[Independent-validation figure and source data](research/validation-summary-figure-v1/README.md): separate study contexts and estimands, without pooling or ranking. Sampling intervals do not replace finite missing-score bounds.', '']
     failures = []
     for path in sorted(BASE.glob('cycle-*/preflight-result.json')):
         record = json.loads(path.read_text())

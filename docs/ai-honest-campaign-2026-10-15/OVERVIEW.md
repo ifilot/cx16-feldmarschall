@@ -92,79 +92,95 @@ Scores count wins plus half of draws; engine errors remain unscored. Compare pol
 
 Evidence: [cycle-01-sampling-budget](cycle-01-sampling-budget/result.json).
 
-- teacher-context-worlds32-v1-normal minus teacher-context-v1-normal: -2.2 percentage points; 95% paired interval [-7.5, +3.1].
-- teacher-calibrated-worlds32-v1-normal minus teacher-calibrated-beliefs-v1-normal: -8.4 percentage points; 95% paired interval [-14.5, -2.5].
-- teacher-calibrated-beliefs-v1-normal minus teacher-context-v1-normal: +3.2 percentage points; 95% paired interval [-2.6, +9.0].
-- teacher-calibrated-worlds32-v1-normal minus teacher-context-worlds32-v1-normal: -2.6 percentage points; 95% paired interval [-7.8, +2.6].
-- model by sampling-budget interaction: -7.3 percentage points; 95% paired interval [-14.6, +0.0].
+- teacher-context-worlds32-v1-normal minus teacher-context-v1-normal: -2.2 percentage points; 95% paired interval [-7.5, +3.1]; 98.3333% interval [-8.6, +4.2].
+- teacher-calibrated-worlds32-v1-normal minus teacher-calibrated-beliefs-v1-normal: -8.4 percentage points; 95% paired interval [-14.5, -2.5]; 98.3333% interval [-15.8, -1.0].
+- teacher-calibrated-beliefs-v1-normal minus teacher-context-v1-normal: +3.2 percentage points; 95% paired interval [-2.6, +9.0]; 98.3333% interval [-3.7, +10.1].
+- teacher-calibrated-worlds32-v1-normal minus teacher-context-worlds32-v1-normal: -2.6 percentage points; 95% paired interval [-7.8, +2.6]; 98.3333% interval [-9.1, +3.7].
+- model by sampling-budget interaction: -7.3 percentage points; 95% paired interval [-14.6, +0.0]; 98.3333% interval [-16.2, +1.7].
+
+[Interpretation and prespecified qualifications](cycle-01-sampling-budget/CONCLUSION.md).
 
 
 **Cycle 2 hypotheses:** Latin-hypercube random coordinates spread eight count-consistent worlds without additional native searches.; Bounded quiet-move potential rewards opening teammates routes to central crossings; enemy ranks unused.; Require paired corrected advantage over native move to exceed one jackknife standard error; no extra rollouts.
 
 Evidence: [cycle-02-cheap-mechanisms](cycle-02-cheap-mechanisms/result.json).
 
-- teacher-latin-worlds-v1-normal minus teacher-context-v1-normal: -0.4 percentage points; 95% paired interval [-5.0, +4.1].
-- teacher-army-activation-v1-normal minus teacher-context-v1-normal: -0.8 percentage points; 95% paired interval [-5.5, +4.1].
-- teacher-paired-confidence-v1-normal minus teacher-context-v1-normal: +0.5 percentage points; 95% paired interval [-3.4, +4.5].
+- teacher-latin-worlds-v1-normal minus teacher-context-v1-normal: -0.4 percentage points; 95% paired interval [-5.0, +4.1]; 98.3333% interval [-5.9, +5.1].
+- teacher-army-activation-v1-normal minus teacher-context-v1-normal: -0.8 percentage points; 95% paired interval [-5.5, +4.1]; 98.3333% interval [-6.6, +5.2].
+- teacher-paired-confidence-v1-normal minus teacher-context-v1-normal: +0.5 percentage points; 95% paired interval [-3.4, +4.5]; 98.3333% interval [-4.3, +5.4].
+
+[Interpretation and prespecified qualifications](cycle-02-cheap-mechanisms/CONCLUSION.md).
 
 
 **Cycle 3 hypotheses:** Finish policy-selected exchanges beyond four plies, stopping before a quiet move, with at most four extra masked decisions.; Spend eight plies only when public root mobility has at most twelve legal actions, retaining four otherwise.; Remember repeated friendly formations across actors and escape long quiet loops when a similarly valued fresh continuation exists.; Ablate handwritten approach/retreat weights while retaining exactly the same IID count-consistent world proposal; negative-control belief test.
 
 Evidence: [cycle-03-horizons-and-memory](cycle-03-horizons-and-memory/result.json).
 
-- teacher-capture-quiescence-v1-normal minus teacher-context-v1-normal: -2.9 percentage points; 95% paired interval [-7.0, +1.1].
-- teacher-sparse-depth-v1-normal minus teacher-context-v1-normal: -0.7 percentage points; 95% paired interval [-5.0, +3.6].
-- teacher-recurrence-escape-v1-normal minus teacher-context-v1-normal: -1.0 percentage points; 95% paired interval [-1.9, -0.2].
-- teacher-uniform-worlds-v1-normal minus teacher-context-v1-normal: -0.1 percentage points; 95% paired interval [-2.2, +2.1].
+- teacher-capture-quiescence-v1-normal minus teacher-context-v1-normal: -2.9 percentage points; 95% paired interval [-7.0, +1.1]; 98.3333% interval [-7.8, +2.0].
+- teacher-sparse-depth-v1-normal minus teacher-context-v1-normal: -0.7 percentage points; 95% paired interval [-5.0, +3.6]; 98.3333% interval [-5.9, +4.7].
+- teacher-recurrence-escape-v1-normal minus teacher-context-v1-normal: -1.0 percentage points; 95% paired interval [-1.9, -0.2]; 98.3333% interval [-2.2, -0.1].
+- teacher-uniform-worlds-v1-normal minus teacher-context-v1-normal: -0.1 percentage points; 95% paired interval [-2.2, +2.1]; 98.3333% interval [-2.7, +2.5].
 
 Recurrence caveat: only five pair scores changed. The exact two-sided direction test is p=0.0625; its sparse bootstrap interval alone does not establish a regression.
+
+[Interpretation and prespecified qualifications](cycle-03-horizons-and-memory/CONCLUSION.md).
 
 
 **Cycle 4 hypotheses:** Correct a public logical omission in native Flag defence, without identifying the concealed rank.; Test the same deduction in the Context Teacher observer and masked continuations.
 
 Evidence: [cycle-04-public-flag-defence](cycle-04-public-flag-defence/result.json).
 
-- student-public-flag-threats-v1-normal minus student-guard-v1-normal: +0.0 percentage points; 95% paired interval [+0.0, +0.0].
-- teacher-public-flag-threats-v1-normal minus teacher-context-v1-normal: +1.7 percentage points; 95% paired interval [-0.1, +3.7].
+- student-public-flag-threats-v1-normal minus student-guard-v1-normal: +0.0 percentage points; 95% paired interval [+0.0, +0.0]; 98.3333% interval [+0.0, +0.0].
+- teacher-public-flag-threats-v1-normal minus teacher-context-v1-normal: +1.7 percentage points; 95% paired interval [-0.1, +3.7]; 98.3333% interval [-0.5, +4.2].
+
+[Interpretation and prespecified qualifications](cycle-04-public-flag-defence/CONCLUSION.md).
 
 
 **Cycle 5 hypotheses:** A cheap learned setup-style mixture can exploit public Flag/Bomb dependencies missed by independent rank tables.; A control with identical trained Flag-row priors and zero spatial coupling separates positional prior from cross-piece inference.
 
 Evidence: [cycle-05-joint-setup-beliefs](cycle-05-joint-setup-beliefs/result.json).
 
-- teacher-joint-setup-v1-normal minus teacher-flag-row-control-v1-normal: +0.7 percentage points; 95% paired interval [-3.6, +4.8].
-- teacher-joint-setup-v1-normal minus teacher-context-v1-normal: +4.0 percentage points; 95% paired interval [+0.2, +7.8].
-- teacher-flag-row-control-v1-normal minus teacher-context-v1-normal: +2.8 percentage points; 95% paired interval [-1.4, +7.1].
-- teacher-joint-setup-v1-normal minus teacher-calibrated-beliefs-v1-normal: +2.7 percentage points; 95% paired interval [-1.4, +6.8].
+- teacher-joint-setup-v1-normal minus teacher-flag-row-control-v1-normal: +0.7 percentage points; 95% paired interval [-3.6, +4.8]; 98.3333% interval [-4.5, +5.8].
+- teacher-joint-setup-v1-normal minus teacher-context-v1-normal: +4.0 percentage points; 95% paired interval [+0.2, +7.8]; 98.3333% interval [-0.8, +8.6].
+- teacher-flag-row-control-v1-normal minus teacher-context-v1-normal: +2.8 percentage points; 95% paired interval [-1.4, +7.1]; 98.3333% interval [-2.5, +7.9].
+- teacher-joint-setup-v1-normal minus teacher-calibrated-beliefs-v1-normal: +2.7 percentage points; 95% paired interval [-1.4, +6.8]; 98.3333% interval [-2.4, +7.8].
 
 Exploratory signal only: the joint-minus-Context interval at 98.3333% is [-0.8, +8.6] points and includes zero. Spatial coupling did not clearly beat the simpler Flag-row control.
+
+[Interpretation and prespecified qualifications](cycle-05-joint-setup-beliefs/CONCLUSION.md).
 
 
 **Cycle 6 hypotheses:** Evaluate Flag routes an actual attacker can survive, instead of ignoring enemy mobile defenders.; Honestly model DOS knowledge: simulated opponent knows our Flag and Spy; root learns no enemy identity.; Anchor clipped continuation corrections to the legal native fallback rather than an imaginary pass; no coefficient change.
 
 Evidence: [cycle-06-evaluation-and-opponent](cycle-06-evaluation-and-opponent/result.json).
 
-- teacher-capable-routes-v1-normal minus teacher-context-v1-normal: +2.8 percentage points; 95% paired interval [-1.6, +7.2].
-- teacher-informed-opponent-v1-normal minus teacher-context-v1-normal: +2.3 percentage points; 95% paired interval [-2.8, +7.3].
-- teacher-parent-anchor-v1-normal minus teacher-context-v1-normal: +0.1 percentage points; 95% paired interval [-3.5, +3.9].
+- teacher-capable-routes-v1-normal minus teacher-context-v1-normal: +2.8 percentage points; 95% paired interval [-1.6, +7.2]; 98.3333% interval [-2.5, +8.1].
+- teacher-informed-opponent-v1-normal minus teacher-context-v1-normal: +2.3 percentage points; 95% paired interval [-2.8, +7.3]; 98.3333% interval [-4.0, +8.5].
+- teacher-parent-anchor-v1-normal minus teacher-context-v1-normal: +0.1 percentage points; 95% paired interval [-3.5, +3.9]; 98.3333% interval [-4.3, +4.6].
+
+[Interpretation and prespecified qualifications](cycle-06-evaluation-and-opponent/CONCLUSION.md).
 
 
 **Cycle 7 hypotheses:** Replace maximum of individual hidden-contact mean risks by expected lethal opportunity across contacts, respecting unique ranks and movement constraints.; Test the same cheap probability model in native play and the Context Teacher continuations.
 
 Evidence: [cycle-07-exact-contact-risk](cycle-07-exact-contact-risk/result.json).
 
-- student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +3.3 percentage points; 95% paired interval [-1.3, +8.0].
-- teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal: +1.4 percentage points; 95% paired interval [-2.6, +5.5].
+- student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +3.3 percentage points; 95% paired interval [-1.3, +8.0]; 98.3333% interval [-2.3, +9.1].
+- teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal: +1.4 percentage points; 95% paired interval [-2.6, +5.5]; 98.3333% interval [-3.4, +6.4].
+
+[Interpretation and prespecified qualifications](cycle-07-exact-contact-risk/CONCLUSION.md).
 
 
 **Cycle 8 hypotheses:** Reduce finite-eight-world importance-weight noise without increasing native rollout count.; Separate equal-weight proposal control from approximate posterior correction by rank-swap rejuvenation.
 
 Evidence: [cycle-08-rank-swap-beliefs](cycle-08-rank-swap-beliefs/result.json).
 
-- teacher-swap-beliefs-v1-normal minus teacher-calibrated-beliefs-v1-normal: -2.5 percentage points; 95% paired interval [-6.6, +1.7].
-- teacher-swap-beliefs-v1-normal minus teacher-unweighted-beliefs-v1-normal: -3.4 percentage points; 95% paired interval [-7.4, +0.7].
-- teacher-unweighted-beliefs-v1-normal minus teacher-calibrated-beliefs-v1-normal: +0.4 percentage points; 95% paired interval [-3.8, +4.5].
-- teacher-swap-beliefs-v1-normal minus teacher-context-v1-normal: -0.7 percentage points; 95% paired interval [-4.6, +3.3].
+- teacher-swap-beliefs-v1-normal minus teacher-calibrated-beliefs-v1-normal: -2.5 percentage points; 95% paired interval [-6.6, +1.7]; 98.3333% interval [-7.5, +2.6].
+- teacher-swap-beliefs-v1-normal minus teacher-unweighted-beliefs-v1-normal: -3.4 percentage points; 95% paired interval [-7.4, +0.7]; 98.3333% interval [-8.3, +1.7].
+- teacher-unweighted-beliefs-v1-normal minus teacher-calibrated-beliefs-v1-normal: +0.4 percentage points; 95% paired interval [-3.8, +4.5]; 98.3333% interval [-4.7, +5.6].
+- teacher-swap-beliefs-v1-normal minus teacher-context-v1-normal: -0.7 percentage points; 95% paired interval [-4.6, +3.3]; 98.3333% interval [-5.6, +4.2].
+
+[Interpretation and prespecified qualifications](cycle-08-rank-swap-beliefs/CONCLUSION.md).
 
 
 **Cycle 9 hypotheses:** Validated deployment mixtures improve end-to-end honest play against DOS.; Measure deployment separately for native and Context move policies.
@@ -173,46 +189,56 @@ Evidence: [cycle-09-policy-owned-deployments](cycle-09-policy-owned-deployments/
 
 Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
 
-- student-validated-deployment-v1-normal minus student-guard-v1-normal: +5.9 percentage points; 95% paired interval [-0.3, +12.0].
-- teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: -1.1 percentage points; 95% paired interval [-7.5, +5.1].
+- student-validated-deployment-v1-normal minus student-guard-v1-normal: +5.9 percentage points; 95% paired interval [-0.3, +12.0]; 98.3333% interval [-1.6, +13.4].
+- teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: -1.1 percentage points; 95% paired interval [-7.5, +5.1]; 98.3333% interval [-8.9, +6.5].
+
+[Interpretation and prespecified qualifications](cycle-09-policy-owned-deployments/CONCLUSION.md).
 
 
 **Cycle 12 hypotheses:** Independently validate the frozen Flag-position and joint Flag/Bomb belief models after the cycle5 screening signal.
 
 Evidence: [cycle-12-setup-belief-validation](cycle-12-setup-belief-validation/result.json).
 
-- teacher-flag-row-control-v1-normal minus teacher-context-v1-normal: +0.6 percentage points; 95% paired interval [-1.5, +2.6].
-- teacher-joint-setup-v1-normal minus teacher-context-v1-normal: +1.5 percentage points; 95% paired interval [-0.7, +3.6].
-- teacher-joint-setup-v1-normal minus teacher-flag-row-control-v1-normal: +0.6 percentage points; 95% paired interval [-1.5, +2.7].
+- teacher-flag-row-control-v1-normal minus teacher-context-v1-normal: +0.6 percentage points; 95% paired interval [-1.5, +2.6]; 98.3333% interval [-2.0, +3.1].
+- teacher-joint-setup-v1-normal minus teacher-context-v1-normal: +1.5 percentage points; 95% paired interval [-0.7, +3.6]; 98.3333% interval [-1.2, +4.0].
+- teacher-joint-setup-v1-normal minus teacher-flag-row-control-v1-normal: +0.6 percentage points; 95% paired interval [-1.5, +2.7]; 98.3333% interval [-2.0, +3.1].
 
 Prespecified independent validation: interpret the three contrasts with the 98.3333% intervals recorded in result.json; no tuning on this cohort.
+
+[Interpretation and prespecified qualifications](cycle-12-setup-belief-validation/CONCLUSION.md).
 
 
 **Cycle 14 hypotheses:** Independently validate whether joint probability of any lethal concealed contact improves the native guard against DOS.
 
 Evidence: [cycle-14-native-contact-validation](cycle-14-native-contact-validation/result.json).
 
-- student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +0.4 percentage points; 95% paired interval [-1.6, +2.4].
+- student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +0.4 percentage points; 95% paired interval [-1.6, +2.4]; 98.3333% interval [-2.0, +2.8].
+
+[Interpretation and prespecified qualifications](cycle-14-native-contact-validation/CONCLUSION.md).
 
 
 **Cycle 16 hypotheses:** Connect public Flag/Bomb beliefs to native persistent objectives, quiet routes and nonlinear capture evaluation without a rollout engine.; Separate correct moved/unmoved count conditioning from the learned joint setup prior.
 
 Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectives-v3/result.json).
 
-- student-counts-belief-objectives-v3-normal minus student-guard-v1-normal: -1.5 percentage points; 95% paired interval [-3.7, +0.7].
-- student-joint-belief-objectives-v3-normal minus student-guard-v1-normal: +1.1 percentage points; 95% paired interval [-2.9, +5.1].
-- student-joint-belief-objectives-v3-normal minus student-counts-belief-objectives-v3-normal: +3.4 percentage points; 95% paired interval [-0.6, +7.4].
+- student-counts-belief-objectives-v3-normal minus student-guard-v1-normal: -1.5 percentage points; 95% paired interval [-3.7, +0.7]; 98.3333% interval [-4.2, +1.1].
+- student-joint-belief-objectives-v3-normal minus student-guard-v1-normal: +1.1 percentage points; 95% paired interval [-2.9, +5.1]; 98.3333% interval [-3.8, +6.0].
+- student-joint-belief-objectives-v3-normal minus student-counts-belief-objectives-v3-normal: +3.4 percentage points; 95% paired interval [-0.6, +7.4]; 98.3333% interval [-1.5, +8.4].
+
+[Interpretation and prespecified qualifications](cycle-16-native-belief-objectives-v3/CONCLUSION.md).
 
 
 **Cycle 17: independent honest opponents**
 
 These scores are against honest references, so their comparison point is 50%; they are excluded from the DOS table.
 
-- row-prior-vs-context: 700 wins / 23 draws / 677 losses; score 50.8%; 0 unscored errors. 98.3333% paired interval [48.1%, 53.5%].
-- joint-vs-context: 714 wins / 15 draws / 671 losses; score 51.5%; 0 unscored errors. 98.3333% paired interval [48.9%, 54.1%].
-- native-contact-vs-guard: 748 wins / 25 draws / 627 losses; score 54.3%; 0 unscored errors. 98.3333% paired interval [51.9%, 56.8%].
+- row-prior-vs-context: 700 wins / 23 draws / 677 losses; score 50.8%; 0 unscored errors. 95% paired interval [48.6%, 53.0%]; planned 98.3333% interval [48.1%, 53.5%].
+- joint-vs-context: 714 wins / 15 draws / 671 losses; score 51.5%; 0 unscored errors. 95% paired interval [49.4%, 53.7%]; planned 98.3333% interval [48.9%, 54.1%].
+- native-contact-vs-guard: 748 wins / 25 draws / 627 losses; score 54.3%; 0 unscored errors. 95% paired interval [52.3%, 56.4%]; planned 98.3333% interval [51.9%, 56.8%].
 
 Evidence: [cycle-17-honest-head-validation](cycle-17-honest-head-validation/result.json).
+
+[Interpretation and prespecified qualifications](cycle-17-honest-head-validation/CONCLUSION.md).
 
 
 **Cycle 19 hypotheses:** Measure honest deployment-plus-play against armies drawn by the actual unchanged DOS level3 deployment instructions, rather than seven stress families.; Test validated own deployments against protected random own setups with identical DOS armies and move seeds.
@@ -223,8 +249,10 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-validated-deployment-v1-normal minus student-guard-v1-normal: +13.3 percentage points; 95% paired interval [+7.9, +18.6].
-- teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: +6.1 percentage points; 95% paired interval [+1.7, +10.7].
+- student-validated-deployment-v1-normal minus student-guard-v1-normal: +13.3 percentage points; 95% paired interval [+7.9, +18.6]; 98.3333% interval [+6.7, +19.7].
+- teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: +6.1 percentage points; 95% paired interval [+1.7, +10.7]; 98.3333% interval [+0.7, +11.7].
+
+[Interpretation and prespecified qualifications](cycle-19-original-dos-deployments/CONCLUSION.md).
 
 
 **Cycle 21 hypotheses:** Recognize possible enemy formations from public evidence using an honest source-informed opening prior.; Compare native Flag/Bomb objectives against a count-conditioning control, and correlated teacher worlds against an unweighted uniform control.
@@ -235,12 +263,14 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-template-flag-bomb-v1-normal minus student-validated-counts-v1-normal: +23.9 percentage points; 95% paired interval [+17.7, +30.2].
-- student-validated-counts-v1-normal minus student-validated-deployment-v1-normal: +0.8 percentage points; 95% paired interval [-2.4, +3.9].
-- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +23.6 percentage points; 95% paired interval [+18.0, +29.2].
-- teacher-template-opening-v1-normal minus teacher-validated-uniform-v1-normal: +18.2 percentage points; 95% paired interval [+12.9, +23.6].
-- teacher-validated-uniform-v1-normal minus teacher-validated-deployment-v1-normal: -0.5 percentage points; 95% paired interval [-3.6, +2.6].
-- teacher-template-opening-v1-normal minus teacher-validated-deployment-v1-normal: +17.0 percentage points; 95% paired interval [+11.4, +22.4].
+- student-template-flag-bomb-v1-normal minus student-validated-counts-v1-normal: +23.9 percentage points; 95% paired interval [+17.7, +30.2]; 98.3333% interval [+16.3, +31.6].
+- student-validated-counts-v1-normal minus student-validated-deployment-v1-normal: +0.8 percentage points; 95% paired interval [-2.4, +3.9]; 98.3333% interval [-3.0, +4.7].
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +23.6 percentage points; 95% paired interval [+18.0, +29.2]; 98.3333% interval [+16.8, +30.3].
+- teacher-template-opening-v1-normal minus teacher-validated-uniform-v1-normal: +18.2 percentage points; 95% paired interval [+12.9, +23.6]; 98.3333% interval [+11.9, +24.7].
+- teacher-validated-uniform-v1-normal minus teacher-validated-deployment-v1-normal: -0.5 percentage points; 95% paired interval [-3.6, +2.6]; 98.3333% interval [-4.2, +3.3].
+- teacher-template-opening-v1-normal minus teacher-validated-deployment-v1-normal: +17.0 percentage points; 95% paired interval [+11.4, +22.4]; 98.3333% interval [+10.3, +23.6].
+
+[Interpretation and prespecified qualifications](cycle-21-template-opening-prior/CONCLUSION.md).
 
 
 **Cycle 22 hypotheses:** Requiring a surviving enemy Miner to clear two distinct unavoidable Bomb barriers can improve own Flag defence against an opponent that knows its location.; Separate the three-swap deployment package from fixing Fortress instead of the existing validated mixture.
@@ -251,9 +281,11 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-double-bomb-shell-v1-normal minus student-fortress-deployment-v1-normal: -5.8 percentage points; 95% paired interval [-11.6, -0.1].
-- student-double-bomb-shell-v1-normal minus student-validated-deployment-v1-normal: -1.8 percentage points; 95% paired interval [-7.4, +3.6].
-- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +3.9 percentage points; 95% paired interval [-0.3, +8.2].
+- student-double-bomb-shell-v1-normal minus student-fortress-deployment-v1-normal: -5.8 percentage points; 95% paired interval [-11.6, -0.1]; 98.3333% interval [-12.9, +1.2].
+- student-double-bomb-shell-v1-normal minus student-validated-deployment-v1-normal: -1.8 percentage points; 95% paired interval [-7.4, +3.6]; 98.3333% interval [-8.6, +4.8].
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +3.9 percentage points; 95% paired interval [-0.3, +8.2]; 98.3333% interval [-1.4, +9.2].
+
+[Interpretation and prespecified qualifications](cycle-22-double-bomb-shell/CONCLUSION.md).
 
 
 **Cycle 23 hypotheses:** Test whether the same fixed three-swap deployment package helps against an honest native opponent, using the original DOS army distribution as a controlled common deployment.; Separate an opponent-specific response from a deployment improvement that also transfers to an honest opponent.
@@ -270,9 +302,11 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-double-bomb-shell-v1-normal minus student-fortress-deployment-v1-normal: -19.1 percentage points; 95% paired interval [-25.6, -12.8].
-- student-double-bomb-shell-v1-normal minus student-validated-deployment-v1-normal: -11.9 percentage points; 95% paired interval [-18.8, -5.0].
-- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.2 percentage points; 95% paired interval [+2.4, +12.1].
+- student-double-bomb-shell-v1-normal minus student-fortress-deployment-v1-normal: -19.1 percentage points; 95% paired interval [-25.6, -12.8]; 98.3333% interval [-27.0, -11.1].
+- student-double-bomb-shell-v1-normal minus student-validated-deployment-v1-normal: -11.9 percentage points; 95% paired interval [-18.8, -5.0]; 98.3333% interval [-20.2, -3.6].
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.2 percentage points; 95% paired interval [+2.4, +12.1]; 98.3333% interval [+1.4, +13.4].
+
+[Interpretation and prespecified qualifications](cycle-23-honest-deployment-control/CONCLUSION.md).
 
 
 **Cycle 24 hypotheses:** Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture.
@@ -283,9 +317,11 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.5 percentage points; 95% paired interval [+3.8, +7.3].
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.5 percentage points; 95% paired interval [+3.8, +7.3]; 98.3333% interval [+3.4, +7.7].
 
 Missing-outcome qualification: 276 original-DOS errors leave finite planned-cohort effect bounds of [-2.65, +11.15] percentage points. These are sensitivity bounds, not confidence intervals; the positive complete-case validation interval alone does not settle the effect with missing outcomes.
+
+[Interpretation and prespecified qualifications](cycle-24-fortress-dos-validation/CONCLUSION.md).
 
 
 **Cycle 25 hypotheses:** Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture.
@@ -301,7 +337,9 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.0 percentage points; 95% paired interval [+4.9, +9.1].
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.0 percentage points; 95% paired interval [+4.9, +9.1]; 98.3333% interval [+4.5, +9.6].
+
+[Interpretation and prespecified qualifications](cycle-25-fortress-honest-validation/CONCLUSION.md).
 
 
 **Cycle 26 hypotheses:** Independently validate the unchanged source-informed template Flag/Bomb prior against the same native move policy without external priors.
@@ -312,7 +350,9 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +19.3 percentage points; 95% paired interval [+15.3, +23.4].
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +19.3 percentage points; 95% paired interval [+15.3, +23.4]; 98.3333% interval [+14.5, +24.3].
+
+[Interpretation and prespecified qualifications](cycle-26-template-native-validation/CONCLUSION.md).
 
 
 **Cycle 27 hypotheses:** Improved own deployment and honest enemy formation inference address independent defence and attack limitations and can combine without cancelling their benefits.
@@ -323,13 +363,15 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-fortress-template-flag-bomb-v1-normal minus student-template-flag-bomb-v1-normal: +4.3 percentage points; 95% paired interval [+0.5, +8.2].
-- student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal: +17.6 percentage points; 95% paired interval [+11.5, +23.6].
-- student-fortress-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +23.3 percentage points; 95% paired interval [+17.5, +28.9].
-- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +18.5 percentage points; 95% paired interval [+12.3, +24.9].
-- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.7 percentage points; 95% paired interval [+2.1, +9.6].
+- student-fortress-template-flag-bomb-v1-normal minus student-template-flag-bomb-v1-normal: +4.3 percentage points; 95% paired interval [+0.5, +8.2]; 98.3333% interval [-0.4, +9.0].
+- student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal: +17.6 percentage points; 95% paired interval [+11.5, +23.6]; 98.3333% interval [+10.2, +25.0].
+- student-fortress-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +23.3 percentage points; 95% paired interval [+17.5, +28.9]; 98.3333% interval [+16.2, +30.3].
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +18.5 percentage points; 95% paired interval [+12.3, +24.9]; 98.3333% interval [+10.9, +26.0].
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.7 percentage points; 95% paired interval [+2.1, +9.6]; 98.3333% interval [+1.4, +10.4].
 
 Five-contrast screening qualification: combination minus template is +4.28 points, but its 99% paired interval is [-0.67, +9.36]. The positive 95% interval is suggestive; fresh cycle 41 tests the unchanged combination independently. See the retained 99% supplement and conclusion.
+
+[Interpretation and prespecified qualifications](cycle-27-fortress-template-combination/CONCLUSION.md).
 
 
 **Cycle 28 hypotheses:** Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population.
@@ -341,7 +383,9 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-validated-deployment-v1-normal: 689 wins / 22 draws / 689 losses; score 50.0%; 0 unscored errors.
 - student-template-flag-bomb-v1-normal: 704 wins / 33 draws / 663 losses; score 51.5%; 0 unscored errors.
 
-- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +1.5 percentage points; 95% paired interval [-0.7, +3.6].
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +1.5 percentage points; 95% paired interval [-0.7, +3.6]; 98.3333% interval [-1.2, +4.1].
+
+[Interpretation and prespecified qualifications](cycle-28-template-honest-generality/CONCLUSION.md).
 
 
 **Cycle 29 hypotheses:** A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior.
@@ -352,10 +396,12 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-template-backrow-background-v1-normal minus student-template-flag-bomb-v1-normal: +1.0 percentage points; 95% paired interval [-0.4, +2.4].
-- student-template-structured-background-v1-normal minus student-template-backrow-background-v1-normal: +0.2 percentage points; 95% paired interval [-1.2, +1.7].
-- student-backrow-only-v1-normal minus student-template-flag-bomb-v1-normal: -4.6 percentage points; 95% paired interval [-8.6, -0.6].
-- student-template-structured-background-v1-normal minus student-template-flag-bomb-v1-normal: +1.2 percentage points; 95% paired interval [-0.2, +2.7].
+- student-template-backrow-background-v1-normal minus student-template-flag-bomb-v1-normal: +1.0 percentage points; 95% paired interval [-0.4, +2.4]; 98.3333% interval [-0.8, +2.8].
+- student-template-structured-background-v1-normal minus student-template-backrow-background-v1-normal: +0.2 percentage points; 95% paired interval [-1.2, +1.7]; 98.3333% interval [-1.6, +2.0].
+- student-backrow-only-v1-normal minus student-template-flag-bomb-v1-normal: -4.6 percentage points; 95% paired interval [-8.6, -0.6]; 98.3333% interval [-9.4, +0.3].
+- student-template-structured-background-v1-normal minus student-template-flag-bomb-v1-normal: +1.2 percentage points; 95% paired interval [-0.2, +2.7]; 98.3333% interval [-0.5, +3.0].
+
+[Interpretation and prespecified qualifications](cycle-29-procedural-background-screen/CONCLUSION.md).
 
 
 **Cycle 31 hypotheses:** A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16.
@@ -366,9 +412,11 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: +11.5 percentage points; 95% paired interval [+7.6, +15.3].
-- student-compact-backrow-v1-normal minus student-backrow-only-v1-normal: +0.2 percentage points; 95% paired interval [-0.9, +1.4].
-- student-backrow-only-v1-normal minus student-validated-deployment-v1-normal: +11.2 percentage points; 95% paired interval [+7.4, +15.1].
+- student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: +11.5 percentage points; 95% paired interval [+7.6, +15.3]; 98.3333% interval [+6.7, +16.1].
+- student-compact-backrow-v1-normal minus student-backrow-only-v1-normal: +0.2 percentage points; 95% paired interval [-0.9, +1.4]; 98.3333% interval [-1.2, +1.7].
+- student-backrow-only-v1-normal minus student-validated-deployment-v1-normal: +11.2 percentage points; 95% paired interval [+7.4, +15.1]; 98.3333% interval [+6.5, +15.9].
+
+[Interpretation and prespecified qualifications](cycle-31-compact-backrow-dos-screen/CONCLUSION.md).
 
 
 **Cycle 32 hypotheses:** A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16.
@@ -381,9 +429,11 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-backrow-only-v1-normal: 239 wins / 12 draws / 309 losses; score 43.8%; 0 unscored errors.
 - student-compact-backrow-v1-normal: 238 wins / 6 draws / 316 losses; score 43.0%; 0 unscored errors.
 
-- student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: -7.0 percentage points; 95% paired interval [-10.6, -3.4].
-- student-compact-backrow-v1-normal minus student-backrow-only-v1-normal: -0.7 percentage points; 95% paired interval [-2.6, +1.2].
-- student-backrow-only-v1-normal minus student-validated-deployment-v1-normal: -6.2 percentage points; 95% paired interval [-9.9, -2.7].
+- student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: -7.0 percentage points; 95% paired interval [-10.6, -3.4]; 98.3333% interval [-11.5, -2.6].
+- student-compact-backrow-v1-normal minus student-backrow-only-v1-normal: -0.7 percentage points; 95% paired interval [-2.6, +1.2]; 98.3333% interval [-2.9, +1.5].
+- student-backrow-only-v1-normal minus student-validated-deployment-v1-normal: -6.2 percentage points; 95% paired interval [-9.9, -2.7]; 98.3333% interval [-10.7, -1.9].
+
+[Interpretation and prespecified qualifications](cycle-32-compact-backrow-honest-generality/CONCLUSION.md).
 
 
 **Cycle 36 hypotheses:** Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction.
@@ -395,7 +445,9 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-template-flag-bomb-v1-normal: 283 wins / 11 draws / 266 losses; score 51.5%; 0 unscored errors.
 - student-template-home-interceptor-v2-normal: 284 wins / 12 draws / 264 losses; score 51.8%; 0 unscored errors.
 
-- student-template-home-interceptor-v2-normal minus student-template-flag-bomb-v1-normal: +0.3 percentage points; 95% paired interval [+0.0, +0.7].
+- student-template-home-interceptor-v2-normal minus student-template-flag-bomb-v1-normal: +0.3 percentage points; 95% paired interval [+0.0, +0.7]; 98.3333% interval [+0.0, +0.8].
+
+[Interpretation and prespecified qualifications](cycle-36-home-interception-v2-honest-generality/CONCLUSION.md).
 
 
 **Cycle 38 hypotheses:** Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search.
@@ -407,7 +459,9 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-template-flag-bomb-v1-normal: 280 wins / 10 draws / 270 losses; score 50.9%; 0 unscored errors.
 - student-template-mobile-captures-v1-normal: 281 wins / 14 draws / 265 losses; score 51.4%; 0 unscored errors.
 
-- student-template-mobile-captures-v1-normal minus student-template-flag-bomb-v1-normal: +0.5 percentage points; 95% paired interval [-1.4, +2.6].
+- student-template-mobile-captures-v1-normal minus student-template-flag-bomb-v1-normal: +0.5 percentage points; 95% paired interval [-1.4, +2.6]; 98.3333% interval [-1.9, +3.0].
+
+[Interpretation and prespecified qualifications](cycle-38-template-mobile-capture-honest-generality/CONCLUSION.md).
 
 
 **Cycle 39 hypotheses:** Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores.
@@ -418,9 +472,13 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-template-quiet-occupancy-v1-normal minus student-template-flag-bomb-v1-normal: -1.9 percentage points; 95% paired interval [-5.3, +1.6].
-- student-template-quiet-mobile-v1-normal minus student-template-quiet-occupancy-v1-normal: +5.5 percentage points; 95% paired interval [+2.0, +9.0].
-- student-template-quiet-mobile-v1-normal minus student-template-flag-bomb-v1-normal: +3.8 percentage points; 95% paired interval [+0.3, +7.3].
+- student-template-quiet-occupancy-v1-normal minus student-template-flag-bomb-v1-normal: -1.9 percentage points; 95% paired interval [-5.3, +1.6]; 98.3333% interval [-6.0, +2.3].
+- student-template-quiet-mobile-v1-normal minus student-template-quiet-occupancy-v1-normal: +5.5 percentage points; 95% paired interval [+2.0, +9.0]; 98.3333% interval [+1.4, +9.8].
+- student-template-quiet-mobile-v1-normal minus student-template-flag-bomb-v1-normal: +3.8 percentage points; 95% paired interval [+0.3, +7.3]; 98.3333% interval [-0.4, +8.1].
+
+Three-contrast screening qualification: use the planned 98.3333% intervals. Mobile ranks beat occupancy alone, but mobile versus the unchanged book remains inconclusive despite its positive 95% interval. Finite missing-score bounds are a separate uncertainty measure.
+
+[Interpretation and prespecified qualifications](cycle-39-quiet-contact-dos-screen/CONCLUSION.md).
 
 
 **Cycle 40 hypotheses:** Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores.
@@ -433,9 +491,11 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-template-quiet-occupancy-v1-normal: 281 wins / 8 draws / 271 losses; score 50.9%; 0 unscored errors.
 - student-template-quiet-mobile-v1-normal: 279 wins / 10 draws / 271 losses; score 50.7%; 0 unscored errors.
 
-- student-template-quiet-occupancy-v1-normal minus student-template-flag-bomb-v1-normal: +2.1 percentage points; 95% paired interval [-1.6, +5.8].
-- student-template-quiet-mobile-v1-normal minus student-template-quiet-occupancy-v1-normal: -0.2 percentage points; 95% paired interval [-2.1, +1.7].
-- student-template-quiet-mobile-v1-normal minus student-template-flag-bomb-v1-normal: +1.9 percentage points; 95% paired interval [-2.0, +5.8].
+- student-template-quiet-occupancy-v1-normal minus student-template-flag-bomb-v1-normal: +2.1 percentage points; 95% paired interval [-1.6, +5.8]; 98.3333% interval [-2.4, +6.6].
+- student-template-quiet-mobile-v1-normal minus student-template-quiet-occupancy-v1-normal: -0.2 percentage points; 95% paired interval [-2.1, +1.7]; 98.3333% interval [-2.6, +2.1].
+- student-template-quiet-mobile-v1-normal minus student-template-flag-bomb-v1-normal: +1.9 percentage points; 95% paired interval [-2.0, +5.8]; 98.3333% interval [-2.9, +6.7].
+
+[Interpretation and prespecified qualifications](cycle-40-quiet-contact-honest-generality/CONCLUSION.md).
 
 
 **Cycle 41 hypotheses:** Adding the unchanged Fortress deployment to the unchanged honest source-template native policy improves end-to-end score against the original DOS population on independent seeds.
@@ -446,7 +506,9 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-fortress-template-flag-bomb-v1-normal minus student-template-flag-bomb-v1-normal: +5.0 percentage points; 95% paired interval [+3.3, +6.8].
+- student-fortress-template-flag-bomb-v1-normal minus student-template-flag-bomb-v1-normal: +5.0 percentage points; 95% paired interval [+3.3, +6.8]; 98.3333% interval [+2.8, +7.1].
+
+[Interpretation and prespecified qualifications](cycle-41-fortress-template-validation/CONCLUSION.md).
 
 
 **Cycle 42 hypotheses:** An honest source-template prior implemented entirely in native C retains useful DOS strength while fitting a separately banked CX16 research target.; The explicitly distinct Q24/inventory-rounding numerical policy retains practical strength relative to the floating host bridge.
@@ -457,9 +519,13 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-template-q24-native-v1-normal minus student-validated-deployment-v1-normal: +22.5 percentage points; 95% paired interval [+18.5, +26.4].
-- student-template-q24-native-v1-normal minus student-template-flag-bomb-v1-normal: -0.1 percentage points; 95% paired interval [-0.3, +0.2].
-- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +22.5 percentage points; 95% paired interval [+18.5, +26.4].
+- student-template-q24-native-v1-normal minus student-validated-deployment-v1-normal: +22.5 percentage points; 95% paired interval [+18.5, +26.4]; 98.3333% interval [+17.6, +27.2].
+- student-template-q24-native-v1-normal minus student-template-flag-bomb-v1-normal: -0.1 percentage points; 95% paired interval [-0.3, +0.2]; 98.3333% interval [-0.4, +0.2].
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +22.5 percentage points; 95% paired interval [+18.5, +26.4]; 98.3333% interval [+17.7, +27.3].
+
+Sparse bridge/tactical score differences and intervals containing zero do not establish policy equivalence. See the conclusion for non-tied pair counts, numerical scope and target-cost limits.
+
+[Interpretation and prespecified qualifications](cycle-42-template-q24-native-dos-screen/CONCLUSION.md).
 
 
 **Cycle 46 hypotheses:** The unchanged compact honest back-row population prior retains its DOS improvement over unchanged native play on a fresh independent fixed cohort.
@@ -470,7 +536,9 @@ Policy-owned setups: end-to-end deployment and play; own armies intentionally di
 
 Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
 
-- student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: +17.8 percentage points; 95% paired interval [+13.8, +21.8].
+- student-compact-backrow-v1-normal minus student-validated-deployment-v1-normal: +17.8 percentage points; 95% paired interval [+13.8, +21.8]; 98.3333% interval [+12.8, +22.6].
+
+[Interpretation and prespecified qualifications](cycle-46-compact-backrow-independent-validation/CONCLUSION.md).
 
 
 **Cycle 48 hypotheses:** A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy.
@@ -482,7 +550,14 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-template-flag-bomb-v1-normal: 267 wins / 10 draws / 283 losses; score 48.6%; 0 unscored errors.
 - student-template-capture-net-v1-normal: 266 wins / 10 draws / 284 losses; score 48.4%; 0 unscored errors.
 
-- student-template-capture-net-v1-normal minus student-template-flag-bomb-v1-normal: -0.2 percentage points; 95% paired interval [-0.9, +0.5].
+- student-template-capture-net-v1-normal minus student-template-flag-bomb-v1-normal: -0.2 percentage points; 95% paired interval [-0.9, +0.5]; 98.3333% interval [-1.1, +0.7].
+
+Sparse bridge/tactical score differences and intervals containing zero do not establish policy equivalence. See the conclusion for non-tied pair counts, numerical scope and target-cost limits.
+
+[Interpretation and prespecified qualifications](cycle-48-capture-net-honest-generality/CONCLUSION.md).
+
+
+[Independent-validation figure and source data](research/validation-summary-figure-v1/README.md): separate study contexts and estimands, without pooling or ranking. Sampling intervals do not replace finite missing-score bounds.
 
 
 **Preflight failures, without DOS strength results:**

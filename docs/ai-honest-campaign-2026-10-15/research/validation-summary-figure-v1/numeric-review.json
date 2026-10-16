@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "rows": 8,
+  "c17_all_three_prespecified_heads_included": true,
+  "c14_null_dos_result_included": true,
+  "manually_transcribed_effect_anchors_match": true,
+  "only_result_and_plan_aggregate_inputs": true,
+  "no_pooling_or_ranking": true,
+  "intervals": "Sampling bootstrap intervals; finite missing-score bounds are CSV-only."
+}
