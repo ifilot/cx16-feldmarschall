@@ -29,7 +29,7 @@ captures; public task allocation to reduce redundant pursuit (previously frozen
 but never benchmarked); a distinct information/concealment mechanism selected
 from source/literature review. Record rejected ideas rather than silently omit.
 
-All19 fixed cycles are settled. See [the final report](REPORT.md) for results,
+All 19 fixed cycles are settled. See [the final report](REPORT.md) for results,
 validation limits and the unchanged best policy. The complete research evidence
 is pinned in research/manifest.json, excluding interpreter caches. The separate
 final-audit.json records deadline and retained-artifact verification.
