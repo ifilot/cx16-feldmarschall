@@ -77,6 +77,9 @@ Scores count wins plus half of draws; engine errors remain unscored. Compare pol
 | 31 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 138 / 83 / 707 | 19.3% | 72 |
 | 31 | Own setup, original DOS, rotated | student-backrow-only-v1-normal | 231 / 125 / 586 | 31.2% | 58 |
 | 31 | Own setup, original DOS, rotated | student-compact-backrow-v1-normal | 229 / 126 / 585 | 31.1% | 60 |
+| 39 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 274 / 201 / 499 | 38.4% | 26 |
+| 39 | Own setup, original DOS, rotated | student-template-quiet-occupancy-v1-normal | 264 / 186 / 535 | 36.2% | 15 |
+| 39 | Own setup, original DOS, rotated | student-template-quiet-mobile-v1-normal | 299 / 229 / 462 | 41.8% | 10 |
 | 41 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 561 / 402 / 964 | 39.5% | 73 |
 | 41 | Own setup, original DOS, rotated | student-fortress-template-flag-bomb-v1-normal | 652 / 424 / 873 | 44.3% | 51 |
 | 42 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 122 / 91 / 710 | 18.1% | 77 |
@@ -405,6 +408,19 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-template-mobile-captures-v1-normal minus student-template-flag-bomb-v1-normal: +0.5 percentage points; 95% paired interval [-1.4, +2.6].
 
 
+**Cycle 39 hypotheses:** Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores.
+
+Evidence: [cycle-39-quiet-contact-dos-screen](cycle-39-quiet-contact-dos-screen/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-template-quiet-occupancy-v1-normal minus student-template-flag-bomb-v1-normal: -1.9 percentage points; 95% paired interval [-5.3, +1.6].
+- student-template-quiet-mobile-v1-normal minus student-template-quiet-occupancy-v1-normal: +5.5 percentage points; 95% paired interval [+2.0, +9.0].
+- student-template-quiet-mobile-v1-normal minus student-template-flag-bomb-v1-normal: +3.8 percentage points; 95% paired interval [+0.3, +7.3].
+
+
 **Cycle 40 hypotheses:** Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores.
 
 Evidence: [cycle-40-quiet-contact-honest-generality](cycle-40-quiet-contact-honest-generality/result.json).
@@ -503,7 +519,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 30: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 2,240 planned comparison attempts; registered; no completed strength result. [Plan](cycle-30-procedural-background-honest-generality/plan.json).
 - Cycle 35: Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-35-home-interception-v2-dos-screen/plan.json).
 - Cycle 37: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-37-template-mobile-capture-dos-screen/plan.json).
-- Cycle 39: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 3,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-39-quiet-contact-dos-screen/plan.json).
 - Cycle 43: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-43-public-forks-dos-screen/plan.json).
 - Cycle 44: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-44-public-forks-honest-generality/plan.json).
 - Cycle 45: Exact public-evidence caching preserves native Q24 playing decisions and DOS outcomes while reducing inference preparation cost when evidence is unchanged. 800 planned comparison attempts; registered; no completed strength result. [Plan](cycle-45-template-exact-cache-bridge/plan.json).
