@@ -1,8 +1,9 @@
 """Explicit prospective reuse of C43's frozen control, never new control games."""
-import argparse,hashlib,json,shutil,sys
+import argparse,datetime,hashlib,json,shutil,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3];sys.path.insert(0,str(ROOT/'tools'))
 from tournament_store import Tournament
+from information_strategy_cycle import validate_metadata
 HERE=Path(__file__).resolve().parent
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -13,14 +14,20 @@ def run(prepare):
  sourceplan=json.loads((source/'plan.json').read_text())
  for field in('baseline','opponent','seed','rounds','families','max_plies','backend','setup_mode'):
   assert sourceplan[field]==plan[field],field
- for identity in(plan['baseline'],plan['opponent']):
-  assert json.loads((source/'frozen-policies.json').read_text())[identity]==json.loads((HERE/'frozen-policies.json').read_text())[identity]
+ for participant_id in(plan['baseline'],plan['opponent']):
+  assert json.loads((source/'frozen-policies.json').read_text())[participant_id]==json.loads((HERE/'frozen-policies.json').read_text())[participant_id]
+ registration=json.loads((HERE/'registration.json').read_text())
+ validate_metadata(origin,dict(policy=identity,opponent=plan['opponent'],seed=plan['seed'],rounds=plan['rounds']),plan,json.loads((HERE/'frozen-policies.json').read_text()))
  with Tournament(origin)as saved:
-  assert saved.metadata()['status']=='complete'and len(saved.games())==1000
+  metadata=saved.metadata()
+  assert metadata['status']=='complete'and len(saved.games())==1000
+  created=datetime.datetime.fromisoformat(metadata['created_utc']).timestamp()
+  prospective=datetime.datetime.fromisoformat(shared['prospective_frozen_utc']).timestamp()
+  assert created>=max(registration['epoch'],prospective)
   before=[saved.game(row['id'])for row in saved.games()]
  if prepare:
   assert not destination.exists()
-  assert origin.stat().st_mtime>=json.loads((HERE/'registration.json').read_text())['epoch']
+  assert origin.stat().st_mtime>=registration['epoch']
   shutil.copy2(origin,destination)
   shutil.copy2(origin.with_suffix('.log'),destination.with_suffix('.log'))
  with Tournament(destination)as saved:
@@ -33,6 +40,7 @@ def run(prepare):
   source=str(origin.relative_to(ROOT)),destination=str(destination.relative_to(ROOT)),
   source_sha256=digest(origin),destination_sha256=digest(destination),
   source_plan_sha256=digest(source/'plan.json'),destination_plan_sha256=digest(HERE/'plan.json'),
+  source_created_utc=metadata['created_utc'],registered_before_source_creation=True,
   declaration=shared,all_saved_game_fields_exactly_equal=True,
   interpretation='Same physical control execution, counted once in campaign execution totals; neither independent replication nor a fresh validation cohort.')
  (HERE/'shared-control-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')

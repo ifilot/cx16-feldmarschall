@@ -33,11 +33,30 @@ def verify_manifest(directory):
     return len(files)
 
 
+def summarize_executions(completed, saved_executions, reuse_declarations, completed_saved_paths):
+    """Count one physical control even if its source study is still pending."""
+    attempts = sum(c['attempts'] for c in completed)
+    unique_attempts = sum(count for count, errors in saved_executions.values())
+    unique_errors = sum(errors for count, errors in saved_executions.values())
+    for reuse in reuse_declarations:
+        assert reuse['destination'] in completed_saved_paths
+    duplicate_appearances = sum(reuse['attempts'] for reuse in reuse_declarations
+                                if reuse['source'] in completed_saved_paths)
+    assert attempts - unique_attempts == duplicate_appearances
+    return dict(completed_attempts=attempts, unique_saved_attempts=unique_attempts,
+                reused_comparison_attempts=duplicate_appearances,
+                declared_reused_control_attempts=sum(reuse['attempts'] for reuse in reuse_declarations),
+                errors_preserved_unscored=sum(c['errors'] for c in completed),
+                errors_field_counts_comparison_appearances=True,
+                unique_saved_unscored_errors=unique_errors)
+
+
 def audit():
     completed, pending, rejected = [], [], []
     archives = {}
     saved_executions = {}
-    declared_reuse = 0
+    reuse_declarations = []
+    completed_saved_paths = set()
     for directory in sorted(BASE.glob('cycle-*')):
         if not directory.is_dir():
             continue
@@ -71,7 +90,8 @@ def audit():
             assert digest(ROOT / reuse['source']) == reuse['source_sha256']
             assert digest(ROOT / reuse['destination']) == reuse['destination_sha256'] == reuse['source_sha256']
             assert result['new_attempts'] + result['reused_control_attempts'] == result['attempts']
-            declared_reuse += result['reused_control_attempts']
+            reuse_declarations.append(dict(source=reuse['source'], destination=reuse['destination'],
+                                           attempts=result['reused_control_attempts']))
         hashes = verify_manifest(directory)
         frozen = json.loads((directory / 'frozen-policies.json').read_text())
         for identity, spec in frozen.items():
@@ -85,9 +105,11 @@ def audit():
             assert digest(saved) == report['tournament_sha256'], str(saved)
             count = report['summary']['games']
             sha = report['tournament_sha256']
+            totals = (count, report['summary']['errors'])
             if sha in saved_executions:
-                assert saved_executions[sha] == count
-            saved_executions[sha] = count
+                assert saved_executions[sha] == totals
+            saved_executions[sha] = totals
+            completed_saved_paths.add(str(saved.relative_to(ROOT)))
             verification = report['verification']
             assert verification['artifacts_verified']
             assert count == verification['python_replayed'] == verification['native_replayed_all_states']
@@ -105,13 +127,9 @@ def audit():
                               terminal_audit_sha256=digest(directory / 'audit.json')))
     for name, sha in archives.items():
         assert digest(ROOT / name) == sha, name
-    attempts = sum(c['attempts'] for c in completed)
-    unique_attempts = sum(saved_executions.values())
-    assert attempts - unique_attempts == declared_reuse
+    accounting = summarize_executions(completed, saved_executions, reuse_declarations, completed_saved_paths)
     return dict(scope='Completed-cycle artifact and retained replay-receipt verification; no new games or replay re-execution. Pending cohorts are reported separately. Completed attempts count comparison appearances; unique saved attempts count byte-identical reused control artifacts only once.',
-                passed=True, completed_cycles=completed, completed_attempts=sum(c['attempts'] for c in completed),
-                unique_saved_attempts=unique_attempts, reused_comparison_attempts=attempts-unique_attempts,
-                errors_preserved_unscored=sum(c['errors'] for c in completed),
+                passed=True, completed_cycles=completed, **accounting,
                 immutable_policy_archives_verified=len(archives), pending_or_running=pending,
                 rejected_before_matches=rejected, goal_completion_claim=False)
 

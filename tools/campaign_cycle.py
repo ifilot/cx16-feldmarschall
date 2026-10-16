@@ -4,6 +4,8 @@ import contextlib
 import copy
 import json
 import re
+import subprocess
+import sys
 import time
 from pathlib import Path
 
@@ -73,6 +75,11 @@ def evaluate(directory):
         match = dict(name=identity, group='dos', policy=identity, opponent=plan['opponent'],
                      seed=plan['seed'], rounds=plan['rounds'])
         path = directory/(identity+'.fmtour')
+        shared = plan.get('shared_control')
+        if shared and identity == shared['policy'] and not path.exists():
+            # The new treatment can run first while its prospectively shared
+            # control is finishing in the other pool. Never rerun that control.
+            subprocess.run([sys.executable, str(directory/'shared-control.py'), 'prepare'], check=True)
         if not path.exists():
             print('Running', identity, flush=True)
             with path.with_suffix('.log').open('x') as log, contextlib.redirect_stdout(log):
@@ -179,8 +186,11 @@ def overview(through_cycle=None, exclude_results=()):
                   '; '.join(result['hypotheses']), '',
                   'Evidence: ['+path.parent.name+']('+path.parent.name+'/result.json).', '']
         if not is_dos:
+            army_note = ('Both treatments use the same forced army population; compare their matched effects against this reference.'
+                         if mode == 'referee' else
+                         'Own army distributions differ by policy; compare matched treatment effects rather than using 50% as a fair-null benchmark.')
             details += ['Opponent: '+plan['opponent']+'. These are honest-opponent results, excluded from the DOS table. '
-                        'Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.', '', *honest_rows, '']
+                        +army_note, '', *honest_rows, '']
         if result.get('setup_mode','referee') != 'referee':
             details += ['Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.', '']
         if mode == 'policy-owned-rotated-v1':
@@ -195,6 +205,10 @@ def overview(through_cycle=None, exclude_results=()):
             details += ['', 'Exploratory signal only: the joint-minus-Context interval at 98.3333% is [-0.8, +8.6] points and includes zero. Spatial coupling did not clearly beat the simpler Flag-row control.']
         if result['cycle'] == 12:
             details += ['', 'Prespecified independent validation: interpret the three contrasts with the 98.3333% intervals recorded in result.json; no tuning on this cohort.']
+        if result['cycle'] == 24:
+            details += ['', 'Missing-outcome qualification: 276 original-DOS errors leave finite planned-cohort effect bounds of [-2.65, +11.15] percentage points. These are sensitivity bounds, not confidence intervals; the positive complete-case validation interval alone does not settle the effect with missing outcomes.']
+        if result['cycle'] == 27:
+            details += ['', 'Five-contrast screening qualification: combination minus template is +4.28 points, but its 99% paired interval is [-0.67, +9.36]. The positive 95% interval is suggestive; fresh cycle 41 tests the unchanged combination independently. See the retained 99% supplement and conclusion.']
         details.append('')
     lines += details
     failures = []
@@ -230,6 +244,8 @@ def overview(through_cycle=None, exclude_results=()):
         lines += ['', '**Research screened before tournaments; no DOS strength score:**', '']
         lines += [f'- {name}: {finding} [Evidence]({source}).' for name,finding,source in available]
         lines.append('')
+    if (BASE/'research/template-mobile-objectives-proposal-v1/README.md').exists():
+        lines += ['**Untested research proposal:** Full mobile-rank beliefs could guide native pursuit objectives, extending the current capture-only and quiet-contact bridges. The source/literature review specifies controls and arithmetic/target limits; no opportunity diagnostic, implementation or strength test has run. [Proposal](research/template-mobile-objectives-proposal-v1/README.md).', '']
     if (BASE/'research/native-belief-target-fit/audit.json').exists():
         lines += ['', '**Target cost evidence:**', '',
                   '- Native belief interface: desktop prototype; the unchanged CX16 production link overflows the AI bank by 1,198 bytes. [Evidence](research/native-belief-target-fit/README.md).',

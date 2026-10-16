@@ -250,7 +250,7 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 
 Evidence: [cycle-23-honest-deployment-control](cycle-23-honest-deployment-control/result.json).
 
-Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Own army distributions differ by policy; compare matched treatment effects rather than using 50% as a fair-null benchmark.
 
 - student-validated-deployment-v1-normal: 186 wins / 20 draws / 194 losses; score 49.0%; 0 unscored errors.
 - student-fortress-deployment-v1-normal: 216 wins / 18 draws / 166 losses; score 56.2%; 0 unscored errors.
@@ -275,12 +275,14 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 
 - student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.5 percentage points; 95% paired interval [+3.8, +7.3].
 
+Missing-outcome qualification: 276 original-DOS errors leave finite planned-cohort effect bounds of [-2.65, +11.15] percentage points. These are sensitivity bounds, not confidence intervals; the positive complete-case validation interval alone does not settle the effect with missing outcomes.
+
 
 **Cycle 25 hypotheses:** Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture.
 
 Evidence: [cycle-25-fortress-honest-validation](cycle-25-fortress-honest-validation/result.json).
 
-Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Own army distributions differ by policy; compare matched treatment effects rather than using 50% as a fair-null benchmark.
 
 - student-validated-deployment-v1-normal: 961 wins / 88 draws / 951 losses; score 50.2%; 0 unscored errors.
 - student-fortress-deployment-v1-normal: 1098 wins / 94 draws / 808 losses; score 57.2%; 0 unscored errors.
@@ -317,12 +319,14 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +18.5 percentage points; 95% paired interval [+12.3, +24.9].
 - student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.7 percentage points; 95% paired interval [+2.1, +9.6].
 
+Five-contrast screening qualification: combination minus template is +4.28 points, but its 99% paired interval is [-0.67, +9.36]. The positive 95% interval is suggestive; fresh cycle 41 tests the unchanged combination independently. See the retained 99% supplement and conclusion.
+
 
 **Cycle 28 hypotheses:** Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population.
 
 Evidence: [cycle-28-template-honest-generality](cycle-28-template-honest-generality/result.json).
 
-Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Both treatments use the same forced army population; compare their matched effects against this reference.
 
 - student-validated-deployment-v1-normal: 689 wins / 22 draws / 689 losses; score 50.0%; 0 unscored errors.
 - student-template-flag-bomb-v1-normal: 704 wins / 33 draws / 663 losses; score 51.5%; 0 unscored errors.
@@ -361,7 +365,7 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 
 Evidence: [cycle-36-home-interception-v2-honest-generality](cycle-36-home-interception-v2-honest-generality/result.json).
 
-Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Both treatments use the same forced army population; compare their matched effects against this reference.
 
 - student-template-flag-bomb-v1-normal: 283 wins / 11 draws / 266 losses; score 51.5%; 0 unscored errors.
 - student-template-home-interceptor-v2-normal: 284 wins / 12 draws / 264 losses; score 51.8%; 0 unscored errors.
@@ -373,7 +377,7 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 
 Evidence: [cycle-38-template-mobile-capture-honest-generality](cycle-38-template-mobile-capture-honest-generality/result.json).
 
-Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Both treatments use the same forced army population; compare their matched effects against this reference.
 
 - student-template-flag-bomb-v1-normal: 280 wins / 10 draws / 270 losses; score 50.9%; 0 unscored errors.
 - student-template-mobile-captures-v1-normal: 281 wins / 14 draws / 265 losses; score 51.4%; 0 unscored errors.
@@ -408,6 +412,8 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Public double threats with conversion proofs: The full fixed gate found 100 candidate roots in 13 of 400 screening games with a positive short material certificate absent for the saved native move; these collapse to 20 distinct public comparisons, with most repeated roots in one game. Proofs include hidden Scout action unions and collateral losses. This is correlated opportunity evidence, not improved outcomes. The executable-witness runtime is a separately recorded refinement; eligible-root host proof work averaged 644 ms, without a target-fit claim. [Evidence](research/disclosed-fork-preflight-v1/CONCLUSION.md).
 - Executable public fork followthrough: The refined fixed screening audit finds 101 proposed replacements across 14 games, collapsing to 20 distinct public comparisons. A one-turn plan stores 9,429 legal public-successor capture witnesses; 82 roots fall back under the shared node cap. Mechanical and portable-history checks pass. Mean eligible-root host proof cost is 396 ms, without target qualification or playing-strength evidence. Earlier fixture metadata aliasing is explicitly corrected while retaining original artifacts and unchanged proof outputs. [Evidence](research/quiet-fork-runtime-v1/CONCLUSION.md).
 - Cooperative two-piece capture nets: A fixed screening gate found 361 eligible roots across 91 games. The same-cohort full expansion found 81 proposed improvements across 13 games, with 63 distinct normalized public comparisons; 58 roots are concentrated in two games. All 1,524 witness states and 361 native public fixtures pass checks; 20 roots hit the shared cap. The control permits the same generalized continuations, including after a victim voluntarily attacks and dies. Mean eligible-root host proof cost is 299 ms. This is correlated tactical opportunity evidence, without playing-strength or target-fit claims. [Evidence](research/capture-net-preflight-v1/EXPANSION-CONCLUSION.md).
+
+**Untested research proposal:** Full mobile-rank beliefs could guide native pursuit objectives, extending the current capture-only and quiet-contact bridges. The source/literature review specifies controls and arithmetic/target limits; no opportunity diagnostic, implementation or strength test has run. [Proposal](research/template-mobile-objectives-proposal-v1/README.md).
 
 
 **Target cost evidence:**
