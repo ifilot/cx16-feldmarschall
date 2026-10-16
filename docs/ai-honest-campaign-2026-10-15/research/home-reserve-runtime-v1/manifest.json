@@ -19,6 +19,10 @@
     "bytes": 1142,
     "sha256": "21e71b3cd5f08c17b201ab01342fc1474e2a7ae05a2057e8af7e71642276643a"
   },
+  "POST-FREEZE-REJECTION.md": {
+    "bytes": 1272,
+    "sha256": "2af817eb80c779e0ced026065bdcf7743303ec6e5a7f999d1076f349b1c786a2"
+  },
   "PROTOCOL.json": {
     "bytes": 1918,
     "sha256": "35b81ddd63ba6ce301e273665d3b4b669cdda5026267a872f0f0477cbe30ec68"

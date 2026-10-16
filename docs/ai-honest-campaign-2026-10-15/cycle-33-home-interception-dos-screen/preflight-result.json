@@ -1,0 +1,19 @@
+{
+  "cycle": 33,
+  "status": "rejected-preflight",
+  "attempts": 0,
+  "hypotheses": [
+    "Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction."
+  ],
+  "policies": [
+    "student-template-flag-bomb-v1-normal",
+    "student-template-home-interceptor-v1-normal"
+  ],
+  "new_policies": [
+    "student-template-home-interceptor-v1-normal"
+  ],
+  "reason": "Post-freeze mechanical review found that a legal shuttle-reset detour can beat the simple-path enemy Miner ETA. The response deadline can therefore be optimistic. No saved tournament executed; immutable version1 retained and rejected before matches.",
+  "next_cycle": 35,
+  "failed_sources_preserved": true,
+  "original_freeze_and_qualification_preserved": true
+}
