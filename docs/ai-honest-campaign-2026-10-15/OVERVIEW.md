@@ -244,6 +244,7 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
 - Cycle 15: AI_TEST alone did not enable public queries; missing outer AI_DIAGNOSTICS guard. No saved tournament executed. [Preserved evidence](cycle-15-native-belief-objectives-v2/CONCLUSION.md).
 - Cycle 33: Post-freeze mechanical review found that a legal shuttle-reset detour can beat the simple-path enemy Miner ETA. The response deadline can therefore be optimistic. No saved tournament executed; immutable version1 retained and rejected before matches. [Preserved evidence](cycle-33-home-interception-dos-screen/CONCLUSION.md).
+- Cycle 34: The same frozen home-interceptor version1 has an incomplete enemy Miner ETA under a legal shuttle-reset detour. Honest-opponent matches are also withheld; zero saved games. [Preserved evidence](cycle-34-home-interception-honest-generality/CONCLUSION.md).
 
 
 **Research screened before tournaments; no DOS strength score:**
@@ -287,5 +288,4 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 30: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 2,240 planned attempts; no completed strength result. [Frozen plan](cycle-30-procedural-background-honest-generality/plan.json).
 - Cycle 31: A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16. 3,000 planned attempts; no completed strength result. [Frozen plan](cycle-31-compact-backrow-dos-screen/plan.json).
 - Cycle 32: A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-32-compact-backrow-honest-generality/plan.json).
-- Cycle 34: Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-34-home-interception-honest-generality/plan.json).
 
