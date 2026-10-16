@@ -1,0 +1,117 @@
+{
+  "cycle": 117,
+  "baseline": "student-fortress-template-flag-bomb-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-fortress-template-flag-bomb-v1-normal",
+    "student-fortress-mirror-template-v1-normal",
+    "student-fortress-mirror-mixture-template-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-fortress-mirror-template-v1-normal",
+      "name": "student-fortress-mirror-template-v1-normal",
+      "description": "Use the complete horizontal mirror of Fortress in Classic Normal, preserving the existing setup ticket draw and unchanged public template move policy.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "tools/new_campaign_mirror_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_FORTRESS_MIRROR_ONLY"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged public eight-template 80% plus uniform 20% Flag/Bomb inference and native Student movement. Own complete formation always horizontally reflected in Classic Normal only. Flag/Spy reflect with all own ranks. No new random draws. Accepted raw ticket values split 32,765/32,765; uniform nonzero initial seed enumeration 32,766/32,769 due inherited deterministic retries.",
+      "information_model": "Own army, public events and declared source-informed population prior only. Deployment orientation depends on own existing setup ticket only; no opponent layout, private opponent seed or concealed rank input.",
+      "driver": "native-template",
+      "driver_args": []
+    },
+    {
+      "id": "student-fortress-mirror-mixture-template-v1-normal",
+      "name": "student-fortress-mirror-mixture-template-v1-normal",
+      "description": "Use original Fortress for existing accepted tickets 0–4 and its complete horizontal mirror for tickets 5–9 in Classic Normal; no new RNG draw or move-policy change.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "tools/new_campaign_mirror_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_FORTRESS_MIRROR_MIX"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged public eight-template 80% plus uniform 20% Flag/Bomb inference and native Student movement. Own complete formation selected by five of ten existing accepted setup tickets per orientation in Classic Normal only. Flag/Spy reflect with all own ranks. No new random draws. Accepted raw ticket values split 32,765/32,765; uniform nonzero initial seed enumeration 32,766/32,769 due inherited deterministic retries.",
+      "information_model": "Own army, public events and declared source-informed population prior only. Deployment orientation depends on own existing setup ticket only; no opponent layout, private opponent seed or concealed rank input.",
+      "driver": "native-template",
+      "driver_args": []
+    }
+  ],
+  "seed": 3117001,
+  "rounds": 128,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "Test whether the complete horizontal mirror of the accepted Fortress formation changes end-to-end strength against the specified opponent/setup population, holding movement, inference and random draws fixed.",
+    "Test whether a symmetric five-of-ten setup-ticket mixture of original and mirrored Fortress improves robustness over the immutable original formation, without adding search or new information."
+  ],
+  "contrasts": [
+    [
+      "student-fortress-mirror-template-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ],
+    [
+      "student-fortress-mirror-mixture-template-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed three-arm exploratory screen with two prespecified baseline contrasts. Report paired 95% intervals, all family scores and finite missing-error outcome bounds; no promotion or population equivalence claim. Opponent armies and move seeds match across arms; own formations are the intended treatment. Both DOS and honest study plans must be frozen before any first outcome. Do not tune using held-out cohorts. Accepted raw ticket classes split exactly five/five; deterministic initial-seed retries preserve a documented tiny imbalance. Reflecting only our army measures orientation plus matchup effects, not isolated coordinate tie bias. Post-play composition audit must match each mixture game to the original/mirror fixed arm selected by its actual own setup, including saved error prefixes.",
+  "evidence": "research/mirror-deployment/README.md and tools/test_new_campaign_mirror.py six component tests: exact full reflection/inventory and geometry, all 65,535 nonzero seeds both colors with preserved RNG, all rejection cases, real native setup/forced-common-army move parity, fallback controls, no enemy-board influence. Fixed source snapshots and builds registered before saved play."
+}

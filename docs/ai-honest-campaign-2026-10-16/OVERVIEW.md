@@ -36,6 +36,9 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 | 115 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-open-reserve-template-v1-normal | 70 / 51 / 127 | 38.5% | 8 |
 | 116 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 174 / 2 / 48 | 78.1% | 0 |
 | 116 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-open-reserve-template-v1-normal | 165 / 1 / 58 | 73.9% | 0 |
+| 117 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 69 / 57 / 126 | 38.7% | 4 |
+| 117 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-mirror-template-v1-normal | 77 / 50 / 124 | 40.6% | 5 |
+| 117 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-mirror-mixture-template-v1-normal | 80 / 48 / 124 | 41.3% | 4 |
 | 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 195 / 1 / 28 | 87.3% | 0 |
 | 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-mirror-template-v1-normal | 168 / 4 / 52 | 75.9% | 0 |
 | 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-mirror-mixture-template-v1-normal | 187 / 3 / 34 | 84.2% | 0 |
@@ -138,7 +141,10 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 
 **Cycle 117:** Test whether the complete horizontal mirror of the accepted Fortress formation changes end-to-end strength against the specified opponent/setup population, holding movement, inference and random draws fixed.; Test whether a symmetric five-of-ten setup-ticket mixture of original and mirrored Fortress improves robustness over the immutable original formation, without adding search or new information.
 
-No completed strength result. [Frozen plan](cycle-117-mirror-deployment-dos/plan.json).
+[Results and family breakdown](cycle-117-mirror-deployment-dos/result.json).
+- student-fortress-mirror-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: +3.33 points; 95% paired interval [-4.38, +11.04].
+- student-fortress-mirror-mixture-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: +3.93 points; 95% paired interval [-1.65, +9.71].
+[Interpretation](cycle-117-mirror-deployment-dos/CONCLUSION.md).
 
 **Cycle 118:** Test whether the complete horizontal mirror of the accepted Fortress formation changes end-to-end strength against the specified opponent/setup population, holding movement, inference and random draws fixed.; Test whether a symmetric five-of-ten setup-ticket mixture of original and mirrored Fortress improves robustness over the immutable original formation, without adding search or new information.
 
@@ -146,6 +152,10 @@ No completed strength result. [Frozen plan](cycle-117-mirror-deployment-dos/plan
 - student-fortress-mirror-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -11.38 points; 95% paired interval [-18.53, -4.02].
 - student-fortress-mirror-mixture-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -3.12 points; 95% paired interval [-7.59, +1.12].
 [Interpretation](cycle-118-mirror-deployment-honest/CONCLUSION.md).
+
+**Cycle 119:** Independent fresh-cohort test of the unchanged screen-selected orientation policy student-fortress-mirror-mixture-template-v1-normal against the unchanged Fortress-template reference.
+
+No completed strength result. [Frozen plan](cycle-119-mirror-independent-dos-validation/plan.json).
 
 **Additional hypotheses evaluated before tournaments**
 
