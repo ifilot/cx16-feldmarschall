@@ -1,0 +1,45 @@
+{
+  "kind": "older-frozen-scope-exact-parity",
+  "strength_evidence": false,
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "game": 3,
+  "results": [
+    {
+      "scope": "captures",
+      "immutable_identity": "student-template-mobile-captures-v1-normal",
+      "decisions_both_sides": 300,
+      "actual_overrides": 18,
+      "exact_choice_and_public_actual_history_parity": true,
+      "recipe_sha256": "b5e6ad0ea0dbb79e3f8dba6da2c70d466db7a257a4435599802bfd9fea488844"
+    },
+    {
+      "scope": "quiet-occupancy",
+      "immutable_identity": "student-template-quiet-occupancy-v1-normal",
+      "decisions_both_sides": 300,
+      "actual_overrides": 51,
+      "exact_choice_and_public_actual_history_parity": true,
+      "recipe_sha256": "5e2764a764daec99c718856355642db0dfc5d32aea05d49b210ae9eea60cfeec"
+    },
+    {
+      "scope": "quiet-mobile",
+      "immutable_identity": "student-template-quiet-mobile-v1-normal",
+      "decisions_both_sides": 300,
+      "actual_overrides": 67,
+      "exact_choice_and_public_actual_history_parity": true,
+      "recipe_sha256": "96d8f546a1da64f71424632b26646c702f55eb1687d7d6064c974a1f038f3ee5"
+    },
+    {
+      "scope": "quiet-fork",
+      "immutable_identity": "student-template-public-forks-v1-normal",
+      "decisions_both_sides": 300,
+      "actual_overrides": 0,
+      "exact_choice_and_public_actual_history_parity": true,
+      "recipe_sha256": "2e15f3b603c814fb0dbd9de7009ef0b79ff1f8672b8141ef54f1fc094a155db0"
+    }
+  ],
+  "sources": {
+    "tools/campaign_native_mobile.py": "f8f265017efb342655879e5520ddf62839e42b3ecc75ca753b6833a685f0aae8",
+    "tools/campaign_mobile_capture.py": "3222678e4e2ec8beef63e5cacf4df4a4f638db0687541e86fc83986be86a71cf",
+    "tools/campaign_capture_net.py": "aafac41e263784fd263c8da431315566a0c9dead1d494b36ec6b25e1631289d2"
+  }
+}

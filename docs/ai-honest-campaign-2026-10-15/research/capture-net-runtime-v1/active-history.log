@@ -1,0 +1,23 @@
+{
+  "kind": "net-actual-public-history-parity",
+  "strength_evidence": false,
+  "counts": {
+    "decisions": 300,
+    "overrides": 2,
+    "root": 298,
+    "fallback": 2
+  },
+  "game": 2,
+  "both_armies": true,
+  "one_ranked_per_decision": true,
+  "played_iff_override": true,
+  "raw_native_and_actual_choice_history_and_public_states_equal": true,
+  "no_extra_go_seed_or_rng": true,
+  "scope": "Forced recorded C21 public histories; choices are corrected to the historical action after each diagnostic. Stale plans are discarded by played correction. No new games.",
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "sources": {
+    "tools/campaign_native_mobile.py": "f8f265017efb342655879e5520ddf62839e42b3ecc75ca753b6833a685f0aae8",
+    "tools/campaign_mobile_capture.py": "3222678e4e2ec8beef63e5cacf4df4a4f638db0687541e86fc83986be86a71cf",
+    "tools/campaign_capture_net.py": "aafac41e263784fd263c8da431315566a0c9dead1d494b36ec6b25e1631289d2"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "version": "public-quiet-net-v1",
+  "source_final_utc": "2026-10-16T03:17:19.156509+00:00",
+  "source_sha256": {
+    "tools/campaign_capture_net.py": "aafac41e263784fd263c8da431315566a0c9dead1d494b36ec6b25e1631289d2",
+    "tools/campaign_native_mobile.py": "f8f265017efb342655879e5520ddf62839e42b3ecc75ca753b6833a685f0aae8",
+    "tools/campaign_mobile_capture.py": "3222678e4e2ec8beef63e5cacf4df4a4f638db0687541e86fc83986be86a71cf",
+    "tools/test_campaign_capture_net.py": "2ea0370be95b0ac2773f982b53458e283073846c443dedc2222cf106e1e39334",
+    "tools/test_native_net_adapter.py": "0a147776b7e9aaf1e21de1766a4dd6b11099756bc1e083afb3c5f7f2287d390e"
+  },
+  "combined_tests": 50,
+  "research_runtime_parity": {
+    "roots": 361,
+    "overrides": 81,
+    "witness_states": 1382,
+    "global_cap_fallbacks": 20,
+    "all_candidates_queried_proofs_nodes_selections_and_witnesses_exact": true
+  },
+  "older_scopes": {
+    "frozen_launcher_decisions": 1500,
+    "scopes": [
+      "captures",
+      "quiet-occupancy",
+      "quiet-mobile",
+      "quiet-fork"
+    ],
+    "exact_choices_and_public_actual_histories": true,
+    "hot_fork_overrides": 1,
+    "additional_fixed_seed_fork_decisions_preserved": 300
+  },
+  "active_history": {
+    "decisions": 300,
+    "both_armies": true,
+    "net_overrides": 2,
+    "one_ranked_per_turn": true,
+    "played_iff_override": true,
+    "raw_native_and_actual_choice_history_equal": true
+  },
+  "real_native_witnesses": [
+    "C21publicprefix game2ply217; enemyvictim suicide followed by QUIET10\u219220 replacing native49\u219259; complete publickey and subsequent native choice/history parity.",
+    "C21publicprefix game2ply211; enemyvictim suicide followed by UNCERTAIN capture44\u219245; count-feasible public combat branch and complete publickey/subsequent native history parity."
+  ],
+  "research_only": true,
+  "target_fit_claim": false,
+  "strength_claim": false,
+  "no_child_registration_or_saved_matches": true
+}

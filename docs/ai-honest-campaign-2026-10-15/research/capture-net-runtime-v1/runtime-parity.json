@@ -1,0 +1,5804 @@
+{
+  "kind": "all361-runtime-research-exact-parity",
+  "strength_evidence": false,
+  "all_candidates_proofs_nodes_witnesses_and_selected_moves_exact": true,
+  "counts": {
+    "roots": 361,
+    "overrides": 81,
+    "no-higher-certificate": 260,
+    "witness_states": 1382,
+    "higher-certified-net-material-bound": 81,
+    "global-node-cap": 20
+  },
+  "elapsed_seconds": 103.33709670900134,
+  "root_time_ms": {
+    "mean": 286.0739835426069,
+    "median": 126.78517500171438,
+    "maximum": 2733.5437200017623
+  },
+  "sources": {
+    "docs/ai-honest-campaign-2026-10-15/research/capture-net-runtime-v1/audit-runtime.py": "2dc9f1acb5e820648c0dd1b79fbb108f685375ee8c2f5a32ff02120094562169",
+    "docs/ai-honest-campaign-2026-10-15/research/capture-net-preflight-v1/full361-proofs.json.gz": "7d59d5d38b3ac911d1fee87161dfd57cd997fba954e2daf2cc0718861bbbb886",
+    "tools/campaign_capture_net.py": "aafac41e263784fd263c8da431315566a0c9dead1d494b36ec6b25e1631289d2",
+    "tools/campaign_native_mobile.py": "f8f265017efb342655879e5520ddf62839e42b3ecc75ca753b6833a685f0aae8",
+    "tools/campaign_mobile_capture.py": "3222678e4e2ec8beef63e5cacf4df4a4f638db0687541e86fc83986be86a71cf"
+  },
+  "results": [
+    {
+      "game": 2,
+      "ply": 59,
+      "native": [
+        40,
+        41
+      ],
+      "selected": [
+        40,
+        41
+      ],
+      "enemy_nodes": 1650,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 103.47678200196242
+    },
+    {
+      "game": 2,
+      "ply": 61,
+      "native": [
+        39,
+        49
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 1695,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 151.8155940066208
+    },
+    {
+      "game": 2,
+      "ply": 211,
+      "native": [
+        15,
+        25
+      ],
+      "selected": [
+        34,
+        44
+      ],
+      "enemy_nodes": 1085,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 13,
+      "elapsed_ms": 52.36055599380052
+    },
+    {
+      "game": 2,
+      "ply": 217,
+      "native": [
+        64,
+        74
+      ],
+      "selected": [
+        64,
+        54
+      ],
+      "enemy_nodes": 552,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 10,
+      "elapsed_ms": 21.343004002119415
+    },
+    {
+      "game": 2,
+      "ply": 223,
+      "native": [
+        35,
+        45
+      ],
+      "selected": [
+        35,
+        45
+      ],
+      "enemy_nodes": 267,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 9.937902999809012
+    },
+    {
+      "game": 2,
+      "ply": 237,
+      "native": [
+        74,
+        73
+      ],
+      "selected": [
+        74,
+        73
+      ],
+      "enemy_nodes": 1492,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 72.40782099688658
+    },
+    {
+      "game": 2,
+      "ply": 245,
+      "native": [
+        72,
+        73
+      ],
+      "selected": [
+        72,
+        73
+      ],
+      "enemy_nodes": 300,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 16.549474996281788
+    },
+    {
+      "game": 2,
+      "ply": 247,
+      "native": [
+        61,
+        62
+      ],
+      "selected": [
+        61,
+        62
+      ],
+      "enemy_nodes": 1360,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 80.74919000500813
+    },
+    {
+      "game": 11,
+      "ply": 24,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 2049,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 299.15600799722597
+    },
+    {
+      "game": 15,
+      "ply": 128,
+      "native": [
+        40,
+        41
+      ],
+      "selected": [
+        40,
+        41
+      ],
+      "enemy_nodes": 1692,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 228.4116709997761
+    },
+    {
+      "game": 15,
+      "ply": 130,
+      "native": [
+        85,
+        75
+      ],
+      "selected": [
+        85,
+        75
+      ],
+      "enemy_nodes": 1705,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 154.26562700304203
+    },
+    {
+      "game": 15,
+      "ply": 132,
+      "native": [
+        95,
+        85
+      ],
+      "selected": [
+        95,
+        85
+      ],
+      "enemy_nodes": 1835,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 153.5119449981721
+    },
+    {
+      "game": 15,
+      "ply": 134,
+      "native": [
+        73,
+        74
+      ],
+      "selected": [
+        73,
+        74
+      ],
+      "enemy_nodes": 2145,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 161.569439995219
+    },
+    {
+      "game": 15,
+      "ply": 136,
+      "native": [
+        74,
+        64
+      ],
+      "selected": [
+        74,
+        64
+      ],
+      "enemy_nodes": 1979,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 169.1621270001633
+    },
+    {
+      "game": 25,
+      "ply": 162,
+      "native": [
+        66,
+        76
+      ],
+      "selected": [
+        66,
+        76
+      ],
+      "enemy_nodes": 2328,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 209.92882800055668
+    },
+    {
+      "game": 25,
+      "ply": 164,
+      "native": [
+        76,
+        75
+      ],
+      "selected": [
+        76,
+        75
+      ],
+      "enemy_nodes": 2201,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 205.31842800119193
+    },
+    {
+      "game": 25,
+      "ply": 166,
+      "native": [
+        30,
+        20
+      ],
+      "selected": [
+        30,
+        40
+      ],
+      "enemy_nodes": 10622,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 76,
+      "elapsed_ms": 935.6139309966238
+    },
+    {
+      "game": 39,
+      "ply": 122,
+      "native": [
+        86,
+        76
+      ],
+      "selected": [
+        86,
+        76
+      ],
+      "enemy_nodes": 1796,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 121.69241600349778
+    },
+    {
+      "game": 42,
+      "ply": 269,
+      "native": [
+        29,
+        39
+      ],
+      "selected": [
+        29,
+        39
+      ],
+      "enemy_nodes": 6697,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 314.8726260042167
+    },
+    {
+      "game": 42,
+      "ply": 305,
+      "native": [
+        76,
+        66
+      ],
+      "selected": [
+        76,
+        66
+      ],
+      "enemy_nodes": 2739,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 76.89164000476012
+    },
+    {
+      "game": 42,
+      "ply": 307,
+      "native": [
+        39,
+        49
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 1811,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 63.80233299569227
+    },
+    {
+      "game": 43,
+      "ply": 246,
+      "native": [
+        34,
+        35
+      ],
+      "selected": [
+        34,
+        35
+      ],
+      "enemy_nodes": 13202,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 806.7742310013273
+    },
+    {
+      "game": 45,
+      "ply": 30,
+      "native": [
+        50,
+        51
+      ],
+      "selected": [
+        50,
+        51
+      ],
+      "enemy_nodes": 17933,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 1681.918668000435
+    },
+    {
+      "game": 50,
+      "ply": 21,
+      "native": [
+        35,
+        45
+      ],
+      "selected": [
+        35,
+        45
+      ],
+      "enemy_nodes": 5187,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 558.1864260020666
+    },
+    {
+      "game": 50,
+      "ply": 263,
+      "native": [
+        36,
+        37
+      ],
+      "selected": [
+        36,
+        37
+      ],
+      "enemy_nodes": 1876,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 97.02388600271661
+    },
+    {
+      "game": 50,
+      "ply": 267,
+      "native": [
+        16,
+        26
+      ],
+      "selected": [
+        16,
+        26
+      ],
+      "enemy_nodes": 2288,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 142.4221210036194
+    },
+    {
+      "game": 50,
+      "ply": 269,
+      "native": [
+        26,
+        24
+      ],
+      "selected": [
+        26,
+        24
+      ],
+      "enemy_nodes": 2495,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 118.20346799504478
+    },
+    {
+      "game": 50,
+      "ply": 273,
+      "native": [
+        4,
+        14
+      ],
+      "selected": [
+        4,
+        14
+      ],
+      "enemy_nodes": 1685,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 62.64804699458182
+    },
+    {
+      "game": 50,
+      "ply": 275,
+      "native": [
+        39,
+        49
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 1570,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 68.22932599607157
+    },
+    {
+      "game": 53,
+      "ply": 118,
+      "native": [
+        38,
+        28
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 6879,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 505.9214789944235
+    },
+    {
+      "game": 59,
+      "ply": 292,
+      "native": [
+        27,
+        37
+      ],
+      "selected": [
+        27,
+        37
+      ],
+      "enemy_nodes": 880,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 79.04112899996107
+    },
+    {
+      "game": 60,
+      "ply": 49,
+      "native": [
+        40,
+        41
+      ],
+      "selected": [
+        40,
+        41
+      ],
+      "enemy_nodes": 1039,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 105.08695899625309
+    },
+    {
+      "game": 60,
+      "ply": 51,
+      "native": [
+        39,
+        49
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 1041,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 125.87407699902542
+    },
+    {
+      "game": 67,
+      "ply": 138,
+      "native": [
+        92,
+        82
+      ],
+      "selected": [
+        92,
+        82
+      ],
+      "enemy_nodes": 4859,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 222.12407200277084
+    },
+    {
+      "game": 67,
+      "ply": 140,
+      "native": [
+        65,
+        55
+      ],
+      "selected": [
+        65,
+        55
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 796.4240270011942
+    },
+    {
+      "game": 67,
+      "ply": 142,
+      "native": [
+        82,
+        81
+      ],
+      "selected": [
+        82,
+        81
+      ],
+      "enemy_nodes": 5527,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 365.756324994436
+    },
+    {
+      "game": 67,
+      "ply": 146,
+      "native": [
+        62,
+        61
+      ],
+      "selected": [
+        62,
+        61
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1039.1900120011996
+    },
+    {
+      "game": 72,
+      "ply": 33,
+      "native": [
+        5,
+        15
+      ],
+      "selected": [
+        5,
+        15
+      ],
+      "enemy_nodes": 5930,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 614.7901629956323
+    },
+    {
+      "game": 73,
+      "ply": 232,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 342,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 24.452072000713088
+    },
+    {
+      "game": 73,
+      "ply": 234,
+      "native": [
+        39,
+        38
+      ],
+      "selected": [
+        39,
+        38
+      ],
+      "enemy_nodes": 2788,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 189.7466539958259
+    },
+    {
+      "game": 74,
+      "ply": 223,
+      "native": [
+        38,
+        39
+      ],
+      "selected": [
+        38,
+        39
+      ],
+      "enemy_nodes": 495,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 31.18263100623153
+    },
+    {
+      "game": 74,
+      "ply": 227,
+      "native": [
+        39,
+        49
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 478,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 32.99113099637907
+    },
+    {
+      "game": 76,
+      "ply": 381,
+      "native": [
+        74,
+        84
+      ],
+      "selected": [
+        74,
+        84
+      ],
+      "enemy_nodes": 2759,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 145.61679899634328
+    },
+    {
+      "game": 76,
+      "ply": 723,
+      "native": [
+        66,
+        65
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1814,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 95.61630600364879
+    },
+    {
+      "game": 76,
+      "ply": 729,
+      "native": [
+        66,
+        76
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1826,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 84.02233000379056
+    },
+    {
+      "game": 76,
+      "ply": 731,
+      "native": [
+        93,
+        94
+      ],
+      "selected": [
+        93,
+        94
+      ],
+      "enemy_nodes": 1773,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 78.83343900175532
+    },
+    {
+      "game": 76,
+      "ply": 733,
+      "native": [
+        76,
+        75
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1831,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 82.19074399676174
+    },
+    {
+      "game": 76,
+      "ply": 735,
+      "native": [
+        75,
+        65
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1858,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 84.93109600385651
+    },
+    {
+      "game": 76,
+      "ply": 737,
+      "native": [
+        94,
+        95
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1860,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 98.22979599994142
+    },
+    {
+      "game": 76,
+      "ply": 739,
+      "native": [
+        65,
+        66
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "enemy_nodes": 1684,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 56.4049660024466
+    },
+    {
+      "game": 76,
+      "ply": 741,
+      "native": [
+        66,
+        76
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1840,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 50.422565000189934
+    },
+    {
+      "game": 76,
+      "ply": 743,
+      "native": [
+        76,
+        75
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1712,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 43.985578005958814
+    },
+    {
+      "game": 76,
+      "ply": 745,
+      "native": [
+        75,
+        65
+      ],
+      "selected": [
+        75,
+        65
+      ],
+      "enemy_nodes": 1774,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 74.66714100155514
+    },
+    {
+      "game": 76,
+      "ply": 747,
+      "native": [
+        95,
+        94
+      ],
+      "selected": [
+        95,
+        94
+      ],
+      "enemy_nodes": 1753,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 83.87407400005031
+    },
+    {
+      "game": 76,
+      "ply": 751,
+      "native": [
+        66,
+        76
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1814,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 89.02213599503739
+    },
+    {
+      "game": 76,
+      "ply": 753,
+      "native": [
+        76,
+        86
+      ],
+      "selected": [
+        76,
+        86
+      ],
+      "enemy_nodes": 1461,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 67.41386999783572
+    },
+    {
+      "game": 76,
+      "ply": 755,
+      "native": [
+        86,
+        85
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1859,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 85.43672099767718
+    },
+    {
+      "game": 76,
+      "ply": 757,
+      "native": [
+        85,
+        75
+      ],
+      "selected": [
+        85,
+        75
+      ],
+      "enemy_nodes": 1418,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 57.127732994558755
+    },
+    {
+      "game": 76,
+      "ply": 759,
+      "native": [
+        75,
+        65
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1858,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 74.65773900185013
+    },
+    {
+      "game": 76,
+      "ply": 761,
+      "native": [
+        94,
+        95
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1860,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 80.94517100107623
+    },
+    {
+      "game": 76,
+      "ply": 763,
+      "native": [
+        36,
+        37
+      ],
+      "selected": [
+        36,
+        37
+      ],
+      "enemy_nodes": 1618,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 60.920078998606186
+    },
+    {
+      "game": 76,
+      "ply": 765,
+      "native": [
+        65,
+        75
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1740,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 80.9969479960273
+    },
+    {
+      "game": 76,
+      "ply": 767,
+      "native": [
+        75,
+        85
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1464,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 65.9513889986556
+    },
+    {
+      "game": 76,
+      "ply": 769,
+      "native": [
+        85,
+        86
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1566,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 63.60365599539364
+    },
+    {
+      "game": 76,
+      "ply": 771,
+      "native": [
+        86,
+        76
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1584,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 70.4109350044746
+    },
+    {
+      "game": 76,
+      "ply": 773,
+      "native": [
+        76,
+        75
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1740,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 78.01324499450857
+    },
+    {
+      "game": 76,
+      "ply": 775,
+      "native": [
+        95,
+        85
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1528,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 40.11902699858183
+    },
+    {
+      "game": 76,
+      "ply": 779,
+      "native": [
+        85,
+        75
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1564,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 38.78892599459505
+    },
+    {
+      "game": 76,
+      "ply": 781,
+      "native": [
+        65,
+        64
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1760,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 38.53333900042344
+    },
+    {
+      "game": 76,
+      "ply": 783,
+      "native": [
+        75,
+        65
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1668,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 39.13101899524918
+    },
+    {
+      "game": 76,
+      "ply": 785,
+      "native": [
+        65,
+        66
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "enemy_nodes": 1629,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 41.745125003217254
+    },
+    {
+      "game": 76,
+      "ply": 787,
+      "native": [
+        64,
+        65
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1555,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 39.233313997101504
+    },
+    {
+      "game": 76,
+      "ply": 789,
+      "native": [
+        65,
+        55
+      ],
+      "selected": [
+        65,
+        55
+      ],
+      "enemy_nodes": 1208,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 27.67494499858003
+    },
+    {
+      "game": 76,
+      "ply": 791,
+      "native": [
+        55,
+        45
+      ],
+      "selected": [
+        55,
+        45
+      ],
+      "enemy_nodes": 1306,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 54.93138099700445
+    },
+    {
+      "game": 76,
+      "ply": 793,
+      "native": [
+        38,
+        39
+      ],
+      "selected": [
+        38,
+        28
+      ],
+      "enemy_nodes": 1391,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 49.2441879978287
+    },
+    {
+      "game": 81,
+      "ply": 50,
+      "native": [
+        60,
+        61
+      ],
+      "selected": [
+        60,
+        61
+      ],
+      "enemy_nodes": 2818,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 283.8675780003541
+    },
+    {
+      "game": 88,
+      "ply": 33,
+      "native": [
+        24,
+        34
+      ],
+      "selected": [
+        24,
+        34
+      ],
+      "enemy_nodes": 2573,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 260.1719879967277
+    },
+    {
+      "game": 88,
+      "ply": 305,
+      "native": [
+        51,
+        61
+      ],
+      "selected": [
+        51,
+        61
+      ],
+      "enemy_nodes": 982,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 70.11815299483715
+    },
+    {
+      "game": 88,
+      "ply": 307,
+      "native": [
+        28,
+        27
+      ],
+      "selected": [
+        28,
+        27
+      ],
+      "enemy_nodes": 1924,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 123.63054599700263
+    },
+    {
+      "game": 90,
+      "ply": 127,
+      "native": [
+        23,
+        33
+      ],
+      "selected": [
+        23,
+        33
+      ],
+      "enemy_nodes": 4133,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 287.58820799703244
+    },
+    {
+      "game": 90,
+      "ply": 129,
+      "native": [
+        35,
+        45
+      ],
+      "selected": [
+        35,
+        45
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1668.0933509996976
+    },
+    {
+      "game": 95,
+      "ply": 44,
+      "native": [
+        89,
+        79
+      ],
+      "selected": [
+        89,
+        79
+      ],
+      "enemy_nodes": 1227,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 130.07582800491946
+    },
+    {
+      "game": 95,
+      "ply": 46,
+      "native": [
+        69,
+        59
+      ],
+      "selected": [
+        69,
+        59
+      ],
+      "enemy_nodes": 1427,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 127.06153600447578
+    },
+    {
+      "game": 95,
+      "ply": 50,
+      "native": [
+        67,
+        69
+      ],
+      "selected": [
+        67,
+        69
+      ],
+      "enemy_nodes": 1395,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 146.6134649963351
+    },
+    {
+      "game": 95,
+      "ply": 52,
+      "native": [
+        54,
+        44
+      ],
+      "selected": [
+        54,
+        44
+      ],
+      "enemy_nodes": 1467,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 154.498946001695
+    },
+    {
+      "game": 96,
+      "ply": 233,
+      "native": [
+        55,
+        65
+      ],
+      "selected": [
+        55,
+        65
+      ],
+      "enemy_nodes": 9059,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 696.9254159994307
+    },
+    {
+      "game": 96,
+      "ply": 269,
+      "native": [
+        60,
+        70
+      ],
+      "selected": [
+        60,
+        70
+      ],
+      "enemy_nodes": 7431,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 403.96387800137745
+    },
+    {
+      "game": 96,
+      "ply": 271,
+      "native": [
+        70,
+        71
+      ],
+      "selected": [
+        70,
+        71
+      ],
+      "enemy_nodes": 4185,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 222.92587899573846
+    },
+    {
+      "game": 96,
+      "ply": 273,
+      "native": [
+        71,
+        81
+      ],
+      "selected": [
+        71,
+        81
+      ],
+      "enemy_nodes": 4481,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 249.00872899888782
+    },
+    {
+      "game": 96,
+      "ply": 275,
+      "native": [
+        28,
+        38
+      ],
+      "selected": [
+        28,
+        38
+      ],
+      "enemy_nodes": 4194,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 221.16362400265643
+    },
+    {
+      "game": 96,
+      "ply": 277,
+      "native": [
+        81,
+        71
+      ],
+      "selected": [
+        81,
+        71
+      ],
+      "enemy_nodes": 4304,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 238.30178699427051
+    },
+    {
+      "game": 96,
+      "ply": 279,
+      "native": [
+        71,
+        70
+      ],
+      "selected": [
+        71,
+        70
+      ],
+      "enemy_nodes": 8380,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 425.4398859993671
+    },
+    {
+      "game": 96,
+      "ply": 281,
+      "native": [
+        54,
+        64
+      ],
+      "selected": [
+        54,
+        64
+      ],
+      "enemy_nodes": 6309,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 350.84135200304445
+    },
+    {
+      "game": 96,
+      "ply": 289,
+      "native": [
+        64,
+        74
+      ],
+      "selected": [
+        64,
+        74
+      ],
+      "enemy_nodes": 5297,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 317.691525000555
+    },
+    {
+      "game": 99,
+      "ply": 242,
+      "native": [
+        88,
+        78
+      ],
+      "selected": [
+        88,
+        78
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 763.676463997399
+    },
+    {
+      "game": 102,
+      "ply": 59,
+      "native": [
+        55,
+        65
+      ],
+      "selected": [
+        55,
+        65
+      ],
+      "enemy_nodes": 2874,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 146.0555649973685
+    },
+    {
+      "game": 109,
+      "ply": 340,
+      "native": [
+        89,
+        79
+      ],
+      "selected": [
+        89,
+        79
+      ],
+      "enemy_nodes": 6682,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 307.72574600268854
+    },
+    {
+      "game": 109,
+      "ply": 342,
+      "native": [
+        77,
+        67
+      ],
+      "selected": [
+        77,
+        67
+      ],
+      "enemy_nodes": 6808,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 439.7596100025112
+    },
+    {
+      "game": 109,
+      "ply": 344,
+      "native": [
+        67,
+        66
+      ],
+      "selected": [
+        67,
+        66
+      ],
+      "enemy_nodes": 7758,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 684.7472730005393
+    },
+    {
+      "game": 109,
+      "ply": 346,
+      "native": [
+        68,
+        58
+      ],
+      "selected": [
+        68,
+        58
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1081.7535899986979
+    },
+    {
+      "game": 110,
+      "ply": 91,
+      "native": [
+        20,
+        10
+      ],
+      "selected": [
+        20,
+        10
+      ],
+      "enemy_nodes": 4688,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 471.45045200159075
+    },
+    {
+      "game": 110,
+      "ply": 93,
+      "native": [
+        21,
+        31
+      ],
+      "selected": [
+        21,
+        31
+      ],
+      "enemy_nodes": 2436,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 232.39250000187894
+    },
+    {
+      "game": 111,
+      "ply": 262,
+      "native": [
+        8,
+        7
+      ],
+      "selected": [
+        24,
+        34
+      ],
+      "enemy_nodes": 7222,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 75,
+      "elapsed_ms": 423.5763459946611
+    },
+    {
+      "game": 114,
+      "ply": 215,
+      "native": [
+        58,
+        68
+      ],
+      "selected": [
+        58,
+        68
+      ],
+      "enemy_nodes": 8800,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 554.665837000357
+    },
+    {
+      "game": 114,
+      "ply": 289,
+      "native": [
+        27,
+        26
+      ],
+      "selected": [
+        27,
+        26
+      ],
+      "enemy_nodes": 8544,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 500.6568820026587
+    },
+    {
+      "game": 114,
+      "ply": 291,
+      "native": [
+        49,
+        59
+      ],
+      "selected": [
+        49,
+        59
+      ],
+      "enemy_nodes": 7443,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 418.4567159973085
+    },
+    {
+      "game": 120,
+      "ply": 21,
+      "native": [
+        28,
+        38
+      ],
+      "selected": [
+        28,
+        38
+      ],
+      "enemy_nodes": 1064,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 115.77867300366051
+    },
+    {
+      "game": 121,
+      "ply": 24,
+      "native": [
+        86,
+        76
+      ],
+      "selected": [
+        86,
+        76
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 2733.5437200017623
+    },
+    {
+      "game": 123,
+      "ply": 196,
+      "native": [
+        34,
+        24
+      ],
+      "selected": [
+        34,
+        24
+      ],
+      "enemy_nodes": 7162,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 367.3374429999967
+    },
+    {
+      "game": 125,
+      "ply": 118,
+      "native": [
+        44,
+        34
+      ],
+      "selected": [
+        44,
+        34
+      ],
+      "enemy_nodes": 7385,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 404.84548499807715
+    },
+    {
+      "game": 130,
+      "ply": 25,
+      "native": [
+        31,
+        41
+      ],
+      "selected": [
+        31,
+        41
+      ],
+      "enemy_nodes": 2048,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 237.96298300294438
+    },
+    {
+      "game": 130,
+      "ply": 101,
+      "native": [
+        13,
+        23
+      ],
+      "selected": [
+        13,
+        23
+      ],
+      "enemy_nodes": 2331,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 210.8563790025073
+    },
+    {
+      "game": 130,
+      "ply": 103,
+      "native": [
+        41,
+        40
+      ],
+      "selected": [
+        41,
+        40
+      ],
+      "enemy_nodes": 2340,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 229.98632900271332
+    },
+    {
+      "game": 130,
+      "ply": 105,
+      "native": [
+        22,
+        32
+      ],
+      "selected": [
+        22,
+        32
+      ],
+      "enemy_nodes": 2326,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 166.14827999728732
+    },
+    {
+      "game": 130,
+      "ply": 107,
+      "native": [
+        14,
+        24
+      ],
+      "selected": [
+        14,
+        24
+      ],
+      "enemy_nodes": 2494,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 206.2155069943401
+    },
+    {
+      "game": 130,
+      "ply": 109,
+      "native": [
+        64,
+        74
+      ],
+      "selected": [
+        64,
+        74
+      ],
+      "enemy_nodes": 3801,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 304.026341997087
+    },
+    {
+      "game": 130,
+      "ply": 111,
+      "native": [
+        4,
+        14
+      ],
+      "selected": [
+        4,
+        14
+      ],
+      "enemy_nodes": 4355,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 374.19156699615996
+    },
+    {
+      "game": 130,
+      "ply": 113,
+      "native": [
+        24,
+        34
+      ],
+      "selected": [
+        24,
+        34
+      ],
+      "enemy_nodes": 7970,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 484.94355799630284
+    },
+    {
+      "game": 130,
+      "ply": 115,
+      "native": [
+        14,
+        24
+      ],
+      "selected": [
+        14,
+        24
+      ],
+      "enemy_nodes": 7797,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 370.96720300178276
+    },
+    {
+      "game": 130,
+      "ply": 117,
+      "native": [
+        40,
+        50
+      ],
+      "selected": [
+        40,
+        50
+      ],
+      "enemy_nodes": 7305,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 456.38682700518984
+    },
+    {
+      "game": 130,
+      "ply": 119,
+      "native": [
+        50,
+        51
+      ],
+      "selected": [
+        50,
+        51
+      ],
+      "enemy_nodes": 5838,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 478.04601800453383
+    },
+    {
+      "game": 130,
+      "ply": 121,
+      "native": [
+        5,
+        15
+      ],
+      "selected": [
+        5,
+        15
+      ],
+      "enemy_nodes": 6466,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 498.5639720034669
+    },
+    {
+      "game": 130,
+      "ply": 123,
+      "native": [
+        51,
+        50
+      ],
+      "selected": [
+        51,
+        50
+      ],
+      "enemy_nodes": 5073,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 345.7034780003596
+    },
+    {
+      "game": 130,
+      "ply": 125,
+      "native": [
+        29,
+        39
+      ],
+      "selected": [
+        29,
+        39
+      ],
+      "enemy_nodes": 3090,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 208.82517199788708
+    },
+    {
+      "game": 135,
+      "ply": 212,
+      "native": [
+        82,
+        81
+      ],
+      "selected": [
+        82,
+        81
+      ],
+      "enemy_nodes": 2199,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 115.69131100259256
+    },
+    {
+      "game": 135,
+      "ply": 214,
+      "native": [
+        39,
+        29
+      ],
+      "selected": [
+        39,
+        29
+      ],
+      "enemy_nodes": 3247,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 179.93505600315984
+    },
+    {
+      "game": 135,
+      "ply": 216,
+      "native": [
+        81,
+        71
+      ],
+      "selected": [
+        81,
+        71
+      ],
+      "enemy_nodes": 3161,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 151.49266099615488
+    },
+    {
+      "game": 139,
+      "ply": 224,
+      "native": [
+        68,
+        69
+      ],
+      "selected": [
+        68,
+        69
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1142.2212699981174
+    },
+    {
+      "game": 146,
+      "ply": 373,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        64,
+        54
+      ],
+      "enemy_nodes": 11918,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 59,
+      "elapsed_ms": 750.934301999223
+    },
+    {
+      "game": 146,
+      "ply": 375,
+      "native": [
+        64,
+        74
+      ],
+      "selected": [
+        64,
+        54
+      ],
+      "enemy_nodes": 10088,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 57,
+      "elapsed_ms": 567.0265959997778
+    },
+    {
+      "game": 146,
+      "ply": 381,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        64,
+        54
+      ],
+      "enemy_nodes": 12450,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 61,
+      "elapsed_ms": 632.9548770008842
+    },
+    {
+      "game": 146,
+      "ply": 383,
+      "native": [
+        64,
+        74
+      ],
+      "selected": [
+        64,
+        74
+      ],
+      "enemy_nodes": 2149,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 108.40765499597182
+    },
+    {
+      "game": 146,
+      "ply": 393,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 2346,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 85.00754700071411
+    },
+    {
+      "game": 146,
+      "ply": 395,
+      "native": [
+        64,
+        65
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "enemy_nodes": 2505,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 122.53683699964313
+    },
+    {
+      "game": 146,
+      "ply": 403,
+      "native": [
+        64,
+        65
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "enemy_nodes": 2334,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 126.78517500171438
+    },
+    {
+      "game": 146,
+      "ply": 409,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 2214,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 135.04689999535913
+    },
+    {
+      "game": 146,
+      "ply": 411,
+      "native": [
+        64,
+        74
+      ],
+      "selected": [
+        64,
+        74
+      ],
+      "enemy_nodes": 2322,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 121.69661300140433
+    },
+    {
+      "game": 146,
+      "ply": 417,
+      "native": [
+        79,
+        89
+      ],
+      "selected": [
+        79,
+        89
+      ],
+      "enemy_nodes": 2500,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 84.37982599571114
+    },
+    {
+      "game": 146,
+      "ply": 419,
+      "native": [
+        64,
+        65
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "enemy_nodes": 2566,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 79.51388200308429
+    },
+    {
+      "game": 146,
+      "ply": 429,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 2214,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 67.95835699449526
+    },
+    {
+      "game": 146,
+      "ply": 431,
+      "native": [
+        64,
+        74
+      ],
+      "selected": [
+        64,
+        74
+      ],
+      "enemy_nodes": 2322,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 81.73152200470213
+    },
+    {
+      "game": 146,
+      "ply": 437,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 2445,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 77.38004699785961
+    },
+    {
+      "game": 146,
+      "ply": 439,
+      "native": [
+        64,
+        65
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "enemy_nodes": 2505,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 120.69790099485544
+    },
+    {
+      "game": 146,
+      "ply": 447,
+      "native": [
+        64,
+        65
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "enemy_nodes": 2334,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 154.16264699888416
+    },
+    {
+      "game": 146,
+      "ply": 453,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 2214,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 91.56181800062768
+    },
+    {
+      "game": 146,
+      "ply": 455,
+      "native": [
+        64,
+        74
+      ],
+      "selected": [
+        64,
+        74
+      ],
+      "enemy_nodes": 2322,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 100.17073900235118
+    },
+    {
+      "game": 146,
+      "ply": 461,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 2445,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 76.81105699884938
+    },
+    {
+      "game": 146,
+      "ply": 463,
+      "native": [
+        64,
+        65
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "enemy_nodes": 2505,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 79.05886399385054
+    },
+    {
+      "game": 146,
+      "ply": 471,
+      "native": [
+        64,
+        65
+      ],
+      "selected": [
+        64,
+        65
+      ],
+      "enemy_nodes": 2334,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 111.006394996366
+    },
+    {
+      "game": 149,
+      "ply": 432,
+      "native": [
+        39,
+        29
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 639,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 51.13650600105757
+    },
+    {
+      "game": 149,
+      "ply": 434,
+      "native": [
+        7,
+        8
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 633,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 47.75117899407633
+    },
+    {
+      "game": 149,
+      "ply": 436,
+      "native": [
+        8,
+        18
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 451,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 7,
+      "elapsed_ms": 39.48271200351883
+    },
+    {
+      "game": 151,
+      "ply": 286,
+      "native": [
+        34,
+        24
+      ],
+      "selected": [
+        34,
+        24
+      ],
+      "enemy_nodes": 2627,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 162.3419629977434
+    },
+    {
+      "game": 151,
+      "ply": 332,
+      "native": [
+        61,
+        60
+      ],
+      "selected": [
+        61,
+        60
+      ],
+      "enemy_nodes": 1475,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 91.02128700033063
+    },
+    {
+      "game": 151,
+      "ply": 340,
+      "native": [
+        32,
+        33
+      ],
+      "selected": [
+        32,
+        33
+      ],
+      "enemy_nodes": 807,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 55.037599995557684
+    },
+    {
+      "game": 151,
+      "ply": 344,
+      "native": [
+        34,
+        35
+      ],
+      "selected": [
+        34,
+        35
+      ],
+      "enemy_nodes": 869,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 58.79718699725345
+    },
+    {
+      "game": 151,
+      "ply": 346,
+      "native": [
+        35,
+        36
+      ],
+      "selected": [
+        35,
+        36
+      ],
+      "enemy_nodes": 920,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 63.25160399865126
+    },
+    {
+      "game": 151,
+      "ply": 348,
+      "native": [
+        36,
+        37
+      ],
+      "selected": [
+        36,
+        37
+      ],
+      "enemy_nodes": 2075,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 119.99563299468718
+    },
+    {
+      "game": 151,
+      "ply": 350,
+      "native": [
+        37,
+        27
+      ],
+      "selected": [
+        37,
+        27
+      ],
+      "enemy_nodes": 10826,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 441.91637100448133
+    },
+    {
+      "game": 151,
+      "ply": 354,
+      "native": [
+        17,
+        18
+      ],
+      "selected": [
+        17,
+        18
+      ],
+      "enemy_nodes": 10414,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 592.3187360021984
+    },
+    {
+      "game": 151,
+      "ply": 356,
+      "native": [
+        18,
+        19
+      ],
+      "selected": [
+        18,
+        19
+      ],
+      "enemy_nodes": 8450,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 519.3506040013744
+    },
+    {
+      "game": 151,
+      "ply": 358,
+      "native": [
+        26,
+        27
+      ],
+      "selected": [
+        26,
+        27
+      ],
+      "enemy_nodes": 10057,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 853.862679003214
+    },
+    {
+      "game": 151,
+      "ply": 360,
+      "native": [
+        27,
+        28
+      ],
+      "selected": [
+        27,
+        28
+      ],
+      "enemy_nodes": 9628,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 642.0695499982685
+    },
+    {
+      "game": 151,
+      "ply": 362,
+      "native": [
+        28,
+        29
+      ],
+      "selected": [
+        28,
+        29
+      ],
+      "enemy_nodes": 8637,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 549.1554750042269
+    },
+    {
+      "game": 151,
+      "ply": 364,
+      "native": [
+        19,
+        18
+      ],
+      "selected": [
+        19,
+        18
+      ],
+      "enemy_nodes": 1832,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 115.45961000228999
+    },
+    {
+      "game": 151,
+      "ply": 366,
+      "native": [
+        29,
+        28
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 8466,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 19,
+      "elapsed_ms": 626.7918520024978
+    },
+    {
+      "game": 151,
+      "ply": 368,
+      "native": [
+        18,
+        19
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 1594,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 95.6026740022935
+    },
+    {
+      "game": 151,
+      "ply": 370,
+      "native": [
+        28,
+        29
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 6590,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 17,
+      "elapsed_ms": 441.07971099583665
+    },
+    {
+      "game": 151,
+      "ply": 372,
+      "native": [
+        19,
+        18
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 1566,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 127.02326200087555
+    },
+    {
+      "game": 151,
+      "ply": 374,
+      "native": [
+        29,
+        28
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 9932,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 18,
+      "elapsed_ms": 578.3877940048114
+    },
+    {
+      "game": 151,
+      "ply": 376,
+      "native": [
+        18,
+        19
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 1496,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 17,
+      "elapsed_ms": 105.00869400129886
+    },
+    {
+      "game": 151,
+      "ply": 378,
+      "native": [
+        28,
+        29
+      ],
+      "selected": [
+        28,
+        29
+      ],
+      "enemy_nodes": 13077,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 722.6728099994943
+    },
+    {
+      "game": 151,
+      "ply": 380,
+      "native": [
+        19,
+        18
+      ],
+      "selected": [
+        19,
+        18
+      ],
+      "enemy_nodes": 1117,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 67.78858300094726
+    },
+    {
+      "game": 151,
+      "ply": 382,
+      "native": [
+        29,
+        39
+      ],
+      "selected": [
+        29,
+        39
+      ],
+      "enemy_nodes": 16203,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 1021.7078229979961
+    },
+    {
+      "game": 151,
+      "ply": 384,
+      "native": [
+        39,
+        38
+      ],
+      "selected": [
+        39,
+        38
+      ],
+      "enemy_nodes": 17120,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 832.7751490069204
+    },
+    {
+      "game": 151,
+      "ply": 386,
+      "native": [
+        18,
+        19
+      ],
+      "selected": [
+        18,
+        19
+      ],
+      "enemy_nodes": 1020,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 39.77933900023345
+    },
+    {
+      "game": 151,
+      "ply": 388,
+      "native": [
+        38,
+        39
+      ],
+      "selected": [
+        38,
+        39
+      ],
+      "enemy_nodes": 14758,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 776.5808439944522
+    },
+    {
+      "game": 151,
+      "ply": 390,
+      "native": [
+        19,
+        29
+      ],
+      "selected": [
+        19,
+        29
+      ],
+      "enemy_nodes": 963,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 65.24972199986223
+    },
+    {
+      "game": 151,
+      "ply": 392,
+      "native": [
+        39,
+        38
+      ],
+      "selected": [
+        39,
+        38
+      ],
+      "enemy_nodes": 11402,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 733.9388539985521
+    },
+    {
+      "game": 151,
+      "ply": 394,
+      "native": [
+        29,
+        19
+      ],
+      "selected": [
+        29,
+        19
+      ],
+      "enemy_nodes": 1030,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 40.25218000606401
+    },
+    {
+      "game": 151,
+      "ply": 396,
+      "native": [
+        38,
+        39
+      ],
+      "selected": [
+        38,
+        39
+      ],
+      "enemy_nodes": 9040,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 540.4653960067662
+    },
+    {
+      "game": 151,
+      "ply": 398,
+      "native": [
+        19,
+        29
+      ],
+      "selected": [
+        19,
+        29
+      ],
+      "enemy_nodes": 923,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 65.15559399849735
+    },
+    {
+      "game": 151,
+      "ply": 400,
+      "native": [
+        29,
+        28
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 781,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 56.599624003865756
+    },
+    {
+      "game": 151,
+      "ply": 402,
+      "native": [
+        28,
+        18
+      ],
+      "selected": [
+        28,
+        18
+      ],
+      "enemy_nodes": 377,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 26.400342001579702
+    },
+    {
+      "game": 151,
+      "ply": 404,
+      "native": [
+        39,
+        38
+      ],
+      "selected": [
+        39,
+        38
+      ],
+      "enemy_nodes": 375,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 22.215602999494877
+    },
+    {
+      "game": 151,
+      "ply": 406,
+      "native": [
+        18,
+        19
+      ],
+      "selected": [
+        18,
+        19
+      ],
+      "enemy_nodes": 416,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 28.697605994238984
+    },
+    {
+      "game": 151,
+      "ply": 408,
+      "native": [
+        19,
+        29
+      ],
+      "selected": [
+        19,
+        29
+      ],
+      "enemy_nodes": 366,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 36.288999996031635
+    },
+    {
+      "game": 151,
+      "ply": 410,
+      "native": [
+        38,
+        39
+      ],
+      "selected": [
+        38,
+        39
+      ],
+      "enemy_nodes": 338,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 31.80722399702063
+    },
+    {
+      "game": 157,
+      "ply": 64,
+      "native": [
+        59,
+        49
+      ],
+      "selected": [
+        59,
+        49
+      ],
+      "enemy_nodes": 1828,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 173.55271599808475
+    },
+    {
+      "game": 165,
+      "ply": 118,
+      "native": [
+        39,
+        38
+      ],
+      "selected": [
+        39,
+        38
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1709.7622369983583
+    },
+    {
+      "game": 165,
+      "ply": 126,
+      "native": [
+        38,
+        39
+      ],
+      "selected": [
+        38,
+        39
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 2369.3341899997904
+    },
+    {
+      "game": 165,
+      "ply": 244,
+      "native": [
+        34,
+        24
+      ],
+      "selected": [
+        34,
+        24
+      ],
+      "enemy_nodes": 7762,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 1245.5801830001292
+    },
+    {
+      "game": 168,
+      "ply": 189,
+      "native": [
+        32,
+        31
+      ],
+      "selected": [
+        32,
+        31
+      ],
+      "enemy_nodes": 7294,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 686.0678879966144
+    },
+    {
+      "game": 168,
+      "ply": 191,
+      "native": [
+        31,
+        41
+      ],
+      "selected": [
+        31,
+        41
+      ],
+      "enemy_nodes": 7790,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 605.611675993714
+    },
+    {
+      "game": 168,
+      "ply": 193,
+      "native": [
+        34,
+        44
+      ],
+      "selected": [
+        34,
+        44
+      ],
+      "enemy_nodes": 6618,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 542.510660001426
+    },
+    {
+      "game": 177,
+      "ply": 578,
+      "native": [
+        25,
+        35
+      ],
+      "selected": [
+        25,
+        35
+      ],
+      "enemy_nodes": 248,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 13.182010996388271
+    },
+    {
+      "game": 181,
+      "ply": 144,
+      "native": [
+        36,
+        35
+      ],
+      "selected": [
+        36,
+        35
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1852.5451200039242
+    },
+    {
+      "game": 181,
+      "ply": 148,
+      "native": [
+        25,
+        15
+      ],
+      "selected": [
+        25,
+        15
+      ],
+      "enemy_nodes": 3005,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 240.45817099977285
+    },
+    {
+      "game": 183,
+      "ply": 148,
+      "native": [
+        37,
+        36
+      ],
+      "selected": [
+        37,
+        36
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1422.4632040059078
+    },
+    {
+      "game": 187,
+      "ply": 16,
+      "native": [
+        68,
+        58
+      ],
+      "selected": [
+        51,
+        50
+      ],
+      "enemy_nodes": 2939,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 32,
+      "elapsed_ms": 254.93479499709792
+    },
+    {
+      "game": 188,
+      "ply": 15,
+      "native": [
+        31,
+        41
+      ],
+      "selected": [
+        31,
+        41
+      ],
+      "enemy_nodes": 2931,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 313.70974400488194
+    },
+    {
+      "game": 188,
+      "ply": 55,
+      "native": [
+        45,
+        44
+      ],
+      "selected": [
+        45,
+        44
+      ],
+      "enemy_nodes": 1628,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 106.51857299671974
+    },
+    {
+      "game": 188,
+      "ply": 57,
+      "native": [
+        39,
+        49
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 1570,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 116.04086599982111
+    },
+    {
+      "game": 189,
+      "ply": 86,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        72,
+        71
+      ],
+      "enemy_nodes": 2050,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 153.47599100641673
+    },
+    {
+      "game": 200,
+      "ply": 81,
+      "native": [
+        30,
+        31
+      ],
+      "selected": [
+        30,
+        31
+      ],
+      "enemy_nodes": 1823,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 136.42746199911926
+    },
+    {
+      "game": 200,
+      "ply": 83,
+      "native": [
+        54,
+        64
+      ],
+      "selected": [
+        54,
+        64
+      ],
+      "enemy_nodes": 3322,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 298.71470099897124
+    },
+    {
+      "game": 203,
+      "ply": 198,
+      "native": [
+        34,
+        35
+      ],
+      "selected": [
+        34,
+        35
+      ],
+      "enemy_nodes": 7489,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 494.03406800411176
+    },
+    {
+      "game": 203,
+      "ply": 202,
+      "native": [
+        36,
+        26
+      ],
+      "selected": [
+        36,
+        35
+      ],
+      "enemy_nodes": 736,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 12,
+      "elapsed_ms": 30.615133000537753
+    },
+    {
+      "game": 203,
+      "ply": 232,
+      "native": [
+        36,
+        37
+      ],
+      "selected": [
+        36,
+        37
+      ],
+      "enemy_nodes": 3149,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 139.48319699557032
+    },
+    {
+      "game": 206,
+      "ply": 89,
+      "native": [
+        22,
+        32
+      ],
+      "selected": [
+        22,
+        32
+      ],
+      "enemy_nodes": 7408,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 395.62678700167453
+    },
+    {
+      "game": 206,
+      "ply": 93,
+      "native": [
+        3,
+        13
+      ],
+      "selected": [
+        3,
+        13
+      ],
+      "enemy_nodes": 4206,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 194.5493509992957
+    },
+    {
+      "game": 206,
+      "ply": 95,
+      "native": [
+        13,
+        23
+      ],
+      "selected": [
+        13,
+        23
+      ],
+      "enemy_nodes": 4744,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 248.1113500034553
+    },
+    {
+      "game": 212,
+      "ply": 99,
+      "native": [
+        24,
+        34
+      ],
+      "selected": [
+        24,
+        34
+      ],
+      "enemy_nodes": 5958,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 390.76708900392987
+    },
+    {
+      "game": 212,
+      "ply": 103,
+      "native": [
+        41,
+        81
+      ],
+      "selected": [
+        41,
+        81
+      ],
+      "enemy_nodes": 5806,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 330.82314799685264
+    },
+    {
+      "game": 219,
+      "ply": 30,
+      "native": [
+        50,
+        51
+      ],
+      "selected": [
+        50,
+        51
+      ],
+      "enemy_nodes": 17933,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 1303.2569409988355
+    },
+    {
+      "game": 226,
+      "ply": 141,
+      "native": [
+        55,
+        54
+      ],
+      "selected": [
+        55,
+        54
+      ],
+      "enemy_nodes": 11978,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 910.5621840062668
+    },
+    {
+      "game": 227,
+      "ply": 90,
+      "native": [
+        84,
+        74
+      ],
+      "selected": [
+        84,
+        74
+      ],
+      "enemy_nodes": 2078,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 123.70294900028966
+    },
+    {
+      "game": 227,
+      "ply": 92,
+      "native": [
+        45,
+        44
+      ],
+      "selected": [
+        45,
+        44
+      ],
+      "enemy_nodes": 2068,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 93.6194330060971
+    },
+    {
+      "game": 235,
+      "ply": 104,
+      "native": [
+        60,
+        50
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1297.0955740020145
+    },
+    {
+      "game": 235,
+      "ply": 108,
+      "native": [
+        40,
+        30
+      ],
+      "selected": [
+        40,
+        30
+      ],
+      "enemy_nodes": 4884,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 217.71333099604817
+    },
+    {
+      "game": 235,
+      "ply": 112,
+      "native": [
+        20,
+        21
+      ],
+      "selected": [
+        20,
+        21
+      ],
+      "enemy_nodes": 5240,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 271.6271860044799
+    },
+    {
+      "game": 235,
+      "ply": 124,
+      "native": [
+        13,
+        12
+      ],
+      "selected": [
+        13,
+        12
+      ],
+      "enemy_nodes": 5537,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 222.8052169957664
+    },
+    {
+      "game": 246,
+      "ply": 123,
+      "native": [
+        14,
+        24
+      ],
+      "selected": [
+        14,
+        24
+      ],
+      "enemy_nodes": 3490,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 160.30484999646433
+    },
+    {
+      "game": 246,
+      "ply": 125,
+      "native": [
+        37,
+        39
+      ],
+      "selected": [
+        37,
+        39
+      ],
+      "enemy_nodes": 5346,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 430.18612299783854
+    },
+    {
+      "game": 246,
+      "ply": 129,
+      "native": [
+        24,
+        14
+      ],
+      "selected": [
+        24,
+        14
+      ],
+      "enemy_nodes": 3326,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 202.42216600308893
+    },
+    {
+      "game": 246,
+      "ply": 131,
+      "native": [
+        26,
+        16
+      ],
+      "selected": [
+        26,
+        16
+      ],
+      "enemy_nodes": 7920,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 512.2877569956472
+    },
+    {
+      "game": 249,
+      "ply": 170,
+      "native": [
+        60,
+        50
+      ],
+      "selected": [
+        60,
+        50
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1658.40484599903
+    },
+    {
+      "game": 257,
+      "ply": 54,
+      "native": [
+        38,
+        39
+      ],
+      "selected": [
+        38,
+        39
+      ],
+      "enemy_nodes": 1318,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 135.09968099970138
+    },
+    {
+      "game": 257,
+      "ply": 56,
+      "native": [
+        65,
+        55
+      ],
+      "selected": [
+        65,
+        55
+      ],
+      "enemy_nodes": 2051,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 244.08025500451913
+    },
+    {
+      "game": 258,
+      "ply": 97,
+      "native": [
+        35,
+        45
+      ],
+      "selected": [
+        35,
+        45
+      ],
+      "enemy_nodes": 4051,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 343.81919400038896
+    },
+    {
+      "game": 259,
+      "ply": 64,
+      "native": [
+        65,
+        55
+      ],
+      "selected": [
+        65,
+        55
+      ],
+      "enemy_nodes": 1315,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 115.19326999405166
+    },
+    {
+      "game": 261,
+      "ply": 294,
+      "native": [
+        44,
+        34
+      ],
+      "selected": [
+        44,
+        34
+      ],
+      "enemy_nodes": 14447,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 673.0467129964381
+    },
+    {
+      "game": 269,
+      "ply": 224,
+      "native": [
+        31,
+        30
+      ],
+      "selected": [
+        31,
+        30
+      ],
+      "enemy_nodes": 4354,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 211.45769199938513
+    },
+    {
+      "game": 271,
+      "ply": 48,
+      "native": [
+        84,
+        74
+      ],
+      "selected": [
+        84,
+        74
+      ],
+      "enemy_nodes": 1800,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 134.9543070027721
+    },
+    {
+      "game": 271,
+      "ply": 50,
+      "native": [
+        70,
+        60
+      ],
+      "selected": [
+        70,
+        60
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 2134.5824109957903
+    },
+    {
+      "game": 276,
+      "ply": 55,
+      "native": [
+        27,
+        28
+      ],
+      "selected": [
+        27,
+        28
+      ],
+      "enemy_nodes": 8281,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 584.4172020006226
+    },
+    {
+      "game": 278,
+      "ply": 27,
+      "native": [
+        15,
+        25
+      ],
+      "selected": [
+        15,
+        25
+      ],
+      "enemy_nodes": 1935,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 162.87464799825102
+    },
+    {
+      "game": 278,
+      "ply": 607,
+      "native": [
+        65,
+        66
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "enemy_nodes": 690,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 45.68990200641565
+    },
+    {
+      "game": 278,
+      "ply": 631,
+      "native": [
+        65,
+        66
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "enemy_nodes": 690,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 40.484605997335166
+    },
+    {
+      "game": 278,
+      "ply": 655,
+      "native": [
+        65,
+        66
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "enemy_nodes": 690,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 54.513269002200104
+    },
+    {
+      "game": 278,
+      "ply": 679,
+      "native": [
+        65,
+        66
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "enemy_nodes": 690,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 43.38041299342876
+    },
+    {
+      "game": 281,
+      "ply": 142,
+      "native": [
+        74,
+        64
+      ],
+      "selected": [
+        74,
+        64
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1668.8146439992124
+    },
+    {
+      "game": 284,
+      "ply": 243,
+      "native": [
+        81,
+        71
+      ],
+      "selected": [
+        81,
+        71
+      ],
+      "enemy_nodes": 5080,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 384.3984009945416
+    },
+    {
+      "game": 284,
+      "ply": 247,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 780,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 10,
+      "elapsed_ms": 56.08596099773422
+    },
+    {
+      "game": 284,
+      "ply": 255,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1347,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 117.90736699913396
+    },
+    {
+      "game": 284,
+      "ply": 257,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 40.202991003752686
+    },
+    {
+      "game": 284,
+      "ply": 263,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1347,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 75.38924000255065
+    },
+    {
+      "game": 284,
+      "ply": 265,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 21.591536002233624
+    },
+    {
+      "game": 284,
+      "ply": 271,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1347,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 71.29751599859446
+    },
+    {
+      "game": 284,
+      "ply": 273,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 30.224469999666326
+    },
+    {
+      "game": 284,
+      "ply": 279,
+      "native": [
+        72,
+        62
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1453,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 77.32717799808597
+    },
+    {
+      "game": 284,
+      "ply": 281,
+      "native": [
+        62,
+        61
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1832,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 96.78869499475695
+    },
+    {
+      "game": 284,
+      "ply": 283,
+      "native": [
+        61,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1679,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 85.2132910004002
+    },
+    {
+      "game": 284,
+      "ply": 285,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 28.73421200638404
+    },
+    {
+      "game": 284,
+      "ply": 291,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1347,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 71.3904320000438
+    },
+    {
+      "game": 284,
+      "ply": 293,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 25.32647899352014
+    },
+    {
+      "game": 284,
+      "ply": 299,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1347,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 52.93560300196987
+    },
+    {
+      "game": 284,
+      "ply": 301,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 25.68984199751867
+    },
+    {
+      "game": 284,
+      "ply": 307,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1347,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 61.688066001806874
+    },
+    {
+      "game": 284,
+      "ply": 309,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 24.472735996823758
+    },
+    {
+      "game": 284,
+      "ply": 315,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1347,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 53.38179999671411
+    },
+    {
+      "game": 284,
+      "ply": 317,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 33.15914599807002
+    },
+    {
+      "game": 284,
+      "ply": 325,
+      "native": [
+        62,
+        61
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1832,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 70.01050999679137
+    },
+    {
+      "game": 284,
+      "ply": 327,
+      "native": [
+        61,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1679,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 72.79585200012662
+    },
+    {
+      "game": 284,
+      "ply": 329,
+      "native": [
+        71,
+        72
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1030,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 31.867145000433084
+    },
+    {
+      "game": 284,
+      "ply": 331,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 711,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 44.38415099866688
+    },
+    {
+      "game": 284,
+      "ply": 337,
+      "native": [
+        71,
+        72
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1030,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 86.62779000587761
+    },
+    {
+      "game": 284,
+      "ply": 339,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 711,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 47.40384300384903
+    },
+    {
+      "game": 284,
+      "ply": 347,
+      "native": [
+        61,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1679,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 110.73198299709475
+    },
+    {
+      "game": 284,
+      "ply": 349,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 620,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 26.12442599638598
+    },
+    {
+      "game": 284,
+      "ply": 355,
+      "native": [
+        72,
+        71
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1347,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 68.53688299452187
+    },
+    {
+      "game": 284,
+      "ply": 357,
+      "native": [
+        71,
+        61
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1030,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 56.59064000064973
+    },
+    {
+      "game": 284,
+      "ply": 359,
+      "native": [
+        61,
+        62
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1021,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 49.69300299853785
+    },
+    {
+      "game": 284,
+      "ply": 361,
+      "native": [
+        62,
+        63
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1097,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 57.92013400059659
+    },
+    {
+      "game": 284,
+      "ply": 363,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1235,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 66.70547199610155
+    },
+    {
+      "game": 284,
+      "ply": 369,
+      "native": [
+        41,
+        51
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 628,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 8,
+      "elapsed_ms": 36.278407998906914
+    },
+    {
+      "game": 284,
+      "ply": 371,
+      "native": [
+        51,
+        61
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 816,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 10,
+      "elapsed_ms": 45.090567000443116
+    },
+    {
+      "game": 284,
+      "ply": 373,
+      "native": [
+        61,
+        62
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 728,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 9,
+      "elapsed_ms": 30.89995899790665
+    },
+    {
+      "game": 284,
+      "ply": 375,
+      "native": [
+        69,
+        68
+      ],
+      "selected": [
+        38,
+        48
+      ],
+      "enemy_nodes": 1599,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 10,
+      "elapsed_ms": 57.30498900084058
+    },
+    {
+      "game": 287,
+      "ply": 348,
+      "native": [
+        29,
+        39
+      ],
+      "selected": [
+        29,
+        39
+      ],
+      "enemy_nodes": 1828,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 49.042636004742235
+    },
+    {
+      "game": 287,
+      "ply": 356,
+      "native": [
+        54,
+        44
+      ],
+      "selected": [
+        54,
+        44
+      ],
+      "enemy_nodes": 332,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 9.803014996577986
+    },
+    {
+      "game": 287,
+      "ply": 358,
+      "native": [
+        78,
+        79
+      ],
+      "selected": [
+        78,
+        79
+      ],
+      "enemy_nodes": 1296,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 31.464056999539025
+    },
+    {
+      "game": 287,
+      "ply": 362,
+      "native": [
+        44,
+        34
+      ],
+      "selected": [
+        44,
+        34
+      ],
+      "enemy_nodes": 87,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 2.2127310003270395
+    },
+    {
+      "game": 287,
+      "ply": 364,
+      "native": [
+        34,
+        24
+      ],
+      "selected": [
+        34,
+        24
+      ],
+      "enemy_nodes": 109,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 2.4475320024066605
+    },
+    {
+      "game": 287,
+      "ply": 366,
+      "native": [
+        24,
+        25
+      ],
+      "selected": [
+        24,
+        25
+      ],
+      "enemy_nodes": 132,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 3.4238880034536123
+    },
+    {
+      "game": 287,
+      "ply": 368,
+      "native": [
+        25,
+        35
+      ],
+      "selected": [
+        25,
+        35
+      ],
+      "enemy_nodes": 142,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 3.675608000776265
+    },
+    {
+      "game": 287,
+      "ply": 370,
+      "native": [
+        39,
+        29
+      ],
+      "selected": [
+        39,
+        29
+      ],
+      "enemy_nodes": 182,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 4.509061000135262
+    },
+    {
+      "game": 287,
+      "ply": 386,
+      "native": [
+        37,
+        36
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 213,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 4,
+      "elapsed_ms": 5.489934999786783
+    },
+    {
+      "game": 293,
+      "ply": 254,
+      "native": [
+        44,
+        34
+      ],
+      "selected": [
+        44,
+        34
+      ],
+      "enemy_nodes": 3179,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 127.04524400032824
+    },
+    {
+      "game": 293,
+      "ply": 258,
+      "native": [
+        34,
+        24
+      ],
+      "selected": [
+        34,
+        24
+      ],
+      "enemy_nodes": 3043,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 191.25602499843808
+    },
+    {
+      "game": 293,
+      "ply": 426,
+      "native": [
+        30,
+        20
+      ],
+      "selected": [
+        30,
+        20
+      ],
+      "enemy_nodes": 6829,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 334.59606600081315
+    },
+    {
+      "game": 311,
+      "ply": 138,
+      "native": [
+        54,
+        44
+      ],
+      "selected": [
+        54,
+        44
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1677.5454169983277
+    },
+    {
+      "game": 314,
+      "ply": 45,
+      "native": [
+        4,
+        14
+      ],
+      "selected": [
+        4,
+        14
+      ],
+      "enemy_nodes": 8317,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 780.5474260021583
+    },
+    {
+      "game": 314,
+      "ply": 85,
+      "native": [
+        44,
+        45
+      ],
+      "selected": [
+        35,
+        45
+      ],
+      "enemy_nodes": 4430,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 51,
+      "elapsed_ms": 395.8843829968828
+    },
+    {
+      "game": 314,
+      "ply": 651,
+      "native": [
+        63,
+        64
+      ],
+      "selected": [
+        63,
+        64
+      ],
+      "enemy_nodes": 6311,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 308.18837900005747
+    },
+    {
+      "game": 314,
+      "ply": 657,
+      "native": [
+        86,
+        76
+      ],
+      "selected": [
+        86,
+        76
+      ],
+      "enemy_nodes": 8593,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 411.2069609982427
+    },
+    {
+      "game": 314,
+      "ply": 659,
+      "native": [
+        65,
+        66
+      ],
+      "selected": [
+        65,
+        66
+      ],
+      "enemy_nodes": 4389,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 249.00428600085434
+    },
+    {
+      "game": 316,
+      "ply": 59,
+      "native": [
+        28,
+        38
+      ],
+      "selected": [
+        28,
+        38
+      ],
+      "enemy_nodes": 8936,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 670.7898579988978
+    },
+    {
+      "game": 316,
+      "ply": 61,
+      "native": [
+        38,
+        39
+      ],
+      "selected": [
+        38,
+        39
+      ],
+      "enemy_nodes": 11697,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 660.442829997919
+    },
+    {
+      "game": 316,
+      "ply": 63,
+      "native": [
+        7,
+        17
+      ],
+      "selected": [
+        7,
+        17
+      ],
+      "enemy_nodes": 10257,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 544.9013499965076
+    },
+    {
+      "game": 316,
+      "ply": 65,
+      "native": [
+        39,
+        49
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 7884,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 496.5506410007947
+    },
+    {
+      "game": 316,
+      "ply": 67,
+      "native": [
+        27,
+        28
+      ],
+      "selected": [
+        27,
+        28
+      ],
+      "enemy_nodes": 6583,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 523.8698839966673
+    },
+    {
+      "game": 316,
+      "ply": 69,
+      "native": [
+        26,
+        36
+      ],
+      "selected": [
+        26,
+        36
+      ],
+      "enemy_nodes": 9264,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 473.94635100499727
+    },
+    {
+      "game": 319,
+      "ply": 212,
+      "native": [
+        3,
+        2
+      ],
+      "selected": [
+        3,
+        2
+      ],
+      "enemy_nodes": 987,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 40.03305899823317
+    },
+    {
+      "game": 319,
+      "ply": 216,
+      "native": [
+        41,
+        40
+      ],
+      "selected": [
+        41,
+        40
+      ],
+      "enemy_nodes": 949,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 58.858974000031594
+    },
+    {
+      "game": 319,
+      "ply": 218,
+      "native": [
+        2,
+        12
+      ],
+      "selected": [
+        2,
+        12
+      ],
+      "enemy_nodes": 895,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 39.867860003141686
+    },
+    {
+      "game": 319,
+      "ply": 220,
+      "native": [
+        40,
+        30
+      ],
+      "selected": [
+        40,
+        30
+      ],
+      "enemy_nodes": 983,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 36.946385000192095
+    },
+    {
+      "game": 319,
+      "ply": 222,
+      "native": [
+        30,
+        20
+      ],
+      "selected": [
+        30,
+        20
+      ],
+      "enemy_nodes": 3232,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 140.55396200274117
+    },
+    {
+      "game": 328,
+      "ply": 17,
+      "native": [
+        20,
+        30
+      ],
+      "selected": [
+        20,
+        30
+      ],
+      "enemy_nodes": 2521,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 255.8898310016957
+    },
+    {
+      "game": 330,
+      "ply": 389,
+      "native": [
+        62,
+        61
+      ],
+      "selected": [
+        62,
+        61
+      ],
+      "enemy_nodes": 1563,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 93.57769900088897
+    },
+    {
+      "game": 332,
+      "ply": 19,
+      "native": [
+        35,
+        45
+      ],
+      "selected": [
+        35,
+        45
+      ],
+      "enemy_nodes": 624,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 68.53586900251685
+    },
+    {
+      "game": 332,
+      "ply": 35,
+      "native": [
+        39,
+        49
+      ],
+      "selected": [
+        39,
+        49
+      ],
+      "enemy_nodes": 2092,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 200.46270600141725
+    },
+    {
+      "game": 333,
+      "ply": 168,
+      "native": [
+        70,
+        60
+      ],
+      "selected": [
+        70,
+        60
+      ],
+      "enemy_nodes": 3166,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 201.78769099584315
+    },
+    {
+      "game": 336,
+      "ply": 215,
+      "native": [
+        25,
+        24
+      ],
+      "selected": [
+        25,
+        24
+      ],
+      "enemy_nodes": 12767,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 648.949549999088
+    },
+    {
+      "game": 338,
+      "ply": 193,
+      "native": [
+        55,
+        65
+      ],
+      "selected": [
+        55,
+        65
+      ],
+      "enemy_nodes": 2406,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 152.16585400048643
+    },
+    {
+      "game": 345,
+      "ply": 18,
+      "native": [
+        65,
+        45
+      ],
+      "selected": [
+        51,
+        50
+      ],
+      "enemy_nodes": 3538,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 34,
+      "elapsed_ms": 530.1707179969526
+    },
+    {
+      "game": 345,
+      "ply": 20,
+      "native": [
+        64,
+        54
+      ],
+      "selected": [
+        51,
+        50
+      ],
+      "enemy_nodes": 2518,
+      "reason": "higher-certified-net-material-bound",
+      "witness_states": 33,
+      "elapsed_ms": 333.5742319977726
+    },
+    {
+      "game": 345,
+      "ply": 58,
+      "native": [
+        64,
+        54
+      ],
+      "selected": [
+        64,
+        54
+      ],
+      "enemy_nodes": 1525,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 108.84474399790633
+    },
+    {
+      "game": 345,
+      "ply": 60,
+      "native": [
+        58,
+        59
+      ],
+      "selected": [
+        58,
+        59
+      ],
+      "enemy_nodes": 1572,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 106.43331900064368
+    },
+    {
+      "game": 345,
+      "ply": 62,
+      "native": [
+        51,
+        41
+      ],
+      "selected": [
+        51,
+        41
+      ],
+      "enemy_nodes": 1608,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 101.73639699496562
+    },
+    {
+      "game": 351,
+      "ply": 264,
+      "native": [
+        32,
+        33
+      ],
+      "selected": [
+        32,
+        33
+      ],
+      "enemy_nodes": 324,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 14.978997998696286
+    },
+    {
+      "game": 351,
+      "ply": 294,
+      "native": [
+        29,
+        19
+      ],
+      "selected": [
+        29,
+        19
+      ],
+      "enemy_nodes": 266,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 13.05416900140699
+    },
+    {
+      "game": 351,
+      "ply": 300,
+      "native": [
+        36,
+        37
+      ],
+      "selected": [
+        36,
+        37
+      ],
+      "enemy_nodes": 334,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 21.336490994144697
+    },
+    {
+      "game": 351,
+      "ply": 306,
+      "native": [
+        36,
+        35
+      ],
+      "selected": [
+        36,
+        35
+      ],
+      "enemy_nodes": 282,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 14.594895998016
+    },
+    {
+      "game": 351,
+      "ply": 312,
+      "native": [
+        28,
+        18
+      ],
+      "selected": [
+        28,
+        18
+      ],
+      "enemy_nodes": 346,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 15.507296993746422
+    },
+    {
+      "game": 351,
+      "ply": 320,
+      "native": [
+        55,
+        45
+      ],
+      "selected": [
+        55,
+        45
+      ],
+      "enemy_nodes": 334,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 12.923671005410142
+    },
+    {
+      "game": 355,
+      "ply": 182,
+      "native": [
+        65,
+        64
+      ],
+      "selected": [
+        65,
+        64
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 923.0757339973934
+    },
+    {
+      "game": 358,
+      "ply": 259,
+      "native": [
+        70,
+        60
+      ],
+      "selected": [
+        70,
+        60
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 858.9182459982112
+    },
+    {
+      "game": 369,
+      "ply": 56,
+      "native": [
+        48,
+        49
+      ],
+      "selected": [
+        48,
+        49
+      ],
+      "enemy_nodes": 1103,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 102.06083299999591
+    },
+    {
+      "game": 384,
+      "ply": 113,
+      "native": [
+        39,
+        29
+      ],
+      "selected": [
+        39,
+        29
+      ],
+      "enemy_nodes": 2323,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 136.2805339958868
+    },
+    {
+      "game": 384,
+      "ply": 115,
+      "native": [
+        30,
+        31
+      ],
+      "selected": [
+        30,
+        31
+      ],
+      "enemy_nodes": 2219,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 106.35836099390872
+    },
+    {
+      "game": 384,
+      "ply": 117,
+      "native": [
+        23,
+        22
+      ],
+      "selected": [
+        23,
+        22
+      ],
+      "enemy_nodes": 2098,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 88.53847400314407
+    },
+    {
+      "game": 384,
+      "ply": 119,
+      "native": [
+        31,
+        30
+      ],
+      "selected": [
+        31,
+        30
+      ],
+      "enemy_nodes": 2196,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 124.70989500434371
+    },
+    {
+      "game": 384,
+      "ply": 121,
+      "native": [
+        54,
+        55
+      ],
+      "selected": [
+        54,
+        55
+      ],
+      "enemy_nodes": 2258,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 129.81623700034106
+    },
+    {
+      "game": 384,
+      "ply": 127,
+      "native": [
+        45,
+        55
+      ],
+      "selected": [
+        45,
+        55
+      ],
+      "enemy_nodes": 2468,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 125.33079399872804
+    },
+    {
+      "game": 388,
+      "ply": 209,
+      "native": [
+        18,
+        28
+      ],
+      "selected": [
+        18,
+        28
+      ],
+      "enemy_nodes": 1608,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 67.06076599948574
+    },
+    {
+      "game": 388,
+      "ply": 211,
+      "native": [
+        74,
+        64
+      ],
+      "selected": [
+        74,
+        64
+      ],
+      "enemy_nodes": 3286,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 115.12932299956447
+    },
+    {
+      "game": 389,
+      "ply": 128,
+      "native": [
+        4,
+        3
+      ],
+      "selected": [
+        4,
+        3
+      ],
+      "enemy_nodes": 3185,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 157.79874300642405
+    },
+    {
+      "game": 389,
+      "ply": 130,
+      "native": [
+        85,
+        75
+      ],
+      "selected": [
+        85,
+        75
+      ],
+      "enemy_nodes": 3106,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 217.95359600218944
+    },
+    {
+      "game": 389,
+      "ply": 132,
+      "native": [
+        3,
+        4
+      ],
+      "selected": [
+        3,
+        4
+      ],
+      "enemy_nodes": 2276,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 108.18757499509957
+    },
+    {
+      "game": 389,
+      "ply": 134,
+      "native": [
+        79,
+        69
+      ],
+      "selected": [
+        79,
+        69
+      ],
+      "enemy_nodes": 2351,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 100.57679899909999
+    },
+    {
+      "game": 389,
+      "ply": 136,
+      "native": [
+        4,
+        3
+      ],
+      "selected": [
+        4,
+        3
+      ],
+      "enemy_nodes": 3185,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 138.67714499792783
+    },
+    {
+      "game": 389,
+      "ply": 138,
+      "native": [
+        69,
+        59
+      ],
+      "selected": [
+        69,
+        59
+      ],
+      "enemy_nodes": 3255,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 153.6789059973671
+    },
+    {
+      "game": 389,
+      "ply": 140,
+      "native": [
+        3,
+        4
+      ],
+      "selected": [
+        3,
+        4
+      ],
+      "enemy_nodes": 2421,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 171.52026199619286
+    },
+    {
+      "game": 389,
+      "ply": 142,
+      "native": [
+        51,
+        41
+      ],
+      "selected": [
+        51,
+        41
+      ],
+      "enemy_nodes": 2995,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 250.1195720033138
+    },
+    {
+      "game": 390,
+      "ply": 47,
+      "native": [
+        30,
+        31
+      ],
+      "selected": [
+        30,
+        31
+      ],
+      "enemy_nodes": 1029,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 118.63105399970664
+    },
+    {
+      "game": 390,
+      "ply": 49,
+      "native": [
+        48,
+        58
+      ],
+      "selected": [
+        48,
+        58
+      ],
+      "enemy_nodes": 1602,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 167.62736099917674
+    },
+    {
+      "game": 395,
+      "ply": 422,
+      "native": [
+        49,
+        39
+      ],
+      "selected": [
+        49,
+        39
+      ],
+      "enemy_nodes": 7997,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 711.4859700013767
+    },
+    {
+      "game": 395,
+      "ply": 424,
+      "native": [
+        15,
+        16
+      ],
+      "selected": [
+        15,
+        16
+      ],
+      "enemy_nodes": 7355,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 538.0367760008085
+    },
+    {
+      "game": 395,
+      "ply": 426,
+      "native": [
+        14,
+        15
+      ],
+      "selected": [
+        14,
+        15
+      ],
+      "enemy_nodes": 770,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 54.31996299739694
+    },
+    {
+      "game": 395,
+      "ply": 428,
+      "native": [
+        16,
+        26
+      ],
+      "selected": [
+        16,
+        26
+      ],
+      "enemy_nodes": 902,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 58.42198900063522
+    },
+    {
+      "game": 395,
+      "ply": 430,
+      "native": [
+        15,
+        25
+      ],
+      "selected": [
+        15,
+        25
+      ],
+      "enemy_nodes": 8226,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 557.7702119990136
+    },
+    {
+      "game": 395,
+      "ply": 432,
+      "native": [
+        26,
+        36
+      ],
+      "selected": [
+        26,
+        36
+      ],
+      "enemy_nodes": 9194,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 466.21643700200366
+    },
+    {
+      "game": 395,
+      "ply": 438,
+      "native": [
+        37,
+        38
+      ],
+      "selected": [
+        37,
+        38
+      ],
+      "enemy_nodes": 660,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 20.84268299950054
+    },
+    {
+      "game": 395,
+      "ply": 440,
+      "native": [
+        35,
+        34
+      ],
+      "selected": [
+        35,
+        34
+      ],
+      "enemy_nodes": 730,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 25.016820996825118
+    },
+    {
+      "game": 395,
+      "ply": 442,
+      "native": [
+        38,
+        37
+      ],
+      "selected": [
+        38,
+        37
+      ],
+      "enemy_nodes": 362,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 12.165920001280028
+    },
+    {
+      "game": 395,
+      "ply": 444,
+      "native": [
+        34,
+        35
+      ],
+      "selected": [
+        34,
+        35
+      ],
+      "enemy_nodes": 425,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 16.075413004728034
+    },
+    {
+      "game": 395,
+      "ply": 446,
+      "native": [
+        66,
+        65
+      ],
+      "selected": [
+        66,
+        65
+      ],
+      "enemy_nodes": 3164,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 148.54170200123917
+    },
+    {
+      "game": 399,
+      "ply": 128,
+      "native": [
+        44,
+        34
+      ],
+      "selected": [
+        44,
+        34
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1638.0877920018975
+    },
+    {
+      "game": 399,
+      "ply": 142,
+      "native": [
+        65,
+        55
+      ],
+      "selected": [
+        65,
+        55
+      ],
+      "enemy_nodes": 20001,
+      "reason": "global-node-cap",
+      "witness_states": 0,
+      "elapsed_ms": 1502.2584530015592
+    },
+    {
+      "game": 400,
+      "ply": 17,
+      "native": [
+        28,
+        38
+      ],
+      "selected": [
+        28,
+        38
+      ],
+      "enemy_nodes": 1558,
+      "reason": "no-higher-certificate",
+      "witness_states": 0,
+      "elapsed_ms": 199.18619799864246
+    }
+  ]
+}

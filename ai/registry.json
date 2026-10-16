@@ -5801,6 +5801,52 @@
       "target_recipe_sha256": "749d6e63ccbc22212eb83830eb9a7727c78e0110d24fb4135618d535a53ffc4b",
       "archive": "ai/sources/73302ca8323ba0dbdedea55d9e8c565d50129c4791b39a54f25159954e6565c1.zip",
       "source_sha256": "73302ca8323ba0dbdedea55d9e8c565d50129c4791b39a54f25159954e6565c1"
+    },
+    {
+      "id": "student-template-capture-net-v1-normal",
+      "name": "student-template-capture-net-v1-normal",
+      "description": "Two cooperating public capturers close one disclosed victim escape net.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged honest template posterior/native ranked search. First eligible capture-net candidate in complete public legalmove order, with two own actors each uniquely covering a disclosed nonScout victim continuation. Preserve native initial captures and Flagwins. Shared20000enemy-outcome cap: generalized native control first, then firstnet. Enemy publicreply AND / single publicown continuation OR / all feasible hiddencombats and second enemyreplies AND. While victimlives require one netactor capture; after victimdeath allow any legal own continuation retaining positive fixedroot material. Strictly larger certifiedbound than native required. Exact complete-public-successor one-use witness executes next turn, including quiet/uncertaincapture after suicide. No extra nativego/RNG. Python research prototype; no CX16fitclaim.",
+      "information_model": "Own army, public revealed ranks/movement/captures/counts and source-informed population prior only. Proof branches use count-feasible hidden support without consulting actual enemy identities. No opponent setup, referee truth, deployment seed or private RNG.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-captures",
+        "--adjustment-scope",
+        "quiet-net"
+      ],
+      "archive": "ai/sources/dfb1abcda6352b94fe0ea6ae714ca6941288baf90bfa69fd2b03ffd07d4f3564.zip",
+      "source_sha256": "dfb1abcda6352b94fe0ea6ae714ca6941288baf90bfa69fd2b03ffd07d4f3564"
     }
   ]
 }

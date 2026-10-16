@@ -288,6 +288,10 @@ def build_native_beliefs(source, directory, executable, policy):
             for name in (entrypoint,'campaign_mobile_capture.py'):
                 (directory/name).write_bytes((source/'tools'/name).read_bytes())
                 runtime.append(name)
+            if 'quiet-net' in policy.get('driver_args', []):
+                name = 'campaign_capture_net.py'
+                (directory/name).write_bytes((source/'tools'/name).read_bytes())
+                runtime.append(name)
         if '--home-interceptor' in policy.get('driver_args', []):
             if 'AI_TRACE' not in policy.get('defines', []):
                 raise ValueError('Home interceptor requires scored native candidate traces')

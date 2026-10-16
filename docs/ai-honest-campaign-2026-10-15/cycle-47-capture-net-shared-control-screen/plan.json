@@ -3,8 +3,8 @@
   "baseline": "student-template-flag-bomb-v1-normal",
   "opponent": "msdos-1990-v2-normal",
   "policies": [
-    "student-template-flag-bomb-v1-normal",
-    "student-template-capture-net-v1-normal"
+    "student-template-capture-net-v1-normal",
+    "student-template-flag-bomb-v1-normal"
   ],
   "new_policies": [
     {
@@ -83,5 +83,6 @@
     "prospective_frozen_utc": "2026-10-16T03:07:44.791523+00:00",
     "source_games_at_design": 0,
     "interpretation": "Shared fixed control, not an independent cohort. No C43 outcomes used to develop net policy. Source, saved artifacts and exact game equality must be linked and verified; count reused1000onlyonce in campaign executed totals."
-  }
+  },
+  "execution_order_reason": "Before source registration or games: execute new net arm first, then reanalyse already shared control. This keeps the main pool busy while baseline replay can finish later; statistical contrast/sample/design unchanged."
 }

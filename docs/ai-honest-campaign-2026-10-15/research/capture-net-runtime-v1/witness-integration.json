@@ -1,0 +1,48 @@
+{
+  "kind": "actual-public-prefix-victim-suicide-quiet-witness-qualification",
+  "strength_evidence": false,
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "game": 2,
+  "root_ply": 217,
+  "own_army": 1,
+  "forced_prefix_decisions": 108,
+  "native_root": [
+    64,
+    74
+  ],
+  "fork": [
+    64,
+    54
+  ],
+  "enemy_public_observation": {
+    "move": [
+      44,
+      54
+    ],
+    "rank": 6,
+    "quiet": false
+  },
+  "witness": [
+    10,
+    20
+  ],
+  "witness_is_quiet": true,
+  "victim_suicide": true,
+  "native_followup": [
+    49,
+    59
+  ],
+  "witness_overrode_native": true,
+  "complete_public_successor_key_matched": true,
+  "public_goal_history_and_next_native_choice_parity": true,
+  "one_ranked_search_per_turn": true,
+  "no_rng_or_extra_search": true,
+  "plan_used_once": true,
+  "root_bound": 15,
+  "scope": "Recorded C21 public prefix followed by a synthetic count-feasible public enemy observation, committed quiet witness and another public quiet reply. No referee hidden rank is consumed after the prefix and no match is saved.",
+  "sources": {
+    "tools/campaign_native_mobile.py": "f8f265017efb342655879e5520ddf62839e42b3ecc75ca753b6833a685f0aae8",
+    "tools/campaign_capture_net.py": "aafac41e263784fd263c8da431315566a0c9dead1d494b36ec6b25e1631289d2",
+    "tools/campaign_mobile_capture.py": "3222678e4e2ec8beef63e5cacf4df4a4f638db0687541e86fc83986be86a71cf"
+  }
+}
