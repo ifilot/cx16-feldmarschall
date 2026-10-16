@@ -1,0 +1,19 @@
+{
+  "README.md": "373f14cf00ea922bf9dcd477dfc88f904fa3308f0587559f25fd43a0d2ebce06",
+  "banked-student-decisions.json": "754e7fd3c07576500ee33c3d0ff462c611c74ebb01fedbe264ba93eec2a9fd70",
+  "banked.log": "22e0cb06f50ec32a0d08ee66104a2cbff4f470a4b5b9cbc8619532861697e58e",
+  "checks.log": "dff8ff44a2e27a45ec840ef2d021c4a47e1235b4ea2dd193fa2aba9b19eb4b85",
+  "cost-fixtures.json": "d74ee7d972d7faf71f330c4c905b8545572bf617d70933a30a64d8410ecaf41a",
+  "cost-harness.c": "4b44ec227a7b34fefd72378ca2ab847dc1aa50c11a8acb1ee0ede237a2ea381e",
+  "cycles.json": "cd890801213f357b03a6026d73cc436d102ea6feeb15ad63729d68d8242a6a4e",
+  "cycles.log": "b768a15e8ed2b182e051bc34dbe60354f78bfd0128e1b52979d8f72cf0ebbc21",
+  "initial-cost-isolation-error/NOTE.json": "ddb0f7ed284c1e2595739f2fb60af7f2f162cab027dd3b9e209424099e6e3323",
+  "initial-cost-isolation-error/cost-fixtures.json": "d74ee7d972d7faf71f330c4c905b8545572bf617d70933a30a64d8410ecaf41a",
+  "initial-cost-isolation-error/cost-harness.c": "4b44ec227a7b34fefd72378ca2ab847dc1aa50c11a8acb1ee0ede237a2ea381e",
+  "initial-cost-isolation-error/cycles.json": "463cacabb0a0cbde16b1755e1749e8a71ee86c65ef47d49c214cb734c9301bd5",
+  "initial-cost-isolation-error/generated-sim-objects.zip": "5f56cda417a141007b5b7ba7933404f9e26967b1c14d04d4b4aa0a140d9b4560",
+  "proposal.json": "0bfcaf1c37f2eb3ebf91235d702179a7c574371044fec30474e5da9a753280aa",
+  "target-audit.json": "dcfe151b1980790760204613c730c62f595dc3902e76e67f2767256f2e2efc58",
+  "target-build-evidence.zip": "a7a29b2d56c3843460b43c382566afb8a3ab479548119307c228a692e22203de",
+  "target.log": "5b6e601ecef4a8126b91ef67200ca9951bf772440cd45f376680c75664b80d07"
+}

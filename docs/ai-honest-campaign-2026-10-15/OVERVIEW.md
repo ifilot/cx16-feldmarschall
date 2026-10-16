@@ -252,6 +252,8 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 
 - Moving the prior interface into unbanked memory resolves the AI-bank limit but overflows main memory by 748 bytes. Simple relocation is insufficient; no production source changed. [Evidence](research/native-belief-main-fit/README.md).
 
+- Compact native back-row prior: full CX16 link passes with 97 AI-bank bytes and 41 MAIN bytes free below the reserved stack. All 80 banked decisions match native execution; 18 public simulator fixtures add about 52 ms on average at an assumed 8 MHz. Strength remains untested. [Evidence](research/compact-backrow-native-v1/README.md).
+
 
 **Registered experiments awaiting completed results:**
 

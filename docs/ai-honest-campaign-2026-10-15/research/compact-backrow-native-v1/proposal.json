@@ -1,0 +1,11 @@
+{
+  "epoch": 1792109464.7171767,
+  "hypothesis": "A minimal honest Flag-row prior can improve native objectives without external posterior arrays, template lookup, rollouts or Python computation.",
+  "source_model": "99%uniformlegalarmiesconditionalFlagbackrow plus1%uniformlegalarmies. Allunknownmobile ranks exchangeable under disclosed inventory/movement constraints. No actual enemysetup or seed input.",
+  "derivation": "For unknownFlag, Uundisclosedunmovedenemyorigins and Rthoseonphysicalenemybackrow: P(Flag at slot)=(397 ifrow else1)/(U+396R). Follows.99*4R/U sourceevidenceratio against.01 uniformcomponent. P(Bomb at slot)=B*(1-PFlag)/(U-1). OnceFlagdisclosed, usecountconditionedBomb/mobile expectation.",
+  "integer_design": "Reuse native precomputed attack[a][1] as rounded mobilemean. Compute rounded conditionalnonFlagmean first, then final Flagweightedmean with signed32bit intermediate. This is a NEW nativeapproximation, not asserted byteequivalent to Q12packet policies; test rounding error against rationaloracle.",
+  "storage": "Only U/Rcounters and helperstaticlocals; computeexpectedgain onfly for two squarecategories. No per-squareprior arrays or source templates. Put helpercode/staticlocals in always-visible main segments while AIbankremainsselected; actual full targetlink/bankedruntime checks required.",
+  "target_gate": "Full untouched production baseline and opt-in candidate must link; default outputs byteidentical to preservedbaseline. Track MAINandAIbank headroom, sim65orrealbankedchecks ifavailable. No targetfit claim before measuredproof.",
+  "information_gate": "Hiddenranknibble invariance, botharmy rotations, publiccaptured/revealedinventory, ClassicNormalgate and optional/hardfallback checks. No coredefaults change.",
+  "experiment": "Only aftermechanical/target gates, register newimmutable descriptiveID/source/build/model/difficulty andfreshClassicDOScomparison against unchangedvalidatednative andPythonbackrow-only; no tuningsavedvalidation."
+}

@@ -1,0 +1,17 @@
+{
+  "error": "cl65 wrote generated sim65c02 objects beside absolute source paths. Authored source files and game binaries/artwork were not changed. Corrected harness copies all core inputs into temporary directory; exact generated intermediates preserved here and removed from source tree.",
+  "objects": {
+    "src/core/pieces.o": "9bd9ab9a8661f58b63cf59bd932e759061c35c7f128364d290d347c731c44f47",
+    "src/core/board.o": "fb743d7fe2c91dcc9915e573fd30bdf0ea41501374bc8055215dd7d7980151d3",
+    "src/core/rules.o": "33322fd399098406f0df3b4bd8650d5431d6cbf16c91ce3690d8b2c65fc93a2d",
+    "src/core/setup.o": "d70433170dff8ee35cd267652f96025c00987748ef075bb4ad0943bbbe390aaf",
+    "src/core/random.o": "6d4a2a6ec15e8116b5953bdcc07d55b77d702f45c43ac566b7a739e4da408156",
+    "src/core/ai_deploy.o": "045e526211dbd61669aaff5d61b1eb10068b6306918b939e74cb3c2ead7f9922",
+    "src/core/ai.o": "665778a5a586df32888a74ea0b3c46e758a7f1927ea3da56ef3b4abb0ed87fe1",
+    "src/core/ai_level.o": "4bc3cd636becddb2dc6605197ef88ebad72f0293e133f8b0dbbf74967cac3bb9",
+    "src/core/ai_mission.o": "e85b9af6565fa76127666a1d824071168d3ceccb0f9be7de39d6389ca08d6ce2",
+    "src/core/ai_memory.o": "c4c0280570d73d6702306da6bee80a1966788a5d681bbcc0b460f36233578a70",
+    "src/core/ai_student.o": "522df68ac3c346e2ac464f98043daf189b653064fa7c0fd28dc45e5edde3e90e"
+  },
+  "build_note": "src/Makefile compiles its source list directly, so no production object-cache dependency is retained."
+}

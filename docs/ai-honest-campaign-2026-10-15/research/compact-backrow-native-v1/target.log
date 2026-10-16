@@ -1,0 +1,41 @@
+{
+  "production-baseline": {
+    "ai_object_segments": {
+      "CODE": 0,
+      "RODATA": 0,
+      "BSS": 0,
+      "DATA": 0,
+      "ZEROPAGE": 0,
+      "NULL": 0,
+      "AIRODATA": 424,
+      "AIBSS": 1204,
+      "AICODE": 6519
+    },
+    "link_returncode": 0,
+    "ai_bank_free_bytes": 45,
+    "main_free_below_1024_byte_stack": 585,
+    "prg_bytes": 35096,
+    "unchanged_default_outputs": {
+      "FELDMARS.PRG": true,
+      "AI.BIN": true,
+      "MISSION.BIN": true
+    }
+  },
+  "compact-backrow": {
+    "ai_object_segments": {
+      "CODE": 528,
+      "RODATA": 0,
+      "BSS": 16,
+      "DATA": 0,
+      "ZEROPAGE": 0,
+      "NULL": 0,
+      "AIRODATA": 424,
+      "AIBSS": 1204,
+      "AICODE": 6467
+    },
+    "link_returncode": 0,
+    "ai_bank_free_bytes": 97,
+    "main_free_below_1024_byte_stack": 41,
+    "prg_bytes": 35624
+  }
+}

@@ -34,6 +34,9 @@
 #ifdef AI_MISSIONS
 #include "ai_mission.h"
 #endif
+#if defined(AI_BELIEF_PRIORS) && defined(AI_BACKROW_PRIOR)
+#error External priors and compact backrow priors are distinct policies
+#endif
 
 #ifdef BANKED_AI
 #pragma code-name ("AICODE")
@@ -535,6 +538,64 @@ static int16_t expected_at(uint8_t a, uint8_t square) {
     numerator=immobile*(int32_t)hidden_mobile+(int32_t)mobile*mobile_gain;
     return numerator/((int32_t)AI_BELIEF_ONE*hidden_mobile);
 }
+#elif defined(AI_BACKROW_PRIOR)
+/* Minimal source prior: 99% uniform armies conditional on a back-row Flag,
+ * 1% uniform armies. With U unseen unmoved enemies and R on their back row,
+ * Flag probability is (397 on that row, 1 elsewhere)/(U+396R).
+ * Compute it from permitted occupancy/counts; no private ranks or packet.
+ * Helpers remain unbanked while their AI-bank caller stays selected. */
+#ifdef BANKED_AI
+#pragma code-name (push, "CODE")
+#pragma bss-name (push, "BSS")
+#endif
+static uint8_t backrow_unmoved, backrow_home;
+static void prepare_backrow(void) {
+    uint8_t square, cell;
+    backrow_unmoved=backrow_home=0;
+    for(square=0;square<SQUARES;square++) {
+        cell=board[square];
+        if(enemy(cell) && !(cell&(CELL_REVEALED|CELL_MOVED))) {
+            backrow_unmoved++;
+            if(own?square>=90:square<10) backrow_home++;
+        }
+    }
+}
+static int16_t expected_at(uint8_t a, uint8_t square) {
+    uint8_t cell=board[square], nonflag;
+    uint16_t flag_weight, total_weight;
+    int16_t other_gain=0;
+    int32_t sum;
+    if(game_rules || ai_difficulty!=AI_NORMAL || !enemy(cell) ||
+       (cell&(CELL_REVEALED|CELL_MOVED)) || !backrow_unmoved)
+        return attack[a][!!(cell&CELL_MOVED)];
+    nonflag=backrow_unmoved-hidden[PIECE_FLAG];
+    if(nonflag) {
+        sum=(int32_t)hidden[PIECE_BOMB]*gain(a,PIECE_BOMB)+
+            (int32_t)(nonflag-hidden[PIECE_BOMB])*attack[a][1];
+        other_gain=sum/(int32_t)nonflag;
+    }
+    if(!hidden[PIECE_FLAG]) return other_gain;
+    flag_weight=(own?square>=90:square<10)?397u:1u;
+    total_weight=backrow_unmoved+396u*backrow_home;
+    sum=(int32_t)flag_weight*FLAG_VALUE+
+        (int32_t)(total_weight-flag_weight)*other_gain;
+    return sum/(int32_t)total_weight;
+}
+#ifdef AI_TEST
+int16_t ai_test_backrow_value(uint8_t army, const uint8_t* lost, uint8_t rank, uint8_t square) {
+    uint8_t r;
+    own=army;survey(lost);prepare_backrow();
+    for(r=0;r<PIECE_TYPES;r++) {
+        attack[r][0]=expected(r,0);attack[r][1]=expected(r,1);
+    }
+    return expected_at(rank,square);
+}
+int16_t ai_test_backrow_gain(uint8_t a, uint8_t rank) { return gain(a,rank); }
+#endif
+#ifdef BANKED_AI
+#pragma bss-name (pop)
+#pragma code-name (pop)
+#endif
 #endif
 
 /**
@@ -637,7 +698,7 @@ static uint8_t plan(uint8_t from) {
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq];
         if(!enemy(cell) || distance[sq] == NOWHERE) continue;
-#ifdef AI_BELIEF_PRIORS
+#if defined(AI_BELIEF_PRIORS) || defined(AI_BACKROW_PRIOR)
         g = cell & CELL_REVEALED ? gain(a, PIECE_TYPE(cell)) : expected_at(a,sq);
 #else
         g = cell & CELL_REVEALED ? gain(a, PIECE_TYPE(cell)) : attack[a][!!(cell & CELL_MOVED)];
@@ -802,7 +863,7 @@ static int16_t score(uint8_t from, uint8_t to) {
         if(ai_difficulty == AI_NORMAL && distance[from] == NOWHERE)
             s -= 12 + (quiet_turns[own ? 1 : 0] >> 2);
     } else {
-#ifdef AI_BELIEF_PRIORS
+#if defined(AI_BELIEF_PRIORS) || defined(AI_BACKROW_PRIOR)
         s = target & CELL_REVEALED ? gain(a, PIECE_TYPE(target)) : expected_at(a,to);
 #else
         s = target & CELL_REVEALED ? gain(a, PIECE_TYPE(target)) : attack[a][!!(target & CELL_MOVED)];
@@ -979,6 +1040,9 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
     *from = *to = NOWHERE;
     shortlist_count = 0;
     survey(lost);
+#ifdef AI_BACKROW_PRIOR
+    prepare_backrow();
+#endif
 #ifdef AI_LINKED_SCOUTING
     prepare_linked_scouting();
 #endif

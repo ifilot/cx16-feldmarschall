@@ -136,6 +136,10 @@ enum { AI_TEST_PRIOR_OFFSET = AI_TEST_STATE_SIZE };
 #define AI_TEST_STATE_SIZE (AI_TEST_PRIOR_OFFSET + AI_BELIEF_STATE_SIZE)
 #endif
 uint8_t ai_test_quiet(uint8_t army);
+#ifdef AI_BACKROW_PRIOR
+int16_t ai_test_backrow_value(uint8_t army, const uint8_t* lost, uint8_t rank, uint8_t square);
+int16_t ai_test_backrow_gain(uint8_t a, uint8_t rank);
+#endif
 #ifdef AI_OCCUPANCY_BELIEFS
 int16_t ai_test_expected(uint8_t rank, uint8_t moved);
 #endif
