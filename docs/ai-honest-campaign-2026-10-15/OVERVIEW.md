@@ -77,6 +77,8 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 31 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 138 / 83 / 707 | 19.3% | 72 |
 | 31 | Own setup, original DOS, rotated | student-backrow-only-v1-normal | 231 / 125 / 586 | 31.2% | 58 |
 | 31 | Own setup, original DOS, rotated | student-compact-backrow-v1-normal | 229 / 126 / 585 | 31.1% | 60 |
+| 41 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 561 / 402 / 964 | 39.5% | 73 |
+| 41 | Own setup, original DOS, rotated | student-fortress-template-flag-bomb-v1-normal | 652 / 424 / 873 | 44.3% | 51 |
 | 42 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 122 / 91 / 710 | 18.1% | 77 |
 | 42 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 279 / 202 / 483 | 39.4% | 36 |
 | 42 | Own setup, original DOS, rotated | student-template-q24-native-v1-normal | 278 / 203 / 484 | 39.3% | 35 |
@@ -388,6 +390,17 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-template-mobile-captures-v1-normal minus student-template-flag-bomb-v1-normal: +0.5 percentage points; 95% paired interval [-1.4, +2.6].
 
 
+**Cycle 41 hypotheses:** Adding the unchanged Fortress deployment to the unchanged honest source-template native policy improves end-to-end score against the original DOS population on independent seeds.
+
+Evidence: [cycle-41-fortress-template-validation](cycle-41-fortress-template-validation/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-fortress-template-flag-bomb-v1-normal minus student-template-flag-bomb-v1-normal: +5.0 percentage points; 95% paired interval [+3.3, +6.8].
+
+
 **Cycle 42 hypotheses:** An honest source-template prior implemented entirely in native C retains useful DOS strength while fitting a separately banked CX16 research target.; The explicitly distinct Q24/inventory-rounding numerical policy retains practical strength relative to the floating host bridge.
 
 Evidence: [cycle-42-template-q24-native-dos-screen](cycle-42-template-q24-native-dos-screen/result.json).
@@ -461,7 +474,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 37: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-37-template-mobile-capture-dos-screen/plan.json).
 - Cycle 39: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 3,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-39-quiet-contact-dos-screen/plan.json).
 - Cycle 40: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 1,680 planned comparison attempts; registered; no completed strength result. [Plan](cycle-40-quiet-contact-honest-generality/plan.json).
-- Cycle 41: Adding the unchanged Fortress deployment to the unchanged honest source-template native policy improves end-to-end score against the original DOS population on independent seeds. 4,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-41-fortress-template-validation/plan.json).
 - Cycle 43: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-43-public-forks-dos-screen/plan.json).
 - Cycle 44: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-44-public-forks-honest-generality/plan.json).
 - Cycle 45: Exact public-evidence caching preserves native Q24 playing decisions and DOS outcomes while reducing inference preparation cost when evidence is unchanged. 800 planned comparison attempts; registered; no completed strength result. [Plan](cycle-45-template-exact-cache-bridge/plan.json).
