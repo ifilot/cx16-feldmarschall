@@ -1,0 +1,118 @@
+{
+  "cycle": 38,
+  "hypotheses": [
+    "Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search."
+  ],
+  "opponent": "student-guard-v1-normal",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "standings": {
+    "student-template-flag-bomb-v1-normal": {
+      "wins": 280,
+      "draws": 10,
+      "losses": 270,
+      "score": 0.5089285714285714,
+      "errors": 0
+    },
+    "student-template-mobile-captures-v1-normal": {
+      "wins": 281,
+      "draws": 14,
+      "losses": 265,
+      "score": 0.5142857142857142,
+      "errors": 0
+    }
+  },
+  "execution_seconds": {
+    "student-template-flag-bomb-v1-normal": 31.255654845997924,
+    "student-template-mobile-captures-v1-normal": 35.2720783879995
+  },
+  "comparisons": {
+    "student-template-mobile-captures-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_pairs": 280,
+      "pairs_by_family": {
+        "fortified": 40,
+        "uniform": 40,
+        "unguarded": 40,
+        "forward": 40,
+        "decoy": 40,
+        "presets": 40,
+        "broad-mixed": 40
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.005357142857142857,
+          "interval_95": [
+            -0.014285714285714285,
+            0.025892857142857145
+          ],
+          "interval_98_3333": [
+            -0.01875,
+            0.030357142857142857
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 1120,
+  "error_sensitivity": {
+    "student-template-mobile-captures-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 17,
+        "negative_pairs": 17,
+        "zero_pairs": 246,
+        "non_tied_pairs": 34,
+        "exact_two_sided_binomial_sign_p": 1.0,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 280,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 281,
+          "draws": 14,
+          "losses": 265,
+          "official_scored_score": 0.5142857142857142,
+          "all_attempt_score_bounds": [
+            0.5142857142857142,
+            0.5142857142857142
+          ]
+        },
+        "b": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 280,
+          "draws": 10,
+          "losses": 270,
+          "official_scored_score": 0.5089285714285714,
+          "all_attempt_score_bounds": [
+            0.5089285714285714,
+            0.5089285714285714
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        0.005357142857142857,
+        0.005357142857142857
+      ],
+      "complete_case_pairs": 280,
+      "complete_case_paired_effect": 0.005357142857142857
+    }
+  },
+  "errors": 0,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 1120
+}
