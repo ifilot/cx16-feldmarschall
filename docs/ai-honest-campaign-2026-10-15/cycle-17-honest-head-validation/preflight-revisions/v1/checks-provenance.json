@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "tests": 5,
+  "scope": "Prelaunch harness qualification only; no games started and analysis freeze remains deferred until queued launch.",
+  "files": {
+    "tools/campaign_honest_heads.py": "126fd50e4a322b758c987fc9e747562be3657540c31b9e7b0cf4fb3515cbd6b9",
+    "tools/information_strategy_cycle.py": "4308867b6bb3429ac9c287ecbb1a82b5a66bf5cc23151300d31112addf61c2ca",
+    "tools/analyze_info_activity.py": "29ab4d043cf5234ae72e4eddbd4e8fcda416fd1bf2aab056ad6cdf4f2fc97ac2",
+    "tools/tournament.py": "2e46419a9746cd61f355a967e87d4e6e1cb949e4e2dc07a87a32513735772ca5",
+    "tools/tournament_store.py": "b81c3fe26fbe7b4e509162df21e96c6e13b1ab3a6ad858ebdf018e45ee949e37",
+    "tools/feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+    "tools/ai_registry.py": "8de4860ad9f9d140691e6725bf28bd27de52bade2c75e211d0ac2cd5d8d95313",
+    "tools/test_campaign_honest_heads.py": "95a1849ef27f7195f07cfe92ff94448e46f9a4787273d9a84ff170c494c419eb"
+  },
+  "checks_sha256": "086829ed38aeb81dcb8886ae3b3474a1c4633d6833c066bb23a6a98060ec2ff7",
+  "plan_sha256": "fb8a12bdc35892ee928338f34a1e80b15315c3e964ad162698b9d1e89fef0a34"
+}

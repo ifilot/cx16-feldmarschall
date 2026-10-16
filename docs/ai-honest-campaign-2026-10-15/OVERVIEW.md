@@ -191,6 +191,17 @@ Evidence: [cycle-16-native-belief-objectives-v3](cycle-16-native-belief-objectiv
 - student-joint-belief-objectives-v3-normal minus student-counts-belief-objectives-v3-normal: +3.4 percentage points; 95% paired interval [-0.6, +7.4].
 
 
+**Cycle 17: independent honest opponents**
+
+These scores are against honest references, so their comparison point is 50%; they are excluded from the DOS table.
+
+- row-prior-vs-context: 700 wins / 23 draws / 677 losses; score 50.8%; 0 unscored errors. 98.3333% paired interval [48.1%, 53.5%].
+- joint-vs-context: 714 wins / 15 draws / 671 losses; score 51.5%; 0 unscored errors. 98.3333% paired interval [48.9%, 54.1%].
+- native-contact-vs-guard: 748 wins / 25 draws / 627 losses; score 54.3%; 0 unscored errors. 98.3333% paired interval [51.9%, 56.8%].
+
+Evidence: [cycle-17-honest-head-validation](cycle-17-honest-head-validation/result.json).
+
+
 **Cycle 19 hypotheses:** Measure honest deployment-plus-play against armies drawn by the actual unchanged DOS level3 deployment instructions, rather than seven stress families.; Test validated own deployments against protected random own setups with identical DOS armies and move seeds.
 
 Evidence: [cycle-19-original-dos-deployments](cycle-19-original-dos-deployments/result.json).
@@ -399,7 +410,6 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 
 - Cycle 10: Prevent known two-turn Flag threats by deploying and retaining rank-capable interception coverage before immediate danger. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-10-preventive-flag-interception/plan.json).
 - Cycle 11: Connect public setup beliefs to hidden-capture values that the continuation correction currently subtracts.; Compare count-conditioned marginals against correlated setup marginals with identical frozen joint-sampled futures. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-11-belief-capture-values/plan.json).
-- Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).
 - Cycle 30: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 2,240 planned attempts; no completed strength result. [Frozen plan](cycle-30-procedural-background-honest-generality/plan.json).

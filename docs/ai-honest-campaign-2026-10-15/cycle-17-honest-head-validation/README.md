@@ -1,7 +1,21 @@
 # Independent honest head-to-head validation
 
-Prepared only. No games have started. Three frozen direct comparisons, each with 100 paired rounds across seven Classic setup families (1,400 games), use fresh seeds 2250001, 2260001 and 2270001.
+Status: completed and audited: 4,200 games, zero errors. See `CONCLUSION.md`.
+No interim policy selection or tuning.
+The original preparation note is preserved in `preparation-README.md`.
 
-Review plan.json before running. Existing policy source archives and catalog identities are fixed; no new policy is registered. The run action freezes analysis sources before the first game, then uses the Classic runner and Python/native/Qt6 replay checks. Failed files and error prefixes remain preserved.
+Three direct comparisons each use 100 paired rounds across seven Classic setup
+families (1,400 games): Flag-row prior versus Context Teacher, joint Flag/Bomb
+prior versus Context Teacher, and native exact-contact risk versus native guard.
+The fresh seeds, immutable policy IDs and fixed sample sizes are in `plan.json`.
 
-Run when resources are available: `python3 tools/campaign_honest_heads.py run`. Results report candidate scores and paired intervals relative to 50%. These tests alone cannot justify promotion; independent DOS validation remains required.
+`analysis-sources.zip` and `analysis-receipt.json` froze the shared runner and
+analysis files before the first game. Final prelaunch checks passed five tests;
+previous preflight revisions are retained. The cohort audit verifies the prepared
+plan, catalog prefix, policy archives and unchanged analysis source hashes.
+
+These are direct comparisons against honest opponents with a fair-null score of
+50%, using the same referee deployment population and swapped sides. Report all
+three endpoints with 95% and 98.3333% paired intervals, every error and missing-score
+bounds. These results alone cannot justify promotion; independent DOS validation,
+correctness and target cost require joint review. Production remains unchanged.

@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-10-16T01:22:02.727541+00:00",
+  "archive_sha256": "fde022f3cdd44014e4b42fc21d4707855c781dc9a56e555a3a3e907ea6d43c67",
+  "files": {
+    "tools/campaign_honest_heads.py": "126fd50e4a322b758c987fc9e747562be3657540c31b9e7b0cf4fb3515cbd6b9",
+    "tools/information_strategy_cycle.py": "4308867b6bb3429ac9c287ecbb1a82b5a66bf5cc23151300d31112addf61c2ca",
+    "tools/analyze_info_activity.py": "29ab4d043cf5234ae72e4eddbd4e8fcda416fd1bf2aab056ad6cdf4f2fc97ac2",
+    "tools/tournament.py": "2e46419a9746cd61f355a967e87d4e6e1cb949e4e2dc07a87a32513735772ca5",
+    "tools/tournament_store.py": "b81c3fe26fbe7b4e509162df21e96c6e13b1ab3a6ad858ebdf018e45ee949e37",
+    "tools/feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+    "tools/ai_registry.py": "035c42390d6b95602eace25f8cb1b981fe47d07d4e4ffe73db7ec6bd43bde50a"
+  }
+}

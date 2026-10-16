@@ -1,0 +1,10 @@
+test_all_errors_remain_unscored_and_have_no_bootstrap_endpoint (tools.test_campaign_honest_heads.HonestHeads.test_all_errors_remain_unscored_and_have_no_bootstrap_endpoint) ... ok
+test_failed_attempt_keeps_prefix_and_traceback_without_starting_other_matches (tools.test_campaign_honest_heads.HonestHeads.test_failed_attempt_keeps_prefix_and_traceback_without_starting_other_matches) ... ok
+test_prepare_and_audit_without_running_games_then_detect_recipe_and_plan_changes (tools.test_campaign_honest_heads.HonestHeads.test_prepare_and_audit_without_running_games_then_detect_recipe_and_plan_changes) ... ok
+test_prespecified_direct_matches_and_no_self_play (tools.test_campaign_honest_heads.HonestHeads.test_prespecified_direct_matches_and_no_self_play) ... ok
+test_score_and_intervals_translate_around_half_without_mutating_report (tools.test_campaign_honest_heads.HonestHeads.test_score_and_intervals_translate_around_half_without_mutating_report) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.037s
+
+OK
