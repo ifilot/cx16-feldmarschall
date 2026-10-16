@@ -1,0 +1,106 @@
+{
+  "cycle": 24,
+  "hypotheses": [
+    "Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-validated-deployment-v1-normal": {
+      "wins": 261,
+      "draws": 167,
+      "losses": 1412,
+      "score": 0.1872282608695652,
+      "errors": 160
+    },
+    "student-fortress-deployment-v1-normal": {
+      "wins": 359,
+      "draws": 185,
+      "losses": 1340,
+      "score": 0.23964968152866242,
+      "errors": 116
+    }
+  },
+  "execution_seconds": {
+    "student-validated-deployment-v1-normal": 1240.6289591809982,
+    "student-fortress-deployment-v1-normal": 1868.7840783900028
+  },
+  "comparisons": {
+    "student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal": {
+      "complete_pairs": 819,
+      "pairs_by_family": {
+        "original-dos": 819
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.054945054945054944,
+          "interval_95": [
+            0.03785103785103785,
+            0.07264957264957266
+          ],
+          "interval_98_3333": [
+            0.03388278388278388,
+            0.07661782661782662
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 4000,
+  "error_sensitivity": {
+    "student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 155,
+        "negative_pairs": 69,
+        "zero_pairs": 595,
+        "non_tied_pairs": 224,
+        "exact_two_sided_binomial_sign_p": 8.974782651263403e-09,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 1000,
+      "error_games_a": 116,
+      "error_games_b": 160,
+      "pairs_with_any_error": 181,
+      "arms": {
+        "a": {
+          "attempted_games": 2000,
+          "error_games": 116,
+          "scored_games": 1884,
+          "wins": 359,
+          "draws": 185,
+          "losses": 1340,
+          "official_scored_score": 0.23964968152866242,
+          "all_attempt_score_bounds": [
+            0.22575,
+            0.28375
+          ]
+        },
+        "b": {
+          "attempted_games": 2000,
+          "error_games": 160,
+          "scored_games": 1840,
+          "wins": 261,
+          "draws": 167,
+          "losses": 1412,
+          "official_scored_score": 0.1872282608695652,
+          "all_attempt_score_bounds": [
+            0.17225,
+            0.25225
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.0265,
+        0.1115
+      ],
+      "complete_case_pairs": 819,
+      "complete_case_paired_effect": 0.054945054945054944
+    }
+  },
+  "errors": 276,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 4000
+}

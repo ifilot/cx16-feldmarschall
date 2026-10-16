@@ -62,6 +62,8 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 22 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 57 / 32 / 279 | 19.8% | 32 |
 | 22 | Own setup, original DOS, rotated | student-fortress-deployment-v1-normal | 78 / 28 / 271 | 24.4% | 23 |
 | 22 | Own setup, original DOS, rotated | student-double-bomb-shell-v1-normal | 60 / 22 / 310 | 18.1% | 8 |
+| 24 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 261 / 167 / 1412 | 18.7% | 160 |
+| 24 | Own setup, original DOS, rotated | student-fortress-deployment-v1-normal | 359 / 185 / 1340 | 24.0% | 116 |
 
 **Cycle 1 hypotheses:** More public-compatible enemy armies reduce decision noise at four times rollout work.; Calibrated beliefs benefit more from 32 armies than from eight; test the model-by-budget interaction.
 
@@ -239,6 +241,17 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.2 percentage points; 95% paired interval [+2.4, +12.1].
 
 
+**Cycle 24 hypotheses:** Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture.
+
+Evidence: [cycle-24-fortress-dos-validation](cycle-24-fortress-dos-validation/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.5 percentage points; 95% paired interval [+3.8, +7.3].
+
+
 **Preflight failures, without DOS strength results:**
 
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
@@ -280,7 +293,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).
-- Cycle 24: Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-24-fortress-dos-validation/plan.json).
 - Cycle 25: Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-25-fortress-honest-validation/plan.json).
 - Cycle 26: Independently validate the unchanged source-informed template Flag/Bomb prior against the same native move policy without external priors. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-26-template-native-validation/plan.json).
 - Cycle 27: Improved own deployment and honest enemy formation inference address independent defence and attack limitations and can combine without cancelling their benefits. 1,600 planned attempts; no completed strength result. [Frozen plan](cycle-27-fortress-template-combination/plan.json).
