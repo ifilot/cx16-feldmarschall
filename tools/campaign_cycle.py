@@ -23,6 +23,8 @@ def write(path, value):
 
 def freeze(directory):
     plan = json.loads((directory/'plan.json').read_text())
+    assert plan['baseline'] in plan['policies'], 'Baseline absent from comparison arms'
+    assert all(a in plan['policies'] and b in plan['policies'] for a,b in plan['contrasts']), 'Contrast references an absent arm'
     assert not (directory/'frozen-policies.json').exists()
     write(directory/'registry-before.json', dict(policies=catalog()))
     for spec in plan['new_policies']:
@@ -58,6 +60,8 @@ def revise_setup_mode_before_games(directory, mode, reason):
 
 def evaluate(directory):
     plan = json.loads((directory/'plan.json').read_text())
+    assert plan['baseline'] in plan['policies'], 'Baseline absent from comparison arms'
+    assert all(a in plan['policies'] and b in plan['policies'] for a,b in plan['contrasts']), 'Contrast references an absent arm'
     frozen = json.loads((directory/'frozen-policies.json').read_text())
     registration = json.loads((directory/'registration.json').read_text())
     assert registration['plan_sha256'] == digest(directory/'plan.json')
