@@ -4,6 +4,7 @@ from collections import Counter,defaultdict
 import hashlib
 import json
 from pathlib import Path
+import random
 import sqlite3
 import zlib
 
@@ -15,6 +16,8 @@ def review(directory):
     directory=Path(directory);plan=json.loads((directory/'plan.json').read_text())
     result=json.loads((directory/'result.json').read_text());audit=json.loads((directory/'audit.json').read_text())
     frozen=json.loads((directory/'frozen-policies.json').read_text())
+    registration=json.loads((directory/'registration.json').read_text())
+    assert sha(directory/'plan.json')==registration['plan_sha256']
     manifest=json.loads((directory/'manifest.json').read_text())
     actual_files={str(p.relative_to(directory)) for p in directory.rglob('*') if p.is_file() and p.name!='manifest.json'}
     assert set(manifest)==actual_files,'Manifest must cover the complete cycle directory'
@@ -36,7 +39,7 @@ def review(directory):
             artifacts={}
             for row in connection.execute('SELECT sha256,data FROM artifacts'):
                 raw=zlib.decompress(row['data']);assert hashlib.sha256(raw).hexdigest()==row['sha256']
-                artifacts[row['sha256']]=True
+                artifacts[row['sha256']]=raw
             for participant in metadata['participants']:
                 assert participant['policy']['source_sha256'] in artifacts
                 assert all(value in artifacts for value in participant['runtime_sha256'].values())
@@ -44,6 +47,41 @@ def review(directory):
             rows=[dict(row) for row in connection.execute('SELECT id,pair_id,family,red,blue,seed,red_setup,blue_setup,result,reason FROM games ORDER BY id')]
         finally:connection.close()
         assert len(rows)==metadata['planned_games']==2*plan['rounds']*len(plan['families'])
+        if plan.get('dataset'):
+            pin=metadata['setup_dataset'];role=pin.get('role','referee-v1')
+            assert role==plan['dataset'].get('role','referee-v1')
+            assert pin['manifest_sha256']==registration['dataset_manifest_sha256']
+            bundle_manifest=json.loads(artifacts[pin['manifest_sha256']])
+            split=pin['split'];assert split==plan['dataset']['split']
+            assert pin['offset']==plan['dataset'].get('offset',0)
+            specification=bundle_manifest['splits'][split]
+            assert specification['families']==metadata['families']
+            corpus=json.loads(artifacts[pin['files'][split+'.json']])['records']
+            count=specification['pairs_per_family'];offset=pin['offset'];rounds=metadata['rounds']
+            selected=[r for f in range(len(specification['families']))
+                      for r in corpus[f*count+offset:f*count+offset+rounds]]
+            assert pin['record_ids']==[r['id']for r in selected]
+            random_stream=random.Random(metadata['seed'])
+            seeds=[random_stream.randrange(1,60000)for _ in selected]
+            reflect=lambda setup:''.join(setup[i:i+10][::-1] for i in range(0,40,10))
+            if role=='opponent-only-v1':
+                assert metadata['setup_mode']=='policy-owned-rotated-v1'
+                assert pin['selection_source_sha256'] in artifacts
+                own_records=json.loads(artifacts[metadata['setup_records_sha256']])['records']
+                assert len(own_records)==len(selected)
+                assert all(record['opponent_setup']==selected[record['pair_id']-1]['army_b'] for record in own_records)
+            else:assert role=='referee-v1' and metadata['setup_mode']=='referee'
+            for row in rows:
+                assert row['pair_id']==(row['id']+1)//2
+                record=selected[row['pair_id']-1]
+                assert row['family']==record['family'] and row['seed']==seeds[row['pair_id']-1]
+                expected_names=[identity,plan['opponent']] if row['id']%2 else [plan['opponent'],identity]
+                assert [row['red'],row['blue']]==expected_names
+                if role=='referee-v1':
+                    assert (row['red_setup'],row['blue_setup'])==(record['army_a'],record['army_b'])
+                else:
+                    expected=record['army_b'] if row['red']==identity else reflect(record['army_b'])
+                    assert (row['blue_setup'] if row['red']==identity else row['red_setup'])==expected
         tally=Counter()
         for row in rows:
             assert (row['red']==identity)!=(row['blue']==identity)
@@ -115,6 +153,7 @@ def review(directory):
     return dict(passed=True,cycle=plan['cycle'],scope='Independent read-only SQLite row accounting and artifact hashes; checks retained full-replay receipts but does not rerun replay.',
                 manifest_files=len(manifest),attempts=attempts,errors_preserved_unscored=errors,
                 artifacts_verified=artifact_counts,standings=counts,contrasts=contrasts,
+                corpus_schedule_independently_checked=bool(plan.get('dataset')),
                 source_manifest_sha256=sha(directory/'manifest.json'),auditor_sha256=sha(__file__))
 
 

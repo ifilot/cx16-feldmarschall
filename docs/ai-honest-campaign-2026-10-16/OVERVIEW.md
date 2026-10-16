@@ -113,6 +113,7 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 
 [Results and family breakdown](cycle-113-heldout-generator-guard-robustness/result.json).
 - student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal: -2.60 points; 95% paired interval [-7.16, +1.82].
+[Interpretation](cycle-113-heldout-generator-guard-robustness/CONCLUSION.md).
 
 **Cycle 114:** Does retaining a Sergeant behind the Fortress inner Bomb entrances improve the ordinary native AI without source-informed enemy inference? This tests whether the deployment idea is useful independently of the stronger desktop prior.
 
