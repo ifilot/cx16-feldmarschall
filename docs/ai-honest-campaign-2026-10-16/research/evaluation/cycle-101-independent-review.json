@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cycle": 101,
+  "manifest_files_verified": 25,
+  "all_attempts": 512,
+  "replay_scope": "Every saved state in all 512 attempts, including legal engine-error prefixes, replayed by Python and native worker as recorded in the reports and cycle audit.",
+  "errors_preserved_unscored": 23,
+  "paired_complete_cases": 117,
+  "paired_score_difference": 0.0,
+  "finite_missing_outcome_bounds": [
+    -0.04296875,
+    0.046875
+  ],
+  "first_different_moves_at_identical_roots": 28,
+  "first_different_move_actor": "candidate",
+  "source_manifest_sha256": "43ddf44d8281d7a333935fd31b6794d274bbaba291b9ba8238972f13e42d955a",
+  "conclusion": "No established DOS gain; sparse changed pair scores and unknown error outcomes prevent an equivalence claim."
+}

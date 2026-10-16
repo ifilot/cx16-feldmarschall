@@ -1,0 +1,120 @@
+{
+  "cycle": 101,
+  "hypotheses": [
+    "Reassign one redundant capable pursuer to an uncovered disclosed mobile target while retaining the original primary attacker. Previously registered but never benchmarked; this campaign tests its first full-policy outcomes."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-guard-v1-normal": {
+      "wins": 15,
+      "draws": 18,
+      "losses": 212,
+      "score": 0.09795918367346938,
+      "errors": 11
+    },
+    "student-target-assignment-v1-normal": {
+      "wins": 16,
+      "draws": 16,
+      "losses": 212,
+      "score": 0.09836065573770492,
+      "errors": 12
+    }
+  },
+  "execution_seconds": {
+    "student-guard-v1-normal": 112.43493920099718,
+    "student-target-assignment-v1-normal": 120.58581956400303
+  },
+  "comparisons": {
+    "student-target-assignment-v1-normal minus student-guard-v1-normal": {
+      "complete_pairs": 117,
+      "pairs_by_family": {
+        "original-dos": 117
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.0,
+          "interval_95": [
+            -0.008547008547008548,
+            0.010683760683760684
+          ],
+          "interval_98_3333": [
+            -0.010683760683760684,
+            0.014957264957264958
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 512,
+  "error_sensitivity": {
+    "student-target-assignment-v1-normal minus student-guard-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 1,
+        "negative_pairs": 2,
+        "zero_pairs": 114,
+        "non_tied_pairs": 3,
+        "exact_two_sided_binomial_sign_p": 1.0,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 128,
+      "error_games_a": 12,
+      "error_games_b": 11,
+      "pairs_with_any_error": 11,
+      "arms": {
+        "a": {
+          "attempted_games": 256,
+          "error_games": 12,
+          "scored_games": 244,
+          "wins": 16,
+          "draws": 16,
+          "losses": 212,
+          "official_scored_score": 0.09836065573770492,
+          "all_attempt_score_bounds": [
+            0.09375,
+            0.140625
+          ]
+        },
+        "b": {
+          "attempted_games": 256,
+          "error_games": 11,
+          "scored_games": 245,
+          "wins": 15,
+          "draws": 18,
+          "losses": 212,
+          "official_scored_score": 0.09795918367346938,
+          "all_attempt_score_bounds": [
+            0.09375,
+            0.13671875
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.04296875,
+        0.046875
+      ],
+      "complete_case_pairs": 117,
+      "complete_case_paired_effect": 0.0
+    }
+  },
+  "errors": 23,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 512,
+  "family_standings": {
+    "student-guard-v1-normal": {
+      "original-dos": {
+        "student-guard-v1-normal": 0.09795918367346938,
+        "msdos-1990-v2-normal": 0.9020408163265307
+      }
+    },
+    "student-target-assignment-v1-normal": {
+      "original-dos": {
+        "student-target-assignment-v1-normal": 0.09836065573770492,
+        "msdos-1990-v2-normal": 0.9016393442622951
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "cycle": 102,
+  "manifest_hashes_verified": 19,
+  "all_armies_seeds_and_pairs_exactly_matched": true,
+  "honest_candidate_capability_audit": true,
+  "completed_games": 192,
+  "unscored_errors": 0,
+  "python_and_native_replay": "Executed by dataset evaluator for all 192 games; verified report, audit and manifest receipts.",
+  "qt6_visual_review": "Inspected target-assignment capture: original artwork, Blue top, Red bottom, a10 upper left, dataset label and selected match visible.",
+  "validation_partitions_played": false,
+  "conclusion": "No established gain; four non-tied paired score contrasts. Keep separate from the DOS endpoint; no equivalence claim.",
+  "source_manifest_sha256": "03c56a06a882d326ba907b79a59629ca42e6629ef61853519ce6d3a765136e1a"
+}
