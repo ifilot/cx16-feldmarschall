@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 112,
+  "attempts": 800,
+  "errors_preserved_unscored": 36,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 2,
+  "exact_rebuild_runtime_sha256": {
+    "student-template-q24-native-v2-normal": {
+      "engine": "3ee3c60ed4945a1bd469557639cf7f4919b3b1a34011b78a42108a2fbe97794e"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    11
+  ],
+  "test_skip_summaries": []
+}

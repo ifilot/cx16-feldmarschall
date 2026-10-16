@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "original_rows": 11,
+  "appended_missing": 389,
+  "final_games": 400,
+  "original_raw_rows_and_packed_moves_identical": true,
+  "all_original_metadata_unchanged_except_status": true,
+  "original_game_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12
+  ],
+  "execution_seconds": 361.33254934100114,
+  "execution_seconds_scope": "Recovery of missing games only; original interrupted duration unavailable. Not full-arm execution time.",
+  "final_sha256": "02175630f66acab5cb70de074eaff815a5c7a72ce1301e14078004c1d9e886d3"
+}

@@ -590,6 +590,8 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 
 - student-template-q24-native-v2-normal minus student-template-q24-native-v1-normal: +0.0 percentage points; 95% paired interval [+0.0, +0.0]; 98.3333% interval [+0.0, +0.0].
 
+[Interpretation and prespecified qualifications](cycle-45-template-exact-cache-bridge/CONCLUSION.md).
+
 
 **Cycle 46 hypotheses:** The unchanged compact honest back-row population prior retains its DOS improvement over unchanged native play on a fresh independent fixed cohort.
 

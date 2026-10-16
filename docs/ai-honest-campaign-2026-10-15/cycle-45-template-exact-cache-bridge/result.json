@@ -1,0 +1,106 @@
+{
+  "cycle": 45,
+  "hypotheses": [
+    "Exact public-evidence caching preserves native Q24 playing decisions and DOS outcomes while reducing inference preparation cost when evidence is unchanged."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-template-q24-native-v1-normal": {
+      "wins": 109,
+      "draws": 85,
+      "losses": 188,
+      "score": 0.39659685863874344,
+      "errors": 18
+    },
+    "student-template-q24-native-v2-normal": {
+      "wins": 109,
+      "draws": 85,
+      "losses": 188,
+      "score": 0.39659685863874344,
+      "errors": 18
+    }
+  },
+  "execution_seconds": {
+    "student-template-q24-native-v1-normal": 361.33254934100114,
+    "student-template-q24-native-v2-normal": 350.64492847999645
+  },
+  "comparisons": {
+    "student-template-q24-native-v2-normal minus student-template-q24-native-v1-normal": {
+      "complete_pairs": 183,
+      "pairs_by_family": {
+        "original-dos": 183
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.0,
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "interval_98_3333": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 800,
+  "error_sensitivity": {
+    "student-template-q24-native-v2-normal minus student-template-q24-native-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 0,
+        "negative_pairs": 0,
+        "zero_pairs": 183,
+        "non_tied_pairs": 0,
+        "exact_two_sided_binomial_sign_p": 1.0,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 200,
+      "error_games_a": 18,
+      "error_games_b": 18,
+      "pairs_with_any_error": 17,
+      "arms": {
+        "a": {
+          "attempted_games": 400,
+          "error_games": 18,
+          "scored_games": 382,
+          "wins": 109,
+          "draws": 85,
+          "losses": 188,
+          "official_scored_score": 0.39659685863874344,
+          "all_attempt_score_bounds": [
+            0.37875,
+            0.42375
+          ]
+        },
+        "b": {
+          "attempted_games": 400,
+          "error_games": 18,
+          "scored_games": 382,
+          "wins": 109,
+          "draws": 85,
+          "losses": 188,
+          "official_scored_score": 0.39659685863874344,
+          "all_attempt_score_bounds": [
+            0.37875,
+            0.42375
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.045,
+        0.045
+      ],
+      "complete_case_pairs": 183,
+      "complete_case_paired_effect": 0.0
+    }
+  },
+  "errors": 36,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 800
+}
