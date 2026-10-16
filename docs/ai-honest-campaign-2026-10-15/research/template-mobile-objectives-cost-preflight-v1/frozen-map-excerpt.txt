@@ -1,0 +1,36 @@
+    MISSIONRODATA     Offs=000000  Size=000078  Align=00001  Fill=0000
+    MISSIONCODE       Offs=000000  Size=0000F4  Align=00001  Fill=0000
+    MISSIONBSS        Offs=000000  Size=000007  Align=00001  Fill=0000
+    MISSIONBSS        Offs=000007  Size=0003CE  Align=00001  Fill=0000
+    MISSIONCODE       Offs=0000F4  Size=0008AA  Align=00001  Fill=0000
+    MISSIONRODATA     Offs=000078  Size=000004  Align=00001  Fill=0000
+    MISSIONBSS        Offs=0003D5  Size=000155  Align=00001  Fill=0000
+    MISSIONCODE       Offs=00099E  Size=000783  Align=00001  Fill=0000
+    MISSIONRODATA     Offs=00007C  Size=0000BE  Align=00001  Fill=0000
+    MISSIONBSS        Offs=00052A  Size=000011  Align=00001  Fill=0000
+    MISSIONCODE       Offs=001121  Size=000520  Align=00001  Fill=0000
+    BELIEFRODATA      Offs=000000  Size=000158  Align=00001  Fill=0000
+    BELIEFBSS         Offs=000000  Size=0006AA  Align=00001  Fill=0000
+    BELIEFCODE        Offs=000000  Size=0012F4  Align=00001  Fill=0000
+    MISSIONBSS        Offs=00053B  Size=000032  Align=00001  Fill=0000
+    MISSIONCODE       Offs=001641  Size=000223  Align=00001  Fill=0000
+MISSIONCODE           00A000  00B863  001864  00001
+BELIEFCODE            00A13C  00B42F  0012F4  00001
+BELIEFRODATA          00B430  00B587  000158  00001
+BELIEFBSS             00B588  00BC31  0006AA  00001
+MISSIONRODATA         00B864  00B99D  00013A  00001
+MISSIONBSS            00B99E  00BF0A  00056D  00001
+_ai_template_begin        000A2F RLA    _ai_template_build        005DC3 RLA    
+_ai_template_build_banked 00AF29 RLA    _ai_template_cache_reset  005E25 RLA    
+_ai_template_cache_reset_banked 00A13C RLA    _ai_template_copy         005DD7 RLA    
+_ai_template_copy_banked  00B391 RLA    _ai_template_export       005DEB RLA    
+_ai_template_transfer     00921C RLA    _ai_template_valid        0092E5 RLA    
+_ai_template_build        005DC3 RLA    _ai_template_copy         005DD7 RLA    
+_ai_template_transfer     00921C RLA    initstdout                00923E  LAI   
+_ai_mission_begin_banked  00AC04 RLA    _ai_template_build_banked 00AF29 RLA    
+_ai_template_copy_banked  00B391 RLA    _ai_reset_banked          00B44D RLA    
+_ai_template_build (ai_template_bank.o):
+_ai_template_build_banked (ai_template.o):
+_ai_template_copy (ai_template_bank.o):
+_ai_template_copy_banked (ai_template.o):
+_ai_template_transfer (ai_template.o):

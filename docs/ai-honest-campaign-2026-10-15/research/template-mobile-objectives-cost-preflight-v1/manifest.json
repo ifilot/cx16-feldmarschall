@@ -1,0 +1,22 @@
+{
+  "README.md": {
+    "bytes": 8439,
+    "sha256": "5606ae42476d8fd919ce5698c76a64df8eec5a02c35f18aca2a3596dd9b5cba9"
+  },
+  "frozen-map-excerpt.txt": {
+    "bytes": 2388,
+    "sha256": "357142645fe0e40b0d019c6741d16cf8ba07db1751f42e60eddff2edcce47e96"
+  },
+  "source-audit.json": {
+    "bytes": 1235,
+    "sha256": "c245dbe84a208dc55635004a6701ca515168f4d9dd316b630d21301ebcecc389"
+  },
+  "test_arithmetic.py": {
+    "bytes": 3648,
+    "sha256": "01b67a4c0695e33e84fab088eabdba4f9c67c4f853f38e75b22a4538f3df7e46"
+  },
+  "tests.log": {
+    "bytes": 101,
+    "sha256": "0d6e8071ea2f87dca65530f7acecc871b9a038ba49c6265e5cb64dcb2d43c631"
+  }
+}

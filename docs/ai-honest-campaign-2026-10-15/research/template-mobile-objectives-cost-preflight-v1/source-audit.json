@@ -1,0 +1,23 @@
+{
+  "scope": "Source/map inspection only; no trajectories or policy implementation.",
+  "frozen_policy": "student-template-q24-native-v2-normal",
+  "archive": "ai/sources/73302ca8323ba0dbdedea55d9e8c565d50129c4791b39a54f25159954e6565c1.zip",
+  "archive_sha256": "73302ca8323ba0dbdedea55d9e8c565d50129c4791b39a54f25159954e6565c1",
+  "source_sha256": {
+    "src/core/ai.c": "32ca332fa266e413ef909952e24c1d3dd00a3313359af7b030cbbf767508f03e",
+    "src/core/ai_template.c": "877070fe6621ba7a7354767283485462df1b48fca40f1c8c033ca6b78e8dbab8",
+    "src/core/ai_template.h": "e558b7211f6aaa3fead40aac87c583865fbff260b415494e75cd3cfa3c2c93ae",
+    "src/ui/ai_template_bank.s": "ab62b656328c878cc8c6d5b3ac4b8817f5e26da74a81e776132b6cd792a3a94d"
+  },
+  "target_report": "docs/ai-honest-campaign-2026-10-15/research/template-target-cache-v2/relocated-link.json",
+  "target_report_sha256": "e927adbf47dde268ad9fcb94ae5f7b076e0ab42baa741bf55a1b9a9267abef49",
+  "target_evidence_sha256": "40d7100f015619f4932515118ee9139965f298b766fb94006ce9515874e132dd",
+  "map_sha256": "e1e269343370935c307e568afd03955c79a32c61d315f961a2c05985bf60fee5",
+  "free_bytes": {
+    "AI": 78,
+    "MISSION": 245,
+    "PLAY": 154,
+    "BELIEF": 974,
+    "MAIN": 66
+  }
+}
