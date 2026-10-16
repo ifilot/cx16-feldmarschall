@@ -42,6 +42,8 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 | 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 195 / 1 / 28 | 87.3% | 0 |
 | 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-mirror-template-v1-normal | 168 / 4 / 52 | 75.9% | 0 |
 | 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-mirror-mixture-template-v1-normal | 187 / 3 / 34 | 84.2% | 0 |
+| 119 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 305 / 229 / 468 | 41.9% | 22 |
+| 119 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-mirror-mixture-template-v1-normal | 309 / 217 / 478 | 41.6% | 20 |
 
 **Cycle 101:** Reassign one redundant capable pursuer to an uncovered disclosed mobile target while retaining the original primary attacker. Previously registered but never benchmarked; this campaign tests its first full-policy outcomes.
 
@@ -155,7 +157,9 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 
 **Cycle 119:** Independent fresh-cohort test of the unchanged screen-selected orientation policy student-fortress-mirror-mixture-template-v1-normal against the unchanged Fortress-template reference.
 
-No completed strength result. [Frozen plan](cycle-119-mirror-independent-dos-validation/plan.json).
+[Results and family breakdown](cycle-119-mirror-independent-dos-validation/result.json).
+- student-fortress-mirror-mixture-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -0.72 points; 95% paired interval [-3.56, +2.16].
+[Interpretation](cycle-119-mirror-independent-dos-validation/CONCLUSION.md).
 
 **Additional hypotheses evaluated before tournaments**
 
