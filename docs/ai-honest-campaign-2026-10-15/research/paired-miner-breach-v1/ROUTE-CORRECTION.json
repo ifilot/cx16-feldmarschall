@@ -1,0 +1,5 @@
+{
+  "status": "mechanical correction before final research conclusion; no runtime or games",
+  "reason": "Same initial-shuttle source-revisit gap found by mechanical test; preserve initial source/result and recompute public formation incidence with source-vacating initial/later BFS.",
+  "model_unchanged": "Only empty transit squares and known Bomb endpoint; no tactical safety or Flag certainty invented."
+}

@@ -1,0 +1,26 @@
+{
+  "src/core/ai_mission.c": {
+    "bytes": 19023,
+    "sha256": "515955410737ebfc14f68bde573efa9fa5d83e63abca040c7296f1d68db2ddfc"
+  },
+  "tools/campaign_flag_guard.py": {
+    "bytes": 7943,
+    "sha256": "d9eddff94c0957acd6e899671fefbed72f789ccff904fd6e8ac2fc9e3dc10fee"
+  },
+  "tools/campaign_home_reserve.py": {
+    "bytes": 9119,
+    "sha256": "dc9f4357ab83f2a5cef66ff06cd2eb509e353c687c95f34329223c9fc5ddcf15"
+  },
+  "tools/feldmarschall.py": {
+    "bytes": 9639,
+    "sha256": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+  },
+  "tools/tournament_store.py": {
+    "bytes": 15938,
+    "sha256": "b81c3fe26fbe7b4e509162df21e96c6e13b1ab3a6ad858ebdf018e45ee949e37"
+  },
+  "docs/ai-honest-campaign-2026-10-15/cycle-21-template-opening-prior/student-template-flag-bomb-v1-normal.fmtour": {
+    "bytes": 9601024,
+    "sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437"
+  }
+}

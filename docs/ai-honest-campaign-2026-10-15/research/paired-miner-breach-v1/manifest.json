@@ -1,0 +1,50 @@
+{
+  "CONCLUSION.md": {
+    "bytes": 3472,
+    "sha256": "73cd4753bf4b8368b8e7be21d2fe82b4c42c638c79b4aa65d4bcdc48a84f53a3"
+  },
+  "PROTOCOL.json": {
+    "bytes": 2209,
+    "sha256": "92ab54d8fc5b8576ac187f121e15adbc4e0f1e0a8063fae7e23cc0deaed0de12"
+  },
+  "ROUTE-CORRECTION.json": {
+    "bytes": 410,
+    "sha256": "da45671ab22b70af0ad5f7fddca3beca88e6251e7b1a272412bffe5fc226e7fd"
+  },
+  "SOURCES.json": {
+    "bytes": 922,
+    "sha256": "4e375ff65f25651a2b9e7004b6d1920044260a81ba67997c66d29a0986035fc3"
+  },
+  "initial-simple-route/preflight.py": {
+    "bytes": 5398,
+    "sha256": "19a2cbed2cf92fd36aed61a0390f8804b33cffa3140ab3b1e1ec5257af0cbf0a"
+  },
+  "initial-simple-route/result.json": {
+    "bytes": 767,
+    "sha256": "e84e925df9ecea19988a0446af0d689aae0d0e96c1658ffb382507adb4b53dc6"
+  },
+  "initial-simple-route/test_mechanism.py": {
+    "bytes": 2101,
+    "sha256": "4cc10a645fe75fb57a67a85c5b540eb5e89f9f207e97f356196338049bc9ce02"
+  },
+  "mechanical-fixture.json": {
+    "bytes": 16242,
+    "sha256": "f9fc749229cf6053347e70c00c285f169554f72e82492c51c0a5ea8c0699197a"
+  },
+  "preflight.py": {
+    "bytes": 5464,
+    "sha256": "420004e880cf6be61acdb86c2b7d9dc1201b613696a8f47d6124c00d9ac6289a"
+  },
+  "result.json": {
+    "bytes": 767,
+    "sha256": "b7caf4e82663ca2bcf976d6d0731ae9d6e386ec12b836e31dcdde6c7516f2861"
+  },
+  "test_mechanism.py": {
+    "bytes": 2110,
+    "sha256": "84d205935843b6c8133664d870a632b7d6f35e0b50bf1a90c55474392a8141ef"
+  },
+  "tests.log": {
+    "bytes": 576,
+    "sha256": "b87f647676ff83aa35ab5fea233066ce9507a9e4ff75d932cc8f30c49a69a651"
+  }
+}

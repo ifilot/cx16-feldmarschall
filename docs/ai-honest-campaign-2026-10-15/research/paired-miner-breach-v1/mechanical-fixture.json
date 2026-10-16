@@ -1,0 +1,879 @@
+{
+  "scope": "Public constructed fully disclosed position only; no saved match or strength evidence",
+  "pieces": [
+    {
+      "square": 0,
+      "owner": 1,
+      "rank": 11
+    },
+    {
+      "square": 1,
+      "owner": 1,
+      "rank": 10
+    },
+    {
+      "square": 2,
+      "owner": 0,
+      "rank": 7
+    },
+    {
+      "square": 10,
+      "owner": 1,
+      "rank": 10
+    },
+    {
+      "square": 11,
+      "owner": 1,
+      "rank": 1
+    },
+    {
+      "square": 20,
+      "owner": 0,
+      "rank": 7
+    },
+    {
+      "square": 88,
+      "owner": 1,
+      "rank": 8
+    },
+    {
+      "square": 89,
+      "owner": 0,
+      "rank": 10
+    },
+    {
+      "square": 98,
+      "owner": 0,
+      "rank": 10
+    },
+    {
+      "square": 99,
+      "owner": 0,
+      "rank": 11
+    }
+  ],
+  "proof": [
+    {
+      "disclosed_guard_rank": 1,
+      "first_breach": [
+        2,
+        1
+      ],
+      "all_first_replies": [
+        {
+          "enemy_reply": [
+            11,
+            1
+          ],
+          "own_second_breach": [
+            20,
+            10
+          ],
+          "all_second_replies": [
+            {
+              "enemy_reply": [
+                1,
+                2
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                1,
+                11
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                78
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                68
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                58
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                48
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                38
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                28
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                18
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                8
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                89
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                98
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                87
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                86
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                85
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                84
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                83
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                82
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                81
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                80
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "enemy_reply": [
+            11,
+            12
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            11,
+            21
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            78
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            68
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            58
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            48
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            38
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            28
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            18
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            8
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            89
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            98
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            87
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            86
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            85
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            84
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            83
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            82
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            81
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            80
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "disclosed_guard_rank": 7,
+      "first_breach": [
+        2,
+        1
+      ],
+      "all_first_replies": [
+        {
+          "enemy_reply": [
+            11,
+            1
+          ],
+          "own_second_breach": [
+            20,
+            10
+          ],
+          "all_second_replies": [
+            {
+              "enemy_reply": [
+                88,
+                78
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                68
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                58
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                48
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                38
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                28
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                18
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                8
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                89
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                98
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                87
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                86
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                85
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                84
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                83
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                82
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                81
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            },
+            {
+              "enemy_reply": [
+                88,
+                80
+              ],
+              "own_terminal_capture": [
+                10,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "enemy_reply": [
+            11,
+            12
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            11,
+            21
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            78
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            68
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            58
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            48
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            38
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            28
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            18
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            8
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            89
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            98
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            87
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            86
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            85
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            84
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            83
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            82
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            81
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        },
+        {
+          "enemy_reply": [
+            88,
+            80
+          ],
+          "own_terminal_capture": [
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

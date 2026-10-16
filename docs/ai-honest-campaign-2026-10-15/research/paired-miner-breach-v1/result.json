@@ -1,0 +1,17 @@
+{
+  "kind": "paired-Miner-breach-geometric-public-preflight",
+  "games": 400,
+  "counters": {
+    "own_roots": 85971,
+    "public_two_Bomb_target_roots": 720,
+    "undisclosed_possible_Flag_targets": 720,
+    "distinct_reachable_Miner_pair_roots": 121
+  },
+  "near_pair_games": 0,
+  "ready_pair_games": 0,
+  "near_actual_Flag_games_offline": 0,
+  "source_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "source_code_sha256": "420004e880cf6be61acdb86c2b7d9dc1201b613696a8f47d6124c00d9ac6289a",
+  "rows": [],
+  "limits": "Readiness is geometric only; known/unknown defensive tactics, forcing replies and safe preparation are not proved. Possible Flag is not hidden truth. Counts include correlated repeated roots and multiple targets."
+}
