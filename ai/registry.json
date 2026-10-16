@@ -5051,6 +5051,150 @@
       "driver_args": [],
       "archive": "ai/sources/3d9897c48be4ab61ac9821fc8ff0c4c65042b2a55f079c248089d079b08c2836.zip",
       "source_sha256": "3d9897c48be4ab61ac9821fc8ff0c4c65042b2a55f079c248089d079b08c2836"
+    },
+    {
+      "id": "student-template-backrow-background-v1-normal",
+      "name": "student-template-backrow-background-v1-normal",
+      "description": "Replace the20%uniform procedural background by a fixed99%backrow-conditional component plus1%uniform tail; retain80%source templates.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Replace the20%uniform procedural background by a fixed99%backrow-conditional component plus1%uniform tail; retain80%source templates. Mobile ranks exchangeable in native evaluator; no rollouts.",
+      "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--procedural-model",
+        "dos-backrow-background-v1.json"
+      ],
+      "asset_files": [
+        "ai/models/dos-backrow-background-v1.json"
+      ],
+      "procedural_belief_model": "ai/models/dos-backrow-background-v1.json",
+      "procedural_belief_model_sha256": "2afded62322e28996aa194795f5de31c4a05935f98fd419fc2448c3c12824d63",
+      "archive": "ai/sources/580331a8de72ccc4dc0bfbd7f5d6744ea669af4b7410efd69909da5d96e9448e.zip",
+      "source_sha256": "580331a8de72ccc4dc0bfbd7f5d6744ea669af4b7410efd69909da5d96e9448e"
+    },
+    {
+      "id": "student-template-structured-background-v1-normal",
+      "name": "student-template-structured-background-v1-normal",
+      "description": "Replace the20%uniform procedural background by the calibrated12-geometry source model plus1%uniform tail; retain80%source templates.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Replace the20%uniform procedural background by the calibrated12-geometry source model plus1%uniform tail; retain80%source templates. Mobile ranks exchangeable in native evaluator; no rollouts.",
+      "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--procedural-model",
+        "dos-procedural-background-v1.json"
+      ],
+      "asset_files": [
+        "ai/models/dos-procedural-background-v1.json"
+      ],
+      "procedural_belief_model": "ai/models/dos-procedural-background-v1.json",
+      "procedural_belief_model_sha256": "a2053e61021d3d4d5a875576df3cf79eb2e46067fa62a93d5b72023a5b2e7f3e",
+      "archive": "ai/sources/c50ec442351236d970d4614c97c5502083a2ea6420fec1b1138f8481791db340.zip",
+      "source_sha256": "c50ec442351236d970d4614c97c5502083a2ea6420fec1b1138f8481791db340"
+    },
+    {
+      "id": "student-backrow-only-v1-normal",
+      "name": "student-backrow-only-v1-normal",
+      "description": "Minimal source prior:99%uniformlegalarmiesconditionalFlagbackrow plus1%uniformlegalarmies; no template inference.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Minimal source prior:99%uniformlegalarmiesconditionalFlagbackrow plus1%uniformlegalarmies; no template inference. Mobile ranks exchangeable in native evaluator; no rollouts.",
+      "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--procedural-model",
+        "dos-backrow-only-v1.json"
+      ],
+      "asset_files": [
+        "ai/models/dos-backrow-only-v1.json"
+      ],
+      "procedural_belief_model": "ai/models/dos-backrow-only-v1.json",
+      "procedural_belief_model_sha256": "0f4cc1997908bdf9dcf74ac16295c4949e65b50dd4d2638ba82239954dc271b5",
+      "archive": "ai/sources/374b7b1db62e63c4fe3d62e30a7e94209db4b66cdcbfb28bcde23723612b2ba7.zip",
+      "source_sha256": "374b7b1db62e63c4fe3d62e30a7e94209db4b66cdcbfb28bcde23723612b2ba7"
     }
   ]
 }

@@ -1,0 +1,39 @@
+test_backrow_evidence_and_bombs_against_exhaustive_small_model (tools.test_campaign_procedural_beliefs.AnalyticKernels.test_backrow_evidence_and_bombs_against_exhaustive_small_model) ... ok
+test_structured_weighted_fixed_screen_matches_enumeration (tools.test_campaign_procedural_beliefs.AnalyticKernels.test_structured_weighted_fixed_screen_matches_enumeration) ... ok
+test_uniform_geometry_matches_exact_rank_enumeration (tools.test_campaign_procedural_beliefs.AnalyticKernels.test_uniform_geometry_matches_exact_rank_enumeration) ... ok
+test_deduced_adjacent_flag_win_and_reset_both_sides (tools.test_campaign_procedural_beliefs.NativeProceduralDriver.test_deduced_adjacent_flag_win_and_reset_both_sides) ... ok
+test_real_public_history_both_sides_secret_packets_and_native_choices (tools.test_campaign_procedural_beliefs.NativeProceduralDriver.test_real_public_history_both_sides_secret_packets_and_native_choices) ... ok
+test_both_sides_full_inventory_masks_and_hidden_nibbles (tools.test_campaign_procedural_beliefs.PublicMarginals.test_both_sides_full_inventory_masks_and_hidden_nibbles) ... ok
+test_captured_public_rank_retained_and_cache_reuses_enemy_origin_facts (tools.test_campaign_procedural_beliefs.PublicMarginals.test_captured_public_rank_retained_and_cache_reuses_enemy_origin_facts) ... ok
+test_native_only_sampler_fails_explicitly (tools.test_campaign_procedural_beliefs.PublicMarginals.test_native_only_sampler_fails_explicitly) ... ok
+test_uniform_epsilon_reproduces_old_model_and_backrow_is_opt_in (tools.test_campaign_procedural_beliefs.PublicMarginals.test_uniform_epsilon_reproduces_old_model_and_backrow_is_opt_in) ... ok
+test_unknown_evidence_falls_back_to_positive_uniform_support (tools.test_campaign_procedural_beliefs.PublicMarginals.test_unknown_evidence_falls_back_to_positive_uniform_support) ... ok
+test_entrypoint_protocol_bare_setup (tools.test_campaign_native_template.NativeTemplateTests.test_entrypoint_protocol_bare_setup) ... ok
+test_existing_v3_native_driver_remains_byte_identical (tools.test_campaign_native_template.NativeTemplateTests.test_existing_v3_native_driver_remains_byte_identical) ... ok
+test_generated_own_setup_and_reset (tools.test_campaign_native_template.NativeTemplateTests.test_generated_own_setup_and_reset) ... ok
+test_no_external_model_and_one_native_go (tools.test_campaign_native_template.NativeTemplateTests.test_no_external_model_and_one_native_go) ... ok
+test_publicly_deduced_adjacent_flag_win_both_sides (tools.test_campaign_native_template.NativeTemplateTests.test_publicly_deduced_adjacent_flag_win_both_sides) ... ok
+test_real_history_both_sides_private_nibbles_packets_and_choices (tools.test_campaign_native_template.NativeTemplateTests.test_real_history_both_sides_private_nibbles_packets_and_choices) ... ok
+test_evidence_and_marginals_match_all_small_armies (tools.test_procedural_backrow.BackrowTests.test_evidence_and_marginals_match_all_small_armies) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.058s
+
+OK
+
+test_bool_is_not_a_template_mass_control (tools.test_campaign_backrow_only.BackrowOnlyTests.test_bool_is_not_a_template_mass_control) ... ok
+test_off_backrow_flag_keeps_positive_uniform_support (tools.test_campaign_backrow_only.BackrowOnlyTests.test_off_backrow_flag_keeps_positive_uniform_support) ... ok
+test_template_weights_stay_zero_and_template_contents_are_irrelevant (tools.test_campaign_backrow_only.BackrowOnlyTests.test_template_weights_stay_zero_and_template_contents_are_irrelevant) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.035s
+
+OK
+
+test_outside_checkout_exact_model_history_choices_both_sides (tools.test_campaign_procedural_portable.ProceduralPortableTests.test_outside_checkout_exact_model_history_choices_both_sides) ... ok
+test_receipts_and_assets_match_frozen_recipes (tools.test_campaign_procedural_portable.ProceduralPortableTests.test_receipts_and_assets_match_frozen_recipes) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 3.269s
+
+OK
