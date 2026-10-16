@@ -91,7 +91,33 @@ def main():
             assert text(session, 9) == 'YOUR TURN'
             assert (ROOT/'src/L1TILES.BIN').stat().st_size//32 <= 1024
             assert 0x10000+(ROOT/'src/L1TILES.BIN').stat().st_size <= 0x18000
-            print('menus: serif headings, highlight/press frames, delayed action, floating rules/palette, classic reset and VRAM limits: ok')
+            choose(session, 'Escape')
+            choose(session, '3')
+            assert text(session, 43, 17, 22) == 'EXIT'
+            session.shot(ROOT/'build/test-shots/menu-exit.png')
+            choose(session, '7')
+            assert read(session, 'sound_ready', 1) == b'\0'
+            irq = int.from_bytes(session.emu.read_memory(0x314, 2), 'little')
+            assert irq >= 0xC000, 'game still owns IRQ after exit'
+            psg = read_vram(session, 0x1F9C0, 64)
+            assert all(psg[i] & 63 == 0 for i in range(2, 64, 4)), 'audio still playing'
+            assert read_vram(session, 0x1FA00, 8) == bytes.fromhex('0000ff0f0008fe0a')
+            ready = bytes([0x12, 0x05, 0x01, 0x04, 0x19, 0x2E])
+            assert read_vram(session, 0x1B100, 12)[::2] == ready, 'BASIC prompt missing'
+            session.press('P')
+            session.press('R')
+            session.press('I')
+            session.press('N')
+            session.press('T')
+            session.press('space')
+            session.press('4')
+            session.press('2')
+            choose(session, 'Return')
+            screen = read_vram(session, 0x1B000, 30*256)
+            assert any(bytes([32, 52, 50]) in screen[row*256:row*256+160:2]
+                       for row in range(30)), 'BASIC command did not run'
+            session.shot(ROOT/'build/test-shots/exit-basic.png')
+            print('menus: headings, press frames, rules/palette, VRAM limits, exit audio/IRQ cleanup and working BASIC command: ok')
         finally:
             session.emu.close()
 

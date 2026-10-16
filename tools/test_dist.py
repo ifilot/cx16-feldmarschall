@@ -67,6 +67,13 @@ def main():
                 print(f'FAIL after Enter: {name} is not in VRAM at ${address:05X}')
                 failures += 1
         assert emu.screenshot((ROOT / 'build/dist-menu.png').resolve())['captured']
+        # Exiting must return to BASIC even when AUTOBOOT.X16 is present.
+        emu.request('key', key='7', down=True)
+        emu.advance(3)
+        emu.request('key', key='7', down=False)
+        emu.advance(180)
+        ready = bytes([0x12, 0x05, 0x01, 0x04, 0x19, 0x2E])
+        assert read_vram(emu, 0x1B100, 12)[::2] == ready, 'exit rebooted AUTOBOOT or lost the BASIC prompt'
     finally:
         emu.close()
     print(f'distribution boots: {"FAILED" if failures else "ok"} (screen in {shot.relative_to(ROOT)})')

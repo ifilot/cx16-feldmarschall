@@ -32,6 +32,6 @@ $(GFX_ASSETS) &: app_info.h $(wildcard $(SCRIPTS)/*.py) $(wildcard ../assets/pie
 	$(PYTHON) $(SCRIPTS)/build_graphics.py . ../build/preview
 
 clean:
-	rm -f *.o core/*.o ui/*.o scenes/*.o bridge/*.o *.PRG *.BIN *.ZSM *.map *.sym gfx.h color_profiles.h app_info.h music.h sfx.h ai-build.json
+	rm -f *.o core/*.o ui/*.o scenes/*.o *.PRG *.BIN *.ZSM *.map *.sym gfx.h color_profiles.h app_info.h music.h sfx.h ai-build.json
 
 .PHONY: all clean FORCE

@@ -107,14 +107,18 @@ void main(void) {
         switch(scene) {
             case SCENE_DEPLOY: next = deploy_update(); break;
             case SCENE_PREPARE: next = deploy_update(); break;
-            case SCENE_PLAY:   next = play_update(); break;
-            case SCENE_DEMO:   next = play_update(); break;
+            case SCENE_PLAY:
+            case SCENE_DEMO:
             case SCENE_RESUME: next = play_update(); break;
             case SCENE_OPTIONS: next = options_update(); break;
             case SCENE_ABOUT: next = about_update(); break;
             case SCENE_GAME_SETTINGS: next = game_settings_update(); break;
             default:           next = menu_update(); break;
         }
+        if(next == SCENE_EXIT) break;
         if(next != SCENE_STAY) enter(next);
     }
+    sound_shutdown();
+    // CINT restores the KERNAL screen/font/palette without rerunning AUTOBOOT.
+    asm("jsr $FF81");
 }

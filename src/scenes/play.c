@@ -871,10 +871,22 @@ static void begin(void) {
 }
 
 static void new_game(void) {
+    uint8_t i;
     board_clear();
-    setup_ai(1);
-    if(demo) setup_ai(0);
-    else setup_load();
+    if(demo) {
+        setup_random(1);
+        do {
+            setup_random(0);
+            // Compare in each army's home-row orientation, ignoring colour.
+            for(i=0; i<ARMY_SIZE; i++) {
+                if(PIECE_TYPE(board[RED_HOME0 + i]) !=
+                   PIECE_TYPE(board[(3 - i / BOARD_SIZE) * BOARD_SIZE + i % BOARD_SIZE])) break;
+            }
+        } while(i == ARMY_SIZE);
+    } else {
+        setup_ai(1);
+        setup_load();
+    }
     panel_tray_fallen(1);
     rules_reset();
     turn = 1;

@@ -40,6 +40,7 @@
 #define SCENE_GAME_SETTINGS 6
 #define SCENE_RESUME    7       // the play scene, continuing the saved game
 #define SCENE_DEMO      8       // two computer armies, spectator view
+#define SCENE_EXIT      9       // restore the text screen and return to BASIC
 #define SCENE_STAY      0xFF
 
 #define BUTTON_LEFT     0x01

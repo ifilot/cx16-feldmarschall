@@ -5,10 +5,23 @@
 .endscope
 .export _sound_engine_init, _sound_music, _sound_stop, _sound_stop_music, _sound_stop_effects, _sound_sfx
 .import _sound_effects_enabled, _sound_ready, _sound_last_sfx
+.export _sound_shutdown
 .bss
 saved_bank: .res 1
 music_bank: .res 1
 .code
+.proc _sound_shutdown
+    lda _sound_ready
+    beq done
+    php
+    sei
+    jsr _sound_stop
+    jsr zsmkit::zsmkit_clearisr
+    stz _sound_ready
+    plp
+done:
+    rts
+.endproc
 .proc _sound_engine_init
     lda $00
     sta saved_bank

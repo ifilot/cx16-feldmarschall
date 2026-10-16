@@ -9,10 +9,11 @@ import json
 from pathlib import Path
 import tempfile
 
-from feldmarschall import ROOT
 import distribute
 import test_ai_levels
 import test_flow
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():

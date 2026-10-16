@@ -7,7 +7,8 @@ import re
 
 import distribute
 import test_dist
-from feldmarschall import ROOT
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
@@ -27,9 +28,18 @@ def main():
     base=test_dist.X16Agent
 
     class Qualified(base):
+        audio_loaded = False
+
+        def request(self, command, **kwargs):
+            if command == 'key' and kwargs.get('key') == '7' and kwargs.get('down'):
+                assert bytes(self.read_memory(ready,1))==b'\x01', 'AI banks and audio must load from the distribution'
+                self.audio_loaded = True
+            return super().request(command, **kwargs)
+
         def close(self):
             try:
-                assert bytes(self.read_memory(ready,1))==b'\x01', 'AI banks and audio must load from the distribution'
+                assert self.audio_loaded, 'Distribution never reached the exit check'
+                assert bytes(self.read_memory(ready,1))==b'\x00', 'Exit must shut down audio in the distribution'
             finally:
                 super().close()
 

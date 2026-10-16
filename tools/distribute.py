@@ -7,7 +7,7 @@ Writes build/dist/FELDMARSCHALL/ and build/dist/FELDMARSCHALL.ZIP. The runtime f
 are the game itself, a copy named AUTOBOOT.X16 that the X16 starts on
 power-up, every file loaded into VRAM, and the banked code/music/effects
 declared in src/ui/sound.c. The test
-programs (BRIDGE.PRG), saved deployments (DEPLOY.DAT), the saved game
+programs, saved deployments (DEPLOY.DAT), the saved game
 (GAME.DAT) and appearance preferences (COLORS.DAT) stay out. Entries carry a fixed date, so the same build gives the same ZIP.
 """
 import hashlib
@@ -53,15 +53,16 @@ Emulator: x16emu -prg FELDMARS.PRG -run
 
 Press Enter at the splash screen to open the menu.
 Choose 1 SETUPS to create, load or save army arrangements; Back
-returns to the menu. Choose 2 SKIRMISH to deploy your
+returns to the menu. Choose 2 SKIRMISH to select your
 game rules, then deploy your army before a match. Start is enabled when all 40 pieces are on the board.
 Choose 3 LOAD GAME to resume the game saved in GAME.DAT.
-Choose DEMO to watch two computer armies battle with deployments selected
-for the current difficulty and rules. Menu pauses and offers separate music/effects toggles; demos cannot save.
+Choose 6 DEMO to watch two computer armies battle with different random
+setups. Menu pauses and offers separate music/effects toggles; demos cannot save.
 New game at the result starts another demo.
 Choose 4 OPTIONS to select field styles, army colors and rank numbers
 (classic: 1 = Marshal, S = Spy; modern: 1 = Spy, 10 = Marshal).
 Choose 5 ABOUT for the author, repository, version, and compilation date.
+Choose 7 EXIT to stop the sound and return to the command line.
 Click for a live preview. Tab switches groups; Up/Down or numbers select.
 Enter, Escape or Back saves the choices in COLORS.DAT and opens the menu.
 The game is played with the mouse. Deploy your army by dragging pieces

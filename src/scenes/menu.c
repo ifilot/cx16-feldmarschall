@@ -35,14 +35,15 @@
 
 // the plate, in tiles, centred over the board
 #define PLATE_W         34
-#define PLATE_H         32
+#define PLATE_H         36
 #define PLATE_COL       ((BOARD_X + BOARD_SIZE * SQUARE / 2) / 8 - PLATE_W / 2)
-#define PLATE_ROW       ((BOARD_Y + BOARD_SIZE * SQUARE / 2) / 8 - PLATE_H / 2)
+// Keep existing entries in place; extend the plate down for Exit.
+#define PLATE_ROW       ((BOARD_Y + BOARD_SIZE * SQUARE / 2) / 8 - 16)
 #define ENTRY_COL       (PLATE_COL + 4)
 #define ENTRY_ROW0      (PLATE_ROW + 7)
 #define ENTRY_W         (PLATE_W - 8)
 #define ENTRY_PITCH     4
-#define ENTRIES         6
+#define ENTRIES         7
 
 static const char* const entries[ENTRIES] = {
     "SETUPS",
@@ -51,8 +52,9 @@ static const char* const entries[ENTRIES] = {
     "OPTIONS",
     "ABOUT",
     "DEMO",
+    "EXIT",
 };
-static const uint8_t scenes[ENTRIES] = {SCENE_DEPLOY, SCENE_GAME_SETTINGS, SCENE_RESUME, SCENE_OPTIONS, SCENE_ABOUT, SCENE_DEMO};
+static const uint8_t scenes[ENTRIES] = {SCENE_DEPLOY, SCENE_GAME_SETTINGS, SCENE_RESUME, SCENE_OPTIONS, SCENE_ABOUT, SCENE_DEMO, SCENE_EXIT};
 
 static uint8_t choice, pending = 0xFF, press_timer;
 

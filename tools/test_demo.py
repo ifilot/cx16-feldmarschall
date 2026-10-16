@@ -1,6 +1,7 @@
 """Two autonomous armies, private AI views, pause/no-save/resume and demo results."""
 import shutil
 import tempfile
+from collections import Counter
 from pathlib import Path
 
 from distribute import runtime_files
@@ -12,6 +13,17 @@ from test_variants import position, read, write
 def pause(session):
     choose(session, 'Escape')
     assert text(session, 55, 0, 53) == 'GAME PAUSED'
+
+
+def check_setups(session):
+    cells = board(session)
+    red = bytes(c & 15 for c in cells[60:])
+    blue = bytes(cells[(3 - i // 10) * 10 + i % 10] & 15 for i in range(40))
+    expected = Counter(dict(enumerate([1, 1, 2, 3, 4, 4, 4, 5, 8, 1, 6, 1])))
+    assert Counter(red) == Counter(blue) == expected, 'invalid random army'
+    assert red != blue, 'demo armies have identical home-oriented setups'
+    assert red != bytes(c & 15 for c in cells[:40]), 'demo armies have identical screen layouts'
+    return red, blue
 
 
 def main():
@@ -26,15 +38,20 @@ def main():
             choose(session, 'R')
             prepared = board(session)[60:]
             choose(session, 'Escape')
+            reset = symbol('ai_reset')
+            session.emu.request('breakpoint', address=reset)
             click(session, 180, 316)  # sixth menu entry, Watch demo
+            first_setups = check_setups(session)
+            session.emu.request('breakpoint', action='remove', address=reset)
+            session.emu.advance(1)
             assert read(session, 'view_show_all', 1) == b'\x01'
-            assert text(session, 9) in ('RED COMPUTER', 'BLUE COMPUTER')
             # Observe eight real AI turns. Spectator visibility must never leak
             # enemy ranks to either AI, and own ranks must remain available.
             address = symbol('ai_move')
             session.emu.request('breakpoint', address=address)
             for i in range(8):
                 assert session.emu.advance(600)['reason'] == 'breakpoint'
+                assert text(session, 9) in ('RED COMPUTER', 'BLUE COMPUTER')
                 cells = board(session)
                 hidden_sides = {bool(c & 16) for c in cells if c < 254 and c & 15 == 12}
                 assert len(hidden_sides) == 1, 'AI sees true ranks of unrevealed enemies'
@@ -80,7 +97,11 @@ def main():
             choose(session, 'Escape')
 
             # Both armies autonomously rescue their strongest casualty.
+            session.emu.request('breakpoint', address=reset)
             choose(session, '6')
+            assert check_setups(session) != first_setups, 'new demo reused both setups'
+            session.emu.request('breakpoint', action='remove', address=reset)
+            session.emu.advance(1)
             pause(session)
             position(session, {0: 255, 9: 0x1B, 10: 1, 80: 0x11, 99: 11})
             write(session, 'game_rules', [32])
@@ -124,7 +145,7 @@ def main():
             snapshot = board(session)
             session.emu.advance(300)
             assert board(session) == snapshot
-            print('demo: both AI views and turns, pause/no-save/resume, prepared setup, both rescues, result/restart, normal play: ok')
+            print('demo: varied distinct legal setups, both AI views and turns, pause/no-save/resume, prepared setup, rescues, result/restart, normal play: ok')
         finally:
             session.emu.close()
 
