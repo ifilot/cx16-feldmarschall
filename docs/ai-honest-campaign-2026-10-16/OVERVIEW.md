@@ -12,6 +12,8 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 | 103 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-mobile-goals-v1-normal | 68 / 61 / 122 | 39.2% | 5 |
 | 104 | missions-v1-normal; development corpus | student-fortress-template-flag-bomb-v1-normal | 53 / 1 / 42 | 55.7% | 0 |
 | 104 | missions-v1-normal; development corpus | student-fortress-template-mobile-goals-v1-normal | 51 / 0 / 45 | 53.1% | 0 |
+| 105 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 77 / 48 / 126 | 40.2% | 5 |
+| 105 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-missed-background-v1-normal | 78 / 48 / 126 | 40.5% | 4 |
 | 107 | missions-v1-normal; development corpus | student-fortress-template-flag-bomb-v1-normal | 53 / 1 / 42 | 55.7% | 0 |
 | 107 | missions-v1-normal; development corpus | student-fortress-template-missed-background-v2-normal | 54 / 1 / 41 | 56.8% | 0 |
 | 109 | missions-v1-normal; development corpus | student-fortress-template-flag-bomb-v1-normal | 49 / 1 / 46 | 51.6% | 0 |
@@ -43,7 +45,8 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 
 **Cycle 105:** An opponent declining an available unprotected winning capture provides weak evidence about that concealed piece rank; exact rank-level conditioning may improve public Flag/Bomb risk estimates even after fixed templates are eliminated.
 
-No completed strength result. [Frozen plan](cycle-105-missed-capture-beliefs/plan.json).
+[Results and family breakdown](cycle-105-missed-capture-beliefs/result.json).
+- student-fortress-template-missed-background-v1-normal minus student-fortress-template-flag-bomb-v1-normal: +0.41 points; 95% paired interval [-0.41, +1.42].
 
 **Cycle 106:** Test the same single missed-capture rank hypothesis with corrected public source-vacancy geometry: protected captures must not be interpreted as free opportunities.
 
@@ -64,10 +67,3 @@ No completed strength result. [Frozen plan](cycle-108-belief-regime-reset/plan.j
 [Results and family breakdown](cycle-109-regime-reset-generality/result.json).
 - student-fortress-template-regime-reset-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -1.04 points; 95% paired interval [-3.12, +0.00].
 [Interpretation](cycle-109-regime-reset-generality/CONCLUSION.md).
-
-**Additional hypotheses evaluated before tournaments**
-
-These mechanism and incidence checks supply no DOS score. Rejected preflights remain visible.
-
-- **Use declined public captures to reweight only source templates** (rejected preflight: inert consumer): Evidence appeared in 188 of 200 side histories from 100 old screening games, but no component posterior changed above 1e-12. Public facts had resolved or eliminated those components. Zero new tournament games; no strength claim. [Evidence 1](research/information/README.md). [Evidence 2](research/information/activation.json).
-- **Preserve an undisclosed Marshal or General when a disclosed actor has an equally good safe capture** (rejected preflight: no eligible actions): Zero eligible choices in 356 fixed sampled roots from 48 old screening games, both colors. All 6,520 intervening baseline decisions reproduced. Even the same-victim alternative gate failed, so relaxing only exact score equality would not establish incidence. Zero new tournament games; no strength claim. [Evidence 1](research/objectives/SECRECY-CONCLUSION.md). [Evidence 2](research/objectives/secrecy-result.json).

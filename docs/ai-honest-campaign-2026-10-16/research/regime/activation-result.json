@@ -1,0 +1,1671 @@
+{
+  "kind": "public-regime-reset-old-screen-activation-v1",
+  "strength_evidence": false,
+  "protocol_sha256": "4d47f6db99f2bd5efca1894efc3efac0a2ed879ed01176104dc3385d7ef8515b",
+  "history_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "counts": {
+    "registered_launcher_choice_parity": 35162,
+    "forced_played_corrections_baseline": 9483,
+    "forced_played_corrections_candidate": 9483,
+    "side_histories": 80,
+    "own_decisions": 17581,
+    "histories_with_gate": 50,
+    "histories_with_changed_choice": 0,
+    "changed_choices": 0
+  },
+  "host_seconds": 176.94971824000095,
+  "costs": {
+    "baseline": {
+      "mean_choose_seconds": 0.001359994277248033,
+      "mean_public_observe_seconds_per_own_decision": 0.00026522780296700884
+    },
+    "candidate": {
+      "mean_choose_seconds": 0.0013670528343883506,
+      "mean_public_observe_seconds_per_own_decision": 0.00030175340686726756
+    }
+  },
+  "mean_additional_choose_and_public_observe_seconds_per_own_decision": 4.358416104057643e-05,
+  "interpretation": "All own decisions were executed through complete forced old screening histories. Each adapter matched its registered frozen launcher at every decision and corrected divergent chosen moves to the saved actual move. First changed choices are mechanism evidence; later changed choices are correlated consequences, not independent roots. Timings are host wall time under concurrent load, not CX16 timing. No strength games or validation layouts were used.",
+  "records": [
+    {
+      "game": 1,
+      "army": 0,
+      "saved_plies": 181,
+      "own_decisions": 91,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.14162179096456384,
+        "candidate": 0.1364419000237831
+      },
+      "public_observe_seconds": {
+        "baseline": 0.035724736902920995,
+        "candidate": 0.03785855498426827
+      }
+    },
+    {
+      "game": 1,
+      "army": 1,
+      "saved_plies": 181,
+      "own_decisions": 90,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.15568179295951268,
+        "candidate": 0.14508573505736422
+      },
+      "public_observe_seconds": {
+        "baseline": 0.027599228029430378,
+        "candidate": 0.026132334969588555
+      }
+    },
+    {
+      "game": 2,
+      "army": 0,
+      "saved_plies": 514,
+      "own_decisions": 257,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "battle b4 b7 9 4"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.27391856904432643,
+        "candidate": 0.23517623398220167
+      },
+      "public_observe_seconds": {
+        "baseline": 0.0484540291436133,
+        "candidate": 0.0634112880070461
+      }
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "saved_plies": 514,
+      "own_decisions": 257,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.30040825998730725,
+        "candidate": 0.29803995604015654
+      },
+      "public_observe_seconds": {
+        "baseline": 0.06669631996192038,
+        "candidate": 0.09590075199230341
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "saved_plies": 374,
+      "own_decisions": 187,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.23571716199512593,
+        "candidate": 0.25732068801880814
+      },
+      "public_observe_seconds": {
+        "baseline": 0.055651118978857994,
+        "candidate": 0.05130439100321382
+      }
+    },
+    {
+      "game": 3,
+      "army": 1,
+      "saved_plies": 374,
+      "own_decisions": 187,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved a4 a6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.3015468599551241,
+        "candidate": 0.31904830596613465
+      },
+      "public_observe_seconds": {
+        "baseline": 0.05153955910645891,
+        "candidate": 0.05768941999122035
+      }
+    },
+    {
+      "game": 4,
+      "army": 0,
+      "saved_plies": 356,
+      "own_decisions": 178,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "battle b4 b7 9 4"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.19841666798311053,
+        "candidate": 0.20789125304145273
+      },
+      "public_observe_seconds": {
+        "baseline": 0.050074839920853265,
+        "candidate": 0.07650196304894052
+      }
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "saved_plies": 356,
+      "own_decisions": 178,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.2035657680244185,
+        "candidate": 0.19981679502234329
+      },
+      "public_observe_seconds": {
+        "baseline": 0.05066416003683116,
+        "candidate": 0.046078935942205135
+      }
+    },
+    {
+      "game": 5,
+      "army": 0,
+      "saved_plies": 240,
+      "own_decisions": 120,
+      "gate": {
+        "ply": 4,
+        "own_decision": 3,
+        "public_event": "battle f7 f6 6 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.20316683602140984,
+        "candidate": 0.22535902795789298
+      },
+      "public_observe_seconds": {
+        "baseline": 0.05934667106339475,
+        "candidate": 0.04077482406864874
+      }
+    },
+    {
+      "game": 5,
+      "army": 1,
+      "saved_plies": 240,
+      "own_decisions": 120,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved f4 f6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.11733315402670996,
+        "candidate": 0.12986464998539304
+      },
+      "public_observe_seconds": {
+        "baseline": 0.019558683976356406,
+        "candidate": 0.02851228894724045
+      }
+    },
+    {
+      "game": 6,
+      "army": 0,
+      "saved_plies": 187,
+      "own_decisions": 94,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved j7 j5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.16103568202379392,
+        "candidate": 0.1920263049833011
+      },
+      "public_observe_seconds": {
+        "baseline": 0.023612116056028754,
+        "candidate": 0.029944889931357466
+      }
+    },
+    {
+      "game": 6,
+      "army": 1,
+      "saved_plies": 187,
+      "own_decisions": 93,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "battle j4 j5 5 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.10831016801239457,
+        "candidate": 0.10705032602709252
+      },
+      "public_observe_seconds": {
+        "baseline": 0.01537504810403334,
+        "candidate": 0.02068342797429068
+      }
+    },
+    {
+      "game": 7,
+      "army": 0,
+      "saved_plies": 419,
+      "own_decisions": 210,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.2629236209759256,
+        "candidate": 0.2539298580013565
+      },
+      "public_observe_seconds": {
+        "baseline": 0.07272278115851805,
+        "candidate": 0.06343497202760773
+      }
+    },
+    {
+      "game": 7,
+      "army": 1,
+      "saved_plies": 419,
+      "own_decisions": 209,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved f4 f6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.2846821489802096,
+        "candidate": 0.27463431895012036
+      },
+      "public_observe_seconds": {
+        "baseline": 0.05577780189196346,
+        "candidate": 0.05476236498361686
+      }
+    },
+    {
+      "game": 8,
+      "army": 0,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved j7 j5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.6043423008959508,
+        "candidate": 0.5694843919482082
+      },
+      "public_observe_seconds": {
+        "baseline": 0.13853753691364545,
+        "candidate": 0.15657123005803442
+      }
+    },
+    {
+      "game": 8,
+      "army": 1,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.6865835229982622,
+        "candidate": 0.739897680003196
+      },
+      "public_observe_seconds": {
+        "baseline": 0.16996324501087656,
+        "candidate": 0.2254065339511726
+      }
+    },
+    {
+      "game": 9,
+      "army": 0,
+      "saved_plies": 360,
+      "own_decisions": 180,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.25443597595585743,
+        "candidate": 0.24724977996083908
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04862909697112627,
+        "candidate": 0.06370307598990621
+      }
+    },
+    {
+      "game": 9,
+      "army": 1,
+      "saved_plies": 360,
+      "own_decisions": 180,
+      "gate": {
+        "ply": 1,
+        "own_decision": 1,
+        "public_event": "moved f4 f6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.32639501601079246,
+        "candidate": 0.31053497794346185
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04320123590878211,
+        "candidate": 0.06036469200626016
+      }
+    },
+    {
+      "game": 10,
+      "army": 0,
+      "saved_plies": 992,
+      "own_decisions": 496,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved j7 j5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.6885342469904572,
+        "candidate": 0.7531778101038071
+      },
+      "public_observe_seconds": {
+        "baseline": 0.16461501387675526,
+        "candidate": 0.19167130408459343
+      }
+    },
+    {
+      "game": 10,
+      "army": 1,
+      "saved_plies": 992,
+      "own_decisions": 496,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.7826576010120334,
+        "candidate": 0.7075358841029811
+      },
+      "public_observe_seconds": {
+        "baseline": 0.15522533799230587,
+        "candidate": 0.2007949548860779
+      }
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.6253600839700084,
+        "candidate": 0.6048789740380016
+      },
+      "public_observe_seconds": {
+        "baseline": 0.15182483801618218,
+        "candidate": 0.14310738813946955
+      }
+    },
+    {
+      "game": 11,
+      "army": 1,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.5717370390993892,
+        "candidate": 0.6096241238992661
+      },
+      "public_observe_seconds": {
+        "baseline": 0.13972497293434571,
+        "candidate": 0.14136560408223886
+      }
+    },
+    {
+      "game": 12,
+      "army": 0,
+      "saved_plies": 343,
+      "own_decisions": 172,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved f7 f5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.3483272078956361,
+        "candidate": 0.2931691860212595
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04275737614079844,
+        "candidate": 0.05423088400857523
+      }
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "saved_plies": 343,
+      "own_decisions": 171,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.24855698800092796,
+        "candidate": 0.2739879870132427
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04319897513050819,
+        "candidate": 0.056740975051070563
+      }
+    },
+    {
+      "game": 13,
+      "army": 0,
+      "saved_plies": 316,
+      "own_decisions": 158,
+      "gate": {
+        "ply": 4,
+        "own_decision": 3,
+        "public_event": "battle j7 j6 9 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.279591901024105,
+        "candidate": 0.2868744540173793
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04326795296947239,
+        "candidate": 0.05852698298258474
+      }
+    },
+    {
+      "game": 13,
+      "army": 1,
+      "saved_plies": 316,
+      "own_decisions": 158,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "battle a7 a4 9 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.2380705060204491,
+        "candidate": 0.21104245199967409
+      },
+      "public_observe_seconds": {
+        "baseline": 0.03768742002284853,
+        "candidate": 0.03605305794189917
+      }
+    },
+    {
+      "game": 14,
+      "army": 0,
+      "saved_plies": 275,
+      "own_decisions": 138,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved a7 a5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.29360489703685744,
+        "candidate": 0.27208844494452933
+      },
+      "public_observe_seconds": {
+        "baseline": 0.03971750797063578,
+        "candidate": 0.04295843007275835
+      }
+    },
+    {
+      "game": 14,
+      "army": 1,
+      "saved_plies": 275,
+      "own_decisions": 137,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "battle a4 a5 9 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.3067717089870712,
+        "candidate": 0.29835503408685327
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04002949001733214,
+        "candidate": 0.08142185901670018
+      }
+    },
+    {
+      "game": 15,
+      "army": 0,
+      "saved_plies": 231,
+      "own_decisions": 116,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.1893320729432162,
+        "candidate": 0.19706629597203573
+      },
+      "public_observe_seconds": {
+        "baseline": 0.0380639249124215,
+        "candidate": 0.042815404980501626
+      }
+    },
+    {
+      "game": 15,
+      "army": 1,
+      "saved_plies": 231,
+      "own_decisions": 115,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.23497505807608832,
+        "candidate": 0.22037908801576123
+      },
+      "public_observe_seconds": {
+        "baseline": 0.03243261013267329,
+        "candidate": 0.033981592052441556
+      }
+    },
+    {
+      "game": 16,
+      "army": 0,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved f7 f5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.7019360949707334,
+        "candidate": 0.709295676992042
+      },
+      "public_observe_seconds": {
+        "baseline": 0.1846177691477351,
+        "candidate": 0.21009058604977326
+      }
+    },
+    {
+      "game": 16,
+      "army": 1,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.7086852539650863,
+        "candidate": 0.7333046620333334
+      },
+      "public_observe_seconds": {
+        "baseline": 0.172799483028939,
+        "candidate": 0.22203408111818135
+      }
+    },
+    {
+      "game": 17,
+      "army": 0,
+      "saved_plies": 308,
+      "own_decisions": 154,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.29323181500512874,
+        "candidate": 0.2129841739879339
+      },
+      "public_observe_seconds": {
+        "baseline": 0.06394072599505307,
+        "candidate": 0.060380208073183894
+      }
+    },
+    {
+      "game": 17,
+      "army": 1,
+      "saved_plies": 308,
+      "own_decisions": 154,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "battle b7 b4 9 S"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.2814671950181946,
+        "candidate": 0.31079933701403206
+      },
+      "public_observe_seconds": {
+        "baseline": 0.054849110943905544,
+        "candidate": 0.06396558605774771
+      }
+    },
+    {
+      "game": 18,
+      "army": 0,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "battle i4 i7 9 S"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 1.1184867448973819,
+        "candidate": 1.0993141361323069
+      },
+      "public_observe_seconds": {
+        "baseline": 0.16506045782443834,
+        "candidate": 0.15934959394508041
+      }
+    },
+    {
+      "game": 18,
+      "army": 1,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.8458991058869287,
+        "candidate": 0.8931098379471223
+      },
+      "public_observe_seconds": {
+        "baseline": 0.11026175606821198,
+        "candidate": 0.18675688406801783
+      }
+    },
+    {
+      "game": 19,
+      "army": 0,
+      "saved_plies": 253,
+      "own_decisions": 127,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.23027223897952354,
+        "candidate": 0.2406099490399356
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04257085599965649,
+        "candidate": 0.0432362789142644
+      }
+    },
+    {
+      "game": 19,
+      "army": 1,
+      "saved_plies": 253,
+      "own_decisions": 126,
+      "gate": {
+        "ply": 1,
+        "own_decision": 1,
+        "public_event": "moved f4 f6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.15757861602469347,
+        "candidate": 0.16631223899457837
+      },
+      "public_observe_seconds": {
+        "baseline": 0.03009341399592813,
+        "candidate": 0.028924228994583245
+      }
+    },
+    {
+      "game": 20,
+      "army": 0,
+      "saved_plies": 429,
+      "own_decisions": 215,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved a7 a5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.2336951250472339,
+        "candidate": 0.23530173693143297
+      },
+      "public_observe_seconds": {
+        "baseline": 0.03661510092206299,
+        "candidate": 0.05046247594873421
+      }
+    },
+    {
+      "game": 20,
+      "army": 1,
+      "saved_plies": 429,
+      "own_decisions": 214,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.19313403003616259,
+        "candidate": 0.20243254210072337
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04758988994581159,
+        "candidate": 0.05312157596927136
+      }
+    },
+    {
+      "game": 21,
+      "army": 0,
+      "saved_plies": 258,
+      "own_decisions": 129,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.11187443196104141,
+        "candidate": 0.11375793897605035
+      },
+      "public_observe_seconds": {
+        "baseline": 0.02858537493739277,
+        "candidate": 0.026922337034193333
+      }
+    },
+    {
+      "game": 21,
+      "army": 1,
+      "saved_plies": 258,
+      "own_decisions": 129,
+      "gate": {
+        "ply": 1,
+        "own_decision": 1,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.1419510180130601,
+        "candidate": 0.13268899101240095
+      },
+      "public_observe_seconds": {
+        "baseline": 0.02189479803928407,
+        "candidate": 0.025676051947812084
+      }
+    },
+    {
+      "game": 22,
+      "army": 0,
+      "saved_plies": 302,
+      "own_decisions": 151,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved a7 a5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.13107549703272525,
+        "candidate": 0.12578662098530913
+      },
+      "public_observe_seconds": {
+        "baseline": 0.02113196403661277,
+        "candidate": 0.027064456000516657
+      }
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "saved_plies": 302,
+      "own_decisions": 151,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.12893273494410096,
+        "candidate": 0.12166230697766878
+      },
+      "public_observe_seconds": {
+        "baseline": 0.02230120404419722,
+        "candidate": 0.029949492040032055
+      }
+    },
+    {
+      "game": 23,
+      "army": 0,
+      "saved_plies": 125,
+      "own_decisions": 63,
+      "gate": {
+        "ply": 6,
+        "own_decision": 4,
+        "public_event": "battle f7 f6 7 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.0802266269820393,
+        "candidate": 0.07520029698935105
+      },
+      "public_observe_seconds": {
+        "baseline": 0.014436107994697522,
+        "candidate": 0.013008032074139919
+      }
+    },
+    {
+      "game": 23,
+      "army": 1,
+      "saved_plies": 125,
+      "own_decisions": 62,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.06858018202183302,
+        "candidate": 0.09450676799315261
+      },
+      "public_observe_seconds": {
+        "baseline": 0.013125761026458349,
+        "candidate": 0.01072102997568436
+      }
+    },
+    {
+      "game": 24,
+      "army": 0,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved e7 e5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.4045133740291931,
+        "candidate": 0.4191917468851898
+      },
+      "public_observe_seconds": {
+        "baseline": 0.06949702105339384,
+        "candidate": 0.08037288505147444
+      }
+    },
+    {
+      "game": 24,
+      "army": 1,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "battle e4 e5 7 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.43098352304514265,
+        "candidate": 0.46079183702386217
+      },
+      "public_observe_seconds": {
+        "baseline": 0.08663661302125547,
+        "candidate": 0.08762172304705018
+      }
+    },
+    {
+      "game": 25,
+      "army": 0,
+      "saved_plies": 249,
+      "own_decisions": 125,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.23019153402128723,
+        "candidate": 0.197447099009878
+      },
+      "public_observe_seconds": {
+        "baseline": 0.053831408942642156,
+        "candidate": 0.0431758449121844
+      }
+    },
+    {
+      "game": 25,
+      "army": 1,
+      "saved_plies": 249,
+      "own_decisions": 124,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.10215394095575903,
+        "candidate": 0.11667680802929681
+      },
+      "public_observe_seconds": {
+        "baseline": 0.022229888054425828,
+        "candidate": 0.02148872599354945
+      }
+    },
+    {
+      "game": 26,
+      "army": 0,
+      "saved_plies": 247,
+      "own_decisions": 124,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved a7 a5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.1147227429682971,
+        "candidate": 0.11747243003628682
+      },
+      "public_observe_seconds": {
+        "baseline": 0.02094105906871846,
+        "candidate": 0.022343217075103894
+      }
+    },
+    {
+      "game": 26,
+      "army": 1,
+      "saved_plies": 247,
+      "own_decisions": 123,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.19402277697372483,
+        "candidate": 0.15491568397555966
+      },
+      "public_observe_seconds": {
+        "baseline": 0.036034644006576855,
+        "candidate": 0.0469095290536643
+      }
+    },
+    {
+      "game": 27,
+      "army": 0,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.6436884941140306,
+        "candidate": 0.6420099299939466
+      },
+      "public_observe_seconds": {
+        "baseline": 0.08442040703812381,
+        "candidate": 0.10095277712389361
+      }
+    },
+    {
+      "game": 27,
+      "army": 1,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 1,
+        "own_decision": 1,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.5481824559465167,
+        "candidate": 0.5420403740718029
+      },
+      "public_observe_seconds": {
+        "baseline": 0.08739949202572461,
+        "candidate": 0.08651254684082232
+      }
+    },
+    {
+      "game": 28,
+      "army": 0,
+      "saved_plies": 147,
+      "own_decisions": 74,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "battle i4 i7 9 S"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.07009096003457671,
+        "candidate": 0.07264460098667769
+      },
+      "public_observe_seconds": {
+        "baseline": 0.010330830984457862,
+        "candidate": 0.012708866037428379
+      }
+    },
+    {
+      "game": 28,
+      "army": 1,
+      "saved_plies": 147,
+      "own_decisions": 73,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.06739703098719474,
+        "candidate": 0.0647656939981971
+      },
+      "public_observe_seconds": {
+        "baseline": 0.010862650982744526,
+        "candidate": 0.01361589202133473
+      }
+    },
+    {
+      "game": 29,
+      "army": 0,
+      "saved_plies": 102,
+      "own_decisions": 51,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.04878972395090386,
+        "candidate": 0.052616692024457734
+      },
+      "public_observe_seconds": {
+        "baseline": 0.007643054981599562,
+        "candidate": 0.008501731055730488
+      }
+    },
+    {
+      "game": 29,
+      "army": 1,
+      "saved_plies": 102,
+      "own_decisions": 51,
+      "gate": {
+        "ply": 1,
+        "own_decision": 1,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.13796968898532214,
+        "candidate": 0.1472642310181982
+      },
+      "public_observe_seconds": {
+        "baseline": 0.010644524081726559,
+        "candidate": 0.018214647985587362
+      }
+    },
+    {
+      "game": 30,
+      "army": 0,
+      "saved_plies": 169,
+      "own_decisions": 85,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "battle b4 b7 9 4"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.1146934439893812,
+        "candidate": 0.12186704999476206
+      },
+      "public_observe_seconds": {
+        "baseline": 0.02918089594459161,
+        "candidate": 0.03080499300995143
+      }
+    },
+    {
+      "game": 30,
+      "army": 1,
+      "saved_plies": 169,
+      "own_decisions": 84,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.08253729200077942,
+        "candidate": 0.08128528300585458
+      },
+      "public_observe_seconds": {
+        "baseline": 0.010871796002902556,
+        "candidate": 0.01585763497860171
+      }
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "saved_plies": 364,
+      "own_decisions": 182,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "battle j7 j6 7 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.14042246800818248,
+        "candidate": 0.13262336698971922
+      },
+      "public_observe_seconds": {
+        "baseline": 0.02586550001433352,
+        "candidate": 0.02820007497939514
+      }
+    },
+    {
+      "game": 31,
+      "army": 1,
+      "saved_plies": 364,
+      "own_decisions": 182,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "battle a4 a7 9 5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.1503745069494471,
+        "candidate": 0.14537975902931066
+      },
+      "public_observe_seconds": {
+        "baseline": 0.04090336100489367,
+        "candidate": 0.04173353804071667
+      }
+    },
+    {
+      "game": 32,
+      "army": 0,
+      "saved_plies": 101,
+      "own_decisions": 51,
+      "gate": {
+        "ply": 4,
+        "own_decision": 3,
+        "public_event": "moved a7 a5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.049952500012295786,
+        "candidate": 0.04747205300373025
+      },
+      "public_observe_seconds": {
+        "baseline": 0.007163015005062334,
+        "candidate": 0.008410177011683118
+      }
+    },
+    {
+      "game": 32,
+      "army": 1,
+      "saved_plies": 101,
+      "own_decisions": 50,
+      "gate": {
+        "ply": 5,
+        "own_decision": 3,
+        "public_event": "battle a4 a5 7 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.04538783898897236,
+        "candidate": 0.04231510200042976
+      },
+      "public_observe_seconds": {
+        "baseline": 0.007837064003979322,
+        "candidate": 0.008020666042284574
+      }
+    },
+    {
+      "game": 33,
+      "army": 0,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.4329077649235842,
+        "candidate": 0.41877580912114354
+      },
+      "public_observe_seconds": {
+        "baseline": 0.07754215902241413,
+        "candidate": 0.09804201719816774
+      }
+    },
+    {
+      "game": 33,
+      "army": 1,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.4898565768744447,
+        "candidate": 0.503525881904352
+      },
+      "public_observe_seconds": {
+        "baseline": 0.08261437989858678,
+        "candidate": 0.08720086397079285
+      }
+    },
+    {
+      "game": 34,
+      "army": 0,
+      "saved_plies": 133,
+      "own_decisions": 67,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved f7 f5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.11580283498187782,
+        "candidate": 0.12009846995351836
+      },
+      "public_observe_seconds": {
+        "baseline": 0.01266698101971997,
+        "candidate": 0.01621581499784952
+      }
+    },
+    {
+      "game": 34,
+      "army": 1,
+      "saved_plies": 133,
+      "own_decisions": 66,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.09666480300802505,
+        "candidate": 0.08554692299367161
+      },
+      "public_observe_seconds": {
+        "baseline": 0.021257761989545543,
+        "candidate": 0.028187635049107485
+      }
+    },
+    {
+      "game": 35,
+      "army": 0,
+      "saved_plies": 307,
+      "own_decisions": 154,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.2365691019804217,
+        "candidate": 0.2669845239506685
+      },
+      "public_observe_seconds": {
+        "baseline": 0.043585261002590414,
+        "candidate": 0.05195674896094715
+      }
+    },
+    {
+      "game": 35,
+      "army": 1,
+      "saved_plies": 307,
+      "own_decisions": 153,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved f4 f6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.18655588297406211,
+        "candidate": 0.18311498695402406
+      },
+      "public_observe_seconds": {
+        "baseline": 0.037843117977899965,
+        "candidate": 0.04695266702765366
+      }
+    },
+    {
+      "game": 36,
+      "army": 0,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "moved a7 a5"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.4918473629732034,
+        "candidate": 0.46613713397528045
+      },
+      "public_observe_seconds": {
+        "baseline": 0.11869833698438015,
+        "candidate": 0.13155394018394873
+      }
+    },
+    {
+      "game": 36,
+      "army": 1,
+      "saved_plies": 1000,
+      "own_decisions": 500,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.44232465995446546,
+        "candidate": 0.480252101100632
+      },
+      "public_observe_seconds": {
+        "baseline": 0.11740030969667714,
+        "candidate": 0.14147346319805365
+      }
+    },
+    {
+      "game": 37,
+      "army": 0,
+      "saved_plies": 281,
+      "own_decisions": 141,
+      "gate": {
+        "ply": 4,
+        "own_decision": 3,
+        "public_event": "battle e7 e6 5 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.2691166829317808,
+        "candidate": 0.2770512079659966
+      },
+      "public_observe_seconds": {
+        "baseline": 0.07509771297191037,
+        "candidate": 0.04897730598895578
+      }
+    },
+    {
+      "game": 37,
+      "army": 1,
+      "saved_plies": 281,
+      "own_decisions": 140,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved e4 e6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.3868005689873826,
+        "candidate": 0.3138540660656872
+      },
+      "public_observe_seconds": {
+        "baseline": 0.040033786979620345,
+        "candidate": 0.03814864101150306
+      }
+    },
+    {
+      "game": 38,
+      "army": 0,
+      "saved_plies": 111,
+      "own_decisions": 56,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "battle b4 b7 9 4"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.14287716299440945,
+        "candidate": 0.15345539998088498
+      },
+      "public_observe_seconds": {
+        "baseline": 0.0205467049672734,
+        "candidate": 0.021826896962011233
+      }
+    },
+    {
+      "game": 38,
+      "army": 1,
+      "saved_plies": 111,
+      "own_decisions": 55,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "battle e4 e5 7 9"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.19151380600669654,
+        "candidate": 0.22770529503031867
+      },
+      "public_observe_seconds": {
+        "baseline": 0.036556901039148215,
+        "candidate": 0.029422768035146873
+      }
+    },
+    {
+      "game": 39,
+      "army": 0,
+      "saved_plies": 446,
+      "own_decisions": 223,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.4008304809976835,
+        "candidate": 0.4070698129798984
+      },
+      "public_observe_seconds": {
+        "baseline": 0.08291426311188843,
+        "candidate": 0.09656266802630853
+      }
+    },
+    {
+      "game": 39,
+      "army": 1,
+      "saved_plies": 446,
+      "own_decisions": 223,
+      "gate": {
+        "ply": 3,
+        "own_decision": 2,
+        "public_event": "moved f4 f6"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.40033914308878593,
+        "candidate": 0.4019541640809621
+      },
+      "public_observe_seconds": {
+        "baseline": 0.10018675694300327,
+        "candidate": 0.07391212999209529
+      }
+    },
+    {
+      "game": 40,
+      "army": 0,
+      "saved_plies": 461,
+      "own_decisions": 231,
+      "gate": {
+        "ply": 2,
+        "own_decision": 2,
+        "public_event": "battle b4 b7 9 4"
+      },
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 1,
+      "choose_seconds": {
+        "baseline": 0.4176535950100515,
+        "candidate": 0.4634592960064765
+      },
+      "public_observe_seconds": {
+        "baseline": 0.0788952360235271,
+        "candidate": 0.09502046391571639
+      }
+    },
+    {
+      "game": 40,
+      "army": 1,
+      "saved_plies": 461,
+      "own_decisions": 230,
+      "gate": null,
+      "first_changed_choice": null,
+      "changed_choices": 0,
+      "reset_calls": 0,
+      "choose_seconds": {
+        "baseline": 0.5776933459928841,
+        "candidate": 0.6622919370056479
+      },
+      "public_observe_seconds": {
+        "baseline": 0.10328970491536893,
+        "candidate": 0.1298598759676679
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "student-fortress-template-flag-bomb-v1-normal": {
+    "id": "student-fortress-template-flag-bomb-v1-normal",
+    "name": "student-fortress-template-flag-bomb-v1-normal",
+    "description": "Combine unchanged source-informed Flag/Bomb inference with unchanged Fortress-only own deployment.",
+    "sources": [
+      "src/native/engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "src/core/ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "defines": [
+      "AI_MISSIONS",
+      "AI_MEMORY",
+      "AI_STUDENT",
+      "AI_STUDENT_V2",
+      "AI_STUDENT_PRODUCTION",
+      "AI_STUDENT_COOP_GUARD",
+      "AI_POLICY_DEPLOYMENT",
+      "AI_BELIEF_PRIORS",
+      "AI_TEST",
+      "AI_DIAGNOSTICS",
+      "AI_DEPLOY_FORTRESS_ONLY"
+    ],
+    "difficulty": "normal",
+    "status": "experimental",
+    "include_dirs": [],
+    "model": "Fixed source-informed 80% opening-template mixture plus 20% uniform legal-army background. Native evaluator receives only Flag/Bomb marginals; mobile ranks remain exchangeable. Own deployment is Fortress-only with the same RNG ticket consumption.",
+    "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+    "driver": "native-template",
+    "driver_args": [],
+    "archive": "ai/sources/3d9897c48be4ab61ac9821fc8ff0c4c65042b2a55f079c248089d079b08c2836.zip",
+    "source_sha256": "3d9897c48be4ab61ac9821fc8ff0c4c65042b2a55f079c248089d079b08c2836"
+  },
+  "student-fortress-template-regime-reset-v1-normal": {
+    "id": "student-fortress-template-regime-reset-v1-normal",
+    "name": "Fortress Student with public belief-regime goal reset v1 / Normal",
+    "description": "Reconsider persistent pursuit once public evidence rules out all source templates, without resetting missions, risk or RNG.",
+    "sources": [
+      "tools/new_campaign_regime_engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "tools/new_campaign_regime_ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "defines": [
+      "AI_MISSIONS",
+      "AI_MEMORY",
+      "AI_STUDENT",
+      "AI_STUDENT_V2",
+      "AI_STUDENT_PRODUCTION",
+      "AI_STUDENT_COOP_GUARD",
+      "AI_POLICY_DEPLOYMENT",
+      "AI_BELIEF_PRIORS",
+      "AI_TEST",
+      "AI_DIAGNOSTICS",
+      "AI_DEPLOY_FORTRESS_ONLY"
+    ],
+    "difficulty": "normal",
+    "status": "experimental",
+    "include_dirs": [],
+    "model": "Unchanged80%source-template/20%uniformbackgroundandFlag/Bombconsumer. Exactpublichardcompatibilitytrue-to-false transitionqueuesone own-goal resetbefore nextgo; ordinarypersistenceotherwiseunchanged. No addedsearch/threshold/likelihoodfit.",
+    "information_model": "Own army, publicevents and sourceprior only. Exacthardtemplatecompatibilityhasno enemytruthorprivateseed.",
+    "driver": "native-template",
+    "driver_args": [
+      "--belief-regime-reset"
+    ],
+    "archive": "ai/sources/2838bd1837010db2db6ec18f307585183f5e71016fe18c80fc6336eaa8ade997.zip",
+    "source_sha256": "2838bd1837010db2db6ec18f307585183f5e71016fe18c80fc6336eaa8ade997"
+  },
+  "missions-v1-normal": {
+    "id": "missions-v1-normal",
+    "name": "Missions v1 / Normal",
+    "description": "Evidence-triggered Miner missions, route clearing and Scout support.",
+    "sources": [
+      "src/native/engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "tests/baselines/ai_coordinated_20261014.c",
+      "tests/baselines/ai_level_20261014.c",
+      "tests/baselines/ai_mission_20261014.c"
+    ],
+    "defines": [
+      "AI_MISSIONS"
+    ],
+    "difficulty": "normal",
+    "status": "historical",
+    "include_dirs": [],
+    "archive": "ai/sources/e58aa722d6e49abb88a5eef383a32b2838c709fedf05af4b3f842b32d75db953.zip",
+    "source_sha256": "e58aa722d6e49abb88a5eef383a32b2838c709fedf05af4b3f842b32d75db953"
+  }
+}

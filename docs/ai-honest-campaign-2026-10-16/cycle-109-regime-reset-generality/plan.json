@@ -1,0 +1,40 @@
+{
+  "cycle": 109,
+  "baseline": "student-fortress-template-flag-bomb-v1-normal",
+  "opponent": "missions-v1-normal",
+  "policies": [
+    "student-fortress-template-flag-bomb-v1-normal",
+    "student-fortress-template-regime-reset-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 3109001,
+  "rounds": 8,
+  "jobs": 2,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "uniform-v1",
+    "rear-shell-v1",
+    "exposed-rear-v1",
+    "forward-flag-v1",
+    "single-decoy-v1",
+    "scattered-guards-v1"
+  ],
+  "setup_mode": "referee",
+  "hypotheses": [
+    "When public evidence eliminates all previously plausible opening templates, discard the old pursuit goals once so stale source-specific commitments do not outlive the belief model that selected them."
+  ],
+  "contrasts": [
+    [
+      "student-fortress-template-regime-reset-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed development transfer endpoint96attemptsperarm againsthonestMissions. Same forcedphysicalarmies/publicprior/moveseeds, paired95%contrastandfamilybreakdowns. Onehardmodelregimereset only. Bothvalidationpartitionsreserved. No adaptations toDOSscreen orfamilyoutcomes.",
+  "evidence": "research/evaluation/REGIME-RESET.md; fourmechanicalqualificationtests bothcolors, controlledgoalstate/RNG/historyisolation, defaultoffparity, onego/resetlifecycle. D*Lite2002 motivatesreplanningwithnewobservations, notthis specificStrategoheuristic orperformance. DesktopprotocolqualificationnotCX16bankfit.",
+  "dataset": {
+    "path": "tests/datasets/classic-generalization-v1",
+    "split": "development",
+    "offset": 0
+  }
+}
