@@ -252,6 +252,22 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +5.5 percentage points; 95% paired interval [+3.8, +7.3].
 
 
+**Cycle 25 hypotheses:** Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture.
+
+Evidence: [cycle-25-fortress-honest-validation](cycle-25-fortress-honest-validation/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+
+- student-validated-deployment-v1-normal: 961 wins / 88 draws / 951 losses; score 50.2%; 0 unscored errors.
+- student-fortress-deployment-v1-normal: 1098 wins / 94 draws / 808 losses; score 57.2%; 0 unscored errors.
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.0 percentage points; 95% paired interval [+4.9, +9.1].
+
+
 **Preflight failures, without DOS strength results:**
 
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
@@ -293,7 +309,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).
-- Cycle 25: Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-25-fortress-honest-validation/plan.json).
 - Cycle 26: Independently validate the unchanged source-informed template Flag/Bomb prior against the same native move policy without external priors. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-26-template-native-validation/plan.json).
 - Cycle 27: Improved own deployment and honest enemy formation inference address independent defence and attack limitations and can combine without cancelling their benefits. 1,600 planned attempts; no completed strength result. [Frozen plan](cycle-27-fortress-template-combination/plan.json).
 - Cycle 28: Source-informed template inference does not sacrifice general honest play against armies outside the original DOS deployment population. 2,800 planned attempts; no completed strength result. [Frozen plan](cycle-28-template-honest-generality/plan.json).
