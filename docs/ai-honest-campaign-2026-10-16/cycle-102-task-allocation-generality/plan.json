@@ -1,0 +1,40 @@
+{
+  "cycle": 102,
+  "baseline": "student-guard-v1-normal",
+  "opponent": "missions-v1-normal",
+  "policies": [
+    "student-guard-v1-normal",
+    "student-target-assignment-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 3102001,
+  "rounds": 8,
+  "jobs": 2,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "uniform-v1",
+    "rear-shell-v1",
+    "exposed-rear-v1",
+    "forward-flag-v1",
+    "single-decoy-v1",
+    "scattered-guards-v1"
+  ],
+  "setup_mode": "referee",
+  "hypotheses": [
+    "Does capability-aware public target reassignment improve move play against an honest missions opponent on unfamiliar synthetic deployment families, rather than only exploiting original DOS formations?"
+  ],
+  "contrasts": [
+    [
+      "student-target-assignment-v1-normal",
+      "student-guard-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed exploratory generality endpoint: eight paired records per each of six development families,96attempts per arm, equal fixed physical armies and move seeds. Independent of DOS endpoint; no pooling or50%benchmark against the baseline arm. Family breakdown and matched candidate-minus-guard intervals. Both validation partitions remain unplayed. No adaptive sample extension or policy tuning.",
+  "evidence": "Unchanged frozen student-target-assignment-v1-normal versus student-guard-v1-normal; same public mechanism ascycle101; sourcebound mechanical tests preserved. Development corpus only, not final validation.",
+  "dataset": {
+    "path": "tests/datasets/classic-generalization-v1",
+    "split": "development",
+    "offset": 0
+  }
+}

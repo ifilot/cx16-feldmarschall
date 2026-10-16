@@ -1,0 +1,293 @@
+{
+  "cycle": 102,
+  "hypotheses": [
+    "Does capability-aware public target reassignment improve move play against an honest missions opponent on unfamiliar synthetic deployment families, rather than only exploiting original DOS formations?"
+  ],
+  "opponent": "missions-v1-normal",
+  "families": [
+    "uniform-v1",
+    "rear-shell-v1",
+    "exposed-rear-v1",
+    "forward-flag-v1",
+    "single-decoy-v1",
+    "scattered-guards-v1"
+  ],
+  "setup_mode": "referee",
+  "dataset": {
+    "path": "tests/datasets/classic-generalization-v1",
+    "split": "development",
+    "offset": 0
+  },
+  "standings": {
+    "student-guard-v1-normal": {
+      "wins": 51,
+      "draws": 3,
+      "losses": 42,
+      "score": 0.546875,
+      "errors": 0
+    },
+    "student-target-assignment-v1-normal": {
+      "wins": 49,
+      "draws": 3,
+      "losses": 44,
+      "score": 0.5260416666666666,
+      "errors": 0
+    }
+  },
+  "family_standings": {
+    "student-guard-v1-normal": {
+      "exposed-rear-v1": {
+        "student-guard-v1-normal": 0.625,
+        "missions-v1-normal": 0.375
+      },
+      "forward-flag-v1": {
+        "student-guard-v1-normal": 0.5625,
+        "missions-v1-normal": 0.4375
+      },
+      "rear-shell-v1": {
+        "student-guard-v1-normal": 0.5625,
+        "missions-v1-normal": 0.4375
+      },
+      "scattered-guards-v1": {
+        "student-guard-v1-normal": 0.5,
+        "missions-v1-normal": 0.5
+      },
+      "single-decoy-v1": {
+        "student-guard-v1-normal": 0.46875,
+        "missions-v1-normal": 0.53125
+      },
+      "uniform-v1": {
+        "student-guard-v1-normal": 0.5625,
+        "missions-v1-normal": 0.4375
+      }
+    },
+    "student-target-assignment-v1-normal": {
+      "exposed-rear-v1": {
+        "student-target-assignment-v1-normal": 0.5625,
+        "missions-v1-normal": 0.4375
+      },
+      "forward-flag-v1": {
+        "student-target-assignment-v1-normal": 0.5625,
+        "missions-v1-normal": 0.4375
+      },
+      "rear-shell-v1": {
+        "student-target-assignment-v1-normal": 0.5,
+        "missions-v1-normal": 0.5
+      },
+      "scattered-guards-v1": {
+        "student-target-assignment-v1-normal": 0.5,
+        "missions-v1-normal": 0.5
+      },
+      "single-decoy-v1": {
+        "student-target-assignment-v1-normal": 0.46875,
+        "missions-v1-normal": 0.53125
+      },
+      "uniform-v1": {
+        "student-target-assignment-v1-normal": 0.5625,
+        "missions-v1-normal": 0.4375
+      }
+    }
+  },
+  "execution_seconds": {
+    "student-guard-v1-normal": 2.608820053996169,
+    "student-target-assignment-v1-normal": 2.348252944997512
+  },
+  "comparisons": {
+    "student-target-assignment-v1-normal minus student-guard-v1-normal": {
+      "complete_pairs": 48,
+      "pairs_by_family": {
+        "uniform-v1": 8,
+        "rear-shell-v1": 8,
+        "exposed-rear-v1": 8,
+        "forward-flag-v1": 8,
+        "single-decoy-v1": 8,
+        "scattered-guards-v1": 8
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.020833333333333332,
+          "interval_95": [
+            -0.052083333333333336,
+            0.005208333333333333
+          ],
+          "interval_98_3333": [
+            -0.0625,
+            0.010416666666666666
+          ]
+        }
+      }
+    }
+  },
+  "family_comparisons": {
+    "student-target-assignment-v1-normal minus student-guard-v1-normal": {
+      "uniform-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "uniform-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.0,
+            "interval_95": [
+              0.0,
+              0.0
+            ],
+            "interval_98_3333": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "rear-shell-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "rear-shell-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.0625,
+            "interval_95": [
+              -0.21875,
+              0.0625
+            ],
+            "interval_98_3333": [
+              -0.25,
+              0.09375
+            ]
+          }
+        }
+      },
+      "exposed-rear-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "exposed-rear-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.0625,
+            "interval_95": [
+              -0.1875,
+              0.0
+            ],
+            "interval_98_3333": [
+              -0.25,
+              0.0
+            ]
+          }
+        }
+      },
+      "forward-flag-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "forward-flag-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.0,
+            "interval_95": [
+              0.0,
+              0.0
+            ],
+            "interval_98_3333": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "single-decoy-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "single-decoy-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.0,
+            "interval_95": [
+              0.0,
+              0.0
+            ],
+            "interval_98_3333": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "scattered-guards-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "scattered-guards-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.0,
+            "interval_95": [
+              0.0,
+              0.0
+            ],
+            "interval_98_3333": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "error_sensitivity": {
+    "student-target-assignment-v1-normal minus student-guard-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 1,
+        "negative_pairs": 3,
+        "zero_pairs": 44,
+        "non_tied_pairs": 4,
+        "exact_two_sided_binomial_sign_p": 0.625,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 48,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 96,
+          "error_games": 0,
+          "scored_games": 96,
+          "wins": 49,
+          "draws": 3,
+          "losses": 44,
+          "official_scored_score": 0.5260416666666666,
+          "all_attempt_score_bounds": [
+            0.5260416666666666,
+            0.5260416666666666
+          ]
+        },
+        "b": {
+          "attempted_games": 96,
+          "error_games": 0,
+          "scored_games": 96,
+          "wins": 51,
+          "draws": 3,
+          "losses": 42,
+          "official_scored_score": 0.546875,
+          "all_attempt_score_bounds": [
+            0.546875,
+            0.546875
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.020833333333333332,
+        -0.020833333333333332
+      ],
+      "complete_case_pairs": 48,
+      "complete_case_paired_effect": -0.020833333333333332
+    }
+  },
+  "attempts": 192,
+  "errors": 0,
+  "verified_games": 192,
+  "production": "Unchanged. Exploratory screening, not a promotion decision."
+}
