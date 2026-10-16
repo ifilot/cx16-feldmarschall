@@ -1,0 +1,15 @@
+test_backrow_evidence_and_bombs_against_exhaustive_small_model (test_campaign_procedural_beliefs.AnalyticKernels.test_backrow_evidence_and_bombs_against_exhaustive_small_model) ... ok
+test_structured_weighted_fixed_screen_matches_enumeration (test_campaign_procedural_beliefs.AnalyticKernels.test_structured_weighted_fixed_screen_matches_enumeration) ... ok
+test_uniform_geometry_matches_exact_rank_enumeration (test_campaign_procedural_beliefs.AnalyticKernels.test_uniform_geometry_matches_exact_rank_enumeration) ... ok
+test_deduced_adjacent_flag_win_and_reset_both_sides (test_campaign_procedural_beliefs.NativeProceduralDriver.test_deduced_adjacent_flag_win_and_reset_both_sides) ... ok
+test_real_public_history_both_sides_secret_packets_and_native_choices (test_campaign_procedural_beliefs.NativeProceduralDriver.test_real_public_history_both_sides_secret_packets_and_native_choices) ... ok
+test_both_sides_full_inventory_masks_and_hidden_nibbles (test_campaign_procedural_beliefs.PublicMarginals.test_both_sides_full_inventory_masks_and_hidden_nibbles) ... ok
+test_captured_public_rank_retained_and_cache_reuses_enemy_origin_facts (test_campaign_procedural_beliefs.PublicMarginals.test_captured_public_rank_retained_and_cache_reuses_enemy_origin_facts) ... ok
+test_native_only_sampler_fails_explicitly (test_campaign_procedural_beliefs.PublicMarginals.test_native_only_sampler_fails_explicitly) ... ok
+test_uniform_epsilon_reproduces_old_model_and_backrow_is_opt_in (test_campaign_procedural_beliefs.PublicMarginals.test_uniform_epsilon_reproduces_old_model_and_backrow_is_opt_in) ... ok
+test_unknown_evidence_falls_back_to_positive_uniform_support (test_campaign_procedural_beliefs.PublicMarginals.test_unknown_evidence_falls_back_to_positive_uniform_support) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.852s
+
+OK

@@ -1,0 +1,36 @@
+Generated training 128 from 630
+Generated calibration 32 from 144
+Generated heldout 32 from 154
+Queried calibration Fortress
+Queried calibration Evolved2
+Queried calibration Evolved3
+Queried calibration DoubleShellFortress
+Selectedepsilon 0.01
+Queried heldout Fortress
+Queried heldout Evolved2
+Queried heldout Evolved3
+Queried heldout DoubleShellFortress
+{
+  "kind": "frozen-source-structured-background-predictive-study",
+  "strength_evidence": false,
+  "protocol_sha256": "f42eaff86ab42f2d469687607fa925c693a37857b1a239e7097f9aa05a64bc84",
+  "elapsed_seconds": 119.1655659800017,
+  "selected_epsilon": 0.01,
+  "errors": [],
+  "primary_delta_logloss": {
+    "mean": -0.2504212140803877,
+    "interval_95": [
+      -0.2656047958403728,
+      -0.23134829653959108
+    ],
+    "replicates": 20000,
+    "method": "Formation-stratified paired bootstrap. Foreground resamples own/DOS RNG-context blocks containing all8fixedtemplates; procedural resamples independent full-generator armies. Equal4formations, fixed80/20component weights. Average each trajectory over its available decisions."
+  },
+  "procedural_delta_logloss": -1.2632458072430799,
+  "procedural_confident_wrong_counts": {
+    "hard": 4.0,
+    "candidate": 4.0
+  },
+  "acceptance_criteria_passed": true,
+  "decision": "Predictiveacceptanceonly;rootreviewrequiredbeforeruntime"
+}

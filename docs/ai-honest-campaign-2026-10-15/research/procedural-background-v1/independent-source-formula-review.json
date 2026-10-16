@@ -1,0 +1,21 @@
+{
+  "reviewer": "Parent/root agent independent source and formula review",
+  "passed": true,
+  "scope": "Stated structural approximation, not exact original RNG distribution.",
+  "checks": [
+    "PLAC.C initialFlagrow and12screen branches.",
+    "Guaranteed mobile guard squares and final repair exclusion of Flag/Bombs.",
+    "Required-Bomb factors and available-slot elementary-symmetric normalization.",
+    "Uniform-mobile falling factor handles known/captured/moved facts under stated model."
+  ],
+  "remaining_approximations": [
+    "Uniform Flag-column prior.",
+    "Nominal corner.2/.8 shell probabilities under correlated original RNG.",
+    "Exchangeable mobile ranks despite source role/row placement."
+  ],
+  "reviewed_source_sha256": {
+    "structural_model.py": "14b86e6ea4b63ad6c69dbbe927d18972b0d0648d7fb0ebfcfa87b2e9d26c914c",
+    "source-analysis-and-proposal.json": "208f98e65c007d92593dcf9af343e607b9d02a56ae3b01ab0a07eef0881d0b55"
+  },
+  "protocol_sha256": "f42eaff86ab42f2d469687607fa925c693a37857b1a239e7097f9aa05a64bc84"
+}

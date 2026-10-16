@@ -1,0 +1,20 @@
+{
+  "mean": -0.004651617079762396,
+  "interval_95": [
+    -0.012850561601307417,
+    0.0004200796450227679
+  ],
+  "replicates": 20000,
+  "method": "Formation-stratified paired bootstrap. Foreground resamples own/DOS RNG-context blocks containing all8fixedtemplates; procedural resamples independent full-generator armies. Equal4formations, fixed80/20component weights. Average each trajectory over its available decisions.",
+  "interpretation": "Post-hoc descriptive ablation on reused heldout prediction data, not fresh confirmation. Negative favors structured over backrow. No parameters selected or altered.",
+  "secondary_bomb_brier_difference": {
+    "mean": -0.002037334694118981,
+    "interval_95": [
+      -0.002595902981568004,
+      -0.0014764223490198254
+    ],
+    "replicates": 20000,
+    "method": "Formation-stratified paired bootstrap. Foreground resamples own/DOS RNG-context blocks containing all8fixedtemplates; procedural resamples independent full-generator armies. Equal4formations, fixed80/20component weights. Average each trajectory over its available decisions.",
+    "units": "Mean40-origin Bomb Brier difference, not nats; negative favors structured. Same trajectory/block averaging, descriptive secondary endpoint."
+  }
+}

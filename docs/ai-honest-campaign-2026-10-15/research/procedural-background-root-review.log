@@ -1,0 +1,15 @@
+test_exact_classic_origin_inventory_and_no_particle_collapse (test_structural_model.StructuralTests.test_exact_classic_origin_inventory_and_no_particle_collapse) ... ok
+test_twelve_source_shapes_and_original_procedural_guard_facts (test_structural_model.StructuralTests.test_twelve_source_shapes_and_original_procedural_guard_facts) ... ok
+test_uniform_reduces_to_existing_exact_background_and_enumeration (test_structural_model.StructuralTests.test_uniform_reduces_to_existing_exact_background_and_enumeration) ... ok
+test_weighted_partition (test_structural_model.StructuralTests.test_weighted_partition) ... ok
+test_weighted_structural_geometry_matches_enumeration (test_structural_model.StructuralTests.test_weighted_structural_geometry_matches_enumeration) ... ok
+test_calibration_selection_frozen_before_heldout_queries (test_study.FrozenStudy.test_calibration_selection_frozen_before_heldout_queries) ... ok
+test_exact_generator_branches_and_training_only_fit (test_study.FrozenStudy.test_exact_generator_branches_and_training_only_fit) ... ok
+test_posterior_only_uses_retained_public_rank_mobility_facts (test_study.FrozenStudy.test_posterior_only_uses_retained_public_rank_mobility_facts) ... ok
+test_source_hashes_and_strict_seed_disjointness (test_study.FrozenStudy.test_source_hashes_and_strict_seed_disjointness) ... ok
+test_uniform_tail_identity_inventory_and_secret_metadata_invariance (test_study.FrozenStudy.test_uniform_tail_identity_inventory_and_secret_metadata_invariance) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.554s
+
+OK

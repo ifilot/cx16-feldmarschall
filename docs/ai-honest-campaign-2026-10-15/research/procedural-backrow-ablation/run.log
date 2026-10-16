@@ -1,0 +1,28 @@
+result keys ['kind', 'strength_evidence', 'protocol_sha256', 'elapsed_seconds', 'selected_epsilon', 'errors', 'primary_delta_logloss', 'procedural_delta_logloss', 'procedural_confident_wrong_counts', 'acceptance_criteria_passed', 'decision', 'summaries', 'scored_rows']
+{
+  "backrow_minus_uniform": {
+    "mean": -0.24576959700062528,
+    "interval_95": [
+      -0.25630799331655785,
+      -0.22877938683167418
+    ],
+    "replicates": 20000,
+    "method": "Formation-stratified paired bootstrap. Foreground resamples own/DOS RNG-context blocks containing all8fixedtemplates; procedural resamples independent full-generator armies. Equal4formations, fixed80/20component weights. Average each trajectory over its available decisions."
+  },
+  "elapsed_seconds": 0.23743872399791144,
+  "prefixes": 640,
+  "branches": {
+    "template": {
+      "samples": 512,
+      "mean_logloss_delta": -0.0010520085307544214,
+      "confident_wrong_occurrences": 0.0,
+      "baseline_confident_wrong_occurrences": 0.0
+    },
+    "procedural": {
+      "samples": 128,
+      "mean_logloss_delta": -1.2246399508801087,
+      "confident_wrong_occurrences": 4.0,
+      "baseline_confident_wrong_occurrences": 4.0
+    }
+  }
+}

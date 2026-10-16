@@ -1,0 +1,17 @@
+{
+  "epoch": 1792109308.4950643,
+  "root_extension": "Explicit template_mass0 ablation added before any policy registration; .8 mixture retains literal.1template/.2background arithmetic and passes frozen-study prediction parity.",
+  "default_native_template_driver_tests_passed": true,
+  "tests": 20,
+  "source_sha256": {
+    "tools/campaign_procedural_beliefs.py": "2fcece9b66937a8d7de446c812f0f70e711fa3974ac97805fd762e7d535dfb77",
+    "tools/campaign_native_template.py": "de3a668df0564090bcae056165fe0e1a81515af760563384c3a4a83707b912c0",
+    "tools/ai_registry.py": "8de4860ad9f9d140691e6725bf28bd27de52bade2c75e211d0ac2cd5d8d95313"
+  },
+  "model_sha256": {
+    "ai/models/dos-backrow-background-v1.json": "2afded62322e28996aa194795f5de31c4a05935f98fd419fc2448c3c12824d63",
+    "ai/models/dos-procedural-background-v1.json": "a2053e61021d3d4d5a875576df3cf79eb2e46067fa62a93d5b72023a5b2e7f3e",
+    "ai/models/dos-backrow-only-v1.json": "0f4cc1997908bdf9dcf74ac16295c4949e65b50dd4d2638ba82239954dc271b5"
+  },
+  "target": "Desktopprototype only; existing prior interface CX16 bank overflow unchanged. Native compact backrow evaluation requires a separate source version."
+}

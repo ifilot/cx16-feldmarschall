@@ -1,0 +1,71 @@
+{
+  "kind": "native-procedural-prior-public-query-cost",
+  "games_played": 0,
+  "source": "docs/ai-honest-campaign-2026-10-15/research/procedural-background-v1",
+  "sample": "Every10th heldout public prefix,64samples. Observer gets own setup/public events only; model never gets actual army, generation receipt or RNG. Prior posterior unchanged by caching.",
+  "results": {
+    "structured": {
+      "public_query_only": {
+        "samples": 64,
+        "mean_ms": 0.9143138125,
+        "median_ms": 0.6960945000000001,
+        "maximum_ms": 2.598051
+      },
+      "rank_marginals_uncached": {
+        "samples": 64,
+        "mean_ms": 2.894013640625,
+        "median_ms": 2.702706,
+        "maximum_ms": 5.619666
+      },
+      "rank_marginals_cached": {
+        "samples": 64,
+        "mean_ms": 0.282362859375,
+        "median_ms": 0.238449,
+        "maximum_ms": 1.101732
+      },
+      "posterior_after_marginals_cached": {
+        "samples": 64,
+        "mean_ms": 0.016897671875,
+        "median_ms": 0.011918999999999999,
+        "maximum_ms": 0.078006
+      },
+      "public_prefixes": 64,
+      "study_prediction_parity": true
+    },
+    "backrow": {
+      "public_query_only": {
+        "samples": 64,
+        "mean_ms": 1.10040753125,
+        "median_ms": 0.666568,
+        "maximum_ms": 8.285672
+      },
+      "rank_marginals_uncached": {
+        "samples": 64,
+        "mean_ms": 0.447726546875,
+        "median_ms": 0.405741,
+        "maximum_ms": 1.131307
+      },
+      "rank_marginals_cached": {
+        "samples": 64,
+        "mean_ms": 0.262626625,
+        "median_ms": 0.24273899999999998,
+        "maximum_ms": 0.770679
+      },
+      "posterior_after_marginals_cached": {
+        "samples": 64,
+        "mean_ms": 0.015393078125,
+        "median_ms": 0.009929,
+        "maximum_ms": 0.111772
+      },
+      "public_prefixes": 64,
+      "study_prediction_parity": false
+    }
+  },
+  "limitations": "Host timing only, no CX16 bank fit/cycle claim. IPC/public-memory reads measured separately; nativego not included.",
+  "source_sha256": {
+    "tools/benchmark_campaign_procedural.py": "4be1536ff4647efd6789d82083afbb24a34fcc1caf6c98fb27b5d04759c5a96e",
+    "tools/campaign_procedural_beliefs.py": "2fcece9b66937a8d7de446c812f0f70e711fa3974ac97805fd762e7d535dfb77",
+    "ai/models/dos-procedural-background-v1.json": "a2053e61021d3d4d5a875576df3cf79eb2e46067fa62a93d5b72023a5b2e7f3e"
+  },
+  "observer_sha256": "3f54396fd851558fbe211117c946efb3ed332aa71588bb4ebdc26c63ec1ef6fb"
+}

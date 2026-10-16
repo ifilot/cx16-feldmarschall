@@ -279,7 +279,18 @@ def build_native_beliefs(source, directory, executable, policy):
         for name in (entrypoint, 'campaign_template_beliefs.py'):
             (directory/name).write_bytes((source/'tools'/name).read_bytes())
             runtime.append(name)
-        arguments = repr(policy.get('driver_args', []))
+        model = policy.get('procedural_belief_model')
+        if model:
+            if digest((source/model).read_bytes()) != policy['procedural_belief_model_sha256']:
+                raise ValueError('Procedural belief model failed integrity check')
+            model_name = Path(model).name
+            (directory/model_name).write_bytes((source/model).read_bytes())
+            (directory/'campaign_procedural_beliefs.py').write_bytes((source/'tools/campaign_procedural_beliefs.py').read_bytes())
+            runtime += [model_name, 'campaign_procedural_beliefs.py']
+            arguments = '['+', '.join('str(p / '+repr(arg)+')' if arg==model_name else repr(arg)
+                                     for arg in policy['driver_args'])+']'
+        else:
+            arguments = repr(policy.get('driver_args', []))
     else:
         model = policy['joint_belief_model']
         if digest((source/model).read_bytes()) != policy['joint_belief_model_sha256']:

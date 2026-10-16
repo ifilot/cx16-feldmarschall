@@ -1,0 +1,21 @@
+{
+  "schema": "dos-procedural-background-v1",
+  "template_mass": 0.8,
+  "epsilon": 0.01,
+  "row_weights": [
+    0.00078064012490242,
+    0.12689901697944594,
+    0.1519302615193026,
+    0.16775032509752927
+  ],
+  "geometry_prior": "Flagbackrowcolumnsuniform; corneradjacent.2/outer.8; interioradjacent1.",
+  "mobile_model": "Uniformexactcountsconditionalonnonimmobiles;source-rolebiasnotmodeled.",
+  "provenance": {
+    "protocol_sha256": "f42eaff86ab42f2d469687607fa925c693a37857b1a239e7097f9aa05a64bc84",
+    "trained_model_sha256": "683065b65ca30424b8863b2c59ddba596f3753cae58c40697603761f8a472e12",
+    "calibration_selection_sha256": "78c59adb990f45ddb80d6437dce68244ac15ed36a8a07b28fa865fcd9c77bd33",
+    "research_result_sha256": "41c9334b45be3ff4c71023b6ef4aff8f185347a91d25a7a95d2bd764ca8b7dd9"
+  },
+  "population": "Original1990Colonel source-informed approximate opening prior; no actual setup/seed reconstruction.",
+  "background_kind": "structured"
+}

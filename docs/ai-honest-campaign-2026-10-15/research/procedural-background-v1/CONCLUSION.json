@@ -1,0 +1,378 @@
+{
+  "hypothesis": "Source-structured procedural background improves honest public Flag/Bomb prediction.",
+  "decision": "Passed prespecified independently heldout predictive gate. Root review required before any runtime candidate; no playing-strength improvement measured.",
+  "protocol": "protocol.json frozen before generator calls; trained-model.json fits128freshproceduralarmies only; calibration-selection.json freezes tail before heldout queries.",
+  "model": "Whole prior80%eight source templates +19.8%source-structural procedural component +0.2%uniform legal-army support. Structural component marginalizes12Flag/screen geometries, exact residualBomb count and uniform count-consistent mobile ranks.",
+  "primary_result": {
+    "mean": -0.2504212140803877,
+    "interval_95": [
+      -0.2656047958403728,
+      -0.23134829653959108
+    ],
+    "replicates": 20000,
+    "method": "Formation-stratified paired bootstrap. Foreground resamples own/DOS RNG-context blocks containing all8fixedtemplates; procedural resamples independent full-generator armies. Equal4formations, fixed80/20component weights. Average each trajectory over its available decisions."
+  },
+  "procedural_delta_logloss_nats": -1.2632458072430799,
+  "selected_epsilon": 0.01,
+  "calibration_grid": [
+    {
+      "epsilon": 0.01,
+      "primary_delta": -0.2504439414824604
+    },
+    {
+      "epsilon": 0.05,
+      "primary_delta": -0.24755564797661306
+    },
+    {
+      "epsilon": 0.1,
+      "primary_delta": -0.2437113192483961
+    },
+    {
+      "epsilon": 0.2,
+      "primary_delta": -0.2351226117295197
+    },
+    {
+      "epsilon": 0.5,
+      "primary_delta": -0.19858788457081697
+    },
+    {
+      "epsilon": 1.0,
+      "primary_delta": 0.0
+    }
+  ],
+  "test_counts": {
+    "mechanical": 5,
+    "study": 5,
+    "total": 10
+  },
+  "errors": [],
+  "elapsed_seconds": 119.1655659800017,
+  "heldout_context": "128source-template+32exactoriginal-procedural trajectories, fourfixedownformations, actual frozen nativeRed move policy. BOTH own/DOS RNG contexts independently held out; all192effective16-bit move states disjoint across roles/phases. No saved match observations fitted anything.",
+  "branch_results": {
+    "template": {
+      "1": {
+        "samples": 128,
+        "hard": {
+          "logloss_nats": 0.525035554343592,
+          "brier": 0.3107998835798274,
+          "top_tie_accuracy": 0.7578125,
+          "confidence": 0.6879157316495152,
+          "confident_wrong": 0.0,
+          "true_Flag_probability": 0.657465263356558
+        },
+        "candidate": {
+          "logloss_nats": 0.5332466973392044,
+          "brier": 0.31215006688611346,
+          "top_tie_accuracy": 0.75,
+          "confidence": 0.6821073243694887,
+          "confident_wrong": 0.0,
+          "true_Flag_probability": 0.6520183288255641
+        },
+        "mean_delta_logloss_nats": 0.008211142995612451,
+        "hard_Bomb_brier": 0.029662929625035285,
+        "candidate_Bomb_brier": 0.02995642704875375
+      },
+      "2": {
+        "samples": 128,
+        "hard": {
+          "logloss_nats": 0.2826473583162825,
+          "brier": 0.16676254851802413,
+          "top_tie_accuracy": 0.890625,
+          "confidence": 0.8404565256934373,
+          "confident_wrong": 0.0,
+          "true_Flag_probability": 0.81705573745636
+        },
+        "candidate": {
+          "logloss_nats": 0.28508060867846857,
+          "brier": 0.166893585103163,
+          "top_tie_accuracy": 0.890625,
+          "confidence": 0.8382297962862643,
+          "confident_wrong": 0.0,
+          "true_Flag_probability": 0.8148582458171117
+        },
+        "mean_delta_logloss_nats": 0.0024332503621860542,
+        "hard_Bomb_brier": 0.02058118259622597,
+        "candidate_Bomb_brier": 0.02059470904397553
+      },
+      "3": {
+        "samples": 128,
+        "hard": {
+          "logloss_nats": 0.050956410561257735,
+          "brier": 0.02778047454582891,
+          "top_tie_accuracy": 1.0,
+          "confidence": 0.9580636973106141,
+          "confident_wrong": 0.0,
+          "true_Flag_probability": 0.9580636973106141
+        },
+        "candidate": {
+          "logloss_nats": 0.05127703555813549,
+          "brier": 0.02778309617037646,
+          "top_tie_accuracy": 1.0,
+          "confidence": 0.9577469148843072,
+          "confident_wrong": 0.0,
+          "true_Flag_probability": 0.9577469148843072
+        },
+        "mean_delta_logloss_nats": 0.0003206249968777521,
+        "hard_Bomb_brier": 0.00850712932269157,
+        "candidate_Bomb_brier": 0.008507317363034301
+      },
+      "4": {
+        "samples": 128,
+        "hard": {
+          "logloss_nats": 0.05084133153311168,
+          "brier": 0.0277803583844473,
+          "top_tie_accuracy": 1.0,
+          "confidence": 0.9581787198290868,
+          "confident_wrong": 0.0,
+          "true_Flag_probability": 0.9581787198290868
+        },
+        "candidate": {
+          "logloss_nats": 0.051016050019576854,
+          "brier": 0.02778244963570005,
+          "top_tie_accuracy": 1.0,
+          "confidence": 0.9580076081032656,
+          "confident_wrong": 0.0,
+          "true_Flag_probability": 0.9580076081032656
+        },
+        "mean_delta_logloss_nats": 0.0001747184864651669,
+        "hard_Bomb_brier": 0.008507114405416107,
+        "candidate_Bomb_brier": 0.00850721930294518
+      }
+    },
+    "procedural": {
+      "1": {
+        "samples": 32,
+        "hard": {
+          "logloss_nats": 3.5965711446651087,
+          "brier": 0.979876596542006,
+          "top_tie_accuracy": 0.054276315789473686,
+          "confidence": 0.11147314163165861,
+          "confident_wrong": 0.03125,
+          "true_Flag_probability": 0.06151498822578967
+        },
+        "candidate": {
+          "logloss_nats": 2.328931122934777,
+          "brier": 0.9120194603206765,
+          "top_tie_accuracy": 0.12109375,
+          "confidence": 0.17416036070601548,
+          "confident_wrong": 0.03125,
+          "true_Flag_probability": 0.12610168684092643
+        },
+        "mean_delta_logloss_nats": -1.2676400217303319,
+        "hard_Bomb_brier": 0.13125061460355453,
+        "candidate_Bomb_brier": 0.12040573521906581
+      },
+      "2": {
+        "samples": 32,
+        "hard": {
+          "logloss_nats": 3.6522664015846384,
+          "brier": 0.9739331412481061,
+          "top_tie_accuracy": 0.057057057057057055,
+          "confidence": 0.08814054407484224,
+          "confident_wrong": 0.03125,
+          "true_Flag_probability": 0.05702073490940748
+        },
+        "candidate": {
+          "logloss_nats": 2.381930721429957,
+          "brier": 0.9051147809184561,
+          "top_tie_accuracy": 0.125,
+          "confidence": 0.1561764995368569,
+          "confident_wrong": 0.03125,
+          "true_Flag_probability": 0.1251568924829273
+        },
+        "mean_delta_logloss_nats": -1.270335680154681,
+        "hard_Bomb_brier": 0.12479129881325844,
+        "candidate_Bomb_brier": 0.11510973626539489
+      },
+      "3": {
+        "samples": 32,
+        "hard": {
+          "logloss_nats": 3.6979632214463023,
+          "brier": 0.9730868875169358,
+          "top_tie_accuracy": 0.058146591970121383,
+          "confidence": 0.08938642610807308,
+          "confident_wrong": 0.03125,
+          "true_Flag_probability": 0.058144687500818554
+        },
+        "candidate": {
+          "logloss_nats": 2.439073475405874,
+          "brier": 0.9032184962393459,
+          "top_tie_accuracy": 0.125,
+          "confidence": 0.1584638774705277,
+          "confident_wrong": 0.03125,
+          "true_Flag_probability": 0.1272068321177467
+        },
+        "mean_delta_logloss_nats": -1.2588897460404287,
+        "hard_Bomb_brier": 0.12383808367697526,
+        "candidate_Bomb_brier": 0.11482533037752285
+      },
+      "4": {
+        "samples": 32,
+        "hard": {
+          "logloss_nats": 3.7335463632364934,
+          "brier": 0.9727580980941039,
+          "top_tie_accuracy": 0.05848837641117053,
+          "confidence": 0.08973637020050577,
+          "confident_wrong": 0.03125,
+          "true_Flag_probability": 0.05848813299756139
+        },
+        "candidate": {
+          "logloss_nats": 2.477428582189616,
+          "brier": 0.902886011066097,
+          "top_tie_accuracy": 0.125,
+          "confidence": 0.15878876187651006,
+          "confident_wrong": 0.03125,
+          "true_Flag_probability": 0.12751751274004303
+        },
+        "mean_delta_logloss_nats": -1.2561177810468778,
+        "hard_Bomb_brier": 0.12353193961201701,
+        "candidate_Bomb_brier": 0.11483922775053038
+      }
+    },
+    "all": {
+      "1": {
+        "samples": 160,
+        "hard": {
+          "logloss_nats": 1.1393426724078952,
+          "brier": 0.44461522617226307,
+          "top_tie_accuracy": 0.6171052631578948,
+          "confidence": 0.5726272136459439,
+          "confident_wrong": 0.00625,
+          "true_Flag_probability": 0.5382752083304043
+        },
+        "candidate": {
+          "logloss_nats": 0.8923835824583188,
+          "brier": 0.4321239455730261,
+          "top_tie_accuracy": 0.62421875,
+          "confidence": 0.5805179316367941,
+          "confident_wrong": 0.00625,
+          "true_Flag_probability": 0.5468350004286366
+        },
+        "mean_delta_logloss_nats": -0.24695908994957644,
+        "hard_Bomb_brier": 0.049980466620739135,
+        "candidate_Bomb_brier": 0.048046288682816164
+      },
+      "2": {
+        "samples": 160,
+        "hard": {
+          "logloss_nats": 0.9565711669699537,
+          "brier": 0.32819666706404055,
+          "top_tie_accuracy": 0.7239114114114115,
+          "confidence": 0.6899933293697184,
+          "confident_wrong": 0.00625,
+          "true_Flag_probability": 0.6650487369469694
+        },
+        "candidate": {
+          "logloss_nats": 0.7044506312287664,
+          "brier": 0.3145378242662216,
+          "top_tie_accuracy": 0.7375,
+          "confidence": 0.7018191369363828,
+          "confident_wrong": 0.00625,
+          "true_Flag_probability": 0.6769179751502749
+        },
+        "mean_delta_logloss_nats": -0.25212053574118737,
+        "hard_Bomb_brier": 0.041423205839632465,
+        "candidate_Bomb_brier": 0.03949771448825941
+      },
+      "3": {
+        "samples": 160,
+        "hard": {
+          "logloss_nats": 0.7803577727382667,
+          "brier": 0.21684175714005027,
+          "top_tie_accuracy": 0.8116293183940243,
+          "confidence": 0.784328243070106,
+          "confident_wrong": 0.00625,
+          "true_Flag_probability": 0.778079895348655
+        },
+        "candidate": {
+          "logloss_nats": 0.5288363235276832,
+          "brier": 0.20287017618417033,
+          "top_tie_accuracy": 0.825,
+          "confidence": 0.7978903074015513,
+          "confident_wrong": 0.00625,
+          "true_Flag_probability": 0.791638898330995
+        },
+        "mean_delta_logloss_nats": -0.25152144921058356,
+        "hard_Bomb_brier": 0.03157332019354831,
+        "candidate_Bomb_brier": 0.029770919965932015
+      },
+      "4": {
+        "samples": 160,
+        "hard": {
+          "logloss_nats": 0.7873823378737881,
+          "brier": 0.2167759063263786,
+          "top_tie_accuracy": 0.811697675282234,
+          "confidence": 0.7844902499033706,
+          "confident_wrong": 0.00625,
+          "true_Flag_probability": 0.7782406024627816
+        },
+        "candidate": {
+          "logloss_nats": 0.5362985564535846,
+          "brier": 0.20280316192177944,
+          "top_tie_accuracy": 0.825,
+          "confidence": 0.7981638388579144,
+          "confident_wrong": 0.00625,
+          "true_Flag_probability": 0.791909589030621
+        },
+        "mean_delta_logloss_nats": -0.25108378142020343,
+        "hard_Bomb_brier": 0.03151207944673629,
+        "candidate_Bomb_brier": 0.029773620992462217
+      }
+    }
+  },
+  "interpretation": [
+    "Heldout mixed-cohort Flag logloss improves0.2504nats, paired95%[0.2313,0.2656] in the improvement direction. Procedural Flag logloss improves1.2632nats; this meets the frozen criterion.",
+    "Template Flag loss rises slightly (about0.0028nats averaged decisions), while the procedural improvement dominates the fixed80/20comparison. BothFlag andBomb Brier improve on procedural armies.",
+    "The uniformtail selected is the lowest tested(.01ofbackground,0.002ofwholeprior). No extrapolation below the tested grid or later heldout tuning was performed.",
+    "One of32procedural armies remains confidently wrong at all4decisions under both models:4occurrences, oneindependentarmy. This source-informed model doesnotresolveevery early false-confidence case.",
+    "The composite model was tested without a prespecified backrow-only ablation. This doesnot establish that every screen/row-weight feature is necessary; backrow Flag support may explain much of the gain.",
+    "Improved prediction doesnot establish better moves, protection of our ownFlag, or playing strength. Current frozen native policy generated allpublicprefixes; the new prior didnotcontrolplay."
+  ],
+  "primary_research": "primary-research.json:Chen/Liu1997 conditionalBernoulli fixed-size subset recursion.",
+  "independent_review": "independent-source-formula-review.json:parent/root verified sourceconstraints and analytic normalization before prediction completed.",
+  "limitations": [
+    "Four fixed own armies/eight public template hypotheses/32procedural heldout armies are bounded contexts, not broad deployment calibration.",
+    "Original correlated RNG/row-role placement is approximated by uniformFlagcolumn, nominalcorner.2/.8 and exchangeablemobile ranks.",
+    "Uniformfullsupport ispositivebutonly0.2%ofwholeprior; source-family specialization mayhurt other opponent setup distributions.",
+    "No CX16 fit/cycle claim. Sourcebankconstraints remain; model remains host research code here.",
+    "Bootstrap uses paired own/DOS RNG blocks for exhaustivefixedtemplates and independent generatorarmies forproceduralcomponent, stratified acrossfixedownformations."
+  ],
+  "runtime_cost_research": {
+    "measurement": "One deterministic64-prefix heldout subset on current host, no runtime adapter/IPC/compiler target included.",
+    "results": {
+      "Flag_only": {
+        "samples": 64,
+        "mean_ms": 0.363005890625,
+        "maximum_ms": 5.908125,
+        "median_ms": 0.15233249999999998
+      },
+      "Flag_and_Bomb": {
+        "samples": 64,
+        "mean_ms": 4.577064859375,
+        "maximum_ms": 12.444546,
+        "median_ms": 3.9383145
+      }
+    },
+    "scope": "Host research timing only; no CX16 cycle/bank fit claim."
+  },
+  "evidence_hashes": {
+    "calibration-public-prefixes.json": "14d64934e75d96131c3b68eca2fe1115b7de7b3fca352642ffa08e270c6fe431",
+    "calibration-selection.json": "78c59adb990f45ddb80d6437dce68244ac15ed36a8a07b28fa865fcd9c77bd33",
+    "generation-evidence.json": "f76f54b8a22a3663b75d50756fb3659e5c1ddd85b903482c8d21a5e332d7cc18",
+    "heldout-public-prefixes.json": "e2cd03f92abe93e5dbc2523a19a5bad6792c8381d211fcc0c2c908f760050ae4",
+    "independent-source-formula-review.json": "a1c6f77ffe2a4c2cd142ca217e1b8bb716d1707bf4c263f06f96bc6c04cd2b68",
+    "mechanical-tests.log": "928412aca859721b6134f8a7df53da0deaccf12da13e2110b769b93788fa3fcc",
+    "prediction-timing.json": "3ec8dd00f287bc00aa10be9c1284935a2207512f790903ce508c426f1c35223b",
+    "primary-research.json": "6fba9610f6bf70310aa9c4b8b199c30448b97b19b2b538101d0ca6e2c6b62e57",
+    "protocol.json": "f42eaff86ab42f2d469687607fa925c693a37857b1a239e7097f9aa05a64bc84",
+    "result.json": "41c9334b45be3ff4c71023b6ef4aff8f185347a91d25a7a95d2bd764ca8b7dd9",
+    "run.log": "5229a631aabe7ad32424a35f594f12e6df48ada44a0fafb13a0dad5e8a39b121",
+    "source-analysis-and-proposal.json": "208f98e65c007d92593dcf9af343e607b9d02a56ae3b01ab0a07eef0881d0b55",
+    "structural_model.py": "14b86e6ea4b63ad6c69dbbe927d18972b0d0648d7fb0ebfcfa87b2e9d26c914c",
+    "study.py": "99fd7e9071d6d423447bd0810a71fefe5d9772ec5bd4fae4f1ccaff2864b4957",
+    "tests.log": "2a2a6855bc685f1d1d134fefb5a45100b1aa123cae9d4046de661b264d1fe980",
+    "test_structural_model.py": "8f45c09f5c8baa342edc32a7955dc51d42d5097843fdc2dbce1736e5f81d4a94",
+    "test_study.py": "d89a97efe8499d2637376a8b856da39753e6e1239f1ffd2bff34a27f0e1d591b",
+    "trained-model.json": "683065b65ca30424b8863b2c59ddba596f3753cae58c40697603761f8a472e12"
+  }
+}

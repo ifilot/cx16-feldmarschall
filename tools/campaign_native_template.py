@@ -16,9 +16,9 @@ from feldmarschall import Engine,parse_square,square_name
 
 
 class NativeTemplateBot(NativeBeliefBot):
-    def __init__(self,observer,difficulty='normal'):
+    def __init__(self,observer,difficulty='normal',model=None):
         if difficulty not in ('easy','normal','hard'):raise ValueError('valid Classic difficulty required')
-        self.mode='template';self.model=TemplateMixtureBeliefs()
+        self.mode='template';self.model=TemplateMixtureBeliefs() if model is None else model
         self.observer=observer if hasattr(observer,'ask') else Engine(shlex.quote(str(observer)))
         self.observer.send('difficulty '+difficulty);self.last_report=None
 
@@ -49,6 +49,12 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--observer',type=Path,required=True)
     parser.add_argument('--difficulty',choices=('easy','normal','hard'),default='normal')
-    args=parser.parse_args();NativeTemplateBot(args.observer,args.difficulty).run()
+    parser.add_argument('--procedural-model',type=Path)
+    args=parser.parse_args()
+    model=None
+    if args.procedural_model is not None:
+        from campaign_procedural_beliefs import ProceduralTemplateBeliefs
+        model=ProceduralTemplateBeliefs.load(args.procedural_model)
+    NativeTemplateBot(args.observer,args.difficulty,model=model).run()
 
 if __name__=='__main__':main()

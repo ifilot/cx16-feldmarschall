@@ -1,0 +1,8 @@
+test_bool_is_not_a_template_mass_control (tools.test_campaign_backrow_only.BackrowOnlyTests.test_bool_is_not_a_template_mass_control) ... ok
+test_off_backrow_flag_keeps_positive_uniform_support (tools.test_campaign_backrow_only.BackrowOnlyTests.test_off_backrow_flag_keeps_positive_uniform_support) ... ok
+test_template_weights_stay_zero_and_template_contents_are_irrelevant (tools.test_campaign_backrow_only.BackrowOnlyTests.test_template_weights_stay_zero_and_template_contents_are_irrelevant) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.035s
+
+OK

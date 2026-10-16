@@ -1,0 +1,68 @@
+{
+  "kind": "source-analysis-and-proposal",
+  "hypothesis": "A source-structured analytic procedural background improves public Flag/Bomb posterior calibration versus uniform legal armies.",
+  "motivation": "v3 procedural heldout audit found3/32 first-step Flag predictions98.5\u201399%confidently wrong; exact-prefix action lookup did not fix them. The source procedural component is explicitly not uniform legal armies.",
+  "source_sha256": {
+    "docs/ai-honest-campaign-2026-10-15/research/dos-deployment-original-v1/sources/reconstruction/ovl6/PLAC.C": "53b3a19e1615341c82789567d363208ef0be9eebe720b0d66e617204f94bd884",
+    "docs/ai-honest-campaign-2026-10-15/research/dos-deployment-original-v1/sources/reconstruction/ovl6/SETUP.C": "be0fbf269daf03113221f29561da811aa78abaf3e0fdca331ee9bab512bb7036",
+    "docs/ai-honest-campaign-2026-10-15/research/dos-deployment-original-v1/sources/reconstruction/ovl6/SEARCH.C": "15eb2331aaa75eada45e0a9036095b20b53b7ec7c2cec3c6f8ec032053fc8010",
+    "docs/ai-honest-campaign-2026-10-15/research/dos-deployment-original-v1/sources/reconstruction/ovl6/BINIT.C": "76b71cce5c63e634255e1c968d4469dd4d1a227c4b3d5bf08d36c842d019146f"
+  },
+  "source_commit": "306e3cb757137f3c28d1224ee3d2c4570f412509",
+  "original_boundaries": {
+    "placement": "overlay6:0C7B..1D1A",
+    "cell_helper": "0AD2..0C7B",
+    "search": "03F0..0650"
+  },
+  "facts": [
+    {
+      "fact": "At Colonel phase3 the procedural Flag is always physical backrow1, canonical origins30..39.",
+      "evidence": "PLAC.C initial_row expression chooses row2 only with phase<3; phase3 sets row1, then SEARCH.C takes available backrow column."
+    },
+    {
+      "fact": "An interior backrow Flag receives Bombs immediately left/right and in front, plus two mobile guards on the forward diagonals.",
+      "evidence": "PLAC.C row==1, noncorner branch puts originalrank11 in three screen squares and originalrank5/6 guards."
+    },
+    {
+      "fact": "Corner Flag has two screen shapes: adjacent2Bombs when rng%5==1, otherwise outer3Bombs. Each places two mobile guard squares.",
+      "evidence": "PLAC.C corner branch; nominal20/80 split is approximate because successive original RNG draws are correlated."
+    },
+    {
+      "fact": "The screen Bombs and Flag remain fixed; the two guard squares remain mobile, but their exact ranks need not stay5/6.",
+      "evidence": "Additional placements use cleared occupancy markers. Final repair excludes Flag0/Bomb11 and swaps mobile ranks only; another mobile may be swapped into a guard square."
+    },
+    {
+      "fact": "Extra Bombs start in physical rows1..3, select flank/adjacency-filtered vacancies and may fallback to later rows.",
+      "evidence": "PLAC.C count[11] loop calls setup_marked_cell(11,rng%3+1). SETUP.C uses flank sums, avoids adjacency and corner conditions, then SEARCH.C scans cyclic rows if needed."
+    },
+    {
+      "fact": "Mobile assignments are also role/row-biased, so an exchangeable mobile likelihood remains an approximation.",
+      "evidence": "PLAC.C explicitly places Miners, two strong officers, Spy and rank-specific row distributions before filling Scouts and final repair."
+    }
+  ],
+  "proposed_model": {
+    "outer_prior": "Keep0.8source-template/0.2background fixed. Replace only background by(1-epsilon)*source-structural +epsilon*uniform legal armies.",
+    "latent_geometries": "12cases:8interior Flag columns with3Bomb adjacent screen;2corner columns each with2Bomb adjacent or3Bomb outer screen. Flag-column mass initiallyuniform1/10; nominal source corner weights.2/.8.",
+    "fixed_positions": "Each geometry has FlagF, fixedBomb setB0, fixedmobile setM0. No invented hard exact guard ranks.",
+    "residual_Bombs": "Choose exactly k=6-|B0| additionalBombs from A=40origins excludingF/B0/M0 with probability proportional to product of strictlypositive row weights. This is a conditional-Bernoulli fixed-size distribution, analytically marginalized rather than empirical whole-army particles.",
+    "mobile_ranks": "Allocate the known33mobile ranks uniformly under exact remaining counts over all nonimmobile origins. Explicit role/row-likelihood approximation; do not claim original-generative exactness.",
+    "fitting": "Fit four residual-Bomb row odds from fresh training procedural armies using fixed Beta(1,1) smoothing: (residualBombs_row+1)/(eligible_nonBombs_row+1), normalize arbitrary common scale away. No rank-value scores or strategic coefficients.",
+    "full_support": "epsilon chosen only on independent calibration among prespecified.01,.05,.10,.20,.50,1.0; epsilon1 reproduces existing uniform background exactly, serving as an explicit fallback. Uniform tail makes every legal count-consistent army retain positive mass.",
+    "inference": "For each geometry enforce all historically known original identities including captured pieces and all moved origins. Marginalize every compatible residualBomb subset and every count-consistent mobile assignment, not exact-rank particles."
+  },
+  "derivation": {
+    "partition": "Z_g=e_k({w_s:s in A_g}), elementary symmetric polynomial computed in O(40k).",
+    "evidence": "Let R be publicly knownBomb origins not inB0, and E eligible residual slots after excluding known mobiles and moved origins and R. Geometry likelihood factor is prod(w_R)*e_(k-|R|)(w_E)/Z_g, zero for contradictory fixed Flag/Bomb/mobile facts.",
+    "mobile_factor": "Multiply by prod_r falling(C_r,K_r)/falling(33,K_mobile) for disclosed mobile rank identities; this includes captured revelations. Unlike full-army particles, every compatible mobile rank assignment is analytically marginalized.",
+    "geometry_posterior": "Normalize prior geometry weights times evidence and mobile factor, retaining absolute evidence for mixture competition with templates/uniform component.",
+    "marginals": "Conditional residualBomb inclusion at s is w_s*e_(remaining-1)(E without s)/e_remaining(E), plus fixedBomb point masses; Flag is a geometry point mass. Sum over posterior geometries.",
+    "sanity_identity": "A generic version with all40Flagpositions, no fixed screens/guards, equal weights and6residualBombs must reproduce existing uniform background_log_evidence exactly for every small enumerated public event."
+  },
+  "explicit_nonclaims": [
+    "This is a defensible source-informed approximation, not exact original PRNG joint distribution.",
+    "No calibrated mobile role model is assumed.",
+    "No runtime source, adapter, policy or registry is changed.",
+    "No CX16 code-size or cycle-cost feasibility claim; current target banks are constrained."
+  ],
+  "implementation_stage": "Proposal and derivation before new generator sampling; use fresh train/calibration/heldout seed pools under a separately frozen protocol."
+}

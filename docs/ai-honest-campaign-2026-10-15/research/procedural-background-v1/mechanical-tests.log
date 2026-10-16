@@ -1,0 +1,10 @@
+test_exact_classic_origin_inventory_and_no_particle_collapse (test_structural_model.StructuralTests.test_exact_classic_origin_inventory_and_no_particle_collapse) ... ok
+test_twelve_source_shapes_and_original_procedural_guard_facts (test_structural_model.StructuralTests.test_twelve_source_shapes_and_original_procedural_guard_facts) ... ok
+test_uniform_reduces_to_existing_exact_background_and_enumeration (test_structural_model.StructuralTests.test_uniform_reduces_to_existing_exact_background_and_enumeration) ... ok
+test_weighted_partition (test_structural_model.StructuralTests.test_weighted_partition) ... ok
+test_weighted_structural_geometry_matches_enumeration (test_structural_model.StructuralTests.test_weighted_structural_geometry_matches_enumeration) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.041s
+
+OK

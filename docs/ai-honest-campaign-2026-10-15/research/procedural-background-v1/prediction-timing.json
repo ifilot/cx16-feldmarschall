@@ -1,0 +1,18 @@
+{
+  "measurement": "One deterministic64-prefix heldout subset on current host, no runtime adapter/IPC/compiler target included.",
+  "results": {
+    "Flag_only": {
+      "samples": 64,
+      "mean_ms": 0.363005890625,
+      "maximum_ms": 5.908125,
+      "median_ms": 0.15233249999999998
+    },
+    "Flag_and_Bomb": {
+      "samples": 64,
+      "mean_ms": 4.577064859375,
+      "maximum_ms": 12.444546,
+      "median_ms": 3.9383145
+    }
+  },
+  "scope": "Host research timing only; no CX16 cycle/bank fit claim."
+}

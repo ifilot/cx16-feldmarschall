@@ -1,0 +1,13 @@
+{
+  "schema": "dos-procedural-background-v1",
+  "template_mass": 0.0,
+  "epsilon": 0.01,
+  "mobile_model": "Uniformexactcountsconditionalonnonimmobiles;source-rolebiasnotmodeled.",
+  "provenance": {
+    "selection": "Source-factablation; nofittedrowweights. Fixeduniformtail0.01 sharedwithstructuredcomparator; notselectedfromthiscontrolheldoutperformance.",
+    "structured_calibration_selection_sha256": "78c59adb990f45ddb80d6437dce68244ac15ed36a8a07b28fa865fcd9c77bd33"
+  },
+  "population": "Original1990Colonel source-informed approximate opening prior; no actual setup/seed reconstruction.",
+  "background_kind": "backrow",
+  "flag_prior": "UniformlegalarmiesconditionalonFlagoriginalbackrow30..39."
+}
