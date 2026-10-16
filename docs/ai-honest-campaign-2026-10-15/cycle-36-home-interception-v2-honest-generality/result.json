@@ -1,0 +1,118 @@
+{
+  "cycle": 36,
+  "hypotheses": [
+    "Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction."
+  ],
+  "opponent": "student-guard-v1-normal",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "standings": {
+    "student-template-flag-bomb-v1-normal": {
+      "wins": 283,
+      "draws": 11,
+      "losses": 266,
+      "score": 0.5151785714285714,
+      "errors": 0
+    },
+    "student-template-home-interceptor-v2-normal": {
+      "wins": 284,
+      "draws": 12,
+      "losses": 264,
+      "score": 0.5178571428571429,
+      "errors": 0
+    }
+  },
+  "execution_seconds": {
+    "student-template-flag-bomb-v1-normal": 39.850767958996585,
+    "student-template-home-interceptor-v2-normal": 36.08470706100343
+  },
+  "comparisons": {
+    "student-template-home-interceptor-v2-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_pairs": 280,
+      "pairs_by_family": {
+        "fortified": 40,
+        "uniform": 40,
+        "unguarded": 40,
+        "forward": 40,
+        "decoy": 40,
+        "presets": 40,
+        "broad-mixed": 40
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.0026785714285714286,
+          "interval_95": [
+            0.0,
+            0.007142857142857143
+          ],
+          "interval_98_3333": [
+            0.0,
+            0.008035714285714285
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 1120,
+  "error_sensitivity": {
+    "student-template-home-interceptor-v2-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 2,
+        "negative_pairs": 0,
+        "zero_pairs": 278,
+        "non_tied_pairs": 2,
+        "exact_two_sided_binomial_sign_p": 0.5,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 280,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 284,
+          "draws": 12,
+          "losses": 264,
+          "official_scored_score": 0.5178571428571429,
+          "all_attempt_score_bounds": [
+            0.5178571428571429,
+            0.5178571428571429
+          ]
+        },
+        "b": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 283,
+          "draws": 11,
+          "losses": 266,
+          "official_scored_score": 0.5151785714285714,
+          "all_attempt_score_bounds": [
+            0.5151785714285714,
+            0.5151785714285714
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        0.0026785714285714286,
+        0.0026785714285714286
+      ],
+      "complete_case_pairs": 280,
+      "complete_case_paired_effect": 0.0026785714285714286
+    }
+  },
+  "errors": 0,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 1120
+}

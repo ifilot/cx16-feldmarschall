@@ -1,0 +1,4 @@
+Running student-template-flag-bomb-v1-normal
+Verified student-template-flag-bomb-v1-normal {'wins': 283, 'draws': 11, 'losses': 266, 'score': 0.5151785714285714}
+Running student-template-home-interceptor-v2-normal
+Verified student-template-home-interceptor-v2-normal {'wins': 284, 'draws': 12, 'losses': 264, 'score': 0.5178571428571429}

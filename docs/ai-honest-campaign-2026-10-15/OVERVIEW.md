@@ -268,6 +268,18 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - student-fortress-deployment-v1-normal minus student-validated-deployment-v1-normal: +7.0 percentage points; 95% paired interval [+4.9, +9.1].
 
 
+**Cycle 36 hypotheses:** Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction.
+
+Evidence: [cycle-36-home-interception-v2-honest-generality](cycle-36-home-interception-v2-honest-generality/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Compare matched treatment effects; different army distributions mean 50% is not a fair-null benchmark.
+
+- student-template-flag-bomb-v1-normal: 283 wins / 11 draws / 266 losses; score 51.5%; 0 unscored errors.
+- student-template-home-interceptor-v2-normal: 284 wins / 12 draws / 264 losses; score 51.8%; 0 unscored errors.
+
+- student-template-home-interceptor-v2-normal minus student-template-flag-bomb-v1-normal: +0.3 percentage points; 95% paired interval [+0.0, +0.7].
+
+
 **Preflight failures, without DOS strength results:**
 
 - Cycle 13: Missing AI_TEST in native observer recipe; public query returns unknown command. No saved tournament executed. [Preserved evidence](cycle-13-native-belief-objectives/CONCLUSION.md).
@@ -317,7 +329,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 31: A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16. 3,000 planned attempts; no completed strength result. [Frozen plan](cycle-31-compact-backrow-dos-screen/plan.json).
 - Cycle 32: A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-32-compact-backrow-honest-generality/plan.json).
 - Cycle 35: Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-35-home-interception-v2-dos-screen/plan.json).
-- Cycle 36: Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-36-home-interception-v2-honest-generality/plan.json).
 - Cycle 37: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-37-template-mobile-capture-dos-screen/plan.json).
 - Cycle 38: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-38-template-mobile-capture-honest-generality/plan.json).
 
