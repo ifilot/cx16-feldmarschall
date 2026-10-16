@@ -6099,6 +6099,48 @@
       "information_model": "Own army and publicevents only; no source-template model, opponent setup or concealed ranks.",
       "archive": "ai/sources/3fec8b3c3030b013bfa316a8bc5eec1f2e9a2a07fb8050f54619012feefe1d5c.zip",
       "source_sha256": "3fec8b3c3030b013bfa316a8bc5eec1f2e9a2a07fb8050f54619012feefe1d5c"
+    },
+    {
+      "id": "student-fortress-open-reserve-template-v1-normal",
+      "name": "Fortress Student with open Lieutenant reserve v1 / Normal",
+      "description": "Release the initially Bomb-isolated Lieutenant by one28\u219438swap, preserving the Flag inner barrier and ordinary movement/inference policy.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "tools/new_campaign_open_reserve_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_FORTRESS_OPEN_RESERVE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchangedsource-templateFlag/BombmodelandnativeGuardmovement. OnefixedClassicNormalFortressswap28Bombwith38Lieutenant5:33/33potentialmobilefrontaccessvs32/33baseline. InnerBombs20/31,Flag30,Spy27,centralguard21andRNGunchanged;oneouterBombrelocated,noguaranteeoffullgamedominance.",
+      "information_model": "Own deployment geometry and publicplay/sourceprior only; no opponent information in setup.",
+      "driver": "native-template",
+      "driver_args": [],
+      "archive": "ai/sources/0fab52449e44f78924f3daa548ab64dcc2f86082659c058e077c64dfaca285bd.zip",
+      "source_sha256": "0fab52449e44f78924f3daa548ab64dcc2f86082659c058e077c64dfaca285bd"
     }
   ]
 }

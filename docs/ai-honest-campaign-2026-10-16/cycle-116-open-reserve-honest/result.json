@@ -1,0 +1,180 @@
+{
+  "cycle": 116,
+  "hypotheses": [
+    "Release Fortress\u2019s permanently Bomb-isolated Lieutenant with one fixed own-deployment swap28/38, improving honest end-to-end play by retaining an additional mobile reserve once friendly corridors clear. Same public inference, move policy and random draws; Flag inner Bombs and guard unchanged."
+  ],
+  "opponent": "missions-v1-normal",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 174,
+      "draws": 2,
+      "losses": 48,
+      "score": 0.78125,
+      "errors": 0
+    },
+    "student-fortress-open-reserve-template-v1-normal": {
+      "wins": 165,
+      "draws": 1,
+      "losses": 58,
+      "score": 0.7388392857142857,
+      "errors": 0
+    }
+  },
+  "execution_seconds": {
+    "student-fortress-template-flag-bomb-v1-normal": 23.191841911000665,
+    "student-fortress-open-reserve-template-v1-normal": 23.988146614996367
+  },
+  "comparisons": {
+    "student-fortress-open-reserve-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 112,
+      "pairs_by_family": {
+        "fortified": 16,
+        "uniform": 16,
+        "unguarded": 16,
+        "forward": 16,
+        "decoy": 16,
+        "presets": 16,
+        "broad-mixed": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.04241071428571429,
+          "interval_95": [
+            -0.10714285714285714,
+            0.022321428571428572
+          ],
+          "interval_98_3333": [
+            -0.12053571428571429,
+            0.03571428571428571
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 448,
+  "error_sensitivity": {
+    "student-fortress-open-reserve-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 17,
+        "negative_pairs": 26,
+        "zero_pairs": 69,
+        "non_tied_pairs": 43,
+        "exact_two_sided_binomial_sign_p": 0.2220528201560228,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 112,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 224,
+          "error_games": 0,
+          "scored_games": 224,
+          "wins": 165,
+          "draws": 1,
+          "losses": 58,
+          "official_scored_score": 0.7388392857142857,
+          "all_attempt_score_bounds": [
+            0.7388392857142857,
+            0.7388392857142857
+          ]
+        },
+        "b": {
+          "attempted_games": 224,
+          "error_games": 0,
+          "scored_games": 224,
+          "wins": 174,
+          "draws": 2,
+          "losses": 48,
+          "official_scored_score": 0.78125,
+          "all_attempt_score_bounds": [
+            0.78125,
+            0.78125
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.04241071428571429,
+        -0.04241071428571429
+      ],
+      "complete_case_pairs": 112,
+      "complete_case_paired_effect": -0.04241071428571429
+    }
+  },
+  "errors": 0,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 448,
+  "family_standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "broad-mixed": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.65625,
+        "missions-v1-normal": 0.34375
+      },
+      "decoy": {
+        "student-fortress-template-flag-bomb-v1-normal": 1.0,
+        "missions-v1-normal": 0.0
+      },
+      "fortified": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.578125,
+        "missions-v1-normal": 0.421875
+      },
+      "forward": {
+        "student-fortress-template-flag-bomb-v1-normal": 1.0,
+        "missions-v1-normal": 0.0
+      },
+      "presets": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.546875,
+        "missions-v1-normal": 0.453125
+      },
+      "unguarded": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.8125,
+        "missions-v1-normal": 0.1875
+      },
+      "uniform": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.875,
+        "missions-v1-normal": 0.125
+      }
+    },
+    "student-fortress-open-reserve-template-v1-normal": {
+      "broad-mixed": {
+        "student-fortress-open-reserve-template-v1-normal": 0.71875,
+        "missions-v1-normal": 0.28125
+      },
+      "decoy": {
+        "student-fortress-open-reserve-template-v1-normal": 0.96875,
+        "missions-v1-normal": 0.03125
+      },
+      "fortified": {
+        "student-fortress-open-reserve-template-v1-normal": 0.484375,
+        "missions-v1-normal": 0.515625
+      },
+      "forward": {
+        "student-fortress-open-reserve-template-v1-normal": 0.90625,
+        "missions-v1-normal": 0.09375
+      },
+      "presets": {
+        "student-fortress-open-reserve-template-v1-normal": 0.625,
+        "missions-v1-normal": 0.375
+      },
+      "unguarded": {
+        "student-fortress-open-reserve-template-v1-normal": 0.71875,
+        "missions-v1-normal": 0.28125
+      },
+      "uniform": {
+        "student-fortress-open-reserve-template-v1-normal": 0.75,
+        "missions-v1-normal": 0.25
+      }
+    }
+  }
+}

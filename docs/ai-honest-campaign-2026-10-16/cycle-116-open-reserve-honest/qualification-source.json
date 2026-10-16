@@ -1,0 +1,8 @@
+{
+  "policy": "student-fortress-open-reserve-template-v1-normal",
+  "archive_sha256": "0fab52449e44f78924f3daa548ab64dcc2f86082659c058e077c64dfaca285bd",
+  "registered_sha256": "0fab52449e44f78924f3daa548ab64dcc2f86082659c058e077c64dfaca285bd",
+  "test_sha256": "f1459d9ef1df107f6d6e3097b85c957386ed84a7ae8f006646857f09fc43e1f9",
+  "component_source_sha256": "a372f18b7b8afb17c0e5ddd7dd63f523cf729791233e9815eef8b55558afef83",
+  "test_output_isolated_from_original_proof": true
+}

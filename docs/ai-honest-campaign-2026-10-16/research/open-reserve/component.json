@@ -1,0 +1,421 @@
+{
+  "scope": "Geometry and synthetic native own-mobility components only; no policy registration/tournament/strength claim",
+  "source_sha256": {
+    "tools/new_campaign_open_reserve_deploy.c": "a372f18b7b8afb17c0e5ddd7dd63f523cf729791233e9815eef8b55558afef83",
+    "tools/test_new_campaign_open_reserve.py": "f1459d9ef1df107f6d6e3097b85c957386ed84a7ae8f006646857f09fc43e1f9",
+    "src/core/ai_deploy.c": "73fb906cb4db1889b028d88e994a582607da716858fe813556a4cf17a821f19e"
+  },
+  "layouts": {
+    "Fortress": {
+      "setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "geometry": {
+        "min_bomb_captures_from_front": 1,
+        "bomb_captures_by_front_file": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mobile_pieces_with_permanent_front_access": 32,
+        "trapped_mobile_squares": [
+          38
+        ],
+        "mobile_exit_distance_sum": 38,
+        "mobile_exit_distances": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "16": 1,
+          "17": 1,
+          "18": 1,
+          "19": 1,
+          "21": 2,
+          "22": 2,
+          "23": 2,
+          "24": 2,
+          "25": 2,
+          "26": 2,
+          "27": 2,
+          "29": 2,
+          "32": 3,
+          "34": 3,
+          "35": 3,
+          "36": 3
+        },
+        "front_bombs": 0,
+        "front_miners": 0,
+        "spy_front_distance": 2
+      }
+    },
+    "OpenReserve": {
+      "setup": "94959969496271358975B869753S68FB8B748BBB",
+      "geometry": {
+        "min_bomb_captures_from_front": 1,
+        "bomb_captures_by_front_file": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mobile_pieces_with_permanent_front_access": 33,
+        "trapped_mobile_squares": [],
+        "mobile_exit_distance_sum": 40,
+        "mobile_exit_distances": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "16": 1,
+          "17": 1,
+          "18": 1,
+          "19": 1,
+          "21": 2,
+          "22": 2,
+          "23": 2,
+          "24": 2,
+          "25": 2,
+          "26": 2,
+          "27": 2,
+          "28": 2,
+          "29": 2,
+          "32": 3,
+          "34": 3,
+          "35": 3,
+          "36": 3
+        },
+        "front_bombs": 0,
+        "front_miners": 0,
+        "spy_front_distance": 2
+      }
+    }
+  },
+  "native_components": [
+    {
+      "army": 0,
+      "horizontal_reflection": false,
+      "mode": "control",
+      "reserve_origin": 38,
+      "initial_legal_targets": 0,
+      "cleared_corridor_legal_targets": [],
+      "selected": "none",
+      "synthetic_residue": true
+    },
+    {
+      "army": 0,
+      "horizontal_reflection": false,
+      "mode": "candidate",
+      "reserve_origin": 28,
+      "initial_legal_targets": 0,
+      "cleared_corridor_legal_targets": [
+        78,
+        89,
+        87
+      ],
+      "selected": "i2 i3",
+      "synthetic_residue": true
+    },
+    {
+      "army": 0,
+      "horizontal_reflection": true,
+      "mode": "control",
+      "reserve_origin": 38,
+      "initial_legal_targets": 0,
+      "cleared_corridor_legal_targets": [],
+      "selected": "none",
+      "synthetic_residue": true
+    },
+    {
+      "army": 0,
+      "horizontal_reflection": true,
+      "mode": "candidate",
+      "reserve_origin": 28,
+      "initial_legal_targets": 0,
+      "cleared_corridor_legal_targets": [
+        71,
+        82,
+        80
+      ],
+      "selected": "b2 b3",
+      "synthetic_residue": true
+    },
+    {
+      "army": 1,
+      "horizontal_reflection": false,
+      "mode": "control",
+      "reserve_origin": 38,
+      "initial_legal_targets": 0,
+      "cleared_corridor_legal_targets": [],
+      "selected": "none",
+      "synthetic_residue": true
+    },
+    {
+      "army": 1,
+      "horizontal_reflection": false,
+      "mode": "candidate",
+      "reserve_origin": 28,
+      "initial_legal_targets": 0,
+      "cleared_corridor_legal_targets": [
+        19,
+        28,
+        17
+      ],
+      "selected": "i9 i8",
+      "synthetic_residue": true
+    },
+    {
+      "army": 1,
+      "horizontal_reflection": true,
+      "mode": "control",
+      "reserve_origin": 38,
+      "initial_legal_targets": 0,
+      "cleared_corridor_legal_targets": [],
+      "selected": "none",
+      "synthetic_residue": true
+    },
+    {
+      "army": 1,
+      "horizontal_reflection": true,
+      "mode": "candidate",
+      "reserve_origin": 28,
+      "initial_legal_targets": 0,
+      "cleared_corridor_legal_targets": [
+        12,
+        21,
+        10
+      ],
+      "selected": "b9 b8",
+      "synthetic_residue": true
+    },
+    {
+      "army": 0,
+      "horizontal_reflection": false,
+      "mode": "control",
+      "reserve_origin": 38,
+      "full_own_army": true,
+      "corridor_actor_ranks": [
+        3,
+        6
+      ],
+      "own_corridor_moves": [
+        [
+          68,
+          58
+        ],
+        [
+          78,
+          68
+        ]
+      ],
+      "reserve_targets_after_two_vacancies": [],
+      "synthetic_own_movement_component_not_complete_history": true
+    },
+    {
+      "army": 0,
+      "horizontal_reflection": false,
+      "mode": "candidate",
+      "reserve_origin": 28,
+      "full_own_army": true,
+      "corridor_actor_ranks": [
+        3,
+        6
+      ],
+      "own_corridor_moves": [
+        [
+          68,
+          58
+        ],
+        [
+          78,
+          68
+        ]
+      ],
+      "reserve_targets_after_two_vacancies": [
+        78
+      ],
+      "synthetic_own_movement_component_not_complete_history": true
+    },
+    {
+      "army": 0,
+      "horizontal_reflection": true,
+      "mode": "control",
+      "reserve_origin": 38,
+      "full_own_army": true,
+      "corridor_actor_ranks": [
+        3,
+        6
+      ],
+      "own_corridor_moves": [
+        [
+          61,
+          51
+        ],
+        [
+          71,
+          61
+        ]
+      ],
+      "reserve_targets_after_two_vacancies": [],
+      "synthetic_own_movement_component_not_complete_history": true
+    },
+    {
+      "army": 0,
+      "horizontal_reflection": true,
+      "mode": "candidate",
+      "reserve_origin": 28,
+      "full_own_army": true,
+      "corridor_actor_ranks": [
+        3,
+        6
+      ],
+      "own_corridor_moves": [
+        [
+          61,
+          51
+        ],
+        [
+          71,
+          61
+        ]
+      ],
+      "reserve_targets_after_two_vacancies": [
+        71
+      ],
+      "synthetic_own_movement_component_not_complete_history": true
+    },
+    {
+      "army": 1,
+      "horizontal_reflection": false,
+      "mode": "control",
+      "reserve_origin": 38,
+      "full_own_army": true,
+      "corridor_actor_ranks": [
+        3,
+        6
+      ],
+      "own_corridor_moves": [
+        [
+          38,
+          48
+        ],
+        [
+          28,
+          38
+        ]
+      ],
+      "reserve_targets_after_two_vacancies": [],
+      "synthetic_own_movement_component_not_complete_history": true
+    },
+    {
+      "army": 1,
+      "horizontal_reflection": false,
+      "mode": "candidate",
+      "reserve_origin": 28,
+      "full_own_army": true,
+      "corridor_actor_ranks": [
+        3,
+        6
+      ],
+      "own_corridor_moves": [
+        [
+          38,
+          48
+        ],
+        [
+          28,
+          38
+        ]
+      ],
+      "reserve_targets_after_two_vacancies": [
+        28
+      ],
+      "synthetic_own_movement_component_not_complete_history": true
+    },
+    {
+      "army": 1,
+      "horizontal_reflection": true,
+      "mode": "control",
+      "reserve_origin": 38,
+      "full_own_army": true,
+      "corridor_actor_ranks": [
+        3,
+        6
+      ],
+      "own_corridor_moves": [
+        [
+          31,
+          41
+        ],
+        [
+          21,
+          31
+        ]
+      ],
+      "reserve_targets_after_two_vacancies": [],
+      "synthetic_own_movement_component_not_complete_history": true
+    },
+    {
+      "army": 1,
+      "horizontal_reflection": true,
+      "mode": "candidate",
+      "reserve_origin": 28,
+      "full_own_army": true,
+      "corridor_actor_ranks": [
+        3,
+        6
+      ],
+      "own_corridor_moves": [
+        [
+          31,
+          41
+        ],
+        [
+          21,
+          31
+        ]
+      ],
+      "reserve_targets_after_two_vacancies": [
+        21
+      ],
+      "synthetic_own_movement_component_not_complete_history": true
+    }
+  ],
+  "prior": "The exact single-swap geometry was already proposed as MobilityOnlyFortress in old research_deployment_double_shell.py; prior C22 played a different three-swap double-shell package.",
+  "caveat": "Permanent front access assumes mobile teammates can vacate. Initial reserve has no legal move in either formation. Synthetic residue removes other mobile teammates from the board; this demonstrates legal activation after corridors clear, not reachable-history timing or higher game strength."
+}

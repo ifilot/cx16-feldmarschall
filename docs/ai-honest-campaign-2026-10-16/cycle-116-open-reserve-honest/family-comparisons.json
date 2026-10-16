@@ -1,0 +1,139 @@
+{
+  "scope": "Prespecified family breakdown; each interval exploratory and unadjusted for seven-family or campaign selection. No family-specific promotion claim.",
+  "comparison": "student-fortress-open-reserve-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal",
+  "families": {
+    "fortified": {
+      "complete_pairs": 16,
+      "pairs_by_family": {
+        "fortified": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.09375,
+          "interval_95": [
+            -0.265625,
+            0.09375
+          ],
+          "interval_98_3333": [
+            -0.3125,
+            0.140625
+          ]
+        }
+      }
+    },
+    "uniform": {
+      "complete_pairs": 16,
+      "pairs_by_family": {
+        "uniform": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.125,
+          "interval_95": [
+            -0.34375,
+            0.0625
+          ],
+          "interval_98_3333": [
+            -0.375,
+            0.09375
+          ]
+        }
+      }
+    },
+    "unguarded": {
+      "complete_pairs": 16,
+      "pairs_by_family": {
+        "unguarded": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.09375,
+          "interval_95": [
+            -0.28125,
+            0.09375
+          ],
+          "interval_98_3333": [
+            -0.3125,
+            0.125
+          ]
+        }
+      }
+    },
+    "forward": {
+      "complete_pairs": 16,
+      "pairs_by_family": {
+        "forward": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.09375,
+          "interval_95": [
+            -0.25,
+            0.0
+          ],
+          "interval_98_3333": [
+            -0.28125,
+            0.0
+          ]
+        }
+      }
+    },
+    "decoy": {
+      "complete_pairs": 16,
+      "pairs_by_family": {
+        "decoy": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.03125,
+          "interval_95": [
+            -0.09375,
+            0.0
+          ],
+          "interval_98_3333": [
+            -0.125,
+            0.0
+          ]
+        }
+      }
+    },
+    "presets": {
+      "complete_pairs": 16,
+      "pairs_by_family": {
+        "presets": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.078125,
+          "interval_95": [
+            -0.125,
+            0.296875
+          ],
+          "interval_98_3333": [
+            -0.1875,
+            0.34375
+          ]
+        }
+      }
+    },
+    "broad-mixed": {
+      "complete_pairs": 16,
+      "pairs_by_family": {
+        "broad-mixed": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.0625,
+          "interval_95": [
+            -0.09375,
+            0.25
+          ],
+          "interval_98_3333": [
+            -0.125,
+            0.28125
+          ]
+        }
+      }
+    }
+  }
+}
