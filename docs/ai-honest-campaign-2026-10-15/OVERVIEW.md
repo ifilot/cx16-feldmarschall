@@ -405,6 +405,21 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - student-template-mobile-captures-v1-normal minus student-template-flag-bomb-v1-normal: +0.5 percentage points; 95% paired interval [-1.4, +2.6].
 
 
+**Cycle 40 hypotheses:** Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores.
+
+Evidence: [cycle-40-quiet-contact-honest-generality](cycle-40-quiet-contact-honest-generality/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Both treatments use the same forced army population; compare their matched effects against this reference.
+
+- student-template-flag-bomb-v1-normal: 267 wins / 13 draws / 280 losses; score 48.8%; 0 unscored errors.
+- student-template-quiet-occupancy-v1-normal: 281 wins / 8 draws / 271 losses; score 50.9%; 0 unscored errors.
+- student-template-quiet-mobile-v1-normal: 279 wins / 10 draws / 271 losses; score 50.7%; 0 unscored errors.
+
+- student-template-quiet-occupancy-v1-normal minus student-template-flag-bomb-v1-normal: +2.1 percentage points; 95% paired interval [-1.6, +5.8].
+- student-template-quiet-mobile-v1-normal minus student-template-quiet-occupancy-v1-normal: -0.2 percentage points; 95% paired interval [-2.1, +1.7].
+- student-template-quiet-mobile-v1-normal minus student-template-flag-bomb-v1-normal: +1.9 percentage points; 95% paired interval [-2.0, +5.8].
+
+
 **Cycle 41 hypotheses:** Adding the unchanged Fortress deployment to the unchanged honest source-template native policy improves end-to-end score against the original DOS population on independent seeds.
 
 Evidence: [cycle-41-fortress-template-validation](cycle-41-fortress-template-validation/result.json).
@@ -489,7 +504,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 35: Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-35-home-interception-v2-dos-screen/plan.json).
 - Cycle 37: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-37-template-mobile-capture-dos-screen/plan.json).
 - Cycle 39: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 3,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-39-quiet-contact-dos-screen/plan.json).
-- Cycle 40: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 1,680 planned comparison attempts; registered; no completed strength result. [Plan](cycle-40-quiet-contact-honest-generality/plan.json).
 - Cycle 43: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-43-public-forks-dos-screen/plan.json).
 - Cycle 44: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-44-public-forks-honest-generality/plan.json).
 - Cycle 45: Exact public-evidence caching preserves native Q24 playing decisions and DOS outcomes while reducing inference preparation cost when evidence is unchanged. 800 planned comparison attempts; registered; no completed strength result. [Plan](cycle-45-template-exact-cache-bridge/plan.json).
