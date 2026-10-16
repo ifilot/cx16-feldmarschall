@@ -1,0 +1,72 @@
+{
+  "policy": "student-template-mobile-captures-v1-normal",
+  "source_sha256": "c3df9d65d70279a1acdbc7dae7127a5ec3b98cf03eec1e69184dd25e1af8d447",
+  "receipt": {
+    "policy": {
+      "id": "student-template-mobile-captures-v1-normal",
+      "name": "student-template-mobile-captures-v1-normal",
+      "description": "Use source-template per-piece mobile-rank probabilities for hidden capture gain with unchanged Flag/Bomb packets.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged source-template posterior and Q12 Flag/Bomb/mobile masses. For hidden captures only, replace count-exchangeable conditional mobile gain with the target-specific template posterior conditional mobile gain. Preserve native danger credit and10point probe term; recompute existing40point near-ownFlag threshold exactly. Quiet/disclosed/terminal scores unchanged; single native ranked search and actual-choice history repair, no extra RNG or rollouts.",
+      "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-captures"
+      ],
+      "archive": "ai/sources/c3df9d65d70279a1acdbc7dae7127a5ec3b98cf03eec1e69184dd25e1af8d447.zip",
+      "source_sha256": "c3df9d65d70279a1acdbc7dae7127a5ec3b98cf03eec1e69184dd25e1af8d447"
+    },
+    "recipe_sha256": "b5e6ad0ea0dbb79e3f8dba6da2c70d466db7a257a4435599802bfd9fea488844",
+    "executable_sha256": "f25fd92d9ce861830b2b0a5669c1cdae25824fa15b19acc8807c137d3320ce63",
+    "runtime_sha256": {
+      "engine": "f25fd92d9ce861830b2b0a5669c1cdae25824fa15b19acc8807c137d3320ce63",
+      "observer": "88a480d48f722fd0482ffc47ff08b400637132c73091fe9e652ac852fbf0c6f2",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_native_template.py": "c7d7f448d1a7b9c840ed990caad8e0e2c02d6318da489351d1e12579c90810aa",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+      "campaign_native_mobile.py": "3b9b7ea1b767c6296b964d6ea6cb9936641a635fc5a50bd6095514f7c322c111",
+      "campaign_mobile_capture.py": "397fbd031c9b8c1c17df09b8e01af9cf1b09494b739efb39831b4e28d3d09273"
+    },
+    "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+  },
+  "public_history_decisions_both_sides": 300,
+  "reference_overrides": 19,
+  "portable_outside_checkout": true,
+  "reference": "Direct current MobileCaptureBot with frozen observer and same public inputs",
+  "setup_moves_public_state_and_actual_history_parity": true,
+  "scope": "Integration qualification; no counterfactual strength claim."
+}

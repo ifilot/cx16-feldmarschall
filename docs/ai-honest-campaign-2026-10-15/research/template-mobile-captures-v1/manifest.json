@@ -1,0 +1,42 @@
+{
+  "PROPOSAL.json": {
+    "bytes": 2145,
+    "sha256": "289277e0c3376ea3ac22b02fe6ce8f3894428459b497cfa770d0b74905762e72"
+  },
+  "README.md": {
+    "bytes": 2388,
+    "sha256": "036b36c6a626e7e0c11ad1c824641c151defe09938ef013241e65b4622531bb0"
+  },
+  "ROOT-QUALIFICATION.json": {
+    "bytes": 1067,
+    "sha256": "3d2cd99cbc84ceaf8e417e8d8c549f0b5f220edfbf8a65169394488bd7e85ee7"
+  },
+  "adapter-active-history.json": {
+    "bytes": 492,
+    "sha256": "97d51144818c64a1e038a906c7307494b0c9cc2649d9af64ea5e03929342dc89"
+  },
+  "adapter-cost.json": {
+    "bytes": 848,
+    "sha256": "2672b2dde551a3f879e362461949c398ffddd5dda1c1598197ecca3b23c90607"
+  },
+  "adapter-parity.json": {
+    "bytes": 419,
+    "sha256": "ebf6243ad3d07490a15c44b02d1d3375918daa2be5ca2162a6207f352c26e4e5"
+  },
+  "audit-adapter-active.py": {
+    "bytes": 2935,
+    "sha256": "a356aea2adf8664a65113d626b73d564ddad11314267938be22ff79d23381be5"
+  },
+  "audit-adapter-cost.py": {
+    "bytes": 3520,
+    "sha256": "9c6cacce84e7d2e2e43309cea2f2ea219a6bbadc1aac37bcd7563ba7b1cd2354"
+  },
+  "audit-adapter-parity.py": {
+    "bytes": 2801,
+    "sha256": "7e3a52c380089bf07c326cfcea799074367ca4cc6e52abc4ff92311e6c5fc595"
+  },
+  "checks.log": {
+    "bytes": 1587,
+    "sha256": "05246d54e1d0c84f791be1ebbcb224c3272d94af7b3fac392bd951d9444088b4"
+  }
+}

@@ -279,6 +279,15 @@ def build_native_beliefs(source, directory, executable, policy):
         for name in (entrypoint, 'campaign_template_beliefs.py'):
             (directory/name).write_bytes((source/'tools'/name).read_bytes())
             runtime.append(name)
+        if '--mobile-captures' in policy.get('driver_args', []):
+            if not {'AI_TRACE','AI_TRAINING'}.issubset(policy.get('defines', [])):
+                raise ValueError('Mobile capture bridge requires native scores and danger credits')
+            if '--home-interceptor' in policy.get('driver_args', []) or policy.get('procedural_belief_model'):
+                raise ValueError('Isolate mobile capture bridge from other template experiments')
+            entrypoint='campaign_native_mobile.py'
+            for name in (entrypoint,'campaign_mobile_capture.py'):
+                (directory/name).write_bytes((source/'tools'/name).read_bytes())
+                runtime.append(name)
         if '--home-interceptor' in policy.get('driver_args', []):
             if 'AI_TRACE' not in policy.get('defines', []):
                 raise ValueError('Home interceptor requires scored native candidate traces')
