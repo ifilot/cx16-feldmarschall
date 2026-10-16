@@ -234,14 +234,27 @@ def select_records(bundle, split, rounds, offset=0):
     return [record for i in range(len(spec['families'])) for record in rows[i*count+offset:i*count+offset+rounds]]
 
 
-def freeze_dataset(tournament, bundle, split, rounds, offset):
+def validate_role(role,setup_mode):
+    expected={'referee-v1':'referee','opponent-only-v1':'policy-owned-rotated-v1'}
+    if role not in expected or setup_mode!=expected[role]:
+        raise ValueError('Dataset role requires its explicit setup mode: referee-v1/referee or opponent-only-v1/policy-owned-rotated-v1')
+
+
+def freeze_dataset(tournament, bundle, split, rounds, offset,role='referee-v1'):
+    validate_role(role,tournament.metadata().get('setup_mode','referee'))
     selected = select_records(bundle, split, rounds, offset)
     pinned = {name: tournament.artifact('setup-dataset/'+name, data)
               for name, data in bundle['files'].items()}
     manifest_sha = tournament.artifact('setup-dataset/manifest.json', bundle['manifest_bytes'])
     tournament.set_metadata(dict(setup_dataset=dict(id=bundle['manifest']['id'], split=split,
         offset=offset, record_ids=[r['id'] for r in selected], manifest_sha256=manifest_sha,
-        files=pinned, contract='Frozen referee inputs only; no dataset metadata or enemy setup sent to honest policies.')))
+        files=pinned,role=role,
+        contract=('Frozen referee inputs only; no dataset metadata or enemy setup sent to honest policies.' if role=='referee-v1' else
+                  'Frozen Army B is the opponent only; Army A is unused. First policy selects its own army through the frozen setup protocol. Both armies reflect horizontally when the owner is Blue. No corpus or enemy setup is sent to honest policies.'))))
+    if role=='opponent-only-v1':
+        pin=tournament.metadata()['setup_dataset']
+        pin['selection_source_sha256']=tournament.artifact('setup-dataset/opponent-only-selector.py',Path(__file__).read_bytes())
+        tournament.set_metadata(dict(setup_dataset=pin))
 
 
 def frozen_schedule(metadata, artifact):
@@ -250,7 +263,10 @@ def frozen_schedule(metadata, artifact):
     manifest_raw = artifact(pin['manifest_sha256']); manifest = json.loads(manifest_raw)
     files = {name: artifact(value) for name, value in pin['files'].items()}
     documents, _ = validate_bundle(manifest, files)
-    if metadata.get('setup_mode', 'referee') != 'referee' or manifest['id'] != pin['id']:
+    role=pin.get('role','referee-v1')
+    validate_role(role,metadata.get('setup_mode','referee'))
+    if role=='opponent-only-v1':artifact(pin['selection_source_sha256'])
+    if manifest['id'] != pin['id']:
         raise ValueError('Dataset tournament identity/setup mode mismatch')
     bundle = dict(manifest=manifest, documents=documents)
     selected = select_records(bundle, pin['split'], metadata['rounds'], pin['offset'])
@@ -259,7 +275,7 @@ def frozen_schedule(metadata, artifact):
             or metadata['planned_games'] != 2*len(selected)):
         raise ValueError('Dataset tournament cohort mismatch')
     rng = random.Random(metadata['seed'])
-    return {i+1: dict(record, move_seed=rng.randrange(1, 60000)) for i, record in enumerate(selected)}
+    return {i+1: dict(record, move_seed=rng.randrange(1, 60000),dataset_role=role) for i, record in enumerate(selected)}
 
 
 def build_dataset(directory, identity=DATASET_ID, seed=2026101601, development_pairs=64, validation_pairs=128):

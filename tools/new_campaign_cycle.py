@@ -38,7 +38,7 @@ def overview():
             details += ['No completed strength result. [Frozen plan]('+directory.name+'/plan.json).']
             continue
         result = json.loads(result_path.read_text())
-        context = (plan['dataset']['split'] + ' corpus' if plan.get('dataset') else
+        context = (plan['dataset']['split'] + ' corpus / '+plan['dataset'].get('role','referee-v1') if plan.get('dataset') else
                    ', '.join(plan['families']) + ' / ' + plan.get('setup_mode','referee'))
         for policy, standing in result['standings'].items():
             w,d,l = (standing[k] for k in ('wins','draws','losses'))
@@ -80,8 +80,8 @@ def check_plan(directory):
         select_records(bundle,split,plan['rounds'],dataset.get('offset',0))
         if plan['families'] != bundle['manifest']['splits'][split]['families']:
             raise ValueError('Plan families must match the exact frozen dataset partition')
-        if plan.get('setup_mode','referee') != 'referee':
-            raise ValueError('Dataset studies require referee setups')
+        from setup_dataset import validate_role
+        validate_role(dataset.get('role','referee-v1'),plan.get('setup_mode','referee'))
     return plan
 
 
@@ -122,7 +122,8 @@ def dataset_evaluate(directory):
                 result = run(identity,plan['opponent'],path,rounds=plan['rounds'],seed=plan['seed'],
                     jobs=plan['jobs'],families=FAMILIES,max_plies=plan['max_plies'],backend=plan['backend'],
                     setup_dataset=ROOT/dataset['path'],dataset_split=dataset.get('split','development'),
-                    dataset_offset=dataset.get('offset',0))
+                    dataset_offset=dataset.get('offset',0),dataset_role=dataset.get('role','referee-v1'),
+                    setup_mode=plan.get('setup_mode','referee'))
                 print(json.dumps(result),flush=True)
         validate_metadata(path,match,plan,frozen)
         assert path.stat().st_mtime >= registration['epoch']
@@ -130,8 +131,14 @@ def dataset_evaluate(directory):
             pin = tournament.metadata()['setup_dataset']
             assert pin['split'] == dataset.get('split','development')
             assert pin['offset'] == dataset.get('offset',0)
+            assert pin.get('role','referee-v1')==dataset.get('role','referee-v1')
             assert pin['manifest_sha256'] == registration['dataset_manifest_sha256']
         report,complete,current = analyze_match(path,match,plan,frozen)
+        if dataset.get('role','referee-v1')=='opponent-only-v1':
+            with Tournament(path) as tournament:
+                current=[(g['id'],g['pair_id'],g['family'],g['seed'],
+                          g['red_setup'] if g['red']==plan['opponent'] else g['blue_setup'])
+                         for g in (tournament.game(row['id']) for row in tournament.games())]
         if signature is None: signature = current
         assert signature == current, 'Unmatched armies or seeds'
         reports[identity],pairs[identity] = report,complete

@@ -1,6 +1,7 @@
 """Corpus disjointness, generator structure and portable tournament provenance."""
 import contextlib
 import copy
+import hashlib
 import io
 import json
 from pathlib import Path
@@ -10,6 +11,7 @@ import sqlite3
 import subprocess
 import tempfile
 import unittest
+import zlib
 
 from feldmarschall import ROOT, setup_neighbors
 from setup_dataset import (DEVELOPMENT, HELD_OUT, LANES, SPLITS, audit_documents,
@@ -99,6 +101,17 @@ class SetupDatasets(unittest.TestCase):
                 run('student-guard-v1-normal', 'original-v1', output, rounds=1,
                     setup_dataset=self.dataset, **kwargs)
             self.assertFalse(output.exists())
+        for kwargs in (dict(dataset_role='unknown'),
+                       dict(dataset_role='opponent-only-v1'),
+                       dict(dataset_role='opponent-only-v1',setup_mode='policy-owned'),
+                       dict(dataset_role='referee-v1',setup_mode='policy-owned-rotated-v1')):
+            with self.assertRaises(ValueError):
+                run('student-guard-v1-normal','original-v1',output,rounds=1,
+                    setup_dataset=self.dataset,**kwargs)
+            self.assertFalse(output.exists())
+        with self.assertRaises(ValueError):
+            run('student-guard-v1-normal','original-v1',output,rounds=1,dataset_role='opponent-only-v1')
+        self.assertFalse(output.exists())
 
     def test_portable_python_and_openmp_matches_and_tampering(self):
         paths = []
@@ -139,6 +152,67 @@ class SetupDatasets(unittest.TestCase):
             db.execute('UPDATE games SET red_setup=blue_setup WHERE pair_id=1')
         with self.assertRaisesRegex(ValueError, 'frozen dataset'):
             verify(corrupt)
+
+        # Previously saved referee datasets have no role field.
+        shutil.copyfile(paths[0],corrupt)
+        with sqlite3.connect(corrupt) as db:
+            pin=json.loads(db.execute("SELECT value FROM metadata WHERE key='setup_dataset'").fetchone()[0])
+            pin.pop('role')
+            db.execute("UPDATE metadata SET value=? WHERE key='setup_dataset'",(json.dumps(pin),))
+        self.assertEqual(verify(corrupt)['games'],12)
+
+    def test_opponent_only_deployment_portability_backends_and_forgery(self):
+        paths=[]
+        for backend in ('python','openmp'):
+            path=self.root/('opponent-'+backend+'.fmtour');paths.append(path)
+            with contextlib.redirect_stdout(io.StringIO()):
+                run('student-guard-v1-normal','original-v1',path,rounds=1,seed=2026101602,
+                    jobs=2,max_plies=40,backend=backend,setup_mode='policy-owned-rotated-v1',
+                    setup_dataset=self.dataset,dataset_offset=1,dataset_role='opponent-only-v1')
+            self.assertEqual(verify(path)['games'],12)
+        selected=select_records(self.bundle,'development',1,1)
+        with Tournament(paths[0]) as python,Tournament(paths[1]) as native:
+            self.assertEqual(python.metadata()['setup_dataset']['role'],'opponent-only-v1')
+            for row in python.games():
+                game=python.game(row['id']);self.assertEqual(game,native.game(row['id']))
+                record=selected[game['pair_id']-1]
+                owner_blue=game['blue']=='student-guard-v1-normal'
+                enemy=game['red_setup'] if owner_blue else game['blue_setup']
+                self.assertEqual(enemy,reflected(record['army_b']) if owner_blue else record['army_b'])
+                owned=game['blue_setup'] if owner_blue else game['red_setup']
+                self.assertNotEqual(owned,reflected(record['army_a']) if owner_blue else record['army_a'])
+                request=self.root/'opponent-replay.json';request.write_text(json.dumps(game))
+                result=subprocess.check_output([str(ROOT/'build/desktop/feldmarschall-tournament-worker'),
+                                                '--replay',str(request)],text=True)
+                self.assertEqual(json.loads(result)['states'],replay(game)[0])
+        hidden=self.root/'opponent-hidden-suite';self.dataset.rename(hidden)
+        try:self.assertEqual(verify(paths[0])['games'],12)
+        finally:hidden.rename(self.dataset)
+        corrupt=self.root/'opponent-corrupt.fmtour'
+        shutil.copyfile(paths[0],corrupt)
+        with sqlite3.connect(corrupt) as db:
+            old_sha=json.loads(db.execute("SELECT value FROM metadata WHERE key='setup_records_sha256'").fetchone()[0])
+            name,packed=db.execute('SELECT name,data FROM artifacts WHERE sha256=?',(old_sha,)).fetchone()
+            document=json.loads(zlib.decompress(packed));record=document['records'][0]
+            altered=reflected(record['opponent_setup']);record['opponent_setup']=altered
+            data=json.dumps(document).encode();new_sha=hashlib.sha256(data).hexdigest()
+            db.execute('INSERT INTO artifacts(sha256,name,data) VALUES (?,?,?)',(new_sha,name,zlib.compress(data)))
+            db.execute("UPDATE metadata SET value=? WHERE key='setup_records_sha256'",(json.dumps(new_sha),))
+            # Forging both the owned record and both game halves must not
+            # override the independent corpus Army B binding.
+            db.execute('UPDATE games SET blue_setup=? WHERE id=1',(altered,))
+            db.execute('UPDATE games SET red_setup=? WHERE id=2',(reflected(altered),))
+        with self.assertRaisesRegex(ValueError,'frozen dataset Army B'):verify(corrupt)
+        shutil.copyfile(paths[0],corrupt)
+        with sqlite3.connect(corrupt) as db:
+            db.execute('UPDATE games SET pair_id=2 WHERE id=1')
+        with self.assertRaisesRegex(ValueError,'frozen dataset record/schedule'):verify(corrupt)
+        shutil.copyfile(paths[0],corrupt)
+        with sqlite3.connect(corrupt) as db:
+            pin=json.loads(db.execute("SELECT value FROM metadata WHERE key='setup_dataset'").fetchone()[0])
+            pin['role']='referee-v1'
+            db.execute("UPDATE metadata SET value=? WHERE key='setup_dataset'",(json.dumps(pin),))
+        with self.assertRaisesRegex(ValueError,'Dataset role'):verify(corrupt)
 
 
 if __name__ == '__main__':

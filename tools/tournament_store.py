@@ -258,6 +258,14 @@ def verify(path):
                 dataset_schedule = frozen_schedule(metadata, dataset_artifact)
             except (KeyError, TypeError) as error:
                 raise ValueError('Invalid setup dataset provenance') from error
+            if metadata['setup_dataset'].get('role','referee-v1')=='opponent-only-v1':
+                if set(setup_records)!=set(dataset_schedule):
+                    raise ValueError('Incomplete opponent-only dataset setup records')
+                for pair_id,record in dataset_schedule.items():
+                    selected=setup_records[pair_id]
+                    if (selected['opponent_setup']!=record['army_b'] or selected['family']!=record['family']
+                            or selected['move_seed']!=record['move_seed']):
+                        raise ValueError('Policy-owned opponent does not match frozen dataset Army B')
         pairs = {}
         for row in tournament.games():
             game = tournament.game(row['id'])
@@ -268,9 +276,17 @@ def verify(path):
                     names.reverse()
                 if (record is None or game['pair_id'] != (game['id']+1)//2
                         or [game['red'], game['blue']] != names
-                        or game['family'] != record['family'] or game['seed'] != record['move_seed']
-                        or game['red_setup'] != record['army_a'] or game['blue_setup'] != record['army_b']):
+                        or game['family'] != record['family'] or game['seed'] != record['move_seed']):
                     raise ValueError('Game does not match frozen dataset record/schedule')
+                if record['dataset_role']=='referee-v1':
+                    if game['red_setup']!=record['army_a'] or game['blue_setup']!=record['army_b']:
+                        raise ValueError('Game does not match frozen dataset armies')
+                else:
+                    owner_blue=game['blue']==setup_owner
+                    opponent=game['red_setup'] if owner_blue else game['blue_setup']
+                    expected=mirror_setup(record['army_b']) if owner_blue else record['army_b']
+                    if opponent!=expected:
+                        raise ValueError('Opponent army does not match frozen dataset Army B')
             replay(game)
             if {game['red'], game['blue']} != identities:
                 raise ValueError('Unknown game participant')

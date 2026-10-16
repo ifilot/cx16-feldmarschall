@@ -232,8 +232,11 @@ void Desk::openTournament(const QString &path) {
             .arg(tournament->games.size()).arg(tournament->metadata["planned_games"].toInt())};
     if (tournament->metadata["setup_dataset"].isObject()) {
         auto dataset = tournament->metadata["setup_dataset"].toObject();
-        lines.append(QString("Setup suite: %1 / %2; fixed paired armies.")
-                     .arg(dataset["id"].toString(), dataset["split"].toString()));
+        const auto armies = dataset["role"].toString() == "opponent-only-v1"
+            ? QString("policy-owned army; frozen opponent armies")
+            : QString("fixed paired armies");
+        lines.append(QString("Setup suite: %1 / %2; %3.")
+                     .arg(dataset["id"].toString(), dataset["split"].toString(), armies));
     }
     if (tournament->metadata["setup_mode"].toString() == "policy-owned")
         lines.append(QString("Deployment comparison: %1 chooses its army; armies follow players across sides.")

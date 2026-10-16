@@ -1,0 +1,8 @@
+...src/native/broken.c:1:2: error: #error deliberate preflight failure
+    1 | #error deliberate preflight failure
+      |  ^~~~~
+......
+----------------------------------------------------------------------
+Ran 9 tests in 2.229s
+
+OK

@@ -1,5 +1,7 @@
 """Focused runner contract tests; no validation games are played."""
 import copy
+import contextlib
+import io
 import json
 from pathlib import Path
 import sys
@@ -50,6 +52,27 @@ class RunnerContracts(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'referee'):runner.check_plan(self.directory)
         self.plan['setup_mode']='referee';self.plan['cycle']=1;self.save()
         with self.assertRaisesRegex(ValueError,'101'):runner.check_plan(self.directory)
+
+    def test_opponent_only_role_requires_rotated_owned_deployment(self):
+        self.plan['dataset']['role']='opponent-only-v1';self.save()
+        with self.assertRaisesRegex(ValueError,'Dataset role'):runner.check_plan(self.directory)
+        self.plan['setup_mode']='policy-owned-rotated-v1';self.save()
+        self.assertEqual(runner.check_plan(self.directory),self.plan)
+        self.plan['dataset']['role']='unknown';self.save()
+        with self.assertRaisesRegex(ValueError,'Dataset role'):runner.check_plan(self.directory)
+
+    def test_opponent_only_campaign_pipeline_on_development_only(self):
+        self.plan.update(baseline='student-guard-v1-normal',opponent='original-v1',
+            policies=['student-guard-v1-normal','missions-v1-normal'],
+            contrasts=[['missions-v1-normal','student-guard-v1-normal']],
+            setup_mode='policy-owned-rotated-v1',max_plies=4)
+        self.plan['dataset']['role']='opponent-only-v1';self.save()
+        with contextlib.redirect_stdout(io.StringIO()):
+            runner.freeze(self.directory)
+            result=runner.dataset_evaluate(self.directory)
+        self.assertEqual(result['attempts'],24)
+        self.assertEqual(result['verified_games'],24)
+        self.assertEqual(result['dataset']['role'],'opponent-only-v1')
 
     def test_overview_preserves_hypothesis_and_unscored_errors(self):
         standing=dict(wins=1,draws=2,losses=1,errors=3)

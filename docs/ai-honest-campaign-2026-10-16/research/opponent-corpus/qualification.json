@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "role": "opponent-only-v1",
+  "default_role": "referee-v1",
+  "required_mode": "policy-owned-rotated-v1",
+  "tests": {
+    "dataset": 7,
+    "campaign_runner": 8,
+    "existing_tournaments": 9
+  },
+  "official_validation_matches": 0,
+  "corpus_unchanged_against_git": true,
+  "corpus_manifest_matches_prior_saved_cycle109": true,
+  "dataset_manifest_sha256": "68acba8245ac866e42572086b5b849ec3bfc4fcae2b22325f0ea62e92d1aa3fe",
+  "sources": {
+    "tools/tournament.py": "f91a3f995691969a230235ad0fc021b3339113efe3cf61e71dc706078b2dfce5",
+    "tools/setup_dataset.py": "cdf36593fc316c8158e99fc3b9790c711387b0c295fece972bd4193daef93dbe",
+    "tools/tournament_store.py": "3069588f7abcc1cacc2854df49d719378fed6fba94b7f8fa2e07bf189b21cb78",
+    "tools/new_campaign_cycle.py": "c6a0ee55e034d9f59d7422862d2dc8f0f5ee203cda93e7bc485a9872a5ebb157",
+    "tools/test_setup_dataset.py": "e7c5510e5c358bf5cdfe8e14ddd9137e81082220f314f553af5d84dd78418d0c",
+    "docs/ai-honest-campaign-2026-10-16/research/evaluation/test_runner.py": "f1d56a7f6346c7e9fde03aa51c2a3b2494c0d6786313a8fb54c6bb630b21f71a",
+    "docs/tournament-desk.md": "94168b56185654719c490f831b03de9928020d20e24cb120f9b3d6f0f4130bd1"
+  },
+  "logs": {
+    "dataset-checks.log": "000df120c6d44b5b36afcfa72337fd89c0589f9477bf240f9cc2b3d3c8c847a4",
+    "campaign-runner-checks.log": "2757774a00bd4a1e68ff111042eba79935323382505f3f52c316678811dbc5c4",
+    "tournament-regression.log": "46bebf135cd95f3a8dd497918aa0d52a7a9b879a2fab39c208dd8f2f424f72c4"
+  }
+}

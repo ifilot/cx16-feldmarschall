@@ -90,7 +90,7 @@ def policy_setup(arguments, difficulty, seed):
 
 def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_plies=1000,
         backend='python', worker=DEFAULT_WORKER, reuse_processes=None, setup_mode='referee',
-        setup_dataset=None, dataset_split='development', dataset_offset=0):
+        setup_dataset=None, dataset_split='development', dataset_offset=0, dataset_role='referee-v1'):
     if first == second:
         raise ValueError('Choose two different AI versions')
     if setup_mode not in ('referee','policy-owned','policy-owned-rotated-v1'):
@@ -98,12 +98,13 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
     if rounds < 1 or jobs < 1 or max_plies < 1 or not families or any(f not in SETUP_FAMILIES for f in families):
         raise ValueError('Positive rounds, workers and ply limit, and known layout families required')
     dataset_bundle, dataset_rows = None, None
-    if setup_dataset is None and (dataset_split != 'development' or dataset_offset != 0):
-        raise ValueError('Dataset partition/offset requires --dataset')
+    if setup_dataset is None and (dataset_split != 'development' or dataset_offset != 0 or dataset_role!='referee-v1'):
+        raise ValueError('Dataset partition/offset/role requires --dataset')
     if setup_dataset is not None:
-        from setup_dataset import load_dataset, select_records
-        if setup_mode != 'referee' or tuple(families) != tuple(FAMILIES):
-            raise ValueError('Dataset requires referee setup mode and replaces --families')
+        from setup_dataset import load_dataset, select_records, validate_role
+        validate_role(dataset_role,setup_mode)
+        if tuple(families) != tuple(FAMILIES):
+            raise ValueError('Dataset replaces --families')
         dataset_bundle = load_dataset(setup_dataset)
         dataset_rows = select_records(dataset_bundle, dataset_split, rounds, dataset_offset)
         families = dataset_bundle['manifest']['splits'][dataset_split]['families']
@@ -177,7 +178,7 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
             play_game = load_referee(referee)
         if dataset_bundle is not None:
             from setup_dataset import freeze_dataset
-            freeze_dataset(tournament, dataset_bundle, dataset_split, rounds, dataset_offset)
+            freeze_dataset(tournament, dataset_bundle, dataset_split, rounds, dataset_offset,dataset_role)
         queue, descriptions, setup_records, dos_setup_records = [], [], [], []
         dos_generator = None
         if 'original-dos' in families:
@@ -189,7 +190,7 @@ def run(first, second, out, rounds=10, seed=1, jobs=1, families=FAMILIES, max_pl
                 pair_id = len(descriptions) // 2 + 1
                 if dataset_rows is not None:
                     record = dataset_rows[pair_id-1]
-                    setups = (record['army_a'], record['army_b'])
+                    setups = (record['army_a'] if dataset_role=='referee-v1' else None,record['army_b'])
                 elif family=='original-dos':
                     armies=[]
                     for slot in ('A','B'):
@@ -307,6 +308,8 @@ def main():
     play.add_argument('--dataset-split', choices=('development', 'seed-validation', 'generator-holdout'),
                       default='development')
     play.add_argument('--dataset-offset', type=int, default=0, help='first record per family (zero based; never wraps)')
+    play.add_argument('--dataset-role',choices=('referee-v1','opponent-only-v1'),default='referee-v1',
+                      help='force both armies, or use Army B only while the first policy deploys itself')
     play.add_argument('--setup-mode', choices=('referee','policy-owned','policy-owned-rotated-v1'), default='referee',
                       help='compare moves on fixed armies, or let the first policy choose its army')
     actions.add_parser('show').add_argument('path', type=Path)
@@ -320,7 +323,8 @@ def main():
             print(json.dumps(run(args.first, args.second, args.out, args.rounds, args.seed,
                                  args.jobs, args.families, args.max_plies, args.backend, args.worker,
                                  setup_mode=args.setup_mode, setup_dataset=args.dataset,
-                                 dataset_split=args.dataset_split, dataset_offset=args.dataset_offset), indent=2))
+                                 dataset_split=args.dataset_split, dataset_offset=args.dataset_offset,
+                                 dataset_role=args.dataset_role), indent=2))
         elif args.action == 'verify':
             print(json.dumps(verify(args.path), indent=2))
         else:

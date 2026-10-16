@@ -131,8 +131,9 @@ build/desktop/feldmarschall-desk build/tournaments/setup-development.fmtour
 
 `--rounds` selects records per family, giving 12 games per round for either
 partition. `--dataset-offset` starts at a different record in each family;
-selection never wraps or repeats. Dataset mode replaces `--families` and requires
-the default `referee` setup mode. The full corpus and selected record identities
+selection never wraps or repeats. Dataset mode replaces `--families`. Its default
+`--dataset-role referee-v1` requires the default `referee` setup mode and fixes
+both physical armies. The full corpus and selected record identities
 are embedded in the saved file, so verification and review remain portable.
 Qt6 displays the dataset ID and partition above its existing family statistics.
 
@@ -143,6 +144,28 @@ move seeds. Include several opponent styles, such as `original-v1`,
 Compare both validation partitions and individual families; keep errors unscored
 and draws worth half. Keep DOS comparisons as a separate diagnostic.
 The development integration smoke verifies execution and replay, not strength.
+
+To test a **deployment change**, retain the first policy's generated own army:
+
+```sh
+python3 tools/tournament.py run student-fortress-inner-guard-template-v1-normal missions-v1-normal \
+  --dataset tests/datasets/classic-generalization-v1 --dataset-split development \
+  --dataset-role opponent-only-v1 --setup-mode policy-owned-rotated-v1 \
+  --rounds 8 --seed 2026101602 --backend openmp --jobs 4 \
+  --out build/tournaments/deployment-development.fmtour
+```
+
+The versioned `opponent-only-v1` role uses **only Army B** of each selected record
+for the opponent. Army A is unused. The owner selects its formation through the
+existing frozen setup protocol; both armies reflect horizontally in their local
+front-first encoding when the owner plays Blue, preserving the physical rotation.
+This role requires `policy-owned-rotated-v1` explicitly. Saved verification binds
+the opponent and owned-setup record to corpus B even if both game halves or the
+owned record are altered together. No corpus file or hidden setup reaches an
+honest policy. Run both candidate and reference on the same selected B records
+and move seeds; their own armies intentionally differ. Forcing both armies with
+`referee-v1` would erase a deployment treatment. Freeze final policies before
+either validation split, and do not tune on those outcomes.
 
 ## OpenMP execution
 
