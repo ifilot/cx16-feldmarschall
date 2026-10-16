@@ -1,0 +1,26 @@
+{"frozen_baseline_prefix_parity": 1135, "sampled_roots": 62, "vetoed_actor_goals": 1, "changed_goals": 1, "changed_choices": 0, "component_roots_with_veto": 1, "roots_army_0": 32, "games": 8, "roots_army_1": 30, "elapsed_seconds": 18.867567716995836}
+{"frozen_baseline_prefix_parity": 2081, "sampled_roots": 114, "vetoed_actor_goals": 5, "changed_goals": 5, "changed_choices": 0, "component_roots_with_veto": 5, "roots_army_0": 60, "games": 16, "roots_army_1": 54, "elapsed_seconds": 32.927924267998606}
+{"frozen_baseline_prefix_parity": 3195, "sampled_roots": 174, "vetoed_actor_goals": 6, "changed_goals": 6, "changed_choices": 0, "component_roots_with_veto": 6, "roots_army_0": 90, "games": 24, "roots_army_1": 84, "elapsed_seconds": 47.28073554299772}
+{"frozen_baseline_prefix_parity": 4283, "sampled_roots": 234, "vetoed_actor_goals": 14, "changed_goals": 14, "changed_choices": 0, "component_roots_with_veto": 12, "roots_army_0": 119, "games": 32, "roots_army_1": 115, "elapsed_seconds": 61.46866564099764}
+{"frozen_baseline_prefix_parity": 5421, "sampled_roots": 296, "vetoed_actor_goals": 14, "changed_goals": 14, "changed_choices": 0, "component_roots_with_veto": 12, "roots_army_0": 150, "games": 40, "roots_army_1": 146, "elapsed_seconds": 77.91126759199688}
+{"frozen_baseline_prefix_parity": 6520, "sampled_roots": 356, "vetoed_actor_goals": 14, "changed_goals": 14, "changed_choices": 0, "component_roots_with_veto": 12, "roots_army_0": 176, "games": 48, "roots_army_1": 180, "elapsed_seconds": 94.253909346}
+{
+  "kind": "same-state-native-scout-goal-veto-component",
+  "strength_evidence": false,
+  "runtime_policy": false,
+  "counts": {
+    "frozen_baseline_prefix_parity": 6520,
+    "sampled_roots": 356,
+    "vetoed_actor_goals": 14,
+    "changed_goals": 14,
+    "changed_choices": 0,
+    "component_roots_with_veto": 12,
+    "roots_army_0": 176,
+    "games": 48,
+    "roots_army_1": 180
+  },
+  "preflight_sha256": "43ce17a8df938a0562440e533a3535563a0b5cdb0bba00477ddafa800e73caa9",
+  "protocol_sha256": "cc43c1db053f33938a66b4c6e57d45a5514ca3be330b3c066399690b3a1efe02",
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "elapsed_seconds": 94.49695513599727
+}

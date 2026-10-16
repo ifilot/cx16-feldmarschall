@@ -7,7 +7,10 @@
       "status": "rejected preflight: inert consumer",
       "result": "Evidence appeared in 188 of 200 side histories from 100 old screening games, but no component posterior changed above 1e-12. Public facts had resolved or eliminated those components. Zero new tournament games; no strength claim.",
       "strength_games": 0,
-      "evidence": ["research/information/README.md", "research/information/activation.json"]
+      "evidence": [
+        "research/information/README.md",
+        "research/information/activation.json"
+      ]
     },
     {
       "id": "exact-tie-own-secrecy-v1",
@@ -15,7 +18,21 @@
       "status": "rejected preflight: no eligible actions",
       "result": "Zero eligible choices in 356 fixed sampled roots from 48 old screening games, both colors. All 6,520 intervening baseline decisions reproduced. Even the same-victim alternative gate failed, so relaxing only exact score equality would not establish incidence. Zero new tournament games; no strength claim.",
       "strength_games": 0,
-      "evidence": ["research/objectives/SECRECY-CONCLUSION.md", "research/objectives/secrecy-result.json"]
+      "evidence": [
+        "research/objectives/SECRECY-CONCLUSION.md",
+        "research/objectives/secrecy-result.json"
+      ]
+    },
+    {
+      "id": "public-scout-pursuit-refusal-v1",
+      "title": "Redirect slow pursuers when a disclosed Scout can undo every quiet approach",
+      "status": "deferred preflight: no immediate native choice changes",
+      "result": "A fixed 356-root screening cohort found14 actor goals with a bounded public escape certificate. Native counterfactual veto changed all14 goals but no whole selected move;6520 prefix choices and12 baseline/RNG restorations matched. Longer-term changed-goal memory was not strength-tested. No permanent-evadability or policy-equivalence claim.",
+      "strength_games": 0,
+      "evidence": [
+        "research/objectives/SCOUT-COMPONENT-CONCLUSION.md",
+        "research/objectives/scout-component-result.json"
+      ]
     }
   ]
 }

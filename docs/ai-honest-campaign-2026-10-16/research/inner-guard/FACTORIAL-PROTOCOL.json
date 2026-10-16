@@ -1,0 +1,22 @@
+{
+  "schema": "inner-guard-factorial-v1",
+  "cycles": [
+    110,
+    114
+  ],
+  "factors": [
+    "source-templateFlagBombinferenceversusnativecounts",
+    "SergeantinnerguardversusMinercontrol"
+  ],
+  "seed": 3110001,
+  "rounds": 128,
+  "registration_basis": "ChosenbeforeinspectingC110orC114outcomes",
+  "primary_comparisons": "Eachstudyownpairedguardminuscontrolcontrast",
+  "interaction": "(bookSergeant-bookMiner)-(nativeSergeant-nativeMiner), evaluatedoncommoncomplete4-armmatchedpairs only;20,000bootstrapreplicates,95%exploratoryinterval, separateworst-caseerrorboundsall128pairs",
+  "limits": [
+    "No confirmedinteractionclaimfromscreening",
+    "Allownformationsintentionallydifferbetweenplacementarms",
+    "No hiddenenemyinputs",
+    "No promotionwithoutfreshvalidation"
+  ]
+}

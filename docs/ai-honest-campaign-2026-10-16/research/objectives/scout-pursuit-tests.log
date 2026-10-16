@@ -1,0 +1,10 @@
+test_all_escape_endpoints_have_friendly_interceptors (__main__.ScoutPursuitFixtures.test_all_escape_endpoints_have_friendly_interceptors) ... ok
+test_hidden_enemy_nibbles_have_no_authority (__main__.ScoutPursuitFixtures.test_hidden_enemy_nibbles_have_no_authority) ... ok
+test_open_escape_is_bounded_certificate (__main__.ScoutPursuitFixtures.test_open_escape_is_bounded_certificate) ... ok
+test_rotation_both_sides (__main__.ScoutPursuitFixtures.test_rotation_both_sides) ... ok
+test_scout_blockers_and_public_shuttle (__main__.ScoutPursuitFixtures.test_scout_blockers_and_public_shuttle) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.009s
+
+OK

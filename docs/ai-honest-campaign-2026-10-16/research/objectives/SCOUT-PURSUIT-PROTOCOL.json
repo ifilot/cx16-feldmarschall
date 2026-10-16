@@ -1,0 +1,11 @@
+{
+ "id":"disclosed-scout-avoidable-pursuit-preflight-v1",
+ "cohort":"RUNTIME-PROTOCOL.json: same fixed48oldC21screen games bothcolors, ownordinals1,21,...181, all preceding nativechoices executed and corrected to actualpublichistory",
+ "actor":"own ordinary soldier rank0..6, native plan targets disclosed enemyScout, route distance>=3, Scout outside2squareownFlagdefensezone",
+ "certificate":"For EVERY legal quiet actor move reducing exact native route distance by one, there exists a legal Scout quiet ray escape of length>=2, respecting public shuttle. At destination Scout is not capturable on nextownturn by ANYownmobile actor, including ownScouts, and route distance from moved pursuer is at least originalprestepdistance or unreachable. Scout must not gain immediateownFlagcapture. CurrentownFlag is also conservativelypublicsafe.",
+ "alternative":"At least one other reachable target passes existing native gain rejection and has existing nativeutility>=0, preserving source terms, F/Bpacket, distance and priorgoal.",
+ "semantics":"One-step progress failure under frozen remaining occupancy; NOT infiniteevadability, optimalpursuit or strategyimprovement proof. No hiddenenemyidentity use. No rulechange. Candidatepolicy NOT implemented.",
+ "report":"All actor opportunities and selectedactor quietprogresssubset separately, bothcolors, uniquegames/roots; compact rootmetadata only, no outcomes/validation/currenttournament data.",
+ "cost":"At most4ordinaryprogressmoves, each atmost36Scoutquietrayendpoints; simple geometry/occupancy checks and BFS only after a viable endpoint. No10kstatepairsolver.",
+ "research":"Fomin etal. Pursuing a fast robber on a graph (Theoretical Computer Science,2010): movement speed/topology affects capture guarantees. Our boundedScoutstraight-raymodel differs from unrestricted fastrobber and supplies no global result."
+}

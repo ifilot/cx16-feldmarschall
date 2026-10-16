@@ -22,6 +22,8 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 | 108 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-regime-reset-v1-normal | 86 / 52 / 116 | 44.1% | 2 |
 | 109 | missions-v1-normal; development corpus | student-fortress-template-flag-bomb-v1-normal | 49 / 1 / 46 | 51.6% | 0 |
 | 109 | missions-v1-normal; development corpus | student-fortress-template-regime-reset-v1-normal | 48 / 1 / 47 | 50.5% | 0 |
+| 111 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 175 / 1 / 48 | 78.3% | 0 |
+| 111 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-inner-guard-template-v1-normal | 180 / 1 / 43 | 80.6% | 0 |
 
 **Cycle 101:** Reassign one redundant capable pursuer to an uncovered disclosed mobile target while retaining the original primary attacker. Previously registered but never benchmarked; this campaign tests its first full-policy outcomes.
 
@@ -76,6 +78,20 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 [Results and family breakdown](cycle-109-regime-reset-generality/result.json).
 - student-fortress-template-regime-reset-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -1.04 points; 95% paired interval [-3.12, +0.00].
 [Interpretation](cycle-109-regime-reset-generality/CONCLUSION.md).
+
+**Cycle 110:** Retain an inner defender after an enemy Miner breaches the Fortress Bomb shell: swap the central Miner guard with a Sergeant, preserving all Bomb placements and the movement policy. A surviving recapture may defend better than a mutual Miner trade.
+
+No completed strength result. [Frozen plan](cycle-110-retained-inner-guard/plan.json).
+
+**Cycle 111:** Improve end-to-end honest play by assigning a Sergeant to the common inner Fortress guard post, retaining a surviving recapturer after a Miner breach instead of trading the original Miner guard.
+
+[Results and family breakdown](cycle-111-inner-guard-honest-deployment/result.json).
+- student-fortress-inner-guard-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: +2.23 points; 95% paired interval [-4.24, +8.93].
+[Interpretation](cycle-111-inner-guard-honest-deployment/CONCLUSION.md).
+
+**Cycle 114:** Does retaining a Sergeant behind the Fortress inner Bomb entrances improve the ordinary native AI without source-informed enemy inference? This tests whether the deployment idea is useful independently of the stronger desktop prior.
+
+No completed strength result. [Frozen plan](cycle-114-native-inner-guard/plan.json).
 
 **Additional hypotheses evaluated before tournaments**
 

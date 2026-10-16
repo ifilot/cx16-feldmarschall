@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "policy": "student-fortress-inner-guard-template-v1-normal",
+  "source_sha256": "3fec8b3c3030b013bfa316a8bc5eec1f2e9a2a07fb8050f54619012feefe1d5c",
+  "runtime_sha256": {
+    "engine": "def3b6974a44c1a90e36fa01c1cbd68cb5fa72a2fc3079cc804c4ae251b1a9b0",
+    "observer": "93c828cf64d5bd68d0dc3061a420860d0cc0b10fa89e59e2a52a189a875f315d",
+    "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+    "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+    "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+    "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+    "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+    "campaign_native_template.py": "c7d7f448d1a7b9c840ed990caad8e0e2c02d6318da489351d1e12579c90810aa",
+    "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c"
+  },
+  "independent_temporary_rebuild": true,
+  "all_runtime_files_reproduced": true,
+  "cx16_fit_claim": false
+}

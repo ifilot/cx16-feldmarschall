@@ -53,7 +53,20 @@ def review(directory):
             elif row['result'] in ('red','blue'):
                 point=float(row['result']==side);tally['wins' if point else 'losses']+=1
             else:raise ValueError('Unknown stored result')
-            row['candidate_score']=point
+            row['candidate_score']=point;row['candidate_side']=side
+        by_pair=defaultdict(list)
+        for row in rows:by_pair[row['pair_id']].append(row)
+        reflected=lambda setup:''.join(setup[i:i+10][::-1] for i in range(0,40,10))
+        for pair in by_pair.values():
+            assert len(pair)==2 and {g['candidate_side'] for g in pair}=={'red','blue'}
+            x,y=pair
+            assert x['family']==y['family'] and x['seed']==y['seed']
+            mode=metadata['setup_mode']
+            if mode=='referee':
+                assert x['red_setup']==y['red_setup'] and x['blue_setup']==y['blue_setup']
+            else:
+                transform=reflected if mode=='policy-owned-rotated-v1' else lambda s:s
+                assert x['red_setup']==transform(y['blue_setup']) and x['blue_setup']==transform(y['red_setup'])
         actual={k:tally[k] for k in ('wins','draws','losses','errors')}
         assert actual=={k:result['standings'][identity][k] for k in actual}
         scored=tally['wins']+tally['draws']+tally['losses']
@@ -67,10 +80,16 @@ def review(directory):
     contrasts={}
     for candidate,baseline in plan['contrasts']:
         a,b=games[candidate],games[baseline];assert len(a)==len(b)
-        pairs=defaultdict(list)
+        pairs=defaultdict(list);different_own_armies=0
         for x,y in zip(a,b):
-            for key in ('id','pair_id','family','seed','red_setup','blue_setup'):assert x[key]==y[key],key
+            for key in ('id','pair_id','family','seed'):assert x[key]==y[key],key
             assert (x['red']==candidate)==(y['red']==baseline)
+            own='red' if x['red']==candidate else 'blue';enemy='blue' if own=='red' else 'red'
+            assert x[enemy]==y[enemy]==plan['opponent']
+            assert x[enemy+'_setup']==y[enemy+'_setup'],'Opponent army must match across arms'
+            if plan.get('setup_mode','referee')=='referee':
+                assert x[own+'_setup']==y[own+'_setup'],'Own referee army must match across arms'
+            else:different_own_armies+=x[own+'_setup']!=y[own+'_setup']
             pairs[x['pair_id']].append((x['candidate_score'],y['candidate_score']))
         direction=Counter();complete=[];bounds=[]
         for rows in pairs.values():
@@ -88,14 +107,15 @@ def review(directory):
         interval=[sum(row[n] for row in bounds)/len(bounds) for n in (0,1)]
         assert interval==result['error_sensitivity'][name]['paired_cohort_effect_bounds']
         contrasts[name]=dict(planned_pairs=len(pairs),complete_pairs=len(complete),paired_effect=mean,
-                            directions=dict(direction),finite_missing_score_bounds=interval)
+                            directions=dict(direction),finite_missing_score_bounds=interval,
+                            games_with_intentionally_different_own_armies=different_own_armies)
     attempts=sum(len(rows) for rows in games.values());errors=sum(r['errors'] for r in counts.values())
     assert attempts==result['attempts']==result['verified_games']==audit['attempts']
     assert errors==result['errors']==audit['errors_preserved_unscored']
     return dict(passed=True,cycle=plan['cycle'],scope='Independent read-only SQLite row accounting and artifact hashes; checks retained full-replay receipts but does not rerun replay.',
                 manifest_files=len(manifest),attempts=attempts,errors_preserved_unscored=errors,
                 artifacts_verified=artifact_counts,standings=counts,contrasts=contrasts,
-                source_manifest_sha256=sha(directory/'manifest.json'))
+                source_manifest_sha256=sha(directory/'manifest.json'),auditor_sha256=sha(__file__))
 
 
 if __name__=='__main__':

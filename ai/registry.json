@@ -6020,6 +6020,85 @@
       ],
       "archive": "ai/sources/2838bd1837010db2db6ec18f307585183f5e71016fe18c80fc6336eaa8ade997.zip",
       "source_sha256": "2838bd1837010db2db6ec18f307585183f5e71016fe18c80fc6336eaa8ade997"
+    },
+    {
+      "id": "student-fortress-inner-guard-template-v1-normal",
+      "name": "Fortress Student with retained inner Sergeant guard v1 / Normal",
+      "description": "Place a Sergeant instead of a Miner behind the inner Bomb entrances, so a right-hand Miner breach can be recaptured without losing the defender. One fixed21\u219434deployment swap; unchanged move policy.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "tools/new_campaign_inner_guard_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_FORTRESS_INNER_GUARD"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged source-templateFlag/Bombinference andnativeGuardmovealgorithm. Fortressonlyownsetup:fixedswaplocal21Miner7with34Sergeant6 ONLYClassicNormal, noextraRNG. SixBombs/Flag/Spypositions fixed. ExistingisolatedLieutenant38and32/33frontpotentialmobilityunchanged; no perpetualdefenseclaim.",
+      "information_model": "Own formation and publicplay/sourceprior only; setup rule consumes no opponent information.",
+      "driver": "native-template",
+      "driver_args": [],
+      "archive": "ai/sources/3fec8b3c3030b013bfa316a8bc5eec1f2e9a2a07fb8050f54619012feefe1d5c.zip",
+      "source_sha256": "3fec8b3c3030b013bfa316a8bc5eec1f2e9a2a07fb8050f54619012feefe1d5c"
+    },
+    {
+      "id": "student-fortress-inner-guard-v1-normal",
+      "name": "Native Fortress Student with retained inner Sergeant guard v1 / Normal",
+      "description": "One fixed Fortress swap21\u219434 retains a Sergeant after an enemy Miner breach; ordinary native public-count evaluator, no source-template inference.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "tools/new_campaign_inner_guard_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_DEPLOY_FORTRESS_ONLY",
+        "AI_FORTRESS_INNER_GUARD"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "UnchangednativeGuardmovementandpublic-countbeliefs. FortressownsetupreplacescentralMiner7withSergeant6 andrelocatesMiner34. FixedBomb/Flag/Spygeometry,RNG/mobilitypreserved;noaddedturncomputation.",
+      "information_model": "Own army and publicevents only; no source-template model, opponent setup or concealed ranks.",
+      "archive": "ai/sources/3fec8b3c3030b013bfa316a8bc5eec1f2e9a2a07fb8050f54619012feefe1d5c.zip",
+      "source_sha256": "3fec8b3c3030b013bfa316a8bc5eec1f2e9a2a07fb8050f54619012feefe1d5c"
     }
   ]
 }

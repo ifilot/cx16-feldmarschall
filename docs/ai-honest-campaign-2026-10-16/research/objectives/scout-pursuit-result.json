@@ -1,0 +1,3303 @@
+{
+  "kind": "bounded-scout-goal-nonprogress-incidence",
+  "strength_evidence": false,
+  "no_policy_implemented": true,
+  "counts": {
+    "frozen_baseline_prefix_parity": 6520,
+    "sampled_roots": 356,
+    "roots_army_0": 176,
+    "ordinary_actor_native_scout_goals": 74,
+    "distant_scout_goals": 44,
+    "outside_flag_defense_and_flag_safe": 44,
+    "has_other_accepted_nonnegative_objective": 28,
+    "endpoint_tests": 31,
+    "games": 48,
+    "roots_army_1": 180,
+    "certified_actor_goals": 14,
+    "selected_quiet_progress_opportunities": 0
+  },
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "protocol_sha256": "8cc451a0718cf416543febce8d6e94dfc1344dca6a0141caea6bf13865838960",
+  "source_binding": {
+    "archive_sha256": "8de24b7319b7309dc1400c8b653b7333d661d28780a1cddf3151c525ad97287d",
+    "observer_sha256": "0f248f0fe7524613438f83fe7203ccf54ceca30fb223e6e762d711f41fc95526",
+    "command": [
+      "gcc",
+      "-O2",
+      "-std=c99",
+      "-Wno-unknown-pragmas",
+      "-Wno-format-overflow",
+      "-Isrc/core",
+      "-DAI_MISSIONS",
+      "-DAI_MEMORY",
+      "-DAI_STUDENT",
+      "-DAI_STUDENT_V2",
+      "-DAI_STUDENT_PRODUCTION",
+      "-DAI_STUDENT_COOP_GUARD",
+      "-DAI_POLICY_DEPLOYMENT",
+      "-DAI_BELIEF_PRIORS",
+      "-DAI_TEST",
+      "-DAI_DIAGNOSTICS",
+      "-DAI_DEPLOY_FORTRESS_ONLY",
+      "-DAI_TRACE",
+      "-o",
+      "/tmp/scout-pursuit-7f66tjrb/trace-observer",
+      "tools/new_campaign_objectives_engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "tools/new_campaign_objectives_ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "unchanged_sources": true,
+    "only_extra_define": "AI_TRACE"
+  },
+  "elapsed_seconds": 60.47128424899711,
+  "records": [
+    {
+      "game": 1,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 1,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 3,
+        "distant_scout_goals": 2,
+        "outside_flag_defense_and_flag_safe": 2,
+        "has_other_accepted_nonnegative_objective": 2,
+        "endpoint_tests": 0
+      },
+      "proofs": []
+    },
+    {
+      "game": 1,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 1,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 1,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 2,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 2,
+        "outside_flag_defense_and_flag_safe": 2,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 4,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 63,
+          "goal": 32,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 4,
+          "witness": {
+            "64": 37
+          },
+          "original_distance": 6
+        }
+      ]
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 2,
+        "outside_flag_defense_and_flag_safe": 2,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 360,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 21,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 21,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 21,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 21,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 21,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 21,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 21,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 22,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2
+      },
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2
+      },
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 360,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 32,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 32,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2
+      },
+      "proofs": []
+    },
+    {
+      "game": 32,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2
+      },
+      "proofs": []
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 73,
+          "goal": 44,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "74": 24
+          },
+          "original_distance": 6
+        }
+      ]
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 2,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 86,
+          "goal": 74,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 2,
+          "endpoints": 2,
+          "witness": {
+            "76": 54,
+            "85": 54
+          },
+          "original_distance": 3
+        }
+      ]
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 41,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 17,
+          "goal": 48,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "18": 68
+          },
+          "original_distance": 6
+        }
+      ]
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2
+      },
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 4,
+        "distant_scout_goals": 3,
+        "outside_flag_defense_and_flag_safe": 3,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 3
+      },
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 2,
+        "outside_flag_defense_and_flag_safe": 2,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 42,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 95,
+          "goal": 67,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "85": 69
+          },
+          "original_distance": 5
+        }
+      ]
+    },
+    {
+      "game": 51,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 51,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 51,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 51,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 51,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 52,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 52,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 52,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 52,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 61,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 61,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 61,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 61,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 62,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 62,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 62,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 62,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 62,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 71,
+      "army": 0,
+      "ply": 360,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 72,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 72,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 72,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 72,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 72,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 81,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 81,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 81,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 81,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 81,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 81,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 82,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 82,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 82,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 82,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 82,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 82,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 82,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 91,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 92,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 2,
+        "outside_flag_defense_and_flag_safe": 2,
+        "has_other_accepted_nonnegative_objective": 2,
+        "endpoint_tests": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 101,
+      "army": 0,
+      "ply": 360,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 102,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 102,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 102,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 102,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 111,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 111,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 111,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 111,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 111,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 111,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 111,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 111,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 0
+      },
+      "proofs": []
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 36,
+          "goal": 66,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "35": 86
+          },
+          "original_distance": 5
+        }
+      ]
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 112,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 2,
+        "outside_flag_defense_and_flag_safe": 2,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 72,
+          "goal": 32,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "71": 12
+          },
+          "original_distance": 8
+        }
+      ]
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 60,
+          "goal": 30,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "50": 32
+          },
+          "original_distance": 3
+        }
+      ]
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 4,
+        "distant_scout_goals": 4,
+        "outside_flag_defense_and_flag_safe": 4,
+        "has_other_accepted_nonnegative_objective": 2,
+        "endpoint_tests": 3,
+        "certified_actor_goals": 2,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 60,
+          "goal": 41,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 2,
+          "endpoints": 2,
+          "witness": {
+            "50": 21,
+            "61": 21
+          },
+          "original_distance": 3
+        },
+        {
+          "source": 64,
+          "goal": 41,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "63": 21
+          },
+          "original_distance": 5
+        }
+      ]
+    },
+    {
+      "game": 121,
+      "army": 0,
+      "ply": 360,
+      "ordinal": 181,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 4,
+        "distant_scout_goals": 4,
+        "outside_flag_defense_and_flag_safe": 4,
+        "has_other_accepted_nonnegative_objective": 2,
+        "endpoint_tests": 3,
+        "certified_actor_goals": 2,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 60,
+          "goal": 41,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 2,
+          "endpoints": 2,
+          "witness": {
+            "50": 21,
+            "61": 21
+          },
+          "original_distance": 3
+        },
+        {
+          "source": 64,
+          "goal": 41,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "63": 21
+          },
+          "original_distance": 5
+        }
+      ]
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 2,
+        "outside_flag_defense_and_flag_safe": 2,
+        "has_other_accepted_nonnegative_objective": 2,
+        "endpoint_tests": 0
+      },
+      "proofs": []
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 1,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 13,
+          "goal": 45,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 1,
+          "witness": {
+            "23": 65
+          },
+          "original_distance": 5
+        }
+      ]
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 4,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 0
+      },
+      "proofs": []
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 122,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 131,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 131,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 131,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 131,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 131,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 132,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 132,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 132,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 132,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 132,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 141,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 141,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 141,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 141,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 142,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 142,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 142,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 142,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 142,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 142,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 151,
+      "army": 0,
+      "ply": 360,
+      "ordinal": 181,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 4,
+        "certified_actor_goals": 1,
+        "selected_quiet_progress_opportunities": 0
+      },
+      "proofs": [
+        {
+          "source": 75,
+          "goal": 14,
+          "selected_actor": false,
+          "certified": true,
+          "progress_steps": 1,
+          "endpoints": 4,
+          "witness": {
+            "65": 12
+          },
+          "original_distance": 7
+        }
+      ]
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 152,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 161,
+      "army": 0,
+      "ply": 360,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 162,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 162,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 162,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 162,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 162,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 162,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 162,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 171,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 1,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1
+      },
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2
+      },
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {
+        "ordinary_actor_native_scout_goals": 2,
+        "distant_scout_goals": 1,
+        "outside_flag_defense_and_flag_safe": 1,
+        "has_other_accepted_nonnegative_objective": 1,
+        "endpoint_tests": 0
+      },
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 172,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 181,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 181,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 181,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 181,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 181,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 182,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 191,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 192,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 192,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 192,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 192,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 280,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 201,
+      "army": 0,
+      "ply": 320,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 202,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 202,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 202,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 202,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 202,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 202,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 202,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 202,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 211,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 211,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 211,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 211,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 211,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 212,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 221,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 221,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 221,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 221,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 221,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 222,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 222,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 222,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 222,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 222,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 222,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 231,
+      "army": 0,
+      "ply": 0,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 231,
+      "army": 0,
+      "ply": 40,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 231,
+      "army": 0,
+      "ply": 80,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 231,
+      "army": 0,
+      "ply": 120,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 231,
+      "army": 0,
+      "ply": 160,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 231,
+      "army": 0,
+      "ply": 200,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 231,
+      "army": 0,
+      "ply": 240,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 1,
+      "ordinal": 1,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 41,
+      "ordinal": 21,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 81,
+      "ordinal": 41,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 121,
+      "ordinal": 61,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 161,
+      "ordinal": 81,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 201,
+      "ordinal": 101,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 241,
+      "ordinal": 121,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 281,
+      "ordinal": 141,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 321,
+      "ordinal": 161,
+      "counts": {},
+      "proofs": []
+    },
+    {
+      "game": 232,
+      "army": 1,
+      "ply": 361,
+      "ordinal": 181,
+      "counts": {},
+      "proofs": []
+    }
+  ]
+}

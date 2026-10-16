@@ -1,0 +1,9 @@
+{
+  "command": "python3 tools/test_new_campaign_inner_guard.py",
+  "returncode": 0,
+  "source_sha256": {
+    "tools/new_campaign_inner_guard_deploy.c": "1bd458d5522999b2ac5dc5302ef78c5efa611677d26245b0aca3337bde2ecb41",
+    "tools/test_new_campaign_inner_guard.py": "08f8e670317b6ed86b126685b8cc79d62e30468a83f8723f74823fbf276df60b",
+    "src/core/ai_deploy.c": "73fb906cb4db1889b028d88e994a582607da716858fe813556a4cf17a821f19e"
+  }
+}

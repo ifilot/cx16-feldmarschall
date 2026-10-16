@@ -1,0 +1,405 @@
+{
+  "scope": "Own deployment and controlled native public defense fixtures; no tournament or playing-strength result",
+  "sources": {
+    "tools/new_campaign_inner_guard_deploy.c": "1bd458d5522999b2ac5dc5302ef78c5efa611677d26245b0aca3337bde2ecb41",
+    "tools/test_new_campaign_inner_guard.py": "08f8e670317b6ed86b126685b8cc79d62e30468a83f8723f74823fbf276df60b",
+    "src/core/ai_deploy.c": "73fb906cb4db1889b028d88e994a582607da716858fe813556a4cf17a821f19e"
+  },
+  "layouts": {
+    "Fortress": {
+      "setup": "94959969496271358975B869753SB8FB8B748B6B",
+      "geometry": {
+        "min_bomb_captures_from_front": 1,
+        "bomb_captures_by_front_file": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mobile_pieces_with_permanent_front_access": 32,
+        "trapped_mobile_squares": [
+          38
+        ],
+        "mobile_exit_distance_sum": 38,
+        "mobile_exit_distances": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "16": 1,
+          "17": 1,
+          "18": 1,
+          "19": 1,
+          "21": 2,
+          "22": 2,
+          "23": 2,
+          "24": 2,
+          "25": 2,
+          "26": 2,
+          "27": 2,
+          "29": 2,
+          "32": 3,
+          "34": 3,
+          "35": 3,
+          "36": 3
+        },
+        "front_bombs": 0,
+        "front_miners": 0,
+        "spy_front_distance": 2
+      }
+    },
+    "InnerGuard": {
+      "setup": "94959969496271358975B769753SB8FB8B848B6B",
+      "geometry": {
+        "min_bomb_captures_from_front": 1,
+        "bomb_captures_by_front_file": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mobile_pieces_with_permanent_front_access": 32,
+        "trapped_mobile_squares": [
+          38
+        ],
+        "mobile_exit_distance_sum": 38,
+        "mobile_exit_distances": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "16": 1,
+          "17": 1,
+          "18": 1,
+          "19": 1,
+          "21": 2,
+          "22": 2,
+          "23": 2,
+          "24": 2,
+          "25": 2,
+          "26": 2,
+          "27": 2,
+          "29": 2,
+          "32": 3,
+          "34": 3,
+          "35": 3,
+          "36": 3
+        },
+        "front_bombs": 0,
+        "front_miners": 0,
+        "spy_front_distance": 2
+      }
+    }
+  },
+  "native_responses": [
+    {
+      "army": 0,
+      "breach_origin": 20,
+      "mode": "control",
+      "selected": [
+        70,
+        80
+      ],
+      "own_rank": 5,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [],
+      "horizontal_reflection": false,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 0,
+      "breach_origin": 20,
+      "mode": "candidate",
+      "selected": [
+        70,
+        80
+      ],
+      "own_rank": 5,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [],
+      "horizontal_reflection": false,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 0,
+      "breach_origin": 31,
+      "mode": "control",
+      "selected": [
+        81,
+        91
+      ],
+      "own_rank": 7,
+      "public_enemy_rank": 7,
+      "outcome": "both",
+      "guard_survives": false,
+      "cleared_own_mobile_origins": [
+        32
+      ],
+      "horizontal_reflection": false,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 0,
+      "breach_origin": 31,
+      "mode": "candidate",
+      "selected": [
+        81,
+        91
+      ],
+      "own_rank": 6,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [
+        32
+      ],
+      "horizontal_reflection": false,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 0,
+      "breach_origin": 20,
+      "mode": "control",
+      "selected": [
+        79,
+        89
+      ],
+      "own_rank": 5,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [],
+      "horizontal_reflection": true,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 0,
+      "breach_origin": 20,
+      "mode": "candidate",
+      "selected": [
+        79,
+        89
+      ],
+      "own_rank": 5,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [],
+      "horizontal_reflection": true,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 0,
+      "breach_origin": 31,
+      "mode": "control",
+      "selected": [
+        88,
+        98
+      ],
+      "own_rank": 7,
+      "public_enemy_rank": 7,
+      "outcome": "both",
+      "guard_survives": false,
+      "cleared_own_mobile_origins": [
+        32
+      ],
+      "horizontal_reflection": true,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 0,
+      "breach_origin": 31,
+      "mode": "candidate",
+      "selected": [
+        88,
+        98
+      ],
+      "own_rank": 6,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [
+        32
+      ],
+      "horizontal_reflection": true,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 1,
+      "breach_origin": 20,
+      "mode": "control",
+      "selected": [
+        20,
+        10
+      ],
+      "own_rank": 5,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [],
+      "horizontal_reflection": false,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 1,
+      "breach_origin": 20,
+      "mode": "candidate",
+      "selected": [
+        11,
+        10
+      ],
+      "own_rank": 6,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [],
+      "horizontal_reflection": false,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 1,
+      "breach_origin": 31,
+      "mode": "control",
+      "selected": [
+        11,
+        1
+      ],
+      "own_rank": 7,
+      "public_enemy_rank": 7,
+      "outcome": "both",
+      "guard_survives": false,
+      "cleared_own_mobile_origins": [
+        32
+      ],
+      "horizontal_reflection": false,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 1,
+      "breach_origin": 31,
+      "mode": "candidate",
+      "selected": [
+        11,
+        1
+      ],
+      "own_rank": 6,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [
+        32
+      ],
+      "horizontal_reflection": false,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 1,
+      "breach_origin": 20,
+      "mode": "control",
+      "selected": [
+        29,
+        19
+      ],
+      "own_rank": 5,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [],
+      "horizontal_reflection": true,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 1,
+      "breach_origin": 20,
+      "mode": "candidate",
+      "selected": [
+        18,
+        19
+      ],
+      "own_rank": 6,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [],
+      "horizontal_reflection": true,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 1,
+      "breach_origin": 31,
+      "mode": "control",
+      "selected": [
+        18,
+        8
+      ],
+      "own_rank": 7,
+      "public_enemy_rank": 7,
+      "outcome": "both",
+      "guard_survives": false,
+      "cleared_own_mobile_origins": [
+        32
+      ],
+      "horizontal_reflection": true,
+      "synthetic_component_not_history": true
+    },
+    {
+      "army": 1,
+      "breach_origin": 31,
+      "mode": "candidate",
+      "selected": [
+        18,
+        8
+      ],
+      "own_rank": 6,
+      "public_enemy_rank": 7,
+      "outcome": "attacker",
+      "guard_survives": true,
+      "cleared_own_mobile_origins": [
+        32
+      ],
+      "horizontal_reflection": true,
+      "synthetic_component_not_history": true
+    }
+  ],
+  "limitation": "Both layouts retain the preexisting isolated mobile at origin38. Geometry counts permanent Bomb/Flag blockers and assumes mobile teammates can vacate. Controlled response states are synthetic inventory-consistent public components, not proven reachable full histories or fresh initial-formation breaches. Right breach clears own origin32, assuming that Miner left earlier, so it does not simultaneously occupy the invader approach square."
+}

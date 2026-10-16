@@ -1,0 +1,180 @@
+{
+  "cycle": 111,
+  "hypotheses": [
+    "Improve end-to-end honest play by assigning a Sergeant to the common inner Fortress guard post, retaining a surviving recapturer after a Miner breach instead of trading the original Miner guard."
+  ],
+  "opponent": "missions-v1-normal",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 175,
+      "draws": 1,
+      "losses": 48,
+      "score": 0.7834821428571429,
+      "errors": 0
+    },
+    "student-fortress-inner-guard-template-v1-normal": {
+      "wins": 180,
+      "draws": 1,
+      "losses": 43,
+      "score": 0.8058035714285714,
+      "errors": 0
+    }
+  },
+  "execution_seconds": {
+    "student-fortress-template-flag-bomb-v1-normal": 50.59575027000392,
+    "student-fortress-inner-guard-template-v1-normal": 55.903026143001625
+  },
+  "comparisons": {
+    "student-fortress-inner-guard-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 112,
+      "pairs_by_family": {
+        "fortified": 16,
+        "uniform": 16,
+        "unguarded": 16,
+        "forward": 16,
+        "decoy": 16,
+        "presets": 16,
+        "broad-mixed": 16
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.022321428571428572,
+          "interval_95": [
+            -0.04241071428571429,
+            0.08928571428571429
+          ],
+          "interval_98_3333": [
+            -0.05803571428571429,
+            0.10267857142857142
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 448,
+  "error_sensitivity": {
+    "student-fortress-inner-guard-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 18,
+        "negative_pairs": 15,
+        "zero_pairs": 79,
+        "non_tied_pairs": 33,
+        "exact_two_sided_binomial_sign_p": 0.7283324808813632,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 112,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 224,
+          "error_games": 0,
+          "scored_games": 224,
+          "wins": 180,
+          "draws": 1,
+          "losses": 43,
+          "official_scored_score": 0.8058035714285714,
+          "all_attempt_score_bounds": [
+            0.8058035714285714,
+            0.8058035714285714
+          ]
+        },
+        "b": {
+          "attempted_games": 224,
+          "error_games": 0,
+          "scored_games": 224,
+          "wins": 175,
+          "draws": 1,
+          "losses": 48,
+          "official_scored_score": 0.7834821428571429,
+          "all_attempt_score_bounds": [
+            0.7834821428571429,
+            0.7834821428571429
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        0.022321428571428572,
+        0.022321428571428572
+      ],
+      "complete_case_pairs": 112,
+      "complete_case_paired_effect": 0.022321428571428572
+    }
+  },
+  "errors": 0,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 448,
+  "family_standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "broad-mixed": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.8125,
+        "missions-v1-normal": 0.1875
+      },
+      "decoy": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.90625,
+        "missions-v1-normal": 0.09375
+      },
+      "fortified": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.609375,
+        "missions-v1-normal": 0.390625
+      },
+      "forward": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.9375,
+        "missions-v1-normal": 0.0625
+      },
+      "presets": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.59375,
+        "missions-v1-normal": 0.40625
+      },
+      "unguarded": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.78125,
+        "missions-v1-normal": 0.21875
+      },
+      "uniform": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.84375,
+        "missions-v1-normal": 0.15625
+      }
+    },
+    "student-fortress-inner-guard-template-v1-normal": {
+      "broad-mixed": {
+        "student-fortress-inner-guard-template-v1-normal": 0.84375,
+        "missions-v1-normal": 0.15625
+      },
+      "decoy": {
+        "student-fortress-inner-guard-template-v1-normal": 0.96875,
+        "missions-v1-normal": 0.03125
+      },
+      "fortified": {
+        "student-fortress-inner-guard-template-v1-normal": 0.765625,
+        "missions-v1-normal": 0.234375
+      },
+      "forward": {
+        "student-fortress-inner-guard-template-v1-normal": 0.90625,
+        "missions-v1-normal": 0.09375
+      },
+      "presets": {
+        "student-fortress-inner-guard-template-v1-normal": 0.53125,
+        "missions-v1-normal": 0.46875
+      },
+      "unguarded": {
+        "student-fortress-inner-guard-template-v1-normal": 0.75,
+        "missions-v1-normal": 0.25
+      },
+      "uniform": {
+        "student-fortress-inner-guard-template-v1-normal": 0.875,
+        "missions-v1-normal": 0.125
+      }
+    }
+  }
+}

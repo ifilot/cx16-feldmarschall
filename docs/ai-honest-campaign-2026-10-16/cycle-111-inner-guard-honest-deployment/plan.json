@@ -1,0 +1,36 @@
+{
+  "cycle": 111,
+  "baseline": "student-fortress-template-flag-bomb-v1-normal",
+  "opponent": "missions-v1-normal",
+  "policies": [
+    "student-fortress-template-flag-bomb-v1-normal",
+    "student-fortress-inner-guard-template-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 3111001,
+  "rounds": 16,
+  "jobs": 2,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "Improve end-to-end honest play by assigning a Sergeant to the common inner Fortress guard post, retaining a surviving recapturer after a Miner breach instead of trading the original Miner guard."
+  ],
+  "contrasts": [
+    [
+      "student-fortress-inner-guard-template-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed exploratory deployment-and-play comparison,16 paired rounds in each of seven familiar stress families:224attemptsperarm. Both policies generate their own deployment and rotate it with side; opponent armies and move seeds match exactly acrossarms while own ranks intentionally differ at the fixed swap. Use paired candidate-minus-baseline score intervals, per-family results and finite missing-score bounds. Different own army distributions mean50%isnot a neutral reference benchmark. This is fresh-layout screening from familiar generators, not held-out generator generality or final validation. No adaptation or tuning from C110 outcomes.",
+  "evidence": "research/inner-guard/README.md and source-bound six-test qualification: exact21/34swap, allBomb/Flag/Spypositions and inventory preserved, both-color native surviving Sergeant recapture, unchanged RNG and forced-common-army policy parity, no enemy deployment input. One setup-time swap only; no target bank fit claim."
+}
