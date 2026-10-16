@@ -1,0 +1,120 @@
+{
+  "cycle": 105,
+  "hypotheses": [
+    "An opponent declining an available unprotected winning capture provides weak evidence about that concealed piece rank; exact rank-level conditioning may improve public Flag/Bomb risk estimates even after fixed templates are eliminated."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 77,
+      "draws": 48,
+      "losses": 126,
+      "score": 0.40239043824701193,
+      "errors": 5
+    },
+    "student-fortress-template-missed-background-v1-normal": {
+      "wins": 78,
+      "draws": 48,
+      "losses": 126,
+      "score": 0.40476190476190477,
+      "errors": 4
+    }
+  },
+  "execution_seconds": {
+    "student-fortress-template-flag-bomb-v1-normal": 322.45529784700193,
+    "student-fortress-template-missed-background-v1-normal": 399.0635257959948
+  },
+  "comparisons": {
+    "student-fortress-template-missed-background-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 123,
+      "pairs_by_family": {
+        "original-dos": 123
+      },
+      "metrics": {
+        "score": {
+          "mean": 0.0040650406504065045,
+          "interval_95": [
+            -0.0040650406504065045,
+            0.014227642276422764
+          ],
+          "interval_98_3333": [
+            -0.006097560975609756,
+            0.018292682926829267
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 512,
+  "error_sensitivity": {
+    "student-fortress-template-missed-background-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 2,
+        "negative_pairs": 1,
+        "zero_pairs": 120,
+        "non_tied_pairs": 3,
+        "exact_two_sided_binomial_sign_p": 1.0,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 128,
+      "error_games_a": 4,
+      "error_games_b": 5,
+      "pairs_with_any_error": 5,
+      "arms": {
+        "a": {
+          "attempted_games": 256,
+          "error_games": 4,
+          "scored_games": 252,
+          "wins": 78,
+          "draws": 48,
+          "losses": 126,
+          "official_scored_score": 0.40476190476190477,
+          "all_attempt_score_bounds": [
+            0.3984375,
+            0.4140625
+          ]
+        },
+        "b": {
+          "attempted_games": 256,
+          "error_games": 5,
+          "scored_games": 251,
+          "wins": 77,
+          "draws": 48,
+          "losses": 126,
+          "official_scored_score": 0.40239043824701193,
+          "all_attempt_score_bounds": [
+            0.39453125,
+            0.4140625
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.015625,
+        0.01953125
+      ],
+      "complete_case_pairs": 123,
+      "complete_case_paired_effect": 0.0040650406504065045
+    }
+  },
+  "errors": 9,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 512,
+  "family_standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "original-dos": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.40239043824701193,
+        "msdos-1990-v2-normal": 0.5976095617529881
+      }
+    },
+    "student-fortress-template-missed-background-v1-normal": {
+      "original-dos": {
+        "student-fortress-template-missed-background-v1-normal": 0.40476190476190477,
+        "msdos-1990-v2-normal": 0.5952380952380952
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "method": "Independent direct-SQL outcome arithmetic; no runner analysis helpers",
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 77,
+      "draws": 48,
+      "losses": 126,
+      "errors": 5,
+      "score": 0.40239043824701193
+    },
+    "student-fortress-template-missed-background-v1-normal": {
+      "wins": 78,
+      "draws": 48,
+      "losses": 126,
+      "errors": 4,
+      "score": 0.40476190476190477
+    }
+  },
+  "comparisons": {
+    "student-fortress-template-missed-background-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 123,
+      "planned_pairs": 128,
+      "paired_mean": 0.0040650406504065045,
+      "finite_error_bounds": [
+        -0.015625,
+        0.01953125
+      ],
+      "directions": {
+        "tied": 120,
+        "error_pairs": 5,
+        "positive": 2,
+        "negative": 1
+      },
+      "all_roots_seeds_sides_exactly_matched": true
+    }
+  },
+  "hashes": {
+    "plan.json": "eb477008c35e0e89977e4a60f8d90db7bd6eb3d6ee2394ad8eff94b533acdcda",
+    "result.json": "5e64a3bb4182ce7dbbfea5a39f7284cf36707842fe3181a8fa8c5c8f90d87f5e",
+    "student-fortress-template-flag-bomb-v1-normal.fmtour": "44bb382593fa7c15f4eb5dacd579929d6272940a9d16fde6fc887f48aa964c60",
+    "student-fortress-template-missed-background-v1-normal.fmtour": "abe013c2b3f2821f5bc2e67ae0f01c59ebd112d6d8ade0fd854b81d2b12982f6"
+  },
+  "limitation": "Checks outcome statistics and pairing, not policy correctness or state replay; those have separate qualification artifacts."
+}
