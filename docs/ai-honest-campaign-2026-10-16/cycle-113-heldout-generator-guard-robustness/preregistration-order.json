@@ -1,0 +1,8 @@
+{
+  "secondary_registration_epoch": 1792131809.077057,
+  "checked_epoch": 1792131844.547251,
+  "primary_complete_result_exists": false,
+  "declared_before_inspecting_primary_outcomes": true,
+  "exact_policy_ids_fixed_before_both_endpoints": true,
+  "secondary_frozen_before_primary_result": true
+}

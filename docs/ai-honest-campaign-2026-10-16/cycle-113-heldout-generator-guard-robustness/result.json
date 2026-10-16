@@ -1,0 +1,294 @@
+{
+  "cycle": 113,
+  "hypotheses": [
+    "Secondary robustness endpoint: does the exact unchanged source-inference champion versus native Fortress contrast transfer to the independently registered honest Guard opponent on a separately reserved cohort of novel-family layouts?"
+  ],
+  "opponent": "student-guard-v1-normal",
+  "families": [
+    "interior-shell-v1",
+    "flank-flag-v1",
+    "double-decoy-v1",
+    "front-fence-v1",
+    "mobile-squads-v1",
+    "lane-vanguard-v1"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "dataset": {
+    "path": "tests/datasets/classic-generalization-v1",
+    "split": "generator-holdout",
+    "offset": 32,
+    "role": "opponent-only-v1"
+  },
+  "standings": {
+    "student-fortress-deployment-v1-normal": {
+      "wins": 322,
+      "draws": 4,
+      "losses": 58,
+      "score": 0.84375,
+      "errors": 0
+    },
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 312,
+      "draws": 4,
+      "losses": 68,
+      "score": 0.8177083333333334,
+      "errors": 0
+    }
+  },
+  "family_standings": {
+    "student-fortress-deployment-v1-normal": {
+      "double-decoy-v1": {
+        "student-fortress-deployment-v1-normal": 0.953125,
+        "student-guard-v1-normal": 0.046875
+      },
+      "flank-flag-v1": {
+        "student-fortress-deployment-v1-normal": 0.8515625,
+        "student-guard-v1-normal": 0.1484375
+      },
+      "front-fence-v1": {
+        "student-fortress-deployment-v1-normal": 0.8125,
+        "student-guard-v1-normal": 0.1875
+      },
+      "interior-shell-v1": {
+        "student-fortress-deployment-v1-normal": 0.71875,
+        "student-guard-v1-normal": 0.28125
+      },
+      "lane-vanguard-v1": {
+        "student-fortress-deployment-v1-normal": 0.8828125,
+        "student-guard-v1-normal": 0.1171875
+      },
+      "mobile-squads-v1": {
+        "student-fortress-deployment-v1-normal": 0.84375,
+        "student-guard-v1-normal": 0.15625
+      }
+    },
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "double-decoy-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.9375,
+        "student-guard-v1-normal": 0.0625
+      },
+      "flank-flag-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.8046875,
+        "student-guard-v1-normal": 0.1953125
+      },
+      "front-fence-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.8203125,
+        "student-guard-v1-normal": 0.1796875
+      },
+      "interior-shell-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.7578125,
+        "student-guard-v1-normal": 0.2421875
+      },
+      "lane-vanguard-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.8046875,
+        "student-guard-v1-normal": 0.1953125
+      },
+      "mobile-squads-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.78125,
+        "student-guard-v1-normal": 0.21875
+      }
+    }
+  },
+  "execution_seconds": {
+    "student-fortress-deployment-v1-normal": 9.092355526001484,
+    "student-fortress-template-flag-bomb-v1-normal": 40.35305970600166
+  },
+  "comparisons": {
+    "student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal": {
+      "complete_pairs": 192,
+      "pairs_by_family": {
+        "interior-shell-v1": 32,
+        "flank-flag-v1": 32,
+        "double-decoy-v1": 32,
+        "front-fence-v1": 32,
+        "mobile-squads-v1": 32,
+        "lane-vanguard-v1": 32
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.026041666666666668,
+          "interval_95": [
+            -0.07161458333333333,
+            0.018229166666666668
+          ],
+          "interval_98_3333": [
+            -0.08203125,
+            0.02734375
+          ]
+        }
+      }
+    }
+  },
+  "family_comparisons": {
+    "student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal": {
+      "interior-shell-v1": {
+        "complete_pairs": 32,
+        "pairs_by_family": {
+          "interior-shell-v1": 32
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.0390625,
+            "interval_95": [
+              -0.109375,
+              0.1796875
+            ],
+            "interval_98_3333": [
+              -0.140625,
+              0.2109375
+            ]
+          }
+        }
+      },
+      "flank-flag-v1": {
+        "complete_pairs": 32,
+        "pairs_by_family": {
+          "flank-flag-v1": 32
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.046875,
+            "interval_95": [
+              -0.140625,
+              0.03125
+            ],
+            "interval_98_3333": [
+              -0.1640625,
+              0.0546875
+            ]
+          }
+        }
+      },
+      "double-decoy-v1": {
+        "complete_pairs": 32,
+        "pairs_by_family": {
+          "double-decoy-v1": 32
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.015625,
+            "interval_95": [
+              -0.09375,
+              0.0625
+            ],
+            "interval_98_3333": [
+              -0.109375,
+              0.078125
+            ]
+          }
+        }
+      },
+      "front-fence-v1": {
+        "complete_pairs": 32,
+        "pairs_by_family": {
+          "front-fence-v1": 32
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.0078125,
+            "interval_95": [
+              -0.109375,
+              0.125
+            ],
+            "interval_98_3333": [
+              -0.1328125,
+              0.15625
+            ]
+          }
+        }
+      },
+      "mobile-squads-v1": {
+        "complete_pairs": 32,
+        "pairs_by_family": {
+          "mobile-squads-v1": 32
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.0625,
+            "interval_95": [
+              -0.171875,
+              0.046875
+            ],
+            "interval_98_3333": [
+              -0.203125,
+              0.0625
+            ]
+          }
+        }
+      },
+      "lane-vanguard-v1": {
+        "complete_pairs": 32,
+        "pairs_by_family": {
+          "lane-vanguard-v1": 32
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.078125,
+            "interval_95": [
+              -0.171875,
+              0.015625
+            ],
+            "interval_98_3333": [
+              -0.1953125,
+              0.0390625
+            ]
+          }
+        }
+      }
+    }
+  },
+  "error_sensitivity": {
+    "student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 28,
+        "negative_pairs": 39,
+        "zero_pairs": 125,
+        "non_tied_pairs": 67,
+        "exact_two_sided_binomial_sign_p": 0.22154872964481115,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 192,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 384,
+          "error_games": 0,
+          "scored_games": 384,
+          "wins": 312,
+          "draws": 4,
+          "losses": 68,
+          "official_scored_score": 0.8177083333333334,
+          "all_attempt_score_bounds": [
+            0.8177083333333334,
+            0.8177083333333334
+          ]
+        },
+        "b": {
+          "attempted_games": 384,
+          "error_games": 0,
+          "scored_games": 384,
+          "wins": 322,
+          "draws": 4,
+          "losses": 58,
+          "official_scored_score": 0.84375,
+          "all_attempt_score_bounds": [
+            0.84375,
+            0.84375
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.026041666666666668,
+        -0.026041666666666668
+      ],
+      "complete_case_pairs": 192,
+      "complete_case_paired_effect": -0.026041666666666668
+    }
+  },
+  "attempts": 768,
+  "errors": 0,
+  "verified_games": 768,
+  "production": "Unchanged. Exploratory screening, not a promotion decision."
+}

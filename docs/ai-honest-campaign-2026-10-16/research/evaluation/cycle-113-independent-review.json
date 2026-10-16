@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "cycle": 113,
+  "scope": "Independent read-only SQLite row accounting and artifact hashes; checks retained full-replay receipts but does not rerun replay.",
+  "manifest_files": 24,
+  "attempts": 768,
+  "errors_preserved_unscored": 0,
+  "artifacts_verified": {
+    "student-fortress-deployment-v1-normal": 21,
+    "student-fortress-template-flag-bomb-v1-normal": 27
+  },
+  "standings": {
+    "student-fortress-deployment-v1-normal": {
+      "wins": 322,
+      "draws": 4,
+      "losses": 58,
+      "errors": 0,
+      "score": 0.84375
+    },
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 312,
+      "draws": 4,
+      "losses": 68,
+      "errors": 0,
+      "score": 0.8177083333333334
+    }
+  },
+  "contrasts": {
+    "student-fortress-template-flag-bomb-v1-normal minus student-fortress-deployment-v1-normal": {
+      "planned_pairs": 192,
+      "complete_pairs": 192,
+      "paired_effect": -0.026041666666666668,
+      "directions": {
+        "negative": 39,
+        "tied": 125,
+        "positive": 28
+      },
+      "finite_missing_score_bounds": [
+        -0.026041666666666668,
+        -0.026041666666666668
+      ],
+      "games_with_intentionally_different_own_armies": 0
+    }
+  },
+  "corpus_schedule_independently_checked": true,
+  "source_manifest_sha256": "1d200edaea1084e7d02393e704be9d11843baf81431fc44055f1c99ceacbfc5f",
+  "auditor_sha256": "736bfc2ceeaf84e1f36e0007291f31c985cec5fdcbc2dfe8ebac1e2f739aa32b"
+}
