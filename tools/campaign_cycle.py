@@ -142,7 +142,7 @@ def evaluate(directory):
 
 def overview(through_cycle=None, exclude_results=()):
     lines = ['# Honest AI campaign: cumulative DOS results', '',
-             'Scores count wins plus half of draws; original DOS errors are excluded. '
+             'Scores count wins plus half of draws; engine errors remain unscored. '
              'Compare policies within their matched cycle. Screening results do not establish promotion.', '',
              '| Cycle | Setup context | Policy | W / D / L | DOS score | Errors |',
              '|---|---|---|---:|---:|---:|']
@@ -240,6 +240,7 @@ def overview(through_cycle=None, exclude_results=()):
         ('Cooperative two-piece capture nets', 'A fixed screening gate found 361 eligible roots across 91 games. The same-cohort full expansion found 81 proposed improvements across 13 games, with 63 distinct normalized public comparisons; 58 roots are concentrated in two games. All 1,524 witness states and 361 native public fixtures pass checks; 20 roots hit the shared cap. The control permits the same generalized continuations, including after a victim voluntarily attacks and dies. Mean eligible-root host proof cost is 299 ms. This is correlated tactical opportunity evidence, without playing-strength or target-fit claims.', 'research/capture-net-preflight-v1/EXPANSION-CONCLUSION.md'),
         ('Mobile beliefs in pursuit objectives: component pilot', 'The fixed Red-only sample has 298 roots in 40 games, with 5,434 persistent native prefix choices matching the frozen reference. Mobile-rank expectations change 411 actor goals; 236 strict changes are between hidden targets. Distance-progress-only quiet argmax changes occur 17 times across 10 games, including three baseline-chosen-actor cases. These are component diagnostics, not full counterfactual policy decisions or game gains; both-color study and isolated goal-only runtime remain future work.', 'research/template-mobile-objectives-pilot-v1/CONCLUSION.md'),
         ('Goal-only mobile beliefs: storage and arithmetic preflight', 'Frozen target source supports streaming goal rows through the existing transfer union, then restoring capture rows, without a second 960-byte table. An exact conditional Q24 formulation needs up to 58-bit signed magnitude arithmetic; 3,000 synthetic rational-oracle cases pass. Scratch and operation bounds are static estimates, with no implemented policy, target fit, timing or strength claim.', 'research/template-mobile-objectives-cost-preflight-v1/README.md'),
+        ('Bounded exact goal division', 'The bounded goal range permits an exact eleven-stage byte-limb division instead of a general 64-stage divider. Five thousand synthetic signed ratios and boundary/cancellation checks pass. This reduces a static operation bound, without measuring target cycles, fit or game strength.', 'research/template-goal-bounded-division-v1/README.md'),
     ]
     available = [row for row in deferred if (BASE/row[2]).exists()]
     if available:
