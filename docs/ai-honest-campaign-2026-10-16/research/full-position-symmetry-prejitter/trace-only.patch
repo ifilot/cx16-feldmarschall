@@ -1,0 +1,20 @@
+--- a/src/core/ai.c
++++ b/src/core/ai.c
+@@ -840,6 +840,7 @@
+ #ifdef AI_MISSIONS
+     if(ai_difficulty != AI_EASY) s += ai_mission_score(from, to);
+ #endif
++    { extern void ai_trace_base(uint8_t from, uint8_t to, int16_t score); ai_trace_base(from,to,s); }
+     return s + (random_next() & (ai_difficulty == AI_EASY ? 31 : 7));
+ }
+ 
+--- a/src/native/engine.c
++++ b/src/native/engine.c
+@@ -53,6 +53,7 @@
+ }
+ #endif
+ 
++void ai_trace_base(uint8_t from,uint8_t to,int16_t score) { if(tracing == 1) printf("base %u %u %d\n",from,to,score); }
+ void ai_trace(uint8_t from, uint8_t to, int16_t score) {
+     if(tracing == 1) printf("candidate %d %d %d\n", from, to, score);
+     else if(tracing == 2) fprintf(stderr, "candidate %u %u %d rank=%u target=%u\n", from, to, score, PIECE_TYPE(board[from]), board[to]);

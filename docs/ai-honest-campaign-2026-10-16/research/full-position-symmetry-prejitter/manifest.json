@@ -1,0 +1,38 @@
+{
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry-prejitter/CONCLUSION.md": {
+    "sha256": "9c1f3c7e70a9389a958a864c484d75dcc7a7c9f2fcd383ef452b4bf0b0049ccb",
+    "bytes": 2519
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry-prejitter/PROTOCOL.json": {
+    "sha256": "5aba538cea294467a166874691c53458091313f6e65bb495056efda77c889bdb",
+    "bytes": 2357
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry-prejitter/audit.log": {
+    "sha256": "3312e6aa95342dbbbdcf5c7882d93b22a00622caa11170c50373f4d26572fd4f",
+    "bytes": 3796
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry-prejitter/independent-review.json": {
+    "sha256": "1d48612f4fc407727dbb0ec2ae33d17faca8a3151177986f57b03b14fb0f3c12",
+    "bytes": 682
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry-prejitter/result.json": {
+    "sha256": "dea150d04bf258da4e6d2762a53e8a3fb1ad0e15fb50b0f5136419a8171fc319",
+    "bytes": 270102
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry-prejitter/tests.log": {
+    "sha256": "ccf7b54f144d3e9682c95e71a54d347376487292982197f61b4f9bb2d6f65cc8",
+    "bytes": 102
+  },
+  "docs/ai-honest-campaign-2026-10-16/research/full-position-symmetry-prejitter/trace-only.patch": {
+    "sha256": "044721ad161665410ad2dde9bbd3126102884762d913c24b8040a153f6c962a7",
+    "bytes": 806
+  },
+  "tools/new_campaign_full_position_symmetry_prejitter.py": {
+    "sha256": "e4eb831df0976dd089ce6e69bc3675fb2433e129fe689b4cc92abf22c99cb5d8",
+    "bytes": 9881
+  },
+  "tools/test_new_campaign_full_position_symmetry_prejitter.py": {
+    "sha256": "06bd83d0cd7d4e7e22431ac29cd56aab83ef88c603a687b61cb3bd34ca397764",
+    "bytes": 2040
+  }
+}
