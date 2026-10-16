@@ -1,0 +1,12 @@
+{
+  "counters": {
+    "own_roots": 85971,
+    "screened_known_Miner_roots": 13464,
+    "attempted_games": 400,
+    "own_Flag_losses": 197,
+    "Flag_losses_to_Miner": 191,
+    "losses_captor_known_more_than_one_own_turn_before_capture": 78,
+    "losses_known_captor_before_inner_screen_breach": 82
+  },
+  "opportunities": 10157
+}

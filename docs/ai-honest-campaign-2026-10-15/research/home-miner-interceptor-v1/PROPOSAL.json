@@ -1,0 +1,63 @@
+{
+  "status": "research proposal only; no runtime integration, policy registration, or matches",
+  "hypothesis": "Preserve a feasible multi-turn deployment schedule for a home interceptor when a disclosed Miner has a current route through a corner Flag Bomb screen.",
+  "public_contract": [
+    "own ranks and Flag position",
+    "enemy occupancy, disclosed ranks and public movement",
+    "legal moves and public two-square shuttle history",
+    "no enemy concealed rank nibble, true opening, private seed or future event"
+  ],
+  "candidate_gate": [
+    "Classic only; own corner Flag remains screened by two own Bombs",
+    "at least one disclosed enemy Miner has a stationary-other-pieces route to Flag",
+    "native selected action is quiet and loses modeled response feasibility",
+    "there is a legal quiet alternative retaining response feasibility and avoiding immediate disclosed tactical loss"
+  ],
+  "response_model": "For each candidate quiet move, recompute fastest disclosed Miner Flag route tau and capable own guard shortest quiet route d to common diagonal post. Enemy moves next: d+2<=tau permits d guard deployment actions and one intercept before Flag capture. A nonexistent Miner route has no deployment deadline.",
+  "persistent_role": "Assign the selected capable guard to its post only while needed to preserve the deadline; re-evaluate after every public update. Temporary departures remain permitted when a return schedule exists. This is a prospective role specification, not implemented.",
+  "rank_handling": "Ranks 0 through 6 can survive ordinary Miner capture; own Miner rank7 can trade to remove the invading Miner. Both count as stopping one invasion, not as equal resource outcomes.",
+  "preservation_required_before_runtime": [
+    "all captures and immediate wins",
+    "current confirmed own Flag tactical defense, including moved-unknown adjacent threats",
+    "native tactical risk priorities and actual legal shuttle",
+    "fall back unchanged if no certified useful alternative"
+  ],
+  "unresolved": [
+    "Snapshot shortest routes do not model future movement of other pieces or hidden threats.",
+    "A single diagonal guard cannot cover sequential two-Miner breaches after leaving the post to capture the first.",
+    "An equal-rank guard is consumed.",
+    "A quiet defensive diversion may lose a multi-turn offensive Flag race; captures and immediate wins alone do not resolve that tradeoff.",
+    "Current geometric alternative predicate protects the moved actor and modeled route, not every other friendly unit.",
+    "No runtime cost or playing-strength effect has been measured."
+  ],
+  "comparison": "Existing C10 repairs or retains quiet two-enemy-turn response coverage. This mechanism starts a multi-step deployment before that gate, preserving a response schedule instead of adding a rank or defense bonus.",
+  "evidence_summary": {
+    "corner_known_Miner_3plus_roots": 7842,
+    "opportunity_roots": 232,
+    "games": 37,
+    "nonC10_roots": 232,
+    "nonC10_games": 37,
+    "nonC10_loss_games": 33,
+    "single_known_Miner_nonC10_loss_games": 31,
+    "distances": {
+      "4": 29,
+      "18": 1,
+      "5": 80,
+      "10": 1,
+      "3": 20,
+      "6": 9,
+      "13": 1,
+      "8": 4,
+      "7": 4,
+      "16": 1,
+      "9": 82
+    }
+  },
+  "primary_source": {
+    "title": "Safe Reinforcement Learning via Shielding",
+    "authors": "Alshiekh et al.",
+    "year": 2018,
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/11797",
+    "relevance": "Action correction from a model and temporal safety objective motivates response-feasibility preservation; this incomplete geometric abstraction is not a formal shield or global safety guarantee."
+  }
+}
