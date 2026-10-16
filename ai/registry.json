@@ -5847,6 +5847,92 @@
       ],
       "archive": "ai/sources/dfb1abcda6352b94fe0ea6ae714ca6941288baf90bfa69fd2b03ffd07d4f3564.zip",
       "source_sha256": "dfb1abcda6352b94fe0ea6ae714ca6941288baf90bfa69fd2b03ffd07d4f3564"
+    },
+    {
+      "id": "student-fortress-template-mobile-goals-v1-normal",
+      "name": "Fortress Student with public mobile pursuit v1 / Normal",
+      "description": "Use full per-token mobile-rank beliefs only for long-range pursuit goals, retaining capture values, risk, deployment and RNG.",
+      "sources": [
+        "tools/new_campaign_objectives_engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "tools/new_campaign_objectives_ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Same80%publicDOSsource-template plus20%uniformlegalbackground; Q12Flag/Bombcaptureexpectations unchanged. Conditionalmobilegainreplacesexchangeablemeanonlyinplan(),withtruncation/exchangeablefallback.Noaddedsearch.",
+      "information_model": "Own army, public events and declared population prior only; no concealed referee ranks or opponent setup.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-goals"
+      ],
+      "archive": "ai/sources/8de24b7319b7309dc1400c8b653b7333d661d28780a1cddf3151c525ad97287d.zip",
+      "source_sha256": "8de24b7319b7309dc1400c8b653b7333d661d28780a1cddf3151c525ad97287d"
+    },
+    {
+      "id": "student-fortress-template-missed-background-v1-normal",
+      "name": "Fortress Student with public missed-capture beliefs v1 / Normal",
+      "description": "Condition rank beliefs on one missed unprotected capture of our disclosed valuable piece, retaining full count/mobility conditioning and uniform support.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Fixedsource-template80%/uniform20%base. Oneactivepublicmissed-capturecluehaslikelihood0.5forpotentialwinningrank,1otherwise. Exactsingleclueconditioningincludesuniformbackground, withnoidlecompounding. No searchadded; heuristiclikelihoodnotcalibratedorlogicaldeduction.",
+      "information_model": "Own army, opponent-visible own rank disclosures, public movements/battles and declared sourceprior only. No opponent setup or true hidden ranks.",
+      "driver": "native-template",
+      "driver_args": [
+        "--missed-background-captures"
+      ],
+      "archive": "ai/sources/842872233a6a82a588bddc9dfd5a20d2987bf70eafc681c9af0e202fe263fd03.zip",
+      "source_sha256": "842872233a6a82a588bddc9dfd5a20d2987bf70eafc681c9af0e202fe263fd03"
     }
   ]
 }

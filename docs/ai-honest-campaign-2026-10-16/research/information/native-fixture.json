@@ -1,0 +1,977 @@
+{
+  "kind": "public-prefix-native-component-fixture",
+  "source": "docs/ai-honest-campaign-2026-10-15/cycle-39-quiet-contact-dos-screen/student-template-flag-bomb-v1-normal.fmtour",
+  "selection": "First eligible changed-Q12 decision per side history in first100 screening games; cap40",
+  "records": [
+    {
+      "game": 1,
+      "army": 1,
+      "ply": 243,
+      "moves": [
+        [
+          71,
+          72
+        ],
+        [
+          71,
+          72
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 28,
+        "victim_rank": 2,
+        "source": 88,
+        "target": 78,
+        "ply": 216
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 2,
+      "army": 0,
+      "ply": 58,
+      "moves": [
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 21,
+        "victim_rank": 5,
+        "source": 11,
+        "target": 10,
+        "ply": 57
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 36,
+      "moves": [
+        [
+          24,
+          14
+        ],
+        [
+          24,
+          14
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 3,
+      "army": 1,
+      "ply": 13,
+      "moves": [
+        [
+          51,
+          61
+        ],
+        [
+          51,
+          61
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 1,
+        "victim_rank": 5,
+        "source": 61,
+        "target": 51,
+        "ply": 12
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 4,
+      "army": 0,
+      "ply": 16,
+      "moves": [
+        [
+          34,
+          33
+        ],
+        [
+          34,
+          33
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 3,
+        "victim_rank": 4,
+        "source": 33,
+        "target": 34,
+        "ply": 15
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 4,
+      "army": 1,
+      "ply": 25,
+      "moves": [
+        [
+          61,
+          62
+        ],
+        [
+          61,
+          62
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 2,
+        "victim_rank": 3,
+        "source": 62,
+        "target": 61,
+        "ply": 24
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 5,
+      "army": 1,
+      "ply": 89,
+      "moves": [
+        [
+          65,
+          66
+        ],
+        [
+          65,
+          66
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 1,
+        "source": 66,
+        "target": 65,
+        "ply": 88
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 7,
+      "army": 1,
+      "ply": 21,
+      "moves": [
+        [
+          65,
+          66
+        ],
+        [
+          65,
+          66
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 3,
+        "source": 66,
+        "target": 65,
+        "ply": 20
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 8,
+      "army": 0,
+      "ply": 84,
+      "moves": [
+        [
+          65,
+          55
+        ],
+        [
+          65,
+          55
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 0,
+        "source": 36,
+        "target": 35,
+        "ply": 83
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 9,
+      "army": 1,
+      "ply": 237,
+      "moves": [
+        [
+          61,
+          51
+        ],
+        [
+          61,
+          51
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 2,
+        "victim_rank": 0,
+        "source": 62,
+        "target": 61,
+        "ply": 236
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 10,
+      "army": 0,
+      "ply": 146,
+      "moves": [
+        [
+          34,
+          44
+        ],
+        [
+          34,
+          44
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 3,
+        "victim_rank": 0,
+        "source": 33,
+        "target": 34,
+        "ply": 145
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 11,
+      "army": 0,
+      "ply": 26,
+      "moves": [
+        [
+          34,
+          24
+        ],
+        [
+          34,
+          33
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 3,
+        "victim_rank": 2,
+        "source": 33,
+        "target": 34,
+        "ply": 25
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 12,
+      "army": 0,
+      "ply": 94,
+      "moves": [
+        [
+          38,
+          37
+        ],
+        [
+          38,
+          37
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 7,
+        "victim_rank": 4,
+        "source": 37,
+        "target": 38,
+        "ply": 93
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 12,
+      "army": 1,
+      "ply": 31,
+      "moves": [
+        [
+          75,
+          74
+        ],
+        [
+          75,
+          74
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 14,
+        "victim_rank": 2,
+        "source": 74,
+        "target": 75,
+        "ply": 30
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 13,
+      "army": 1,
+      "ply": 147,
+      "moves": [
+        [
+          67,
+          66
+        ],
+        [
+          67,
+          66
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 5,
+        "source": 66,
+        "target": 67,
+        "ply": 146
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 14,
+      "army": 0,
+      "ply": 46,
+      "moves": [
+        [
+          74,
+          64
+        ],
+        [
+          74,
+          64
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 0,
+        "source": 36,
+        "target": 35,
+        "ply": 45
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 15,
+      "army": 1,
+      "ply": 55,
+      "moves": [
+        [
+          73,
+          83
+        ],
+        [
+          73,
+          83
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 23,
+        "victim_rank": 1,
+        "source": 83,
+        "target": 73,
+        "ply": 48
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 16,
+      "army": 0,
+      "ply": 32,
+      "moves": [
+        [
+          26,
+          16
+        ],
+        [
+          26,
+          16
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 1,
+        "source": 36,
+        "target": 35,
+        "ply": 27
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 18,
+      "army": 0,
+      "ply": 74,
+      "moves": [
+        [
+          31,
+          32
+        ],
+        [
+          31,
+          32
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 2,
+        "victim_rank": 2,
+        "source": 32,
+        "target": 31,
+        "ply": 73
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 19,
+      "army": 1,
+      "ply": 141,
+      "moves": [
+        [
+          65,
+          55
+        ],
+        [
+          65,
+          55
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 0,
+        "source": 66,
+        "target": 65,
+        "ply": 140
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 20,
+      "army": 0,
+      "ply": 78,
+      "moves": [
+        [
+          29,
+          19
+        ],
+        [
+          29,
+          19
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 29,
+        "victim_rank": 4,
+        "source": 19,
+        "target": 29,
+        "ply": 77
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 21,
+      "army": 1,
+      "ply": 49,
+      "moves": [
+        [
+          65,
+          66
+        ],
+        [
+          65,
+          66
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 5,
+        "source": 66,
+        "target": 65,
+        "ply": 48
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 22,
+      "army": 0,
+      "ply": 56,
+      "moves": [
+        [
+          34,
+          24
+        ],
+        [
+          34,
+          24
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 3,
+        "victim_rank": 2,
+        "source": 33,
+        "target": 34,
+        "ply": 55
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 23,
+      "army": 1,
+      "ply": 69,
+      "moves": [
+        [
+          23,
+          33
+        ],
+        [
+          23,
+          33
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 0,
+        "source": 66,
+        "target": 65,
+        "ply": 68
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 24,
+      "army": 0,
+      "ply": 54,
+      "moves": [
+        [
+          31,
+          32
+        ],
+        [
+          31,
+          32
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 2,
+        "victim_rank": 1,
+        "source": 32,
+        "target": 31,
+        "ply": 53
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 25,
+      "army": 1,
+      "ply": 49,
+      "moves": [
+        [
+          74,
+          84
+        ],
+        [
+          74,
+          84
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 1,
+        "source": 66,
+        "target": 65,
+        "ply": 38
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 26,
+      "army": 0,
+      "ply": 70,
+      "moves": [
+        [
+          34,
+          33
+        ],
+        [
+          34,
+          33
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 3,
+        "victim_rank": 1,
+        "source": 33,
+        "target": 34,
+        "ply": 69
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 27,
+      "army": 1,
+      "ply": 31,
+      "moves": [
+        [
+          60,
+          70
+        ],
+        [
+          60,
+          70
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 10,
+        "victim_rank": 6,
+        "source": 70,
+        "target": 60,
+        "ply": 30
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 28,
+      "army": 0,
+      "ply": 96,
+      "moves": [
+        [
+          61,
+          64
+        ],
+        [
+          61,
+          64
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 0,
+        "source": 23,
+        "target": 24,
+        "ply": 95
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 29,
+      "army": 1,
+      "ply": 27,
+      "moves": [
+        [
+          60,
+          70
+        ],
+        [
+          60,
+          70
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 10,
+        "victim_rank": 6,
+        "source": 70,
+        "target": 60,
+        "ply": 26
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 30,
+      "army": 0,
+      "ply": 92,
+      "moves": [
+        [
+          39,
+          29
+        ],
+        [
+          39,
+          29
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 19,
+        "victim_rank": 3,
+        "source": 29,
+        "target": 39,
+        "ply": 91
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 31,
+      "army": 0,
+      "ply": 16,
+      "moves": [
+        [
+          35,
+          25
+        ],
+        [
+          35,
+          36
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 4,
+        "source": 36,
+        "target": 35,
+        "ply": 15
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 31,
+      "army": 1,
+      "ply": 123,
+      "moves": [
+        [
+          61,
+          62
+        ],
+        [
+          61,
+          62
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 2,
+        "victim_rank": 2,
+        "source": 62,
+        "target": 61,
+        "ply": 122
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 32,
+      "army": 0,
+      "ply": 74,
+      "moves": [
+        [
+          67,
+          66
+        ],
+        [
+          67,
+          66
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 2,
+        "victim_rank": 0,
+        "source": 32,
+        "target": 31,
+        "ply": 73
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 32,
+      "army": 1,
+      "ply": 33,
+      "moves": [
+        [
+          64,
+          74
+        ],
+        [
+          64,
+          63
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 3,
+        "victim_rank": 4,
+        "source": 63,
+        "target": 64,
+        "ply": 32
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 33,
+      "army": 1,
+      "ply": 39,
+      "moves": [
+        [
+          68,
+          67
+        ],
+        [
+          68,
+          67
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 7,
+        "victim_rank": 5,
+        "source": 67,
+        "target": 68,
+        "ply": 38
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 35,
+      "army": 1,
+      "ply": 105,
+      "moves": [
+        [
+          22,
+          23
+        ],
+        [
+          22,
+          23
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 28,
+        "victim_rank": 4,
+        "source": 88,
+        "target": 78,
+        "ply": 104
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 36,
+      "army": 0,
+      "ply": 16,
+      "moves": [
+        [
+          39,
+          29
+        ],
+        [
+          39,
+          29
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 19,
+        "victim_rank": 4,
+        "source": 29,
+        "target": 39,
+        "ply": 15
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 38,
+      "army": 0,
+      "ply": 66,
+      "moves": [
+        [
+          35,
+          25
+        ],
+        [
+          35,
+          25
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 6,
+        "victim_rank": 2,
+        "source": 36,
+        "target": 35,
+        "ply": 65
+      },
+      "scalar_trace_available": false
+    },
+    {
+      "game": 40,
+      "army": 0,
+      "ply": 114,
+      "moves": [
+        [
+          29,
+          19
+        ],
+        [
+          29,
+          19
+        ]
+      ],
+      "changed_native_scores": null,
+      "observation": {
+        "origin": 29,
+        "victim_rank": 6,
+        "source": 19,
+        "target": 29,
+        "ply": 113
+      },
+      "scalar_trace_available": false
+    }
+  ],
+  "roots": 40,
+  "armies": [
+    0,
+    1
+  ],
+  "changed_selected_moves": 4,
+  "limitation": "Fresh native processes ingest actual own setup and public prefix; no native go calls before selected root. Component behavior, not persistent-policy strength.",
+  "roots_with_scalar_trace": 0,
+  "roots_without_scalar_trace": 40,
+  "roots_with_changed_observed_native_scores": 0
+}

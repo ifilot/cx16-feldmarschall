@@ -31,3 +31,8 @@ No completed strength result. [Frozen plan](cycle-103-mobile-pursuit/plan.json).
 
 [Results and family breakdown](cycle-104-mobile-pursuit-generality/result.json).
 - student-fortress-template-mobile-goals-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -2.60 points; 95% paired interval [-10.42, +5.21].
+[Interpretation](cycle-104-mobile-pursuit-generality/CONCLUSION.md).
+
+**Cycle 105:** An opponent declining an available unprotected winning capture provides weak evidence about that concealed piece rank; exact rank-level conditioning may improve public Flag/Bomb risk estimates even after fixed templates are eliminated.
+
+No completed strength result. [Frozen plan](cycle-105-missed-capture-beliefs/plan.json).

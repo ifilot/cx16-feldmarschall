@@ -279,6 +279,19 @@ def build_native_beliefs(source, directory, executable, policy):
         for name in (entrypoint, 'campaign_template_beliefs.py'):
             (directory/name).write_bytes((source/'tools'/name).read_bytes())
             runtime.append(name)
+        if '--mobile-goals' in policy.get('driver_args', []):
+            if len(policy.get('driver_args', [])) != 1 or policy.get('procedural_belief_model'):
+                raise ValueError('Isolate mobile pursuit goals from other template experiments')
+            entrypoint = 'new_campaign_objectives_bot.py'
+            (directory/entrypoint).write_bytes((source/'tools'/entrypoint).read_bytes())
+            runtime.append(entrypoint)
+        if '--missed-background-captures' in policy.get('driver_args', []):
+            if len(policy.get('driver_args', [])) != 1 or policy.get('procedural_belief_model'):
+                raise ValueError('Isolate missed-capture inference from other template experiments')
+            entrypoint = 'new_campaign_information_background.py'
+            for name in (entrypoint, 'new_campaign_information.py'):
+                (directory/name).write_bytes((source/'tools'/name).read_bytes())
+                runtime.append(name)
         if '--mobile-captures' in policy.get('driver_args', []):
             if not {'AI_TRACE','AI_TRAINING'}.issubset(policy.get('defines', [])):
                 raise ValueError('Mobile capture bridge requires native scores and danger credits')

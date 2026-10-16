@@ -1,0 +1,305 @@
+{
+  "kind": "public-screen-activation-only",
+  "tournament": "docs/ai-honest-campaign-2026-10-15/cycle-39-quiet-contact-dos-screen/student-template-flag-bomb-v1-normal.fmtour",
+  "source_sha256": "f008cad7742b4c0cc923fd968472afc92d409abc4dfe4ce42da2dcdf1ecc6553",
+  "selection": "first complete game IDs, both armies; fixed before inspection",
+  "games": 100,
+  "counts": {
+    "public_events": 97610,
+    "active_events": 51142,
+    "side_histories": 200,
+    "histories_with_evidence": 188,
+    "histories_with_changed_contact_marginals": 103,
+    "changed_flag_bomb_events": 6208,
+    "changed_contact_marginal_events": 6208,
+    "whole_q12_packet_checks": 103,
+    "changed_whole_q12_packets": 89,
+    "packet_checks_unmoved_clue": 103
+  },
+  "examples": [
+    {
+      "game": 2,
+      "army": 0,
+      "ply": 58,
+      "maximum_flag_bomb_marginal_delta": 0.028225806451612934,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 21,
+        "victim_rank": 5,
+        "source": 11,
+        "target": 10,
+        "ply": 57
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 36,
+      "maximum_flag_bomb_marginal_delta": 0.006218202374222714,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 37,
+      "maximum_flag_bomb_marginal_delta": 0.005564548765681909,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 38,
+      "maximum_flag_bomb_marginal_delta": 0.005710556371349318,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 39,
+      "maximum_flag_bomb_marginal_delta": 0.005710556371349318,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 40,
+      "maximum_flag_bomb_marginal_delta": 0.005710556371349318,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 41,
+      "maximum_flag_bomb_marginal_delta": 0.005710556371349318,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 42,
+      "maximum_flag_bomb_marginal_delta": 0.005710556371349318,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 43,
+      "maximum_flag_bomb_marginal_delta": 0.005710556371349318,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 44,
+      "maximum_flag_bomb_marginal_delta": 0.005710556371349318,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 45,
+      "maximum_flag_bomb_marginal_delta": 0.005710556371349318,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 46,
+      "maximum_flag_bomb_marginal_delta": 0.006105006105006083,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 47,
+      "maximum_flag_bomb_marginal_delta": 0.006105006105006083,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 48,
+      "maximum_flag_bomb_marginal_delta": 0.006105006105006083,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 49,
+      "maximum_flag_bomb_marginal_delta": 0.006105006105006083,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 50,
+      "maximum_flag_bomb_marginal_delta": 0.006105006105006083,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 51,
+      "maximum_flag_bomb_marginal_delta": 0.006105006105006083,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 52,
+      "maximum_flag_bomb_marginal_delta": 0.006367804381049419,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 53,
+      "maximum_flag_bomb_marginal_delta": 0.006367804381049419,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    },
+    {
+      "game": 3,
+      "army": 0,
+      "ply": 54,
+      "maximum_flag_bomb_marginal_delta": 0.00654044750430291,
+      "maximum_weight_delta": null,
+      "observation": {
+        "origin": 13,
+        "victim_rank": 2,
+        "source": 23,
+        "target": 24,
+        "ply": 35
+      }
+    }
+  ],
+  "background_conditioning": true,
+  "host_observe_and_posterior_seconds": 15.756803047952417,
+  "seconds_per_public_event": 0.00016142611461891627,
+  "limitation": "No move choices or strength estimate. Events disclose battle ranks only; each model receives its own setup. Old screening histories are development evidence only."
+}

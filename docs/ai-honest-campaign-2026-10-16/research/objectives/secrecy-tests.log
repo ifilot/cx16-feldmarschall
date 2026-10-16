@@ -1,0 +1,8 @@
+test_exact_safe_same_victim_tie (__main__.GateTests.test_exact_safe_same_victim_tie) ... ok
+test_hidden_recapture_support_and_nibble_invariance (__main__.GateTests.test_hidden_recapture_support_and_nibble_invariance) ... ok
+test_immediate_own_flag_danger_veto (__main__.GateTests.test_immediate_own_flag_danger_veto) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+OK

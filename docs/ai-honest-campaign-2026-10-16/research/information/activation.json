@@ -1,0 +1,18 @@
+{
+  "kind": "public-screen-activation-only",
+  "tournament": "docs/ai-honest-campaign-2026-10-15/cycle-39-quiet-contact-dos-screen/student-template-flag-bomb-v1-normal.fmtour",
+  "source_sha256": "f008cad7742b4c0cc923fd968472afc92d409abc4dfe4ce42da2dcdf1ecc6553",
+  "selection": "first complete game IDs, both armies; fixed before inspection",
+  "games": 100,
+  "counts": {
+    "public_events": 97610,
+    "active_events": 51142,
+    "side_histories": 200,
+    "histories_with_evidence": 188,
+    "histories_with_changed_posterior": 0
+  },
+  "examples": [],
+  "host_observe_and_posterior_seconds": 9.105014460503298,
+  "seconds_per_public_event": 9.327952525871631e-05,
+  "limitation": "No move choices or strength estimate. Events disclose battle ranks only; each model receives its own setup. Old screening histories are development evidence only."
+}

@@ -1,0 +1,12 @@
+{
+  "command": "python3 tools/test_new_campaign_information_background_v2.py",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.025s\n\nOK\n",
+  "source_sha256": {
+    "tools/new_campaign_information_background_v2.py": "76684aa7bd8b3f41e31c9a02fbb329a78af691c94755422ddd9aee87d215a769",
+    "tools/test_new_campaign_information_background_v2.py": "238356e73cb8013cdcd9ea735c27e0bf4eee56e39304a6187a3feb1ecaf80259",
+    "tools/new_campaign_information_background.py": "258938e9aded61377e74839d96582a3e9bc7a303c772b576b0764a389d62711f",
+    "tools/new_campaign_information.py": "58ce112a2e4a4a1ce28cf026ebf55f71617f45fa1d5230b4bf3a821a0716a551"
+  }
+}

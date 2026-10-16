@@ -1,0 +1,293 @@
+{
+  "cycle": 104,
+  "hypotheses": [
+    "Retain already computed token-specific mobile-rank beliefs when choosing pursuit goals, rather than discarding that information before long-range routing. Immediate capture and danger values remain unchanged."
+  ],
+  "opponent": "missions-v1-normal",
+  "families": [
+    "uniform-v1",
+    "rear-shell-v1",
+    "exposed-rear-v1",
+    "forward-flag-v1",
+    "single-decoy-v1",
+    "scattered-guards-v1"
+  ],
+  "setup_mode": "referee",
+  "dataset": {
+    "path": "tests/datasets/classic-generalization-v1",
+    "split": "development",
+    "offset": 0
+  },
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 53,
+      "draws": 1,
+      "losses": 42,
+      "score": 0.5572916666666666,
+      "errors": 0
+    },
+    "student-fortress-template-mobile-goals-v1-normal": {
+      "wins": 51,
+      "draws": 0,
+      "losses": 45,
+      "score": 0.53125,
+      "errors": 0
+    }
+  },
+  "family_standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "exposed-rear-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.6875,
+        "missions-v1-normal": 0.3125
+      },
+      "forward-flag-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.625,
+        "missions-v1-normal": 0.375
+      },
+      "rear-shell-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.53125,
+        "missions-v1-normal": 0.46875
+      },
+      "scattered-guards-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.5,
+        "missions-v1-normal": 0.5
+      },
+      "single-decoy-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.5,
+        "missions-v1-normal": 0.5
+      },
+      "uniform-v1": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.5,
+        "missions-v1-normal": 0.5
+      }
+    },
+    "student-fortress-template-mobile-goals-v1-normal": {
+      "exposed-rear-v1": {
+        "student-fortress-template-mobile-goals-v1-normal": 0.625,
+        "missions-v1-normal": 0.375
+      },
+      "forward-flag-v1": {
+        "student-fortress-template-mobile-goals-v1-normal": 0.6875,
+        "missions-v1-normal": 0.3125
+      },
+      "rear-shell-v1": {
+        "student-fortress-template-mobile-goals-v1-normal": 0.4375,
+        "missions-v1-normal": 0.5625
+      },
+      "scattered-guards-v1": {
+        "student-fortress-template-mobile-goals-v1-normal": 0.625,
+        "missions-v1-normal": 0.375
+      },
+      "single-decoy-v1": {
+        "student-fortress-template-mobile-goals-v1-normal": 0.375,
+        "missions-v1-normal": 0.625
+      },
+      "uniform-v1": {
+        "student-fortress-template-mobile-goals-v1-normal": 0.4375,
+        "missions-v1-normal": 0.5625
+      }
+    }
+  },
+  "execution_seconds": {
+    "student-fortress-template-flag-bomb-v1-normal": 11.072150901003624,
+    "student-fortress-template-mobile-goals-v1-normal": 15.399539723999624
+  },
+  "comparisons": {
+    "student-fortress-template-mobile-goals-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 48,
+      "pairs_by_family": {
+        "uniform-v1": 8,
+        "rear-shell-v1": 8,
+        "exposed-rear-v1": 8,
+        "forward-flag-v1": 8,
+        "single-decoy-v1": 8,
+        "scattered-guards-v1": 8
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.026041666666666668,
+          "interval_95": [
+            -0.10416666666666667,
+            0.052083333333333336
+          ],
+          "interval_98_3333": [
+            -0.11458333333333333,
+            0.07291666666666667
+          ]
+        }
+      }
+    }
+  },
+  "family_comparisons": {
+    "student-fortress-template-mobile-goals-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "uniform-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "uniform-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.0625,
+            "interval_95": [
+              -0.25,
+              0.125
+            ],
+            "interval_98_3333": [
+              -0.3125,
+              0.1875
+            ]
+          }
+        }
+      },
+      "rear-shell-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "rear-shell-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.09375,
+            "interval_95": [
+              -0.21875,
+              0.0
+            ],
+            "interval_98_3333": [
+              -0.25,
+              0.0
+            ]
+          }
+        }
+      },
+      "exposed-rear-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "exposed-rear-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.0625,
+            "interval_95": [
+              -0.25,
+              0.125
+            ],
+            "interval_98_3333": [
+              -0.3125,
+              0.1875
+            ]
+          }
+        }
+      },
+      "forward-flag-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "forward-flag-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.0625,
+            "interval_95": [
+              0.0,
+              0.1875
+            ],
+            "interval_98_3333": [
+              0.0,
+              0.25
+            ]
+          }
+        }
+      },
+      "single-decoy-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "single-decoy-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.125,
+            "interval_95": [
+              -0.375,
+              0.125
+            ],
+            "interval_98_3333": [
+              -0.375,
+              0.1875
+            ]
+          }
+        }
+      },
+      "scattered-guards-v1": {
+        "complete_pairs": 8,
+        "pairs_by_family": {
+          "scattered-guards-v1": 8
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.125,
+            "interval_95": [
+              0.0,
+              0.375
+            ],
+            "interval_98_3333": [
+              0.0,
+              0.5
+            ]
+          }
+        }
+      }
+    }
+  },
+  "error_sensitivity": {
+    "student-fortress-template-mobile-goals-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 5,
+        "negative_pairs": 9,
+        "zero_pairs": 34,
+        "non_tied_pairs": 14,
+        "exact_two_sided_binomial_sign_p": 0.4239501953125,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 48,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 96,
+          "error_games": 0,
+          "scored_games": 96,
+          "wins": 51,
+          "draws": 0,
+          "losses": 45,
+          "official_scored_score": 0.53125,
+          "all_attempt_score_bounds": [
+            0.53125,
+            0.53125
+          ]
+        },
+        "b": {
+          "attempted_games": 96,
+          "error_games": 0,
+          "scored_games": 96,
+          "wins": 53,
+          "draws": 1,
+          "losses": 42,
+          "official_scored_score": 0.5572916666666666,
+          "all_attempt_score_bounds": [
+            0.5572916666666666,
+            0.5572916666666666
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.026041666666666668,
+        -0.026041666666666668
+      ],
+      "complete_case_pairs": 48,
+      "complete_case_paired_effect": -0.026041666666666668
+    }
+  },
+  "attempts": 192,
+  "errors": 0,
+  "verified_games": 192,
+  "production": "Unchanged. Exploratory screening, not a promotion decision."
+}
