@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "method": "Independent direct-SQL outcome arithmetic; no runner analysis helpers",
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 195,
+      "draws": 1,
+      "losses": 28,
+      "errors": 0,
+      "score": 0.8727678571428571
+    },
+    "student-fortress-mirror-template-v1-normal": {
+      "wins": 168,
+      "draws": 4,
+      "losses": 52,
+      "errors": 0,
+      "score": 0.7589285714285714
+    },
+    "student-fortress-mirror-mixture-template-v1-normal": {
+      "wins": 187,
+      "draws": 3,
+      "losses": 34,
+      "errors": 0,
+      "score": 0.8415178571428571
+    }
+  },
+  "comparisons": {
+    "student-fortress-mirror-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 112,
+      "planned_pairs": 112,
+      "paired_mean": -0.11383928571428571,
+      "finite_error_bounds": [
+        -0.11383928571428571,
+        -0.11383928571428571
+      ],
+      "directions": {
+        "negative": 34,
+        "positive": 18,
+        "tied": 60
+      },
+      "all_roots_seeds_sides_exactly_matched": false,
+      "all_opponent_armies_seeds_sides_exactly_matched": true,
+      "own_setup_difference_explicitly_allowed": true,
+      "games_with_different_own_setups": 224
+    },
+    "student-fortress-mirror-mixture-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 112,
+      "planned_pairs": 112,
+      "paired_mean": -0.03125,
+      "finite_error_bounds": [
+        -0.03125,
+        -0.03125
+      ],
+      "directions": {
+        "negative": 14,
+        "tied": 88,
+        "positive": 10
+      },
+      "all_roots_seeds_sides_exactly_matched": false,
+      "all_opponent_armies_seeds_sides_exactly_matched": true,
+      "own_setup_difference_explicitly_allowed": true,
+      "games_with_different_own_setups": 108
+    }
+  },
+  "hashes": {
+    "plan.json": "93b03cdc201f6419b414527d96d867337890762302f28319e452dba7c8ac4a96",
+    "result.json": "b88c554d9dcebb128ca685bd070ee2430b76f3469152eb3035b40d4312d2acb5",
+    "student-fortress-template-flag-bomb-v1-normal.fmtour": "df91b455b0c2ada85a863a92df6da19d928b9df9f02a928d09d51a4b87622b8b",
+    "student-fortress-mirror-template-v1-normal.fmtour": "855c133e8488c9ec1f1993c671d6f974175fc7a4d5c62e023532e026354c95f3",
+    "student-fortress-mirror-mixture-template-v1-normal.fmtour": "0ad73ff2a941026769e46fa1351374d537490dc88754bf5e632c5c6ac789e5ea"
+  },
+  "limitation": "Checks outcome statistics and pairing, not policy correctness or state replay; those have separate qualification artifacts."
+}

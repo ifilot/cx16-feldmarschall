@@ -1,0 +1,42 @@
+{
+  "cycle": 118,
+  "baseline": "student-fortress-template-flag-bomb-v1-normal",
+  "opponent": "missions-v1-normal",
+  "policies": [
+    "student-fortress-template-flag-bomb-v1-normal",
+    "student-fortress-mirror-template-v1-normal",
+    "student-fortress-mirror-mixture-template-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 3118001,
+  "rounds": 16,
+  "jobs": 2,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "Test whether the complete horizontal mirror of the accepted Fortress formation changes end-to-end strength against the specified opponent/setup population, holding movement, inference and random draws fixed.",
+    "Test whether a symmetric five-of-ten setup-ticket mixture of original and mirrored Fortress improves robustness over the immutable original formation, without adding search or new information."
+  ],
+  "contrasts": [
+    [
+      "student-fortress-mirror-template-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ],
+    [
+      "student-fortress-mirror-mixture-template-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed three-arm exploratory screen with two prespecified baseline contrasts. Report paired 95% intervals, all family scores and finite missing-error outcome bounds; no promotion or population equivalence claim. Opponent armies and move seeds match across arms; own formations are the intended treatment. Both DOS and honest study plans must be frozen before any first outcome. Do not tune using held-out cohorts. Accepted raw ticket classes split exactly five/five; deterministic initial-seed retries preserve a documented tiny imbalance. Reflecting only our army measures orientation plus matchup effects, not isolated coordinate tie bias. Post-play composition audit must match each mixture game to the original/mirror fixed arm selected by its actual own setup, including saved error prefixes.",
+  "evidence": "research/mirror-deployment/README.md and tools/test_new_campaign_mirror.py six component tests: exact full reflection/inventory and geometry, all 65,535 nonzero seeds both colors with preserved RNG, all rejection cases, real native setup/forced-common-army move parity, fallback controls, no enemy-board influence. Fixed source snapshots and builds registered before saved play."
+}

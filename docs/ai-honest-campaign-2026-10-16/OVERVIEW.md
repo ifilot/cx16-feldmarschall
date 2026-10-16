@@ -145,6 +145,7 @@ No completed strength result. [Frozen plan](cycle-117-mirror-deployment-dos/plan
 [Results and family breakdown](cycle-118-mirror-deployment-honest/result.json).
 - student-fortress-mirror-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -11.38 points; 95% paired interval [-18.53, -4.02].
 - student-fortress-mirror-mixture-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -3.12 points; 95% paired interval [-7.59, +1.12].
+[Interpretation](cycle-118-mirror-deployment-honest/CONCLUSION.md).
 
 **Additional hypotheses evaluated before tournaments**
 

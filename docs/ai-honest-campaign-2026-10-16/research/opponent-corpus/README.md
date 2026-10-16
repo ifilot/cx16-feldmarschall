@@ -39,7 +39,11 @@ Checks retained here:
   compiler-error fixture confirms failed builds are rejected rather than published.
 
 Fixtures and smoke games are infrastructure checks, not strength evidence. Both
-official validation partitions remained unplayed. No production corpus, stored
+official validation partitions remained unplayed during this qualification.
+Subsequent predeclared cycles 112 and 113 used generator-holdout B offsets 0–31
+and 32–63 respectively. Their separate evidence and the
+[usage ledger](VALIDATION-USAGE.json) describe that consumption; it is not part
+of the plumbing checks. No production corpus, stored
 army, generator family or immutable v1 source snapshot was edited or regenerated.
 Only temporary unit fixtures were generated. The explicit opponent-only role is
 an evaluation capability, not a new AI policy or a promotion result.
