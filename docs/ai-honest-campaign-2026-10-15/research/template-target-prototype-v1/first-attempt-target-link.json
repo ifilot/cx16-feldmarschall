@@ -1,0 +1,770 @@
+{
+  "head": "214b4d722983298bc3e479d8dbb9735aeea2e6be",
+  "source_sha256": {
+    "AI.BIN": "e8fe21c534fbf39862725232eceb8dc98a899a1294908ba5aa734e6c7aed380c",
+    "app_info.h": "4d14a139c7b87806021efc60c5f0f16931c9eed2514a3c1dae56701b17d0ec6f",
+    "BRIDGE.PRG": "a1ba3c8592c79af3a357b951df201b67d704e812639b6378aa3e923ec5d29262",
+    "COLORS.DAT": "ad41aadd48c39f42439872e1d1b3f9cfeb722ef14dc7f6a850fe6f09561e79e5",
+    "color_profiles.h": "4d2ffadd3844d7169a6e9f42a643e704f7737e11a37ee7a4f577e01b86478867",
+    "DEFEAT.ZSM": "1e66bdb166c01204de0abdcfd6447fbda6780c0444db84e68620669a40b53ed9",
+    "DEPLOY.ZSM": "5fbde747ee4bc7a348e9da3d3cd8eb0102b22b28522261b160db1542edfe4bf8",
+    "DRAWMAP.BIN": "6c33859926b12be331b7ae66a27ecb9258ab66447b4721312f01b2dc0356ed66",
+    "DRAWTIL.BIN": "aac5d17034b3c39d5e10769de61abd1542f61d59afcc6cc7a2cb1974c30ac051",
+    "ENDPAL.BIN": "ce7c88a738a8a6d3ed30f18bd102d96c2d65025056313371ff00a259edf32798",
+    "F1MAP.BIN": "579b94657e0a29f050b795801f3189c85506baed3bacf9164181e8226804d76b",
+    "F1TILES.BIN": "4c68e7c202646301bab2e0ced5eb744486bf0325b58a37175abd16fe177ab606",
+    "F3MAP.BIN": "eff473e0d3670c4cf5a1015b4466f2dbfb88477e740295b260c8cb8ab1f5673a",
+    "F3TILES.BIN": "8eda320b4af1f25bc92ade5f31ff1fb303f9487339bd9bfd6bbbd2efa855dd2e",
+    "FELDMARS.map": "aecc0702135edeac3aeaee5511f5b7966fd8ff9f78020ff2111d0aa6c3c10806",
+    "FELDMARS.PRG": "4106fb96dcfcdb1089fd5e82346a805d2f4ebd6db4e2cbda1535ededc789ca63",
+    "FELDMARS.sym": "b245380fa2c5eb8e37a00aed52a4c082b450840193ab4fb277819a6906388041",
+    "feldmarschall.cfg": "f562dd86a4fdf829a0095d8fd74e9cde26b85d9ec9052463e5296230f47878d4",
+    "GAME.ZSM": "750fc4ec51d6ef2e5210155d8d1d7364c123dde0d5eef9fff4d335e1dda1788b",
+    "GAME2.ZSM": "6e139a7d3282e643128aaf2f2ec7ba4b0cfd2af53bdb5b9317717312e17657b3",
+    "GAME3.ZSM": "b89ce331560c07e9ed054e117d31f31110f9ee22d2808cd5ef2c8382601f765e",
+    "GAME4.ZSM": "118f29e6238b814bdaa355008dc7b3f408a5a00bad16f5f309b4a2da596be43c",
+    "gfx.h": "b767470a0a7db96674f36748b71b55df732136a30807608a67f4dd6f8e6d4ea9",
+    "L0MAP.BIN": "7913bfdd576a6d2105584d4bbcdf196557ac44ca6ae9ec4ab53d01bc0ecbcf2a",
+    "L0TILES.BIN": "0a18b7ec3c1d4fa382eaa40e32e39744d94843143b5a7482394be9c877f950ce",
+    "L1TILES.BIN": "447b37484db743e80d0858bd44c16b1cec0297f643ba03200b2c57c0c2e9ebb5",
+    "LOSSMAP.BIN": "c301dbfbc3a8683295c80bbf7dfa6a958ce84db4bd653288dace2c0418979ab4",
+    "LOSSTIL.BIN": "139c387357307bd31c9c8e120e12b6278fbbac2fd542bedf16ade91c21f447d0",
+    "main.c": "347892451e5313e898641fe904c77f9584071e1e1c2c10c2e12fc413b5aa0a5c",
+    "main.o": "2e07f49dbd298a1b897882f4776e980ac87e1d776089063ca903a1ec3bc1f010",
+    "Makefile": "1e250dc9288c7740e9ef9f3688407db3d9c16ddf29411e5c7813ca517468117f",
+    "music.h": "99d6dc8acd0f87cec7b62275fbdbd74f2d9728b8d83cae394860e77a7be4de69",
+    "PALETTE.BIN": "f98faeceb9374b12a49d8ed63efabcc5c8308ca24506e61a2f71d54ca7f242d8",
+    "PLAY.BIN": "111acd6eef48582347236a5d75fb7f12b749c60b263dabee563d5cbb130523e0",
+    "RANKSPR.BIN": "37196b63de27d7a098c2542354a3392ac85e0a7e9e88a23fa2031047e22614e6",
+    "RANKTIL.BIN": "53e9c3d09deec3af4b680f8d6cfef0c28cd19b3043e71734d0d9446511e3a0fd",
+    "scene.h": "c4af10ece6c610ca9eecd6c0514e9cea90878ecaff4ee3a3673268a8e4bf2f38",
+    "SFX.BIN": "3ec0e2e16188e4712ae711849536931b39b3e861ef57e338039cacac61b7a769",
+    "sfx.h": "42d4814140da63a06a69e5a31865d6a1b013982b59f3a32b070ad031c002989b",
+    "SPLMAP.BIN": "350e585ebd4d669c41211511256d35fbb6191ce69d45f952eea36f33f51d45bf",
+    "SPLPAL.BIN": "bcec17af8cc655788200dd51b6b93f661aae69cf93aa9e819aac3dd3cd3cd0df",
+    "SPLTIL.BIN": "32d582864f38cc27e452ee6bd637f1d2d0b963ea3623e4bef4995f9c254faa2b",
+    "SPRITES.BIN": "8d5548b5ed6b310e6a1e271f4334bca127d323b631077409f259bd3d15a53858",
+    "TITLE.ZSM": "6bc4f384617990603955145348eddc850b4541fada446097432885997dcacaf5",
+    "VICTORY.ZSM": "3ada210b77b65089a1cedc48387de394c3d7b5073f5e2784c1214c0ad07cd7cd",
+    "WINMAP.BIN": "9a574c46cd78812a9176a2176cacaa984bd91e1af5f669c2869d35fe19ee7b98",
+    "WINTIL.BIN": "7c8a207706b0e58d0667d608b13aa332cb9c34a494e874c0052d2bb513fc8028",
+    "bridge/bridge.c": "4425f3681a7ebc719bd21b3995f87e2ddeee23952af7f2835259f956c5aa1a71",
+    "bridge/bridge.o": "af36cd31efa54b55e3aae36df0bb636b3d3d6dd90b0d9bdfa8a11b2295d9b1d4",
+    "core/ai.c": "2326021b753f8b9edfdc84973b61b5f6af4ba5742c03d92f2764e429cc81689a",
+    "core/ai.h": "d6f57123db803aec6a4709c09d4e1884f4d8f6ea0530228ebb9c60bc244ab852",
+    "core/ai_deploy.c": "73fb906cb4db1889b028d88e994a582607da716858fe813556a4cf17a821f19e",
+    "core/ai_level.c": "2f7f5f3c7acbda776c655974ea097c9dbcf3ea3aca3cf12be8e7f333a0bb4c48",
+    "core/ai_memory.c": "b0a3a70a2add857d8c62570ea77364863a7a47e1967ff4beb7fe49648c8373b9",
+    "core/ai_memory.h": "deef82fd0411f822e04d36346ebfa94f184b9db5b4079b47ccf4f23fe0681926",
+    "core/ai_mission.c": "515955410737ebfc14f68bde573efa9fa5d83e63abca040c7296f1d68db2ddfc",
+    "core/ai_mission.h": "0c972fde53db8f77226d02b065851ac774a40483f4057f316463e0eab30f8e19",
+    "core/ai_student.c": "504102ff3e786fec46b222440fdb27bf07eb2741ef9e2d18d679a4171bf4c932",
+    "core/ai_student.h": "c905c4be83c08db86566faed2feafdaeef54f0363f68f1c56f3fc8b1ae887f5f",
+    "core/ai_student_model.h": "12d52987bfe52ec0f8b1cd5b408bba8370ad23516acc0bb208061720a62c4544",
+    "core/ai_student_model_production.h": "5af0c60b4bb837162bd2c460e3541545fc62aa102eb3d7611f64a5454570e1c0",
+    "core/ai_template.c": "033f02af78ba10f1a40419c63f1db8dfb3034b9023b45d997f5ce77fddbe5cee",
+    "core/ai_template.h": "090b48e576c5562f6604f3df300d79dfc7c464b85c694d1adafeccae467ec5b7",
+    "core/board.c": "0dc8d653516fa2a71c1b639658c1464e8f882441ad4baecc0fc11410b9db3b63",
+    "core/board.h": "5150dcd9f39913d2b902b8e62f9b92e318cfe5d7529a586540e1fd4c5b94fe60",
+    "core/pieces.c": "847949d7815ed40780a074e3c4174dbabbe3dce018c37d32aa9708a59980b288",
+    "core/pieces.h": "5c0fb6eb8e27dd84738b3929a7202294e7c2b453a4e4ee78d97e788958afef31",
+    "core/presets.c": "b001accbe3755ea5d57fc6289b88041b7a784bc0639b8bbc5204905dcfef041b",
+    "core/presets.h": "284b0c00f68b2e5520d8e5edb6242d707b9a94c62f5f22a3927466afbe6d973c",
+    "core/presets.o": "8af31b580dd7ddd5de4c881c4f4bf194b1e6839b05a9dc82b8921eb79c253cae",
+    "core/random.c": "78d56d6736abe188b1b175ba27c3d75aa43dcbac8dcfdd1bff88dd41ca24fa3d",
+    "core/random.h": "e846896e371f0715b1077f94fbe83ddd03fe6a55c89c92d4e0e26fdbdebb2eb5",
+    "core/rules.c": "0444d6e388f5f854e890d5f2137c3fb30595486c2e444b909bcd422af2e95fe3",
+    "core/rules.h": "a7a2442a2d7f64f50c3bc708fdc9660383cd62943179a7399ceb1773c0041f8a",
+    "core/setup.c": "a77e2310874f60365f003389383d2179c7bf3fc4b68b11af812c3ddad029a993",
+    "core/setup.h": "a5c9b76f1d0defadeb911b2ce4acc3876a9a4ebd9c67a51db8b48b92bad490bb",
+    "core/store.c": "5c0b143580a09328150bfd9f70f957caadb9026a79ee743c1971dc986a086acd",
+    "core/store.h": "534ff196d14eb94c42b06047368a1c2543ec967bff62c370eea5d76931213365",
+    "core/store.o": "2ffb1a5332582ae9e724a3370dc855cc2a8b466f2fdb920663effb14494b81ac",
+    "native/engine.c": "4159bf0d5453c3e121ecd471622832054b2ed0b67e5d69e2322de82c3befb98d",
+    "native/teacher.c": "c1a0b125196bf3ef6340e618ce47a1717164af6551c52b19b8e58be582a48803",
+    "native/teacher_rollout.c": "2b921ec8e7adfe75cfa8cc02731eb46d0b3f4d48d7d6979df99700121c972d4e",
+    "scenes/about.c": "96b42e15e70749b28e025c3d06f3550349db7fa71080e2b0980a35b74679d641",
+    "scenes/about.h": "fc6561b29007889c6f83ef4fe0422f6f4f32d6913f628e5672437a049493a717",
+    "scenes/about.o": "383568dda5c1c9964284423d97eb705febe61ff0b87327d94b8d6998682cf223",
+    "scenes/deploy.c": "18e59146498afa54fa8ddb2caf65f3d37fdd8274e0b7456acb9a7660a677d29f",
+    "scenes/deploy.h": "8a5e3c057e9abe0c4f5c30cff5c44e94237ac705e4a98f64cf4f5e12d74140e2",
+    "scenes/deploy.o": "4264dfd1d9a996fb147f228ecb41d07b8f9c036e7b9ea9e8f5d0597e167a349a",
+    "scenes/deploy_dialog.c": "73cbfdf4e03a781c735c3e67f49a486bac0b2170d758dc470ef03b68b3a71b1f",
+    "scenes/deploy_dialog.h": "4495b9e5982d762ac2b60a9c36f399157725864fbf886dd98de2fe13faa90b12",
+    "scenes/deploy_dialog.o": "252e0b2ef9f1ef8c757c6fb564e8ebd5120ea3639d93ac8dbaca372dbf026219",
+    "scenes/dev.c": "001bb7f892b0121e20c6fd7ba35fe239cf5292c42c961fd3bd13b09e21e3fca4",
+    "scenes/dev.h": "d7ea17a90720f11570119742c325ae3ac6c457bf241021dfbe11735f95d10669",
+    "scenes/dev.o": "9c2c2b26986c7e9a7776dfa2d2015c7b0a76c19108aa60798e1af012247f75c5",
+    "scenes/game_settings.c": "36b1a5e582223a7e89073748ead9dd48a94edb219322ce17b614c8470c66095d",
+    "scenes/game_settings.h": "e47652dc9efcebc8fe7917c4ed223949c52c0d368d172d28b982375e3ec5a85b",
+    "scenes/game_settings.o": "1796c9a90ec600dff1a9a9f7203dd3eb17ac9d35689e445005ef89ad12a65f30",
+    "scenes/menu.c": "a1001771d14bb94bae9f91d0d3f04ab450fc7206dfb3b366729b00e6920af3f0",
+    "scenes/menu.h": "258eb5906d090abde21813945a1fcd149afabc290fc1cfdb21064dc4a8d8db00",
+    "scenes/menu.o": "78712135019ad4a6c06de9f12019f09e0e72b71919bce34486011bd21f08695c",
+    "scenes/options.c": "8bb7b3d16abd9cfda534ba699b21c8850439372aae757e21f28dca8ded029e1f",
+    "scenes/options.h": "183247a2801aa18b62e952ac11d55663334f911e271445ed9e78ac75d72ddbc5",
+    "scenes/options.o": "dc7bfe8081e2c76a4694da334edb27a947fd6659244e44babfbcd929c74cb63f",
+    "scenes/play.c": "9edc02cc34ac7b3a84c9c29476da78829f39114cd23c15599b15f7ab0646c2b0",
+    "scenes/play.h": "33ecea06446ca4a081a0d5bc21ed01fbdab673c010aaa9c57f88c5f4edade305",
+    "scenes/play.o": "e42fe5e05470052172aadcdc77bffaa3307a901d87a9e9d6d2f719dd59a7c8b3",
+    "scenes/play_bank.o": "013eb3c758f1bbd4b499ad94fe42bd95aa756189132541ca4dd64d48642d99a3",
+    "scenes/play_bank.s": "1f141db17961e0b3405309468bb72d63b3188d8b94c42581334568328a0bc216",
+    "ui/ai_bank.o": "141df10b279cd43938be3fa2cdaca36b4c861c6b7b12734fcb15a08d2d2cf2ed",
+    "ui/ai_bank.s": "017e9d91c7d554cc128235db5570e0205ba6b922361dfeea4978e0cffb36c21f",
+    "ui/ai_template_bank.s": "6363fcc8754169ccd4f5ca7b528ac62688c956a1a4fa68ff9a44588e2db677b9",
+    "ui/boardview.c": "fcd50603b55470f2857c2d3cd877aafbb44075172f0e06d39ea253269fd186fa",
+    "ui/boardview.h": "8b19b0630b74a26d7946f722ad8c0234e28b27ac2a6840b9dd3983f6f7550b77",
+    "ui/boardview.o": "d5b71e920f6cf01b54302846e957f84b5f484ffcf98f933483839feb3bc0a3d5",
+    "ui/button.c": "c073dd01d3802d4a80c7136a6042bf71dbf3694d8b69e19410fdf4670aa93637",
+    "ui/button.h": "4862015563079ae260aca3fc182e9280cf729b1f6c2e9aa105b662b47d244c72",
+    "ui/button.o": "6bdb13243508921f84d9cbe2558ba8b1970c281f225ad067f7ef1f9440e6e978",
+    "ui/colors.c": "0c65c6a4aee313bd85e293bfda63f22d1f0694b29728783f2a83e1bb4bcdc607",
+    "ui/colors.h": "d3b269455075268bd68db0c40cbebb6a6713c557f56af8a6a9e189343b58fc3d",
+    "ui/colors.o": "7d63cf243076459bc7004635753cbb719ba030a3efd7af68653c7351089accaa",
+    "ui/dialog.c": "4a2388937504c46bbceedbb5bfb40182ded706c6a6e22fca546d81db237f3d3b",
+    "ui/dialog.h": "cf23b1f372c7a5a98a8cd80b9973d1af78c4eb8c4c34419ca371e7e01a2cc8fd",
+    "ui/dialog.o": "cb87bfd8d80d84c749d9dc56d9da07d42bd06594353d15289e77d357eca952c1",
+    "ui/drag.c": "14dd3482ae164a2d76449222fcc491b01f3dcff963ee15aeaa5477f1cb217a06",
+    "ui/drag.h": "7c880b8a8c83d561f423ab451ee2c9f04f3072642e89c6080c353f94d355495b",
+    "ui/drag.o": "46631183a8df74d3c2bb2d5b5e3f8b2a8ef4234dd2a305a66fa7b83808f104de",
+    "ui/input.c": "22d85b34e9d474ef457a0c4b3492cfd86b7698bdbf8d0f9b2634e6d0590c2b24",
+    "ui/input.h": "5e6d01c9b3c285dda7d6e1f6a24b04c1d9b6d4a0a7f6df20cb2e7066837fbf16",
+    "ui/input.o": "6068d43a6af0861501a0caaecb261875c626111669a4d6089a09f71e7d9b264e",
+    "ui/input_low.o": "db072889423b8821ebc84dc5b99904ad0441d72b65ecee35a8256a0b10e03d1c",
+    "ui/input_low.s": "8d174d191397a8202fd324f6b97b249592df6701bebbe6ae1261834a3408c10e",
+    "ui/mission_bank.s": "0a274279736c4acbd09d882ff4efc6dab3958518b1a927f3765dd54b7c447b7e",
+    "ui/panel.c": "a60669a97b3b9d666454a561cade9478f4bb39b80400b25cc5c4d7f5587c7532",
+    "ui/panel.h": "e86801268663e70f27280682d054ac99193b5571d511d3d2b644671f5d845ea4",
+    "ui/panel.o": "74b8d7aebbeb339d3ebe3163a2eb219c270032378e8fa7a10be87976fd95fdf2",
+    "ui/sound.c": "86931ab3fac110f4cf7ee244c83905847fceecf5ffe55f3f8f9587220e774286",
+    "ui/sound.h": "7d18e9181580528077854b06c5d6cb2a629a020a4f9760ad0de2f9bee79bc4ce",
+    "ui/sound.o": "587333490ec6b123da92a7b3dbef0c98ab90b20fb17dc65225c50162796b7494",
+    "ui/sound_low.o": "089345a13af7476a83dbd7ad0ad49edaf2a6b5cd0e2ed79cc37e7c7f0a46f883",
+    "ui/sound_low.s": "2bef04b20ebbd358637c2286667151ec66773d477bd443b9924bea8514075a6f",
+    "ui/video.c": "1c5b422f15b8d980a310f189ce64555c89864516295688c994b359e04ada7658",
+    "ui/video.h": "626835b2961a65f3d94108dab35a5eb5bd2e2efd98384752ef3a0d64525cfd5f",
+    "ui/video.o": "9f822af4dece99371c12c378129758e5a9315bca2bbffe0a20f180de4459ee76",
+    "vendor/zsmkit.inc": "d83a2758bf34ffd16241013db43fc70b9ca7b736962077c648459747a7cc0017",
+    "vendor/zsmkit.lib": "12603ffef04c8c6dd8a888bde409c41a3bed2ff66d98e2c1db50f8351593ab9d"
+  },
+  "workspace_src_unchanged": true,
+  "default_original_binaries_identical": true,
+  "builds": {
+    "head-default": {
+      "returncode": 0,
+      "command": [
+        "cl65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        ".",
+        "-I",
+        "core",
+        "-I",
+        "ui",
+        "-I",
+        "scenes",
+        "-DBANKED_AI",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "--asm-define",
+        "AI_MEMORY",
+        "-Wl",
+        "-D,__STACKSIZE__=0x0400",
+        "-C",
+        "feldmarschall.cfg",
+        "-o",
+        "FELDMARS.PRG",
+        "-m",
+        "FELDMARS.map",
+        "-Ln",
+        "FELDMARS.sym",
+        "main.c",
+        "core/ai.c",
+        "core/ai_deploy.c",
+        "core/ai_level.c",
+        "core/ai_memory.c",
+        "core/ai_mission.c",
+        "core/ai_student.c",
+        "core/board.c",
+        "core/pieces.c",
+        "core/presets.c",
+        "core/random.c",
+        "core/rules.c",
+        "core/setup.c",
+        "core/store.c",
+        "ui/boardview.c",
+        "ui/button.c",
+        "ui/colors.c",
+        "ui/dialog.c",
+        "ui/drag.c",
+        "ui/input.c",
+        "ui/panel.c",
+        "ui/sound.c",
+        "ui/video.c",
+        "scenes/about.c",
+        "scenes/deploy.c",
+        "scenes/deploy_dialog.c",
+        "scenes/dev.c",
+        "scenes/game_settings.c",
+        "scenes/menu.c",
+        "scenes/options.c",
+        "scenes/play.c",
+        "ui/ai_bank.s",
+        "ui/input_low.s",
+        "ui/mission_bank.s",
+        "ui/sound_low.s",
+        "scenes/play_bank.s",
+        "vendor/zsmkit.lib"
+      ],
+      "stdout": "",
+      "stderr": "",
+      "flags": [
+        "BANKED_AI",
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD"
+      ],
+      "segments": {
+        "ZEROPAGE": {
+          "start": 34,
+          "end": 59,
+          "size": 26
+        },
+        "LOADADDR": {
+          "start": 2047,
+          "end": 2048,
+          "size": 2
+        },
+        "EXEHDR": {
+          "start": 2049,
+          "end": 2060,
+          "size": 12
+        },
+        "STARTUP": {
+          "start": 2061,
+          "end": 2100,
+          "size": 40
+        },
+        "CODE": {
+          "start": 2101,
+          "end": 26783,
+          "size": 24683
+        },
+        "ZSMKITLIB": {
+          "start": 26784,
+          "end": 32771,
+          "size": 5988
+        },
+        "RODATA": {
+          "start": 32772,
+          "end": 36961,
+          "size": 4190
+        },
+        "DATA": {
+          "start": 36962,
+          "end": 37074,
+          "size": 113
+        },
+        "INIT": {
+          "start": 37075,
+          "end": 37076,
+          "size": 2
+        },
+        "BSS": {
+          "start": 37077,
+          "end": 39094,
+          "size": 2018
+        },
+        "ONCE": {
+          "start": 37077,
+          "end": 37142,
+          "size": 66
+        },
+        "AICODE": {
+          "start": 40960,
+          "end": 47478,
+          "size": 6519
+        },
+        "MISSIONCODE": {
+          "start": 40960,
+          "end": 46776,
+          "size": 5817
+        },
+        "PLAYCODE": {
+          "start": 40960,
+          "end": 47590,
+          "size": 6631
+        },
+        "ZSMKITBANK": {
+          "start": 40960,
+          "end": 47202,
+          "size": 6243
+        },
+        "MISSIONRODATA": {
+          "start": 46777,
+          "end": 47090,
+          "size": 314
+        },
+        "MISSIONBSS": {
+          "start": 47091,
+          "end": 48471,
+          "size": 1381
+        },
+        "AIRODATA": {
+          "start": 47479,
+          "end": 47902,
+          "size": 424
+        },
+        "PLAYRODATA": {
+          "start": 47591,
+          "end": 48991,
+          "size": 1401
+        },
+        "AIBSS": {
+          "start": 47903,
+          "end": 49106,
+          "size": 1204
+        }
+      },
+      "free_bytes": {
+        "AI": 45,
+        "MISSION": 680,
+        "PLAY": 160,
+        "BELIEF": 8192,
+        "MAIN": 585
+      },
+      "binaries_sha256": {
+        "FELDMARS.PRG": "e493611143a94385673fd1df32e4b5b409d15bd25c09068dfe1d01bd3792a74c",
+        "AI.BIN": "85054be59e2ad359e57990da7a3aab2b8dca8489d96e875094fe49933d8e105f",
+        "MISSION.BIN": "1bec867560be93e72af2c5715e0d54e7571ac3cbbc36f88657a498ae62d4556a",
+        "PLAY.BIN": "6d2494330b8a9213f879c1ba51e0a0e1afa8fa9d93ee269e1b0e80133bce3e06"
+      }
+    },
+    "current-default": {
+      "returncode": 0,
+      "command": [
+        "cl65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        ".",
+        "-I",
+        "core",
+        "-I",
+        "ui",
+        "-I",
+        "scenes",
+        "-DBANKED_AI",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "--asm-define",
+        "AI_MEMORY",
+        "-Wl",
+        "-D,__STACKSIZE__=0x0400",
+        "-C",
+        "feldmarschall.cfg",
+        "-o",
+        "FELDMARS.PRG",
+        "-m",
+        "FELDMARS.map",
+        "-Ln",
+        "FELDMARS.sym",
+        "main.c",
+        "core/ai.c",
+        "core/ai_deploy.c",
+        "core/ai_level.c",
+        "core/ai_memory.c",
+        "core/ai_mission.c",
+        "core/ai_student.c",
+        "core/ai_template.c",
+        "core/board.c",
+        "core/pieces.c",
+        "core/presets.c",
+        "core/random.c",
+        "core/rules.c",
+        "core/setup.c",
+        "core/store.c",
+        "ui/boardview.c",
+        "ui/button.c",
+        "ui/colors.c",
+        "ui/dialog.c",
+        "ui/drag.c",
+        "ui/input.c",
+        "ui/panel.c",
+        "ui/sound.c",
+        "ui/video.c",
+        "scenes/about.c",
+        "scenes/deploy.c",
+        "scenes/deploy_dialog.c",
+        "scenes/dev.c",
+        "scenes/game_settings.c",
+        "scenes/menu.c",
+        "scenes/options.c",
+        "scenes/play.c",
+        "ui/ai_bank.s",
+        "ui/ai_template_bank.s",
+        "ui/input_low.s",
+        "ui/mission_bank.s",
+        "ui/sound_low.s",
+        "scenes/play_bank.s",
+        "vendor/zsmkit.lib"
+      ],
+      "stdout": "",
+      "stderr": "",
+      "flags": [
+        "BANKED_AI",
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD"
+      ],
+      "segments": {
+        "ZEROPAGE": {
+          "start": 34,
+          "end": 59,
+          "size": 26
+        },
+        "LOADADDR": {
+          "start": 2047,
+          "end": 2048,
+          "size": 2
+        },
+        "EXEHDR": {
+          "start": 2049,
+          "end": 2060,
+          "size": 12
+        },
+        "STARTUP": {
+          "start": 2061,
+          "end": 2100,
+          "size": 40
+        },
+        "CODE": {
+          "start": 2101,
+          "end": 26783,
+          "size": 24683
+        },
+        "ZSMKITLIB": {
+          "start": 26784,
+          "end": 32771,
+          "size": 5988
+        },
+        "RODATA": {
+          "start": 32772,
+          "end": 36961,
+          "size": 4190
+        },
+        "DATA": {
+          "start": 36962,
+          "end": 37074,
+          "size": 113
+        },
+        "INIT": {
+          "start": 37075,
+          "end": 37076,
+          "size": 2
+        },
+        "BSS": {
+          "start": 37077,
+          "end": 39094,
+          "size": 2018
+        },
+        "ONCE": {
+          "start": 37077,
+          "end": 37142,
+          "size": 66
+        },
+        "AICODE": {
+          "start": 40960,
+          "end": 47478,
+          "size": 6519
+        },
+        "MISSIONCODE": {
+          "start": 40960,
+          "end": 46776,
+          "size": 5817
+        },
+        "PLAYCODE": {
+          "start": 40960,
+          "end": 47590,
+          "size": 6631
+        },
+        "ZSMKITBANK": {
+          "start": 40960,
+          "end": 47202,
+          "size": 6243
+        },
+        "MISSIONRODATA": {
+          "start": 46777,
+          "end": 47090,
+          "size": 314
+        },
+        "MISSIONBSS": {
+          "start": 47091,
+          "end": 48471,
+          "size": 1381
+        },
+        "AIRODATA": {
+          "start": 47479,
+          "end": 47902,
+          "size": 424
+        },
+        "PLAYRODATA": {
+          "start": 47591,
+          "end": 48991,
+          "size": 1401
+        },
+        "AIBSS": {
+          "start": 47903,
+          "end": 49106,
+          "size": 1204
+        }
+      },
+      "free_bytes": {
+        "AI": 45,
+        "MISSION": 680,
+        "PLAY": 160,
+        "BELIEF": 8192,
+        "MAIN": 585
+      },
+      "binaries_sha256": {
+        "FELDMARS.PRG": "e493611143a94385673fd1df32e4b5b409d15bd25c09068dfe1d01bd3792a74c",
+        "AI.BIN": "85054be59e2ad359e57990da7a3aab2b8dca8489d96e875094fe49933d8e105f",
+        "MISSION.BIN": "1bec867560be93e72af2c5715e0d54e7571ac3cbbc36f88657a498ae62d4556a",
+        "PLAY.BIN": "6d2494330b8a9213f879c1ba51e0a0e1afa8fa9d93ee269e1b0e80133bce3e06",
+        "BELIEF.BIN": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "current-template": {
+      "returncode": 1,
+      "command": [
+        "cl65",
+        "-O",
+        "-t",
+        "cx16",
+        "-I",
+        ".",
+        "-I",
+        "core",
+        "-I",
+        "ui",
+        "-I",
+        "scenes",
+        "-DBANKED_AI",
+        "-DAI_MISSIONS",
+        "-DAI_MEMORY",
+        "-DAI_STUDENT",
+        "-DAI_STUDENT_V2",
+        "-DAI_STUDENT_PRODUCTION",
+        "-DAI_STUDENT_COOP_GUARD",
+        "-DAI_TEMPLATE_PRIOR_Q24",
+        "--asm-define",
+        "AI_MEMORY",
+        "--asm-define",
+        "AI_TEMPLATE_PRIOR_Q24",
+        "-Wl",
+        "-D,__STACKSIZE__=0x0400",
+        "-C",
+        "feldmarschall.cfg",
+        "-o",
+        "FELDMARS.PRG",
+        "-m",
+        "FELDMARS.map",
+        "-Ln",
+        "FELDMARS.sym",
+        "main.c",
+        "core/ai.c",
+        "core/ai_deploy.c",
+        "core/ai_level.c",
+        "core/ai_memory.c",
+        "core/ai_mission.c",
+        "core/ai_student.c",
+        "core/ai_template.c",
+        "core/board.c",
+        "core/pieces.c",
+        "core/presets.c",
+        "core/random.c",
+        "core/rules.c",
+        "core/setup.c",
+        "core/store.c",
+        "ui/boardview.c",
+        "ui/button.c",
+        "ui/colors.c",
+        "ui/dialog.c",
+        "ui/drag.c",
+        "ui/input.c",
+        "ui/panel.c",
+        "ui/sound.c",
+        "ui/video.c",
+        "scenes/about.c",
+        "scenes/deploy.c",
+        "scenes/deploy_dialog.c",
+        "scenes/dev.c",
+        "scenes/game_settings.c",
+        "scenes/menu.c",
+        "scenes/options.c",
+        "scenes/play.c",
+        "ui/ai_bank.s",
+        "ui/ai_template_bank.s",
+        "ui/input_low.s",
+        "ui/mission_bank.s",
+        "ui/sound_low.s",
+        "scenes/play_bank.s",
+        "vendor/zsmkit.lib"
+      ],
+      "stdout": "",
+      "stderr": "ld65: Warning: feldmarschall.cfg(20): Segment 'BSS' overflows memory area 'BSS' by 214 bytes\nld65: Error: Cannot generate most of the files due to memory area overflow \n",
+      "flags": [
+        "BANKED_AI",
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_TEMPLATE_PRIOR_Q24"
+      ],
+      "segments": {
+        "ZEROPAGE": {
+          "start": 34,
+          "end": 59,
+          "size": 26
+        },
+        "LOADADDR": {
+          "start": 2047,
+          "end": 2048,
+          "size": 2
+        },
+        "EXEHDR": {
+          "start": 2049,
+          "end": 2060,
+          "size": 12
+        },
+        "STARTUP": {
+          "start": 2061,
+          "end": 2100,
+          "size": 40
+        },
+        "CODE": {
+          "start": 2101,
+          "end": 27366,
+          "size": 25266
+        },
+        "ZSMKITLIB": {
+          "start": 27367,
+          "end": 33354,
+          "size": 5988
+        },
+        "RODATA": {
+          "start": 33355,
+          "end": 37555,
+          "size": 4201
+        },
+        "DATA": {
+          "start": 37556,
+          "end": 37668,
+          "size": 113
+        },
+        "INIT": {
+          "start": 37669,
+          "end": 37670,
+          "size": 2
+        },
+        "BSS": {
+          "start": 37671,
+          "end": 39893,
+          "size": 2223
+        },
+        "ONCE": {
+          "start": 37671,
+          "end": 37736,
+          "size": 66
+        },
+        "AICODE": {
+          "start": 40960,
+          "end": 47441,
+          "size": 6482
+        },
+        "BELIEFCODE": {
+          "start": 40960,
+          "end": 45339,
+          "size": 4380
+        },
+        "MISSIONCODE": {
+          "start": 40960,
+          "end": 47203,
+          "size": 6244
+        },
+        "PLAYCODE": {
+          "start": 40960,
+          "end": 47593,
+          "size": 6634
+        },
+        "ZSMKITBANK": {
+          "start": 40960,
+          "end": 47202,
+          "size": 6243
+        },
+        "BELIEFRODATA": {
+          "start": 45340,
+          "end": 45683,
+          "size": 344
+        },
+        "BELIEFBSS": {
+          "start": 45684,
+          "end": 47340,
+          "size": 1657
+        },
+        "MISSIONRODATA": {
+          "start": 47204,
+          "end": 47517,
+          "size": 314
+        },
+        "AIRODATA": {
+          "start": 47442,
+          "end": 47865,
+          "size": 424
+        },
+        "MISSIONBSS": {
+          "start": 47518,
+          "end": 48906,
+          "size": 1389
+        },
+        "PLAYRODATA": {
+          "start": 47594,
+          "end": 48994,
+          "size": 1401
+        },
+        "AIBSS": {
+          "start": 47866,
+          "end": 49070,
+          "size": 1205
+        }
+      },
+      "free_bytes": {
+        "AI": 81,
+        "MISSION": 245,
+        "PLAY": 157,
+        "BELIEF": 1811,
+        "MAIN": -214
+      },
+      "binaries_sha256": {}
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "turns": 12,
+  "reason": "Existing test requires at least20records. All12native/target decisions and bank/stack checks completed, then final minimum-length assertion failed. No emulator mismatch.",
+  "retry_turns": 32
+}

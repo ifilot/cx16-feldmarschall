@@ -5,16 +5,27 @@
 #include "ai_memory.h"
 #include "board.h"
 #include "rules.h"
+#ifdef AI_TEMPLATE_PRIOR_Q24
+#include "ai_template.h"
+#endif
 #ifdef BANKED_AI
 #pragma code-name ("MISSIONCODE")
 #pragma rodata-name ("MISSIONRODATA")
 #pragma bss-name ("MISSIONBSS")
 #define ai_memory_reset ai_memory_reset_banked
 #define ai_memory_observe ai_memory_observe_banked
+#ifdef AI_TEMPLATE_PRIOR_Q24
+#define ai_template_export ai_template_export_banked
+#define ai_template_forget ai_template_forget_banked
+#endif
 #endif
 
 static uint8_t identities[SQUARES], count;
 static ai_piece_history_t pieces[AI_MEMORY_PIECES];
+#ifdef AI_TEMPLATE_PRIOR_Q24
+/* 0 awaits the first public snapshot; 1 valid opening; 2 unavailable history. */
+static uint8_t template_history_valid;
+#endif
 
 static uint16_t mobile_mask(void) {
     uint16_t mask = 0x03ff;
@@ -39,11 +50,27 @@ void ai_memory_reset(void) {
     memset(identities, NOWHERE, sizeof(identities));
     memset(pieces, 0, sizeof(pieces));
     count = 0;
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    template_history_valid=0;
+#endif
 }
 
 void ai_memory_sync(void) {
     uint8_t sq, id, cell;
     ai_piece_history_t* piece;
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    if(!template_history_valid) {
+        uint8_t red=0,blue=0;
+        template_history_valid=2;
+        for(sq=0;sq<SQUARES;sq++) {
+            cell=board[sq];
+            if(!IS_PIECE(cell))continue;
+            if((cell&(CELL_MOVED|CELL_REVEALED)) || !board_home(sq,cell&CELL_BLUE))break;
+            if(cell&CELL_BLUE)blue++;else red++;
+        }
+        if(sq==SQUARES && red==40 && blue==40)template_history_valid=1;
+    }
+#endif
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq]; id = identities[sq];
         if(id != NOWHERE && (!IS_PIECE(cell) || pieces[id].owner != (cell & CELL_BLUE))) {
@@ -121,6 +148,24 @@ const ai_piece_history_t* ai_memory_history(uint8_t identity) {
     return identity < count ? &pieces[identity] : 0;
 }
 
+#ifdef AI_TEMPLATE_PRIOR_Q24
+void ai_template_forget(void) { template_history_valid=2; }
+uint8_t AI_TEMPLATE_FAST ai_template_export(uint8_t owner) {
+    uint8_t id,n=0,index;
+    const ai_piece_history_t* piece;
+    if(template_history_valid!=1)return 0;
+    for(id=0;id<count;id++) {
+        piece=&pieces[id];if(piece->owner==owner)continue;
+        if(piece->origin>=60)index=piece->origin-60;
+        else if(piece->origin<40)index=(3-piece->origin/10)*10+piece->origin%10;
+        else return 0;
+        ai_template_transfer.history[index]=piece->known_rank|(piece->moves?128:0);
+        ai_template_transfer.history[40+index]=piece->square;n++;
+    }
+    return n==40;
+}
+#endif
+
 uint16_t ai_memory_weight(uint8_t square, uint8_t rank, const uint8_t* prior) {
     uint8_t id = ai_memory_identity(square), factor = 1;
     const ai_piece_history_t* piece;
@@ -138,11 +183,17 @@ void ai_memory_save(uint8_t* out) {
     memcpy(out, identities, SQUARES);
     memcpy(out+SQUARES, pieces, sizeof(pieces));
     out[SQUARES+sizeof(pieces)] = count;
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    out[SQUARES+sizeof(pieces)+1]=template_history_valid;
+#endif
 }
 void ai_memory_load(const uint8_t* in) {
     memcpy(identities, in, SQUARES);
     memcpy(pieces, in+SQUARES, sizeof(pieces));
     count = in[SQUARES+sizeof(pieces)];
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    template_history_valid=in[SQUARES+sizeof(pieces)+1];
+#endif
 }
 #endif
 #endif

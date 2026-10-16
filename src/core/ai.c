@@ -22,6 +22,12 @@
 
 #include <string.h>
 #include "ai.h"
+#ifdef AI_TEMPLATE_PRIOR_Q24
+#include "ai_template.h"
+#if defined(AI_BELIEF_PRIORS) || defined(AI_BACKROW_PRIOR) || !defined(AI_MEMORY)
+#error Template source prior requires memory and its own numerical interface
+#endif
+#endif
 #include "board.h"
 #include "random.h"
 #include "rules.h"
@@ -512,7 +518,21 @@ static int16_t expected(uint8_t a, uint8_t moved) {
     return n ? sum / (int32_t)n : 0;
 }
 
-#ifdef AI_BELIEF_PRIORS
+#ifdef AI_TEMPLATE_PRIOR_Q24
+#ifdef BANKED_AI
+#pragma code-name (push, "CODE")
+#endif
+static int16_t expected_at(uint8_t a,uint8_t square) {
+    uint8_t cell=board[square];
+    if(!game_rules && ai_difficulty==AI_NORMAL && ai_template_valid &&
+       enemy(cell) && !(cell&(CELL_REVEALED|CELL_MOVED)))
+        return ai_template_transfer.row[square];
+    return attack[a][!!(cell&CELL_MOVED)];
+}
+#ifdef BANKED_AI
+#pragma code-name (pop)
+#endif
+#elif defined(AI_BELIEF_PRIORS)
 /* Exact Q12 expected gain under per-square Flag/Bomb probabilities. The
  * remaining mobile ranks are exchangeable; encounter likelihoods are not used.
  * Preserve the rational mobile mean until the final signed integer division.
@@ -698,7 +718,7 @@ static uint8_t plan(uint8_t from) {
     for(sq=0; sq<SQUARES; sq++) {
         cell = board[sq];
         if(!enemy(cell) || distance[sq] == NOWHERE) continue;
-#if defined(AI_BELIEF_PRIORS) || defined(AI_BACKROW_PRIOR)
+#if defined(AI_BELIEF_PRIORS) || defined(AI_BACKROW_PRIOR) || defined(AI_TEMPLATE_PRIOR_Q24)
         g = cell & CELL_REVEALED ? gain(a, PIECE_TYPE(cell)) : expected_at(a,sq);
 #else
         g = cell & CELL_REVEALED ? gain(a, PIECE_TYPE(cell)) : attack[a][!!(cell & CELL_MOVED)];
@@ -863,7 +883,7 @@ static int16_t score(uint8_t from, uint8_t to) {
         if(ai_difficulty == AI_NORMAL && distance[from] == NOWHERE)
             s -= 12 + (quiet_turns[own ? 1 : 0] >> 2);
     } else {
-#if defined(AI_BELIEF_PRIORS) || defined(AI_BACKROW_PRIOR)
+#if defined(AI_BELIEF_PRIORS) || defined(AI_BACKROW_PRIOR) || defined(AI_TEMPLATE_PRIOR_Q24)
         s = target & CELL_REVEALED ? gain(a, PIECE_TYPE(target)) : expected_at(a,to);
 #else
         s = target & CELL_REVEALED ? gain(a, PIECE_TYPE(target)) : attack[a][!!(target & CELL_MOVED)];
@@ -1010,6 +1030,9 @@ static void retain(uint8_t from, uint8_t to, int16_t score) {
 }
 
 void ai_reset(void) {
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    ai_template_valid=0;
+#endif
 #ifdef AI_TASK_ASSIGNMENT
     task_collecting=0; task_reassigned_from=task_reassigned_to=NOWHERE;
 #endif
@@ -1057,6 +1080,9 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
 #ifdef AI_MISSIONS
     if(ai_difficulty != AI_EASY) ai_mission_begin(army);
 #endif
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    ai_template_begin(army);
+#endif
     for(sq=0; sq<PIECE_TYPES; sq++) {
         attack[sq][0] = expected(sq, 0);
         attack[sq][1] = expected(sq, 1);
@@ -1083,6 +1109,9 @@ void ai_move(uint8_t army, const uint8_t* lost, uint8_t* from, uint8_t* to) {
         if(!IS_PIECE(cell) || (cell & CELL_BLUE) != own) continue;
         n = rules_targets(sq, targets);
         if(n) {
+#ifdef AI_TEMPLATE_PRIOR_Q24
+            ai_template_actor(PIECE_TYPE(cell));
+#endif
             source_danger = threat(sq, PIECE_TYPE(cell));
             if(ai_difficulty == AI_EASY) {
                 memset(distance, NOWHERE, sizeof(distance));

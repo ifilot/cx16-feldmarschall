@@ -9,7 +9,11 @@
 #error Banked AI_MEMORY requires AI_MISSIONS
 #endif
 #define AI_MEMORY_PIECES 84 /* eighty initial pieces plus four possible rescues */
+#ifdef AI_TEMPLATE_PRIOR_Q24
+#define AI_MEMORY_STATE_SIZE 942
+#else
 #define AI_MEMORY_STATE_SIZE 941
+#endif
 #define AI_MEMORY_QUIET 3
 typedef struct {
     uint8_t origin, square, owner, moves, battles, known_rank;

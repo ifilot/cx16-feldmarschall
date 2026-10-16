@@ -38,6 +38,9 @@
 #include "setup.h"
 #include "random.h"
 #include "ai.h"
+#ifdef AI_TEMPLATE_PRIOR_Q24
+#include "ai_template.h"
+#endif
 #if defined(AI_TEST) && defined(AI_MISSIONS)
 #include "ai_mission.h"
 #endif
@@ -122,6 +125,9 @@ static int place(const char* glyphs) {
         if(type < 0) return 0;
         board[setup_square(own, n)] = type | own;
     }
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    ai_template_start();
+#endif
     return 1;
 }
 
@@ -135,6 +141,9 @@ static void choose_setup(void) {
     setup_ai(own != 0);
 #else
     setup_random(own != 0);
+#endif
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    ai_template_start();
 #endif
     strcpy(text, "setup ");
     for(n=0; n<ARMY_SIZE; n++) text[6 + n] = piece_glyphs[PIECE_TYPE(board[setup_square(own, n)])];
@@ -457,6 +466,16 @@ int main(int argc, char** argv) {
         }
 #endif
 #ifdef AI_DIAGNOSTICS
+#if defined(AI_TEMPLATE_PRIOR_Q24) && defined(AI_TEST)
+        else if(!strcmp(command,"template-prior")) {
+            unsigned index;
+            printf("prior %u %u %lu %u",ai_template_status,ai_template_valid,
+                   (unsigned long)ai_template_test_evidence(),ai_template_test_mask());
+            for(index=0;index<40;index++)printf(" %u %u",ai_template_test_flags()[index],ai_template_test_bombs()[index]);
+            for(index=0;index<480;index++)printf(" %d",ai_template_test_cache(index/40,index%40));
+            putchar('\n');fflush(stdout);
+        }
+#endif
         else if(!strcmp(command, "strategy")) {
 #ifdef AI_TEST
             uint8_t state[AI_TEST_STATE_SIZE];

@@ -1,0 +1,8 @@
+{
+  "original_engine_sha256": "6f73c8eb62209b8060500385665d73111dc3a41c1b5fe07e7445add04e8e3da2",
+  "private_probe_source_sha256": "a0754ded635758689ea5460952e9302f3cb02bcb8ba15fca6b1ee1f524eb50f3",
+  "private_probe_binary_sha256": "6a8d45c5810ab4ec1e2454301dab941f3e165eeab58098eed520c2333d98bd8e",
+  "only_change": "Read-only fixture-rng command returns random_current(); it does not consume RNG or alter AI/history.",
+  "actual_assertions": 32,
+  "probe_test_command": "PYTHONPATH=tools python3 tools/test_campaign_template_banked.py --runtime /tmp/template-target-runtime-signed --engine /tmp/template-target-rng-probe --turns 32 --template-layout 3 --label audio-template3-rng --check-rng-output"
+}

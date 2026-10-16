@@ -28,6 +28,9 @@
 #include "rules.h"
 #include "setup.h"
 #include "ai.h"
+#ifdef AI_TEMPLATE_PRIOR_Q24
+#include "ai_template.h"
+#endif
 #include "store.h"
 #include "boardview.h"
 #include "dialog.h"
@@ -854,6 +857,9 @@ static void begin(void) {
     target_count = 0;
     menu_wanted = 0;
     ai_reset();
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    ai_template_start();
+#endif
     marked = STALE;
     if(blue || demo) {
         state = BLUE_THINK;
@@ -914,6 +920,9 @@ void play_resume(void) {
     ai_difficulty = (saved[TRAY_SLOTS + 2] & 0x40) ? (saved[TRAY_SLOTS + 2] >> 1) & 3 : AI_NORMAL;
     if(ai_difficulty >= AI_LEVELS) ai_difficulty = AI_NORMAL;
     begin();
+#ifdef AI_TEMPLATE_PRIOR_Q24
+    ai_template_forget();
+#endif
 }
 
 uint8_t play_update(void) {

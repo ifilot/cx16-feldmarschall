@@ -390,7 +390,9 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 
 - Compact native back-row prior: full CX16 link passes with 97 AI-bank bytes and 41 MAIN bytes free below the reserved stack. All 80 banked decisions match native execution; 18 public simulator fixtures add about 52 ms on average at an assumed 8 MHz. Strength remains untested. [Evidence](research/compact-backrow-native-v1/README.md).
 
-- Full source-template target interface: an isolated complete link with a nonfunctional inference stub leaves 154 MAIN bytes and 4,724 bytes in a new inference bank. This establishes interface space only; the actual inference algorithm, numerical policy and banked runtime remain to be qualified. [Evidence](research/template-target-port-feasibility/README.md).
+- Full source-template target interface feasibility: the original isolated link with a nonfunctional inference stub left 154 MAIN bytes and 4,724 bytes in a new bank. This established interface space only; the subsequent actual prototype has separate evidence below. [Evidence](research/template-target-port-feasibility/README.md).
+
+- Native Q24 source-template research prototype: the standard link overflows MAIN by 232 bytes; an explicit experimental runtime-helper relocation recipe links with 84 MAIN and 81 AI-bank bytes free. Three layouts cover 96 real banked decisions with matching moves, probabilities and signed gain caches; 32 also compare output RNG state. Music remains active, with 996 stack-canary bytes untouched in these traces. Maximum observed whole-AI cost is about 1.48 seconds at an assumed 8 MHz. This qualifies a distinct numerical policy for cycle 42, without enabling production or establishing strength. [Evidence](research/template-target-prototype-v1/README.md).
 
 
 **Registered experiments awaiting completed results:**
@@ -408,4 +410,5 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Cycle 39: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 3,000 planned attempts; no completed strength result. [Frozen plan](cycle-39-quiet-contact-dos-screen/plan.json).
 - Cycle 40: Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.; Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-40-quiet-contact-honest-generality/plan.json).
 - Cycle 41: Adding the unchanged Fortress deployment to the unchanged honest source-template native policy improves end-to-end score against the original DOS population on independent seeds. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-41-fortress-template-validation/plan.json).
+- Cycle 42: An honest source-template prior implemented entirely in native C retains useful DOS strength while fitting a separately banked CX16 research target.; The explicitly distinct Q24/inventory-rounding numerical policy retains practical strength relative to the floating host bridge. 3,000 planned attempts; no completed strength result. [Frozen plan](cycle-42-template-q24-native-dos-screen/plan.json).
 

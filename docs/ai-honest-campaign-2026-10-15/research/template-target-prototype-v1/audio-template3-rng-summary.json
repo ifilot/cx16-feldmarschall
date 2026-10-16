@@ -1,0 +1,17 @@
+{
+  "rng_output_compared": true,
+  "template_layout": 3,
+  "history_start_banks": [
+    22,
+    24,
+    22
+  ],
+  "per_turn_history_export_bank24": true,
+  "turns": 32,
+  "max_ai_cycles": 11808584,
+  "max_prepare_cycles": 8717115,
+  "audio_active": true,
+  "relocated_runtime_executed_in_bank25": true,
+  "all_native_q12_cache_moves_identical": true,
+  "minimum_stack_canary_untouched_bytes": 996
+}

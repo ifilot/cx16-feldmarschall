@@ -1,0 +1,11 @@
+test_all_template_constants_both_orientations_and_hidden_nibbles (test_campaign_template_target.TargetTemplates.test_all_template_constants_both_orientations_and_hidden_nibbles) ... ok
+test_first_blue_choice_after_opponent_quiet_long_scout_and_capture (test_campaign_template_target.TargetTemplates.test_first_blue_choice_after_opponent_quiet_long_scout_and_capture) ... ok
+test_immobile_only_background_rounding_and_negative_truncation (test_campaign_template_target.TargetTemplates.test_immobile_only_background_rounding_and_negative_truncation) ... ok
+test_late_reset_forget_and_memory_save_load_validity (test_campaign_template_target.TargetTemplates.test_late_reset_forget_and_memory_save_load_validity) ... ok
+test_missing_initial_capture_history_and_nonclassic_disable (test_campaign_template_target.TargetTemplates.test_missing_initial_capture_history_and_nonclassic_disable) ... ok
+test_public_legal_games_capture_origins_and_no_quantization_fallback (test_campaign_template_target.TargetTemplates.test_public_legal_games_capture_origins_and_no_quantization_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.441s
+
+OK

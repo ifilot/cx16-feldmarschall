@@ -1,0 +1,4 @@
+{
+  "cause": "Instrumentation waited only2frames afterbegin, shorter than THINK_FRAMES20 before firstAI. Initial22\u219224\u219222history gatewaychecks passed; retry waits bounded600frames untilbreakpoint.",
+  "policy_mismatch": false
+}
