@@ -30,6 +30,9 @@
 #define TEXT_DEEP_RED       4
 #define TEXT_DEEP_BLUE      5
 #define TEXT_UI_RED         8       // fixed classic deep red, independent of armies
+#define TEXT_RESULT_GOLD    10
+#define TEXT_RESULT_SLATE   11
+#define TEXT_RESULT_IVORY   12
 
 // token palettes
 #define ARMY_RED            1
@@ -45,11 +48,14 @@
  */
 uint8_t video_init(void);
 
-/* Show the full-screen four-color startup bitmap, with no mouse pointer. */
+/* Show the sixteen-color tiled startup screen, with no mouse pointer. */
 uint8_t video_splash(void);
 uint8_t video_field(uint8_t artwork);
-uint8_t video_campaign_menu(void);
+
 uint8_t video_restore_game_tiles(void);
+/* Dedicated result backdrop; outcome 1=victory, 2=defeat, 3=draw. */
+uint8_t video_result(uint8_t outcome);
+uint8_t video_result_restore(void);
 
 /**
  * @brief Load the token artwork (tiles and lifted sprites) whose rank
@@ -89,6 +95,8 @@ void video_tile_row(uint8_t col, uint8_t row, uint8_t w,
  * @param army  ARMY_RED or ARMY_BLUE
  */
 void video_token(uint8_t col, uint8_t row, uint8_t piece, uint8_t army);
+/* Piece artwork without board grid edges, for the battle panel. */
+void video_token_plain(uint8_t col, uint8_t row, uint8_t piece, uint8_t army);
 
 /**
  * @brief Draw the grid of an empty board square (board coordinates)

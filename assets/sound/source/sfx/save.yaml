@@ -1,0 +1,14 @@
+type: sfx
+title: save
+description: >
+  SAVE: the orders are sealed, a stamp then a small bell.
+instruments: ../instruments.yaml
+parts:
+  thump: {instrument: thump, voices: [12], level: 0.9}
+  body:  {instrument: knock, voices: [13], level: 0.8}
+  bell:  {instrument: bell, voices: [14], level: 0.7}
+sections:
+  main:
+    thump: "C3/8t r/20t"
+    body:  "G4/8t r/20t"
+    bell:  "r/8t E6/20t"

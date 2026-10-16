@@ -1,0 +1,12 @@
+type: sfx
+title: start
+description: >
+  START: a bugle calls to arms (C, E, G, high C) with a drum tap on the last note.
+instruments: ../instruments.yaml
+parts:
+  call: {instrument: bugle, voices: [12], level: 1.5}
+  drum: {instrument: snare, voices: [13], level: 0.8}
+sections:
+  main:
+    call: "G4/6t C5/6t E5/6t G5/18t"
+    drum: "r/18t C6/6t r/12t"

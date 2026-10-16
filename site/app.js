@@ -18,7 +18,7 @@ function fail(message) {
 // The release's Emscripten runtime reads this global before it starts.
 var Module = {
   canvas,
-  arguments: ['-prg', 'FELDMARS.PRG', '-run', '-ram', '512', '-scale', '1', '-quality', 'nearest', '-keymap', 'en-us'],
+  arguments: ['-prg', 'FELDMARS.PRG', '-run', '-ram', '512', '-scale', '1', '-quality', 'nearest', '-keymap', 'en-us', '-joy1'],
   locateFile: name => `emulator/${name}`,
   preRun: [function () {
     ENV.SDL_EMSCRIPTEN_KEYBOARD_ELEMENT = '#canvas';
@@ -37,13 +37,11 @@ var Module = {
   postRun: [function () {
     document.getElementById('cover').hidden = true;
     canvas.hidden = false;
-    status.textContent = 'Game running · press Enter to open the menu';
+    status.textContent = 'Game running';
     document.getElementById('fullscreen').disabled = false;
     document.getElementById('restart').disabled = false;
-    // The game is silent; keep the browser from opening an audio stream.
-    Module.ccall('j2c_start_audio', 'void', ['bool'], [false]);
-    Module.SDL2?.audioContext?.suspend();
-    document.querySelectorAll('[data-key]').forEach(button => { button.disabled = false; });
+    Module.ccall('j2c_start_audio', 'void', ['bool'], [true]);
+    resumeAudio();
     updateDisplay();
     canvas.focus({preventScroll: true});
   }],
@@ -63,8 +61,16 @@ play.addEventListener('click', () => {
   script.onerror = () => fail('The emulator could not be downloaded.');
   document.body.append(script);
 });
-canvas.addEventListener('click', () => canvas.focus({preventScroll: true}));
+function resumeAudio() {
+  Module.SDL2?.audioContext?.resume().catch(() => {});
+}
+canvas.addEventListener('pointerdown', resumeAudio);
+canvas.addEventListener('click', () => {
+  canvas.focus({preventScroll: true});
+  resumeAudio();
+});
 canvas.addEventListener('keydown', event => {
+  resumeAudio();
   if (['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' ','Backspace','Tab'].includes(event.key)) event.preventDefault();
 });
 canvas.addEventListener('contextmenu', event => event.preventDefault());
@@ -157,22 +163,6 @@ document.addEventListener('fullscreenchange', scheduleDisplay);
 window.visualViewport?.addEventListener('resize', scheduleDisplay);
 new ResizeObserver(scheduleDisplay).observe(player);
 updateDisplay();
-
-// A compact keyboard makes the game usable without a hardware one.
-const keys = {Enter:[13,'Enter'], Escape:[27,'Escape'], Tab:[9,'Tab'], ArrowUp:[38,'ArrowUp'],
-  ArrowDown:[40,'ArrowDown'], ' ':[32,'Space'], Backspace:[8,'Backspace']};
-async function sendKey(key) {
-  const [keyCode, code] = keys[key] || (/\d/.test(key) ? [key.charCodeAt(0), `Digit${key}`]
-    : [key.toUpperCase().charCodeAt(0), `Key${key.toUpperCase()}`]);
-  canvas.focus({preventScroll: true});
-  const options = {key, code, keyCode, which:keyCode, bubbles:true};
-  canvas.dispatchEvent(new KeyboardEvent('keydown', options));
-  await wait(100);
-  canvas.dispatchEvent(new KeyboardEvent('keyup', options));
-}
-document.querySelectorAll('[data-key]').forEach(button => {
-  button.addEventListener('click', () => sendKey(button.dataset.key));
-});
 
 // The game is played by dragging, so one finger is the mouse: touching presses
 // the button where the finger lands, moving drags and lifting releases. The

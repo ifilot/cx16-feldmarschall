@@ -33,6 +33,10 @@ void dialog_plate(uint8_t col, uint8_t row, uint8_t w, uint8_t h);
 /**
  * @brief Write text on a plate, centred between two columns
  */
+/* A larger serif title; kind: 0 Main Menu, 1 New Game, 2 Game Menu. */
+void dialog_rule(uint8_t col, uint8_t row, uint8_t width);
+void dialog_title(uint8_t col, uint8_t row, uint8_t width, uint8_t kind);
+
 void dialog_centred(uint8_t col, uint8_t w, uint8_t row, const char* s, uint8_t color);
 
 #endif

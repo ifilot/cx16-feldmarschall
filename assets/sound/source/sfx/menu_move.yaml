@@ -1,0 +1,10 @@
+type: sfx
+title: menu_move
+description: >
+  Cursor moves over a menu entry: a very short soft wooden tick.
+instruments: ../instruments.yaml
+parts:
+  tick: {instrument: tick, voices: [12], level: 0.7}
+sections:
+  main:
+    tick: "E5/5t"

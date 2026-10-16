@@ -1,0 +1,12 @@
+type: sfx
+title: pickup
+description: >
+  A token is lifted off the board or out of the tray: a light wooden click and a little upward tick.
+instruments: ../instruments.yaml
+parts:
+  click: {instrument: clack, voices: [12], level: 1.0}
+  tick:  {instrument: tick, voices: [13], level: 0.9}
+sections:
+  main:
+    click: "C7/2t r/4t"
+    tick:  "r/1t C5~G5/5t"

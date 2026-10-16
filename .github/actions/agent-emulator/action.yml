@@ -1,0 +1,33 @@
+name: AgentBridge emulator
+description: >
+  Build the AgentBridge fork of the X16 emulator in ../x16-emulator and put
+  the official r49 ROM in ../emulator/rom.bin, the layout the tools expect.
+
+inputs:
+  commit:
+    description: Commit of github.com/ifilot/x16-emulator to build
+    default: 464e447f4fba9151d1446f07750635812f40adfc
+
+runs:
+  using: composite
+  steps:
+    - name: Install emulator build dependencies
+      shell: bash
+      run: sudo apt-get install -y cmake libsdl2-dev zlib1g-dev
+    - name: Build the emulator
+      shell: bash
+      run: |
+        git init -q ../x16-emulator
+        git -C ../x16-emulator fetch -q --depth 1 https://github.com/ifilot/x16-emulator.git "${{ inputs.commit }}"
+        git -C ../x16-emulator checkout -q FETCH_HEAD
+        cmake -S ../x16-emulator -B ../x16-emulator/build -DCMAKE_BUILD_TYPE=Release
+        cmake --build ../x16-emulator/build --parallel 4 --target x16emu
+    - name: Fetch the r49 ROM
+      shell: bash
+      run: |
+        mkdir -p ../emulator
+        curl -sSfL -o ../emulator/r49.zip \
+          https://github.com/X16Community/x16-emulator/releases/download/r49/x16emu_linux-x86_64-r49.zip
+        echo "efb2d4ad36ae4244370004891aa67bdf85d2ec01b42b7f12f97b48b62aff009d  ../emulator/r49.zip" | sha256sum -c
+        unzip -p ../emulator/r49.zip rom.bin > ../emulator/rom.bin
+        echo "b81654cc8c87ed96e3ffc7c8e7c312c9f3b7b870c7bb34de61e61eac931b819a  ../emulator/rom.bin" | sha256sum -c

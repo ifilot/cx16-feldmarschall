@@ -39,6 +39,8 @@
 #define SCENE_ABOUT     5
 #define SCENE_GAME_SETTINGS 6
 #define SCENE_RESUME    7       // the play scene, continuing the saved game
+#define SCENE_DEMO      8       // two computer armies, spectator view
+#define SCENE_EXIT      9       // restore the text screen and return to BASIC
 #define SCENE_STAY      0xFF
 
 #define BUTTON_LEFT     0x01
@@ -47,6 +49,8 @@
 #define KEY_ESCAPE      0x1B
 #define KEY_UP          0x91
 #define KEY_DOWN        0x11
+#define KEY_LEFT        0x9D
+#define KEY_RIGHT       0x1D
 
 /* the input of the current frame, read by main() before each update */
 typedef struct {
@@ -55,6 +59,7 @@ typedef struct {
     uint8_t pressed;        // buttons pressed since the previous frame
     uint8_t key;            // key typed this frame, or 0
     uint16_t frame;         // frames since start
+    uint8_t pointer_active; // pointer moved/clicked this frame; keyboard wins ties
 } input_t;
 
 extern input_t input;

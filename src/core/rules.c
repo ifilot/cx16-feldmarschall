@@ -22,6 +22,9 @@
 
 #include <string.h>
 #include "rules.h"
+#ifdef AI_MEMORY
+#include "ai_memory.h"
+#endif
 #include "board.h"
 
 uint8_t game_rules;
@@ -142,6 +145,9 @@ uint8_t rules_apply(uint8_t from, uint8_t to) {
         if(outcome != BATTLE_ATTACKER) captured(a);
         if(outcome != BATTLE_DEFENDER) captured(d);
     }
+#ifdef AI_MEMORY
+    ai_memory_observe(from, to, outcome);
+#endif
     if(outcome == BATTLE_ATTACKER || outcome == BATTLE_QUIET) {
         board[to] = a | CELL_MOVED;
         rescued[to] = rescued[from];

@@ -93,7 +93,7 @@ def main():
             message = text(session, 57, 0, 37)
             assert 'SERGEANT' not in message and 'DEFENDER' in message, message
             # The defender token in the battle bar must be its hidden back.
-            hidden_tile = 206 + 12 * 25
+            hidden_tile = 206 + 13 * 25 + 12 * 25
             tile = read_vram(session, 0xC000 + 54 * 256 + 46 * 2, 2)
             assert tile[0] | ((tile[1] & 3) << 8) == hidden_tile
             session.emu.advance(310)
@@ -127,9 +127,9 @@ def main():
             new_match(session, '5')
             position(session, {10: 11, 99: 0xFF, 0: 0xFF, 1: 0x1B})
             drag(session, 10, 0)
-            assert text(session, 9) == 'YOU WIN', 'flag reaching enemy back row ends the game'
+            assert text(session, 42, 20, 40) == 'YOUR FLAG REACHED THE ENEMY BACK ROW', 'flag reaching enemy back row ends the game'
             choose(session, 'Return')
-            assert text(session, 20, 12, 24) == "1  ATTACKER'S ADVANTAGE"
+            assert text(session, 20, 12, 24) == "ATTACKER'S ADVANTAGE"
             assert read(session, 'game_rules', 1) == b'\x10', 'rematch retains session preferences'
             choose(session, 'Return')
             choose(session, 'Return')
@@ -141,7 +141,7 @@ def main():
             write(session, 'rules_lost', lost)
             drag(session, 10, 0)
             assert text(session, 9) == 'RESCUE A PIECE'
-            session.shot(ROOT / 'docs/rescue.png')
+            session.shot(ROOT / 'build/test-shots/rescue.png')
             click(session, 452, 172)  # Captured Marshal.
             click(session, *centre(60))
             assert board(session)[60] & 15 == 0 and not board(session)[60] & 0x10
@@ -167,7 +167,7 @@ def main():
             field_map = read_vram(session, 0x8000, 60 * 256)
             palette = read_vram(session, 0x1FA00, 512)
             choose(session, '2')
-            assert read_vram(session, 0x8000, 60 * 256) == (ROOT / 'src/MNMAP.BIN').read_bytes()
+            assert read_vram(session, 0x8000, 60 * 256) == field_map
             choose(session, 'Return')
             assert read_vram(session, 0x8000, 60 * 256) == field_map
             assert read_vram(session, 0x1FA00, 512) == palette

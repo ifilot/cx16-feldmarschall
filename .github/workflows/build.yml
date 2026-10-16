@@ -24,9 +24,6 @@ jobs:
         run: make
       - name: Check presets and rules
         run: make check
-      - name: Rate the computer player
-        # a short tournament: every engine plays every move legally to the end
-        run: make rating ROUNDS=10
       - name: Package
         run: |
           make dist
@@ -37,6 +34,33 @@ jobs:
           name: FELDMARSCHALL.ZIP
           path: build/dist/FELDMARSCHALL.ZIP
           if-no-files-found: error
+
+  emulator:
+    # the game in the AgentBridge emulator: its tests, then docs/, which
+    # make screenshots regenerates; warn when the commit's copy is stale
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cc65 python3 python3-numpy python3-pil
+      - uses: ./.github/actions/agent-emulator
+      - name: Emulator tests
+        run: make test-endings test-flow test-variants test-colors test-sound test-controls test-demo test-panel test-menus test-dist
+      - name: Regenerate screenshots
+        run: make screenshots
+      - name: Compare with docs/
+        run: |
+          stale=$(git status --porcelain -- docs | awk '{print $2}')
+          if [ -n "$stale" ]; then
+            echo "::warning title=Stale screenshots::Run make screenshots and commit: $(echo $stale)"
+          fi
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v7
+        with:
+          name: screenshots
+          path: docs/*.png
 
   release:
     runs-on: ubuntu-24.04

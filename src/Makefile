@@ -1,25 +1,26 @@
-CC=cl65
-CFLAGS?=-O -t cx16 -I . -I core -I ui -I scenes
+# The release builder owns the checked cc65 flags, 1 KB stack and explicit
+# bank-local runtime helper closure. No installed toolchain files are modified.
 PYTHON=python3
 SCRIPTS=../assets/scripts
-GFX_ASSETS=L0TILES.BIN L0MAP.BIN L1TILES.BIN SPRITES.BIN RANKTIL.BIN RANKSPR.BIN PALETTE.BIN MNTILES.BIN MNMAP.BIN MNL1TIL.BIN MN1MAP.BIN MNPAL.BIN SPLASH0.BIN SPLASH1.BIN SPLPAL.BIN gfx.h color_profiles.h
+GFX_ASSETS=L0TILES.BIN L0MAP.BIN L1TILES.BIN SPRITES.BIN RANKTIL.BIN RANKSPR.BIN PALETTE.BIN SPLTIL.BIN SPLMAP.BIN SPLPAL.BIN gfx.h color_profiles.h
 GFX_ASSETS+=$(foreach n,1 3,F$(n)TILES.BIN F$(n)MAP.BIN)
+GFX_ASSETS+=WINTIL.BIN WINMAP.BIN LOSSTIL.BIN LOSSMAP.BIN DRAWTIL.BIN DRAWMAP.BIN ENDPAL.BIN
 
 # core: game rules and the computer player, free of graphics
 # ui: VERA, the board view, the panel and other widgets
 # scenes: the screens of the game, run one at a time by main.c
 SRC=$(wildcard *.c core/*.c ui/*.c scenes/*.c)
-# the computer player alone, for tools/parity.py
-BRIDGE_SRC=bridge/bridge.c $(filter-out core/store.c core/presets.c,$(wildcard core/*.c))
+ASM=$(wildcard ui/*.s scenes/*.s)
+SOUND_ASSETS=$(notdir $(wildcard ../assets/sound/psg/*.ZSM)) SFX.BIN music.h sfx.h
 HDR=$(filter-out gfx.h color_profiles.h app_info.h,$(wildcard *.h core/*.h ui/*.h scenes/*.h))
 
-all: FELDMARS.PRG BRIDGE.PRG
+all: FELDMARS.PRG PLAY.BIN AI.BIN MISSION.BIN BELIEF.BIN ai-build.json
 
-FELDMARS.PRG: $(SRC) $(HDR) $(GFX_ASSETS) app_info.h
-	$(CC) $(CFLAGS) -o $@ -m FELDMARS.map -Ln FELDMARS.sym $(SRC)
+FELDMARS.PRG PLAY.BIN AI.BIN MISSION.BIN BELIEF.BIN ai-build.json &: $(SRC) $(ASM) $(HDR) $(GFX_ASSETS) $(SOUND_ASSETS) app_info.h feldmarschall.cfg vendor/zsmkit.lib vendor/zsmkit.inc ../ai-release/manifest.json ../ai-release/qualification.json ../tools/build_ai_release.py ../tools/ai_release.py
+	$(PYTHON) ../tools/build_ai_release.py --source . --output .
 
-BRIDGE.PRG: $(BRIDGE_SRC) $(wildcard core/*.h)
-	$(CC) -O -t cx16 -I core -o $@ $(BRIDGE_SRC)
+$(SOUND_ASSETS): %: ../assets/sound/psg/%
+	cp $< $@
 
 app_info.h: FORCE ../tools/build_info.py
 	$(PYTHON) ../tools/build_info.py $@
@@ -27,10 +28,10 @@ app_info.h: FORCE ../tools/build_info.py
 FORCE:
 
 # every graphics resource derives from the portraits, the font and the scripts
-$(GFX_ASSETS) &: $(wildcard $(SCRIPTS)/*.py) $(wildcard ../assets/pieces/*.png) $(wildcard ../assets/font/*.png) ../assets/splash/feldmarschall.png $(wildcard ../assets/menu/*.png)
+$(GFX_ASSETS) &: app_info.h $(wildcard $(SCRIPTS)/*.py) $(wildcard ../assets/pieces/*.png) $(wildcard ../assets/font/*.png) ../assets/splash/marshal.png $(wildcard ../assets/endings/*)
 	$(PYTHON) $(SCRIPTS)/build_graphics.py . ../build/preview
 
 clean:
-	rm -f *.o core/*.o ui/*.o scenes/*.o bridge/*.o *.PRG *.BIN *.map *.sym gfx.h color_profiles.h app_info.h
+	rm -f *.o core/*.o ui/*.o scenes/*.o *.PRG *.BIN *.ZSM *.map *.sym gfx.h color_profiles.h app_info.h music.h sfx.h ai-build.json
 
 .PHONY: all clean FORCE

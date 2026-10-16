@@ -1,0 +1,12 @@
+type: sfx
+title: battle_lost
+description: >
+  Your piece loses the battle: the bugle falls a minor third, over a dull thump.
+instruments: ../instruments.yaml
+parts:
+  call:  {instrument: bugle, voices: [12], level: 0.85}
+  thump: {instrument: thump, voices: [13], level: 0.9}
+sections:
+  main:
+    call:  "A4/8t F4/18t"
+    thump: "G2/8t E2/12t r/6t"

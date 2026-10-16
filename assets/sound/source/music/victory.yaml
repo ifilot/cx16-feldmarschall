@@ -1,0 +1,28 @@
+type: song
+title: Victory (jingle)
+description: >
+  About 6 s of hard-won victory for capturing the enemy flag (or leaving
+  Blue without a move): solemn rather than jubilant. Trumpet, horns and
+  trombones move from D minor through B-flat and A to a plain D-major
+  chord, over the tuba, a kettle-drum roll and one cymbal at the end.
+  Plays once (music priority 0).
+instruments: ../instruments.yaml
+tempo: 90            # quarter = 40 ticks, eighth = 20, 32nd = 5: exact grid
+meter: 4/4
+parts:
+  trumpet: {instrument: trumpet, voices: [0], level: 1.0}
+  horns:   {instrument: horn, voices: [1, 2], level: 1.2, pan: L}
+  bones:   {instrument: trombone, voices: [3, 4], level: 1.0, pan: R}
+  tuba:    {instrument: tuba, voices: [5], level: 1.0}
+  timp:    {instrument: timpani, voices: [6], level: 0.8}
+  cymbal:  {voices: [7], level: 1.0, kit: {c: {instrument: cymbal, note: C7}}}
+sections:
+  main:
+    trumpet: "| D5/4. D5/8 D5/4 C#5/4 | D5/1 |"
+    horns:   "| [F4 A4]/4. [F4 A4]/8 [F4 Bb4]/4 [E4 A4]/4 | [F#4 A4]/1 |"
+    bones:   "| [F3 A3]/2 [F3 Bb3]/4 [E3 A3]/4 | [F#3 A3]/1 |"
+    tuba:    "| D2/2 Bb2/4 A2/4 | D2/1 |"
+    timp:    "| D3/4 r/4 r/4 A2/4 | v=0.4 D3/32 D3 D3 D3 D3 D3 D3 D3 v=0.6 D3 D3 D3 D3 D3 D3 D3 D3 v=0.8 D3/4 r/4 |"
+    cymbal:  "| r/1 | c/2 r/2 |"
+arrangement: [main]
+loop: false

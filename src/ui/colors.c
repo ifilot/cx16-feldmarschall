@@ -106,6 +106,7 @@ void colors_apply(void) {
                 else if(row == 5) value = pieces[15];
                 else if(row == TEXT_UI_RED) value = ui[13];
             }
+            if(row == TOGGLE_PALETTE && index == 7) value = 0x2A4;
             VERA.data0 = (uint8_t)value;
             VERA.data0 = value >> 8;
         }

@@ -33,3 +33,6 @@ uint16_t random_next(void) {
     state ^= state << 8;
     return state;
 }
+#if defined(AI_TEST) || defined(AI_DIAGNOSTICS)
+uint16_t random_current(void) { return state; }
+#endif

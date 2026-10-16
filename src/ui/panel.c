@@ -186,7 +186,7 @@ void panel_bar(const char* line0, const char* line1) {
 void panel_battle(const char* heading, uint8_t red_piece, uint8_t blue_piece,
                   const char* result) {
     panel_bar(heading, result);
-    video_token(BAR_COL_RED, BAR_PIECE_ROW, red_piece, ARMY_RED);
+    video_token_plain(BAR_COL_RED, BAR_PIECE_ROW, red_piece, ARMY_RED);
     video_text(BAR_COL_VS, BAR_PIECE_ROW + 2, "VS", TEXT_INK);
-    video_token(BAR_COL_BLUE, BAR_PIECE_ROW, blue_piece, ARMY_BLUE);
+    video_token_plain(BAR_COL_BLUE, BAR_PIECE_ROW, blue_piece, ARMY_BLUE);
 }

@@ -80,7 +80,7 @@ def main():
     (output / 'game/manifest.json').write_text(json.dumps({'resources': sorted(resources)}, indent=2) + '\n')
     shutil.copy2(distribution, output / f'{NAME}.ZIP')
 
-    shutil.copy2(ROOT / 'assets/splash/feldmarschall.png', output / 'splash.png')
+    shutil.copy2(ROOT / 'build/preview/splash.png', output / 'splash.png')
     (output / 'screens').mkdir()
     for name in SCREENS:
         shutil.copy2(ROOT / 'docs' / name, output / 'screens' / name)

@@ -1,0 +1,12 @@
+type: sfx
+title: menu_select
+description: >
+  Menu entry chosen: a tiny two-note bugle rising a fifth.
+instruments: ../instruments.yaml
+parts:
+  call: {instrument: bugle, voices: [12], level: 0.8}
+  tap:  {instrument: tick, voices: [13], level: 0.6}
+sections:
+  main:
+    call: "D5/5t A5/10t"
+    tap:  "A5/4t r/11t"

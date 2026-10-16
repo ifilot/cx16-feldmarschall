@@ -1,0 +1,10 @@
+type: sfx
+title: menu_back
+description: >
+  Back / escape: the same bugle falling a fifth.
+instruments: ../instruments.yaml
+parts:
+  call: {instrument: bugle, voices: [12], level: 0.75}
+sections:
+  main:
+    call: "A5/5t D5/10t"

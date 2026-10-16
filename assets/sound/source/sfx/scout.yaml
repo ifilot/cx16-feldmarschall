@@ -1,0 +1,14 @@
+type: sfx
+title: scout
+description: >
+  A scout dashes several squares: a quick rising swish, then the token lands.
+instruments: ../instruments.yaml
+parts:
+  swish: {instrument: whoosh, voices: [12], level: 1.0}
+  body:  {instrument: knock, voices: [13], level: 0.9}
+  click: {instrument: clack, voices: [14], level: 0.8}
+sections:
+  main:
+    swish: "C6~C8/10t r/7t"
+    body:  "r/9t D4/8t"
+    click: "r/9t C6/8t"

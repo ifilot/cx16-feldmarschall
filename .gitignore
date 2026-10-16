@@ -3,12 +3,20 @@
 __pycache__/
 src/*.BIN
 src/*.PRG
+src/*.ZSM
+src/music.h
+src/sfx.h
 src/**/*.o
+tests/baselines/*.o
 src/*.map
 src/*.sym
 src/gfx.h
 src/color_profiles.h
 src/app_info.h
+src/ai-build.json
 src/COLORS.DAT
 src/DEPLOY.DAT
 src/GAME.DAT
+
+# artwork experiments belong in build/, not in the source tree
+/output/

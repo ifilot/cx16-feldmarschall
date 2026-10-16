@@ -1,8 +1,8 @@
 EMU ?= $(abspath ../x16-emulator/build/x16emu)
 ROM ?= $(abspath $(firstword $(wildcard ../emulator/rom.bin ../emulator-win/rom.bin) ../emulator/rom.bin))
-EMU_FLAGS ?= -scale 2
+EMU_FLAGS ?= -scale 2 -joy1
 
-.PHONY: all run dist site test-dist test-colors test-flow test-variants screenshot check autoplay native rating parity clean
+.PHONY: all run dist site test-dist test-colors test-flow test-variants test-endings test-sound test-controls test-demo test-panel test-menus screenshots check test-ai test-ai-levels autoplay native clean
 
 all:
 	$(MAKE) -C src
@@ -28,49 +28,73 @@ test-flow: all
 test-variants: all
 	python3 tools/test_variants.py
 
+# every way a game ends, through the developer scenarios (type DEV at the menu)
+test-endings: all
+	python3 tools/test_endings.py
+
+test-sound: all
+	python3 tools/test_sound.py
+
+test-menus: all
+	python3 tools/test_menus.py
+
+test-panel: all
+	python3 tools/test_panel.py
+
+test-demo: all
+	python3 tools/test_demo.py
+
+test-controls: all
+	python3 tools/test_controls.py
+
 run: all
 	cd src && "$(EMU)" -rom "$(ROM)" -prg FELDMARS.PRG -run $(EMU_FLAGS)
 
-screenshot: all
-	python3 tools/screenshot.py --emu "$(EMU)" --rom "$(ROM)" --keys "shot:docs/splash.png Return wait:120 move:150,236 wait:3 shot:docs/menu.png 1 wait:20 N wait:5 shot:docs/board-layout.png drag:452,172,196,356 drag:492,172,236,356 move:533,412 down move:300,322 wait:3 shot:docs/deploy-drag.png up wait:3 L wait:5 move:96,108 wait:5 shot:docs/deploy-load.png down wait:2 up wait:5 S wait:5 $(foreach i,1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16,Backspace) M Y Space F O R T wait:3 shot:docs/deploy-save.png Escape wait:5" --out build/screenshot.png
-	python3 tools/autoplay.py --emu "$(EMU)" --rom "$(ROM)" --turns 14 --seed 3 --out docs/play.png
+# regenerate every screenshot in docs/; About shows the date of the last commit
+screenshots: export SOURCE_DATE_EPOCH := $(shell git log -1 --format=%ct 2>/dev/null)
+screenshots: all
+	python3 tools/screenshots.py --emu "$(EMU)" --rom "$(ROM)"
 
-# the computer player as a native program speaking docs/protocol.md
+# The game consumes one qualified release. Research and tournaments live in
+# the independent feldmarschall-ai repository.
+PYTHON ?= python3
 HOSTCC ?= gcc
-CORE_NATIVE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai.c)
+AI_ID := $(shell $(PYTHON) -c 'import json; print(json.load(open("ai-release/manifest.json"))["id"])')
+AI_NATIVE_FLAGS := $(shell $(PYTHON) -c 'import json; print(" ".join("-D"+f for f in json.load(open("ai-release/manifest.json"))["policy"]["defines"]))')
+CORE = $(addprefix src/core/,pieces.c board.c rules.c setup.c random.c ai_deploy.c ai.c ai_level.c ai_mission.c ai_memory.c ai_student.c ai_template.c)
+NATIVE_FLAGS = -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow $(AI_NATIVE_FLAGS) -Isrc/core
 
-native: build/feldmarschall-engine
-
-build/feldmarschall-engine: src/native/engine.c $(CORE_NATIVE) $(wildcard src/core/*.h)
+.PHONY: native check test-ai test-ai-levels test-ai-release verify-ai-release clean
+verify-ai-release:
+	$(PYTHON) tools/ai_release.py verify
+native: verify-ai-release build/feldmarschall-engine
+build/feldmarschall-engine: Makefile src/native/engine.c $(CORE) $(wildcard src/core/*.h) ai-release/manifest.json
 	mkdir -p build
-	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Wno-format-overflow -Isrc/core -o $@ src/native/engine.c $(CORE_NATIVE)
+	$(HOSTCC) $(NATIVE_FLAGS) -DFELDMARSCHALL_AI_ID='"$(AI_ID)"' -o $@ src/native/engine.c $(CORE)
 
-# Elo ratings of the computer player against the baseline bots
-ROUNDS ?= 100
-rating: native
-	rm -f build/results.jsonl
-	python3 tools/arena.py --rounds $(ROUNDS) --engine ai=build/feldmarschall-engine \
-		--engine greedy="python3 tools/bots.py greedy" --engine random="python3 tools/bots.py random"
-	python3 tools/rating.py
-
-# the X16 build chooses the same moves as the native build
-parity: all native
-	python3 tools/parity.py --emu "$(EMU)" --rom "$(ROM)" --positions 500
-
-# the built-in deployments are legal armies, and the rules behave
-check: build/rules-test
-	python3 tools/check_presets.py
+check: verify-ai-release build/rules-test build/native-info-test
+	$(PYTHON) tools/check_presets.py
 	build/rules-test
+	build/native-info-test
+	$(PYTHON) tools/test_ai_release.py
+	$(PYTHON) tools/test_ai_release_import.py
 
-build/rules-test: tests/rules_test.c src/core/rules.c src/core/board.c src/core/pieces.c src/core/ai.c src/core/random.c $(wildcard src/core/*.h)
+test-ai test-ai-release: verify-ai-release
+	$(PYTHON) tools/test_ai_release.py
+	$(PYTHON) tools/test_ai_release_import.py
+
+test-ai-levels: all
+	$(PYTHON) tools/test_ai_levels.py
+
+build/native-info-test: Makefile tests/native_info_test.c src/native/engine.c $(CORE) $(wildcard src/core/*.h) ai-release/manifest.json
 	mkdir -p build
-	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Isrc/core -o $@ tests/rules_test.c \
-		src/core/rules.c src/core/board.c src/core/pieces.c src/core/ai.c src/core/random.c
+	$(HOSTCC) $(NATIVE_FLAGS) -o $@ tests/native_info_test.c $(CORE)
+build/rules-test: Makefile tests/rules_test.c src/core/rules.c src/core/board.c src/core/pieces.c src/core/ai.c src/core/ai_level.c src/core/random.c $(wildcard src/core/*.h)
+	mkdir -p build
+	$(HOSTCC) -O2 -std=c99 -Wall -Wno-unknown-pragmas -Isrc/core -o $@ tests/rules_test.c src/core/rules.c src/core/board.c src/core/pieces.c src/core/ai.c src/core/ai_level.c src/core/random.c
 
-# a long game of random red moves against the computer
 autoplay: all
-	python3 tools/autoplay.py --emu "$(EMU)" --rom "$(ROM)" --turns 150
-
+	$(PYTHON) tools/autoplay.py --emu "$(EMU)" --rom "$(ROM)" --turns 150
 clean:
 	$(MAKE) -C src clean
 	rm -rf build tools/__pycache__ assets/scripts/__pycache__

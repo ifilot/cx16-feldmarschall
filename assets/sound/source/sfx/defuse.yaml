@@ -1,0 +1,12 @@
+type: sfx
+title: defuse
+description: >
+  A miner defuses a bomb: two careful snips, then a small clear bell.
+instruments: ../instruments.yaml
+parts:
+  snip: {instrument: tick, voices: [12], level: 0.8}
+  bell: {instrument: bell, voices: [13], level: 0.8}
+sections:
+  main:
+    snip: "C6/3t r/5t E6/3t r/5t r/24t"
+    bell: "r/16t A5/24t"

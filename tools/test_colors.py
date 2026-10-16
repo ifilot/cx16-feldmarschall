@@ -1,7 +1,8 @@
 """Exercise independent color profiles, controls, sprites and saved preferences.
 
 Run after make. Tests use a temporary runtime directory, preserving the
-player's COLORS.DAT and DEPLOY.DAT, and capture docs/options.png.
+player's COLORS.DAT and DEPLOY.DAT. Captures go to build/test-shots/;
+tools/screenshots.py owns docs/.
 """
 import shutil
 import sys
@@ -90,7 +91,7 @@ def check_field_offsets(session):
 
 
 def main():
-    output = ROOT / 'output/style-studies'
+    output = ROOT / 'build/test-shots/appearance-profiles'
     output.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='feldmarschall-appearance-') as tmp:
         directory = Path(tmp)
@@ -144,7 +145,7 @@ def main():
             click(session, 500, 384)  # Classic numbering
             check_art(session, 3)
             session.move_mouse(420, 420)
-            session.shot(ROOT / 'docs/options.png')
+            session.shot(ROOT / 'build/test-shots/options.png')
             click(session, 476, 440)
             assert (directory / 'COLORS.DAT').read_bytes() == b'CLR6\x03\x04\x00\xa2'
             choose(session, '1')

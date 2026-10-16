@@ -1,0 +1,10 @@
+type: sfx
+title: cancel
+description: >
+  A token dropped nowhere slides back where it came from: two soft falling ticks.
+instruments: ../instruments.yaml
+parts:
+  tick: {instrument: tick, voices: [12], level: 0.7}
+sections:
+  main:
+    tick: "G4/4t r/2t D4/6t"

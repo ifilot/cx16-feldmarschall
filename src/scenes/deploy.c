@@ -30,6 +30,7 @@
 #include "boardview.h"
 #include "button.h"
 #include "drag.h"
+#include "sound.h"
 #include "panel.h"
 #include "video.h"
 
@@ -185,6 +186,7 @@ static void show(void) {
 /* ------------------------------------------------------------ dragging */
 
 static void pick_up(uint8_t spot) {
+    sound_sfx(SFX_PICKUP);
     if(spot & SPOT_TRAY) {
         held = panel_tray_take(spot & ~SPOT_TRAY);
     } else {
@@ -200,6 +202,8 @@ static void pick_up(uint8_t spot) {
 static void drop(uint8_t target) {
     uint8_t occupant, was_complete = complete();
 
+    sound_sfx(target == NOWHERE || target == from ? SFX_CANCEL :
+              target & SPOT_TRAY ? SFX_TRAY : SFX_DROP);
     if(target == NOWHERE) target = from;            // back where it came from
     if(target != from) edited();
     if(target & SPOT_TRAY) {
@@ -230,14 +234,16 @@ static void drop(uint8_t target) {
 /* ------------------------------------------------------------ actions */
 
 static uint8_t act(uint8_t button) {
-    if(!enabled(button)) return SCENE_STAY;
+    if(!enabled(button)) { sound_sfx(SFX_ERROR); return SCENE_STAY; }
     switch(button) {
         case BUTTON_NEW:
+            sound_sfx(SFX_MENU_SELECT);
             edited();
             memset(board + RED_HOME0, CELL_EMPTY, ARMY_SIZE);
             show();
             break;
         case BUTTON_RANDOM:
+            sound_sfx(SFX_RANDOM);
             edited();
             setup_random(0);
             show();
@@ -273,7 +279,7 @@ void deploy_enter(uint8_t playing) {
     labels[BUTTON_START] = for_play ? "START" : "BACK";
     view_show_all = 0;
     board_clear();
-    if(for_play) setup_random(1);   // show the opponent only when preparing a match
+    if(for_play) setup_ai(1);       // show the opponent only when preparing a match
     setup_load();                   // and whatever the player deployed before
     store_read();                   // the player's saved deployments
     held = CELL_EMPTY;
@@ -302,7 +308,10 @@ uint8_t deploy_update(void) {
         return SCENE_STAY;
     }
 
-    if(key == KEY_ESCAPE) return for_play ? SCENE_GAME_SETTINGS : SCENE_MENU;
+    if(key == KEY_ESCAPE) {
+        sound_sfx(SFX_MENU_BACK);
+        return for_play ? SCENE_GAME_SETTINGS : SCENE_MENU;
+    }
     if(key >= 0xC1 && key <= 0xDA) key -= 0x80;    // shifted letters
     for(button=0; button<BUTTONS; button++) {
         if(key && key == keys[button]) return act(button);
@@ -314,7 +323,7 @@ uint8_t deploy_update(void) {
         if(spot != NOWHERE) draw_button(spot);
         if(button != NOWHERE) draw_button(button);
     }
-    if((input.pressed & BUTTON_LEFT) && button != NOWHERE) return act(button);
+    if(input.pointer_active && (input.pressed & BUTTON_LEFT) && button != NOWHERE) return act(button);
 
     spot = spot_at(input.x, input.y);
     if(!movable(spot)) spot = NOWHERE;
@@ -322,6 +331,6 @@ uint8_t deploy_update(void) {
         mark(spot);
         panel_selected(spot == NOWHERE ? CELL_EMPTY : spot_cell(spot));
     }
-    if((input.pressed & BUTTON_LEFT) && spot != NOWHERE) pick_up(spot);
+    if(input.pointer_active && (input.pressed & BUTTON_LEFT) && spot != NOWHERE) pick_up(spot);
     return SCENE_STAY;
 }

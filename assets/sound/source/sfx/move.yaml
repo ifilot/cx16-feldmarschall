@@ -1,0 +1,14 @@
+type: sfx
+title: move
+description: >
+  A token moves on the battlefield: a firm wooden tock with a low thump. The project also builds MOVE_CPU, a little lower, for Blue's reply.
+instruments: ../instruments.yaml
+parts:
+  body:  {instrument: knock, voices: [12], level: 0.8}
+  click: {instrument: clack, voices: [13], level: 0.9}
+  thump: {instrument: thump, voices: [14], level: 0.65}
+sections:
+  main:
+    body:  "D4/8t"
+    click: "C6/8t"
+    thump: "G2/8t"

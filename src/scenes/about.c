@@ -41,7 +41,7 @@ void about_enter(void) {
     info(PLATE_ROW + 23, "COMPILATION DATE", APP_COMPILED);
     hovered = 0;
     button_draw(BACK_COL, BACK_ROW, "BACK", BUTTON_NORMAL);
-    panel_bar("ENTER, ESCAPE OR BACK: RETURN TO MENU", "");
+    panel_bar("", "");
 }
 
 uint8_t about_update(void) {
@@ -50,7 +50,7 @@ uint8_t about_update(void) {
         hovered = hover;
         button_draw(BACK_COL, BACK_ROW, "BACK", hover ? BUTTON_HOVER : BUTTON_NORMAL);
     }
-    if(input.key == KEY_RETURN || input.key == KEY_ESCAPE || (hover && (input.pressed & BUTTON_LEFT))) {
+    if(input.key == KEY_RETURN || input.key == KEY_ESCAPE || (input.pointer_active && hover && (input.pressed & BUTTON_LEFT))) {
         return SCENE_MENU;
     }
     return SCENE_STAY;

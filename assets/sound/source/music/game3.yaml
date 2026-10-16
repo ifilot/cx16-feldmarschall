@@ -1,0 +1,86 @@
+type: song
+title: Schlachtfeld (in game 3)
+description: >
+  Hold the line: a broad A-minor battle hymn, 4/4 at 112.5, over racing
+  low strings in sixteenths. The horns sing a long heroic tune in octaves
+  (Am, F, C, G, Am, F, Dm, E) over trombones, high held strings and
+  pounding timpani and drums. A2: the trumpet soars above it. B: the
+  trumpet leads through F, G, Em, Am to E, which drops back into A minor.
+instruments: ../instruments.yaml
+tempo: 112.5         # quarter = 32 ticks, eighth = 16, sixteenth = 8: exact grid
+meter: 4/4
+budget: 32768
+
+parts:
+  trumpet: {instrument: trumpet, voices: [0], level: 0.9}
+  horn1:   {instrument: horn, voices: [1], level: 1.2, pan: L}
+  horn2:   {instrument: horn, voices: [2], octave: -1, level: 1.0, pan: R}
+  bones:   {instrument: trombone, voices: [3, 4], level: 0.8}
+  lo:      {instrument: spiccato, voices: [5], level: 0.85}
+  pad:     {instrument: strings, voices: [6, 7], level: 0.9, pan: R}
+  timp:    {instrument: timpani, voices: [8], level: 0.7}
+  snare:   {voices: [9], level: 0.6, pan: R, kit: {s: {instrument: snare, note: C6}}}
+  drums:   {voices: [10], level: 0.6, kit: {b: {instrument: bassdrum, note: D2}, c: {instrument: cymbal, note: C7}}}
+
+patterns:
+  # racing low strings: sixteenths, accent on every beat
+  rA: "A2/16> A2 A2 A2 A2/16> A2 A2 A2 A2/16> A2 A2 A2 A2/16> A2 A2 A2"
+  rF: "F2/16> F2 F2 F2 F2/16> F2 F2 F2 F2/16> F2 F2 F2 F2/16> F2 F2 F2"
+  rC: "C3/16> C3 C3 C3 C3/16> C3 C3 C3 C3/16> C3 C3 C3 C3/16> C3 C3 C3"
+  rG: "G2/16> G2 G2 G2 G2/16> G2 G2 G2 G2/16> G2 G2 G2 G2/16> G2 G2 G2"
+  rD: "D3/16> D3 D3 D3 D3/16> D3 D3 D3 D3/16> D3 D3 D3 D3/16> D3 D3 D3"
+  rE: "E2/16> E2 E2 E2 E2/16> E2 E2 E2 E2/16> E2 E2 E2 E2/16> E2 E2 E2"
+  tA: "A2/4 r/8 A2/8 E3/4 r/4"
+  tF: "F2/4 r/8 F2/8 C3/4 r/4"
+  tC: "C3/4 r/8 C3/8 G2/4 r/4"
+  tG: "G2/4 r/8 G2/8 D3/4 r/4"
+  tD: "D3/4 r/8 D3/8 A2/4 r/4"
+  tE: "E3/4 r/8 E3/8 B2/4 r/4"
+  sBar: "r/4 s/4 r/4 s/4"
+  sFill: "r/4 s/4 v=0.5 s/16 s s s v=0.8 s s s s v=1"
+  snare8: "| @sBar | @sBar | @sBar | @sFill | @sBar | @sBar | @sBar | @sFill |"
+  boom: "b/4 r/8 b/8 b/4 b/4"
+  crash: "c/4 r/8 b/8 b/4 b/4"
+  drums8: "| @crash | @boom | @boom | @boom | @crash | @boom | @boom | @boom |"
+
+  theme: "| E4/2. A4/4 | C5/2 A4/2 | G4/2. E4/4 | D4/2 B3/2 | C4/4 D4/4 E4/2 | F4/2 A4/2 | F4/4 E4/4 D4/2 | E4/1 |"
+  loA:   "| @rA | @rF | @rC | @rG | @rA | @rF | @rD | @rE |"
+  bonesA: "| [E3 A3]/1 | [F3 C4]/1 | [G3 C4]/1 | [G3 B3]/1 | [E3 A3]/1 | [F3 C4]/1 | [F3 A3]/1 | [G#3 B3]/1 |"
+  padA:  "| [C5 E5]/1 | [C5 F5]/1 | [C5 E5]/1 | [B4 D5]/1 | [C5 E5]/1 | [C5 F5]/1 | [D5 F5]/1 | [B4 E5]/1 |"
+  timpA: "| @tA | @tF | @tC | @tG | @tA | @tF | @tD | @tE |"
+
+sections:
+  A:
+    horn1: "@theme"
+    horn2: "@theme"
+    bones: "@bonesA"
+    lo:    "@loA"
+    pad:   "v=0.6 @padA"
+    timp:  "@timpA"
+    snare: "@snare8"
+    drums: "@drums8"
+
+  A2:
+    trumpet: "| A5/1 | C6/2 A5/2 | G5/1 | B5/1 | E5/2 G5/2 | A5/1 | F5/2 D5/2 | E5/1 |"
+    horn1:   "@theme"
+    horn2:   "@theme"
+    bones:   "@bonesA"
+    lo:      "@loA"
+    pad:     "@padA"
+    timp:    "@timpA"
+    snare:   "@snare8"
+    drums:   "| @crash | @boom | @crash | @boom | @crash | @boom | @crash | @boom |"
+
+  B:
+    trumpet: "| A4/2 C5/2 | D5/2 B4/2 | G4/2 B4/4 E5/4 | E5/2 C5/2 | A4/2 C5/4 F5/4 | D5/2. B4/4 | G#4/2 B4/2 | E5/1 |"
+    horn1:   "| F4/1 | G4/1 | E4/1 | E4/1 | F4/1 | G4/1 | E4/1 | E4/1 |"
+    horn2:   "| F4/1 | G4/1 | E4/1 | E4/1 | F4/1 | G4/1 | E4/1 | E4/1 |"
+    bones:   "| [F3 C4]/1 | [G3 B3]/1 | [G3 B3]/1 | [E3 A3]/1 | [F3 C4]/1 | [G3 D4]/1 | [G#3 B3]/1 | [G#3 D4]/1 |"
+    lo:      "| @rF | @rG | @rE | @rA | @rF | @rG | @rE | @rE |"
+    pad:     "| [C5 F5]/1 | [B4 D5]/1 | [B4 E5]/1 | [C5 E5]/1 | [C5 F5]/1 | [B4 D5]/1 | [B4 E5]/1 | [B4 D5]/1 |"
+    timp:    "| @tF | @tG | @tE | @tA | @tF | @tG | @tE | v=0.5 E3/16 E3 E3 E3 v=0.7 E3 E3 E3 E3 v=0.9 E3 E3 E3 E3 v=1 E3/4 |"
+    snare:   "@snare8"
+    drums:   "@drums8"
+
+arrangement: [A, A2, B]
+loop: A

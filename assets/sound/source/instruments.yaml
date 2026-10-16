@@ -1,0 +1,322 @@
+# Feldmarschall instrument library (VERA PSG): a Prussian field band of the
+# Frederician / Napoleonic era. Fifes, natural trumpet, horns, oboes,
+# clarinet, bassoon, a few strings and the field drums, plus wooden tokens,
+# steel and powder for the board effects.
+# Time values are ticks (1/60 s). Levels are linear amplitude 0..1.
+# See docs/FORMAT.md for every field.
+
+instruments:
+
+  # --- winds and brass ------------------------------------------------------
+
+  fife:
+    description: Military fife. High triangle with a quick breathy onset and a fast, narrow vibrato.
+    wave: triangle
+    width: 63
+    env: {a: 2, d: 20, s: 0.85, r: 6}
+    env_rate: 2
+    vibrato: {depth: 0.14, period: 10, delay: 14, ramp: 10}
+    scoop: {from: -1.0, ticks: 4}
+    gate: 0.92
+    level: 0.9
+    range: [C5, D7]
+
+  flute:
+    description: Transverse flute for the quiet loops. Softer than the fife, slower delayed vibrato.
+    wave: triangle
+    width: 63
+    env: {a: 5, d: 30, s: 0.8, r: 12}
+    env_rate: 2
+    vibrato: {depth: 0.15, period: 18, delay: 24, ramp: 24}
+    scoop: {from: -1.0, ticks: 6}
+    gate: 0.94
+    level: 1.0
+    range: [C4, D7]
+
+  oboe:
+    description: Hautbois. Thin reedy pulse, slightly brighter at the attack, with delayed vibrato.
+    wave: pulse
+    width: 14
+    width_env: {from: 20, to: 13, ticks: 10}
+    env: {a: 3, d: 30, s: 0.7, r: 8}
+    env_rate: 2
+    vibrato: {depth: 0.12, period: 14, delay: 20, ramp: 16}
+    scoop: {from: -0.8, ticks: 5}
+    gate: 0.94
+    level: 0.42
+    range: [C4, G6]
+
+  clarinet:
+    description: Clarinet / chalumeau. Square pulse (hollow, woody), soft attack, steady hold.
+    wave: pulse
+    width: 63
+    env: {a: 4, d: 30, s: 0.75, r: 10}
+    env_rate: 2
+    vibrato: {depth: 0.08, period: 18, delay: 30, ramp: 20}
+    gate: 0.95
+    level: 0.38
+    range: [E3, C6]
+
+  trumpet:
+    description: Natural trumpet. Bright saw with a crisp attack settling to a held level.
+    wave: saw
+    width: 63
+    env: {a: 1, d: 16, s: 0.7, r: 8}
+    env_rate: 2
+    vibrato: {depth: 0.1, period: 14, delay: 24, ramp: 16}
+    scoop: {from: -0.6, ticks: 4}
+    gate: 0.9
+    level: 0.62
+    range: [G3, D6]
+
+  horn:
+    description: Hunting / field horn. Hollow wide pulse with a soft swell; good for calls and held chords.
+    wave: pulse
+    width: 50
+    width_env: {from: 60, to: 44, ticks: 12}
+    env: {a: 4, d: 24, s: 0.7, r: 10}
+    env_rate: 2
+    vibrato: {depth: 0.1, period: 16, delay: 24, ramp: 12}
+    level: 0.4
+    range: [A2, B5]
+
+  trombone:
+    description: Low brass (trombones / sackbut) for grave chords. Saw with a soft tongued attack, held, slightly dark.
+    wave: saw
+    width: 63
+    env: {a: 3, d: 30, s: 0.7, r: 10}
+    env_rate: 3
+    level: 0.42
+    range: [E2, F4]
+
+  afterbeat:
+    description: >
+      Horns for the march "pah" on the afterbeats. Same hollow pulse as the
+      horn but without its brightness sweep or vibrato, and with slower
+      envelope updates, so short repeated chords stay cheap.
+    wave: pulse
+    width: 48
+    env: {a: 1, d: 12, s: 0.55, r: 6}
+    env_rate: 3
+    level: 0.4
+    range: [C3, C5]
+
+  bassoon:
+    description: Bassoon. Nasal pulse in the low register, short attack, held.
+    wave: pulse
+    width: 26
+    env: {a: 2, d: 30, s: 0.6, r: 8}
+    env_rate: 2
+    gate: 0.9
+    level: 0.4
+    range: [Bb1, E4]
+
+  tuba:
+    description: Round brass bass for the march (serpent / bass horn). Triangle with a tiny lip scoop.
+    wave: triangle
+    width: 63
+    pitch_env: {from: -0.4, ticks: 3}
+    env: {a: 1, d: 24, s: 0.6, r: 8}
+    env_rate: 2
+    gate: 0.8
+    level: 1.0
+    range: [C2, D4]
+
+  # --- strings -----------------------------------------------------------------
+
+  strings:
+    description: Soft string section for held chords. Slow swell and release, slow pulse-width drift.
+    wave: pulse
+    width: 44
+    pwm: {min: 38, max: 52, period: 280}
+    env: {a: 30, d: 0, s: 1.0, r: 40}
+    env_rate: 3
+    level: 0.18
+    range: [D3, A5]
+
+  spiccato:
+    description: >
+      Short bowed strings for driving battle ostinatos (repeated 8ths and
+      16ths). Saw with an instant attack that drops to a low hold, so fast
+      repeated notes stay crisp; accents (>) make the pulse.
+    wave: saw
+    width: 63
+    env: {a: 0, d: 8, s: 0.35, r: 4}
+    env_rate: 2
+    gate: 0.75
+    level: 0.36
+    range: [C2, C6]
+
+  cello:
+    description: Bowed cello / bass. Triangle with a short bow onset settling to a held level.
+    wave: triangle
+    width: 63
+    env: {a: 3, d: 40, s: 0.6, r: 14}
+    env_rate: 2
+    vibrato: {depth: 0.1, period: 18, delay: 30, ramp: 30}
+    level: 0.95
+    range: [C2, D4]
+
+  pizz:
+    description: Pizzicato bass. Round triangle pluck that dies away.
+    wave: triangle
+    width: 63
+    pitch_env: {from: 0.3, ticks: 2}
+    env: {a: 0, d: 30, s: 0, r: 6}
+    env_rate: 2
+    level: 0.95
+    range: [C2, D4]
+
+  harp:
+    description: Field-camp guitar / harp pluck for arpeggios. Thin pulse that closes and decays.
+    wave: pulse
+    width: 18
+    width_env: {from: 30, to: 12, ticks: 10}
+    env: {a: 0, d: 45, s: 0, r: 10}
+    env_rate: 2
+    level: 0.4
+    range: [C3, C6]
+
+  # --- percussion --------------------------------------------------------------
+
+  snare:
+    description: Rope-tensioned field drum. Short noise burst; fast /32 notes make a roll.
+    wave: noise
+    env: {a: 0, d: 8, s: 0, r: 0}
+    level: 0.32
+
+  muffled:
+    description: Field drum with a cloth over it (funeral, distant). Darker, shorter, quieter.
+    wave: noise
+    env: {a: 0, d: 5, s: 0, r: 0}
+    level: 0.22
+
+  bassdrum:
+    description: Big military bass drum. Low triangle thump with a pitch drop.
+    wave: triangle
+    width: 63
+    pitch_env: {from: 10, ticks: 4}
+    env: {a: 0, d: 14, s: 0, r: 2}
+    env_rate: 2
+    level: 1.0
+
+  timpani:
+    description: Kettle drum. Triangle with a short downward pitch thump and a ringing decay.
+    wave: triangle
+    width: 63
+    pitch_env: {from: 3, ticks: 4}
+    env: {a: 0, d: 45, s: 0, r: 10}
+    env_rate: 2
+    level: 1.0
+    range: [F2, F3]
+
+  cymbal:
+    description: Clash cymbal for the victory jingle. Long bright noise wash.
+    wave: noise
+    env: {a: 0, d: 50, s: 0, r: 10}
+    env_rate: 2
+    level: 0.18
+
+  plate:
+    description: Band cymbals struck with the bass drum in a march. Short bright noise, choked quickly.
+    wave: noise
+    env: {a: 0, d: 14, s: 0, r: 2}
+    level: 0.12
+
+  # --- sound effects -------------------------------------------------------
+
+  knock:
+    description: >
+      Rounded wooden "tock" of a token meeting the board. Body snaps down an
+      octave in 2 ticks and rings ~110 ms. Layer with thump (weight) and clack
+      (contact). Pitch it around C4-F4.
+    wave: triangle
+    width: 63
+    pitch_env: {from: 12, ticks: 2}
+    env: {a: 0, d: 7, s: 0, r: 0}
+    level: 0.9
+
+  thump:
+    description: Deep, short board resonance under the knock (around G2). Gives the hit its weight.
+    wave: triangle
+    width: 63
+    pitch_env: {from: 12, ticks: 3}
+    env: {a: 0, d: 8, s: 0, r: 0}
+    level: 1.0
+
+  clack:
+    description: One-tick noise burst for the contact. Around C6 soft, C7 sharp.
+    wave: noise
+    env: {a: 0, d: 1, s: 0, r: 0}
+    level: 0.4
+
+  tick:
+    description: Very short soft wooden tick for hovering and typing.
+    wave: triangle
+    width: 63
+    pitch_env: {from: 7, ticks: 2}
+    env: {a: 0, d: 5, s: 0, r: 0}
+    level: 0.6
+
+  steel:
+    description: >
+      Blade ring. Square pulse with a fast decay; two voices a tritone or
+      minor ninth apart give the inharmonic clang of steel on steel.
+    wave: pulse
+    width: 30
+    env: {a: 0, d: 16, s: 0, r: 4}
+    level: 0.35
+
+  scrape:
+    description: Steel scrape. Noise whose pitch glide makes the swish of a drawn sabre.
+    wave: noise
+    env: {a: 1, d: 10, s: 0, r: 2}
+    level: 0.35
+
+  powder:
+    description: Gunpowder blast. Noise held briefly, then a long decay; glide its pitch down for the boom.
+    wave: noise
+    env: {a: 0, d: 40, s: 0, r: 6}
+    level: 0.75
+
+  rumble:
+    description: Low triangle under the blast; glide it down for the ground shaking.
+    wave: triangle
+    width: 63
+    env: {a: 0, d: 36, s: 0, r: 6}
+    level: 1.0
+
+  whoosh:
+    description: Airy swish for a token flying or a scout dashing. Soft attack noise.
+    wave: noise
+    env: {a: 3, d: 8, s: 0, r: 2}
+    level: 0.25
+
+  bugle:
+    description: Signal bugle for calls (start, turn). Saw with a soft lip and quick decay.
+    wave: saw
+    width: 63
+    env: {a: 1, d: 14, s: 0.6, r: 6}
+    scoop: {from: -0.6, ticks: 3}
+    level: 0.45
+
+  bell:
+    description: Small clear bell for confirmations (defused, saved).
+    wave: triangle
+    width: 63
+    env: {a: 0, d: 50, s: 0, r: 10}
+    level: 0.75
+
+  thud:
+    description: Muted low knock for refusals (illegal drop, errors).
+    wave: pulse
+    width: 40
+    pitch_env: {from: 3, ticks: 3}
+    env: {a: 0, d: 10, s: 0, r: 0}
+    level: 0.5
+
+  rustle:
+    description: Paper rustle (orders, maps, dialogs). Short noise; glide the pitch to move its brightness.
+    wave: noise
+    env: {a: 2, d: 7, s: 0, r: 0}
+    level: 0.5

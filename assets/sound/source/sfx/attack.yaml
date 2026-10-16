@@ -1,0 +1,16 @@
+type: sfx
+title: attack
+description: >
+  A battle starts (both tokens turn face up): sabres meet. Two pulses a tritone apart ring like steel, over a sharp crack and a scrape.
+instruments: ../instruments.yaml
+parts:
+  blade1: {instrument: steel, voices: [12], level: 1.0}
+  blade2: {instrument: steel, voices: [13], level: 0.8}
+  crack:  {instrument: clack, voices: [14], level: 1.0}
+  scrape: {instrument: scrape, voices: [15], level: 0.9}
+sections:
+  main:
+    blade1: "A6/14t"
+    blade2: "D#7/14t"
+    crack:  "C7/3t r/11t"
+    scrape: "r/2t C7~C8/10t r/2t"

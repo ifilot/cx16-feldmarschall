@@ -5,12 +5,14 @@ Usage:
 
 Writes build/dist/FELDMARSCHALL/ and build/dist/FELDMARSCHALL.ZIP. The runtime files
 are the game itself, a copy named AUTOBOOT.X16 that the X16 starts on
-power-up, and every file the game loads into VRAM (found in the load_vram
-calls of src/ui/video.c, so a new resource cannot be forgotten). The test
-programs (BRIDGE.PRG), saved deployments (DEPLOY.DAT), the saved game
+power-up, every file loaded into VRAM, and the banked code/music/effects
+declared in src/ui/sound.c. The test
+programs, saved deployments (DEPLOY.DAT), the saved game
 (GAME.DAT) and appearance preferences (COLORS.DAT) stay out. Entries carry a fixed date, so the same build gives the same ZIP.
 """
 import hashlib
+import argparse
+import json
 import re
 import shutil
 from pathlib import Path
@@ -20,9 +22,19 @@ ROOT = Path(__file__).resolve().parents[1]
 NAME = 'FELDMARSCHALL'
 
 
-def runtime_files():
+def runtime_files(runtime=None):
+    runtime = ROOT/'src' if runtime is None else Path(runtime)
     video = (ROOT / 'src/ui/video.c').read_text()
     resources = re.findall(r'load_vram\("([A-Z0-9]+\.[A-Z0-9]+)"', video)
+    sound = (ROOT / 'src/ui/sound.c').read_text()
+    sound = re.sub(r'"\s+"', '', sound)
+    resources += re.findall(r'"([A-Z0-9]+\.(?:BIN|ZSM))"', sound)
+    receipt = runtime/'ai-build.json'
+    if (ROOT/'ai-release/manifest.json').exists():
+        assert receipt.exists(), 'AI build receipt missing: rebuild the pinned release'
+    inference = receipt.exists() and 'AI_TEMPLATE_PRIOR_Q24' in json.loads(receipt.read_text())['defines']
+    if not inference:
+        resources = [name for name in resources if name != 'BELIEF.BIN']
     assert resources, 'no load_vram calls found in src/ui/video.c'
     return ['FELDMARS.PRG'] + list(dict.fromkeys(resources))
 
@@ -40,13 +52,17 @@ FELDMARS.PRG and run it.
 Emulator: x16emu -prg FELDMARS.PRG -run
 
 Press Enter at the splash screen to open the menu.
-Choose 1 MANAGE SETUPS to create, load or save army arrangements; Back
-returns to the menu. Choose 2 PLAY AGAINST THE COMPUTER to deploy your
+Choose 1 SETUPS to create, load or save army arrangements; Back
+returns to the menu. Choose 2 SKIRMISH to select your
 game rules, then deploy your army before a match. Start is enabled when all 40 pieces are on the board.
-Choose 3 CONTINUE SAVED GAME to resume the game saved in GAME.DAT.
+Choose 3 LOAD GAME to resume the game saved in GAME.DAT.
+Choose 6 DEMO to watch two computer armies battle with different random
+setups. Menu pauses and offers separate music/effects toggles; demos cannot save.
+New game at the result starts another demo.
 Choose 4 OPTIONS to select field styles, army colors and rank numbers
 (classic: 1 = Marshal, S = Spy; modern: 1 = Spy, 10 = Marshal).
 Choose 5 ABOUT for the author, repository, version, and compilation date.
+Choose 7 EXIT to stop the sound and return to the command line.
 Click for a live preview. Tab switches groups; Up/Down or numbers select.
 Enter, Escape or Back saves the choices in COLORS.DAT and opens the menu.
 The game is played with the mouse. Deploy your army by dragging pieces
@@ -62,20 +78,21 @@ https://github.com/ifilot/cx16-feldmarschall
 '''
 
 
-def main():
-    destination = ROOT / 'build/dist' / NAME
+def main(runtime=None, output=None):
+    runtime = (ROOT/'src' if runtime is None else Path(runtime)).resolve()
+    destination = (ROOT/'build/dist' if output is None else Path(output)).resolve()/NAME
     if destination.exists():
         shutil.rmtree(destination)
     destination.mkdir(parents=True)
 
-    files = runtime_files()
+    files = runtime_files(runtime)
     for name in files:
         base, extension = name.split('.')
         assert 1 <= len(base) <= 8 and 1 <= len(extension) <= 3, f'{name} is not an 8.3 name'
-        source = ROOT / 'src' / name
+        source = runtime/name
         assert source.exists(), f'{source} is missing: run make first'
         shutil.copyfile(source, destination / name)
-    shutil.copyfile(ROOT / 'src/FELDMARS.PRG', destination / 'AUTOBOOT.X16')
+    shutil.copyfile(runtime/'FELDMARS.PRG', destination / 'AUTOBOOT.X16')
     (destination / 'README.TXT').write_text(README)
     shutil.copyfile(ROOT / 'LICENSE', destination / 'LICENSE.TXT')
 
@@ -95,9 +112,14 @@ def main():
         for name, digest in hashes.items():
             assert hashlib.sha256(packaged.read(f'{NAME}/{name}')).hexdigest() == digest, name
     contents = list(destination.iterdir())
-    print(f'Distribution: {archive.relative_to(ROOT)} ({archive.stat().st_size} bytes; '
+    label = archive.relative_to(ROOT) if archive.is_relative_to(ROOT) else archive
+    print(f'Distribution: {label} ({archive.stat().st_size} bytes; '
           f'{len(contents)} files, {sum(p.stat().st_size for p in contents)} bytes unpacked)')
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--runtime', type=Path, default=ROOT/'src')
+    parser.add_argument('--output', type=Path, default=ROOT/'build/dist')
+    args = parser.parse_args()
+    main(args.runtime, args.output)

@@ -22,6 +22,7 @@
 #pragma static-locals (on)
 
 #include "dialog.h"
+#define MENU_TITLE_MAPS
 #include "video.h"
 
 void dialog_plate(uint8_t col, uint8_t row, uint8_t w, uint8_t h) {
@@ -36,4 +37,15 @@ void dialog_plate(uint8_t col, uint8_t row, uint8_t w, uint8_t h) {
 
 void dialog_centred(uint8_t col, uint8_t w, uint8_t row, const char* s, uint8_t color) {
     video_text_plate(col + ((w - strlen(s)) >> 1), row, s, color);
+}
+
+void dialog_title(uint8_t col, uint8_t row, uint8_t width, uint8_t kind) {
+    uint8_t x, y;
+    const uint8_t* tiles = menu_title_tiles[kind];
+    col += (width - 18) / 2;
+    for(y=0; y<3; y++) for(x=0; x<18; x++) video_tile(col+x, row+y, L1_TITLE_TILES + *tiles++);
+}
+
+void dialog_rule(uint8_t col, uint8_t row, uint8_t width) {
+    while(width--) video_tile(col++, row, L1_MENU_RULE);
 }

@@ -70,19 +70,20 @@ async function until(page, name, script, ...args) {
   }
 }
 
-// The splash is a 2 bpp bitmap with a four-color palette, loaded raw into VRAM.
+// Decode the current exact 4 bpp tiled splash and its sixteen-color palette.
 const SPLASH = `
 import sys, numpy as np
 from PIL import Image
 shot, game = sys.argv[1:3]
 pixels = np.asarray(Image.open(shot).convert('RGB'))
-raw = np.frombuffer(open(f'{game}/SPLASH0.BIN','rb').read() + open(f'{game}/SPLASH1.BIN','rb').read(), dtype=np.uint8)
-indices = np.stack([(raw >> s) & 3 for s in (6, 4, 2, 0)], axis=1).reshape(480, 640)
-pal = np.frombuffer(open(f'{game}/SPLPAL.BIN','rb').read(), dtype=np.uint8).reshape(4, 2)
-colors = np.stack([pal[:, 1] & 15, pal[:, 0] >> 4, pal[:, 0] & 15], axis=1).astype(np.uint8) * 17
+raw = np.frombuffer(open(f'{game}/SPLTIL.BIN','rb').read(), dtype=np.uint8)
+tiles = np.stack([raw >> 4, raw & 15], axis=1).reshape(-1,8,8)
+entries = np.frombuffer(open(f'{game}/SPLMAP.BIN','rb').read(), dtype='<u2').reshape(64,128)[:60,:80]
+indices = tiles[entries & 1023].transpose(0,2,1,3).reshape(480,640)
+pal = np.frombuffer(open(f'{game}/SPLPAL.BIN','rb').read(), dtype=np.uint8).reshape(16,2)
+colors = np.stack([pal[:,1] & 15, pal[:,0] >> 4, pal[:,0] & 15], axis=1).astype(np.uint8)*17
 ys, xs = np.nonzero(np.any(pixels != colors[indices], axis=2))
-# the mouse pointer (sprite 0) is the only thing allowed over the bitmap
-assert len(ys) == 0 or (np.ptp(ys) < 16 and np.ptp(xs) < 16), 'the splash screen does not match SPLASH0/1.BIN'
+assert len(ys) == 0 or (np.ptp(ys) < 16 and np.ptp(xs) < 16), 'the splash screen does not match its tile assets'
 `;
 // Fraction of differing pixels of a box between two captures.
 const CHANGED = `
@@ -171,7 +172,7 @@ async function boot(page, tap) {
     const at = (x, y) => [canvasBox.x + x, canvasBox.y + y];
     await page.mouse.move(...at(320, 240));
     await page.waitForFunction(() => mouseAligned && !mouseAligning);
-    await page.mouse.move(...at(175, 180), {steps:8});
+    await page.mouse.move(...at(175, 156), {steps:8});
     await page.waitForTimeout(300);
     await page.mouse.down(); await page.waitForTimeout(150); await page.mouse.up();
     // Manage setups: the tray fills with Red's pieces.
@@ -217,18 +218,18 @@ assert np.all(blocks == blocks[:, 0:1, :, 0:1, :]), 'fullscreen interpolates or 
     await page.waitForTimeout(200);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'the page overflows a phone screen');
 
-    // Phone: the screen shrinks to fit, the keypad works and a finger drags.
+    // Phone: the screen shrinks to fit, tap starts the game and a finger drags.
     const mobile = await browser.newContext({viewport:{width:390, height:844}, hasTouch:true, isMobile:true});
     const phone = watch(await mobile.newPage());
     phone.label = 'phone';
     await start(phone);
     await phone.screenshot({path:path.join(captures, 'mobile.png'), fullPage:true});
     assert(await phone.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'the page overflows a phone screen');
-    assert(await phone.locator('#touch-keys').isVisible());
+    assert.equal(await phone.locator('#touch-keys').count(), 0);
     await boot(phone, true);
     let box = await phone.locator('#canvas').boundingBox();
     assert(box.width < 390 && box.width > 300, `the screen does not fit the phone (${box.width} px)`);
-    await phone.locator('[data-key="Enter"]').tap();
+    await phone.locator('#canvas').tap({position:{x:box.width/2,y:box.height/2}});
     const phoneMenu = await until(phone, 'phone-menu', MENU);
     const cdp = await mobile.newCDPSession(phone);
     const point = (x, y) => ({x:box.x + x * box.width / 640, y:box.y + y * box.height / 480});
@@ -244,7 +245,7 @@ assert np.all(blocks == blocks[:, 0:1, :, 0:1, :]), 'fullscreen interpolates or 
       await phone.waitForTimeout(300);
       await touch('touchEnd');
     }
-    await drag([175, 180], [175, 180]);
+    await drag([175, 156], [175, 156]);
     const phoneDeploy = await until(phone, 'phone-deploy', CHANGED, phoneMenu, 432, 152, 200, 320, 0.3, 1);
     await drag([452, 172], [196, 356]);
     await expectChange(phone, 'phone-deployed', phoneDeploy, [176, 336, 40, 40], NEIGHBOURS);
@@ -253,6 +254,6 @@ assert np.all(blocks == blocks[:, 0:1, :, 0:1, :]), 'fullscreen interpolates or 
 
     assert.deepEqual(errors, []); assert.deepEqual(failed, []);
     console.log('PASS: WASM boot, all runtime files, exact splash pixels, keyboard and mouse menus, drag to deploy, '
-      + 'whole-pixel fullscreen, and a fitted phone screen with keypad and touch drag, under a project subpath.');
+      + 'whole-pixel fullscreen, and a fitted phone screen with tap-to-start and touch drag, under a project subpath.');
   } finally { if (browser) await browser.close(); server.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; server.close(); });

@@ -1,0 +1,505 @@
+{
+  "schema": "feldmarschall-ai-release-qualification-v1",
+  "candidate": "production-fortress-template-q24-cache-v1-normal",
+  "reference": "student-fortress-template-flag-bomb-v1-normal",
+  "passed": true,
+  "gates": {
+    "dos_noninferiority": true,
+    "honest_noninferiority": true,
+    "x16_turns": true,
+    "lifecycle": true,
+    "reproducibility": true,
+    "memory": true,
+    "previous_levels_and_rules": true,
+    "packaging": true
+  },
+  "endpoints": {
+    "dos": {
+      "standings": {
+        "student-fortress-template-flag-bomb-v1-normal": {
+          "wins": 310,
+          "draws": 199,
+          "losses": 494,
+          "score": 0.4082751744765703,
+          "errors": 21
+        },
+        "production-fortress-template-q24-cache-v1-normal": {
+          "wins": 310,
+          "draws": 198,
+          "losses": 496,
+          "score": 0.4073705179282869,
+          "errors": 20
+        }
+      },
+      "comparison": {
+        "complete_pairs": 491,
+        "pairs_by_family": {
+          "original-dos": 491
+        },
+        "metrics": {
+          "score": {
+            "mean": -0.0005091649694501018,
+            "interval_95": [
+              -0.0015274949083503055,
+              0.0
+            ],
+            "interval_98_3333": [
+              -0.002036659877800407,
+              0.0
+            ]
+          }
+        }
+      },
+      "errors_unscored": 41,
+      "margin": -0.02,
+      "error_sensitivity": "docs/ai-consolidation/cycle-201-release-port-dos/error-sensitivity.json",
+      "error_sensitivity_summary": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 0,
+          "negative_pairs": 1,
+          "zero_pairs": 490,
+          "non_tied_pairs": 1,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 512,
+        "error_games_a": 20,
+        "error_games_b": 21,
+        "pairs_with_any_error": 21,
+        "arms": {
+          "a": {
+            "attempted_games": 1024,
+            "error_games": 20,
+            "scored_games": 1004,
+            "wins": 310,
+            "draws": 198,
+            "losses": 496,
+            "official_scored_score": 0.4073705179282869,
+            "all_attempt_score_bounds": [
+              0.3994140625,
+              0.4189453125
+            ]
+          },
+          "b": {
+            "attempted_games": 1024,
+            "error_games": 21,
+            "scored_games": 1003,
+            "wins": 310,
+            "draws": 199,
+            "losses": 494,
+            "official_scored_score": 0.4082751744765703,
+            "all_attempt_score_bounds": [
+              0.39990234375,
+              0.42041015625
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          -0.02099609375,
+          0.01904296875
+        ],
+        "complete_case_pairs": 491,
+        "complete_case_paired_effect": -0.0005091649694501018
+      }
+    },
+    "honest": {
+      "standings": {
+        "student-fortress-template-flag-bomb-v1-normal": {
+          "wins": 322,
+          "draws": 3,
+          "losses": 59,
+          "score": 0.8424479166666666,
+          "errors": 0
+        },
+        "production-fortress-template-q24-cache-v1-normal": {
+          "wins": 322,
+          "draws": 3,
+          "losses": 59,
+          "score": 0.8424479166666666,
+          "errors": 0
+        }
+      },
+      "comparison": {
+        "complete_pairs": 192,
+        "pairs_by_family": {
+          "uniform-v1": 32,
+          "rear-shell-v1": 32,
+          "exposed-rear-v1": 32,
+          "forward-flag-v1": 32,
+          "single-decoy-v1": 32,
+          "scattered-guards-v1": 32
+        },
+        "metrics": {
+          "score": {
+            "mean": 0.0,
+            "interval_95": [
+              -0.010416666666666666,
+              0.010416666666666666
+            ],
+            "interval_98_3333": [
+              -0.013020833333333334,
+              0.013020833333333334
+            ]
+          }
+        }
+      },
+      "errors_unscored": 0,
+      "margin": -0.02,
+      "error_sensitivity": "docs/ai-consolidation/cycle-202-release-port-honest/error-sensitivity.json",
+      "error_sensitivity_summary": {
+        "complete_case_direction_diagnostic": {
+          "positive_pairs": 2,
+          "negative_pairs": 2,
+          "zero_pairs": 188,
+          "non_tied_pairs": 4,
+          "exact_two_sided_binomial_sign_p": 1.0,
+          "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+        },
+        "planned_pairs": 192,
+        "error_games_a": 0,
+        "error_games_b": 0,
+        "pairs_with_any_error": 0,
+        "arms": {
+          "a": {
+            "attempted_games": 384,
+            "error_games": 0,
+            "scored_games": 384,
+            "wins": 322,
+            "draws": 3,
+            "losses": 59,
+            "official_scored_score": 0.8424479166666666,
+            "all_attempt_score_bounds": [
+              0.8424479166666666,
+              0.8424479166666666
+            ]
+          },
+          "b": {
+            "attempted_games": 384,
+            "error_games": 0,
+            "scored_games": 384,
+            "wins": 322,
+            "draws": 3,
+            "losses": 59,
+            "official_scored_score": 0.8424479166666666,
+            "all_attempt_score_bounds": [
+              0.8424479166666666,
+              0.8424479166666666
+            ]
+          }
+        },
+        "paired_cohort_effect_bounds": [
+          0.0,
+          0.0
+        ],
+        "complete_case_pairs": 192,
+        "complete_case_paired_effect": 0.0
+      }
+    }
+  },
+  "target": {
+    "free_bytes": {
+      "PLAY": 154,
+      "AI": 78,
+      "MISSION": 235,
+      "BELIEF": 974,
+      "MAIN": 66
+    },
+    "turns": [
+      {
+        "poison_initial_bank_bss": true,
+        "owner_retention_fixture_explicit": false,
+        "cache_hits": 0,
+        "hit_prepare_cycles": [],
+        "miss_prepare_cycles": [
+          8738765,
+          8018567,
+          8011546,
+          8346219,
+          8346515,
+          8498452,
+          8034972,
+          8038146,
+          8380952,
+          8347266,
+          8169449,
+          8347233,
+          7862247,
+          7876195,
+          8141091,
+          8153870,
+          8128849,
+          8098771,
+          8130689,
+          8088010,
+          8135152,
+          8083056,
+          8135147,
+          8078299,
+          8075947,
+          8103984,
+          8079847,
+          8079507,
+          8074287,
+          8050556,
+          8069965,
+          7967665,
+          8027722,
+          7971473,
+          8069705,
+          7962022,
+          8015059,
+          7951069,
+          7956193,
+          7914157,
+          7972529,
+          7908337,
+          7953145,
+          7912192,
+          7951284,
+          7910602,
+          7949018,
+          7873268,
+          7953861,
+          7863209,
+          7956261,
+          7861542,
+          7944441,
+          7896356,
+          7969993,
+          7892456,
+          7963402,
+          7891301,
+          7960681,
+          7870223,
+          7867121,
+          7879513,
+          7871096,
+          7876071,
+          7873371,
+          7871557,
+          7867642,
+          7867131,
+          7874343,
+          7879947,
+          7870448,
+          7865323,
+          7885212,
+          7801458,
+          7883878,
+          7800770,
+          7819961,
+          7808051,
+          7784622,
+          7780024
+        ],
+        "rng_output_compared": true,
+        "template_layout": -1,
+        "history_start_banks": null,
+        "per_turn_history_export_bank24": true,
+        "turns": 80,
+        "max_ai_cycles": 11594108,
+        "max_prepare_cycles": 8738765,
+        "audio_active": true,
+        "relocated_runtime_executed_in_bank25": true,
+        "all_native_q12_cache_moves_identical": true,
+        "minimum_stack_canary_untouched_bytes": 996
+      },
+      {
+        "poison_initial_bank_bss": true,
+        "owner_retention_fixture_explicit": true,
+        "cache_hits": 35,
+        "hit_prepare_cycles": [
+          134441,
+          144621,
+          137351,
+          142438,
+          140683,
+          153363,
+          157505,
+          159687,
+          163203,
+          160542,
+          161533,
+          158402,
+          161533,
+          157359,
+          166751,
+          158129,
+          165981,
+          158129,
+          167294,
+          169465,
+          165839,
+          168033,
+          167491,
+          173349,
+          168646,
+          173773,
+          166551,
+          168912,
+          168306,
+          167927,
+          167106,
+          174334,
+          167321,
+          176153,
+          177738
+        ],
+        "miss_prepare_cycles": [
+          8738765,
+          8018567,
+          8014281,
+          8348958,
+          8347670,
+          8499611,
+          8037393,
+          8039621,
+          8384639,
+          8349057,
+          8172820,
+          8349026,
+          7866220,
+          7879314,
+          8146851,
+          8157908,
+          8135384,
+          8104678,
+          8082328,
+          8143843,
+          8087782,
+          8091645,
+          8127503,
+          8057942,
+          8080641,
+          7971308,
+          8019194,
+          7958706,
+          8065330,
+          8013798,
+          7963095,
+          7968297,
+          7927779,
+          7951094,
+          7863053,
+          7895225,
+          7973872,
+          7881173,
+          7872964,
+          7890268,
+          7803688,
+          7888982,
+          7813945,
+          7789204,
+          7784607
+        ],
+        "rng_output_compared": true,
+        "template_layout": -1,
+        "history_start_banks": null,
+        "per_turn_history_export_bank24": true,
+        "turns": 80,
+        "max_ai_cycles": 11601396,
+        "max_prepare_cycles": 8738765,
+        "audio_active": true,
+        "relocated_runtime_executed_in_bank25": true,
+        "all_native_q12_cache_moves_identical": true,
+        "minimum_stack_canary_untouched_bytes": 996
+      }
+    ],
+    "packaging": {
+      "passed": true,
+      "autoboot": true,
+      "all_ai_banks_and_audio_loaded": true,
+      "artwork_and_palette": true,
+      "belief_bank_present": true,
+      "reproducible_zip": true,
+      "zip_sha256": "7f51eb3918bd49f98c82d3d1b162c0a5c14abefd995b8fa970e2e4314eca424f"
+    }
+  },
+  "limitations": [
+    "DOS specialist; no universal human-play superiority claim",
+    "Noninferiority margin is two percentage points, not an equivalence claim",
+    "DOS qualification uses complete cases; adversarial engine-error bounds cross the two-point margin slightly",
+    "Timing bound verified in fixed fixtures, not all possible positions",
+    "Owner cache retention fixture is mechanical, not a gameplay hit rate"
+  ],
+  "evidence_repository": "https://github.com/ifilot/feldmarschall-ai",
+  "evidence_sha256": {
+    "docs/ai-consolidation/cycle-201-release-port-dos/CONCLUSION.md": "97f6ec8eb1700996887e249ce2b8edebadedac738510a99c29e006e3a19c6968",
+    "docs/ai-consolidation/cycle-201-release-port-dos/audit.json": "aa87ef403d00ee5ee4baac09fae21659e7e303b5c5176924e641f93e7c8d16dd",
+    "docs/ai-consolidation/cycle-201-release-port-dos/checks.log": "cd611552b14beab0fd39c29154f1a7534c1b59e9664bb615e31bf4028821be8d",
+    "docs/ai-consolidation/cycle-201-release-port-dos/error-sensitivity.json": "b0a61f25c1412d6283aa592e4fd9d4d2c1817222a4c77ea805960d4d9d34179f",
+    "docs/ai-consolidation/cycle-201-release-port-dos/frozen-policies.json": "d39e97f0da594956d3be426b831129de05c66e707c11554af50aa8997b6e4b7b",
+    "docs/ai-consolidation/cycle-201-release-port-dos/plan.json": "5b0bb8dbb36d390b272e9c9e5722ab0c491a2f24f34f317e1178d7b1865e4a70",
+    "docs/ai-consolidation/cycle-201-release-port-dos/production-fortress-template-q24-cache-v1-normal.fmtour": "5da1d805d4b6ba722742f776ecbc39e83219a6f2aa6a7297a0976240d25e12b3",
+    "docs/ai-consolidation/cycle-201-release-port-dos/production-fortress-template-q24-cache-v1-normal.log": "6b7c26fc4ea7ffbbb4cebc6263c5eaf78677d8dbd79a4d3bd96915c4540a081d",
+    "docs/ai-consolidation/cycle-201-release-port-dos/production-fortress-template-q24-cache-v1-normal.original-dos-setups-audit.json": "48901a6f64b04332068df6e854af11ecc85e9b46cc6946d406158d0293622102",
+    "docs/ai-consolidation/cycle-201-release-port-dos/production-fortress-template-q24-cache-v1-normal.png": "f6d0989ab2cbe3416e8c0863d52dc27c8ae156121ad7b6afaed8c7d411171c8c",
+    "docs/ai-consolidation/cycle-201-release-port-dos/production-fortress-template-q24-cache-v1-normal.report.json": "0e2190fc6ce60c90bd0d1da7ebfc6a6074915138d0a395d1403108393b16e4a6",
+    "docs/ai-consolidation/cycle-201-release-port-dos/production-fortress-template-q24-cache-v1-normal.review.log": "31ef831540038ffe9ba794965c33031c7ef60591786e4ced6a2b8fb5f2a7e03c",
+    "docs/ai-consolidation/cycle-201-release-port-dos/production-fortress-template-q24-cache-v1-normal.setups-audit.json": "bbfc2c80b6ed13321286f9f18ec460769ef04581a7f51e719d42a3a901b66596",
+    "docs/ai-consolidation/cycle-201-release-port-dos/registration.json": "5953504c748cf237fe0b5ef66f10f2c91708063863c967832e7518aeff83d2f7",
+    "docs/ai-consolidation/cycle-201-release-port-dos/registry-before.json": "5768b7e9fde0141521980848349c0e376b37465dab16e8fab92f4924afade335",
+    "docs/ai-consolidation/cycle-201-release-port-dos/result.json": "58fc69efa08ffd704e0eac6000ca8a70273ec0b7bc32af6fc31993d5c44fb807",
+    "docs/ai-consolidation/cycle-201-release-port-dos/student-fortress-template-flag-bomb-v1-normal.fmtour": "738601f9e63f06ee5eb64dc6638b8afa49308ef19ccb17654b45167c420779d7",
+    "docs/ai-consolidation/cycle-201-release-port-dos/student-fortress-template-flag-bomb-v1-normal.log": "2ab2d210ce88d63466e8c46c5e4c78ebb0f08bff125dc106291ee7a8d41022fe",
+    "docs/ai-consolidation/cycle-201-release-port-dos/student-fortress-template-flag-bomb-v1-normal.original-dos-setups-audit.json": "48901a6f64b04332068df6e854af11ecc85e9b46cc6946d406158d0293622102",
+    "docs/ai-consolidation/cycle-201-release-port-dos/student-fortress-template-flag-bomb-v1-normal.png": "008d939dee4f59a1ee00d8af6e3658cdb5bc0d66168393bf87b67a853c89c83a",
+    "docs/ai-consolidation/cycle-201-release-port-dos/student-fortress-template-flag-bomb-v1-normal.report.json": "9890aea906e098f089dbb3bd0e6f2aaa337ef75b87f4d13fd005b86fa53b7bfa",
+    "docs/ai-consolidation/cycle-201-release-port-dos/student-fortress-template-flag-bomb-v1-normal.review.log": "31ef831540038ffe9ba794965c33031c7ef60591786e4ced6a2b8fb5f2a7e03c",
+    "docs/ai-consolidation/cycle-201-release-port-dos/student-fortress-template-flag-bomb-v1-normal.setups-audit.json": "5ac47bdcbbca84187448cf8f40b4c47b89d6d00563447ca5f4cb9d2032647f6a",
+    "docs/ai-consolidation/cycle-201-release-port-dos/manifest.json": "a4e2ef0c01649008ed970f789f8d6ed8bc21e941587b95f250c8a88bda71c9d6",
+    "docs/ai-consolidation/cycle-202-release-port-honest/CONCLUSION.md": "89684508c462df42fedf4d818af6ba0b887fb46b78931358efa804a1c6efa4be",
+    "docs/ai-consolidation/cycle-202-release-port-honest/audit.json": "055cf47323670bc425ce22ab652e9c871c06964d912769bea72df2b96429af1f",
+    "docs/ai-consolidation/cycle-202-release-port-honest/checks.log": "cd611552b14beab0fd39c29154f1a7534c1b59e9664bb615e31bf4028821be8d",
+    "docs/ai-consolidation/cycle-202-release-port-honest/error-sensitivity.json": "52ea32dd79a01e4031f0ddfdbb75ef3cf1918d5b050ded59f87da789e20e9d32",
+    "docs/ai-consolidation/cycle-202-release-port-honest/frozen-policies.json": "7a07ef491782b61089a19368b3f98d610822cf3d2e0fc06c91343672d25f133f",
+    "docs/ai-consolidation/cycle-202-release-port-honest/plan.json": "e5efcc61e6a05498f56f74a744152dabb4bf0e59c7f07fb36525ef7558e47434",
+    "docs/ai-consolidation/cycle-202-release-port-honest/production-fortress-template-q24-cache-v1-normal.fmtour": "143aee8fce1cb504515d99059b5a485b0d69fc75c422fa2e32189ca9997b4947",
+    "docs/ai-consolidation/cycle-202-release-port-honest/production-fortress-template-q24-cache-v1-normal.log": "80daa93d5bc1eb7fb1bc1007baf433d97164cccc9e64d9b63e9584fa33ff1f42",
+    "docs/ai-consolidation/cycle-202-release-port-honest/production-fortress-template-q24-cache-v1-normal.png": "92124168a4fc9e28f775acfcebe19af54eee91555fa887da9f8afcbdfd0f6d6d",
+    "docs/ai-consolidation/cycle-202-release-port-honest/production-fortress-template-q24-cache-v1-normal.report.json": "b198b8b002f17301ae79da7428377f364334fe3cff4e521572ddc9d5862850d8",
+    "docs/ai-consolidation/cycle-202-release-port-honest/production-fortress-template-q24-cache-v1-normal.review.log": "31ef831540038ffe9ba794965c33031c7ef60591786e4ced6a2b8fb5f2a7e03c",
+    "docs/ai-consolidation/cycle-202-release-port-honest/production-fortress-template-q24-cache-v1-normal.setups-audit.json": "93bf581b3ed5895f637b52d5f3821f544960dc4166072268ad462e4bdeb6d966",
+    "docs/ai-consolidation/cycle-202-release-port-honest/registration.json": "7fec7f64f8266a3aaa35a602e5f7f79ebe9f6e3672571216054d08a658c22919",
+    "docs/ai-consolidation/cycle-202-release-port-honest/registry-before.json": "f5815bc79309bd6ed405fc0f0f0f26f877d737b7809bf48f018723a55a6c148a",
+    "docs/ai-consolidation/cycle-202-release-port-honest/result.json": "86d724b608c63ddd7a37ec06ba779550030588c70181b4e0e8a6f20e13b3d304",
+    "docs/ai-consolidation/cycle-202-release-port-honest/student-fortress-template-flag-bomb-v1-normal.fmtour": "b0c3acd17419dfc9590934b6fa28d2e110b350c95b035186367bcf2eaff498e3",
+    "docs/ai-consolidation/cycle-202-release-port-honest/student-fortress-template-flag-bomb-v1-normal.log": "002d68787888dc9606715601562b34748b3b07e0f03bc599809286ac55a7cda0",
+    "docs/ai-consolidation/cycle-202-release-port-honest/student-fortress-template-flag-bomb-v1-normal.png": "749eb07550061c9d374de71ff9e60336965e070d29f0834c45244b7c976c8547",
+    "docs/ai-consolidation/cycle-202-release-port-honest/student-fortress-template-flag-bomb-v1-normal.report.json": "83db60f70a625db4f03ed834a37ed38f494b1f9f5aa9ac1da7a7ae76530ff6ef",
+    "docs/ai-consolidation/cycle-202-release-port-honest/student-fortress-template-flag-bomb-v1-normal.review.log": "31ef831540038ffe9ba794965c33031c7ef60591786e4ced6a2b8fb5f2a7e03c",
+    "docs/ai-consolidation/cycle-202-release-port-honest/student-fortress-template-flag-bomb-v1-normal.setups-audit.json": "4e5a176be7bc63e846ae5f748299c6c7d892b685c8b665962797703addbb5fec",
+    "docs/ai-consolidation/cycle-202-release-port-honest/manifest.json": "b8861b7d87c74c4f69c29ab46784c2cf7ef255e0d7dc88d6f8d4b264bb22f3d8",
+    "docs/ai-consolidation/qualification/README.md": "2cf8ba7bee3bba7efb206f95e9277d8b038706bf65afc7ef0dd2c63dd7c09f7f",
+    "docs/ai-consolidation/qualification/ai-build.json": "bd28f594bcaaaf3dc3fab7c39cf10fca3e8c3fe73cc558f1f13c2f9ffed4a231",
+    "docs/ai-consolidation/qualification/banked-initial.log": "906426f5659ae9e34dad65279e3c67c3223056647df4b232097f6bedb63b2902",
+    "docs/ai-consolidation/qualification/banked-qualified.log": "22e0cb06f50ec32a0d08ee66104a2cbff4f470a4b5b9cbc8619532861697e58e",
+    "docs/ai-consolidation/qualification/cache-checks.log": "2fbbec27cf1e600e2ed86ca269cf495cc894a2c2ff4e2cb9106b11d331795a9e",
+    "docs/ai-consolidation/qualification/deployment-checks.log": "1013d502d8bc1a2926b8143df801b65aeee5d1251cbf577ea977d4b1cfc615c0",
+    "docs/ai-consolidation/qualification/lifecycle-initial.log": "92ad3adfe30c8294ae304766916db09935b9aae46fe55b60c73586fcb2c99789",
+    "docs/ai-consolidation/qualification/lifecycle-qualified.log": "faa86e4d94a3c4780a8c3879cf6f363b07ac3794f9e29baf13ebe9594c85ab55",
+    "docs/ai-consolidation/qualification/lifecycle.json": "d266b9cf848714bbf5eade74b95d011b5faa94c94b776f28570d3b2f6b370676",
+    "docs/ai-consolidation/qualification/native-checks.log": "5cb4ed9ada9a28e2e2906b1204bcabe417b9c7a3135ee1af27b8db75e8ee6ffd",
+    "docs/ai-consolidation/qualification/observer.json": "a409b292e1fd7172be1740a9429da67e743360610f820eca6d7c5b9061b01777",
+    "docs/ai-consolidation/qualification/packaging.json": "b21ed8752613b0499cbc7a478a75510de07d7200b34fbdb53b71c5df9744ecf9",
+    "docs/ai-consolidation/qualification/packaging.log": "6f78f1c60a52b75ed4bdc689d3518266d2be53d0cc886bf64c68f601bc14a357",
+    "docs/ai-consolidation/qualification/release-import-checks.log": "84ff24306afcf5e19892adf32493aa9bc9dbc8db16870c6155e8e03c23864a33",
+    "docs/ai-consolidation/qualification/reproducibility.json": "131320e174f9f08fc5301fc9e84578c97db9c510d727856a8bf54e6d02ddc4ca",
+    "docs/ai-consolidation/qualification/retained-qualified.log": "22e0cb06f50ec32a0d08ee66104a2cbff4f470a4b5b9cbc8619532861697e58e",
+    "docs/ai-consolidation/qualification/tools/ai_release.py": "6d7a9ae3e03c761b457cd9fec39d28fde3ed2079c1690e0dca221112a82a5024",
+    "docs/ai-consolidation/qualification/tools/build_ai_release.py": "fb5443b170631c2bb99cfb079555bb66a3077be0aff2488c9056d6c2e416c871",
+    "docs/ai-consolidation/qualification/tools/distribute.py": "cb6b162c3b53d67cfe138d850a566cab23a641a406fa6b78fb6c00516d956a2e",
+    "docs/ai-consolidation/qualification/tools/qualify_ai_release_lifecycle.py": "f3165ba2ede2ebc6e3ace6a2a91f47201f20ec99fcfb11d7319f8e49c132e60f",
+    "docs/ai-consolidation/qualification/tools/qualify_ai_release_observer.py": "04463d9defefb40e40ef48224780d4ab2d8fc4acee36f299eb08cd57cfd54b8e",
+    "docs/ai-consolidation/qualification/tools/qualify_ai_release_packaging.py": "92429be8dc99b1f5ff5cc6363259a455bc36c2aa4e3bc944604d2b6b8e79a928",
+    "docs/ai-consolidation/qualification/tools/test_ai_levels.py": "58af8ebecb30958d1f015a36ea8c59e9c664e5367f467ce31441537678438f9f",
+    "docs/ai-consolidation/qualification/tools/test_ai_release.py": "c29f4a3c12bb5b9f330b6cbb85ba372357035055683867cf5804c82cdfed4768",
+    "docs/ai-consolidation/qualification/tools/test_ai_release_import.py": "09d3bbd457f6e50664ec1028e45fc85f48d8efbe1ae3a72dabff28d91ce512d6",
+    "docs/ai-consolidation/qualification/tools/test_campaign_template_cache_banked.py": "3d4bdee118dc5c9ee7265af9471c77063850e5cd7401eb450a550f541acdf683",
+    "docs/ai-consolidation/qualification/whole-turn-audio-probe-summary.json": "aa8648b41d5f25b5f4da66e4febb93329c0fe6c41e15e045be4e409492ca8e4e",
+    "docs/ai-consolidation/qualification/whole-turn-audio-probe.json": "5d5dba712dd30d366fd62bd72619bced76a2357a092e39d9d637668fdf36be78",
+    "docs/ai-consolidation/qualification/whole-turn-retained-cache-summary.json": "3f7c868f949bc89ec8ceef0a331607bcfc3da6737fb823a37d99237366448366",
+    "docs/ai-consolidation/qualification/whole-turn-retained-cache.json": "8f44071ea25a61476b864316310b215cc175bb67cf7e4d1aab1c64f17cef8105",
+    "docs/ai-consolidation/qualification/manifest.json": "1f85829bba50ea00951b9421dfa208dc416af35fc9eb8ce476b5f3dd0a55875f"
+  }
+}

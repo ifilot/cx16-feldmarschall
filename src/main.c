@@ -33,15 +33,12 @@
 #include "game_settings.h"
 #include "colors.h"
 #include "random.h"
-
-// KERNAL mouse_get stores the pointer position in r0 (x) and r1 (y)
-#define MOUSE_X     (*(volatile int16_t*)0x02)
-#define MOUSE_Y     (*(volatile int16_t*)0x04)
+#include "sound.h"
+#include "input.h"
 
 input_t input;
 
 static uint8_t scene;
-static uint8_t buttons;
 
 /**
  * @brief Wait for the next 60 Hz jiffy
@@ -59,30 +56,19 @@ wait:
     asm("beq %g", wait);
 }
 
-static void read_input(void) {
-    asm("ldx #2");
-    asm("jsr $FF6B");               // mouse_get
-    asm("sta %v", buttons);
-    input.x = MOUSE_X;
-    input.y = MOUSE_Y;
-    input.pressed = buttons & ~input.buttons;
-    input.buttons = buttons;
-    input.key = cbm_k_getin();
-    input.frame++;
-}
-
 static void enter(uint8_t next) {
     video_cursor_hide();
     video_sprite_hide(SPRITE_DRAG);
     video_sprite_hide(SPRITE_FALL);
     video_clear_layer1();
-    if(scene == SCENE_GAME_SETTINGS && next != SCENE_GAME_SETTINGS) colors_restore_field();
     random_seed(input.frame);       // the player's timing seeds the dice
     scene = next;
+    sound_scene(next);
     switch(scene) {
         case SCENE_DEPLOY: deploy_enter(0); break;
         case SCENE_PREPARE: deploy_enter(1); break;
         case SCENE_PLAY:   play_enter(); break;
+        case SCENE_DEMO:   play_demo(); break;
         case SCENE_RESUME: play_resume(); break;
         case SCENE_OPTIONS: options_enter(); break;
         case SCENE_ABOUT: about_enter(); break;
@@ -98,10 +84,15 @@ void main(void) {
         puts("could not load the splash screen");
         return;
     }
+    if(!sound_init()) {
+        puts("could not load the game code");
+        return;
+    }
     do {
         wait_frame();
-        read_input();
-    } while(input.key != KEY_RETURN);
+        input_read();
+    } while(input.key != KEY_RETURN && !(input.pressed & BUTTON_LEFT));
+    sound_sfx(SFX_MENU_SELECT);
 
     if(!video_init()) {
         puts("could not load the graphics");
@@ -112,17 +103,22 @@ void main(void) {
 
     for(;;) {
         wait_frame();
-        read_input();
+        input_read();
         switch(scene) {
             case SCENE_DEPLOY: next = deploy_update(); break;
             case SCENE_PREPARE: next = deploy_update(); break;
-            case SCENE_PLAY:   next = play_update(); break;
+            case SCENE_PLAY:
+            case SCENE_DEMO:
             case SCENE_RESUME: next = play_update(); break;
             case SCENE_OPTIONS: next = options_update(); break;
             case SCENE_ABOUT: next = about_update(); break;
             case SCENE_GAME_SETTINGS: next = game_settings_update(); break;
             default:           next = menu_update(); break;
         }
+        if(next == SCENE_EXIT) break;
         if(next != SCENE_STAY) enter(next);
     }
+    sound_shutdown();
+    // CINT restores the KERNAL screen/font/palette without rerunning AUTOBOOT.
+    asm("jsr $FF81");
 }

@@ -19,6 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from screenshot import Session  # noqa: E402
+from test_flow import text, wait_for_next_red_turn  # noqa: E402
 
 GLYPHS = '123456789SBF'
 EMPTY, LAKE, BLUE = 0xFF, 0xFE, 0x10
@@ -98,6 +99,7 @@ def main():
         session.emu.advance(20)
         shuttle = (None, None, 0)
         for turn in range(1, args.turns + 1):
+            previous_turn = text(session, 11)
             board = session.emu.read_memory(address, 100)
             moves = red_moves(board, shuttle)
             if not moves:
@@ -111,6 +113,9 @@ def main():
             (x0, y0), (x1, y1) = centre(move[0]), centre(move[1])
             session.run([f'drag:{x0},{y0},{x1},{y1}'])
             session.emu.advance(320)    # battles and falls, Blue's thinking and its move
+            if not wait_for_next_red_turn(session, previous_turn):
+                print(f'turn {turn}: game ended')
+                break
             after = session.emu.read_memory(address, 100)
             if after == board:
                 raise SystemExit(f'turn {turn}: the move {move} changed nothing')

@@ -30,6 +30,12 @@
  * other pieces are shuffled over the remaining home squares.
  */
 void setup_random(uint8_t blue);
+#if defined(BANKED_AI) && defined(AI_MEMORY)
+void setup_random_banked(uint8_t blue);
+#endif
+
+/* Validated varied layouts for Classic Normal/Hard; protected random otherwise. */
+void setup_ai(uint8_t blue);
 
 /**
  * @brief Keep the player's deployment (Red's home rows) for later scenes

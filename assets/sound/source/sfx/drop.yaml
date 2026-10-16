@@ -1,0 +1,12 @@
+type: sfx
+title: drop
+description: >
+  A token is set down on a home row while deploying: a wooden tock with a soft contact click, lighter than a move in battle.
+instruments: ../instruments.yaml
+parts:
+  body:  {instrument: knock, voices: [12], level: 0.85}
+  click: {instrument: clack, voices: [13], level: 0.8}
+sections:
+  main:
+    body:  "E4/8t"
+    click: "C6/8t"

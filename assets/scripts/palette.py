@@ -77,6 +77,8 @@ def row_colors(row, field=None, pieces=None):
         colors[INK] = pieces[DEEP_RED]
     elif row == 5:
         colors[INK] = pieces[DEEP_BLUE]
+    elif row == 7:
+        colors[OLIVE] = 0x2A4  # bright green for fixed UI toggles
     elif row == 8:
         colors[INK] = RGB12[DEEP_RED]
     return colors

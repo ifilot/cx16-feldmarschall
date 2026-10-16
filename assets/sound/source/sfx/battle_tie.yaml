@@ -1,0 +1,14 @@
+type: sfx
+title: battle_tie
+description: >
+  Equal ranks: both pieces fall. A steel ring, then two knocks falling together.
+instruments: ../instruments.yaml
+parts:
+  blade: {instrument: steel, voices: [12], level: 0.8}
+  body:  {instrument: knock, voices: [13], level: 0.65}
+  thump: {instrument: thump, voices: [14], level: 0.65}
+sections:
+  main:
+    blade: "B6/10t r/10t"
+    body:  "r/4t E4/6t C4/10t"
+    thump: "r/4t G2/6t E2/10t"
