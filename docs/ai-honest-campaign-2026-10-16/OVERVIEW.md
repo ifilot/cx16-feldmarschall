@@ -6,24 +6,30 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 |---|---|---|---:|---:|---:|
 | 101 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-guard-v1-normal | 15 / 18 / 212 | 9.8% | 11 |
 | 101 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-target-assignment-v1-normal | 16 / 16 / 212 | 9.8% | 12 |
-| 102 | missions-v1-normal; development corpus | student-guard-v1-normal | 51 / 3 / 42 | 54.7% | 0 |
-| 102 | missions-v1-normal; development corpus | student-target-assignment-v1-normal | 49 / 3 / 44 | 52.6% | 0 |
+| 102 | missions-v1-normal; development corpus / referee-v1 | student-guard-v1-normal | 51 / 3 / 42 | 54.7% | 0 |
+| 102 | missions-v1-normal; development corpus / referee-v1 | student-target-assignment-v1-normal | 49 / 3 / 44 | 52.6% | 0 |
 | 103 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 83 / 43 / 125 | 41.6% | 5 |
 | 103 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-mobile-goals-v1-normal | 68 / 61 / 122 | 39.2% | 5 |
-| 104 | missions-v1-normal; development corpus | student-fortress-template-flag-bomb-v1-normal | 53 / 1 / 42 | 55.7% | 0 |
-| 104 | missions-v1-normal; development corpus | student-fortress-template-mobile-goals-v1-normal | 51 / 0 / 45 | 53.1% | 0 |
+| 104 | missions-v1-normal; development corpus / referee-v1 | student-fortress-template-flag-bomb-v1-normal | 53 / 1 / 42 | 55.7% | 0 |
+| 104 | missions-v1-normal; development corpus / referee-v1 | student-fortress-template-mobile-goals-v1-normal | 51 / 0 / 45 | 53.1% | 0 |
 | 105 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 77 / 48 / 126 | 40.2% | 5 |
 | 105 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-missed-background-v1-normal | 78 / 48 / 126 | 40.5% | 4 |
 | 106 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 77 / 49 / 129 | 39.8% | 1 |
 | 106 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-missed-background-v2-normal | 76 / 49 / 129 | 39.6% | 2 |
-| 107 | missions-v1-normal; development corpus | student-fortress-template-flag-bomb-v1-normal | 53 / 1 / 42 | 55.7% | 0 |
-| 107 | missions-v1-normal; development corpus | student-fortress-template-missed-background-v2-normal | 54 / 1 / 41 | 56.8% | 0 |
+| 107 | missions-v1-normal; development corpus / referee-v1 | student-fortress-template-flag-bomb-v1-normal | 53 / 1 / 42 | 55.7% | 0 |
+| 107 | missions-v1-normal; development corpus / referee-v1 | student-fortress-template-missed-background-v2-normal | 54 / 1 / 41 | 56.8% | 0 |
 | 108 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 86 / 52 / 116 | 44.1% | 2 |
 | 108 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-regime-reset-v1-normal | 86 / 52 / 116 | 44.1% | 2 |
-| 109 | missions-v1-normal; development corpus | student-fortress-template-flag-bomb-v1-normal | 49 / 1 / 46 | 51.6% | 0 |
-| 109 | missions-v1-normal; development corpus | student-fortress-template-regime-reset-v1-normal | 48 / 1 / 47 | 50.5% | 0 |
+| 109 | missions-v1-normal; development corpus / referee-v1 | student-fortress-template-flag-bomb-v1-normal | 49 / 1 / 46 | 51.6% | 0 |
+| 109 | missions-v1-normal; development corpus / referee-v1 | student-fortress-template-regime-reset-v1-normal | 48 / 1 / 47 | 50.5% | 0 |
+| 110 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 83 / 45 / 123 | 42.0% | 5 |
+| 110 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-inner-guard-template-v1-normal | 69 / 43 / 139 | 36.1% | 5 |
 | 111 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 175 / 1 / 48 | 78.3% | 0 |
 | 111 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-inner-guard-template-v1-normal | 180 / 1 / 43 | 80.6% | 0 |
+| 114 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-deployment-v1-normal | 47 / 20 / 174 | 23.7% | 15 |
+| 114 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-inner-guard-v1-normal | 42 / 30 / 168 | 23.8% | 16 |
+| 116 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 174 / 2 / 48 | 78.1% | 0 |
+| 116 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-open-reserve-template-v1-normal | 165 / 1 / 58 | 73.9% | 0 |
 
 **Cycle 101:** Reassign one redundant capable pursuer to an uncovered disclosed mobile target while retaining the original primary attacker. Previously registered but never benchmarked; this campaign tests its first full-policy outcomes.
 
@@ -81,7 +87,9 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 
 **Cycle 110:** Retain an inner defender after an enemy Miner breaches the Fortress Bomb shell: swap the central Miner guard with a Sergeant, preserving all Bomb placements and the movement policy. A surviving recapture may defend better than a mutual Miner trade.
 
-No completed strength result. [Frozen plan](cycle-110-retained-inner-guard/plan.json).
+[Results and family breakdown](cycle-110-retained-inner-guard/result.json).
+- student-fortress-inner-guard-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -7.50 points; 95% paired interval [-14.37, -0.62].
+[Interpretation](cycle-110-retained-inner-guard/CONCLUSION.md).
 
 **Cycle 111:** Improve end-to-end honest play by assigning a Sergeant to the common inner Fortress guard post, retaining a surviving recapturer after a Miner breach instead of trading the original Miner guard.
 
@@ -89,9 +97,29 @@ No completed strength result. [Frozen plan](cycle-110-retained-inner-guard/plan.
 - student-fortress-inner-guard-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: +2.23 points; 95% paired interval [-4.24, +8.93].
 [Interpretation](cycle-111-inner-guard-honest-deployment/CONCLUSION.md).
 
+**Cycle 112:** Does the unchanged source-specific public Flag/Bomb inference improve end-to-end score against an honest Missions opponent on six previously unplayed synthetic generator families, relative to the same Fortress deployment without that inference?
+
+No completed strength result. [Frozen plan](cycle-112-heldout-generator-inference/plan.json).
+
+**Cycle 113:** Secondary robustness endpoint: does the exact unchanged source-inference champion versus native Fortress contrast transfer to the independently registered honest Guard opponent on a separately reserved cohort of novel-family layouts?
+
+No completed strength result. [Frozen plan](cycle-113-heldout-generator-guard-robustness/plan.json).
+
 **Cycle 114:** Does retaining a Sergeant behind the Fortress inner Bomb entrances improve the ordinary native AI without source-informed enemy inference? This tests whether the deployment idea is useful independently of the stronger desktop prior.
 
-No completed strength result. [Frozen plan](cycle-114-native-inner-guard/plan.json).
+[Results and family breakdown](cycle-114-native-inner-guard/result.json).
+- student-fortress-inner-guard-v1-normal minus student-fortress-deployment-v1-normal: -0.25 points; 95% paired interval [-6.62, +6.13].
+[Interpretation](cycle-114-native-inner-guard/CONCLUSION.md).
+
+**Cycle 115:** Activate the otherwise permanently isolated Fortress Lieutenant by relocating one outer Bomb into its old pocket, preserving the inner Flag barrier and the movement policy. The extra usable soldier may outweigh the altered outer defense.
+
+No completed strength result. [Frozen plan](cycle-115-open-reserve/plan.json).
+
+**Cycle 116:** Release Fortress’s permanently Bomb-isolated Lieutenant with one fixed own-deployment swap28/38, improving honest end-to-end play by retaining an additional mobile reserve once friendly corridors clear. Same public inference, move policy and random draws; Flag inner Bombs and guard unchanged.
+
+[Results and family breakdown](cycle-116-open-reserve-honest/result.json).
+- student-fortress-open-reserve-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -4.24 points; 95% paired interval [-10.71, +2.23].
+[Interpretation](cycle-116-open-reserve-honest/CONCLUSION.md).
 
 **Additional hypotheses evaluated before tournaments**
 

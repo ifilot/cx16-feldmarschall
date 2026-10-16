@@ -1,0 +1,120 @@
+{
+  "cycle": 110,
+  "hypotheses": [
+    "Retain an inner defender after an enemy Miner breaches the Fortress Bomb shell: swap the central Miner guard with a Sergeant, preserving all Bomb placements and the movement policy. A surviving recapture may defend better than a mutual Miner trade."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "wins": 83,
+      "draws": 45,
+      "losses": 123,
+      "score": 0.4203187250996016,
+      "errors": 5
+    },
+    "student-fortress-inner-guard-template-v1-normal": {
+      "wins": 69,
+      "draws": 43,
+      "losses": 139,
+      "score": 0.3605577689243028,
+      "errors": 5
+    }
+  },
+  "execution_seconds": {
+    "student-fortress-template-flag-bomb-v1-normal": 416.1937848989983,
+    "student-fortress-inner-guard-template-v1-normal": 215.00301874899742
+  },
+  "comparisons": {
+    "student-fortress-inner-guard-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_pairs": 120,
+      "pairs_by_family": {
+        "original-dos": 120
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.075,
+          "interval_95": [
+            -0.14375,
+            -0.00625
+          ],
+          "interval_98_3333": [
+            -0.15625,
+            0.008333333333333333
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 512,
+  "error_sensitivity": {
+    "student-fortress-inner-guard-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 32,
+        "negative_pairs": 52,
+        "zero_pairs": 36,
+        "non_tied_pairs": 84,
+        "exact_two_sided_binomial_sign_p": 0.037529533634413165,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 128,
+      "error_games_a": 5,
+      "error_games_b": 5,
+      "pairs_with_any_error": 8,
+      "arms": {
+        "a": {
+          "attempted_games": 256,
+          "error_games": 5,
+          "scored_games": 251,
+          "wins": 69,
+          "draws": 43,
+          "losses": 139,
+          "official_scored_score": 0.3605577689243028,
+          "all_attempt_score_bounds": [
+            0.353515625,
+            0.373046875
+          ]
+        },
+        "b": {
+          "attempted_games": 256,
+          "error_games": 5,
+          "scored_games": 251,
+          "wins": 83,
+          "draws": 45,
+          "losses": 123,
+          "official_scored_score": 0.4203187250996016,
+          "all_attempt_score_bounds": [
+            0.412109375,
+            0.431640625
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.078125,
+        -0.0390625
+      ],
+      "complete_case_pairs": 120,
+      "complete_case_paired_effect": -0.075
+    }
+  },
+  "errors": 10,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 512,
+  "family_standings": {
+    "student-fortress-template-flag-bomb-v1-normal": {
+      "original-dos": {
+        "student-fortress-template-flag-bomb-v1-normal": 0.4203187250996016,
+        "msdos-1990-v2-normal": 0.5796812749003984
+      }
+    },
+    "student-fortress-inner-guard-template-v1-normal": {
+      "original-dos": {
+        "student-fortress-inner-guard-template-v1-normal": 0.3605577689243028,
+        "msdos-1990-v2-normal": 0.6394422310756972
+      }
+    }
+  }
+}
