@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 78,
+  "attempts": 2240,
+  "errors_preserved_unscored": 41,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 4,
+  "exact_rebuild_runtime_sha256": {
+    "teacher-unweighted-beliefs-v1-normal": {
+      "engine": "847a0e5990b122c40f419eda0d93a0c24b66922b11af8a4e5f3305be36cb5b9a",
+      "observer": "42831af0ba50fcc852c033c6b2a3c8cee49f735b5fa39f170839700e0789b286",
+      "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+      "teacher_bot.py": "7aeb311461172588046b9b159d50fc31fbd8d21b7e9cbc0131a0b9616e8a8b93",
+      "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_swap_beliefs.py": "f9afefc5950f6c1064a384cb3363da486b63f8c5b9bac842266e1b22a6bee044",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "public-history-beliefs-v1.json": "3327ec168d4834c45e62e4f0576c47fd41e716904b4df4c8bee8d9ec2bd0f38b"
+    },
+    "teacher-swap-beliefs-v1-normal": {
+      "engine": "0d145ae286d5f1ce418f13058dd2bf2a0b61b83f07ffa9ed7509006f63ee743c",
+      "observer": "a29046789e1a9b0c0e163f6f69c0389b4b2ccacfb440b925ee3ca81d18e05463",
+      "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+      "teacher_bot.py": "7aeb311461172588046b9b159d50fc31fbd8d21b7e9cbc0131a0b9616e8a8b93",
+      "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_swap_beliefs.py": "f9afefc5950f6c1064a384cb3363da486b63f8c5b9bac842266e1b22a6bee044",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "public-history-beliefs-v1.json": "3327ec168d4834c45e62e4f0576c47fd41e716904b4df4c8bee8d9ec2bd0f38b"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    6
+  ],
+  "test_skip_summaries": []
+}

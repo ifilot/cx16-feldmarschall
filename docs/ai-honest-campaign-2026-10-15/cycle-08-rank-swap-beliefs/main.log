@@ -1,0 +1,8 @@
+Running teacher-context-v1-normal
+Verified teacher-context-v1-normal {'wins': 159, 'draws': 6, 'losses': 381, 'score': 0.2967032967032967}
+Running teacher-calibrated-beliefs-v1-normal
+Verified teacher-calibrated-beliefs-v1-normal {'wins': 167, 'draws': 8, 'losses': 376, 'score': 0.3103448275862069}
+Running teacher-unweighted-beliefs-v1-normal
+Verified teacher-unweighted-beliefs-v1-normal {'wins': 171, 'draws': 6, 'losses': 374, 'score': 0.3157894736842105}
+Running teacher-swap-beliefs-v1-normal
+Verified teacher-swap-beliefs-v1-normal {'wins': 153, 'draws': 8, 'losses': 390, 'score': 0.2849364791288566}

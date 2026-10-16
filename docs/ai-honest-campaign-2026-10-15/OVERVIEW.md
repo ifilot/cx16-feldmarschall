@@ -33,6 +33,10 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 7 | Fixed armies, seven stress families | student-exact-contact-risk-v1-normal | 142 / 12 / 261 | 35.7% | 5 |
 | 7 | Fixed armies, seven stress families | teacher-context-v1-normal | 116 / 7 / 288 | 29.1% | 9 |
 | 7 | Fixed armies, seven stress families | teacher-exact-contact-risk-v1-normal | 123 / 5 / 284 | 30.5% | 8 |
+| 8 | Fixed armies, seven stress families | teacher-context-v1-normal | 159 / 6 / 381 | 29.7% | 14 |
+| 8 | Fixed armies, seven stress families | teacher-calibrated-beliefs-v1-normal | 167 / 8 / 376 | 31.0% | 9 |
+| 8 | Fixed armies, seven stress families | teacher-unweighted-beliefs-v1-normal | 171 / 6 / 374 | 31.6% | 9 |
+| 8 | Fixed armies, seven stress families | teacher-swap-beliefs-v1-normal | 153 / 8 / 390 | 28.5% | 9 |
 | 9 | Own setup, seven stress families | student-guard-v1-normal | 204 / 35 / 172 | 53.9% | 9 |
 | 9 | Own setup, seven stress families | student-validated-deployment-v1-normal | 230 / 27 / 147 | 60.3% | 16 |
 | 9 | Own setup, seven stress families | teacher-context-v1-normal | 225 / 9 / 169 | 56.9% | 17 |
@@ -126,6 +130,16 @@ Evidence: [cycle-07-exact-contact-risk](cycle-07-exact-contact-risk/result.json)
 
 - student-exact-contact-risk-v1-normal minus student-guard-v1-normal: +3.3 percentage points; 95% paired interval [-1.3, +8.0].
 - teacher-exact-contact-risk-v1-normal minus teacher-context-v1-normal: +1.4 percentage points; 95% paired interval [-2.6, +5.5].
+
+
+**Cycle 8 hypotheses:** Reduce finite-eight-world importance-weight noise without increasing native rollout count.; Separate equal-weight proposal control from approximate posterior correction by rank-swap rejuvenation.
+
+Evidence: [cycle-08-rank-swap-beliefs](cycle-08-rank-swap-beliefs/result.json).
+
+- teacher-swap-beliefs-v1-normal minus teacher-calibrated-beliefs-v1-normal: -2.5 percentage points; 95% paired interval [-6.6, +1.7].
+- teacher-swap-beliefs-v1-normal minus teacher-unweighted-beliefs-v1-normal: -3.4 percentage points; 95% paired interval [-7.4, +0.7].
+- teacher-unweighted-beliefs-v1-normal minus teacher-calibrated-beliefs-v1-normal: +0.4 percentage points; 95% paired interval [-3.8, +4.5].
+- teacher-swap-beliefs-v1-normal minus teacher-context-v1-normal: -0.7 percentage points; 95% paired interval [-4.6, +3.3].
 
 
 **Cycle 9 hypotheses:** Validated deployment mixtures improve end-to-end honest play against DOS.; Measure deployment separately for native and Context move policies.
@@ -258,7 +272,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 
 **Registered experiments awaiting completed results:**
 
-- Cycle 8: Reduce finite-eight-world importance-weight noise without increasing native rollout count.; Separate equal-weight proposal control from approximate posterior correction by rank-swap rejuvenation. 2,240 planned attempts; no completed strength result. [Frozen plan](cycle-08-rank-swap-beliefs/plan.json).
 - Cycle 10: Prevent known two-turn Flag threats by deploying and retaining rank-capable interception coverage before immediate danger. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-10-preventive-flag-interception/plan.json).
 - Cycle 11: Connect public setup beliefs to hidden-capture values that the continuation correction currently subtracts.; Compare count-conditioned marginals against correlated setup marginals with identical frozen joint-sampled futures. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-11-belief-capture-values/plan.json).
 - Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
