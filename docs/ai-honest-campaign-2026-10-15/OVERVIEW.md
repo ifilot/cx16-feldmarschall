@@ -528,6 +528,22 @@ Sparse bridge/tactical score differences and intervals containing zero do not es
 [Interpretation and prespecified qualifications](cycle-42-template-q24-native-dos-screen/CONCLUSION.md).
 
 
+**Cycle 44 hypotheses:** A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan.
+
+Evidence: [cycle-44-public-forks-honest-generality](cycle-44-public-forks-honest-generality/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Both treatments use the same forced army population; compare their matched effects against this reference.
+
+- student-template-flag-bomb-v1-normal: 273 wins / 11 draws / 276 losses; score 49.7%; 0 unscored errors.
+- student-template-public-forks-v1-normal: 275 wins / 12 draws / 273 losses; score 50.2%; 0 unscored errors.
+
+- student-template-public-forks-v1-normal minus student-template-flag-bomb-v1-normal: +0.4 percentage points; 95% paired interval [-0.2, +1.2]; 98.3333% interval [-0.4, +1.4].
+
+Sparse bridge/tactical score differences and intervals containing zero do not establish policy equivalence. See the conclusion for non-tied pair counts, numerical scope and target-cost limits.
+
+[Interpretation and prespecified qualifications](cycle-44-public-forks-honest-generality/CONCLUSION.md).
+
+
 **Cycle 46 hypotheses:** The unchanged compact honest back-row population prior retains its DOS improvement over unchanged native play on a fresh independent fixed cohort.
 
 Evidence: [cycle-46-compact-backrow-independent-validation](cycle-46-compact-backrow-independent-validation/result.json).
@@ -620,7 +636,6 @@ Sparse bridge/tactical score differences and intervals containing zero do not es
 - Cycle 35: Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-35-home-interception-v2-dos-screen/plan.json).
 - Cycle 37: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-37-template-mobile-capture-dos-screen/plan.json).
 - Cycle 43: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-43-public-forks-dos-screen/plan.json).
-- Cycle 44: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-44-public-forks-honest-generality/plan.json).
 - Cycle 45: Exact public-evidence caching preserves native Q24 playing decisions and DOS outcomes while reducing inference preparation cost when evidence is unchanged. 800 planned comparison attempts; registered; no completed strength result. [Plan](cycle-45-template-exact-cache-bridge/plan.json).
 - Cycle 47: A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-47-capture-net-shared-control-screen/plan.json).
 
