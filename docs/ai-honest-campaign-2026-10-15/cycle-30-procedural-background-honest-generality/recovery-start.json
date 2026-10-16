@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-10-16T04:29:57.856254+00:00",
+  "method": "Reanalyse three immutable complete arms; run only absent fourth arm under unchanged frozen plan",
+  "complete_existing_arms": {
+    "student-template-flag-bomb-v1-normal.fmtour": "c9b6b464d44d0e36314a39d40307160e5d050e1f9e703fc526d9fe59c1373ce6",
+    "student-template-backrow-background-v1-normal.fmtour": "a4b4ac49c3f3d8314d716321bc92b655214c9e9576dafb1f29099a525c4ad5cd",
+    "student-template-structured-background-v1-normal.fmtour": "81fdebedbda854db60d3a4d8406968f7657764a8fd0bf6927535c4f535ad606d"
+  },
+  "prior_termination": 143,
+  "policy_changes": false,
+  "existing_game_decisions_rerun_or_replaced": false,
+  "existing_complete_artifacts_reanalysed_with_replay": true
+}

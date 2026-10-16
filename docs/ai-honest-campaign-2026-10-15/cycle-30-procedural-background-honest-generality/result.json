@@ -1,0 +1,355 @@
+{
+  "cycle": 30,
+  "hypotheses": [
+    "A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.",
+    "A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.",
+    "Removing the eight templates tests the strength and cost of a minimal source prior."
+  ],
+  "opponent": "student-guard-v1-normal",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "standings": {
+    "student-template-flag-bomb-v1-normal": {
+      "wins": 273,
+      "draws": 8,
+      "losses": 279,
+      "score": 0.49464285714285716,
+      "errors": 0
+    },
+    "student-template-backrow-background-v1-normal": {
+      "wins": 225,
+      "draws": 10,
+      "losses": 325,
+      "score": 0.4107142857142857,
+      "errors": 0
+    },
+    "student-template-structured-background-v1-normal": {
+      "wins": 208,
+      "draws": 19,
+      "losses": 333,
+      "score": 0.38839285714285715,
+      "errors": 0
+    },
+    "student-backrow-only-v1-normal": {
+      "wins": 225,
+      "draws": 10,
+      "losses": 325,
+      "score": 0.4107142857142857,
+      "errors": 0
+    }
+  },
+  "execution_seconds": {
+    "student-template-flag-bomb-v1-normal": 73.72208387400315,
+    "student-template-backrow-background-v1-normal": 73.53618198199547,
+    "student-template-structured-background-v1-normal": 83.36148639999737,
+    "student-backrow-only-v1-normal": 61.03410629699647
+  },
+  "comparisons": {
+    "student-template-backrow-background-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_pairs": 280,
+      "pairs_by_family": {
+        "fortified": 40,
+        "uniform": 40,
+        "unguarded": 40,
+        "forward": 40,
+        "decoy": 40,
+        "presets": 40,
+        "broad-mixed": 40
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.08392857142857142,
+          "interval_95": [
+            -0.13035714285714287,
+            -0.0375
+          ],
+          "interval_98_3333": [
+            -0.14107142857142857,
+            -0.027678571428571427
+          ]
+        }
+      }
+    },
+    "student-template-structured-background-v1-normal minus student-template-backrow-background-v1-normal": {
+      "complete_pairs": 280,
+      "pairs_by_family": {
+        "fortified": 40,
+        "uniform": 40,
+        "unguarded": 40,
+        "forward": 40,
+        "decoy": 40,
+        "presets": 40,
+        "broad-mixed": 40
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.022321428571428572,
+          "interval_95": [
+            -0.06607142857142857,
+            0.02142857142857143
+          ],
+          "interval_98_3333": [
+            -0.07589285714285714,
+            0.030357142857142857
+          ]
+        }
+      }
+    },
+    "student-backrow-only-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_pairs": 280,
+      "pairs_by_family": {
+        "fortified": 40,
+        "uniform": 40,
+        "unguarded": 40,
+        "forward": 40,
+        "decoy": 40,
+        "presets": 40,
+        "broad-mixed": 40
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.08392857142857142,
+          "interval_95": [
+            -0.13035714285714287,
+            -0.0375
+          ],
+          "interval_98_3333": [
+            -0.14107142857142857,
+            -0.027678571428571427
+          ]
+        }
+      }
+    },
+    "student-template-structured-background-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_pairs": 280,
+      "pairs_by_family": {
+        "fortified": 40,
+        "uniform": 40,
+        "unguarded": 40,
+        "forward": 40,
+        "decoy": 40,
+        "presets": 40,
+        "broad-mixed": 40
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.10625,
+          "interval_95": [
+            -0.15267857142857144,
+            -0.06160714285714286
+          ],
+          "interval_98_3333": [
+            -0.1625,
+            -0.05089285714285714
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 2240,
+  "error_sensitivity": {
+    "student-template-backrow-background-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 66,
+        "negative_pairs": 110,
+        "zero_pairs": 104,
+        "non_tied_pairs": 176,
+        "exact_two_sided_binomial_sign_p": 0.00112931791137213,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 280,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 225,
+          "draws": 10,
+          "losses": 325,
+          "official_scored_score": 0.4107142857142857,
+          "all_attempt_score_bounds": [
+            0.4107142857142857,
+            0.4107142857142857
+          ]
+        },
+        "b": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 273,
+          "draws": 8,
+          "losses": 279,
+          "official_scored_score": 0.49464285714285716,
+          "all_attempt_score_bounds": [
+            0.49464285714285716,
+            0.49464285714285716
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.08392857142857142,
+        -0.08392857142857142
+      ],
+      "complete_case_pairs": 280,
+      "complete_case_paired_effect": -0.08392857142857142
+    },
+    "student-template-structured-background-v1-normal minus student-template-backrow-background-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 74,
+        "negative_pairs": 78,
+        "zero_pairs": 128,
+        "non_tied_pairs": 152,
+        "exact_two_sided_binomial_sign_p": 0.8078463096035287,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 280,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 208,
+          "draws": 19,
+          "losses": 333,
+          "official_scored_score": 0.38839285714285715,
+          "all_attempt_score_bounds": [
+            0.38839285714285715,
+            0.38839285714285715
+          ]
+        },
+        "b": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 225,
+          "draws": 10,
+          "losses": 325,
+          "official_scored_score": 0.4107142857142857,
+          "all_attempt_score_bounds": [
+            0.4107142857142857,
+            0.4107142857142857
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.022321428571428572,
+        -0.022321428571428572
+      ],
+      "complete_case_pairs": 280,
+      "complete_case_paired_effect": -0.022321428571428572
+    },
+    "student-backrow-only-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 66,
+        "negative_pairs": 110,
+        "zero_pairs": 104,
+        "non_tied_pairs": 176,
+        "exact_two_sided_binomial_sign_p": 0.00112931791137213,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 280,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 225,
+          "draws": 10,
+          "losses": 325,
+          "official_scored_score": 0.4107142857142857,
+          "all_attempt_score_bounds": [
+            0.4107142857142857,
+            0.4107142857142857
+          ]
+        },
+        "b": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 273,
+          "draws": 8,
+          "losses": 279,
+          "official_scored_score": 0.49464285714285716,
+          "all_attempt_score_bounds": [
+            0.49464285714285716,
+            0.49464285714285716
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.08392857142857142,
+        -0.08392857142857142
+      ],
+      "complete_case_pairs": 280,
+      "complete_case_paired_effect": -0.08392857142857142
+    },
+    "student-template-structured-background-v1-normal minus student-template-flag-bomb-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 46,
+        "negative_pairs": 99,
+        "zero_pairs": 135,
+        "non_tied_pairs": 145,
+        "exact_two_sided_binomial_sign_p": 1.2750518826770136e-05,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 280,
+      "error_games_a": 0,
+      "error_games_b": 0,
+      "pairs_with_any_error": 0,
+      "arms": {
+        "a": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 208,
+          "draws": 19,
+          "losses": 333,
+          "official_scored_score": 0.38839285714285715,
+          "all_attempt_score_bounds": [
+            0.38839285714285715,
+            0.38839285714285715
+          ]
+        },
+        "b": {
+          "attempted_games": 560,
+          "error_games": 0,
+          "scored_games": 560,
+          "wins": 273,
+          "draws": 8,
+          "losses": 279,
+          "official_scored_score": 0.49464285714285716,
+          "all_attempt_score_bounds": [
+            0.49464285714285716,
+            0.49464285714285716
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.10625,
+        -0.10625
+      ],
+      "complete_case_pairs": 280,
+      "complete_case_paired_effect": -0.10625
+    }
+  },
+  "errors": 0,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 2240
+}

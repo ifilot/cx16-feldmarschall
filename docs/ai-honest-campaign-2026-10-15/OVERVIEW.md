@@ -404,6 +404,25 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 [Interpretation and prespecified qualifications](cycle-29-procedural-background-screen/CONCLUSION.md).
 
 
+**Cycle 30 hypotheses:** A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior.
+
+Evidence: [cycle-30-procedural-background-honest-generality](cycle-30-procedural-background-honest-generality/result.json).
+
+Opponent: student-guard-v1-normal. These are honest-opponent results, excluded from the DOS table. Both treatments use the same forced army population; compare their matched effects against this reference.
+
+- student-template-flag-bomb-v1-normal: 273 wins / 8 draws / 279 losses; score 49.5%; 0 unscored errors.
+- student-template-backrow-background-v1-normal: 225 wins / 10 draws / 325 losses; score 41.1%; 0 unscored errors.
+- student-template-structured-background-v1-normal: 208 wins / 19 draws / 333 losses; score 38.8%; 0 unscored errors.
+- student-backrow-only-v1-normal: 225 wins / 10 draws / 325 losses; score 41.1%; 0 unscored errors.
+
+- student-template-backrow-background-v1-normal minus student-template-flag-bomb-v1-normal: -8.4 percentage points; 95% paired interval [-13.0, -3.8]; 98.3333% interval [-14.1, -2.8].
+- student-template-structured-background-v1-normal minus student-template-backrow-background-v1-normal: -2.2 percentage points; 95% paired interval [-6.6, +2.1]; 98.3333% interval [-7.6, +3.0].
+- student-backrow-only-v1-normal minus student-template-flag-bomb-v1-normal: -8.4 percentage points; 95% paired interval [-13.0, -3.8]; 98.3333% interval [-14.1, -2.8].
+- student-template-structured-background-v1-normal minus student-template-flag-bomb-v1-normal: -10.6 percentage points; 95% paired interval [-15.3, -6.2]; 98.3333% interval [-16.2, -5.1].
+
+[Interpretation and prespecified qualifications](cycle-30-procedural-background-honest-generality/CONCLUSION.md).
+
+
 **Cycle 31 hypotheses:** A minimal honest back-row Flag population prior improves native play without external posterior arrays or rollouts.; The compact integer evaluator retains useful strength relative to the Python pure-prior prototype while fitting the CX16.
 
 Evidence: [cycle-31-compact-backrow-dos-screen](cycle-31-compact-backrow-dos-screen/result.json).
@@ -632,7 +651,6 @@ Sparse bridge/tactical score differences and intervals containing zero do not es
 - Cycle 11: Connect public setup beliefs to hidden-capture values that the continuation correction currently subtracts.; Compare count-conditioned marginals against correlated setup marginals with identical frozen joint-sampled futures. 1,680 planned comparison attempts; registered; no completed strength result. [Plan](cycle-11-belief-capture-values/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned comparison attempts; registered; no completed strength result. [Plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned comparison attempts; registered; no completed strength result. [Plan](cycle-20-own-objective-beliefs/plan.json).
-- Cycle 30: A source-faithful procedural background improves honest native Flag/Bomb objectives over the frozen opening-template mixture.; A cheap backrow-only background separates the simple Flag-row fact from richer screen/Bomb inference.; Removing the eight templates tests the strength and cost of a minimal source prior. 2,240 planned comparison attempts; registered; no completed strength result. [Plan](cycle-30-procedural-background-honest-generality/plan.json).
 - Cycle 35: Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-35-home-interception-v2-dos-screen/plan.json).
 - Cycle 37: Retaining already-computed per-piece mobile rank inference improves native hidden-capture choices over discarding that inference, without changing the Flag/Bomb prior or adding search. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-37-template-mobile-capture-dos-screen/plan.json).
 - Cycle 43: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 2,000 planned comparison attempts; registered; no completed strength result. [Plan](cycle-43-public-forks-dos-screen/plan.json).
