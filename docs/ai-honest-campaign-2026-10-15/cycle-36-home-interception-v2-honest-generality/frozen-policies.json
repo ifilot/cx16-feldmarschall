@@ -1,0 +1,117 @@
+{
+  "student-template-flag-bomb-v1-normal": {
+    "id": "student-template-flag-bomb-v1-normal",
+    "name": "student-template-flag-bomb-v1-normal",
+    "description": "Use the eight original opening hypotheses to direct native Flag/Bomb objectives without rollouts.",
+    "sources": [
+      "src/native/engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "src/core/ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "defines": [
+      "AI_MISSIONS",
+      "AI_MEMORY",
+      "AI_STUDENT",
+      "AI_STUDENT_V2",
+      "AI_STUDENT_PRODUCTION",
+      "AI_STUDENT_COOP_GUARD",
+      "AI_POLICY_DEPLOYMENT",
+      "AI_BELIEF_PRIORS",
+      "AI_TEST",
+      "AI_DIAGNOSTICS"
+    ],
+    "difficulty": "normal",
+    "status": "experimental",
+    "include_dirs": [],
+    "model": "Fixed source-informed 80% opening-template mixture plus 20% uniform legal-army background. Native evaluator receives only Flag/Bomb marginals; mobile ranks remain exchangeable.",
+    "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+    "driver": "native-template",
+    "driver_args": [],
+    "archive": "ai/sources/5cef7d331c58311f6bddde3eb03142e02ed3488b4a9d62fd7d9058b9840cb194.zip",
+    "source_sha256": "5cef7d331c58311f6bddde3eb03142e02ed3488b4a9d62fd7d9058b9840cb194"
+  },
+  "student-template-home-interceptor-v2-normal": {
+    "id": "student-template-home-interceptor-v2-normal",
+    "name": "student-template-home-interceptor-v2-normal",
+    "description": "Corrected public home-interception schedule with legal enemy shuttle-reset detours and unchanged opening prior.",
+    "sources": [
+      "src/native/engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "src/core/ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "defines": [
+      "AI_MISSIONS",
+      "AI_MEMORY",
+      "AI_STUDENT",
+      "AI_STUDENT_V2",
+      "AI_STUDENT_PRODUCTION",
+      "AI_STUDENT_COOP_GUARD",
+      "AI_POLICY_DEPLOYMENT",
+      "AI_BELIEF_PRIORS",
+      "AI_TEST",
+      "AI_DIAGNOSTICS",
+      "AI_TRACE"
+    ],
+    "difficulty": "normal",
+    "status": "experimental",
+    "include_dirs": [],
+    "model": "Unchanged source-template Flag/Bomb prior plus public stationary-piece home-interception schedule. Intact two-Bomb corner screen and exactly one routed disclosed Miner at least3actions away. After each quiet candidate require guarddistance+2<=MinerFlagdistance, or no invasion route. Certify alternatives against disclosed actor/guard threats; demote only failed schedules below the best certified quiet move. Captures, immediatewins, currenturgentFlagdefense and all rawschedule-feasible scores remain unchanged. No search/world additions or persistent garrison role. Enemy Miner ETA uses an initial/later route state with origin vacated, so a legal initial detour can reset a binding two-square ban; guard distance remains conservative simple-path.",
+    "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+    "driver": "native-template",
+    "driver_args": [
+      "--home-interceptor"
+    ],
+    "archive": "ai/sources/7965331e0d58a3bd06ae40919c86e94e29773f3bd511174eb242c9f533c6f1ad.zip",
+    "source_sha256": "7965331e0d58a3bd06ae40919c86e94e29773f3bd511174eb242c9f533c6f1ad"
+  },
+  "student-guard-v1-normal": {
+    "id": "student-guard-v1-normal",
+    "name": "Guarded Student v1 / Normal",
+    "description": "Production 186-byte learned corrections with assigned cooperation jobs protected.",
+    "sources": [
+      "src/native/engine.c",
+      "src/core/pieces.c",
+      "src/core/board.c",
+      "src/core/rules.c",
+      "src/core/setup.c",
+      "src/core/random.c",
+      "src/core/ai_deploy.c",
+      "src/core/ai.c",
+      "src/core/ai_level.c",
+      "src/core/ai_mission.c",
+      "src/core/ai_memory.c",
+      "src/core/ai_student.c"
+    ],
+    "defines": [
+      "AI_MISSIONS",
+      "AI_MEMORY",
+      "AI_STUDENT",
+      "AI_STUDENT_V2",
+      "AI_STUDENT_PRODUCTION",
+      "AI_STUDENT_COOP_GUARD"
+    ],
+    "difficulty": "normal",
+    "status": "production",
+    "include_dirs": [],
+    "archive": "ai/sources/e58aa722d6e49abb88a5eef383a32b2838c709fedf05af4b3f842b32d75db953.zip",
+    "source_sha256": "e58aa722d6e49abb88a5eef383a32b2838c709fedf05af4b3f842b32d75db953"
+  }
+}

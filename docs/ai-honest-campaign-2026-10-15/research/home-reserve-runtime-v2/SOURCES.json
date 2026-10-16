@@ -1,0 +1,22 @@
+{
+  "tools/campaign_home_reserve.py": {
+    "bytes": 9119,
+    "sha256": "dc9f4357ab83f2a5cef66ff06cd2eb509e353c687c95f34329223c9fc5ddcf15"
+  },
+  "tools/test_campaign_home_reserve.py": {
+    "bytes": 11743,
+    "sha256": "cba45525dc56880f5502a1edac40457aae0354e9ac3d752c4fbe3344b3192a93"
+  },
+  "tools/test_home_reserve_adapter.py": {
+    "bytes": 2636,
+    "sha256": "3e68c4b4475f8aced61f5070431ea9502d90277f259b173c80979405818b9d2b"
+  },
+  "tools/campaign_flag_guard.py": {
+    "bytes": 7943,
+    "sha256": "d9eddff94c0957acd6e899671fefbed72f789ccff904fd6e8ac2fc9e3dc10fee"
+  },
+  "tools/feldmarschall.py": {
+    "bytes": 9639,
+    "sha256": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+  }
+}

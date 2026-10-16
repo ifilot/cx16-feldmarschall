@@ -1,0 +1,8 @@
+{
+  "frozen_baseline": "student-template-flag-bomb-v1-normal",
+  "old_policy_exact_rebuild": true,
+  "decisions_both_sides": 160,
+  "ranked_single_search_no_correction_move_parity": true,
+  "public_boards_and_actual_choice_history_equal": true,
+  "scope": "One completed C21 screening game,160public-historydecisions; correction patchedzero only for ranked/noop RNG+state parity. Real correction checked separately."
+}

@@ -11,7 +11,7 @@ import math
 from campaign_flag_guard import clone, confirmed_danger, position_from_public
 from feldmarschall import FLAG, LAKES, battle
 
-VERSION = 'public-home-reserve-v1'
+VERSION = 'public-home-reserve-v2'
 
 
 def neighbors(square):
@@ -24,24 +24,31 @@ def neighbors(square):
 
 
 def miner_distance(position, army, source, flag):
-    """Fastest surviving single-Miner route with all other pieces fixed."""
-    queue = deque([(source, 0)])
-    visited = {source}
+    """Fastest surviving single-Miner route with all other pieces fixed.
+
+    Initial and later states differ: a legal detour can reset a current shuttle
+    ban and return to the vacated source before taking the formerly banned edge.
+    Once that initial restriction is discharged, a shortest continuation needs
+    no further cycle. Only the original source has distinct initial/later nodes.
+    """
+    queue = deque([(source, 0, True)])
+    visited = {(source, True)}
     previous_from, previous_to, count = position.shuttle[1-army]
     while queue:
-        square, distance = queue.popleft()
+        square, distance, initial = queue.popleft()
         if square == flag:
             return distance
         for target in neighbors(square):
-            if target in visited:
+            state = (target, False)
+            if state in visited:
                 continue
-            if distance == 0 and count >= 5 and square == previous_to and target == previous_from:
+            if initial and count >= 5 and square == previous_to and target == previous_from:
                 continue
             cell = position.cells[target]
-            if cell and (cell[0] != army or battle(7, cell[1]) != 'attacker'):
+            if target != source and cell and (cell[0] != army or battle(7, cell[1]) != 'attacker'):
                 continue
-            visited.add(target)
-            queue.append((target, distance+1))
+            visited.add(state)
+            queue.append((target, distance+1, False))
     return None
 
 

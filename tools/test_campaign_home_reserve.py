@@ -1,5 +1,6 @@
 """Public deadline mechanics and tactical exceptions, without match tuning."""
 import copy
+from collections import deque
 import unittest
 
 from campaign_flag_guard import clone
@@ -39,7 +40,72 @@ def play(position,move):
         position.move(source,target)
 
 
+def explicit_miner_minimum(position, army, source, flag, limit=8):
+    """Independent oracle: actual legal moves, fights and shuttle transitions."""
+    queue=deque([(clone(position),source,0)])
+    visited=set()
+    while queue:
+        state,square,depth=queue.popleft()
+        if depth>=limit:continue
+        key=(square,tuple(state.shuttle[1-army]),
+             tuple(tuple(cell) if cell else None for cell in state.cells))
+        if key in visited:continue
+        visited.add(key)
+        for move in state.moves(1-army):
+            if move[0]!=square:continue
+            branch=clone(state);play(branch,move)
+            actor=branch.cells[move[1]]
+            if not actor or actor[:2]!=[1-army,7]:continue
+            if move[1]==flag:return depth+1
+            queue.append((branch,move[1],depth+1))
+    return None
+
+
+def shuttle_fixture(block_long_route=True):
+    position=Position()
+    for square,army,rank in [(0,0,11),(1,0,10),(10,0,10),(11,0,6),
+                             (12,0,6),(3,1,7),(99,1,11)]:
+        position.cells[square]=[army,rank,True,True]
+    if block_long_route:position.cells[20]=[0,6,True,True]
+    position.shuttle[1]=(2,3,5)
+    return position
+
+
 class HomeReserveTests(unittest.TestCase):
+    def test_shuttle_reset_detour_revisits_vacated_source_then_captures_flag(self):
+        position=shuttle_fixture()
+        self.assertNotIn((3,2),position.moves(1))
+        self.assertEqual(miner_distance(position,0,3,0),5)
+        self.assertEqual(explicit_miner_minimum(position,0,3,0),5)
+        for move in [(3,4),(4,3),(3,2),(2,1),(1,0)]:
+            self.assertIn(move,position.moves(1));play(position,move)
+        self.assertEqual(position.cells[0][:2],[1,7])
+        rotated=Position()
+        for square,cell in enumerate(shuttle_fixture().cells):
+            if cell:rotated.cells[99-square]=[1-cell[0],*cell[1:]]
+        rotated.shuttle[0]=(97,96,5)
+        self.assertEqual(miner_distance(rotated,1,96,99),5)
+        self.assertEqual(explicit_miner_minimum(rotated,1,96,99),5)
+
+    def test_shuttle_detour_beats_available_longer_simple_route(self):
+        position=shuttle_fixture(False)
+        long_route=[(3,13),(13,23),(23,22),(22,21),(21,20),(20,10),(10,0)]
+        branch=clone(position)
+        for move in long_route:
+            self.assertIn(move,branch.moves(1));play(branch,move)
+        self.assertGreater(len(long_route),5)
+        self.assertEqual(miner_distance(position,0,3,0),5)
+        self.assertEqual(explicit_miner_minimum(position,0,3,0),5)
+
+    def test_enemy_eta_matches_explicit_legal_enumeration_with_capture_detours(self):
+        for count in (0,1,4,5,6):
+            for captured_rank in (None,8,10):
+                position=shuttle_fixture(False);position.shuttle[1]=(2,3,count)
+                if captured_rank is not None:position.cells[4]=[0,captured_rank,False,False]
+                self.assertEqual(miner_distance(position,0,3,0),
+                                 explicit_miner_minimum(position,0,3,0),
+                                 (count,captured_rank))
+
     def test_timely_deployment_changes_quiet_order_without_changing_preferred_scores(self):
         position=fixture();scores={move:100 if move==(22,23) else 0 for move in position.moves(0)}
         delta,report=run(position,scores)
