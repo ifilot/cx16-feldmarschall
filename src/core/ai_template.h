@@ -1,6 +1,9 @@
 #ifndef AI_TEMPLATE_H
 #define AI_TEMPLATE_H
 #include <stdint.h>
+#if defined(AI_TEMPLATE_PRIOR_Q24_CACHE) && !defined(AI_TEMPLATE_PRIOR_Q24)
+#error AI_TEMPLATE_PRIOR_Q24_CACHE requires AI_TEMPLATE_PRIOR_Q24
+#endif
 #ifdef __CC65__
 #define AI_TEMPLATE_FAST __fastcall__
 #else
@@ -23,6 +26,9 @@ void AI_TEMPLATE_FAST ai_template_actor(uint8_t rank);
 void ai_template_forget(void);
 /* Establish origins on a complete deployment before any first disclosure. */
 void ai_template_start(void);
+#ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+void ai_template_cache_reset(void);
+#endif
 uint8_t AI_TEMPLATE_FAST ai_template_export(uint8_t owner);
 uint8_t ai_template_build(void);
 void AI_TEMPLATE_FAST ai_template_copy(uint8_t rank);
@@ -33,6 +39,10 @@ uint32_t ai_template_test_evidence(void);
 uint8_t ai_template_test_mask(void);
 uint8_t ai_template_test_rank(uint8_t table,uint8_t origin);
 int16_t ai_template_test_cache(uint8_t rank,uint8_t origin);
+#ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+uint8_t ai_template_test_cache_hit(void);
+void ai_template_test_cache_poison(void);
+#endif
 #endif
 #endif
 #endif

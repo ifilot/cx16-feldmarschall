@@ -422,6 +422,8 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 
 - Native Q24 source-template research prototype: the standard link overflows MAIN by 232 bytes; an explicit experimental runtime-helper relocation recipe links with 84 MAIN and 81 AI-bank bytes free. Three layouts cover 96 real banked decisions with matching moves, probabilities and signed gain caches; 32 also compare output RNG state. Music remains active, with 996 stack-canary bytes untouched in these traces. Maximum observed whole-AI cost is about 1.48 seconds at an assumed 8 MHz. This qualifies a distinct numerical policy for cycle 42, without enabling production or establishing strength. [Evidence](research/template-target-prototype-v1/README.md).
 
+- Exact public-evidence cache V2: 1,940 historical decisions preserve moves, RNG, probabilities and gains exactly, with 1,276 natural cache hits. The 48-decision actual-target retention fixture measures preparation at 16–21 ms on hits versus 0.98–1.10 seconds on misses; it does not measure a natural target average. Cache-off native and five target binaries remain byte-identical to V1. The custom link leaves 66 MAIN bytes free; production remains off. [Evidence](research/template-target-cache-v2/README.md).
+
 
 **Registered experiments awaiting completed results:**
 
@@ -439,5 +441,6 @@ Opponent: student-guard-v1-normal. These are honest-opponent results, excluded f
 - Cycle 42: An honest source-template prior implemented entirely in native C retains useful DOS strength while fitting a separately banked CX16 research target.; The explicitly distinct Q24/inventory-rounding numerical policy retains practical strength relative to the floating host bridge. 3,000 planned attempts; no completed strength result. [Frozen plan](cycle-42-template-q24-native-dos-screen/plan.json).
 - Cycle 43: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-43-public-forks-dos-screen/plan.json).
 - Cycle 44: A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-44-public-forks-honest-generality/plan.json).
+- Cycle 45: Exact public-evidence caching preserves native Q24 playing decisions and DOS outcomes while reducing inference preparation cost when evidence is unchanged. 800 planned attempts; no completed strength result. [Frozen plan](cycle-45-template-exact-cache-bridge/plan.json).
 - Cycle 46: The unchanged compact honest back-row population prior retains its DOS improvement over unchanged native play on a fresh independent fixed cohort. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-46-compact-backrow-independent-validation/plan.json).
 

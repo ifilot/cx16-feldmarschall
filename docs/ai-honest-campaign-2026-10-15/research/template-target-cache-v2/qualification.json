@@ -1,0 +1,113 @@
+{
+  "schema": "template-target-exact-cache-v2-qualification",
+  "research_only": true,
+  "registered": false,
+  "source_sha256": {
+    "src/core/ai.c": "32ca332fa266e413ef909952e24c1d3dd00a3313359af7b030cbbf767508f03e",
+    "src/core/ai_template.c": "877070fe6621ba7a7354767283485462df1b48fca40f1c8c033ca6b78e8dbab8",
+    "src/core/ai_template.h": "e558b7211f6aaa3fead40aac87c583865fbff260b415494e75cd3cfa3c2c93ae",
+    "src/ui/ai_template_bank.s": "ab62b656328c878cc8c6d5b3ac4b8817f5e26da74a81e776132b6cd792a3a94d",
+    "tools/test_campaign_template_cache.py": "cc70bac40c12faad8500f73660afbe111d92ea9b3e8d2aabc3cb96a27b4080e1",
+    "tools/test_campaign_template_cache_banked.py": "8431dc09e8025373f6c5318df1d1b41aba96c0c3080a4740c4d0466edf438e26",
+    "tools/analyze_campaign_template_cache.py": "e200dcf601269bbcbdf10938fcabbd97397950aea99151f0ab8fda6e6d555787"
+  },
+  "source_archive_sha256": "9ee72f9a9710369af98f59ff36a7099e8a1b993d197e8bbb6a9260a9987fafcf",
+  "guard": "AI_TEMPLATE_PRIOR_Q24_CACHE requires AI_TEMPLATE_PRIOR_Q24",
+  "native_tests": 11,
+  "native_historical": {
+    "decisions": 1940,
+    "hits": 1276,
+    "misses": 664,
+    "moves_rng_q12_cache_all_identical": true,
+    "wall_seconds": {
+      "0": 0.1456927120088949,
+      "1": 0.1282128520324477
+    }
+  },
+  "cache_off_native_byte_identical": true,
+  "cache_off_full_target_byte_identical": true,
+  "actual_banked": {
+    "decisions": 48,
+    "layouts": 1,
+    "both_armies": true,
+    "hit_count": 19,
+    "miss_count": 29,
+    "all_moves_output_rng_Q12_gaincache_identical_to_frozen_V1": true,
+    "mechanical_fixture": "Restore each owner previous ACTUAL bank25 BSS snapshot before its next AI call, simulating retained same-owner cache in a two-AI demo; fresh collect decides hit or miss.",
+    "poison_before_real_ai_reset": "All bank25 BSS value arrays A5; cache key matches initial opening, ownerRed/lost0/valid1. Actual ai_reset clears validity; first prepare misses.",
+    "hit_prepare_cycles": {
+      "min": 130869,
+      "median": 148387,
+      "max": 171063
+    },
+    "miss_prepare_cycles": {
+      "min": 7840487,
+      "median": 8164526,
+      "max": 8833706
+    },
+    "hit_whole_ai_cycles": [
+      3153679,
+      2762361,
+      2979647,
+      3311624,
+      2662919,
+      3322705,
+      2702605,
+      3281610,
+      2946367,
+      3214674,
+      3177711,
+      3192573,
+      3195607,
+      3317965,
+      3491703,
+      3017454,
+      3411180,
+      3035142,
+      3515368
+    ],
+    "miss_whole_ai_cycles": [
+      11148945,
+      10658920,
+      11373827,
+      10730387,
+      11382506,
+      10950499,
+      11366902,
+      11155041,
+      11055631,
+      11289737,
+      11285890,
+      10942093,
+      11308423,
+      10752061,
+      11431290,
+      10673045,
+      11410460,
+      10803319,
+      11267996,
+      10701179,
+      11346721,
+      10892055,
+      10864356,
+      10902017,
+      10977340,
+      10763105,
+      10908967,
+      11110505,
+      10803979
+    ],
+    "audio_active": true,
+    "minimum_untouched_stack": 996
+  },
+  "free_bytes": {
+    "AI": 78,
+    "MISSION": 245,
+    "PLAY": 154,
+    "BELIEF": 974,
+    "MAIN": 66
+  },
+  "runtime_relocation_custom_recipe_still_required": true,
+  "no_production_builder_or_toolchain_changes": true,
+  "no_saved_strength_games": true
+}

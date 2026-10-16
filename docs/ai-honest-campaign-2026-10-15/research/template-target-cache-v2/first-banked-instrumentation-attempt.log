@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/test_campaign_template_cache_banked.py", line 216, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/test_campaign_template_cache_banked.py", line 51, in main
+    assert private_read('cache_valid',1)==[165]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

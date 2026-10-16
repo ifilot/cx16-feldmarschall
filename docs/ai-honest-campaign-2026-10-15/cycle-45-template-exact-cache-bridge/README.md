@@ -1,0 +1,1 @@
+Exact cache regression bridge with separately recorded target performance evidence. No new playing-strength hypothesis, production enablement or equivalence claim. Saved cohort requires exact paired trajectory/error comparison in addition to the standard full replay.

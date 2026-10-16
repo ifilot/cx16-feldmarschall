@@ -1,4 +1,5 @@
 /* Fixed public Colonel-template mixture; opt-in Q24 numerical research policy. */
+#include "ai_template.h"
 #ifdef AI_TEMPLATE_PRIOR_Q24
 #pragma static-locals (on)
 #include <string.h>
@@ -34,6 +35,9 @@ void AI_TEMPLATE_FAST ai_template_actor(uint8_t rank) {
 #pragma bss-name ("BELIEFBSS")
 #define ai_template_build ai_template_build_banked
 #define ai_template_copy ai_template_copy_banked
+#ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+#define ai_template_cache_reset ai_template_cache_reset_banked
+#endif
 #endif
 #define ONE 16777216L
 #define Q12 4096u
@@ -54,6 +58,12 @@ static uint16_t flag_q[40], bomb_q[40], flag_remainder[40], bomb_remainder[40];
 static uint8_t increments[40], capacity[40];
 static int16_t cache[12][40], worth[12];
 static int32_t evidence, background;
+#ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+/* Key bit64 represents dead origins; source history byte remains unchanged. */
+static uint8_t cache_key[40], cache_owner, cache_marshal_lost, cache_bombs_lost;
+static uint8_t cache_valid, cache_hit;
+void ai_template_cache_reset(void) { cache_valid=cache_hit=0; }
+#endif
 
 /* Binary fixed-point division, avoiding an unavailable 64-bit intermediate. */
 static int32_t fraction(int32_t numerator,int32_t denominator) {
@@ -176,7 +186,19 @@ uint8_t ai_template_build(void) {
     uint8_t a,r,i;
     int32_t mobile_gain,immobile,numerator,denominator;
     ai_template_status=AI_TEMPLATE_PUBLIC;
+    #ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+    cache_hit=0;
+    #endif
     if(!collect())return 0;
+#ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+    if(cache_valid && cache_owner==ai_template_owner &&
+       cache_marshal_lost==rules_known_lost[ai_template_owner?0:1][0] &&
+       cache_bombs_lost==rules_known_lost[ai_template_owner?0:1][10]) {
+        for(i=0;i<40;i++)if(cache_key[i]!=(history[i]|(history[40+i]==NOWHERE?64:0)))break;
+        if(i==40) {cache_hit=1;ai_template_status=AI_TEMPLATE_READY;return 1;}
+    }
+    cache_valid=0;
+#endif
     ai_template_status=AI_TEMPLATE_QUANTIZATION;
     if(!quantize())return 0;
     memcpy(worth,values,sizeof(worth));
@@ -198,6 +220,13 @@ uint8_t ai_template_build(void) {
             else cache[a][i]=numerator/denominator;
         }
     }
+#ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+    for(i=0;i<40;i++)cache_key[i]=history[i]|(history[40+i]==NOWHERE?64:0);
+    cache_owner=ai_template_owner;
+    cache_marshal_lost=rules_known_lost[ai_template_owner?0:1][0];
+    cache_bombs_lost=rules_known_lost[ai_template_owner?0:1][10];
+    cache_valid=1;
+#endif
     ai_template_status=AI_TEMPLATE_READY;
     return 1;
 }
@@ -216,5 +245,9 @@ uint32_t ai_template_test_evidence(void) {return evidence;}
 uint8_t ai_template_test_mask(void) {return allowed;}
 uint8_t ai_template_test_rank(uint8_t table,uint8_t origin) {return templates[table][origin];}
 int16_t ai_template_test_cache(uint8_t rank,uint8_t origin) {return cache[rank][origin];}
+#ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+uint8_t ai_template_test_cache_hit(void) {return cache_hit;}
+void ai_template_test_cache_poison(void) {memset(cache_key,165,40);cache_valid=cache_hit=cache_owner=cache_marshal_lost=cache_bombs_lost=165;}
+#endif
 #endif
 #endif

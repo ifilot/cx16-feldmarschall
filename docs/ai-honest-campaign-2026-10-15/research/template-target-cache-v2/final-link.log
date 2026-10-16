@@ -1,0 +1,27 @@
+{
+  "returncode": 0,
+  "free_bytes": {
+    "AI": 78,
+    "MISSION": 245,
+    "PLAY": 154,
+    "BELIEF": 974,
+    "MAIN": 66
+  },
+  "relocated_members": [
+    "asleax1.o",
+    "asleax4.o",
+    "asreax4.o",
+    "land.o",
+    "lbneg.o",
+    "lcmp.o",
+    "lge.o",
+    "lgt.o",
+    "linc.o",
+    "lne.o",
+    "lsave.o",
+    "lsub.o",
+    "lsubeqsp.o",
+    "steaxsp.o"
+  ],
+  "checked_C_references": 24
+}

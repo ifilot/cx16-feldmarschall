@@ -67,4 +67,18 @@ saved_history: .res 1
  sta $00
  rts
 .endproc
+.ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+.export _ai_template_cache_reset
+.import _ai_template_cache_reset_banked
+.proc _ai_template_cache_reset
+ lda $00
+ sta saved_inference
+ lda #25
+ sta $00
+ jsr _ai_template_cache_reset_banked
+ lda saved_inference
+ sta $00
+ rts
+.endproc
+.endif
 .endif

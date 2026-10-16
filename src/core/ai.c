@@ -22,7 +22,7 @@
 
 #include <string.h>
 #include "ai.h"
-#ifdef AI_TEMPLATE_PRIOR_Q24
+#if defined(AI_TEMPLATE_PRIOR_Q24) || defined(AI_TEMPLATE_PRIOR_Q24_CACHE)
 #include "ai_template.h"
 #if defined(AI_BELIEF_PRIORS) || defined(AI_BACKROW_PRIOR) || !defined(AI_MEMORY)
 #error Template source prior requires memory and its own numerical interface
@@ -1030,6 +1030,9 @@ static void retain(uint8_t from, uint8_t to, int16_t score) {
 }
 
 void ai_reset(void) {
+#ifdef AI_TEMPLATE_PRIOR_Q24_CACHE
+    ai_template_cache_reset();
+#endif
 #ifdef AI_TEMPLATE_PRIOR_Q24
     ai_template_valid=0;
 #endif
