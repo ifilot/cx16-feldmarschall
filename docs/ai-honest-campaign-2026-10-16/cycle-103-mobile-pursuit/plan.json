@@ -1,0 +1,72 @@
+{
+  "cycle": 103,
+  "baseline": "student-fortress-template-flag-bomb-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-fortress-template-flag-bomb-v1-normal",
+    "student-fortress-template-mobile-goals-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-fortress-template-mobile-goals-v1-normal",
+      "name": "Fortress Student with public mobile pursuit v1 / Normal",
+      "description": "Use full per-token mobile-rank beliefs only for long-range pursuit goals, retaining capture values, risk, deployment and RNG.",
+      "sources": [
+        "tools/new_campaign_objectives_engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "tools/new_campaign_objectives_ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_DEPLOY_FORTRESS_ONLY"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Same80%publicDOSsource-template plus20%uniformlegalbackground; Q12Flag/Bombcaptureexpectations unchanged. Conditionalmobilegainreplacesexchangeablemeanonlyinplan(),withtruncation/exchangeablefallback.Noaddedsearch.",
+      "information_model": "Own army, public events and declared population prior only; no concealed referee ranks or opponent setup.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-goals"
+      ]
+    }
+  ],
+  "seed": 3103001,
+  "rounds": 128,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "Retain already computed token-specific mobile-rank beliefs when choosing pursuit goals, rather than discarding that information before long-range routing. Immediate capture and danger values remain unchanged."
+  ],
+  "contrasts": [
+    [
+      "student-fortress-template-mobile-goals-v1-normal",
+      "student-fortress-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed single-contrast exploratory screen256attemptsperarm; paired95%interval with finite missing-score bounds; no promotion or equivalenceclaimfromsparsechanges. SameFortressdeployment and same originalDOSarmies/moveseeds. Frozen candidate beforeplay; separate unseen-generator/honestopponent validation required for transferclaim.",
+  "evidence": "research/objectives/README.md; tools/new_campaign_objectives_test.py sixqualificationtests:bothcolorspersistentpublicinput, exactexchangeablefallback,258unchangedcapture scores. Desktoponly2000bytecacheand4000hexpacket;nobankfitclaim."
+}
