@@ -588,6 +588,11 @@ with a selectable worker count. Build with CMake, Qt6 development libraries,
 OpenMP and zlib; Python, Pillow and NumPy embed the game artwork at build time.
 The source builder and file writer use Python and GCC; viewing needs no PySide6.
 
+The [Classic generalization setup suite](tests/datasets/classic-generalization-v1/README.md)
+adds 3,840 distinct armies, separating development, fresh-layout validation and
+held-out generator families. Select it with the tournament runner's `--dataset`
+and `--dataset-split` options; saved matches retain the complete setup provenance.
+
 ```sh
 make desktop       # compile and start the Qt6 app
 make desktop-build # compile without launching

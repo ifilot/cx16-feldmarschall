@@ -1,0 +1,4623 @@
+{
+  "dataset_id": "classic-generalization-v1",
+  "families": [
+    "uniform-v1",
+    "rear-shell-v1",
+    "exposed-rear-v1",
+    "forward-flag-v1",
+    "single-decoy-v1",
+    "scattered-guards-v1"
+  ],
+  "records": [
+    {
+      "army_a": "99369BB39648B57826F7785B8B19B94954S89657",
+      "army_b": "5696BB595B9B69787384962991888B537744BF9S",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0001"
+    },
+    {
+      "army_a": "9657697873885939B59218B99BFB896B6445S47B",
+      "army_b": "9B889B98B99B3618B77S66895495632F54459B77",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0002"
+    },
+    {
+      "army_a": "69799935458B7F4BBB875869BB4956S298869713",
+      "army_b": "S36799676982699959B8B4744BB855857FB1B938",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0003"
+    },
+    {
+      "army_a": "F79677498S9642B85978B95B35B649B619859B38",
+      "army_b": "5699B35789687B1494957FB82869374959B68BSB",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0004"
+    },
+    {
+      "army_a": "99S6445B98396BB39675B814598B756787F2B899",
+      "army_b": "B679B5957683BB88489BB19F964839S659472579",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0005"
+    },
+    {
+      "army_a": "3B3549B79489725881B9986F8S749B695B656B79",
+      "army_b": "B9459561B987F7S9788B69538469236B97B9B485",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0006"
+    },
+    {
+      "army_a": "5B9449861B8S795778866933942768B995BBF5B9",
+      "army_b": "94B79S995996B89357789328B4648F756BBB1865",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0007"
+    },
+    {
+      "army_a": "26698841B6734B595689534B978978S9BB5799BF",
+      "army_b": "4B898BS74BB8999219468559B99B665586F37377",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0008"
+    },
+    {
+      "army_a": "B877699F7845289961364973B84SB589965BBB95",
+      "army_b": "415B4B99986B82866735B77859376B495899S9BF",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0009"
+    },
+    {
+      "army_a": "77639B979F755B595984S84889B3B9B48661B269",
+      "army_b": "9918B7785927BB9558669493SBB5993F74866B48",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0010"
+    },
+    {
+      "army_a": "F8962417B56395837659B98B75B9B74498BS6989",
+      "army_b": "847BSB99B9539B4BB58638298F59965786647719",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0011"
+    },
+    {
+      "army_a": "9786B59865B33BBS7848F2B99147B59996894567",
+      "army_b": "B589B67B5399248793B4865S677818B5F6B99994",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0012"
+    },
+    {
+      "army_a": "BB9958687S61997B9B368392857446B85F94795B",
+      "army_b": "5934B879F9BS6B5794859B377142B689B5668899",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0013"
+    },
+    {
+      "army_a": "69397B65B67898B5484457997935S2899BF8B6B1",
+      "army_b": "9689B7F472B8994B8916B3857595978366B5S49B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0014"
+    },
+    {
+      "army_a": "B87B5923876563F4S418B95B995747698B9699B8",
+      "army_b": "88B636589S8B9745693B4FBB79B9542791859796",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0015"
+    },
+    {
+      "army_a": "2BS6969B71BB93B389744958558B965F68978947",
+      "army_b": "966519S765875844F8994BB9B392736B895BB978",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0016"
+    },
+    {
+      "army_a": "F377B68B52499BB769894B56S9847919B5369858",
+      "army_b": "8B79B6839BB935586F765692197947B98B4S5894",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0017"
+    },
+    {
+      "army_a": "9216B9BB494S75B88885766735486593B79FB999",
+      "army_b": "4BB6F5B386SB677958B85879B964598993179942",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0018"
+    },
+    {
+      "army_a": "838697B74F7B9B8B19B96B768553S96859452949",
+      "army_b": "8894694B5377B699836SB989F45B876597B512B9",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0019"
+    },
+    {
+      "army_a": "74289978843BB6B85F5546B37968996S79B9195B",
+      "army_b": "7971775BB529B93984999B69653688B56844B8FS",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0020"
+    },
+    {
+      "army_a": "73876974F4B688919B97B9596B5S598B46B93825",
+      "army_b": "518B5S7396F94B8B58879946B69B99B377984256",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0021"
+    },
+    {
+      "army_a": "2B9B9F96B58789B58B874755174B66983S969934",
+      "army_b": "66997654B993BS278B81475B5389BBF764589998",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0022"
+    },
+    {
+      "army_a": "96567B9B548569F7989S4748B2735986B399B8B1",
+      "army_b": "9585B6BB1772584864994B736957B8B9969SF839",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0023"
+    },
+    {
+      "army_a": "9631BB95993B489979778S498B566B7828B55F64",
+      "army_b": "96394798BB165968B7BB9585978S36B47992F584",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0024"
+    },
+    {
+      "army_a": "299B97656785B9F9986B39B588173759B44846SB",
+      "army_b": "7972845951994B897BSB56B543896F6687899B3B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0025"
+    },
+    {
+      "army_a": "93B6B958271BB4S365B6478857B579899F999468",
+      "army_b": "B9B5F8BB4643795667819998998874B23S55976B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0026"
+    },
+    {
+      "army_a": "8947B9958668B162FB95B59744539873BS67998B",
+      "army_b": "7887FBB96B23B5659B989S4535961744B9989867",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0027"
+    },
+    {
+      "army_a": "FB2836B957BB489857B4696BS897959358971694",
+      "army_b": "5B37B9F344B4S9855591B66B888997779969682B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0028"
+    },
+    {
+      "army_a": "48B5597B7BB562993789S896519463469BF98B78",
+      "army_b": "8B658B991942B864B45S9399793587F776856BB9",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0029"
+    },
+    {
+      "army_a": "7SB8B597673B796398B96599982946514B8F48B5",
+      "army_b": "868S44958B289F976659614879BBB7593B9B5739",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0030"
+    },
+    {
+      "army_a": "B9B3BF18479B8775S956485669B6739598924B89",
+      "army_b": "S97886798BB491B749B29B6759863594F935568B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0031"
+    },
+    {
+      "army_a": "163B78985B96B589428949B79697F738B5B59S64",
+      "army_b": "B7423999955874F698BB85496B1B93675B78S986",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0032"
+    },
+    {
+      "army_a": "125B5F765799873B9399646B4889S6B947988B5B",
+      "army_b": "SB188F8B465B6699894977525BB3948935799B76",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0033"
+    },
+    {
+      "army_a": "B9658999B683789B15725B3544649FB967SB8879",
+      "army_b": "B845BB775B6993849599998S6297676385BB14F8",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0034"
+    },
+    {
+      "army_a": "986989755995B74485F681B7B36B2S69478B993B",
+      "army_b": "56BB8B596649674857898B348773992S9B195F9B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0035"
+    },
+    {
+      "army_a": "9798B6SBB9B35898B6571498536B89479257F964",
+      "army_b": "B66B3969557BS524B39815774B84789B9996F988",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0036"
+    },
+    {
+      "army_a": "6B41B427899B877B35B55979B98956F988693S64",
+      "army_b": "B9584878SB41587696B6923F99575B998947B63B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0037"
+    },
+    {
+      "army_a": "B3689742B59B689S5F898776B593BB9959461748",
+      "army_b": "1869B68S397937F772468B4B89955B5999B4B856",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0038"
+    },
+    {
+      "army_a": "85769BS289699883654BB86FB19594B99777B534",
+      "army_b": "9219837B8574993B9F58B7784986BS96546B56B9",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0039"
+    },
+    {
+      "army_a": "48B8779886959B93946997F72B8B9B56S34655B1",
+      "army_b": "9825493785B5F9579696S64B386B9B48B79B1987",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0040"
+    },
+    {
+      "army_a": "486B8975F65971BB59896943798SB499B27B3658",
+      "army_b": "49766B9B7B894794589938B66F52B93S88179B55",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0041"
+    },
+    {
+      "army_a": "B95965427598988547B361S9BFB684B9869B3977",
+      "army_b": "83398764B6959164B9992S6BF58B78B7984595B7",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0042"
+    },
+    {
+      "army_a": "69B9415597B5B9B2B6386S7947978B34856F8899",
+      "army_b": "4798B69B6B79884975963271B99589586F534BSB",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0043"
+    },
+    {
+      "army_a": "B47359S63997458867591885B6BBB687FB999942",
+      "army_b": "73659438B877468B92581F69BB9995979BSB8564",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0044"
+    },
+    {
+      "army_a": "5399489689F99786615S84B7BB677B894B2B5359",
+      "army_b": "B2884B859967979S8435B7596B643B69B7F15998",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0045"
+    },
+    {
+      "army_a": "8B38F743B7898BBS967959B56B19269956494785",
+      "army_b": "464996F1948B8B76895762S3599BB797885935BB",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0046"
+    },
+    {
+      "army_a": "95659BB8BB9F672774B5B89368994451786S9398",
+      "army_b": "46984B96586899853B57391977728B465F9S9BBB",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0047"
+    },
+    {
+      "army_a": "4958B9B57619975734B9368S69825B7648BB99F8",
+      "army_b": "9B97B9B7843178B496539B9578F66B99854S5862",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0048"
+    },
+    {
+      "army_a": "9859B84S7659BB4B98B549976B7696792353F188",
+      "army_b": "839167B897S88969F7B654955B6B9579494283BB",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0049"
+    },
+    {
+      "army_a": "6477B38978568497992B99B6FS848B559B5961B3",
+      "army_b": "32948617BB88B76SFB76599996B8459978545B39",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0050"
+    },
+    {
+      "army_a": "B237S48988B9F19947857365966BB7B99558B469",
+      "army_b": "6388B44BB48958959519B7B7S9B325869F776969",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0051"
+    },
+    {
+      "army_a": "99859877B926B56889736BS53BB8B5174F996494",
+      "army_b": "B374F9B5B41B5B9456S9879696993788829578B6",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0052"
+    },
+    {
+      "army_a": "99548BBB9734889B5677194B8S9587566FB92693",
+      "army_b": "813985F69BB8697B374946689478B5B9275S5B99",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0053"
+    },
+    {
+      "army_a": "F39786B389B65489964B9B16274957B55B89987S",
+      "army_b": "7BB6F1B6B53596B879886498847S99925349B597",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0054"
+    },
+    {
+      "army_a": "6679F7948324894B8B58557B9969B968159SB73B",
+      "army_b": "4495SB899687B525F873B95996B8791B6974B368",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0055"
+    },
+    {
+      "army_a": "9869B6BB427687349B7999345556BS888FB79591",
+      "army_b": "142B46993S845B7B96BF57958B87986B79569389",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0056"
+    },
+    {
+      "army_a": "9899997962384FS667879575BB5B9B461BB58348",
+      "army_b": "991S9B4986598BB54399462757BB79683F8B6875",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0057"
+    },
+    {
+      "army_a": "9594893959BF8B569BS27867B8B87614953B9746",
+      "army_b": "85859BBB448797B65739965B2989419SF6879B63",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0058"
+    },
+    {
+      "army_a": "179S45984877BB8B93984FB6692B96558B599367",
+      "army_b": "5B926997578994B87B8B6S8683914B95593BF647",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0059"
+    },
+    {
+      "army_a": "6F9B634B3247898BBB789S5B8979819795469655",
+      "army_b": "96874BF759378569869B53891498B2SB96B5947B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0060"
+    },
+    {
+      "army_a": "93B17875S896499592B98476B38F65B497B586B9",
+      "army_b": "5938B5B99758B986648F94B9S42977917566B38B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0061"
+    },
+    {
+      "army_a": "9587837845B64B9BB37BBS816646299599759F98",
+      "army_b": "985448F34389B999987B8BB566S61975657B279B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0062"
+    },
+    {
+      "army_a": "B4865B9295B479814F6B7969838B5957639B89S7",
+      "army_b": "33B9586S1794FB9969547829586BB75786B4989B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0063"
+    },
+    {
+      "army_a": "1B65F8B878697B89B5B68339279675949549B94S",
+      "army_b": "997949BF7B3966883S5B5B569947B84857621B89",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0064"
+    },
+    {
+      "army_a": "5SB386B87B846994996B9327BBF9718568599547",
+      "army_b": "7B5848696798BF9B4B6999283459SBB796715358",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0065"
+    },
+    {
+      "army_a": "1B948897845652S6396939B54BB97F69798BB785",
+      "army_b": "S9615B68B4B569487585B939B629437B7F989978",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0066"
+    },
+    {
+      "army_a": "S9893B98987649315BB6857B45B492BF87956967",
+      "army_b": "597854B8794BB921F589B6396B9386B79845796S",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0067"
+    },
+    {
+      "army_a": "78S8747199B8B667BB5656F9B29B833498995594",
+      "army_b": "467688S889B3969799778B5B955B995FB2416B34",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0068"
+    },
+    {
+      "army_a": "5S67452347B87B188B86B96F5894959699B3B799",
+      "army_b": "597BBB33898B57564S799B648896B68F45999127",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0069"
+    },
+    {
+      "army_a": "68959744158B937582BB975374F9688BB999BS66",
+      "army_b": "77986545897BS491B7258BFB938668939B69B459",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0070"
+    },
+    {
+      "army_a": "36848599596947B889F5989657B7BBS73B612B94",
+      "army_b": "3B8985649B9B9555B98766871924934SB78B796F",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0071"
+    },
+    {
+      "army_a": "8B49S86BB58969577589B793969B5F2934B67418",
+      "army_b": "5994B7B396983F6BB469B88752779846B98S1559",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0072"
+    },
+    {
+      "army_a": "976457B58642998B93B4183BF75B8996697B598S",
+      "army_b": "95FB998S653987969B7B4561B745BB3927889846",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0073"
+    },
+    {
+      "army_a": "79484685S96B5839F4B9B9659B293167B58B7897",
+      "army_b": "846BB34578B5869BB95B9673S958F76497199289",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0074"
+    },
+    {
+      "army_a": "4S4593645B19858728637868979BB79B99B69F5B",
+      "army_b": "7179887B85BB5B9239694B5F86749B4599S68369",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0075"
+    },
+    {
+      "army_a": "5398B897F9B9546896B3748557947998BB2B66S1",
+      "army_b": "519S498369997BBB38B598F824B6945B67759876",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0076"
+    },
+    {
+      "army_a": "BBF39895968964B5SB58991B2847796B78493657",
+      "army_b": "939857346B899B866887BS7F95B19997B454B652",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0077"
+    },
+    {
+      "army_a": "93737525B6B889869B9BS55997941746FB94868B",
+      "army_b": "29776843595B83B6989BB4F5889469591BB67S97",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0078"
+    },
+    {
+      "army_a": "5S99BB695487626818737BB8F464B73B59599998",
+      "army_b": "8F59B8B38548S7542B9996597891369B694B7B76",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0079"
+    },
+    {
+      "army_a": "6B45SB985546989BB797BF9961287933B4768859",
+      "army_b": "79F81994698B9BB85952S679B6B484733859567B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0080"
+    },
+    {
+      "army_a": "688897675B9FB3BB9695969BS9747988B4315524",
+      "army_b": "B69788S95B6813899FB556377294B69B5994B748",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0081"
+    },
+    {
+      "army_a": "B69FB5B88799958B98465B7319346457B96S8927",
+      "army_b": "844851488BF9B9B6759B599763S726936B75B989",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0082"
+    },
+    {
+      "army_a": "97746B7299957648958FB9359B6S368491B588BB",
+      "army_b": "9759S354B684BB896892B8B6749765B78F935919",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0083"
+    },
+    {
+      "army_a": "9669B797FB485999B56198S52337464985BB887B",
+      "army_b": "B1B25895795S7684689F7B84979996496BB8533B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0084"
+    },
+    {
+      "army_a": "B695391B94989B283955BS6B6B94778F88776945",
+      "army_b": "B79895172575B66B4973B39F5S8948968B86B949",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0085"
+    },
+    {
+      "army_a": "8679449B639B93956B4B59879B685792S817FB58",
+      "army_b": "8598968B85947459F2S597999B8763B37B64B16B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0086"
+    },
+    {
+      "army_a": "45BB8969744S599BFB698839B6856571372B9789",
+      "army_b": "4BB83S78BB91476B75695958523467698FB89999",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0087"
+    },
+    {
+      "army_a": "76B61995985F776488B4693953B9B4288SB5979B",
+      "army_b": "689B36B4499985S76B623559BB78999B78187F54",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0088"
+    },
+    {
+      "army_a": "F988B99964BB552758419BB8635S6379967B9874",
+      "army_b": "3658799839B95B51B8B294985S46B7B9667F7489",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0089"
+    },
+    {
+      "army_a": "9779719276F83588BS3B489B5659B969B89644B5",
+      "army_b": "37568S6796B947B5792B9B48598B5B94168839F9",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0090"
+    },
+    {
+      "army_a": "66899B431B45679B5B89B932B96579S84779F588",
+      "army_b": "733B169599985FB86B97699882S94BB6B5477458",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0091"
+    },
+    {
+      "army_a": "5941B9935F8BS699949BB53786B78868B9772546",
+      "army_b": "87699327558BB967667B1B3499BS54F98954B898",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0092"
+    },
+    {
+      "army_a": "6795B48896524B36B87B848F757S91B96959993B",
+      "army_b": "47156879B5539F8SBB638694997B8B549697B892",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0093"
+    },
+    {
+      "army_a": "B977864599F4794567B5338B95886BB9B968129S",
+      "army_b": "6FS47586985BB97399B697B97849B1862548B593",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0094"
+    },
+    {
+      "army_a": "S77F589B8396B9597B988B6815947B534499B266",
+      "army_b": "9428794B1963649B586BS99B65BBF79587898537",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0095"
+    },
+    {
+      "army_a": "5786598964S7259B877B49B13698BF39894B56B9",
+      "army_b": "43S9173B66285BF89B495968899799B8647557BB",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0096"
+    },
+    {
+      "army_a": "65378B9S3B49997F8845B6595B9887B14B699276",
+      "army_b": "7B5932S1B86696547898759983B56F9499B784BB",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0097"
+    },
+    {
+      "army_a": "39556B46B7869799S79F5B4BB3868297481958B9",
+      "army_b": "B4B4986S6839B994B977F5991B7882756685B593",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0098"
+    },
+    {
+      "army_a": "4879B7976598F989579B8S13984463BBB52B5696",
+      "army_b": "6958393B987996B5792888BB9475S46B7B1965F4",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0099"
+    },
+    {
+      "army_a": "96BB9378759999B78F81569B665S29437BB88445",
+      "army_b": "37BBB67649895484738621F5SB9998799859B6B5",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0100"
+    },
+    {
+      "army_a": "B97B569997135465BB4689F4S56B89793B288798",
+      "army_b": "979269B89557F467351BB8B66B5B998S94798483",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0101"
+    },
+    {
+      "army_a": "9F2596B5873695B98B47764S19889B7958943B6B",
+      "army_b": "59989S546797B98239B46F18966BB978B7485B53",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0102"
+    },
+    {
+      "army_a": "BB989F34695859946BB7986737755B4896B981S2",
+      "army_b": "87B945BB76815F7398483599S926765B4B99698B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0103"
+    },
+    {
+      "army_a": "B423B9S67F77B884818B36999566959B759859B4",
+      "army_b": "979F564697B5649885S3B61B37898B945BB28799",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0104"
+    },
+    {
+      "army_a": "9B875B919S494B95988485B5693673B7F669B728",
+      "army_b": "7759495BF948566368S69B8519B299389B477B8B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0105"
+    },
+    {
+      "army_a": "3S32BB69699B995B1584849BF74695579887B786",
+      "army_b": "73BF99785667BB7854B9195B692BS48845968939",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0106"
+    },
+    {
+      "army_a": "9B486B5854795B38293971789S98656649BB97FB",
+      "army_b": "9B9799594B17S969F34654588BBB758698B36872",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0107"
+    },
+    {
+      "army_a": "B96B9F218B479B9669B937449S5865838B859757",
+      "army_b": "F39786B63BS79754866B9B5489B1998B89547592",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0108"
+    },
+    {
+      "army_a": "B9799569F7786B3BB4SB955B4929768381486859",
+      "army_b": "96B9243389BBF5416487559S769B8576988B979B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0109"
+    },
+    {
+      "army_a": "B597469SB5F898B3B579749329564BB899868716",
+      "army_b": "9B69748BS59477666889B95B932BB87498351F59",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0110"
+    },
+    {
+      "army_a": "4789881586S796395B6B799BF9244695B597B83B",
+      "army_b": "7984489658469399857BB29S63B1B75B995F86B7",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0111"
+    },
+    {
+      "army_a": "8678BB98B779B99395582465F175369BS694B894",
+      "army_b": "6946758496S5B99977583841569BB99873BB8BF2",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0112"
+    },
+    {
+      "army_a": "58796BFB793B75BS993B49998665B58942476881",
+      "army_b": "F3894B517676429836B89BBB9S897794558956B9",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0113"
+    },
+    {
+      "army_a": "8B89B699649529655943884B175BB7367899BFS7",
+      "army_b": "96977178B556SB69B8F9245B963384B478895B99",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0114"
+    },
+    {
+      "army_a": "79991B793B6BS4865568798B85446599BF3B9782",
+      "army_b": "3564976B5148B8B92599838B99BB9877F679564S",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0115"
+    },
+    {
+      "army_a": "89998S93726B97BB857B94B5993B68557164F864",
+      "army_b": "77458979B765BBBFB53896849891S4B295696938",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0116"
+    },
+    {
+      "army_a": "56B8B2FB98557499989B96657B4796379B13848S",
+      "army_b": "995B58S94F948997B64B97872366838915BBB657",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0117"
+    },
+    {
+      "army_a": "F9978BB95458684276761B9576998B8B4S3935B9",
+      "army_b": "748788B4295399B5B76B6B34999B689516F87S95",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0118"
+    },
+    {
+      "army_a": "87BB3946B998BB199B4S659F5737769582489568",
+      "army_b": "B7659B28B6BS95998B5989739443B77561F46889",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0119"
+    },
+    {
+      "army_a": "8896547B59598B179B5966B6B24734B89FS89379",
+      "army_b": "934B959B777B657B5F8S5218643BB99869898496",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0120"
+    },
+    {
+      "army_a": "8685B913997B5B8692B748786B95B34795994FS6",
+      "army_b": "F799B56988615689925S4B99B67485784393BBB7",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0121"
+    },
+    {
+      "army_a": "85B84742693B69BF8B86B53S578719B599996974",
+      "army_b": "576B749369968841B47B968B95B89F59985B723S",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0122"
+    },
+    {
+      "army_a": "8999S64571B6795485669B4325BF887399B789BB",
+      "army_b": "45B81S59767989928769956B954B369B3BF88B47",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0123"
+    },
+    {
+      "army_a": "B77589694929B7F3461S955B969BB865887B3849",
+      "army_b": "B494798B8FB2753975499566538B86B791B899S6",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0124"
+    },
+    {
+      "army_a": "98B669898977B634695S5F34BBB85259B1974897",
+      "army_b": "78B9B398S4657979F958B6899445B26973B61B85",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0125"
+    },
+    {
+      "army_a": "757246591B4B8789363859BB87B9658BF4996S99",
+      "army_b": "55B666S987B29196847559488F983B94BB793B79",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0126"
+    },
+    {
+      "army_a": "7B3874S3998671575858994BB9B49B699B25866F",
+      "army_b": "78BS5B539B62898496695F7148B957967989BB34",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0127"
+    },
+    {
+      "army_a": "592837FB994531868897B45B76865B7B6999B94S",
+      "army_b": "648527B4856995894B3B7769F589719B8B996S3B",
+      "family": "uniform-v1",
+      "id": "seed-validation/uniform-v1/0128"
+    },
+    {
+      "army_a": "9668491959549B78738583B7S25996BBFB78649B",
+      "army_b": "987B8964B6798617885S4255933B6799B995BFB4",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0001"
+    },
+    {
+      "army_a": "6BS714985696568998B3753849B778B4929BFB59",
+      "army_b": "9428BB8B951854869599397696B65S77983BFB47",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0002"
+    },
+    {
+      "army_a": "6153998967559567848B98B84297BB649S739BFB",
+      "army_b": "S762B96358889767B9B894899B459B67154593BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0003"
+    },
+    {
+      "army_a": "53347975691587766B29954B4B8S889999BFB68B",
+      "army_b": "B999842S9BB654947767538B37896881BFB59965",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0004"
+    },
+    {
+      "army_a": "54552138S96986784B69B69B789937FB9B59874B",
+      "army_b": "B649689B27879494856B6598399B558731S9BFB7",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0005"
+    },
+    {
+      "army_a": "66954879739B5S46355426889B799988BBBFB917",
+      "army_b": "889749485B57839297979S4B81639B96BFB5B665",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0006"
+    },
+    {
+      "army_a": "6985B69359B8789463874955S71B7B9B924869BF",
+      "army_b": "84756339879BS977BB61964B88996595BFB94528",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0007"
+    },
+    {
+      "army_a": "49489B99993946S7858685B77315B76BFBB82695",
+      "army_b": "7614896852B39589B737B99945B657FB89S86B49",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0008"
+    },
+    {
+      "army_a": "6971969S58BB3B872538489969B59789474BFB56",
+      "army_b": "66969498S988165733B75B8597724BB995948BBF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0009"
+    },
+    {
+      "army_a": "849559916657B6B27S8899B47793599BFB38684B",
+      "army_b": "548952B3BB99519865B9989834S67B67674987BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0010"
+    },
+    {
+      "army_a": "79866B39895595652349877169BB9BS8B49487BF",
+      "army_b": "76B897298934534B769985469S915B85896B7BBF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0011"
+    },
+    {
+      "army_a": "8576S9BB679874592468898B3735B65994919BFB",
+      "army_b": "994B39S566978B59785B586989B87437216BFB94",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0012"
+    },
+    {
+      "army_a": "96B5386519799748657456248BB9S78998BFB3B9",
+      "army_b": "989789B965869BB86959539427B41875S63BFB47",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0013"
+    },
+    {
+      "army_a": "B55783894869B935619999BB742S9466BFB87875",
+      "army_b": "648994665BS57286953799B8173B897B4598BFB9",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0014"
+    },
+    {
+      "army_a": "573BB884756648899785799B4239S156BFB9B996",
+      "army_b": "57692688B7954S379B97B955398B86919464BFB8",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0015"
+    },
+    {
+      "army_a": "5897269B8384S66759549178B894B695B7939BFB",
+      "army_b": "9885945696B34679875S4783B58B26919BFBB979",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0016"
+    },
+    {
+      "army_a": "29868164B94B89B96377589S8554B95697973BFB",
+      "army_b": "63349757568979829599B1B564B8986BFB7B48S9",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0017"
+    },
+    {
+      "army_a": "BS2694599318776568448B78B99768BFB55B9939",
+      "army_b": "8987935B847B978656849S695263B4799B195BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0018"
+    },
+    {
+      "army_a": "B657998899656939718B76954B2439SB58BFB748",
+      "army_b": "6BB58963647B99959B95B73572S769FB44889881",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0019"
+    },
+    {
+      "army_a": "3478654B99S88565796371429B88B5B997BFB996",
+      "army_b": "9757B85B8996614B78938569B4S763598BFB9924",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0020"
+    },
+    {
+      "army_a": "3S77982BB9676989644584769583B899195B5BFB",
+      "army_b": "9769941854349B366B9989877B7S5B55868B92BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0021"
+    },
+    {
+      "army_a": "43B997689759B689S735B485992956FBB8B86147",
+      "army_b": "6B4948199785774S95983BBB89766529BFB96385",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0022"
+    },
+    {
+      "army_a": "9B1349582997878946754S87689B553B96B6BFB9",
+      "army_b": "59975376598B48997B499B92878466BFB63B15S8",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0023"
+    },
+    {
+      "army_a": "53679249998495SBB7B4768B75981868BFB59963",
+      "army_b": "58879B3BB7999847656463B19955689BFBS97842",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0024"
+    },
+    {
+      "army_a": "797B497SB6279B58839598B99389564BFB615684",
+      "army_b": "9SB89B356694948B9153948556B87896772BFB79",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0025"
+    },
+    {
+      "army_a": "51889999887S495679429B665B7436BFBB583B79",
+      "army_b": "9894777B299B467869B6B55459B153FB86S83989",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0026"
+    },
+    {
+      "army_a": "6584845397B677B9SB49682799963B59881B95BF",
+      "army_b": "9S958916796723B78663B784545984FB8959B9BB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0027"
+    },
+    {
+      "army_a": "95B878144265879B5339766999989B5SB786B4BF",
+      "army_b": "79618968965929987B7435B9485B796358S4BFBB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0028"
+    },
+    {
+      "army_a": "949455885886B157923S794B9B9B36677969BFB8",
+      "army_b": "6939SB95787966B945759B84321598BFB8B76489",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0029"
+    },
+    {
+      "army_a": "876B9973B5899S896B7463B89649452BFB559718",
+      "army_b": "8978676599415B7346B992949B59B63858BFB78S",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0030"
+    },
+    {
+      "army_a": "17649998BB62S3874B8955B93879565BFB987946",
+      "army_b": "7698B6S951253863B88754789999B76B59494BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0031"
+    },
+    {
+      "army_a": "975662954B4B7895363998BB96581997BFBS8784",
+      "army_b": "874974819S8695573643295989B9967B68BBFBB5",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0032"
+    },
+    {
+      "army_a": "674695899893543581B99957B72896B84BFBB67S",
+      "army_b": "14764876995986B4S59B2B839B9975BFB8538967",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0033"
+    },
+    {
+      "army_a": "95987974B859954B593677668BS29B8936BFB184",
+      "army_b": "29635589789895977B9BB946186B376589S4BFB4",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0034"
+    },
+    {
+      "army_a": "5634B6988735847149BB599795S8B62999876BFB",
+      "army_b": "424569B889679796BS984836915B75B93978BFB5",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0035"
+    },
+    {
+      "army_a": "5969536887B974S3494519986B27989B7BBFB658",
+      "army_b": "9264B99975853597S9768B47358B19BFB868B496",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0036"
+    },
+    {
+      "army_a": "89365778S99969B42891BB7695B53449587BFB68",
+      "army_b": "86559B1798B589S98267953947B368B7946BFB94",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0037"
+    },
+    {
+      "army_a": "33542796947595786S5899B9B4BB88697891BFB6",
+      "army_b": "8698539B4899975769891436577BB486SB952BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0038"
+    },
+    {
+      "army_a": "B56B776S36B2499899916B57474935BFB5888998",
+      "army_b": "68573B173699557B995942796BS9688B84BFB498",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0039"
+    },
+    {
+      "army_a": "999S39378BB565B85929459864B77961867BFB84",
+      "army_b": "9412599896B9536598S9B56886B477FB7B489B73",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0040"
+    },
+    {
+      "army_a": "984938BS796B76549964979158B5856B239BFB78",
+      "army_b": "9468461859593275675B7948B6S979B38BFBB989",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0041"
+    },
+    {
+      "army_a": "5498B496897S9898173697BB5987695BFB352B64",
+      "army_b": "9936897199449526837B887B9664BSB855597BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0042"
+    },
+    {
+      "army_a": "79B369848698924391785B74559B97B56968BFBS",
+      "army_b": "5454758S99328196B496B95B998773FB6897BB68",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0043"
+    },
+    {
+      "army_a": "3843B95467889915B7B795667899BS5284969BFB",
+      "army_b": "4B7759652B5B9983799S689B96483184BFB76859",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0044"
+    },
+    {
+      "army_a": "8B72896B9S949137974554B65988765BFBB63998",
+      "army_b": "879395974B54B496752653SB9B888899BFB61967",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0045"
+    },
+    {
+      "army_a": "8198924B79575985497S969B36B488366B7BFB59",
+      "army_b": "B81854948978B97S836929935BB65B65996747BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0046"
+    },
+    {
+      "army_a": "9634S897746B688734B69592BB9875819BFB9595",
+      "army_b": "95249B7795489B9764S7B899356858FB61B69B38",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0047"
+    },
+    {
+      "army_a": "9184469555787S9898693BB79B3B89567264BFB9",
+      "army_b": "664753791348B86846297959B8BSB9955BFB8997",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0048"
+    },
+    {
+      "army_a": "9435BS8B5595998991B9849B88367766BFB72467",
+      "army_b": "5933989876586B8479696997B48BB547591S2BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0049"
+    },
+    {
+      "army_a": "974598B49B539B96996869B587731B5478268SBF",
+      "army_b": "99B88B59657898S766B47298374B49619395BFB5",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0050"
+    },
+    {
+      "army_a": "892389955959BS1569B746BB7467394BFB698887",
+      "army_b": "72997B948915B69B6945B86359S498FB7385B678",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0051"
+    },
+    {
+      "army_a": "5B9B9794836254897639916B757SBB96889584BF",
+      "army_b": "98978944576367B468995B52891S8B93BB6579BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0052"
+    },
+    {
+      "army_a": "8B84B5847998B992867SB716939546FB5B993765",
+      "army_b": "76B89B578B4475699731469B995S5869BFB93288",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0053"
+    },
+    {
+      "army_a": "489958B957B495B8739763869916BS8924675BFB",
+      "army_b": "S76997698798B83954599B6692B575BFB143B884",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0054"
+    },
+    {
+      "army_a": "3789591B86S59699478679789BB63244B59BFB85",
+      "army_b": "959398742B73S849459687B697B89B91585BFB66",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0055"
+    },
+    {
+      "army_a": "477339B86556618B692999BB94887995BFB8S754",
+      "army_b": "S4B775763998599966B65889B39B82519BFB7448",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0056"
+    },
+    {
+      "army_a": "4983518S854B9994368B95567B796B7628BFB997",
+      "army_b": "B2653688795995481989B9BB75637944BFB796S8",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0057"
+    },
+    {
+      "army_a": "186569B78758983699297B6349BB4497S59BFB85",
+      "army_b": "B386296159947795679379B9B688B955448S8BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0058"
+    },
+    {
+      "army_a": "769894B5483S48957986527B993189B7BFB69B56",
+      "army_b": "327488B9B879B9S7B665893195596B74498965BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0059"
+    },
+    {
+      "army_a": "B598898379479946B61S79B6394B857BFB659528",
+      "army_b": "8527984B8B637S815939485BB79996966BFB4975",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0060"
+    },
+    {
+      "army_a": "8S9829569756789965B9994B817B5B468343BFB7",
+      "army_b": "5861S877994969B859582874B9B3B64637995BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0061"
+    },
+    {
+      "army_a": "69763359BB9678146579BB95284B59FB4S988798",
+      "army_b": "8861449S2969599B69558B37854939BFB77678BB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0062"
+    },
+    {
+      "army_a": "7B5639B998B469446569855S931B97988287BFB7",
+      "army_b": "996747358B695S898658176B7B949389BFB495B2",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0063"
+    },
+    {
+      "army_a": "S56597B7B91B353878647264589B99698498BFB9",
+      "army_b": "477B7139898985SB629559B46958963BFB6879B4",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0064"
+    },
+    {
+      "army_a": "876965B5369797BB932945449685B18S79898BFB",
+      "army_b": "58389978855695799B19349BB9B426646BFB787S",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0065"
+    },
+    {
+      "army_a": "97488897823S7998945453B7956BB59BFB6916B6",
+      "army_b": "B97796569798B94B24599B854869S7BFB3568813",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0066"
+    },
+    {
+      "army_a": "99268487B873651B6S93B8756B95944975BFB899",
+      "army_b": "967458786B6557924969893B4B99B381BFB589S7",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0067"
+    },
+    {
+      "army_a": "1S895B77B95B8267465939894B56493798BFB689",
+      "army_b": "95558864369B729759S88B16B69489BFB7B99347",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0068"
+    },
+    {
+      "army_a": "98B594671797B599B65342B998638S4BFB798568",
+      "army_b": "67976B998898589847479B2556BS19BFBB364935",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0069"
+    },
+    {
+      "army_a": "1855599796766999B7B54B846B8848372SBFB993",
+      "army_b": "548919857B2997669449S695368BB78793B58BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0070"
+    },
+    {
+      "army_a": "S29B68499567466B998539578187B9347958BBFB",
+      "army_b": "9B269BB85696959478S799538856B17439784BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0071"
+    },
+    {
+      "army_a": "995788625984766B315B83794BB9876995BFBS94",
+      "army_b": "98342B9567SB6584995BB496597679FB893B7188",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0072"
+    },
+    {
+      "army_a": "6844673SB58894B959951777929BB38895966BFB",
+      "army_b": "43B2879S75686415399597B69B89548B99BFB867",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0073"
+    },
+    {
+      "army_a": "92B6863496954979878B3988S749B9557561BBFB",
+      "army_b": "S6B98598291874749459389879B6B753B5696BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0074"
+    },
+    {
+      "army_a": "95549328B545367768699B98189BSB9674B897BF",
+      "army_b": "78B9B932169479B46635565B89879847BFB958S9",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0075"
+    },
+    {
+      "army_a": "9485592634689B7789916738BS879945BBFB65B9",
+      "army_b": "917S65B478645259369357899B89864989BFBB7B",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0076"
+    },
+    {
+      "army_a": "95789396B38547745198B99S92B67B68685BFB94",
+      "army_b": "972945878994BB9598479B78559836BFBBS63166",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0077"
+    },
+    {
+      "army_a": "899878B87185696549956B372499S6BFB745B9B3",
+      "army_b": "66949936B715899478B49S5B9783B689BFB85257",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0078"
+    },
+    {
+      "army_a": "89B9858798B4473969BS75136929B59485766BFB",
+      "army_b": "9891759498S7855794B236B8666BB73BFB999485",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0079"
+    },
+    {
+      "army_a": "4665378B852434516B87S79B8998999BBFB96579",
+      "army_b": "2994S5598B799735889787B496B581B4696BFB36",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0080"
+    },
+    {
+      "army_a": "88285B7599395469694BSB47717899BFB698B563",
+      "army_b": "7478864673565989789934B929896B5BFBS9BB15",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0081"
+    },
+    {
+      "army_a": "696S49189489859BB47972756B9563835BBFB879",
+      "army_b": "5SB254B779856899148996979B63BB47935868BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0082"
+    },
+    {
+      "army_a": "8999B859B197688595539677B64B63924BFB47S8",
+      "army_b": "6B73879968B2396688499B9575S989BFBB741455",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0083"
+    },
+    {
+      "army_a": "9B59847374519566S538B897B989BBFB79269846",
+      "army_b": "3826775435498867158649B799B999SBFB98B56B",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0084"
+    },
+    {
+      "army_a": "29B855365B77947991566S98884BB9949678BFB3",
+      "army_b": "94139895BBS697658397425B694B58978687BFB9",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0085"
+    },
+    {
+      "army_a": "3987S99855B4B639694782918685B97546B79BFB",
+      "army_b": "46BB19847686739599S99257B39586879BFBB548",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0086"
+    },
+    {
+      "army_a": "164B263S8974938B86965B49B85757799BFB8959",
+      "army_b": "B85964876532B989644557B6939B779BFB91S988",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0087"
+    },
+    {
+      "army_a": "7695831S94B464899288B79B63859655BFB79B79",
+      "army_b": "8B99945B63586189846S77993996B78B52475BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0088"
+    },
+    {
+      "army_a": "59B869B943826357S788999B59B96814BFB77645",
+      "army_b": "64BB859995979986739727648B81643B95BFBS85",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0089"
+    },
+    {
+      "army_a": "7758699937B94162565546BB43S9889BFB87998B",
+      "army_b": "9686S7599B649946855838979B29743B8BBFB517",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0090"
+    },
+    {
+      "army_a": "594B154296S859389979896B7B387897BFB646B5",
+      "army_b": "S665931B8B924B57469997978967B43588598BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0091"
+    },
+    {
+      "army_a": "7965B7398855999S58B429B64691893BFB8B7647",
+      "army_b": "289974689519568B4B3S397B7498697BBFB56598",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0092"
+    },
+    {
+      "army_a": "9S14B3685858456769B9659949779B328B87B9BF",
+      "army_b": "64783B97969S1483775698B4B9889655BBFB2995",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0093"
+    },
+    {
+      "army_a": "289764395BBB8598694BB49556S178FB93776989",
+      "army_b": "579B4989SB626B849553836867B84597991BFB97",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0094"
+    },
+    {
+      "army_a": "89845895SB7656995648799BB3B63192787BFB49",
+      "army_b": "179986585B6869374B2743B89754995BFBS968B9",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0095"
+    },
+    {
+      "army_a": "979293674B98685B914856S985B78759936BFBB4",
+      "army_b": "7425396994856B954918BB79586637BFB88BS979",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0096"
+    },
+    {
+      "army_a": "9B677655B89657889589BS44932B99FB4637B891",
+      "army_b": "96S593894956B7437791BB84B95599BFB6888267",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0097"
+    },
+    {
+      "army_a": "B599235853799946B77B686B85881449BFB6S799",
+      "army_b": "975993496497986B65B5578B48S71BB2389698BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0098"
+    },
+    {
+      "army_a": "7B3494786962S9869535598675B98B1B98B749BF",
+      "army_b": "579696993S19586B73542B445B98B89788769BFB",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0099"
+    },
+    {
+      "army_a": "49389524993646BS75976968891B95778B8BBFB5",
+      "army_b": "8796639B9S4532B94998656B55787B898719B4BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0100"
+    },
+    {
+      "army_a": "369B792473589B175S76598B996886B4BFB98945",
+      "army_b": "B184S89277953659B56899B347B97465689BFB89",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0101"
+    },
+    {
+      "army_a": "997B84485B9573969846681927SB9873B955BFB6",
+      "army_b": "965S8145328679B73988BB796B9489BFB7594569",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0102"
+    },
+    {
+      "army_a": "866B57559774B6S99B43951B82898994BFB39786",
+      "army_b": "8654799992S941739986B8476BBB985378BFB565",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0103"
+    },
+    {
+      "army_a": "9418S387679975BB4938926B455B9969BFB88567",
+      "army_b": "984368384997615986589B69B5S775499BFBB27B",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0104"
+    },
+    {
+      "army_a": "7698943758948956SBBB6868B5491B97257399BF",
+      "army_b": "3984442369857B98S7759B87B61969BFB58B9659",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0105"
+    },
+    {
+      "army_a": "861B53468732678879995B59BB9785BFBS649994",
+      "army_b": "785695899484B39759187394BB8626S5B9BFB976",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0106"
+    },
+    {
+      "army_a": "9713599B259796B79864B868834B9BFB547589S6",
+      "army_b": "8689486859B74995593697B9874B791BFB2BS653",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0107"
+    },
+    {
+      "army_a": "S395496797968438496976581B9279B8BBBFB855",
+      "army_b": "87843S89895B147BB896496997B65299755BFB36",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0108"
+    },
+    {
+      "army_a": "98977776B2B6S93665B898B48549193BFB845995",
+      "army_b": "5499847177663B52B58699S588996B4997B8B3BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0109"
+    },
+    {
+      "army_a": "B973964BB667989986939575B7588S249BFB1584",
+      "army_b": "98595S4B685647989879729353B7B94861BBFB96",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0110"
+    },
+    {
+      "army_a": "9B899B5S97B1548698745B5667963B47892839BF",
+      "army_b": "B963821B93B4976S9585876B48645857BFB99979",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0111"
+    },
+    {
+      "army_a": "458475973858B9961769897529B996B68SBBFB43",
+      "army_b": "449883S955967B6B269779439B86558991BFBB87",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0112"
+    },
+    {
+      "army_a": "8499999S29551986B5644977B836688B3BFB75B7",
+      "army_b": "59834688497946BBS6B69539797B17529859BFB8",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0113"
+    },
+    {
+      "army_a": "71S9B6B768976B72989588954B445B99833596BF",
+      "army_b": "87945334518829997S9B6866BBB79586594BFB97",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0114"
+    },
+    {
+      "army_a": "B9883599867999344765BS728BB96B54965718BF",
+      "army_b": "479B6793692158B56B93B57898S446FB999B8758",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0115"
+    },
+    {
+      "army_a": "4538977994398S9265587BB869BB71BFB9966854",
+      "army_b": "B6B37746915B57894S69387859529BB9489689BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0116"
+    },
+    {
+      "army_a": "98B19975437S299845967B963866B548B9857BFB",
+      "army_b": "8829B3599B714974S73896BB65696594BFB87598",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0117"
+    },
+    {
+      "army_a": "61368987478BB35S6B97859B84997524BFB69995",
+      "army_b": "B58S98B756136559297B7988B96984796BFB9443",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0118"
+    },
+    {
+      "army_a": "944B934B95B1776562B67S5698883B79995898BF",
+      "army_b": "979394B567457SB8596726B95B89496BFB831889",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0119"
+    },
+    {
+      "army_a": "BB867B599594975918686B83384999BFB72S7465",
+      "army_b": "99799468846B795588B999SBB25763764BFB5318",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0120"
+    },
+    {
+      "army_a": "S68B25685368967893799B497BB79415989BFB45",
+      "army_b": "S673B48577B9994588999594615B26768B89BFB3",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0121"
+    },
+    {
+      "army_a": "7944753868281876SB989B995B55B6BFB9439679",
+      "army_b": "34669867BB59993S5B887619728B95479548BFB9",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0122"
+    },
+    {
+      "army_a": "884B5959B21849699877687B37599B439S66B5BF",
+      "army_b": "6S7486595548677929194B7B39589396BFB98B8B",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0123"
+    },
+    {
+      "army_a": "44937595857999723SB98B48696BB78985616BFB",
+      "army_b": "69736489B471B8992968B755675B9S953489BFB8",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0124"
+    },
+    {
+      "army_a": "7939789B955957439B789S6B6464168BBFB85298",
+      "army_b": "6199747857646992B89848573B9B3B9955BFBS68",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0125"
+    },
+    {
+      "army_a": "8454785558696B99278S499736B1B96B839BFB97",
+      "army_b": "9B9995767854899S3963455984B671B8628BFBB7",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0126"
+    },
+    {
+      "army_a": "59B497355586782647179946BBSB39988986BFB9",
+      "army_b": "94771865B576962694989BBS939838BFB954B578",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0127"
+    },
+    {
+      "army_a": "7479B985S9B6965898B5B984743586FB769921B3",
+      "army_b": "63923B9B8875189B96769465B8S75B98574949BF",
+      "family": "rear-shell-v1",
+      "id": "seed-validation/rear-shell-v1/0128"
+    },
+    {
+      "army_a": "1S854B329776897456B3989B899B95F57B9B6864",
+      "army_b": "B6686788873B993B771496498B5949SF9B59525B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0001"
+    },
+    {
+      "army_a": "9873B9769959B9766B825B39S44B84618F5985B7",
+      "army_b": "5499S76B8B4B7686563B998987598954B29F173B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0002"
+    },
+    {
+      "army_a": "2418B475693999BS9986436985B759B8BB5867F7",
+      "army_b": "B972377895BB864195B83695S9B56689497F894B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0003"
+    },
+    {
+      "army_a": "4B7867559868B93199S942B7996BB756B3F48589",
+      "army_b": "767B793969945B852998935B68S4B7BB96F45881",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0004"
+    },
+    {
+      "army_a": "366848891B65B77B9B42597SB997985F95489B36",
+      "army_b": "976S965B733998B9B452B59654788B76F8994B18",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0005"
+    },
+    {
+      "army_a": "99B952764987B65B9967BB843989157B43S8F568",
+      "army_b": "48B9629975948478S898B7B63B9765165593BB9F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0006"
+    },
+    {
+      "army_a": "27897B9B4B864B8569B798859S665941593F3B97",
+      "army_b": "7594B98668979B648578B8BB9936231F974S59B5",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0007"
+    },
+    {
+      "army_a": "797474B89671859596BBB93296SB988F895B4536",
+      "army_b": "S164999855575467B6B78B69B38B7989F9B93248",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0008"
+    },
+    {
+      "army_a": "SB992B9679168865379759B4B949B838B8467F55",
+      "army_b": "456967474298985B989768BBBB39199S6738B55F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0009"
+    },
+    {
+      "army_a": "8985996495BS893257B14765B476B67B38998B9F",
+      "army_b": "78B775665451B996389836B58B9S99B4B879F492",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0010"
+    },
+    {
+      "army_a": "3B24567684S9B1758957B7B986B938B95999648F",
+      "army_b": "B67SBB86983899874549975995516324F8B967BB",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0011"
+    },
+    {
+      "army_a": "B7S56999436B683859BB8549B747589617B89F29",
+      "army_b": "B574B869997B988BB6996354B1286859S49757F3",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0012"
+    },
+    {
+      "army_a": "5643917B688588B6577796SB94489BB29B3999F5",
+      "army_b": "1B4624679856B3S89B7999693B55B8B54899F877",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0013"
+    },
+    {
+      "army_a": "97394695B549B1B85458786B998B9367S689B7F2",
+      "army_b": "6BS494958662798B45398B595998977B7F68B3B1",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0014"
+    },
+    {
+      "army_a": "5669978787895BB94884917B3B29B96B63F9554S",
+      "army_b": "94BB81667B79B6939774352B6B9985S954F88589",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0015"
+    },
+    {
+      "army_a": "78S5798BBB99185799764556486B63843BB9F299",
+      "army_b": "15BB755B497368999S976B644536B89B9288897F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0016"
+    },
+    {
+      "army_a": "918889B97869486967695435SB9B757B3F42B95B",
+      "army_b": "B59BS9776698394B94584B65B83862F7751989B9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0017"
+    },
+    {
+      "army_a": "55BB295469684BB39377SB8969196949F787858B",
+      "army_b": "B4B86B997S999795544965883B62587F89B367B1",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0018"
+    },
+    {
+      "army_a": "4269396995357B8BB984896B7519SB7B95F46878",
+      "army_b": "7568599718B7B962569B4896B8S95B34F973B498",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0019"
+    },
+    {
+      "army_a": "B89649357B68B69S598594B9517748BB992F8763",
+      "army_b": "1B54977455996869679B238B938768F9BB859BS4",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0020"
+    },
+    {
+      "army_a": "53B587699S4689B4B38929876597B4F8719B69B5",
+      "army_b": "948378554975B5S2B939B66B69BB167988F47989",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0021"
+    },
+    {
+      "army_a": "73597S9827485B656996748BBB9B915F938946B8",
+      "army_b": "8995B77913S68B6BBB4B579735482985996694F8",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0022"
+    },
+    {
+      "army_a": "1667B62B746S8B95B979349958B587B4853F9899",
+      "army_b": "975BB9489485498358BB9776919BS8F567B66932",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0023"
+    },
+    {
+      "army_a": "93B245B9B983B65177986658778BBS496959498F",
+      "army_b": "B49B786SB8815B7B69945B859679996728349F35",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0024"
+    },
+    {
+      "army_a": "3957B599BB7845992685317869S8499B6B6F847B",
+      "army_b": "9B5649B5779687368S7325B969598BF88144B9B9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0025"
+    },
+    {
+      "army_a": "97B8B3996B58454769817BB6286B45799F38S599",
+      "army_b": "997B38S74955B594B66B28B96B88947957F93816",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0026"
+    },
+    {
+      "army_a": "416B988426B3655BB7638B947798S9F978599B95",
+      "army_b": "96615B85497729B38B598S88B96B7497F49B3956",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0027"
+    },
+    {
+      "army_a": "8B59B69949755761943SB3B27874899F89B66B85",
+      "army_b": "989885BB959S9B3824481BB759567697734B669F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0028"
+    },
+    {
+      "army_a": "97B61898SB958B9B99B997324748566F3568547B",
+      "army_b": "669B27S88BB651583973949BB79894685B4795F9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0029"
+    },
+    {
+      "army_a": "58B379BB95986877594S95646B988949B76B21F3",
+      "army_b": "59B68967341BB6SB487B98B4975293895698597F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0030"
+    },
+    {
+      "army_a": "7B9899656B9797B6989538364S8BB575F4B81942",
+      "army_b": "7756B7975B6S9999969888294854538F43BB1B6B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0031"
+    },
+    {
+      "army_a": "4659B5867689788SB999B85B591BB7439462F937",
+      "army_b": "7S8B395B89927768569B9495446B8B1B5F987936",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0032"
+    },
+    {
+      "army_a": "17853759BB6B893B7B8947896964BS9F52869945",
+      "army_b": "677B83B742595BB81887B9939648S669F949955B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0033"
+    },
+    {
+      "army_a": "B7979S4588469389B67BB3168284BB9595F75969",
+      "army_b": "9967B85768B559S44921B695998B37B4B968F873",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0034"
+    },
+    {
+      "army_a": "33B748975B5B47918B497B9S898B96986F566529",
+      "army_b": "71BBB998867589997585B6936764B9534FS2498B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0035"
+    },
+    {
+      "army_a": "B8664788759B926178S9435B4B5739BB95F89969",
+      "army_b": "76B5B8893B597954419999BBB6356S88894F2677",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0036"
+    },
+    {
+      "army_a": "B968759968B78B8B582B15649796B3S94939F574",
+      "army_b": "B3B598627496B7B79BS8848999B595F156746398",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0037"
+    },
+    {
+      "army_a": "7998B64B55B75S4B752637946BB898F991968983",
+      "army_b": "85B877965BB5874B9S19B9876426993986F53B49",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0038"
+    },
+    {
+      "army_a": "5485B87B254BBB13995B96989786S697997486F3",
+      "army_b": "19B98B79469955S2B9878354889B669B47F67B35",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0039"
+    },
+    {
+      "army_a": "8914BB5937BB85798B6644969S9759588F3679B2",
+      "army_b": "658341B44B5SB978832698579579B996F9B7968B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0040"
+    },
+    {
+      "army_a": "949B876971BB8559668839B6B7895543972SB49F",
+      "army_b": "38179B5976459BB669943596BS98B584F97B7288",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0041"
+    },
+    {
+      "army_a": "45SB37891678759699B3948696B4B2B5889F9B57",
+      "army_b": "5953B661798S984847B58B45BB9989976F3B9627",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0042"
+    },
+    {
+      "army_a": "6369759BB15955B7838786489827BSB999496B4F",
+      "army_b": "376269789868B53BS94587574B9B69B94998B15F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0043"
+    },
+    {
+      "army_a": "8BS9379685196956B57496395B988BF7B89742B4",
+      "army_b": "69B99563647B8B88B4B99859275647F9B85S7931",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0044"
+    },
+    {
+      "army_a": "99BB7959769B853891696544377B8258B4B9F6S8",
+      "army_b": "75576897987935163BB65294B8SB49B8F684999B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0045"
+    },
+    {
+      "army_a": "8795344S969B2984919587367B86BB7F969BB558",
+      "army_b": "5887BB9799619B8899BS4965B3632475F6549B78",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0046"
+    },
+    {
+      "army_a": "7B93S95998B1889965B559B88B2479376B476F46",
+      "army_b": "9979878489956BB9B1BB66349937558B28S7F654",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0047"
+    },
+    {
+      "army_a": "9793B99S867375B87644841BB96BB89F86255959",
+      "army_b": "746629583849984B5BB9978996951S83BB76B7F5",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0048"
+    },
+    {
+      "army_a": "963S6B76B74956B1B984578B98853B4F27859999",
+      "army_b": "8589B9B79279645SB6694B353879B8B945F78619",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0049"
+    },
+    {
+      "army_a": "19376B99477BB66388B4928859569B7S99B85F54",
+      "army_b": "7956599B97856781388B6459B9924S84BB976F3B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0050"
+    },
+    {
+      "army_a": "994B8765B99B6397S9992785B584B54F3667B881",
+      "army_b": "57B84395S974999163B6746B2678B9989B5F5B88",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0051"
+    },
+    {
+      "army_a": "B595489996B6BSB974275883896759618B4B3F79",
+      "army_b": "834B76287537499469B85BB8SB51968B7F599699",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0052"
+    },
+    {
+      "army_a": "35B78B4961S98B699BB6543795897894652B8F97",
+      "army_b": "B97514S6895B9B8B7B74457996B98926358F8963",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0053"
+    },
+    {
+      "army_a": "8S4B49949557675B78BB1968BB9836897359692F",
+      "army_b": "9S85B6B9B4996B6488779573427B38F5156B8999",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0054"
+    },
+    {
+      "army_a": "S857893B158B48597B949599986674667B2F93BB",
+      "army_b": "B77572B759989S69B3316488B4995B9486659F8B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0055"
+    },
+    {
+      "army_a": "B645999918B87S6B2B586367857B9799F3B84594",
+      "army_b": "99S7B97B944B69B53859852854B6936F619887B7",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0056"
+    },
+    {
+      "army_a": "983B653B27B898997B99856B8965715694F74BS4",
+      "army_b": "B959795B2B4515B64B9B897487799S886368639F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0057"
+    },
+    {
+      "army_a": "7B9B79939551B73S265884B99B48869569F8647B",
+      "army_b": "899962865B7B47919635B967B348979F855BS4B8",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0058"
+    },
+    {
+      "army_a": "852B979B9BS9B76978883556668B13979549F4B4",
+      "army_b": "9SB449966B89598297B49B873B855B5713676F89",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0059"
+    },
+    {
+      "army_a": "B482895566B756395S79617B99948B4B9B8783F9",
+      "army_b": "5918BBBBS367969699892779B554688B384F4795",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0060"
+    },
+    {
+      "army_a": "B74B7656889835B979559668S44BB2978B1F3999",
+      "army_b": "7869B5339996B2645S99475B97B589B8F7B81846",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0061"
+    },
+    {
+      "army_a": "9263897878795946154B69BB59SB9385498F7BB6",
+      "army_b": "69672469B94687B584B75957BS9581BB98398F39",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0062"
+    },
+    {
+      "army_a": "5846B79838SBB62B74639755957819489B96B9F9",
+      "army_b": "BB9359767B986S28B8588749B595941F6B946973",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0063"
+    },
+    {
+      "army_a": "B7B678B49991588784B995B58694592S69F33B67",
+      "army_b": "746B95881S9245B9B53897BB87965699946F873B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0064"
+    },
+    {
+      "army_a": "7BB8269B95749834BB9596749S786969158F5B38",
+      "army_b": "9958348467499BBB7638B58B1B6559999772S86F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0065"
+    },
+    {
+      "army_a": "9488B5B677539796B4S86299789B1BF8554939B6",
+      "army_b": "B978B8599B45976B5669B432869SB1949783F578",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0066"
+    },
+    {
+      "army_a": "896943B9856B7199787945BS695795F8B6B4823B",
+      "army_b": "2B9989589B5B76473B396767B54B8916948S85F9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0067"
+    },
+    {
+      "army_a": "B478B477B6689691S99535BB258978B69459F398",
+      "army_b": "5567B9B438299BB9796989S653B9874885174B6F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0068"
+    },
+    {
+      "army_a": "7598B46691958B8BB8796B27995B34S8754F9369",
+      "army_b": "8669B79886747B9B9B91S959B7395364F8485B25",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0069"
+    },
+    {
+      "army_a": "578918B89BB465S3B936596249488697F7B7959B",
+      "army_b": "877S86417965929893B794B98B4BB56F5386995B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0070"
+    },
+    {
+      "army_a": "8637938BB186829BSB4894996976B9779B5F5554",
+      "army_b": "89489944689SB36B5BBB78776B583959F5679192",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0071"
+    },
+    {
+      "army_a": "6SB438B7458B9795679976159893BB498298F65B",
+      "army_b": "53853949B6B617B6879S5824B87B89B69549997F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0072"
+    },
+    {
+      "army_a": "963BB94B95719B459997788698458B26356F7S8B",
+      "army_b": "B3975994879881B8534746SB6569896F7BB9B529",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0073"
+    },
+    {
+      "army_a": "6989392986B69B51B74S58B9786895974F4BB357",
+      "army_b": "9597B739679B89684BB3485S596B9954B26817F8",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0074"
+    },
+    {
+      "army_a": "8996535B9989B4B786659B67B8B41973S89572F4",
+      "army_b": "BB345989896514888952B7BS9797B66945B3967F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0075"
+    },
+    {
+      "army_a": "B76589B3B39799415868454697992BS7B6F5988B",
+      "army_b": "B9B55924987956S99BB946486673B83B19F88775",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0076"
+    },
+    {
+      "army_a": "7S196958944B48B69BB9659385B52939F76787B8",
+      "army_b": "8639B9B9B4S42885968966B985B9975F47B53177",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0077"
+    },
+    {
+      "army_a": "8BS784B7B9188B743B369B64579989965259F965",
+      "army_b": "889567B796549S9B47B955B7649B93B6893812F8",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0078"
+    },
+    {
+      "army_a": "9B27BB1B37889664678935969B94557S89985F4B",
+      "army_b": "4BB59285B45969B89679768683843S9799F5B7B1",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0079"
+    },
+    {
+      "army_a": "95B8BS73574896B4956716893B859928F946BB97",
+      "army_b": "5S99796614737958B8B9B5246863B754899F98BB",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0080"
+    },
+    {
+      "army_a": "46BB988929416B9S7B6557538877596BB9399F48",
+      "army_b": "958576B789B95S489B8B619398677949BB32F645",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0081"
+    },
+    {
+      "army_a": "9B5937999S2864B5678B9891834B7456F9BB6857",
+      "army_b": "967439B578B15B8886979B3597S69B42496F985B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0082"
+    },
+    {
+      "army_a": "49S68459B8BB9B99917984B7592578B7635F6638",
+      "army_b": "9B8B57B8951396B89969648299756B7B34S48F75",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0083"
+    },
+    {
+      "army_a": "6689682B4BB8B47537S35749B89159598979F96B",
+      "army_b": "349B3548767967B9S996168559857B248F8BB9B9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0084"
+    },
+    {
+      "army_a": "69699538924BB597B35768B88B499671B795FS84",
+      "army_b": "8B44B1953B45B38698999952B6769798S6B77F58",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0085"
+    },
+    {
+      "army_a": "2S339885869B947B945799B686B749B98B565F17",
+      "army_b": "656S4387519884699BB699B37B572889B9759B4F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0086"
+    },
+    {
+      "army_a": "9958B218467836S849B655B9978B76B9B57F9943",
+      "army_b": "79B84BB75932B998BB8814596794995F36S86756",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0087"
+    },
+    {
+      "army_a": "S3869951358B6B4598B4B9B8949277B759867F69",
+      "army_b": "B6B65978267B39S6B58B8B439197999978F85454",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0088"
+    },
+    {
+      "army_a": "496B57948B7163947B99B26B95B578SF93688598",
+      "army_b": "98B29594733665BB59B6874889979S1BB48796F5",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0089"
+    },
+    {
+      "army_a": "469B859B55B625S9699738B8919694B7B488F737",
+      "army_b": "6987399B5834647S5B28977B9B48651F998B69B5",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0090"
+    },
+    {
+      "army_a": "9715848B38B74825B94B5798799B65S63996F69B",
+      "army_b": "9497B9568BS92568B1644787B3939B68F59B7598",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0091"
+    },
+    {
+      "army_a": "299468B7B6494187B859BSB36958983977F955B6",
+      "army_b": "89645997B5SB42687973B9698658B7BB519F9843",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0092"
+    },
+    {
+      "army_a": "7SB6BB93584978B84B3659589286996B945179F7",
+      "army_b": "589989BB3B92B6468976SB18B74574376595989F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0093"
+    },
+    {
+      "army_a": "7294BBB459698B3617B349797B6588899F85596S",
+      "army_b": "182596BB84598B347783895469B6S7B99B7F5699",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0094"
+    },
+    {
+      "army_a": "9B75648396685B599984967BB959B84B7821F7S3",
+      "army_b": "69354B88SB5B5299379841896B599679B678B47F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0095"
+    },
+    {
+      "army_a": "981B6885399484S5B4657BB79BB987F975269963",
+      "army_b": "B87685B9B5S4493B9B41395962799587F88766B9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0096"
+    },
+    {
+      "army_a": "5896B497578B234S99B5818B3695476B98F99B76",
+      "army_b": "85937588499S3497B5B6498995BB767B1F662B89",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0097"
+    },
+    {
+      "army_a": "2449B38B6685B18B3B4687S9597958769F9957B9",
+      "army_b": "8S798796B1759835BBB439B66B79648998F45529",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0098"
+    },
+    {
+      "army_a": "359B78B514469837BB69698B789SB99695852F47",
+      "army_b": "B718B59BB6839569B8B552949867437S649897F9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0099"
+    },
+    {
+      "army_a": "9929B6679157557BB68495438BS9B39984B7868F",
+      "army_b": "789B6B8879B98597652985654143BBSF3796949B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0100"
+    },
+    {
+      "army_a": "SB3691664B84695579928B998B7975B7B453889F",
+      "army_b": "9599434S3874959B7B96678812BB98B589B566F7",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0101"
+    },
+    {
+      "army_a": "B69B5778B588B91B4S999637895B2979834F4665",
+      "army_b": "44369955S4959B8B698B82983771976B5BB69F78",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0102"
+    },
+    {
+      "army_a": "9453868B778B86BB659954B49B7732F5999S8619",
+      "army_b": "12987596689BB4897645S7BB956B9B9349F78835",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0103"
+    },
+    {
+      "army_a": "971BB79955B95488S6B6996467B353F29894B788",
+      "army_b": "7593SB878B35715BB659B687492B69496989F948",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0104"
+    },
+    {
+      "army_a": "999B3B289BB56677S8B69316B895995F85747844",
+      "army_b": "6S7529B19775B76B4865BB5B9484993969F38988",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0105"
+    },
+    {
+      "army_a": "485661889B9B2477687989B59B596BF37BS49935",
+      "army_b": "9B7755S62B9887584513449B6B6679B98998B9F3",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0106"
+    },
+    {
+      "army_a": "749S4B429668531B8BB9758768995B3989F576B9",
+      "army_b": "B3B689B6551B47927678998396B9988445SB957F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0107"
+    },
+    {
+      "army_a": "99S95BB28476B5974B687B391698689B49F35578",
+      "army_b": "37637554596894B58989B667BB949S29F81B87B9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0108"
+    },
+    {
+      "army_a": "7569998B32B7B456549349B89876B98S16F5978B",
+      "army_b": "B5496B9597913B869B96479BS32457F968887B58",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0109"
+    },
+    {
+      "army_a": "B55826B78B8B6959993998457719B86734S96B4F",
+      "army_b": "B9764B9991B88B835569B39652779697SF8B4584",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0110"
+    },
+    {
+      "army_a": "B8B8S45959295691947B3668B769758F389479BB",
+      "army_b": "886763B299B4B953B8S5457819B7996F859B7496",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0111"
+    },
+    {
+      "army_a": "795568B984B81B6656BB2S35988B49F437979997",
+      "army_b": "8947939B89879B6B96834S867B465921F595B5B7",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0112"
+    },
+    {
+      "army_a": "899562B99943185B687B3B79S594B58B896F4776",
+      "army_b": "998B69884B76B16B23944B8586B59579S37995F7",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0113"
+    },
+    {
+      "army_a": "2866B9398755BB97B7S9B48478589B91456969F3",
+      "army_b": "378931B9594B94B575B99647688S96F95B26B887",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0114"
+    },
+    {
+      "army_a": "B29673998463B7B94599687585B1B5B997S84F68",
+      "army_b": "B44881296679563B597985S5B3798867BB49F99B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0115"
+    },
+    {
+      "army_a": "99687BB8564519338959BB9B47B2978689F56S74",
+      "army_b": "965B794891B9BB7S823598774995666BB548F839",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0116"
+    },
+    {
+      "army_a": "75681B796B86985848792BB36945B5F993B79S94",
+      "army_b": "6687562B854B7B999B934599B9B7458F938681S7",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0117"
+    },
+    {
+      "army_a": "S999B9B3284697BB85477789B65543B69896F815",
+      "army_b": "4B669982999B93496B795488757BB5F8S53678B1",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0118"
+    },
+    {
+      "army_a": "91885B59979687996BB784349B36B7S8455B6F29",
+      "army_b": "BB59B576479396B68S9478255489179B9F8683B9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0119"
+    },
+    {
+      "army_a": "79SB7185475983893964B29BB4897658F9596BB6",
+      "army_b": "75B9B4B4548999568BB69698B7S98372F7513986",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0120"
+    },
+    {
+      "army_a": "89BS88B6667534B8996579B25897B99B9F143574",
+      "army_b": "27BB5SB68814B989544999B697763B3897589F56",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0121"
+    },
+    {
+      "army_a": "5696849699767495289BBSBBB85487738919F3B5",
+      "army_b": "B9B9S28545B79B861996398B77875998634B465F",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0122"
+    },
+    {
+      "army_a": "B71S63997868269458BB59B699894B7984557F3B",
+      "army_b": "779885972944969BBB5B98865S954361B398F6B7",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0123"
+    },
+    {
+      "army_a": "945B799988975B8939B3B8674B5669S8B76214F5",
+      "army_b": "B5598669996B9BB384741B57B3824779568F89S9",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0124"
+    },
+    {
+      "army_a": "3B6SBB68555774B7B5999B68916799F888994423",
+      "army_b": "799B57589597BB436S768B698B53924816994F8B",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0125"
+    },
+    {
+      "army_a": "478BS89667B5737B9491B9995886B68B45F93295",
+      "army_b": "B94B81796B6S27B6553554BB998349F997868978",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0126"
+    },
+    {
+      "army_a": "4985BB87B9B64385B599473997B268917S8966F5",
+      "army_b": "95765B25489B369BB76643B487981B5899S9F987",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0127"
+    },
+    {
+      "army_a": "58874979BB59S8198365764B52BB984B937F9966",
+      "army_b": "B69B9985757586269S3844467BB997BB89935F81",
+      "family": "exposed-rear-v1",
+      "id": "seed-validation/exposed-rear-v1/0128"
+    },
+    {
+      "army_a": "4F4979B695899B57BB7736886S92485BB3698519",
+      "army_b": "2F9B7479BB67B5913883459679B548986S6859B9",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0001"
+    },
+    {
+      "army_a": "9856735FSB5B4985B4649792B6999196783B88B7",
+      "army_b": "98B85F5989S93B5564896421B7997976BB3486B7",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0002"
+    },
+    {
+      "army_a": "95F5B83B6S4876977449159B5B968B989B829376",
+      "army_b": "B95F8B9795894786459537B276S6B91B984B9638",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0003"
+    },
+    {
+      "army_a": "BB8695B4F9976936581788794BB59596389B427S",
+      "army_b": "7899923F59B6783416B555B9487864S7B9B96B98",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0004"
+    },
+    {
+      "army_a": "99S866F839B7B44526B79991834B5895857BB796",
+      "army_b": "59996B7F8B74B28576B58498B8193966S57939B4",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0005"
+    },
+    {
+      "army_a": "4F9B857B71979BB499B648B6635532989865S798",
+      "army_b": "79B85B3F87641885694BS8767969B3954B99B259",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0006"
+    },
+    {
+      "army_a": "79474F6995B389B1668882769SB5937959BB854B",
+      "army_b": "3484885F6675867B969B9S824B53B99917B7B959",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0007"
+    },
+    {
+      "army_a": "496B74F868685778999SB5792B63B59319B5894B",
+      "army_b": "53B8F6S386749565287BB15B99BB999748897946",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0008"
+    },
+    {
+      "army_a": "B697B4B5F896B7499B8733B2S576941598698985",
+      "army_b": "9B836889F37B2559961S496477984899B5B76BB5",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0009"
+    },
+    {
+      "army_a": "86725F69688B4BB3B79B999914594396858S75B7",
+      "army_b": "8F8194289699437S9355674957B78B9B6586B9BB",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0010"
+    },
+    {
+      "army_a": "3958759F2583889B96798B195B96B4494776SB6B",
+      "army_b": "F7B49B5B932B694885996774887963S9BB865519",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0011"
+    },
+    {
+      "army_a": "86F594B8B8626B97S5B7864993375B9B41987995",
+      "army_b": "1B26F358B6874496B98557B8497S9969897953BB",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0012"
+    },
+    {
+      "army_a": "3SBB88935F7995B47B979499624B8819865676B5",
+      "army_b": "9F9B779BBS97465837938969BB28185B46948565",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0013"
+    },
+    {
+      "army_a": "3F5861798BB89799565B87469839925BBS64B497",
+      "army_b": "B8789968F5542636977B948738S4B965B19B95B9",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0014"
+    },
+    {
+      "army_a": "BB4998F85BB947B999582778175465SB33998666",
+      "army_b": "24B18F9994B8796599855SB7657769643B3898BB",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0015"
+    },
+    {
+      "army_a": "F758997BS96834B269B978815B7996BB55464398",
+      "army_b": "8B79S81F9797595666652834B89349BBBB978594",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0016"
+    },
+    {
+      "army_a": "237F91B64847968B688B55B9B97B7695S3945998",
+      "army_b": "63659F9B57896773B7298SB195888B9456B49B94",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0017"
+    },
+    {
+      "army_a": "796B9F68SB8595B94B34899669B7754538B21978",
+      "army_b": "B66F9455188B57979S47435BB98882993B69B679",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0018"
+    },
+    {
+      "army_a": "B647F8672B89B8489695BS41598B7539659379B9",
+      "army_b": "F675519B9B886599B6278B8447853939S7B9B946",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0019"
+    },
+    {
+      "army_a": "8SB568B5F9584B7991499549B68389797B726B36",
+      "army_b": "8465878F1SBB9B99B9364959973858747526BB69",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0020"
+    },
+    {
+      "army_a": "B97889766F52485B4938556179B863B49999BSB7",
+      "army_b": "57B6F936B589B4778925888B466B1S543999B997",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0021"
+    },
+    {
+      "army_a": "6B5859949F82579B63656917S99BB89734B8478B",
+      "army_b": "847788766F769B269995B95B5BB5934349198S8B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0022"
+    },
+    {
+      "army_a": "3B94F86655294919B77495769B78583B69SB8B98",
+      "army_b": "3B7F66748B1958525797SB83BB9596468B498999",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0023"
+    },
+    {
+      "army_a": "19F2398B97648659B4B89B7965993B58BS768547",
+      "army_b": "B8854969F62B9B5949193375B7795SB97848668B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0024"
+    },
+    {
+      "army_a": "874B4F9B939894B5B596968358BB621S75979768",
+      "army_b": "967F9959389479BBB55S668597912848768B3B4B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0025"
+    },
+    {
+      "army_a": "S1475395F99666899B987B5249BB4BB763888975",
+      "army_b": "8B7675F987859B9586996799B645123834SBB94B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0026"
+    },
+    {
+      "army_a": "99366F59B9B59498S384B6697B5B2778178B4895",
+      "army_b": "7739F99SB457349758B6BB9686B259954886891B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0027"
+    },
+    {
+      "army_a": "5747F929S9898685947B361B68954B7B9B39685B",
+      "army_b": "98BB5F741B8944695BS88269957B33B876697995",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0028"
+    },
+    {
+      "army_a": "96S799888F155B967546B47B882B9B99B9367453",
+      "army_b": "9874989F7819745BB486BS6539599B79866B523B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0029"
+    },
+    {
+      "army_a": "986591F4B99S89B555834B68B87769392B97476B",
+      "army_b": "6B5FS955857483126B6989BB8974994379B7896B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0030"
+    },
+    {
+      "army_a": "589938S19F268565B8479959B6B9B7B9B6348747",
+      "army_b": "9B8F9664B9BB8977545S35B4788269963B819957",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0031"
+    },
+    {
+      "army_a": "6386B4F989B97SB99585827B953647B71B698954",
+      "army_b": "B985S266F98995994746697885793715BB4B3B8B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0032"
+    },
+    {
+      "army_a": "5B542759F68939183B46B9779688B4S57998B9B6",
+      "army_b": "B3496699F97BS4B5587849B9687BB65378591829",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0033"
+    },
+    {
+      "army_a": "9F21994489S87985B64995B3779B3B56B5676B88",
+      "army_b": "467F2896497993B5685BB5B997186BSB59983487",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0034"
+    },
+    {
+      "army_a": "B315F97B693B269B5999B44B5895878968477S86",
+      "army_b": "14B98F269793B659936859867BB89B8744S7955B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0035"
+    },
+    {
+      "army_a": "129BS5795FB9858939B4B76969B966744857B883",
+      "army_b": "5B9F4998898S99BB62975374B4B6718B79385566",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0036"
+    },
+    {
+      "army_a": "996989F64233744896999871B585B87SBBB657B5",
+      "army_b": "9666F8798573168B5989294974BBB43987595BBS",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0037"
+    },
+    {
+      "army_a": "43B95F6869299BB93BB5B989614S585864797877",
+      "army_b": "7F6BB9941597B8693496762S8B5587893B98B945",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0038"
+    },
+    {
+      "army_a": "485166F98899BB455999879456BB763B27987SB3",
+      "army_b": "B89975469F5686S7B498128BB33758996B97945B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0039"
+    },
+    {
+      "army_a": "454F8B998251939B5BS796B9B77889B794538666",
+      "army_b": "BB599B953F7998BB8968B562797876S464914385",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0040"
+    },
+    {
+      "army_a": "12F8497399B546S6758BB995697986588B734B9B",
+      "army_b": "B637F99B99B4957B67B958484862858B659791S3",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0041"
+    },
+    {
+      "army_a": "94819F387B6298B7B3B6486765BS99555979B489",
+      "army_b": "697F698BS428948B7B698395618B9549B95B7537",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0042"
+    },
+    {
+      "army_a": "F664B2B77389941699B394958788B79659BB58S5",
+      "army_b": "94B833866F9B657747S8B6959994127B8BB59895",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0043"
+    },
+    {
+      "army_a": "4F789953B9B46B769S5821995B9968B36754878B",
+      "army_b": "9B35496F255897B79739B881697SBB69494B5688",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0044"
+    },
+    {
+      "army_a": "B8F61BS4BB99479979B475636B69995858735288",
+      "army_b": "2F7859945B99884397584163B69B6S7796BB895B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0045"
+    },
+    {
+      "army_a": "B4574S95F58BB139738977B66982998B48B99665",
+      "army_b": "7F33497B99S68B845545989866B29B896B1B7759",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0046"
+    },
+    {
+      "army_a": "4F685519397979978B5B836B784BB92659BS4896",
+      "army_b": "954F59817533567BB794426997S6B99B8988B6B8",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0047"
+    },
+    {
+      "army_a": "37B49F58987195955929BS46748B3697B88696BB",
+      "army_b": "42915F4876S99989576B74376B56589B98BB3B98",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0048"
+    },
+    {
+      "army_a": "88F9586B95772896B9S459BB397697443B189B56",
+      "army_b": "59898F576199B976558B7S9B486687B3B94B9423",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0049"
+    },
+    {
+      "army_a": "57F18785669B89B4439B96SB493895BB92689757",
+      "army_b": "849883F799B9B6479654358599B2S8BB65B76917",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0050"
+    },
+    {
+      "army_a": "56F7BB896B6S539927B97475495B1838894B9986",
+      "army_b": "69F38455683948947BB2975857BB9B6S816B7999",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0051"
+    },
+    {
+      "army_a": "3B5B568FS593874986B89919997B42865677B4B9",
+      "army_b": "69F9665881B3879S4995B5B5B74872B6437B9899",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0052"
+    },
+    {
+      "army_a": "F7BB8656948B9797S6145694B2938B579539889B",
+      "army_b": "3B6F8B579B47863175895974S899996BBB968245",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0053"
+    },
+    {
+      "army_a": "5BB855F956B8SB8718B9949499367769B7982364",
+      "army_b": "679B57F86497471B9965B4883BS2889659939BB5",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0054"
+    },
+    {
+      "army_a": "8B88F991B35B75739497B6896499S696B57B5482",
+      "army_b": "7F896B8B99853646595721B5BB84B7S497396998",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0055"
+    },
+    {
+      "army_a": "459F98BB636869B95698B979882437741BS9755B",
+      "army_b": "B95F79B75689687833B5449S9BB99896785216B4",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0056"
+    },
+    {
+      "army_a": "F67487599569B954685BBSB9938174972BB98836",
+      "army_b": "S7897F33485B86749975B6995B62B98941B95B68",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0057"
+    },
+    {
+      "army_a": "875B85932F99165BB749S47BB88567689693B499",
+      "army_b": "65B47F24B986B83SB96795B949938961759B8785",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0058"
+    },
+    {
+      "army_a": "853F995646916876S99498B2B7557BBB8998347B",
+      "army_b": "556F47627B9B87B395S9B69989B89836B9174845",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0059"
+    },
+    {
+      "army_a": "765894F77638919B6988768549B9B94BBS2B9355",
+      "army_b": "88B89B4F957699B239B556S5B78646897173B949",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0060"
+    },
+    {
+      "army_a": "886742B39F96SB85696993B75B591498845BB779",
+      "army_b": "4F35792758696568B8989BB39487S9B6914B57B9",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0061"
+    },
+    {
+      "army_a": "6B7678B39F956932S789858B99B9B59641B48475",
+      "army_b": "59F549BB696B7199B39776497B8886S53B284958",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0062"
+    },
+    {
+      "army_a": "99B7889F359B1BB6536BS4854677295499B68789",
+      "army_b": "54F39945B58847B31779B5866B987626B89999BS",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0063"
+    },
+    {
+      "army_a": "789SBB88F9862355749B4B99639B7B6748156995",
+      "army_b": "717857F58B93B99S3696B8497894966B94B28B55",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0064"
+    },
+    {
+      "army_a": "F5469B1694SB53825B98B8974769395679B988B7",
+      "army_b": "559B7F846533B469786289S991848B975997BBB6",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0065"
+    },
+    {
+      "army_a": "29686B353F69B54B875891859B7B97BS96978449",
+      "army_b": "54F6793266B9916B7958359B9788B47BB8985S94",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0066"
+    },
+    {
+      "army_a": "B8F2556B74BB64493938599B7889669897591B7S",
+      "army_b": "848F9S897B3B25585456991B7797B9B69B894636",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0067"
+    },
+    {
+      "army_a": "883F78SB864B6296949B9795BB94856995377B51",
+      "army_b": "6843479F943BB59925999878768B966S1785BBB5",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0068"
+    },
+    {
+      "army_a": "B4B3938F9485897B75979B5456867899S6B26B19",
+      "army_b": "F5B1693975384S5999854BBB27B7978B69684968",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0069"
+    },
+    {
+      "army_a": "89BB9B58F3299686915955B87443986B4S79B767",
+      "army_b": "F995B137447668672988549B9B938B58B97S965B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0070"
+    },
+    {
+      "army_a": "9F689676B995358995177BB7489BB844358S296B",
+      "army_b": "68B1597F58B9B756B853B9976B93994S49874826",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0071"
+    },
+    {
+      "army_a": "59BB834F9B499626788S596B551B748769879B93",
+      "army_b": "B58F97359548218B9BB9B85799S767964869463B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0072"
+    },
+    {
+      "army_a": "889971FSB7B685B9553892995349B98B747B4666",
+      "army_b": "B77B596F4S469537B568399B86598891472B9B98",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0073"
+    },
+    {
+      "army_a": "2F83593B19789S956966957894B486495B7B78BB",
+      "army_b": "97936F9589SB641869B75B588794935986B7B42B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0074"
+    },
+    {
+      "army_a": "6B3799S98F94B63477998956B57B45B2891B6858",
+      "army_b": "948F8766873389755B9B5979B9S2685614BB94B9",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0075"
+    },
+    {
+      "army_a": "2899B8675F7B9397B6858B16B4953794SB869954",
+      "army_b": "7F879888945S9BB63999568479B67BB6954531B2",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0076"
+    },
+    {
+      "army_a": "839684S79F5999BB67916944B38BB87B57895265",
+      "army_b": "9F75628B945788S19B95B95B8BB7698396794643",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0077"
+    },
+    {
+      "army_a": "5F46B79988586B5784179393B9B8675S699924BB",
+      "army_b": "9F89896B9445B556B73S75919B43B8677998B826",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0078"
+    },
+    {
+      "army_a": "379B699F9678759B455997143B6B6SB89848825B",
+      "army_b": "2BB7F76557969759868BB9B31649434S88995B98",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0079"
+    },
+    {
+      "army_a": "3F4997994493896B72576685678BB88995SB15BB",
+      "army_b": "74676F9S4B9B97B2153959695958BB3B49886788",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0080"
+    },
+    {
+      "army_a": "F59B9B9B269568B779S439797868B948B6153854",
+      "army_b": "97496F99599B176736B84B263559BS94B788858B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0081"
+    },
+    {
+      "army_a": "B899FS946892B97998945475B8787331B5B65B66",
+      "army_b": "F67719499588566892537BBB9B987B39S496854B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0082"
+    },
+    {
+      "army_a": "1779B7F59599B89B66BBS6935437B99884286854",
+      "army_b": "F3789B693B955684569S2899B67BB519797B8448",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0083"
+    },
+    {
+      "army_a": "8S759F95BB983946175B37269897B454689BB896",
+      "army_b": "5BB938F46B192B876956B879S55B947986489793",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0084"
+    },
+    {
+      "army_a": "58397F96499688S7B1BB98948929675BB67554B3",
+      "army_b": "F7593S5689485B49B876B999769194B2387B6B58",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0085"
+    },
+    {
+      "army_a": "677549F8679992953S861B845B79B5968B98B34B",
+      "army_b": "F9967B3858568B61S943994947B28B58B756B997",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0086"
+    },
+    {
+      "army_a": "F6447869689534168S97957895B5B97BB399B2B8",
+      "army_b": "8F596B783547B9957B6B899818B72946S35649B9",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0087"
+    },
+    {
+      "army_a": "8B6995S9F89BB7B7419826534966B853749978B5",
+      "army_b": "9793694F65BB8468872B57999175SBB5698934B8",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0088"
+    },
+    {
+      "army_a": "B27659538F75B96999968589836B4BS7948B4B17",
+      "army_b": "8F999B9B38B795598B986B492S48B73574756166",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0089"
+    },
+    {
+      "army_a": "8F442B9548589B567963B9B968S8613BB9779759",
+      "army_b": "743B9FS9B569884814B65697263B7789B59B5998",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0090"
+    },
+    {
+      "army_a": "9345F4396819976S58B598596BB842797987BBB6",
+      "army_b": "7B4B6F85B8599394259BS7B97561684973898B96",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0091"
+    },
+    {
+      "army_a": "97696F679BB29559BB83BS9386495884591B7487",
+      "army_b": "66996F57928B7599B649BB3537B8898874B594S1",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0092"
+    },
+    {
+      "army_a": "698S896F5B388B598969947B76B91553BB749274",
+      "army_b": "BBB7F6958B658999388S57378274B51996B46499",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0093"
+    },
+    {
+      "army_a": "69B1B987F59562B37B85B644S947998835B69789",
+      "army_b": "B46F898B8912B8766S75379857B469359BB99495",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0094"
+    },
+    {
+      "army_a": "B9B7545F74899SB699558667B3821B76938989B4",
+      "army_b": "F754388B6734B67759594B98969S91B8BB959682",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0095"
+    },
+    {
+      "army_a": "6B856B25F497B3988979158B6874BB369S945799",
+      "army_b": "B9B9F96997S535184B286885948797B7956BB346",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0096"
+    },
+    {
+      "army_a": "BB498F8769B93468B6892774585S13957B5B9699",
+      "army_b": "B88B6FS7528971B49987956B856793649B45939B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0097"
+    },
+    {
+      "army_a": "499F59869B54875982669893B7B758S94B7361BB",
+      "army_b": "84B7B963F587B96S99734988B7586B69451952B9",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0098"
+    },
+    {
+      "army_a": "98F5B7B7B3B56915BB9624S79749836895689894",
+      "army_b": "9F239659658778831BB5S98B4B69649794597BB8",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0099"
+    },
+    {
+      "army_a": "496F967796B345B8847S7998B695289BB5B35981",
+      "army_b": "5F3B5779466524BB9139B94878B85997S96B6889",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0100"
+    },
+    {
+      "army_a": "B47F979BB569B413B97558866688B99849S72359",
+      "army_b": "B61SB8F893899B799B845B9566789B9564372754",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0101"
+    },
+    {
+      "army_a": "585B79493F988984556189B63S7776B9B4B26B99",
+      "army_b": "476F58184B946398565BB98B96977BS29357B989",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0102"
+    },
+    {
+      "army_a": "79B869F77935593782BB649694BB894S88165B95",
+      "army_b": "3F819797958859B564354B4896768B9B9S2BB769",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0103"
+    },
+    {
+      "army_a": "356B88484F5694B9977SB9B7B95987936265891B",
+      "army_b": "495793SF59BB4298377B979845966B165898B86B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0104"
+    },
+    {
+      "army_a": "56S959F542889B9891385676BB793967B97BB448",
+      "army_b": "6573B5F59B94B8693749SB87B4B9659888917692",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0105"
+    },
+    {
+      "army_a": "568F9S45651287789998BB5769B4B4369BB99837",
+      "army_b": "89B5F968866B298947B51469S955734398B7BB97",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0106"
+    },
+    {
+      "army_a": "9774BB98F4B985969899BB77S5B2984366551386",
+      "army_b": "F64B3969B72B5953579489S984B896B8B1677589",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0107"
+    },
+    {
+      "army_a": "8598F9B39S5895583174B67284B99766B6949B7B",
+      "army_b": "54F7B38689978679S645497586159389BBBB9B29",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0108"
+    },
+    {
+      "army_a": "9F975478S8B257B158B98336B6B8599749949B66",
+      "army_b": "95667877F594S9B954819467B389B9259B8BB863",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0109"
+    },
+    {
+      "army_a": "6B53949F8B71293BB6877455648959987B96BS98",
+      "army_b": "36B7BB5F994469938958786B782596B5BS479819",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0110"
+    },
+    {
+      "army_a": "81F963958B7346B65SBB8624B59987799975B894",
+      "army_b": "984975F9BS684684639B1895B2BB3975B8569779",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0111"
+    },
+    {
+      "army_a": "5989B44F51263697859898BB86B7S69979753BB4",
+      "army_b": "7599988F258B65S7B499758B8B1694473B636B99",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0112"
+    },
+    {
+      "army_a": "89B9F99544785B899392BB1B7S653B6579788664",
+      "army_b": "BB92F63569947783999S589B57B5B178B4894668",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0113"
+    },
+    {
+      "army_a": "33S9655F76BB45B6984919999765B8982B7748B8",
+      "army_b": "9838741F4B6B697B55B6B8749B259693879S9598",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0114"
+    },
+    {
+      "army_a": "399F7B9BS96384485B857942BB5B969561688797",
+      "army_b": "99598563F6BB9B989B9577B483496548682B1S77",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0115"
+    },
+    {
+      "army_a": "B9F82168B99755648B95979S4897646953B78BB3",
+      "army_b": "95988F59B4S7B4B5299B9869B3B4867366517879",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0116"
+    },
+    {
+      "army_a": "F998B895973966B9S1B89B97875452B563B84674",
+      "army_b": "843962F976B9981S568B849B77399678B545B5B9",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0117"
+    },
+    {
+      "army_a": "9F79686BS448735695B9792B59883715BB498B69",
+      "army_b": "5689F2768B735996BS53189B9B779898445B4B96",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0118"
+    },
+    {
+      "army_a": "F8B268498B835994951769939S8977BB56BB4675",
+      "army_b": "BB96F546B7B4451857997788SB82596993B69938",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0119"
+    },
+    {
+      "army_a": "2F75B756785S4B8876B6998B846B5B1939999439",
+      "army_b": "F976S8196B46B9B53989BB748493957875896B52",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0120"
+    },
+    {
+      "army_a": "B77BB987FS6575499B8686B561B9239543989849",
+      "army_b": "5B5949136F95BB996936S7B78488B2896789475B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0121"
+    },
+    {
+      "army_a": "495B5929F899467BBB7583B79B5868493976168S",
+      "army_b": "8F556B91S639B6987B845624B9985B79B9987743",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0122"
+    },
+    {
+      "army_a": "794978F7685918BB8493S9B538B7655BB4296996",
+      "army_b": "B9F297B98S41586845793B7B669B5B9483796859",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0123"
+    },
+    {
+      "army_a": "839F84B2583879569S57999B14B996B576B746B8",
+      "army_b": "B87937452F4B996958599B96SB41BB5988766387",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0124"
+    },
+    {
+      "army_a": "BSB97B563F527B899378B8544B19966799964885",
+      "army_b": "35566S14F8978954B9949BB677BB863B89829957",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0125"
+    },
+    {
+      "army_a": "3448B9756FBB556879B738B699894629SB581979",
+      "army_b": "269F8B9155B76489B937598B796694B7893BS485",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0126"
+    },
+    {
+      "army_a": "9777B2949F856988BB995B967S31BB8354694865",
+      "army_b": "4B7478588F4B696B19685S8596537B2399B9799B",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0127"
+    },
+    {
+      "army_a": "79BB6F25S488959159B36B876B83997B84497695",
+      "army_b": "7697B4F6345986397B28998BBB1498B558759S69",
+      "family": "forward-flag-v1",
+      "id": "seed-validation/forward-flag-v1/0128"
+    },
+    {
+      "army_a": "F7969786482984475SB9378989B9BB36551B5B96",
+      "army_b": "8496748389F95999891283SB4BB55775966B6B7B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0001"
+    },
+    {
+      "army_a": "695998S5374B98F487995B347B82B91879665B6B",
+      "army_b": "9999F4468879569B6B77695389B1B5542388SB7B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0002"
+    },
+    {
+      "army_a": "545B779994F768383B88S697559B214698B9B6B9",
+      "army_b": "369547B8F9995887S491B596BB9926785B7B6843",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0003"
+    },
+    {
+      "army_a": "8S6B57F88688796795B524BB13795349B9B96949",
+      "army_b": "69664B7F837B578547S469B9B95189989B5B2839",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0004"
+    },
+    {
+      "army_a": "89F97599979496S5663978824B684B3B58B7B51B",
+      "army_b": "96SB71598496F5655794876B938B8939249BB8B7",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0005"
+    },
+    {
+      "army_a": "217S38989BF98938969B68655B7B56995444B7B7",
+      "army_b": "477839579F9B994S58846BB92931857B5B6986B6",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0006"
+    },
+    {
+      "army_a": "85B3162F49998884679935BB69S7B77B5B994856",
+      "army_b": "999S67448FB66788991655B72B9957498BB5B833",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0007"
+    },
+    {
+      "army_a": "SB968429599453895F859B6318B764B7B987B796",
+      "army_b": "9834B8995145F62BB3945878969B86679579B7BS",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0008"
+    },
+    {
+      "army_a": "64679595531F3657889829BB6B8B94S98477B9B9",
+      "army_b": "5S9916547B33B44F67998BB28895975B7B669988",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0009"
+    },
+    {
+      "army_a": "B573F8S799982954B9435B7B941966B8B6865798",
+      "army_b": "7955535F44668284986B78S3B9B979B89B6B7991",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0010"
+    },
+    {
+      "army_a": "57993869B74F58749817B5248S95B3B896699B6B",
+      "army_b": "857B3465S26B4B8869F714598B73589999B6B799",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0011"
+    },
+    {
+      "army_a": "5B79892559389F469B49886S779BB73986461B5B",
+      "army_b": "99S739859588664B4F95938B1B76678BB9B95742",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0012"
+    },
+    {
+      "army_a": "596F4984978254997B9B65163S76B3589798BB8B",
+      "army_b": "636B86B939F989574585919B498728B9B6BS4757",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0013"
+    },
+    {
+      "army_a": "878F9B667359849863B9427949B7895515BB6BS9",
+      "army_b": "899B18986956437FS47892B3554B986B7B65B979",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0014"
+    },
+    {
+      "army_a": "1356565957998F9438B477B89BB429986S8B9B67",
+      "army_b": "7BB1F7947929833849568786B998B955S9665B4B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0015"
+    },
+    {
+      "army_a": "865299534B679F185S8B844999B6B99758376B7B",
+      "army_b": "F41B7498798566327487B65B98899S56B5B993B9",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0016"
+    },
+    {
+      "army_a": "BB63914658889297635FB8B77658959B4B7999S4",
+      "army_b": "31695898S787B6395B4F492B69B98976B5B74859",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0017"
+    },
+    {
+      "army_a": "5496594889BB3728S9F81B775B9696B7B5496893",
+      "army_b": "5295F648759166577489974S9B89B933B8B96B8B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0018"
+    },
+    {
+      "army_a": "8459918B89F8365972999B6B757B86S56493B4B7",
+      "army_b": "579862631S8F947956B995978BB398647BB8B549",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0019"
+    },
+    {
+      "army_a": "98465B3879494S5167F9B529B7897B839B8B9656",
+      "army_b": "19577748B3939786F8984B99865B4BB5B2S56969",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0020"
+    },
+    {
+      "army_a": "B87849F285B4159799369B3784S799B6B55B6698",
+      "army_b": "3B9795464B6B792F3679SB95859488B8B5919867",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0021"
+    },
+    {
+      "army_a": "BBS2B798759498156F969B93485397B8B5849766",
+      "army_b": "F9989953796S9B71B55B9629B85446487B8B8736",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0022"
+    },
+    {
+      "army_a": "78B84F8959B6699793375B5S618689B4B72B9459",
+      "army_b": "SF5237995599B857B8679B398416B69447689B8B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0023"
+    },
+    {
+      "army_a": "5189B39B43F69B257766888B6484S999B5B97957",
+      "army_b": "93779B9F85598816S7859679B956B4B43B6B4982",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0024"
+    },
+    {
+      "army_a": "5934S6991F888648977683B745B9B95B5B6B9927",
+      "army_b": "F5599899S667837B6849873B96B52984B5BB9174",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0025"
+    },
+    {
+      "army_a": "4697F848958S879237549B97836599B9B6BB6B51",
+      "army_b": "6998778BB981F576348989625635B5B9479S9B4B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0026"
+    },
+    {
+      "army_a": "3799757F546B13B9648S4B5B988995B7B8698296",
+      "army_b": "5BB98F9953826147645566BB9799488B7B78993S",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0027"
+    },
+    {
+      "army_a": "5B98S9567F89579847839B26B76B54396B4B9198",
+      "army_b": "569783F64899B55B881B479B99S56927B6B84397",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0028"
+    },
+    {
+      "army_a": "7765999S8B459F9B1478856236B39687594B9B8B",
+      "army_b": "8951596B3969SF878346849759BB5467892B9BB7",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0029"
+    },
+    {
+      "army_a": "9S84937892F59965189997B4655B38877B46B6BB",
+      "army_b": "5687B8B13F449698765958935BS8679947B9B92B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0030"
+    },
+    {
+      "army_a": "4F5337B19968689B97592764468B8995589BB7BS",
+      "army_b": "536996B9797881F894993B829B4S54B7B566587B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0031"
+    },
+    {
+      "army_a": "989667552947F936499658957SB1B378889BBB4B",
+      "army_b": "B662375B789F886679598954739B99B1594SB8B4",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0032"
+    },
+    {
+      "army_a": "4F4B9B27B1738679S639975585B68599894B8B69",
+      "army_b": "99F7S56B66589B6838729B834B54989951B4B797",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0033"
+    },
+    {
+      "army_a": "8564BB7296S5F54B7993959838B79916796B8B48",
+      "army_b": "B6449885759F64S798285193BB67879995B9BB36",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0034"
+    },
+    {
+      "army_a": "B89764368655F9593SB899874B879B2179B4B659",
+      "army_b": "15497874B6F3895999B684552396B769889SBB7B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0035"
+    },
+    {
+      "army_a": "2397945891794F865938B697B58B78S459B6B6B9",
+      "army_b": "898724B6168754979F97B65BS4399B93B5B98658",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0036"
+    },
+    {
+      "army_a": "884F8S669545948B9399B12779B659579B3B8B76",
+      "army_b": "4B59B9F661958B894829S86B78567743B9B93597",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0037"
+    },
+    {
+      "army_a": "58S92B5949463F7877B31B866599B74996889B5B",
+      "army_b": "B8746531899539BS6B5F4798B94297696B8B9578",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0038"
+    },
+    {
+      "army_a": "F65129858S9457697893593B7789BB46B9B8469B",
+      "army_b": "944859386BB8554F63978B6B728799B7B596199S",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0039"
+    },
+    {
+      "army_a": "66886459824F9B97B356317758B99B8S994B7B59",
+      "army_b": "F2936S95B89867774135959B7B88B96685B4B994",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0040"
+    },
+    {
+      "army_a": "59B5B6729S6984179F9B874B36583967B5B99488",
+      "army_b": "8197999763688F59B5699B975B8B7346425SB4B8",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0041"
+    },
+    {
+      "army_a": "39597994865B81S8478F5BB4796699B6B325798B",
+      "army_b": "6549545893896276F939BB187478SBB9B76B8959",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0042"
+    },
+    {
+      "army_a": "293597793S4818657B5F9B8959B786B9B9B46648",
+      "army_b": "468F73B9155865B9428S9998997B773965B4B6B8",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0043"
+    },
+    {
+      "army_a": "27598B89B5F48773B95886S6B34979651B9B9469",
+      "army_b": "F9467S69859999B48136B52B48739876B5B8B579",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0044"
+    },
+    {
+      "army_a": "86F964B737529917895967S88B34B59654B8B99B",
+      "army_b": "945B996929488678BS9F53539BB77148569B6B87",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0045"
+    },
+    {
+      "army_a": "796659638927185S3F9874BB98499BBB5B794856",
+      "army_b": "41988479728859676S4F9B5BB399B9676B9B5358",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0046"
+    },
+    {
+      "army_a": "566674989B74845F9985BB68793179B9B285BS93",
+      "army_b": "6B37978B46B53F478959667512BS8489989B9B95",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0047"
+    },
+    {
+      "army_a": "845SF6659B998794799971B885BB75396623B4B8",
+      "army_b": "54999FS95477B7988859B9B6B739862B6B543861",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0048"
+    },
+    {
+      "army_a": "9489786369B951B6F7954B87356SB9B9B2988754",
+      "army_b": "967999S23F3597B968B489B84557586B8B7B4196",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0049"
+    },
+    {
+      "army_a": "699629135498688BB9SF77B458B5998B5B376947",
+      "army_b": "9S486775843979B175F99B89868459B6BB65B932",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0050"
+    },
+    {
+      "army_a": "1956748F3B599B867S68B93B74588964B5B99729",
+      "army_b": "79SB88B791953B49487F9389B74568926B6B6559",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0051"
+    },
+    {
+      "army_a": "96999B9B146448F983695B78523857B5B7B987S6",
+      "army_b": "S85B74B9939F984B5928699538B67776149B8B65",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0052"
+    },
+    {
+      "army_a": "4968BB891F89862B996385B673979S5B4B549577",
+      "army_b": "758BB2F97898698644976B9B5993S781B5B45693",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0053"
+    },
+    {
+      "army_a": "43946991BBS35F72B756899467B76985598B8B89",
+      "army_b": "298184B4599BB57F667759B9395896SB6B988437",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0054"
+    },
+    {
+      "army_a": "577898SB395F986B469938749B566B8175B9B924",
+      "army_b": "1752F4B97657B699395498867589BS863949BB8B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0055"
+    },
+    {
+      "army_a": "B13938476557B826885F99699B797S9B49B8B564",
+      "army_b": "7B949287F6658393598B98B95979686B4BS157B4",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0056"
+    },
+    {
+      "army_a": "B468998372878F9559BS897316B99465B76B5B49",
+      "army_b": "95B13698998B7859657F399B27964867B5B44SB8",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0057"
+    },
+    {
+      "army_a": "F196B939865BS99567B95645838B42989787B4B7",
+      "army_b": "B9185846965797F449655SB672BB98839989B7B3",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0058"
+    },
+    {
+      "army_a": "8846B5679737B986F25839B47194996B5B598S9B",
+      "army_b": "8977935B9F96B1B78685S98B59742463B6B59894",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0059"
+    },
+    {
+      "army_a": "8B49625B9FB95798399769B83645816B7B98S745",
+      "army_b": "7988975354F15596986988B949B24S3697BB7BB6",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0060"
+    },
+    {
+      "army_a": "F7942859583899599B93487BB6877S616B9B465B",
+      "army_b": "96848F5999S45812B7659B365B7376B9B48897B9",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0061"
+    },
+    {
+      "army_a": "B5S793687791589976F53866B4999288BB4BB594",
+      "army_b": "B4F9668B64957939873869S8572B45B97958B9B1",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0062"
+    },
+    {
+      "army_a": "S9BB562939388B7F655896876189B47959494B7B",
+      "army_b": "99237B6195B6989B86F89B85768S99B7B4357454",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0063"
+    },
+    {
+      "army_a": "S1557698997874F539B36B998B6878B5B294B694",
+      "army_b": "B66S588753637594B94F41885B9727986BB9B999",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0064"
+    },
+    {
+      "army_a": "F2885553697B95683494B199B9S889797B6B7B46",
+      "army_b": "37786B99889F9237964569SBB5B94451858B7B96",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0065"
+    },
+    {
+      "army_a": "9F996158B854BB742654899SB37787399B6B6958",
+      "army_b": "977F79194335929878495856S548BB8BB9696B6B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0066"
+    },
+    {
+      "army_a": "6F9967749865974584898B9B9B31756583B9BS2B",
+      "army_b": "877B549736F95346B62B59S69B18897889B4B959",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0067"
+    },
+    {
+      "army_a": "5596939739F88975429B948679B14B8786SB6BB5",
+      "army_b": "779554F3B86896995B44862BS9196937B5B8B978",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0068"
+    },
+    {
+      "army_a": "563S789B645658B977F96B88495921B8B994379B",
+      "army_b": "427335F644898869777S899B991BB9B6B5B85596",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0069"
+    },
+    {
+      "army_a": "8679979968F765B295B18B89893B5S934754B4B6",
+      "army_b": "44856899769F8B953B1589B952B87S96374B9B67",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0070"
+    },
+    {
+      "army_a": "5287769S564697B8789F135889BB96B4399B4B59",
+      "army_b": "2B57F561368493768457979B9868B98SB9994B5B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0071"
+    },
+    {
+      "army_a": "F75B99579598289S686B3789158BB9664943B4B7",
+      "army_b": "9649886798F9953S75B4796BB6B74358B9B52918",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0072"
+    },
+    {
+      "army_a": "5S5B3765167789B835F799B699848B9B4B429968",
+      "army_b": "B6957B895F43S8B2598369B76476915B7B948899",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0073"
+    },
+    {
+      "army_a": "99B4388F98995852B63979S5B76496167B5B8B74",
+      "army_b": "912576S8B694657F74989B936989B54798B38B5B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0074"
+    },
+    {
+      "army_a": "63569799B9F9186B75346B29B958S8897B7B4485",
+      "army_b": "89496B783F7892899B414B6B79S56658B5B37599",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0075"
+    },
+    {
+      "army_a": "749S928436B4F599837858896997B5B6957B1B6B",
+      "army_b": "5574169689B5459997SFB72BB67389943B6B8898",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0076"
+    },
+    {
+      "army_a": "B94996F65B7735995B8997B98834842B6B18756S",
+      "army_b": "549BS89493618996B2F473B86558976B9B7975B8",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0077"
+    },
+    {
+      "army_a": "8F7358S14697939BB5649989B68598652B4B977B",
+      "army_b": "9B85844B9737SF8973665699994B865B1257B8B9",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0078"
+    },
+    {
+      "army_a": "5987B96954B8378698F42B965B17574963B8B99S",
+      "army_b": "5724956941F8699S353B898B89778697B6B5BB49",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0079"
+    },
+    {
+      "army_a": "961549F39699S785378B68B54B9B869B5B877249",
+      "army_b": "695S6679347F5995889B89973B97B48642B81B5B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0080"
+    },
+    {
+      "army_a": "7B8SB78593B896799F4895B34664526B5B917998",
+      "army_b": "8884799F7919B55BS66B94B38578699B4B753692",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0081"
+    },
+    {
+      "army_a": "9318578592F59B88647BS497B36975469B6B98B9",
+      "army_b": "594896F655879789986564BB72943SB1B7B938B9",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0082"
+    },
+    {
+      "army_a": "33985S819B967F74B52775B9969B98689546B4B8",
+      "army_b": "B6835976689B9B85S46F259B81499974B7B35798",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0083"
+    },
+    {
+      "army_a": "39796997658552B9895FS6B39944887B7B81BB64",
+      "army_b": "B5B44B72195396749F98886B9979586SB5B39768",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0084"
+    },
+    {
+      "army_a": "95459F77972B3458863918BS986979BB5B649B68",
+      "army_b": "B86F4943B689769681B855955SB32999797B4B87",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0085"
+    },
+    {
+      "army_a": "F8B55B98B83969779S49598B96546497B7B81362",
+      "army_b": "8784986495B1546999F9732B8B89S7B5B6B97365",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0086"
+    },
+    {
+      "army_a": "5B71B88379595994765FS29B497699B6B8B43886",
+      "army_b": "69955762F619B48SB796939B98745B88B8B74539",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0087"
+    },
+    {
+      "army_a": "369999B886798495698F1653BBB28477957B4B5S",
+      "army_b": "864739F956B66978789295BS554B874B9B891B39",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0088"
+    },
+    {
+      "army_a": "3F6B19578549978B469795279B98B8643S896B5B",
+      "army_b": "79SB4F998316B9352469B6B98755898B7B948576",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0089"
+    },
+    {
+      "army_a": "75B9496685648F5478219598673BB9B89S39B7B9",
+      "army_b": "4B94968F8756899997797613B45B6BS82B5B3598",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0090"
+    },
+    {
+      "army_a": "F95S66843486B95B841735259B896989B9B7B797",
+      "army_b": "S98572458839674F685676B9B9B4953B7B81999B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0091"
+    },
+    {
+      "army_a": "596299F99649788458357B389BS784B6B561B7B9",
+      "army_b": "5975389F97459868679B34B12B66485B7BS998B9",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0092"
+    },
+    {
+      "army_a": "994696F99B7953B74688B8B95357956B7B8S4821",
+      "army_b": "15774B59F59397B69928663B989B8S48B6B84759",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0093"
+    },
+    {
+      "army_a": "64289994B91B63763F875984BB7959587B5B698S",
+      "army_b": "5B3469598F886699579674B7859S9B8B4B92713B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0094"
+    },
+    {
+      "army_a": "345F749598576183B98B76979B9B82S69964B5B8",
+      "army_b": "694F31B9B7886997993S774588B29558659B4B6B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0095"
+    },
+    {
+      "army_a": "858984197S39B6F4899649596957B85B672B3B7B",
+      "army_b": "B4F9377461B566479882879853B96958B99B5BS9",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0096"
+    },
+    {
+      "army_a": "63B799849F9879S69B86632B5B944755B8B79518",
+      "army_b": "675579B8979587F584399BB8686934B6B491S29B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0097"
+    },
+    {
+      "army_a": "9B998F858895616495S69B4B727937B4BB789563",
+      "army_b": "848996BB549716F7369S9285989B7498B356B5B7",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0098"
+    },
+    {
+      "army_a": "83B488481975795S99F52B9369B997B5B46B6786",
+      "army_b": "79974F189B99945653B25698B485B873S8697B6B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0099"
+    },
+    {
+      "army_a": "969F7882489485774399B573S9B655BB698B9B61",
+      "army_b": "7488567BB7FS5933979194999866B6528594BB8B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0100"
+    },
+    {
+      "army_a": "81B972B896S875B9757F438599B69356849B4B69",
+      "army_b": "9B87986989B54F58B47496132S65B39677598B9B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0101"
+    },
+    {
+      "army_a": "96976B759SF988B85936898754B9612B449B5B73",
+      "army_b": "493SF55482469599878BBB869399B79678176B5B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0102"
+    },
+    {
+      "army_a": "7B49215B46F8B57368S69999899B77895368B4B5",
+      "army_b": "S49B4851947F85B26897638936B9B579795B6B98",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0103"
+    },
+    {
+      "army_a": "36691839F8B5775B79899B95B6959742SB8B6448",
+      "army_b": "812476477F88B959695S586B96BB3989439B7B95",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0104"
+    },
+    {
+      "army_a": "5679B93453B7F95196587648849B8S6929B8B7B9",
+      "army_b": "9782998F5B999B7553617BBS844868B6B3945976",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0105"
+    },
+    {
+      "army_a": "5S88599F69323B86467B68B19587B47B7B995499",
+      "army_b": "7884B98997399596S3F75B82B96554976B4B8B61",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0106"
+    },
+    {
+      "army_a": "584498198767F963976B925SB883B4569995BB7B",
+      "army_b": "974498189559F57S67334985987BBB826966BB9B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0107"
+    },
+    {
+      "army_a": "13F576886S89455B693774B7998B999B4528B6B9",
+      "army_b": "8265B878B1F773656B844935999B9997S458B9B6",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0108"
+    },
+    {
+      "army_a": "19834797BSF5894BB65926954673B58997689B8B",
+      "army_b": "927389B4F3567698B695998B54859S19B4B7B867",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0109"
+    },
+    {
+      "army_a": "3487967SF87846B569995B973B5529B4B6B19889",
+      "army_b": "996564483B7S95F68974278178BB9899935BB5B6",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0110"
+    },
+    {
+      "army_a": "493B3B56B91F88925S769578467B85798949B6B9",
+      "army_b": "2687953B7F9B67959456B46B89918988B5B437S9",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0111"
+    },
+    {
+      "army_a": "F4B359915628S5877749894B83B6B795869B6B99",
+      "army_b": "8F51S7833828B66B869574479B9B59695999B7B4",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0112"
+    },
+    {
+      "army_a": "94S298B86997851543F99B7B4B975653B9B68867",
+      "army_b": "85F4746SB6985376B939585B899B12978947B9B6",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0113"
+    },
+    {
+      "army_a": "96S7618B5F846544598885B7B996997B9B7B3329",
+      "army_b": "SB79F7946947143875B69968B85B35995988B6B2",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0114"
+    },
+    {
+      "army_a": "B3895987S477591542F9BB7969468BB5B8839966",
+      "army_b": "699876756B4239885F94983B499678BSB5B1B795",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0115"
+    },
+    {
+      "army_a": "88B782755B9F49944596B86156SB96773999B8B3",
+      "army_b": "96S7918B858F686457B99943B998B73742659B5B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0116"
+    },
+    {
+      "army_a": "4F6B17386568979B58599B88B67394297B9BS594",
+      "army_b": "46859959162B97495F9863S4B7699B875B7B38B8",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0117"
+    },
+    {
+      "army_a": "S796475378F698516B29995B8489B59B46937B8B",
+      "army_b": "9B28975854799F97B45996675S86B4381963BB8B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0118"
+    },
+    {
+      "army_a": "6399B82856F36987S1978589B795BB594B6B4749",
+      "army_b": "58957362468F954699B53897B94BB18S7B9B7698",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0119"
+    },
+    {
+      "army_a": "5B46938B69F9565389477291798BB8897649SB5B",
+      "army_b": "3964B8B78976953289F4758S1BB6968997B5B954",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0120"
+    },
+    {
+      "army_a": "69B5B6649F157999723395B984B9758B8BS48687",
+      "army_b": "8583B7B462F36S4579849578969B599B9819B6B7",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0121"
+    },
+    {
+      "army_a": "B8F54466894765359992396B999BB85S87178B7B",
+      "army_b": "F29B7386969834959B81997679B7B8456545SB8B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0122"
+    },
+    {
+      "army_a": "89B9447939B579B6569F7B52791S94B8B3866885",
+      "army_b": "3864889745B375B57F9679BS9946561B8B9B9829",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0123"
+    },
+    {
+      "army_a": "7467992835969SB9F78856B38899B16B9B754B45",
+      "army_b": "F77S39924955BBB8763984559B69696941B8B887",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0124"
+    },
+    {
+      "army_a": "F9956956813798567289497BB789B49B43S56B8B",
+      "army_b": "74959BB994F93S818742556885B999667B6B8B37",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0125"
+    },
+    {
+      "army_a": "849988942F9761894578B76B57B93B65395B6BS9",
+      "army_b": "S995685F77187B47B69969B93895423B5B88694B",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0126"
+    },
+    {
+      "army_a": "596796B74S5591F9388735B624BB69997884B9B8",
+      "army_b": "874B47F94SBB13558796589B78966329B6B85999",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0127"
+    },
+    {
+      "army_a": "B5561F9B8889874938997696B55SB92449637B7B",
+      "army_b": "6F9598894B849S97869679B9B17B55835264B7B3",
+      "family": "single-decoy-v1",
+      "id": "seed-validation/single-decoy-v1/0128"
+    },
+    {
+      "army_a": "8B51B979559B8B39467624989S348687B7996B5F",
+      "army_b": "B84BBF3B6455916799B959897884B939872S7665",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0001"
+    },
+    {
+      "army_a": "49315BB835B7947FB6B6659978925B9S67989488",
+      "army_b": "9474384BB935695B98F666B1885S979798B5927B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0002"
+    },
+    {
+      "army_a": "39786FB4B439894B5BB17527568B6S5887699999",
+      "army_b": "8989869B16B74394F567989B65S85342BB97B957",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0003"
+    },
+    {
+      "army_a": "38646B9538B917F677S744B8B992559865989B9B",
+      "army_b": "B19978796755B66B982B379F949384B59658S84B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0004"
+    },
+    {
+      "army_a": "97B8693499F8S86645B546B8B999B87B15377529",
+      "army_b": "945988997B25B589367SB3B7614686FB5947989B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0005"
+    },
+    {
+      "army_a": "95277513B9876839864B9B8B965BS69498F597B4",
+      "army_b": "7884FBB8S79679396959497348165985B269BB5B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0006"
+    },
+    {
+      "army_a": "BBF4B8589653S99B981597B87984952397B66746",
+      "army_b": "948159875662B449B678B63S399997B5F587BB98",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0007"
+    },
+    {
+      "army_a": "553978397BB885456281689B679F9B9647994SBB",
+      "army_b": "86997B86S4BB6595399972581948784B95B7BF36",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0008"
+    },
+    {
+      "army_a": "8893698BF568993492BSB59B79B7B45617947568",
+      "army_b": "B599769995839F874BBB27389S18965B75B46486",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0009"
+    },
+    {
+      "army_a": "975819B6789BBB8B664364F257458S99B5789993",
+      "army_b": "8973F9968B2B557B14B958649536S84997B876B9",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0010"
+    },
+    {
+      "army_a": "BF971B88B955999665829B7894B7348663SB7549",
+      "army_b": "834278BB9B57B7896SF174B96599596386B84599",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0011"
+    },
+    {
+      "army_a": "69587988749B5B36B4679692B185S939794F5B8B",
+      "army_b": "976S9453959B98B871849739B545B9FB8266768B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0012"
+    },
+    {
+      "army_a": "16B75374729997B569496B98F965S883B854B8B9",
+      "army_b": "B5B559997756626948B9897B49F3693B48B887S1",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0013"
+    },
+    {
+      "army_a": "B9BBB717398595385299FB9B6S64488769649578",
+      "army_b": "569947B7B475BB2887B9468985S66399F189359B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0014"
+    },
+    {
+      "army_a": "67498655736B1B6B98999B499F78SB48B5572398",
+      "army_b": "45B9B5978885B9626713B98B8B75S9634F999746",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0015"
+    },
+    {
+      "army_a": "8351867S89699FB7844B625B9B3B5986797B4995",
+      "army_b": "76S5997598B981889526B436549B94693BBB78F7",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0016"
+    },
+    {
+      "army_a": "B669B4584693B97S391758749BFB957B28689985",
+      "army_b": "1F34649B9875B7962966879S983B985495BBB578",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0017"
+    },
+    {
+      "army_a": "43B869962B1B89565988495SB9897597B467BF37",
+      "army_b": "679775B4644BS5989375BF6B31699B998828B859",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0018"
+    },
+    {
+      "army_a": "699829BFB647489B36559B598S7587781B3B9964",
+      "army_b": "779B9964BS25894BB4B835681996753B897F5689",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0019"
+    },
+    {
+      "army_a": "B57941S6B8B99356495798B92B6638F7879B9458",
+      "army_b": "18557B86829S563798499BB74F68399B7949BB65",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0020"
+    },
+    {
+      "army_a": "849919598B86693B746BB3B7584B2F75S9596978",
+      "army_b": "94575FB945488B29BB61B985867B9697S9793683",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0021"
+    },
+    {
+      "army_a": "9475B71949888325689B76B95B69FB468S9357B9",
+      "army_b": "FSB4895958B7569933696B4687B7295794819BB8",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0022"
+    },
+    {
+      "army_a": "B9S58577662799F18854B9988BBB43639B657994",
+      "army_b": "9B98998SB656B7B77B1689369F3575248945894B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0023"
+    },
+    {
+      "army_a": "B7969957437BS86998F535987BB5B9814246896B",
+      "army_b": "8373B2S85991876B46B599589B54FB4897B96796",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0024"
+    },
+    {
+      "army_a": "696B879BBF7B889419S7B986853B553259694974",
+      "army_b": "B73926897967B8SB15995799B69638BFB4885445",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0025"
+    },
+    {
+      "army_a": "685B7765641B8953S898794B4B9267998F93B5B9",
+      "army_b": "685B793591BS858B46967427B76893495BF8B999",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0026"
+    },
+    {
+      "army_a": "9BF888B55B4396B58496BB47397579969278S619",
+      "army_b": "8859B5BB439B344966977F89BB85S19679597826",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0027"
+    },
+    {
+      "army_a": "6457894989688B5577B21633B79B846999FBSB95",
+      "army_b": "B971B4858563B5BB72864B39898967549996SF79",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0028"
+    },
+    {
+      "army_a": "97865495BBB4983B799798628FB869S9B6751354",
+      "army_b": "75B82BS9B853417F8567369999B67B4594B68899",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0029"
+    },
+    {
+      "army_a": "4S7889986F2B9B69549B589551B7B36979873B64",
+      "army_b": "96749B8869B997197663425F4587B85B3B895SB9",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0030"
+    },
+    {
+      "army_a": "55619839BF277899898B664S98494BB7539B65B7",
+      "army_b": "B98648419978255B5787B3997B6SBF63959B4698",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0031"
+    },
+    {
+      "army_a": "7BB499716955988745834695B7B2B66939988SBF",
+      "army_b": "B7519967596SBF27854896B893959B379B48486B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0032"
+    },
+    {
+      "army_a": "6863B5BBB994577S75989476289889594B1396FB",
+      "army_b": "733S6699899FB982685BB948559B48B1695B7477",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0033"
+    },
+    {
+      "army_a": "87645B9BFSB7839799B8595289B967368B614495",
+      "army_b": "37B68B586427883BB9B968959759B99F561S7944",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0034"
+    },
+    {
+      "army_a": "8B6B494677581B9998534FB683786B95B59979S2",
+      "army_b": "25B94B98548537BF4B8BB599898S763697796961",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0035"
+    },
+    {
+      "army_a": "9863F7B67681B4965B9B9899959548S82734B7B5",
+      "army_b": "68B46FB94765879B938BS2B9367999755881B945",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0036"
+    },
+    {
+      "army_a": "5734999889B371B89942B6B5866S798BF59B6745",
+      "army_b": "8789999456B2B5B4B579687994B189B563FS3678",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0037"
+    },
+    {
+      "army_a": "7B7676945899368179BB39B99658BSB4F9284558",
+      "army_b": "898679718883B6BB96B29BS5556F75B449997439",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0038"
+    },
+    {
+      "army_a": "7689B4999727BF5B35B966538179SB698854489B",
+      "army_b": "9BB3BS49785528767916B65984B984F39B978659",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0039"
+    },
+    {
+      "army_a": "F989B86747459B97665589849B9B156B3S39782B",
+      "army_b": "598B577B9BS69B67B8894692B38F597194548639",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0040"
+    },
+    {
+      "army_a": "486858BB83B8B79F79696B97959564279914S5B3",
+      "army_b": "69498BB78B5371486F59539756974892BB8S969B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0041"
+    },
+    {
+      "army_a": "7FB3B95B827B58B4B96543589S98741699698697",
+      "army_b": "994279B5B937458578S856B79BF63B649816B989",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0042"
+    },
+    {
+      "army_a": "589F85876B74959BBB983S4746B599989216673B",
+      "army_b": "7BF28897B9BBB6S35397998B7995465861489564",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0043"
+    },
+    {
+      "army_a": "4B84599B678577275986B9F9936481BSB893B956",
+      "army_b": "89S751539B466B699995246B8B8BB94F89738775",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0044"
+    },
+    {
+      "army_a": "4988SB68BB9998594497968966533B7B125577BF",
+      "army_b": "87785BB9498B561B93479629869957B65F9B843S",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0045"
+    },
+    {
+      "army_a": "75994492936156935BS6697B778F98859B8BB84B",
+      "army_b": "8B98BFS79599B89B15845B6993732747B5696864",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0046"
+    },
+    {
+      "army_a": "BB64961778793B6852B9795BS93854659FB99848",
+      "army_b": "5B474B99B989398B82567519B986S67589736BF4",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0047"
+    },
+    {
+      "army_a": "B467B86689942919585B95B3B987773F599B846S",
+      "army_b": "F8446997B3S826945559B9753B81987B69B6789B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0048"
+    },
+    {
+      "army_a": "935BFBB5B987496489979876B561793846285S9B",
+      "army_b": "48B6FB78BS9359196798763574B89B6552B89499",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0049"
+    },
+    {
+      "army_a": "79468885977B5B5FS9966435929B1B96B47B8938",
+      "army_b": "86329764857F9S91648878B3B6959994B95BB57B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0050"
+    },
+    {
+      "army_a": "49489B677795918868S675BB932B36B8495995BF",
+      "army_b": "6989995B7S848991794BBF23BB4786B676585395",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0051"
+    },
+    {
+      "army_a": "59B278996419348478B979B8B7SBF65989356B56",
+      "army_b": "8494997SF5779558BB2386B965439678B6B1998B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0052"
+    },
+    {
+      "army_a": "8F89535BS4B9966297158B7B989963794B5786B4",
+      "army_b": "B8595B7766931984694B2S98638F9545B998B77B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0053"
+    },
+    {
+      "army_a": "9537B959845BBS3995886442877676BB19F968B9",
+      "army_b": "97595B99129SB4B688987859433B6B67467985BF",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0054"
+    },
+    {
+      "army_a": "35B1794FBB7B487998689659997B2468B38655S9",
+      "army_b": "B98965S496843418956F77B998297355BB96BB87",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0055"
+    },
+    {
+      "army_a": "99954B689F8979236BS584475759B838B696B1B7",
+      "army_b": "4B78693758B9478B9563S2781FB95966BB589949",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0056"
+    },
+    {
+      "army_a": "65489248586387689BFB97B47B93569SB75991B9",
+      "army_b": "9B439379S1584958B69846B26BF9879575869B7B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0057"
+    },
+    {
+      "army_a": "B9699894BF83B976B6BBS9388471565928475795",
+      "army_b": "BFB3883899975B896BS6276B99951B7475584496",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0058"
+    },
+    {
+      "army_a": "FBBB268979B99799568443639589848S557BB167",
+      "army_b": "F685399862853B945688491B9B777957B6S9BB94",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0059"
+    },
+    {
+      "army_a": "945598684FBB28719784B99B9879S6B35796B563",
+      "army_b": "8217959947789B6897B96BS4355BF66B4B583989",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0060"
+    },
+    {
+      "army_a": "3442984959BF719659B3B75879868B5B67896B9S",
+      "army_b": "7774BB89B9685148BB85366999B2789553S4F996",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0061"
+    },
+    {
+      "army_a": "B789B854S6621B8B59985B35736F8B4999774699",
+      "army_b": "7149B553B86899B9S8978663F79597B8B924B546",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0062"
+    },
+    {
+      "army_a": "532764B5998B47B998B719736B8FS994568B5698",
+      "army_b": "92989649455677B9779B8S88B669BF359BB38451",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0063"
+    },
+    {
+      "army_a": "97B496B786865S139B5654993F7B89B782B49598",
+      "army_b": "775532949B584S6998756988BB9B3769984B6FB1",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0064"
+    },
+    {
+      "army_a": "952591848S3B9557B6867F879694B784699B3B9B",
+      "army_b": "9788978565997829B9B6BS38456B34B61795BF94",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0065"
+    },
+    {
+      "army_a": "8B65958436891S7B6759B99947B7946B88235FB9",
+      "army_b": "F98875399BB1B95642S489879569B63BB6547897",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0066"
+    },
+    {
+      "army_a": "996S8B9913937556855B7B9F7B2B68487468B499",
+      "army_b": "761876B73949B8996BF69858B99BB79545S32584",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0067"
+    },
+    {
+      "army_a": "6598BB3899894B7B8B823695974F759645S17B96",
+      "army_b": "38S548B79B85966775B1382994B997FB685996B4",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0068"
+    },
+    {
+      "army_a": "384BBS67859963499F5697529B18768B8549BB79",
+      "army_b": "B76B795392B996493S5458B1596988B4767B8F89",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0069"
+    },
+    {
+      "army_a": "B466B79996B17948975929B8389BB3887SF45556",
+      "army_b": "B69B9532548397819BF89797B98SB4967465B685",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0070"
+    },
+    {
+      "army_a": "85837B27998B9B5959BF49973686S98546B76B14",
+      "army_b": "769983S8B95864BB71BF69B759588397592946B4",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0071"
+    },
+    {
+      "army_a": "699497949314B37BS78B5655F566B287B988B998",
+      "army_b": "BB899997899657B685B3427BF4S8B17685399564",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0072"
+    },
+    {
+      "army_a": "69845498B766899785896594F31B7BS79B2B53B9",
+      "army_b": "899B7186993947972685B349F68B55694SB5B7B8",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0073"
+    },
+    {
+      "army_a": "6B339B46199S77994895B554887629FB86B78B95",
+      "army_b": "29743B99B585S97B5B69538897479F8686B916B4",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0074"
+    },
+    {
+      "army_a": "96B9646B9B55929348S89F56778BB9798B814537",
+      "army_b": "1BB39549B597889656977679B484F8526BB983S9",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0075"
+    },
+    {
+      "army_a": "BBB98773699BBS6994679F1498255795468B8385",
+      "army_b": "318663FB44596289B56B5975BB987998489S77B9",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0076"
+    },
+    {
+      "army_a": "87882746B6859554S994B5FB93986B3B6997917B",
+      "army_b": "5B914458BFS6889998BB5B798964736B75996723",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0077"
+    },
+    {
+      "army_a": "747B558859978685941B99389B9BF64236B9B67S",
+      "army_b": "S9274396955514B9B8685FB768B9488B99797B63",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0078"
+    },
+    {
+      "army_a": "89B9556736BB37B9429558997BS468F89796B418",
+      "army_b": "4794231388585699F76B477B99585BB698SB99B6",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0079"
+    },
+    {
+      "army_a": "59B897699558B9B653978BF164936S7942B8847B",
+      "army_b": "88859931S5B39594B2664945986776BB97F87B9B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0080"
+    },
+    {
+      "army_a": "795893659B874B9B1B497S584896B39665F297B8",
+      "army_b": "3B79958B8B8389645971BS9974466B65725899BF",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0081"
+    },
+    {
+      "army_a": "74799B8FB567S6748B98B2893B956B1998565349",
+      "army_b": "B4B861968B7949BFB98856376977S9B459235589",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0082"
+    },
+    {
+      "army_a": "B97555B169498997SB96429577BF8B668498338B",
+      "army_b": "B73698B468559B99F966B79BS488325979B47185",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0083"
+    },
+    {
+      "army_a": "969B3958B36FBB77B721545597694B8S96884899",
+      "army_b": "6998S97199BB3438957B7B88466746B59F298B55",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0084"
+    },
+    {
+      "army_a": "8449553799694876BB6189S95BB5B23B89786F79",
+      "army_b": "196B8B99499B64685B6487F5798S5937372B98B5",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0085"
+    },
+    {
+      "army_a": "896B767739895B58BF9B98B7SB92594194685634",
+      "army_b": "FB84B53989B596951524768946876B7B99798S3B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0086"
+    },
+    {
+      "army_a": "98B459B9B895471B9678F37666894852S97B539B",
+      "army_b": "B7B994F59689S835999B7563964257487B8B18B6",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0087"
+    },
+    {
+      "army_a": "43B537B8S68499297758698BFB987B99B6455196",
+      "army_b": "9587B96B69988998845B97BB5B62497F6134753S",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0088"
+    },
+    {
+      "army_a": "3915587699952B687994646F9B4BS78B5B73988B",
+      "army_b": "6347899B749934F7BB86589B59B8BS1659572986",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0089"
+    },
+    {
+      "army_a": "7B8S95BF95916B888BB4695B6967793395784249",
+      "army_b": "79B68F6687185B969583954B375S499B94728BB9",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0090"
+    },
+    {
+      "army_a": "699B3B9BB85867B7F4384959985479B5698712S6",
+      "army_b": "893BB9B56B4B775793SF799584895B6861469892",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0091"
+    },
+    {
+      "army_a": "4657BB83B4S99648BB93B1F99958587792665897",
+      "army_b": "67349B968889423S557948BB698591959BFB77B6",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0092"
+    },
+    {
+      "army_a": "8358458S795696794B9898B2947F1B75BB39B966",
+      "army_b": "B5728145998B399BF8964BS96394786B56B87579",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0093"
+    },
+    {
+      "army_a": "995B37B8848995996977S356B128859F6B647B4B",
+      "army_b": "93F9B6819879552B769B875B4B8939S9B5466847",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0094"
+    },
+    {
+      "army_a": "58B5BB98B98932669F753B8949979775S46B6148",
+      "army_b": "B99663BF93945B514B97729B978457589S6B8868",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0095"
+    },
+    {
+      "army_a": "99B5S5BB946267817839859B94976B64B8F83597",
+      "army_b": "8SB74BFB5273B996979741366889B958965B8594",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0096"
+    },
+    {
+      "army_a": "B86F72B696195B85435B9884B979S95747B69893",
+      "army_b": "5765492499BB58759193664BB89F8396S98B787B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0097"
+    },
+    {
+      "army_a": "17599B96B489474276B5S355B8FB89B967388996",
+      "army_b": "95FB3B858B79B176S697999927346456888B594B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0098"
+    },
+    {
+      "army_a": "9B764B8669B649815B7B98S745933975989825BF",
+      "army_b": "667B9B259993S45798358B5B6B94BF8718694879",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0099"
+    },
+    {
+      "army_a": "B96B7339B987B9F7549B591458866S728958B946",
+      "army_b": "579B5B76B39548474158B8S9F2969B9B39887696",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0100"
+    },
+    {
+      "army_a": "7796699FB99458B36255935S81B94B867BB48789",
+      "army_b": "4BB71734948B698B266879359798B9S9595685FB",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0101"
+    },
+    {
+      "army_a": "5365B7B914289978899959B487B86FS73B965B64",
+      "army_b": "7378S8934F56497B99965572B19498B86B8B695B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0102"
+    },
+    {
+      "army_a": "5898961667576434958B9B97S47398B2B899FBB5",
+      "army_b": "9986963B7BB45587889B8995B472S1495BF96673",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0103"
+    },
+    {
+      "army_a": "7B636888B997B9778S99B638F944925B49155B56",
+      "army_b": "F7579BB97985599166824394949B836SB87B658B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0104"
+    },
+    {
+      "army_a": "698794983539969F9868BB27BB7471B5465S895B",
+      "army_b": "7B745993B4689761S9998948268B7BB655359FB8",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0105"
+    },
+    {
+      "army_a": "678756958B99978B91BB764456F3B948S9B92538",
+      "army_b": "98BB9S59B46946958977B83B737B51286899564F",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0106"
+    },
+    {
+      "army_a": "B9F568B296B837797765814B89B9BS6495948935",
+      "army_b": "S73759B848988BB6549698B1597B94699536BF72",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0107"
+    },
+    {
+      "army_a": "F514BB763889965788B2859S499647965973BB9B",
+      "army_b": "B49999795B7F5B5168BS975899866B234486783B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0108"
+    },
+    {
+      "army_a": "579B8B57B874664B63B4999395B89S88756199F2",
+      "army_b": "FB565548BBB983B9624586677B999877319994S8",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0109"
+    },
+    {
+      "army_a": "SFB59B57894973986785B78B239B4B1956646989",
+      "army_b": "87B66759B8B697596B9385898S4FB1B972459943",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0110"
+    },
+    {
+      "army_a": "575876247B9988F978336B15946BB45B99B6S899",
+      "army_b": "9185997F476466B9253559BB8B96BS83948897B7",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0111"
+    },
+    {
+      "army_a": "FB76S49994BB79355369986B6B8299184B587785",
+      "army_b": "FBB89699S3B5655646978519B474B89377B92898",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0112"
+    },
+    {
+      "army_a": "659469B95958369B7B778928498S7B459183BB6F",
+      "army_b": "B4FB58B59994B95969777366437B9S51868289B8",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0113"
+    },
+    {
+      "army_a": "9541875857B4992F96678B8B6BS99583B3996B47",
+      "army_b": "8157995B6BB9698BB989B7437942835S7686549F",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0114"
+    },
+    {
+      "army_a": "4B9796673266BF75935991BB874B98B9S8595488",
+      "army_b": "784799986BS79456B98F68891533B55B9742B96B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0115"
+    },
+    {
+      "army_a": "547B5949868B74BB8816B9F6S3959797638B2599",
+      "army_b": "38S968959446977749519539BB8BF6B758B296B8",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0116"
+    },
+    {
+      "army_a": "897B495254886B179B9B57B39549F9B36S876689",
+      "army_b": "9S6B945189958B978B327584974FB696B93875B6",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0117"
+    },
+    {
+      "army_a": "91B5S69994B4B78993578843BFB85652B8797669",
+      "army_b": "56B79B34585679199B5834B86868972F49B9SB79",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0118"
+    },
+    {
+      "army_a": "8B79795FB5S438B399766998B56517964B98842B",
+      "army_b": "1BB98B9FS597394357589B69B48456296878B769",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0119"
+    },
+    {
+      "army_a": "3629516995B9845695B8F46S8397B7889BB79B74",
+      "army_b": "7B8F85B65B3589B629946B7697S4B97989893514",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0120"
+    },
+    {
+      "army_a": "96B958543S79B2B5885B9469698371979BB7486F",
+      "army_b": "499574629995B933887B6516BB987FS85948B76B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0121"
+    },
+    {
+      "army_a": "785S287878F7BB9B6939B9634964695955891B4B",
+      "army_b": "BF77B719598S9335496789594696B258B94886BB",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0122"
+    },
+    {
+      "army_a": "7SB9989567952B19B4798648BB883657394956FB",
+      "army_b": "3646B8B5684BF5BB5392S95991947877998987B6",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0123"
+    },
+    {
+      "army_a": "4B69997183B5B85949B75988683S5992FB467B76",
+      "army_b": "896751S4364B5857B8438B896999B29FBB567979",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0124"
+    },
+    {
+      "army_a": "561549699589788S82F9B743983B776B95BB6B94",
+      "army_b": "B49586BS9699FB6B948758B1755967739828493B",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0125"
+    },
+    {
+      "army_a": "978BFB557999214989B55978BB6BS39683446678",
+      "army_b": "FB59648487B6B9677285958983B9B9493BS75196",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0126"
+    },
+    {
+      "army_a": "4556968481B9886794557B739BS9B8B9969273FB",
+      "army_b": "996B58B7567761989394928874938SBBFB4556B9",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0127"
+    },
+    {
+      "army_a": "954B624S579B7389BF75B1768693548989B9896B",
+      "army_b": "894929B8B98BSB359579168B9773F7648B545966",
+      "family": "scattered-guards-v1",
+      "id": "seed-validation/scattered-guards-v1/0128"
+    }
+  ],
+  "schema": "classic-setup-records-v1",
+  "split": "seed-validation"
+}

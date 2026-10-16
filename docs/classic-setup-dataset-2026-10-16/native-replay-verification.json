@@ -1,0 +1,7 @@
+{
+  "games": 12,
+  "states": 666,
+  "all_states_match": true,
+  "split": "development",
+  "strength_evaluation": false
+}

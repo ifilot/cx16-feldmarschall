@@ -107,6 +107,9 @@ desktop-python:
 	$(DESKTOP_PYTHON) tools/tournament_gui.py $(TOURNAMENT_FILE)
 test-tournaments:
 	python3 tools/test_tournaments.py
+.PHONY: test-setup-dataset
+test-setup-dataset: desktop-build
+	python3 tools/test_setup_dataset.py
 test-tournament-gui: test-native-desktop
 test-native-desktop: desktop-build
 	QT_QPA_PLATFORM=offscreen ctest --test-dir build/desktop --output-on-failure

@@ -111,6 +111,39 @@ retains its original physical-rank access and alone receives both initial armies
 The referee is frozen for each run, and every review reconstructs the match
 from its starting armies and moves.
 
+## Frozen setup generalization tests
+
+The [versioned Classic corpus](../tests/datasets/classic-generalization-v1/README.md)
+adds 3,840 distinct armies. It separates development layouts, fresh layouts from
+the same generators (`seed-validation`), and different generator families
+(`generator-holdout`). This tests whether improvements transfer beyond familiar
+formation patterns. Neither validation partition should be used for tuning.
+
+```sh
+python3 tools/tournament.py run student-guard-v1-normal original-v1 \
+  --dataset tests/datasets/classic-generalization-v1 \
+  --dataset-split development --rounds 10 --dataset-offset 0 \
+  --backend openmp --jobs 4 --seed 20261016 \
+  --out build/tournaments/setup-development.fmtour
+python3 tools/tournament.py verify build/tournaments/setup-development.fmtour
+build/desktop/feldmarschall-desk build/tournaments/setup-development.fmtour
+```
+
+`--rounds` selects records per family, giving 12 games per round for either
+partition. `--dataset-offset` starts at a different record in each family;
+selection never wraps or repeats. Dataset mode replaces `--families` and requires
+the default `referee` setup mode. The full corpus and selected record identities
+are embedded in the saved file, so verification and review remain portable.
+Qt6 displays the dataset ID and partition above its existing family statistics.
+
+For a formal comparison, freeze candidate IDs first, reserve an unused cohort,
+and run candidate and baseline against the same honest opponents, records and
+move seeds. Include several opponent styles, such as `original-v1`,
+`missions-v1-normal` and `student-guard-v1-normal` (omit self matches).
+Compare both validation partitions and individual families; keep errors unscored
+and draws worth half. Keep DOS comparisons as a separate diagnostic.
+The development integration smoke verifies execution and replay, not strength.
+
 ## OpenMP execution
 
 The compiled GUI uses the OpenMP backend. The command line explicitly selects it

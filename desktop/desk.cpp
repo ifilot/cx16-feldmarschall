@@ -230,6 +230,11 @@ void Desk::openTournament(const QString &path) {
     auto participants = tournament->metadata["participants"].toArray();
     QStringList lines{QString("%1 · %2 · %3 / %4 games").arg(QFileInfo(path).fileName(), tournament->metadata["status"].toString())
             .arg(tournament->games.size()).arg(tournament->metadata["planned_games"].toInt())};
+    if (tournament->metadata["setup_dataset"].isObject()) {
+        auto dataset = tournament->metadata["setup_dataset"].toObject();
+        lines.append(QString("Setup suite: %1 / %2; fixed paired armies.")
+                     .arg(dataset["id"].toString(), dataset["split"].toString()));
+    }
     if (tournament->metadata["setup_mode"].toString() == "policy-owned")
         lines.append(QString("Deployment comparison: %1 chooses its army; armies follow players across sides.")
                      .arg(tournament->metadata["setup_owner"].toString()));

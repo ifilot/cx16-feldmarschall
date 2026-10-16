@@ -1,0 +1,82 @@
+{
+  "encoding": "40 glyphs, front row first; columns a..j in each row; same as setup_squares",
+  "files": {
+    "coverage.json": {
+      "bytes": 9193,
+      "sha256": "668a39f9a2e940cd515d0ce0c770ca3ce162ef18690bfe18a2e39bd841d3c9a4"
+    },
+    "development.json": {
+      "bytes": 82464,
+      "sha256": "29984321d240f4bdd458b6856d8599c83e0e324dbf7c7211ea2720e6bb4ba19c"
+    },
+    "exclusions.json": {
+      "bytes": 1144,
+      "sha256": "f6d16f39e436d2c30bbd858b88d50af24b2a3fccc1b6f8062db1378582e3ac83"
+    },
+    "generator-holdout.json": {
+      "bytes": 170282,
+      "sha256": "8c740c0c8108ef20a099f2d3e03d2a1c874586f9917b005bff064989fd3635a0"
+    },
+    "seed-validation.json": {
+      "bytes": 167716,
+      "sha256": "840cab22606555da6255e7e80019a09f84c84dcb2fb7bdb11c0dbe9c8fb2b075"
+    },
+    "sources/feldmarschall.py": {
+      "bytes": 9639,
+      "sha256": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+    },
+    "sources/legacy-presets.c": {
+      "bytes": 3249,
+      "sha256": "b001accbe3755ea5d57fc6289b88041b7a784bc0639b8bbc5204905dcfef041b"
+    },
+    "sources/legacy-template-reference.py": {
+      "bytes": 8950,
+      "sha256": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c"
+    },
+    "sources/setup_dataset.py": {
+      "bytes": 17354,
+      "sha256": "6db95e401801639b4ab391d8f755e08021a914efe8876bc2fc0bc227d6edb8f5"
+    }
+  },
+  "generation_seed": 2026101601,
+  "id": "classic-generalization-v1",
+  "minimum_legacy_hamming_distance": 12,
+  "protocol": "Use development for tuning; freeze policies before either validation partition. Never train on validation layouts or outcomes.",
+  "rules": "classic",
+  "schema": "classic-setup-dataset-v1",
+  "splits": {
+    "development": {
+      "families": [
+        "uniform-v1",
+        "rear-shell-v1",
+        "exposed-rear-v1",
+        "forward-flag-v1",
+        "single-decoy-v1",
+        "scattered-guards-v1"
+      ],
+      "pairs_per_family": 64
+    },
+    "generator-holdout": {
+      "families": [
+        "interior-shell-v1",
+        "flank-flag-v1",
+        "double-decoy-v1",
+        "front-fence-v1",
+        "mobile-squads-v1",
+        "lane-vanguard-v1"
+      ],
+      "pairs_per_family": 128
+    },
+    "seed-validation": {
+      "families": [
+        "uniform-v1",
+        "rear-shell-v1",
+        "exposed-rear-v1",
+        "forward-flag-v1",
+        "single-decoy-v1",
+        "scattered-guards-v1"
+      ],
+      "pairs_per_family": 128
+    }
+  }
+}

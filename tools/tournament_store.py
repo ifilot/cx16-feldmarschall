@@ -247,9 +247,30 @@ def verify(path):
                 setup_records[record['pair_id']] = record
             if metadata['status'] == 'complete' and len(setup_records) * 2 != metadata['planned_games']:
                 raise ValueError('Incomplete policy-owned setup records')
+        dataset_schedule = None
+        if 'setup_dataset' in metadata:
+            from setup_dataset import frozen_schedule
+            def dataset_artifact(sha):
+                if sha not in artifact_rows:
+                    raise ValueError('Missing setup dataset artifact')
+                return zlib.decompress(artifact_rows[sha]['data'])
+            try:
+                dataset_schedule = frozen_schedule(metadata, dataset_artifact)
+            except (KeyError, TypeError) as error:
+                raise ValueError('Invalid setup dataset provenance') from error
         pairs = {}
         for row in tournament.games():
             game = tournament.game(row['id'])
+            if dataset_schedule is not None:
+                record = dataset_schedule.get(game['pair_id'])
+                names = [p['policy']['id'] for p in metadata['participants']]
+                if game['id'] % 2 == 0:
+                    names.reverse()
+                if (record is None or game['pair_id'] != (game['id']+1)//2
+                        or [game['red'], game['blue']] != names
+                        or game['family'] != record['family'] or game['seed'] != record['move_seed']
+                        or game['red_setup'] != record['army_a'] or game['blue_setup'] != record['army_b']):
+                    raise ValueError('Game does not match frozen dataset record/schedule')
             replay(game)
             if {game['red'], game['blue']} != identities:
                 raise ValueError('Unknown game participant')
