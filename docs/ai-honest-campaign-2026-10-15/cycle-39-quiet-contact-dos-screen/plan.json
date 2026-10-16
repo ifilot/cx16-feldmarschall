@@ -1,0 +1,129 @@
+{
+  "cycle": 39,
+  "baseline": "student-template-flag-bomb-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-template-flag-bomb-v1-normal",
+    "student-template-quiet-occupancy-v1-normal",
+    "student-template-quiet-mobile-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-template-quiet-occupancy-v1-normal",
+      "name": "student-template-quiet-occupancy-v1-normal",
+      "description": "Use public template mobile occupancy beliefs in the quiet old-minus-new contact danger term.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged 80% eight-source-template /20% uniform public posterior and constrained Q12 Flag/Bomb packets. Quiet moves only: replace count-based MAX old-minus-new contact danger by the same count-conditional danger scaled by each concealed token mobile Q12 probability. Known contacts and Scout rays retain native semantics, with vacated source occupancy. All capture/terminal scores unchanged. Native goals and other nonlinear tactical conditions retain native danger; this is a score-component bridge. Single ranked native search, actual-choice history repair, no extra RNG/search.",
+      "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-captures",
+        "--adjustment-scope",
+        "quiet-occupancy"
+      ]
+    },
+    {
+      "id": "student-template-quiet-mobile-v1-normal",
+      "name": "student-template-quiet-mobile-v1-normal",
+      "description": "Use public template token-specific mobile rank and occupancy beliefs in the quiet old-minus-new contact danger term.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged 80% eight-source-template /20% uniform public posterior and constrained Q12 Flag/Bomb packets. Quiet moves only: replace count-based MAX old-minus-new contact danger by token-specific conditional mobile probability of lethal or exchanging attack, scaled by the same mobile Q12 probability. Known contacts and Scout rays retain native semantics, with vacated source occupancy. All capture/terminal scores unchanged. Native goals and other nonlinear tactical conditions retain native danger; this is a score-component bridge. Single ranked native search, actual-choice history repair, no extra RNG/search.",
+      "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-captures",
+        "--adjustment-scope",
+        "quiet-mobile"
+      ]
+    }
+  ],
+  "seed": 2490001,
+  "rounds": 500,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.",
+    "Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores."
+  ],
+  "contrasts": [
+    [
+      "student-template-quiet-occupancy-v1-normal",
+      "student-template-flag-bomb-v1-normal"
+    ],
+    [
+      "student-template-quiet-mobile-v1-normal",
+      "student-template-quiet-occupancy-v1-normal"
+    ],
+    [
+      "student-template-quiet-mobile-v1-normal",
+      "student-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed-sample exploratory screening with three prespecified contrasts; interpret 98.3333% paired intervals alongside95% and finite missing-outcome bounds. No tuning on these games; any candidate requires fresh final validation. Source priors can misfit procedural or human armies. Quiet danger retains MAX aggregation, so this is not an exact expected maximum or safety guarantee. No capture changes or extra search. Honest stress comparison separately identifies generality. Host Python research policy, no CX16 readiness claim.",
+  "evidence": "research/quiet-contact-risk-v1 and research/quiet-contact-runtime-v1. Frozen public screening selection, native threat/private-nibble/ray oracle and one-search actual-history adapter qualification. Root portable frozen integration qualification required before games."
+}

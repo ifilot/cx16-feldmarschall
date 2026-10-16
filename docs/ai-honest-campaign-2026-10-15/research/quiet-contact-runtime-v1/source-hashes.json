@@ -1,0 +1,18 @@
+{
+  "tools/campaign_mobile_capture.py": {
+    "bytes": 6750,
+    "sha256": "6513f15749f5729c82eea31d94a620dd07a036bed36d6f4407eac23246753f69"
+  },
+  "tools/campaign_native_mobile.py": {
+    "bytes": 4821,
+    "sha256": "5a5ff50e09adfa7e86807723bc4d01487657c929939a6ce394c104f7d9e24c88"
+  },
+  "tools/test_quiet_contact_risk.py": {
+    "bytes": 6652,
+    "sha256": "15c8b759b87bd570c98267226ff98ec63e0fbc6f8254884701d92d7d91f94e5a"
+  },
+  "tools/test_quiet_mobile_adapter.py": {
+    "bytes": 4271,
+    "sha256": "83c2d95ec2b9da50173a833c556ba607aea5a4f6e4fe883b8003a24702eebe3f"
+  }
+}

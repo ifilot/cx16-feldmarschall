@@ -1,0 +1,46 @@
+{
+  "cycle": 40,
+  "baseline": "student-template-flag-bomb-v1-normal",
+  "opponent": "student-guard-v1-normal",
+  "policies": [
+    "student-template-flag-bomb-v1-normal",
+    "student-template-quiet-occupancy-v1-normal",
+    "student-template-quiet-mobile-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 2500001,
+  "rounds": 40,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "hypotheses": [
+    "Spatial mobile occupancy improves quiet approaches over the native unmoved half-risk heuristic.",
+    "Token-specific inferred mobile ranks improve quiet approaches beyond occupancy alone, without changing capture scores."
+  ],
+  "contrasts": [
+    [
+      "student-template-quiet-occupancy-v1-normal",
+      "student-template-flag-bomb-v1-normal"
+    ],
+    [
+      "student-template-quiet-mobile-v1-normal",
+      "student-template-quiet-occupancy-v1-normal"
+    ],
+    [
+      "student-template-quiet-mobile-v1-normal",
+      "student-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fixed-sample exploratory screening with three prespecified contrasts; interpret 98.3333% paired intervals alongside95% and finite missing-outcome bounds. No tuning on these games; any candidate requires fresh final validation. Source priors can misfit procedural or human armies. Quiet danger retains MAX aggregation, so this is not an exact expected maximum or safety guarantee. No capture changes or extra search. Honest stress comparison separately identifies generality. Host Python research policy, no CX16 readiness claim.",
+  "evidence": "research/quiet-contact-risk-v1 and research/quiet-contact-runtime-v1. Frozen public screening selection, native threat/private-nibble/ray oracle and one-search actual-history adapter qualification. Root portable frozen integration qualification required before games."
+}

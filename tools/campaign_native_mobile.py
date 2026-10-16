@@ -1,15 +1,17 @@
-"""One native move with public per-piece mobile capture expectations."""
+"""One native move with an explicit public capture or quiet-contact scope."""
 import argparse
 import hashlib
 from pathlib import Path
 import time
 from campaign_native_template import NativeTemplateBot
 from campaign_native_beliefs import quantize
-from campaign_mobile_capture import adjustments
+from campaign_mobile_capture import adjustments,quiet_adjustments
 from feldmarschall import parse_square,square_name
 
 class MobileCaptureBot(NativeTemplateBot):
-    def __init__(self,observer,difficulty='normal'):
+    def __init__(self,observer,difficulty='normal',adjustment_scope='captures'):
+        if adjustment_scope not in ('captures','quiet-occupancy','quiet-mobile'):raise ValueError('valid adjustment scope required')
+        self.adjustment_scope=adjustment_scope
         if difficulty!='normal':raise ValueError('mobile capture experiment requires Classic Normal')
         super().__init__(observer,difficulty)
     def observe(self,words):
@@ -39,10 +41,14 @@ class MobileCaptureBot(NativeTemplateBot):
                 parent=None if words[1:]==['none'] else tuple(map(parse_square,words[1:]));break
         if parent is None:
             if scores:raise ValueError('no move with nonempty native scores')
-            self.last_report=dict(mode='template-mobile-captures',selected=None);return None
+            mode='template-mobile-captures' if self.adjustment_scope=='captures' else 'template-'+self.adjustment_scope
+            self.last_report=dict(mode=mode,selected=None);return None
         if parent not in scores or any(move not in credit and score<30000 for move,score in scores.items()):
             raise ValueError('complete native scores and nonterminal danger credits required')
-        delta,report=adjustments(cells,army,lost_counts,remaining,marginals,flag,bomb,scores,credit)
+        if self.adjustment_scope=='captures':
+            delta,report=adjustments(cells,army,lost_counts,remaining,marginals,flag,bomb,scores,credit)
+        else:
+            delta,report=quiet_adjustments(cells,army,lost_counts,remaining,marginals,flag,bomb,scores,self.adjustment_scope)
         selected=max(scores,key=lambda move:(scores[move]+delta[move],move==parent))
         if selected!=parent:self.observer.ask('played '+' '.join(map(square_name,selected)),'playedok')
         _,posterior=self.model.posterior()
@@ -50,6 +56,9 @@ class MobileCaptureBot(NativeTemplateBot):
             remaining=remaining,marginals=marginals,q12=dict(flag=flag,bomb=bomb,mobile=mobile),component_posterior=posterior,
             packet_sha256=hashlib.sha256(packet.encode()).hexdigest(),native_selected=parent,selected=selected,
             overridden=selected!=parent,capture_adjustment=report,elapsed_seconds=time.perf_counter()-started)
+        if self.adjustment_scope!='captures':
+            self.last_report['mode']='template-'+self.adjustment_scope
+            self.last_report['quiet_adjustment']=self.last_report.pop('capture_adjustment')
         return selected
 
 def main():
@@ -57,6 +66,7 @@ def main():
     parser.add_argument('--observer',type=Path,required=True)
     parser.add_argument('--difficulty',choices=['normal'],default='normal')
     parser.add_argument('--mobile-captures',action='store_true',required=True)
-    args=parser.parse_args();MobileCaptureBot(args.observer,args.difficulty).run()
+    parser.add_argument('--adjustment-scope',choices=['captures','quiet-occupancy','quiet-mobile'],default='captures')
+    args=parser.parse_args();MobileCaptureBot(args.observer,args.difficulty,args.adjustment_scope).run()
 
 if __name__=='__main__':main()
