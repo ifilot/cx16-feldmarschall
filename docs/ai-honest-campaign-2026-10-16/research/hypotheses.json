@@ -34,6 +34,17 @@
         "research/objectives/SCOUT-PERSISTENT-CONCLUSION.md",
         "research/objectives/scout-persistent-result.json"
       ]
+    },
+    {
+      "id": "fresh-public-evaluator-mirror-equivariance-v1",
+      "title": "Test pointwise reflection of fresh public evaluator decisions at an identical RNG state",
+      "status": "component counterexamples; no strength or heuristic-fault attribution",
+      "result": "The fixed old 48-game/356-root cohort has125 non-reflected selected moves while712 frozen observer choices reproduce. Independent Classic legal sets,8174 quiet transitions and240 combat fixtures reflect exactly. Trace-only pre-jitter follow-up finds342/356 equivalent base-score maps, with24 mismatched candidate scores at14roots;117/125 changed choices occur despite complete base-map equivalence. RNG assignment and tie selection prevent treating choice mismatch as a deterministic heuristic fault; the remaining base mismatches are not diagnosed. Fresh-memory component only, no full persistent-policy or deployment-strength claim. This is pointwise seed-coupled behavior, not a distributional symmetry test over RNG seeds.",
+      "strength_games": 0,
+      "evidence": [
+        "research/full-position-symmetry/CONCLUSION.md",
+        "research/full-position-symmetry-prejitter/CONCLUSION.md"
+      ]
     }
   ]
 }
