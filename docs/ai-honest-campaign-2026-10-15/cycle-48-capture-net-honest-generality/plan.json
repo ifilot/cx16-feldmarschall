@@ -1,0 +1,36 @@
+{
+  "cycle": 48,
+  "baseline": "student-template-flag-bomb-v1-normal",
+  "opponent": "student-guard-v1-normal",
+  "policies": [
+    "student-template-flag-bomb-v1-normal",
+    "student-template-capture-net-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 2580001,
+  "rounds": 40,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "hypotheses": [
+    "A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy."
+  ],
+  "contrasts": [
+    [
+      "student-template-capture-net-v1-normal",
+      "student-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Exploratory fixed-sample comparison. No tuning on these games; fresh independent validation required before promotion. Fullpublic-history proof and one-use followthrough are bounded material claims, not game values.95%paired and conservative98.3333%intervals plus finite missingbounds; interpret wider interval across C43fork andC47net comparisons sharing the same baseline. Honest stress is separate. Runtime deliberately uses FIRST eligible candidate matching the frozen screening protocol; no substitution if native scores omit that move. No playing-strength or target-readiness claim before full audit.",
+  "evidence": "research/capture-net-preflight-v1: first20 and same-cohort full361 extension, public count/hiddencombat/native-key/witness checks. Runtime qualification and immutable registration required before games."
+}

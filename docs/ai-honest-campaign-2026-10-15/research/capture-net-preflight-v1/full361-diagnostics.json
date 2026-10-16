@@ -1,0 +1,2358 @@
+{
+  "kind": "saved-full361-normalized-comparison-diagnostics",
+  "new_gate_or_proof_queries": 0,
+  "incremental_roots": 81,
+  "incremental_games": 13,
+  "normalized_after_action_public_comparisons": 63,
+  "largest_normalized_repeat": 8,
+  "comparison_definition": "Pair of complete masked public states AFTER nativequiet and netquiet, plus net victim/ally roles; drops prior ownshuttle facts forgotten by both actions.",
+  "game_distribution": {
+    "2": 2,
+    "25": 1,
+    "76": 22,
+    "111": 1,
+    "146": 3,
+    "149": 3,
+    "151": 7,
+    "187": 1,
+    "203": 1,
+    "284": 36,
+    "287": 1,
+    "314": 1,
+    "345": 2
+  },
+  "incremental_witness_kinds": {
+    "all": 1382,
+    "victim_dead": 103,
+    "victim_dead_quiet": 99,
+    "victim_dead_uncertain_capture": 4
+  },
+  "first20_outputs_inputs_nodes_still_equal": true,
+  "positive_roots": [
+    {
+      "game": 2,
+      "ply": 211,
+      "native": [
+        15,
+        25
+      ],
+      "candidate": {
+        "move": [
+          34,
+          44
+        ],
+        "victim": 54,
+        "victim_rank": 6,
+        "ally": 65,
+        "continuations": {
+          "54": [
+            44
+          ],
+          "64": [
+            65
+          ],
+          "55": [
+            65
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "4768759db586eaa4bce70baff4476bf044c3920082849f5f0e4811225d18c769"
+    },
+    {
+      "game": 2,
+      "ply": 217,
+      "native": [
+        64,
+        74
+      ],
+      "candidate": {
+        "move": [
+          64,
+          54
+        ],
+        "victim": 44,
+        "victim_rank": 6,
+        "ally": 35,
+        "continuations": {
+          "44": [
+            54
+          ],
+          "34": [
+            35
+          ],
+          "45": [
+            35
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "c50d5959809159017680ab9777ddb0c5c811dbaf7ce40378672e4f6780360c50"
+    },
+    {
+      "game": 25,
+      "ply": 166,
+      "native": [
+        30,
+        20
+      ],
+      "candidate": {
+        "move": [
+          30,
+          40
+        ],
+        "victim": 50,
+        "victim_rank": 7,
+        "ally": 61,
+        "continuations": {
+          "50": [
+            40
+          ],
+          "60": [
+            61
+          ],
+          "51": [
+            61
+          ]
+        }
+      },
+      "bound": 25,
+      "normalized_comparison_sha256": "946558b053b9c9a588b8614379186391f6c52c83db3ae8556d6d293d1be630d1"
+    },
+    {
+      "game": 76,
+      "ply": 723,
+      "native": [
+        66,
+        65
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "0a4439b8c4fd62c088f1237221eaa24252867f13fd24e14f88988bf6c173a63b"
+    },
+    {
+      "game": 76,
+      "ply": 729,
+      "native": [
+        66,
+        76
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "40211c1bda2ddb1dfccec4632651545f68f8d13db3980b3a8d4c8d7e03b9111d"
+    },
+    {
+      "game": 76,
+      "ply": 733,
+      "native": [
+        76,
+        75
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "6139f9fedbd19d7b9a162b8bbe96909f720774a4ab55d5959984fc878a966730"
+    },
+    {
+      "game": 76,
+      "ply": 735,
+      "native": [
+        75,
+        65
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "c97e56ee1b412aac841404972fd94f26789c853eeab3f94a4211ea7efde983bc"
+    },
+    {
+      "game": 76,
+      "ply": 737,
+      "native": [
+        94,
+        95
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "2a0cf6e65252c56e2b4ed5b6da15e789848c6b1984ecec940740c709217054aa"
+    },
+    {
+      "game": 76,
+      "ply": 741,
+      "native": [
+        66,
+        76
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "cab9df5d56b2cc615834485169ffd1e6726acea60f5fe731384030afb8d1e033"
+    },
+    {
+      "game": 76,
+      "ply": 743,
+      "native": [
+        76,
+        75
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "acf6b161c042e67711d9da4f01de21dda87402df7755922b3ea14288734442e8"
+    },
+    {
+      "game": 76,
+      "ply": 751,
+      "native": [
+        66,
+        76
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "8ea404855b54225ccbbc4b8980b287e7a21bec51bb179355584cd096d21aa224"
+    },
+    {
+      "game": 76,
+      "ply": 755,
+      "native": [
+        86,
+        85
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "cb575ab42a4bc728004934de137f6d5996047fb199ff3acb96865c321920d6ec"
+    },
+    {
+      "game": 76,
+      "ply": 759,
+      "native": [
+        75,
+        65
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "c97e56ee1b412aac841404972fd94f26789c853eeab3f94a4211ea7efde983bc"
+    },
+    {
+      "game": 76,
+      "ply": 761,
+      "native": [
+        94,
+        95
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "2a0cf6e65252c56e2b4ed5b6da15e789848c6b1984ecec940740c709217054aa"
+    },
+    {
+      "game": 76,
+      "ply": 765,
+      "native": [
+        65,
+        75
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "c9f8e69221b662fb0c43a24bd797af05a7e3eb92af3dadf01ca2ea4ac287920b"
+    },
+    {
+      "game": 76,
+      "ply": 767,
+      "native": [
+        75,
+        85
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "ce76f638bccea642264333d0680377770df48dc3f9c393098688b3130a7442cd"
+    },
+    {
+      "game": 76,
+      "ply": 769,
+      "native": [
+        85,
+        86
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "6851554f9e487d87561fcc8f2c8c17d13dcede5828f5767238cd783c62c5e7ca"
+    },
+    {
+      "game": 76,
+      "ply": 771,
+      "native": [
+        86,
+        76
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "27d76ce2ca4b478aaa709a3855ab940449a04d8eb3ae02d0eb9a9adcfb350114"
+    },
+    {
+      "game": 76,
+      "ply": 773,
+      "native": [
+        76,
+        75
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "5e267fdb98492f4b57284152eb8aa4df41c7f7fcdc2cb0ae5d098994ca89e2b5"
+    },
+    {
+      "game": 76,
+      "ply": 775,
+      "native": [
+        95,
+        85
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "b4907fd41e997ab6a075e4a16ac458a75f25f5b7d5ebed7c136a38d8c47d8e58"
+    },
+    {
+      "game": 76,
+      "ply": 779,
+      "native": [
+        85,
+        75
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "932e4bada759c7ac3d0267a618a36c56f08f27ce2f3b7eee609c498c46e16301"
+    },
+    {
+      "game": 76,
+      "ply": 781,
+      "native": [
+        65,
+        64
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "0d7f6a248128890a3159c0154c818e8ae98ee379ab35bd9d24a9d3af6e44cf66"
+    },
+    {
+      "game": 76,
+      "ply": 783,
+      "native": [
+        75,
+        65
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "e5ed852f8155c8ed4aaac6f77d9ede6e5bd51341f923e7c02418bf71482aeb83"
+    },
+    {
+      "game": 76,
+      "ply": 787,
+      "native": [
+        64,
+        65
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "e7134fc6601d1c354377dd032a0105b6eeca94df48ebdfece61973a3c9acb7f9"
+    },
+    {
+      "game": 76,
+      "ply": 793,
+      "native": [
+        38,
+        39
+      ],
+      "candidate": {
+        "move": [
+          38,
+          28
+        ],
+        "victim": 29,
+        "victim_rank": 6,
+        "ally": 49,
+        "continuations": {
+          "29": [
+            28
+          ],
+          "39": [
+            49
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "ed45cd4c673b99aced880beaf3c481c3162dbb8bf30853e0185877456eee8725"
+    },
+    {
+      "game": 111,
+      "ply": 262,
+      "native": [
+        8,
+        7
+      ],
+      "candidate": {
+        "move": [
+          24,
+          34
+        ],
+        "victim": 44,
+        "victim_rank": 4,
+        "ally": 64,
+        "continuations": {
+          "44": [
+            34
+          ],
+          "54": [
+            64
+          ]
+        }
+      },
+      "bound": 30,
+      "normalized_comparison_sha256": "3302b7d10a1f5a66d5998229c3043b5aeefecb50ec3d8229b411a4ebfc8e1553"
+    },
+    {
+      "game": 146,
+      "ply": 373,
+      "native": [
+        79,
+        69
+      ],
+      "candidate": {
+        "move": [
+          64,
+          54
+        ],
+        "victim": 44,
+        "victim_rank": 6,
+        "ally": 35,
+        "continuations": {
+          "44": [
+            54
+          ],
+          "34": [
+            35
+          ],
+          "45": [
+            35
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "711a87cb4f04b00ec7fd3dac3f5fbfa13ac76f2a10832b323e772210b789abe5"
+    },
+    {
+      "game": 146,
+      "ply": 375,
+      "native": [
+        64,
+        74
+      ],
+      "candidate": {
+        "move": [
+          64,
+          54
+        ],
+        "victim": 44,
+        "victim_rank": 6,
+        "ally": 35,
+        "continuations": {
+          "44": [
+            54
+          ],
+          "34": [
+            35
+          ],
+          "45": [
+            35
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "42a45fabc1449465e61d4662d73d91fbae2d752fc812c54499c660cc71197b6b"
+    },
+    {
+      "game": 146,
+      "ply": 381,
+      "native": [
+        79,
+        69
+      ],
+      "candidate": {
+        "move": [
+          64,
+          54
+        ],
+        "victim": 44,
+        "victim_rank": 6,
+        "ally": 35,
+        "continuations": {
+          "44": [
+            54
+          ],
+          "34": [
+            35
+          ],
+          "45": [
+            35
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "af92cda44912e44da7f41cf097b7b249a6bb239a6815aec832b02f9648bba722"
+    },
+    {
+      "game": 149,
+      "ply": 432,
+      "native": [
+        39,
+        29
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "d1e335fa093615ffa88470401aa3f4e107964330b6163ffb75bf412ea33178b0"
+    },
+    {
+      "game": 149,
+      "ply": 434,
+      "native": [
+        7,
+        8
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 25,
+      "normalized_comparison_sha256": "a77f59eeed71c27f703ae3f2347dfa99cc13597aab5943818313f0df3a9d6d76"
+    },
+    {
+      "game": 149,
+      "ply": 436,
+      "native": [
+        8,
+        18
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "117a5fe7dbc90da905fc9c9dc3c931206ad7f562b8732b2a425e528c0f2b1d36"
+    },
+    {
+      "game": 151,
+      "ply": 366,
+      "native": [
+        29,
+        28
+      ],
+      "candidate": {
+        "move": [
+          60,
+          50
+        ],
+        "victim": 51,
+        "victim_rank": 7,
+        "ally": 62,
+        "continuations": {
+          "51": [
+            50
+          ],
+          "61": [
+            62
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "cb25e0543adfe731de6e7895ef0c3cd80c525bd659f0cc6ed527b4b8d86fd76d"
+    },
+    {
+      "game": 151,
+      "ply": 368,
+      "native": [
+        18,
+        19
+      ],
+      "candidate": {
+        "move": [
+          60,
+          50
+        ],
+        "victim": 51,
+        "victim_rank": 7,
+        "ally": 62,
+        "continuations": {
+          "51": [
+            50
+          ],
+          "61": [
+            62
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "92e28348ae0c5214cd0bc1b7b8b205d538a628c182c404c72abb87ba762f5e41"
+    },
+    {
+      "game": 151,
+      "ply": 370,
+      "native": [
+        28,
+        29
+      ],
+      "candidate": {
+        "move": [
+          60,
+          50
+        ],
+        "victim": 51,
+        "victim_rank": 7,
+        "ally": 62,
+        "continuations": {
+          "51": [
+            50
+          ],
+          "61": [
+            62
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "7b279ede220769112f0afe601b8c07ff887e2e7d4a84e78c38a4fe98f361e563"
+    },
+    {
+      "game": 151,
+      "ply": 372,
+      "native": [
+        19,
+        18
+      ],
+      "candidate": {
+        "move": [
+          60,
+          50
+        ],
+        "victim": 51,
+        "victim_rank": 7,
+        "ally": 62,
+        "continuations": {
+          "51": [
+            50
+          ],
+          "61": [
+            62
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "3529272bcb827cea65fea767894962f0dca83102a45c8fe662b5dd2013cbe8f1"
+    },
+    {
+      "game": 151,
+      "ply": 374,
+      "native": [
+        29,
+        28
+      ],
+      "candidate": {
+        "move": [
+          60,
+          50
+        ],
+        "victim": 51,
+        "victim_rank": 7,
+        "ally": 62,
+        "continuations": {
+          "51": [
+            50
+          ],
+          "61": [
+            62
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "cb31e82cde207b44e6e747b388a651ed01aacff212ac3ef836a56137eb747948"
+    },
+    {
+      "game": 151,
+      "ply": 376,
+      "native": [
+        18,
+        19
+      ],
+      "candidate": {
+        "move": [
+          60,
+          50
+        ],
+        "victim": 51,
+        "victim_rank": 7,
+        "ally": 62,
+        "continuations": {
+          "51": [
+            50
+          ],
+          "61": [
+            62
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "fd5da06ef5d2ded072d816ec14d048628d4df787fe4d7e0db5fa18c235bbf947"
+    },
+    {
+      "game": 151,
+      "ply": 400,
+      "native": [
+        29,
+        28
+      ],
+      "candidate": {
+        "move": [
+          60,
+          50
+        ],
+        "victim": 51,
+        "victim_rank": 7,
+        "ally": 62,
+        "continuations": {
+          "51": [
+            50
+          ],
+          "61": [
+            62
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "b0f0aaadd4049605c2ba15a0900dda74aaaa44eb6c8474e32299e0e113bb9e5e"
+    },
+    {
+      "game": 187,
+      "ply": 16,
+      "native": [
+        68,
+        58
+      ],
+      "candidate": {
+        "move": [
+          51,
+          50
+        ],
+        "victim": 60,
+        "victim_rank": 4,
+        "ally": 71,
+        "continuations": {
+          "60": [
+            50
+          ],
+          "61": [
+            71
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "7671ff23c32e78b8290aed57ecc8c31322ffbbb096b4b68531f1b5c26e01ad85"
+    },
+    {
+      "game": 203,
+      "ply": 202,
+      "native": [
+        36,
+        26
+      ],
+      "candidate": {
+        "move": [
+          36,
+          35
+        ],
+        "victim": 45,
+        "victim_rank": 7,
+        "ally": 54,
+        "continuations": {
+          "45": [
+            35
+          ],
+          "44": [
+            54
+          ],
+          "55": [
+            54
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "4e76c48ec9abffd219f0c44d3ffda97045eba926a5d6c8892f98c8bb268c8016"
+    },
+    {
+      "game": 284,
+      "ply": 247,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "6dc839aec6ee2bd20b4a6f41b4916422d37e05f7fa3c0a459a9388b199a8e5f9"
+    },
+    {
+      "game": 284,
+      "ply": 255,
+      "native": [
+        72,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "52129910ef263822dce6994aaf26ca3e8ec637bbf5e57b117a7d28cc2dc14c12"
+    },
+    {
+      "game": 284,
+      "ply": 257,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "062944d4b8312f8c1112615d641d8227dc73eef4100740f45419f85641a15a60"
+    },
+    {
+      "game": 284,
+      "ply": 263,
+      "native": [
+        72,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "52129910ef263822dce6994aaf26ca3e8ec637bbf5e57b117a7d28cc2dc14c12"
+    },
+    {
+      "game": 284,
+      "ply": 265,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "062944d4b8312f8c1112615d641d8227dc73eef4100740f45419f85641a15a60"
+    },
+    {
+      "game": 284,
+      "ply": 271,
+      "native": [
+        72,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "52129910ef263822dce6994aaf26ca3e8ec637bbf5e57b117a7d28cc2dc14c12"
+    },
+    {
+      "game": 284,
+      "ply": 273,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "062944d4b8312f8c1112615d641d8227dc73eef4100740f45419f85641a15a60"
+    },
+    {
+      "game": 284,
+      "ply": 279,
+      "native": [
+        72,
+        62
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "23552e620b402d3cab03a386302373f80fdc6e9ae8a6b882f69571caf569defa"
+    },
+    {
+      "game": 284,
+      "ply": 281,
+      "native": [
+        62,
+        61
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "08dc8831825fef9136cc56e7b3f783d201134280337e307069a462dc3d53e5c4"
+    },
+    {
+      "game": 284,
+      "ply": 283,
+      "native": [
+        61,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "464d15ba0d09d6d51a727ef48892630aafc64e9b439975b735a1bd5f96f051dd"
+    },
+    {
+      "game": 284,
+      "ply": 285,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "e9805a90e55c8e528babf074fa99f539f0f9bab318b92e796328f388adde32ee"
+    },
+    {
+      "game": 284,
+      "ply": 291,
+      "native": [
+        72,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "52129910ef263822dce6994aaf26ca3e8ec637bbf5e57b117a7d28cc2dc14c12"
+    },
+    {
+      "game": 284,
+      "ply": 293,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "062944d4b8312f8c1112615d641d8227dc73eef4100740f45419f85641a15a60"
+    },
+    {
+      "game": 284,
+      "ply": 299,
+      "native": [
+        72,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "52129910ef263822dce6994aaf26ca3e8ec637bbf5e57b117a7d28cc2dc14c12"
+    },
+    {
+      "game": 284,
+      "ply": 301,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "062944d4b8312f8c1112615d641d8227dc73eef4100740f45419f85641a15a60"
+    },
+    {
+      "game": 284,
+      "ply": 307,
+      "native": [
+        72,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "52129910ef263822dce6994aaf26ca3e8ec637bbf5e57b117a7d28cc2dc14c12"
+    },
+    {
+      "game": 284,
+      "ply": 309,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "062944d4b8312f8c1112615d641d8227dc73eef4100740f45419f85641a15a60"
+    },
+    {
+      "game": 284,
+      "ply": 315,
+      "native": [
+        72,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "52129910ef263822dce6994aaf26ca3e8ec637bbf5e57b117a7d28cc2dc14c12"
+    },
+    {
+      "game": 284,
+      "ply": 317,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "062944d4b8312f8c1112615d641d8227dc73eef4100740f45419f85641a15a60"
+    },
+    {
+      "game": 284,
+      "ply": 325,
+      "native": [
+        62,
+        61
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "c172709240d146d46344305be2deef66cf01b10bd6abb0fcc2354e4157b475ea"
+    },
+    {
+      "game": 284,
+      "ply": 327,
+      "native": [
+        61,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "464d15ba0d09d6d51a727ef48892630aafc64e9b439975b735a1bd5f96f051dd"
+    },
+    {
+      "game": 284,
+      "ply": 329,
+      "native": [
+        71,
+        72
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "ba47bc3495a63b6034e48cc0ff4eff92c9353d1ac41611f5405c58d931458c6d"
+    },
+    {
+      "game": 284,
+      "ply": 331,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "60c2a5372fbb0e05e2997b592a724260f35e76af99d22005826eeda9553084c8"
+    },
+    {
+      "game": 284,
+      "ply": 337,
+      "native": [
+        71,
+        72
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "fe4f0715a45eeca16a14a5b71c692281e9761eb99b550622de3c72eec911d74a"
+    },
+    {
+      "game": 284,
+      "ply": 339,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "60c2a5372fbb0e05e2997b592a724260f35e76af99d22005826eeda9553084c8"
+    },
+    {
+      "game": 284,
+      "ply": 347,
+      "native": [
+        61,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "578c8114ee18ba60eda0a9cde923a080c34e28ff778f6f7956261b7deddd6b32"
+    },
+    {
+      "game": 284,
+      "ply": 349,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "e9805a90e55c8e528babf074fa99f539f0f9bab318b92e796328f388adde32ee"
+    },
+    {
+      "game": 284,
+      "ply": 355,
+      "native": [
+        72,
+        71
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "52129910ef263822dce6994aaf26ca3e8ec637bbf5e57b117a7d28cc2dc14c12"
+    },
+    {
+      "game": 284,
+      "ply": 357,
+      "native": [
+        71,
+        61
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "9c515b07d36403006128652e5f9a14d4874ed344e99bc89b77b2449568cdf4fd"
+    },
+    {
+      "game": 284,
+      "ply": 359,
+      "native": [
+        61,
+        62
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "cfe28754b433e8a557a2c3ed7cb2b782278028d09cefb77940a90e1d3ad0db34"
+    },
+    {
+      "game": 284,
+      "ply": 361,
+      "native": [
+        62,
+        63
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "5cfc3aae4ed66a316cf94230f5be0c713631f7ad9de413e634efd2a9265ea7cd"
+    },
+    {
+      "game": 284,
+      "ply": 363,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "a32c1031cf7d9f1c24954806a1a6db1eb47e901b141ea58b23a5e4852b9e96b4"
+    },
+    {
+      "game": 284,
+      "ply": 369,
+      "native": [
+        41,
+        51
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "2057d124e08ea2f6dc14d5459fc66acd60bc11d6cc11abebf0455bb7ef1f0154"
+    },
+    {
+      "game": 284,
+      "ply": 371,
+      "native": [
+        51,
+        61
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "bb5788d36dbb25dbd0939818d69bd17d24618447c00c7dc7cdb9d1456716017b"
+    },
+    {
+      "game": 284,
+      "ply": 373,
+      "native": [
+        61,
+        62
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "23b4f44b2e6ba9d1b22aad2384a080d01d241d510335dbcfbf1c975537ce2519"
+    },
+    {
+      "game": 284,
+      "ply": 375,
+      "native": [
+        69,
+        68
+      ],
+      "candidate": {
+        "move": [
+          38,
+          48
+        ],
+        "victim": 58,
+        "victim_rank": 7,
+        "ally": 69,
+        "continuations": {
+          "58": [
+            48
+          ],
+          "68": [
+            69
+          ],
+          "59": [
+            69
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "973a884120a1bd18754580db4baecc32c2df1956a7d73c3f139f5df56ec308c7"
+    },
+    {
+      "game": 287,
+      "ply": 386,
+      "native": [
+        37,
+        36
+      ],
+      "candidate": {
+        "move": [
+          39,
+          49
+        ],
+        "victim": 59,
+        "victim_rank": 7,
+        "ally": 48,
+        "continuations": {
+          "59": [
+            49
+          ],
+          "58": [
+            48
+          ]
+        }
+      },
+      "bound": 40,
+      "normalized_comparison_sha256": "6186cd6d4d5c91db48a81c582f052ca8083a9d095c8eed239398abc95b26f061"
+    },
+    {
+      "game": 314,
+      "ply": 85,
+      "native": [
+        44,
+        45
+      ],
+      "candidate": {
+        "move": [
+          35,
+          45
+        ],
+        "victim": 55,
+        "victim_rank": 7,
+        "ally": 44,
+        "continuations": {
+          "55": [
+            45
+          ],
+          "54": [
+            44
+          ]
+        }
+      },
+      "bound": 10,
+      "normalized_comparison_sha256": "8cd5d3a8e894d1781246e015b56a879acb0d57416aa73cf74e336c807115bbbc"
+    },
+    {
+      "game": 345,
+      "ply": 18,
+      "native": [
+        65,
+        45
+      ],
+      "candidate": {
+        "move": [
+          51,
+          50
+        ],
+        "victim": 60,
+        "victim_rank": 4,
+        "ally": 71,
+        "continuations": {
+          "60": [
+            50
+          ],
+          "61": [
+            71
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "96d30607703e7c15ad6cb7d9dc8684e38a5dbf7953ff737fe98f4ffaa8f87caa"
+    },
+    {
+      "game": 345,
+      "ply": 20,
+      "native": [
+        64,
+        54
+      ],
+      "candidate": {
+        "move": [
+          51,
+          50
+        ],
+        "victim": 60,
+        "victim_rank": 4,
+        "ally": 71,
+        "continuations": {
+          "60": [
+            50
+          ],
+          "61": [
+            71
+          ]
+        }
+      },
+      "bound": 15,
+      "normalized_comparison_sha256": "24bfe70fc8006246f29a25a2738ce41aac7e5cd08d491bffe803e44f591ba106"
+    }
+  ]
+}

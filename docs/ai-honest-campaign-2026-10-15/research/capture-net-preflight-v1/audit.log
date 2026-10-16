@@ -1,0 +1,45 @@
+{"games": 25, "roots": 5857, "eligible": 17, "seconds": 2.9295538349979324}
+{"games": 50, "roots": 11462, "eligible": 29, "seconds": 4.549462823997601}
+{"games": 75, "roots": 16027, "eligible": 42, "seconds": 6.632968976002303}
+{"games": 100, "roots": 22855, "eligible": 95, "seconds": 9.481983951001894}
+{"games": 125, "roots": 28042, "eligible": 110, "seconds": 11.272298415999103}
+{"games": 150, "roots": 32796, "eligible": 152, "seconds": 13.074495277003734}
+{"games": 175, "roots": 37952, "eligible": 195, "seconds": 15.190628598997137}
+{"games": 200, "roots": 43276, "eligible": 206, "seconds": 17.266229262997513}
+{"games": 225, "roots": 47614, "eligible": 215, "seconds": 18.9458378240015}
+{"games": 250, "roots": 51813, "eligible": 227, "seconds": 21.189801681000972}
+{"games": 275, "roots": 56560, "eligible": 235, "seconds": 23.048685364999983}
+{"games": 300, "roots": 62672, "eligible": 291, "seconds": 25.151903129997663}
+{"games": 325, "roots": 67438, "eligible": 308, "seconds": 26.95344283599843}
+{"games": 350, "roots": 73332, "eligible": 320, "seconds": 29.29043075100344}
+{"games": 375, "roots": 78547, "eligible": 329, "seconds": 30.947740247000183}
+{"games": 400, "roots": 85971, "eligible": 361, "seconds": 33.74427679800283}
+{"first20": 1, "game": 2, "ply": 59, "native": false, "net": false, "incremental": false, "nodes": 1650}
+{"first20": 2, "game": 2, "ply": 61, "native": false, "net": false, "incremental": false, "nodes": 1695}
+{"first20": 3, "game": 2, "ply": 211, "native": false, "net": true, "incremental": true, "nodes": 1085}
+{"first20": 4, "game": 2, "ply": 217, "native": false, "net": true, "incremental": true, "nodes": 552}
+{"first20": 5, "game": 2, "ply": 223, "native": false, "net": false, "incremental": false, "nodes": 267}
+{"first20": 6, "game": 2, "ply": 237, "native": false, "net": false, "incremental": false, "nodes": 1492}
+{"first20": 7, "game": 2, "ply": 245, "native": false, "net": false, "incremental": false, "nodes": 300}
+{"first20": 8, "game": 2, "ply": 247, "native": false, "net": false, "incremental": false, "nodes": 1360}
+{"first20": 9, "game": 11, "ply": 24, "native": false, "net": false, "incremental": false, "nodes": 2049}
+{"first20": 10, "game": 15, "ply": 128, "native": false, "net": false, "incremental": false, "nodes": 1692}
+{"first20": 11, "game": 15, "ply": 130, "native": false, "net": false, "incremental": false, "nodes": 1705}
+{"first20": 12, "game": 15, "ply": 132, "native": false, "net": false, "incremental": false, "nodes": 1835}
+{"first20": 13, "game": 15, "ply": 134, "native": false, "net": false, "incremental": false, "nodes": 2145}
+{"first20": 14, "game": 15, "ply": 136, "native": false, "net": false, "incremental": false, "nodes": 1979}
+{"first20": 15, "game": 25, "ply": 162, "native": false, "net": false, "incremental": false, "nodes": 2328}
+{"first20": 16, "game": 25, "ply": 164, "native": false, "net": false, "incremental": false, "nodes": 2201}
+{"first20": 17, "game": 25, "ply": 166, "native": false, "net": true, "incremental": true, "nodes": 10622}
+{"first20": 18, "game": 39, "ply": 122, "native": false, "net": false, "incremental": false, "nodes": 1796}
+{"first20": 19, "game": 42, "ply": 269, "native": false, "net": false, "incremental": false, "nodes": 6697}
+{"first20": 20, "game": 42, "ply": 305, "native": false, "net": false, "incremental": false, "nodes": 2739}
+{
+  "roots": 20,
+  "native_certified": 0,
+  "net_certified": 3,
+  "global_cap_fallbacks": 0,
+  "incremental_roots": 3,
+  "incremental_unselected_roots": 3,
+  "incremental_games": 2
+}

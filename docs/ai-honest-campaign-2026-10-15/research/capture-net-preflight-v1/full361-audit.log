@@ -1,0 +1,63 @@
+{"roots": 25, "incremental": 3, "caps": 0, "seconds": 7.142573901997821}
+{"roots": 50, "incremental": 8, "caps": 2, "seconds": 12.721579971999745}
+{"roots": 75, "incremental": 25, "caps": 2, "seconds": 14.412565534999885}
+{"roots": 100, "incremental": 25, "caps": 5, "seconds": 24.114107199995487}
+{"roots": 125, "incremental": 26, "caps": 6, "seconds": 35.95758568599558}
+{"roots": 150, "incremental": 30, "caps": 7, "seconds": 42.025021843001014}
+{"roots": 175, "incremental": 38, "caps": 7, "seconds": 50.876714762998745}
+{"roots": 200, "incremental": 40, "caps": 11, "seconds": 64.72067769400019}
+{"roots": 225, "incremental": 41, "caps": 12, "seconds": 77.07220715299627}
+{"roots": 250, "incremental": 48, "caps": 15, "seconds": 86.65909822799586}
+{"roots": 275, "incremental": 73, "caps": 15, "seconds": 87.87998083500133}
+{"roots": 300, "incremental": 79, "caps": 16, "seconds": 94.93036152399873}
+{"roots": 325, "incremental": 81, "caps": 16, "seconds": 100.0706276130004}
+{"roots": 350, "incremental": 81, "caps": 18, "seconds": 105.84005667299789}
+{
+  "kind": "same-screening-cohort-full361-extension",
+  "strength_evidence": false,
+  "independent_validation": false,
+  "summary": {
+    "roots": 361,
+    "native_certified": 11,
+    "net_certified": 85,
+    "global_cap_fallbacks": 20,
+    "incremental_roots": 81,
+    "incremental_unselected_roots": 81
+  },
+  "first20_inputs_proofs_nodes_exactly_equal": 20,
+  "all361_native_public_keys_verified": true,
+  "legal_public_witnesses_verified": 1524,
+  "incremental_game_distribution": {
+    "2": 2,
+    "25": 1,
+    "76": 22,
+    "111": 1,
+    "146": 3,
+    "149": 3,
+    "151": 7,
+    "187": 1,
+    "203": 1,
+    "284": 36,
+    "287": 1,
+    "314": 1,
+    "345": 2
+  },
+  "incremental_armies": {
+    "1": 64,
+    "0": 17
+  },
+  "distinct_incremental_public_comparisons": 64,
+  "largest_repeated_incremental_comparison": 8,
+  "root_time_ms": {
+    "mean": 298.69631693625183,
+    "median": 129.51953100127866,
+    "maximum": 2463.37964200211
+  },
+  "root_enemy_outcome_attempts": {
+    "mean": 4295.839335180055,
+    "maximum": 20001
+  },
+  "total_seconds": 111.1033419430023,
+  "observer_sha256": "3f54396fd851558fbe211117c946efb3ed332aa71588bb4ebdc26c63ec1ef6fb",
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437"
+}

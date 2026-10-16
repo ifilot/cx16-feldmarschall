@@ -1,0 +1,1 @@
+Prospective bounded capture-net experiment. Implementation, registration and portable qualification must complete before saved candidate games. Shared-control provenance forDOS is explicit in plan.json; no reuse is claimed as independent validation.

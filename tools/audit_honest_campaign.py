@@ -36,6 +36,8 @@ def verify_manifest(directory):
 def audit():
     completed, pending, rejected = [], [], []
     archives = {}
+    saved_executions = {}
+    declared_reuse = 0
     for directory in sorted(BASE.glob('cycle-*')):
         if not directory.is_dir():
             continue
@@ -61,6 +63,15 @@ def audit():
         assert receipt['passed']
         assert result['attempts'] == result['verified_games'] == receipt['attempts']
         assert result['errors'] == receipt['errors_preserved_unscored']
+        if result.get('reused_control_attempts'):
+            reuse_path = directory / 'shared-control-receipt.json'
+            reuse = json.loads(reuse_path.read_text())
+            assert reuse['passed'] and reuse['prospective']
+            assert digest(reuse_path) == result['shared_control_receipt_sha256']
+            assert digest(ROOT / reuse['source']) == reuse['source_sha256']
+            assert digest(ROOT / reuse['destination']) == reuse['destination_sha256'] == reuse['source_sha256']
+            assert result['new_attempts'] + result['reused_control_attempts'] == result['attempts']
+            declared_reuse += result['reused_control_attempts']
         hashes = verify_manifest(directory)
         frozen = json.loads((directory / 'frozen-policies.json').read_text())
         for identity, spec in frozen.items():
@@ -73,6 +84,10 @@ def audit():
             saved = path.with_suffix('').with_suffix('.fmtour')
             assert digest(saved) == report['tournament_sha256'], str(saved)
             count = report['summary']['games']
+            sha = report['tournament_sha256']
+            if sha in saved_executions:
+                assert saved_executions[sha] == count
+            saved_executions[sha] = count
             verification = report['verification']
             assert verification['artifacts_verified']
             assert count == verification['python_replayed'] == verification['native_replayed_all_states']
@@ -90,8 +105,12 @@ def audit():
                               terminal_audit_sha256=digest(directory / 'audit.json')))
     for name, sha in archives.items():
         assert digest(ROOT / name) == sha, name
-    return dict(scope='Completed-cycle artifact and retained replay-receipt verification; no new games or replay re-execution. Pending cohorts are reported separately.',
+    attempts = sum(c['attempts'] for c in completed)
+    unique_attempts = sum(saved_executions.values())
+    assert attempts - unique_attempts == declared_reuse
+    return dict(scope='Completed-cycle artifact and retained replay-receipt verification; no new games or replay re-execution. Pending cohorts are reported separately. Completed attempts count comparison appearances; unique saved attempts count byte-identical reused control artifacts only once.',
                 passed=True, completed_cycles=completed, completed_attempts=sum(c['attempts'] for c in completed),
+                unique_saved_attempts=unique_attempts, reused_comparison_attempts=attempts-unique_attempts,
                 errors_preserved_unscored=sum(c['errors'] for c in completed),
                 immutable_policy_archives_verified=len(archives), pending_or_running=pending,
                 rejected_before_matches=rejected, goal_completion_claim=False)

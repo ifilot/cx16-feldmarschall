@@ -1,0 +1,21 @@
+{
+  "version": "capture-net-full361-extension-v1",
+  "frozen_utc": "2026-10-16T03:02:34.610373+00:00",
+  "kind": "Exploratory extension on same completedC21screening cohort, NOT independent validation. First20 evidence preserved unchanged.",
+  "selection": "ALL361 eligible roots in gate.json; firstcandidate per root ordered move,victim,ally; same85,971-root gate unchanged. No gate relaxation or candidate filtering by outcomes.",
+  "comparison": "Identical net.py generalized nativecontrol first; same public one-action quantifiers, enemy support, fixedworth material,20kcombinedcap. Any cap/inconclusive fallback.",
+  "reports": [
+    "Full copied public fixtures, both complete proofoutputs and witnesses, exact equality against initial20 outputs/counts/inputs.",
+    "Unique public root-action comparisons and positive game/repeat distribution.",
+    "Host cost, budgetcounts, nativepublicfixture checks and allwitnesslegality."
+  ],
+  "no_runtime_or_matches": true,
+  "source_sha256": {
+    "net.py": "1a0bad0a9bf8d9e71bfa1ee16492587eb885caf9803f24ea7397b2272e2387aa",
+    "PROTOCOL.json": "a9ffc8fabb0f2cbf7bae77bdcfbba94e082ee834b27e2bea4de35b995301b19d",
+    "SOURCE-FREEZE.json": "60fbe7976b1809c7bbfc9e7c02ad72417cf7b5128ff96796e32a6c77f2f3a9e1",
+    "gate.json": "00690bf2d7835da969d156644af1cd63b99a0e2626409bc7e2157e8e741410b2",
+    "first20-proofs.json.gz": "a294610e9e417837d3078d4dab622aa6871ac5f57e52bcba3251f8eb0941d48b",
+    "result.json": "eaca80d67632e7adf2e1ae41a7e0d34ec613f15d03f8d119665463ce9b092b06"
+  }
+}

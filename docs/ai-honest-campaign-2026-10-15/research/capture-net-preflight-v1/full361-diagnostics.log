@@ -1,0 +1,31 @@
+{
+  "kind": "saved-full361-normalized-comparison-diagnostics",
+  "new_gate_or_proof_queries": 0,
+  "incremental_roots": 81,
+  "incremental_games": 13,
+  "normalized_after_action_public_comparisons": 63,
+  "largest_normalized_repeat": 8,
+  "comparison_definition": "Pair of complete masked public states AFTER nativequiet and netquiet, plus net victim/ally roles; drops prior ownshuttle facts forgotten by both actions.",
+  "game_distribution": {
+    "2": 2,
+    "25": 1,
+    "76": 22,
+    "111": 1,
+    "146": 3,
+    "149": 3,
+    "151": 7,
+    "187": 1,
+    "203": 1,
+    "284": 36,
+    "287": 1,
+    "314": 1,
+    "345": 2
+  },
+  "incremental_witness_kinds": {
+    "all": 1382,
+    "victim_dead": 103,
+    "victim_dead_quiet": 99,
+    "victim_dead_uncertain_capture": 4
+  },
+  "first20_outputs_inputs_nodes_still_equal": true
+}

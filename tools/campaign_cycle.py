@@ -223,6 +223,7 @@ def overview(through_cycle=None, exclude_results=()):
         ('Belief-conditioned quiet approaches', 'A frozen 117-root screening audit found strict danger-order reversals at 13 roots from mobile occupancy and 34 additional roots from token-specific mobile ranks. Native threat parity passed 2,880 public comparisons. These are component changes, not selected moves or a strength result; separate runtime comparisons are required.', 'research/quiet-contact-risk-v1/CONCLUSION.md'),
         ('Public double threats with conversion proofs', 'The full fixed gate found 100 candidate roots in 13 of 400 screening games with a positive short material certificate absent for the saved native move; these collapse to 20 distinct public comparisons, with most repeated roots in one game. Proofs include hidden Scout action unions and collateral losses. This is correlated opportunity evidence, not improved outcomes. The executable-witness runtime is a separately recorded refinement; eligible-root host proof work averaged 644 ms, without a target-fit claim.', 'research/disclosed-fork-preflight-v1/CONCLUSION.md'),
         ('Executable public fork followthrough', 'The refined fixed screening audit finds 101 proposed replacements across 14 games, collapsing to 20 distinct public comparisons. A one-turn plan stores 9,429 legal public-successor capture witnesses; 82 roots fall back under the shared node cap. Mechanical and portable-history checks pass. Mean eligible-root host proof cost is 396 ms, without target qualification or playing-strength evidence. Earlier fixture metadata aliasing is explicitly corrected while retaining original artifacts and unchanged proof outputs.', 'research/quiet-fork-runtime-v1/CONCLUSION.md'),
+        ('Cooperative two-piece capture nets', 'A fixed screening gate found 361 eligible roots across 91 games. The same-cohort full expansion found 81 proposed improvements across 13 games, with 63 distinct normalized public comparisons; 58 roots are concentrated in two games. All 1,524 witness states and 361 native public fixtures pass checks; 20 roots hit the shared cap. The control permits the same generalized continuations, including after a victim voluntarily attacks and dies. Mean eligible-root host proof cost is 299 ms. This is correlated tactical opportunity evidence, without playing-strength or target-fit claims.', 'research/capture-net-preflight-v1/EXPANSION-CONCLUSION.md'),
     ]
     available = [row for row in deferred if (BASE/row[2]).exists()]
     if available:
@@ -251,10 +252,11 @@ def overview(through_cycle=None, exclude_results=()):
         if through_cycle is not None and plan['cycle']>through_cycle:
             continue
         count = plan.get('planned_games',2*len(plan['families'])*plan['rounds']*len(plan.get('policies',[])))
+        state = 'registered' if (path.parent/'frozen-policies.json').exists() else 'prepared; registration pending'
         pending.append(f"- Cycle {plan['cycle']}: {'; '.join(plan['hypotheses'])} "
-                       f"{count:,} planned attempts; no completed strength result. [Frozen plan]({path.parent.name}/plan.json).")
+                       f"{count:,} planned comparison attempts; {state}; no completed strength result. [Plan]({path.parent.name}/plan.json).")
     if pending:
-        lines += ['', '**Registered experiments awaiting completed results:**', '', *pending, '']
+        lines += ['', '**Experiments awaiting completed results:**', '', *pending, '']
     (BASE/'OVERVIEW.md').write_text('\n'.join(lines)+'\n')
 
 

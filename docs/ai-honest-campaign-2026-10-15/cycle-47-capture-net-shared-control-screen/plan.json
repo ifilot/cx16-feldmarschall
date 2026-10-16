@@ -1,0 +1,87 @@
+{
+  "cycle": 47,
+  "baseline": "student-template-flag-bomb-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-template-flag-bomb-v1-normal",
+    "student-template-capture-net-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-template-capture-net-v1-normal",
+      "name": "student-template-capture-net-v1-normal",
+      "description": "Two cooperating public capturers close one disclosed victim escape net.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged honest template posterior/native ranked search. First eligible capture-net candidate in complete public legalmove order, with two own actors each uniquely covering a disclosed nonScout victim continuation. Preserve native initial captures and Flagwins. Shared20000enemy-outcome cap: generalized native control first, then firstnet. Enemy publicreply AND / single publicown continuation OR / all feasible hiddencombats and second enemyreplies AND. While victimlives require one netactor capture; after victimdeath allow any legal own continuation retaining positive fixedroot material. Strictly larger certifiedbound than native required. Exact complete-public-successor one-use witness executes next turn, including quiet/uncertaincapture after suicide. No extra nativego/RNG. Python research prototype; no CX16fitclaim.",
+      "information_model": "Own army, public revealed ranks/movement/captures/counts and source-informed population prior only. Proof branches use count-feasible hidden support without consulting actual enemy identities. No opponent setup, referee truth, deployment seed or private RNG.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-captures",
+        "--adjustment-scope",
+        "quiet-net"
+      ]
+    }
+  ],
+  "seed": 2530001,
+  "rounds": 500,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "A bounded two-piece public capture net with executable followthrough converts games better than the unchanged native opening-inference policy."
+  ],
+  "contrasts": [
+    [
+      "student-template-capture-net-v1-normal",
+      "student-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Exploratory fixed-sample comparison. No tuning on these games; fresh independent validation required before promotion. Fullpublic-history proof and one-use followthrough are bounded material claims, not game values.95%paired and conservative98.3333%intervals plus finite missingbounds; interpret wider interval across C43fork andC47net comparisons sharing the same baseline. Honest stress is separate. Runtime deliberately uses FIRST eligible candidate matching the frozen screening protocol; no substitution if native scores omit that move. No playing-strength or target-readiness claim before full audit.",
+  "evidence": "research/capture-net-preflight-v1: first20 and same-cohort full361 extension, public count/hiddencombat/native-key/witness checks. Runtime qualification and immutable registration required before games.",
+  "shared_control": {
+    "cycle": 43,
+    "directory": "cycle-43-public-forks-dos-screen",
+    "policy": "student-template-flag-bomb-v1-normal",
+    "seed": 2530001,
+    "attempts": 1000,
+    "new_attempts_this_cycle": 1000,
+    "comparison_attempts": 2000,
+    "prospective_frozen_utc": "2026-10-16T03:07:44.791523+00:00",
+    "source_games_at_design": 0,
+    "interpretation": "Shared fixed control, not an independent cohort. No C43 outcomes used to develop net policy. Source, saved artifacts and exact game equality must be linked and verified; count reused1000onlyonce in campaign executed totals."
+  }
+}
