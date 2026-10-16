@@ -1,0 +1,171 @@
+{
+  "scope": "Metadata-only operational diagnosis; no moves, setups or positions read; no policy tuning.",
+  "method": "Frozen worker starts Red; illegal check precedes append; stored plies counts completed moves; actor is Red for even plies and Blue for odd plies.",
+  "files": [
+    {
+      "file": "docs/ai-honest-campaign-2026-10-15/cycle-41-fortress-template-validation/student-fortress-template-flag-bomb-v1-normal.fmtour",
+      "bindings": {
+        "referee/openmp-worker": "b59624b034a42a38b3ab4cef9d737218befc431ab27ee03a524d46784eff28b3",
+        "referee/worker-sources.zip": "5dffbe15f5e45a4ea3e0e879a0af12e7db8b07f519069aa39acd0964365c06b3",
+        "desktop/worker.cpp": "4845a3caa6ba0e5e77b93a23d41de88386e5d640c13c52ee4172b0c9ab1851f8"
+      },
+      "reasons": {
+        "engine error: AI produced an illegal move": 6,
+        "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 45
+      },
+      "illegal_actors": {
+        "msdos-1990-v2-normal": 6
+      },
+      "illegal_records": [
+        {
+          "red": "student-fortress-template-flag-bomb-v1-normal",
+          "blue": "msdos-1990-v2-normal",
+          "completed_plies": 463,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "blue"
+        },
+        {
+          "red": "student-fortress-template-flag-bomb-v1-normal",
+          "blue": "msdos-1990-v2-normal",
+          "completed_plies": 315,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "blue"
+        },
+        {
+          "red": "msdos-1990-v2-normal",
+          "blue": "student-fortress-template-flag-bomb-v1-normal",
+          "completed_plies": 496,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "red"
+        },
+        {
+          "red": "student-fortress-template-flag-bomb-v1-normal",
+          "blue": "msdos-1990-v2-normal",
+          "completed_plies": 407,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "blue"
+        },
+        {
+          "red": "student-fortress-template-flag-bomb-v1-normal",
+          "blue": "msdos-1990-v2-normal",
+          "completed_plies": 263,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "blue"
+        },
+        {
+          "red": "msdos-1990-v2-normal",
+          "blue": "student-fortress-template-flag-bomb-v1-normal",
+          "completed_plies": 564,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "red"
+        }
+      ]
+    },
+    {
+      "file": "docs/ai-honest-campaign-2026-10-15/cycle-41-fortress-template-validation/student-template-flag-bomb-v1-normal.fmtour",
+      "bindings": {
+        "referee/openmp-worker": "b59624b034a42a38b3ab4cef9d737218befc431ab27ee03a524d46784eff28b3",
+        "referee/worker-sources.zip": "5dffbe15f5e45a4ea3e0e879a0af12e7db8b07f519069aa39acd0964365c06b3",
+        "desktop/worker.cpp": "4845a3caa6ba0e5e77b93a23d41de88386e5d640c13c52ee4172b0c9ab1851f8"
+      },
+      "reasons": {
+        "engine error: AI produced an illegal move": 4,
+        "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 69
+      },
+      "illegal_actors": {
+        "msdos-1990-v2-normal": 4
+      },
+      "illegal_records": [
+        {
+          "red": "student-template-flag-bomb-v1-normal",
+          "blue": "msdos-1990-v2-normal",
+          "completed_plies": 315,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "blue"
+        },
+        {
+          "red": "msdos-1990-v2-normal",
+          "blue": "student-template-flag-bomb-v1-normal",
+          "completed_plies": 496,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "red"
+        },
+        {
+          "red": "student-template-flag-bomb-v1-normal",
+          "blue": "msdos-1990-v2-normal",
+          "completed_plies": 263,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "blue"
+        },
+        {
+          "red": "msdos-1990-v2-normal",
+          "blue": "student-template-flag-bomb-v1-normal",
+          "completed_plies": 564,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "red"
+        }
+      ]
+    },
+    {
+      "file": "docs/ai-honest-campaign-2026-10-15/cycle-42-template-q24-native-dos-screen/student-template-flag-bomb-v1-normal.fmtour",
+      "bindings": {
+        "referee/openmp-worker": "b59624b034a42a38b3ab4cef9d737218befc431ab27ee03a524d46784eff28b3",
+        "referee/worker-sources.zip": "5dffbe15f5e45a4ea3e0e879a0af12e7db8b07f519069aa39acd0964365c06b3",
+        "desktop/worker.cpp": "4845a3caa6ba0e5e77b93a23d41de88386e5d640c13c52ee4172b0c9ab1851f8"
+      },
+      "reasons": {
+        "engine error: AI produced an illegal move": 1,
+        "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 35
+      },
+      "illegal_actors": {
+        "msdos-1990-v2-normal": 1
+      },
+      "illegal_records": [
+        {
+          "red": "student-template-flag-bomb-v1-normal",
+          "blue": "msdos-1990-v2-normal",
+          "completed_plies": 497,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "blue"
+        }
+      ]
+    },
+    {
+      "file": "docs/ai-honest-campaign-2026-10-15/cycle-42-template-q24-native-dos-screen/student-template-q24-native-v1-normal.fmtour",
+      "bindings": {
+        "referee/openmp-worker": "b59624b034a42a38b3ab4cef9d737218befc431ab27ee03a524d46784eff28b3",
+        "referee/worker-sources.zip": "5dffbe15f5e45a4ea3e0e879a0af12e7db8b07f519069aa39acd0964365c06b3",
+        "desktop/worker.cpp": "4845a3caa6ba0e5e77b93a23d41de88386e5d640c13c52ee4172b0c9ab1851f8"
+      },
+      "reasons": {
+        "engine error: AI produced an illegal move": 1,
+        "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 34
+      },
+      "illegal_actors": {
+        "msdos-1990-v2-normal": 1
+      },
+      "illegal_records": [
+        {
+          "red": "student-template-q24-native-v1-normal",
+          "blue": "msdos-1990-v2-normal",
+          "completed_plies": 497,
+          "actor": "msdos-1990-v2-normal",
+          "actor_color": "blue"
+        }
+      ]
+    },
+    {
+      "file": "docs/ai-honest-campaign-2026-10-15/cycle-42-template-q24-native-dos-screen/student-validated-deployment-v1-normal.fmtour",
+      "bindings": {
+        "referee/openmp-worker": "b59624b034a42a38b3ab4cef9d737218befc431ab27ee03a524d46784eff28b3",
+        "referee/worker-sources.zip": "5dffbe15f5e45a4ea3e0e879a0af12e7db8b07f519069aa39acd0964365c06b3",
+        "desktop/worker.cpp": "4845a3caa6ba0e5e77b93a23d41de88386e5d640c13c52ee4172b0c9ab1851f8"
+      },
+      "reasons": {
+        "engine error: error Original call 1d90:134b failed at 1d90:2513: Unexpected original interrupt 3f at 1d90:2513": 77
+      },
+      "illegal_actors": {},
+      "illegal_records": []
+    }
+  ]
+}
