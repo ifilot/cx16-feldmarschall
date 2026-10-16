@@ -1,9 +1,0 @@
-{
-  "frozen_baseline": "student-template-flag-bomb-v1-normal",
-  "old_policy_exact_rebuild": true,
-  "decisions_both_sides": 300,
-  "actual_overrides": 6,
-  "native_single_search_history_parity": true,
-  "public_boards_and_actual_choice_history_equal": true,
-  "scope": "One completed C21 screening game,up to300public-historydecisions; real scheduling correction. Reference go is corrected to the same actual choice, then both receive identical historical events. No strength claim."
-}

@@ -1,7 +1,0 @@
-{
-  "status": "frozen before final source changes and before any saved match",
-  "supersedes": "AMENDMENT.json actor-loss zero clause",
-  "ordering": "Compute raw response-schedule feasibility for every quiet candidate. Actor safety only certifies preferred alternatives. Leave every raw-schedule-feasible quiet move unchanged, including actor-unsafe choices. Only raw-schedule-infeasible quiet moves can be demoted when a certified alternative exists.",
-  "mechanical_correction": "Guard source belongs to the guard route: reject a prospective guard if its current square admits a disclosed legal lethal/exchange attack. Vacate that source when deriving Scout-ray threats as before.",
-  "reason": "Separate the scheduling hypothesis from generic tactical correction and satisfy the stated guard safety contract. No score/model coefficients or validation outcomes used."
-}

@@ -48,8 +48,10 @@ const char* const dev_names[DEV_SCENARIOS] = {
     "RESCUE A PIECE",
 };
 
-// Blue's marshal on e5 takes the known sergeant on e4, Red's last mover
-static const uint8_t last_taken[] = {0, 1, RED_FLAG, BLUE_FLAG, 64, 0x66, 54, 0x10, END};
+// Blue's marshal on e5 must take the known sergeant on e4, Red's last mover.
+// Friendly bombs close its quiet exits so this ending fixture is independent
+// of the selected evaluator's learned preference for a non-capturing move.
+static const uint8_t last_taken[] = {0, 1, RED_FLAG, BLUE_FLAG, 44, 0x1A, 55, 0x1A, 64, 0x66, 54, 0x10, END};
 // Red's marshal on e4 takes the sergeant on e5, Blue's last mover
 static const uint8_t last_enemy[] = {0, 0, RED_FLAG, BLUE_FLAG, 64, 0x40, 54, 0x16, END};
 // the last movers, both sergeants, fall together

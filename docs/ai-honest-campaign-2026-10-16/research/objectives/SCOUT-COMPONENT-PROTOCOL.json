@@ -1,9 +1,0 @@
-{
- "id":"scout-goal-veto-native-component-v1",
- "source_preflight":"scout-pursuit-result.json: exactfixed356roots,14previouslycertifiedactorvetoes; no gatebroadening",
- "baseline":"student-fortress-template-flag-bomb-v1-normal frozenarchive",
- "native_patch":"Componentonly actor-square->disclosedScoutgoalsquare map. plan() skips only listed target for actor; all other goal utility/rejection/routes/scoring unchanged. APIvalidates ownordinaryactor/disclosedenemyScout/Classic. No captureor dangerchanges.",
- "state":"After identicalpublicF/Bpacket, save ai_test persistentstate+random_current before nativego. Run baselinego, restorepre andveto then counterfactualgo. Restorepre, disableveto and rerunbaselinego; assert samechoice, goalplantrace, strategybytes andRNG asoriginalbaselinego. Finaldefaultoffrun regeneratesdiagnosticgoal scratch usedbyplayed correction. Continueactualpublichistory; no counterfactualgoal persists.",
- "report":"Whole selectedmoves and all actor nativegoals baseline/counterfactual. Emptyveto roots retain defaultoff behavior. All6520prefixnativechoicescomparedfrozenlauncher. No score/strengthclaim, policyregistration, hiddenenemysetup, newvalidation or currenttournamentinspection.",
- "decision":"If choiceschange, proposeregisterablecheap fullruntime design ratherthan claimstrength. Ifzero, preserve credible boundedcomponentrejection."
-}

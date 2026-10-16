@@ -1,5 +1,0 @@
-{
-  "reason": "Reject inconsistent public counts/lost before any terminal inference; reject colliding public witness keys. Valid-state algorithm, gate, budget and selection unchanged.",
-  "requested_by": "Independent root review before registration",
-  "no_saved_games": true
-}

@@ -1,8 +1,0 @@
-{
-  "stage": "Frozen before expanded common-control queries; original first20 data immutable",
-  "cohort": "Exactly all335 eligible roots and336 candidate moves already fixed by geometric result.json in C21. No gate widening, new games or other cohort. Sort gameID/ply/move; no outcome filtering or replacement.",
-  "certificate": "Unchanged certificate_common.py, public count/movement model, common any-actor disclosed-surviving-capture OR, all enemy first/second public reply ANDs, fixed-root material units and20000enemy-nodecap per evaluated action. No coefficient, rule, nodecap or model change. Reuse the deterministic saved-native action proof when a root has multiple fork moves.",
-  "filters": "Preserve saved native captures, root disclosed Flagwins and current public Flagthreats; native positive/common-inconclusive also prevents new override opportunity. Compute allfork proofs to describe the fixedgate, reporting these filters separately. Native-capture controls require no quiet certificate and are explicitly retained.",
-  "checks": "Recomputed first20 public proofs must exactly match the preserved common-result.json (ignoring timings). Report native-vs-fork certificate counts, additional distinct roots/games/candidates, repeated prefixes, caps and node/time summaries. Also report whether native+allfork node counts fit the proposed global20000 runtime budget; this is a diagnostic, not an audit-cap change.",
-  "completion": "Finish all fixedroots even if walltime exceeds10minutes; no adaptive truncation or tuning. Progress may be written every20roots. No runtime authorization or registration follows automatically from a positive result."
-}

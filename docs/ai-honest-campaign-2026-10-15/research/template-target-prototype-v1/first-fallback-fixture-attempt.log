@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/test_campaign_template_fallback.py", line 64, in <module>
-    if __name__=='__main__':main()
-                            ^^^^^^
-  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/test_campaign_template_fallback.py", line 57, in main
-    assert results[0]==results[1],(level,rules,army,results)
-           ^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: ('normal', 0, 0, [('61 31', '35090'), ('61 41', '35090')])

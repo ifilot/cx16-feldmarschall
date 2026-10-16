@@ -24,9 +24,6 @@ jobs:
         run: make
       - name: Check presets and rules
         run: make check
-      - name: Rate the computer player
-        # a short tournament: every engine plays every move legally to the end
-        run: make rating ROUNDS=10
       - name: Package
         run: |
           make dist

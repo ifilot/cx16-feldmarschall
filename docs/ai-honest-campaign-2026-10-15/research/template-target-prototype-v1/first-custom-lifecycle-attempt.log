@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/template-target-prototype-v1/target_custom_lifecycle.py", line 24, in <module>
-    assert session.emu.advance(2)['reason']=='breakpoint'
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError

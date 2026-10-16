@@ -11,3 +11,13 @@
   final validation; do not tune on a validation cohort.
 - Use the Classic tournament runner and Qt6 companion for new reviewable matches.
   Preserve the game's artwork, colors and board orientation in the companion.
+
+# Production AI boundary
+
+- Continue AI experiments in the separate `feldmarschall-ai` repository. This
+  repository owns the rules, interface, artwork and production integration.
+- Import a specific qualified release with `tools/ai_release.py`; do not edit
+  the vendored AI/model files or silently change the installed release ID.
+- Keep release integrity, rules, hidden-information and X16 lifecycle/packaging
+  checks here. Detailed research evidence and saved tournaments live with the
+  research repository; `docs/ai-release.md` records the installed release.

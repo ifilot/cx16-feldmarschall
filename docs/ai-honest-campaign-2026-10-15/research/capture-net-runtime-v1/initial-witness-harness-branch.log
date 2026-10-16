@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/capture-net-runtime-v1/audit-witness.py", line 78, in <module>
-    result=run();(HERE/'witness-integration.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
-           ^^^^^
-  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-honest-campaign-2026-10-15/research/capture-net-runtime-v1/audit-witness.py", line 57, in run
-    reply=next(response for response in root['quiet_adjustment']['net_certificate']['responses']if response.get('victim_alive')is False and json.loads(response['public_key'])[1][response['response'][1]]==255)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-StopIteration

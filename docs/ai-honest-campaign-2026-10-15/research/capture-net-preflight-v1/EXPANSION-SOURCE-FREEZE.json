@@ -1,9 +1,0 @@
-{
-  "frozen_utc": "2026-10-16T03:02:34.742544+00:00",
-  "before_expansion_queries": true,
-  "files": {
-    "audit_full.py": "76a9a98841b5bb9c4e7b67326f6e3713915222a77b17ad8f69d97238f7b8c3d0",
-    "net.py": "1a0bad0a9bf8d9e71bfa1ee16492587eb885caf9803f24ea7397b2272e2387aa",
-    "EXPANSION-PROTOCOL.json": "d4e102cd75a0466bfa25c49dc35b2dbb3dbebd2ee3990bc1e7366e9ece64a0e5"
-  }
-}

@@ -26,7 +26,7 @@ from autoplay import FLAG, LAKE, BLUE, centre, red_moves  # noqa: E402
 from distribute import runtime_files  # noqa: E402
 from screenshot import Session, X16Agent  # noqa: E402
 from test_colors import choose, click  # noqa: E402
-from test_flow import board, counts, symbol, text  # noqa: E402
+from test_flow import board, counts, symbol, text, wait_for_next_red_turn  # noqa: E402
 from test_variants import drag, new_match, position, write  # noqa: E402
 
 ROMS = [ROOT.parent / 'emulator/rom.bin', ROOT.parent / 'emulator-win/rom.bin']
@@ -83,12 +83,14 @@ def play(session, turns, seed):
     shuttle = (None, None, 0)
     for _ in range(turns):
         before = board(session)
+        previous_turn = text(session, 11)
         moves = red_moves(before, shuttle)
         attacks = [m for m in moves if before[m[1]] != 0xFF]
         move = rng.choice(attacks if attacks and rng.random() < 0.5 else moves)
         last_src, last_dst, count = shuttle
         shuttle = (move[0], move[1], count + 1 if count and move == (last_dst, last_src) else 1)
         drag(session, *move)
+        assert wait_for_next_red_turn(session, previous_turn), 'game ended before the planned screenshot'
         after = board(session)
         assert after != before, f'the move {move} changed nothing'
         flags = [c & BLUE for c in after if c < LAKE and c & 15 == FLAG]

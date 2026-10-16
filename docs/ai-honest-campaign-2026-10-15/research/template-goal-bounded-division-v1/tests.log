@@ -1,8 +1,0 @@
-test_boundaries_and_sign (__main__.BoundedDivision.test_boundaries_and_sign) ... ok
-test_convex_gain_and_separate_native_quarter (__main__.BoundedDivision.test_convex_gain_and_separate_native_quarter) ... ok
-test_random_fraction_oracle (__main__.BoundedDivision.test_random_fraction_oracle) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.194s
-
-OK

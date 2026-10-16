@@ -1,8 +1,0 @@
-{
-  "stage": "mechanical runtime qualification only, frozen before edits; no registration or games",
-  "algorithm": "Exact quiet-contact-risk-v1 formulas and native MAX/rays/integer truncation. Scope captures (default) preserves existing mobile-capture-v1. Mutually exclusive quiet-occupancy and quiet-mobile scopes apply danger-only old-minus-new corrections and preserve every capture score, including terminal wins.",
-  "state": "One native ranked search, no RNG draw, same existing played correction for overridden root action. Own setup and public captured/revealed/moved history only; concealed nibbles masked before model and scoring. No hidden Scout-ray inference, rollout or coefficients.",
-  "tests": "Native static-threat oracle, both-side cold/public histories, source-vacated and blocked Scout rays, hidden-nibble invariance, known/captured/terminal capture preservation, scope isolation; qualified real adapter tests and default parity against exact before sources. Screening forced-prefix adapter diagnostic only if needed, no saved games.",
-  "ownership": "Only campaign_mobile_capture.py, campaign_native_mobile.py, NEW tests and this evidence directory. No registry, core or C17 analysis changes.",
-  "limitations": "Native MAX approximate; source-prior population and action-likelihood caveats unchanged. Q12 tails may round to0. No strength, safety or target-fit claims. Root owns registration and future matches."
-}

@@ -1,7 +1,0 @@
-......
-----------------------------------------------------------------------
-Ran 6 tests in 4.966s
-
-OK
-{"unchanged_capture_scores": 258}
-{"persistent_decisions": 120, "private_nibble_pairs": 120, "changed_vs_baseline": 1, "wall_seconds": 0.6400068359798752, "mean_adapter_seconds": 0.0026666951499161465, "max_adapter_seconds": 0.006454444999690168}

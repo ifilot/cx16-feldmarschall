@@ -1,8 +1,0 @@
-{
-  "scope": "Public replay of all eighteen previously credited Scout-loss probes. Observed outcomes are diagnostic metadata, excluded from teacher inputs and strength evaluation.",
-  "cases": 18,
-  "source_sha256": "4ab2c63e6b1cb04a3294f639ad0eee39f9858e50a4633bd538e546a975302def",
-  "cases_sha256": "eb917b5fd86a8a898773a60ccc3495fae001426d33a15574687321b468db4364",
-  "terminal_before_next_turn": 1,
-  "followup_still_legal": 7
-}

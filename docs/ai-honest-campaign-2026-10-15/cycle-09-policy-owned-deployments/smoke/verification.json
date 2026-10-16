@@ -1,9 +1,0 @@
-{
-  "both_backends_exact_games": true,
-  "all_states_python_native_equal": true,
-  "qt6_capture": true,
-  "setup_reproduced_from_frozen_runtime": true,
-  "strength_evidence": false,
-  "max_plies": 40,
-  "games_per_backend": 2
-}

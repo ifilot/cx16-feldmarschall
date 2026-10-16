@@ -1,8 +1,0 @@
-{
-  "analyze_template_conversion.py": "4f4076ef3801910609d90f1ea7a3ee73be2d9ee5122eeceb21a635fd2883748b",
-  "analyze_public_flag_survival.py": "837cd06193632bed8270e800596e33e4ef2047aa3d2765b2ca91b7dfe5d207fb",
-  "analyze_template_interception.py": "311e98833f842541aac128f860880f48b8edb2e3616031c7f5ac540ed008b0d2",
-  "test_template_conversion.py": "2c38778637caf05450d607593aebf5693b585c28d307d1f3bf33a2aa19a50362",
-  "test_public_flag_survival.py": "fda7e492e51362841362c9d6ef88835f20b895f233e888267a1fc7ea36bc681c",
-  "campaign_flag_guard.py": "d9eddff94c0957acd6e899671fefbed72f789ccff904fd6e8ac2fc9e3dc10fee"
-}

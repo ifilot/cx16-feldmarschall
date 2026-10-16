@@ -1,5 +1,0 @@
-command: ["cl65", "-O", "-t", "cx16", "-I", ".", "-I", "core", "-I", "ui", "-I", "scenes", "-DBANKED_AI", "-DAI_MISSIONS", "-DAI_MEMORY", "-DAI_STUDENT", "-DAI_STUDENT_V2", "-DAI_STUDENT_PRODUCTION", "-DAI_STUDENT_COOP_GUARD", "-DAI_POLICY_DEPLOYMENT", "-DAI_DEPLOY_FORTRESS_ONLY", "-DAI_DEPLOY_DOUBLE_SHELL", "--asm-define", "AI_MEMORY", "-Wl", "-D,__STACKSIZE__=0x0400", "-C", "feldmarschall.cfg", "-o", "FELDMARS.PRG", "-m", "FELDMARS.map", "-Ln", "FELDMARS.sym", "main.c", "core/ai.c", "core/ai_deploy.c", "core/ai_level.c", "core/ai_memory.c", "core/ai_mission.c", "core/ai_student.c", "core/board.c", "core/pieces.c", "core/presets.c", "core/random.c", "core/rules.c", "core/setup.c", "core/store.c", "ui/boardview.c", "ui/button.c", "ui/colors.c", "ui/dialog.c", "ui/drag.c", "ui/input.c", "ui/panel.c", "ui/sound.c", "ui/video.c", "scenes/about.c", "scenes/deploy.c", "scenes/deploy_dialog.c", "scenes/dev.c", "scenes/game_settings.c", "scenes/menu.c", "scenes/options.c", "scenes/play.c", "ui/ai_bank.s", "ui/input_low.s", "ui/mission_bank.s", "ui/sound_low.s", "scenes/play_bank.s", "vendor/zsmkit.lib"]
-returncode: 0
-stdout:
-
-stderr:

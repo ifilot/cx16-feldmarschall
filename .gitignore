@@ -13,6 +13,7 @@ src/*.sym
 src/gfx.h
 src/color_profiles.h
 src/app_info.h
+src/ai-build.json
 src/COLORS.DAT
 src/DEPLOY.DAT
 src/GAME.DAT

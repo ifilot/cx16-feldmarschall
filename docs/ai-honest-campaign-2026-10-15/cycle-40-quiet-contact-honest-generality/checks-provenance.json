@@ -1,9 +1,0 @@
-{
-  "source": "research/quiet-contact-runtime-v1/tests.log",
-  "tests": 19,
-  "runtime_sha256": {
-    "campaign_mobile_capture.py": "6513f15749f5729c82eea31d94a620dd07a036bed36d6f4407eac23246753f69",
-    "campaign_native_mobile.py": "5a5ff50e09adfa7e86807723bc4d01487657c929939a6ce394c104f7d9e24c88"
-  },
-  "no_saved_matches_before_qualification": true
-}

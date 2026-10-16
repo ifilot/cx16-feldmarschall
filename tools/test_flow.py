@@ -43,6 +43,19 @@ def counts(session):
             sum(c < 0xFE and c & 0x10 != 0 for c in cells))
 
 
+def wait_for_next_red_turn(session, previous_turn, max_frames=1200):
+    """Wait for a complete reply, including thinking/battle/fall animations."""
+    for _ in range(max_frames//30):
+        status = text(session, 9)
+        if status in ('YOU WIN', 'OPPONENT WINS', 'DRAW'):
+            return False
+        if status == 'YOUR TURN' and text(session, 11) != previous_turn:
+            return True
+        session.emu.advance(30)
+    raise AssertionError(('computer reply did not finish', previous_turn,
+                          text(session, 9), text(session, 11)))
+
+
 def main():
     with tempfile.TemporaryDirectory(prefix='feldmarschall-flow-') as tmp:
         directory = Path(tmp)

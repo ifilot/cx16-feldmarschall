@@ -1,4 +1,0 @@
-{
-  "policy": "student-context-v2-normal",
-  "correction": "The initial registry description says 31-node fit. This was the maximum depth-four tree size; the actual single fit has 27 nodes (162 bytes). The model source, executable ID and tournament evidence are authoritative. No behavior or existing frozen source was changed."
-}

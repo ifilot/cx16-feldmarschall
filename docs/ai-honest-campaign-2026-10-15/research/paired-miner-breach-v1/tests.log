@@ -1,8 +1,0 @@
-test_public_shuttle_can_remove_immediate_readiness (test_mechanism.PairMechanism.test_public_shuttle_can_remove_immediate_readiness) ... ok
-test_rank_disclosure_and_private_nibbles_do_not_invent_known_bombs (test_mechanism.PairMechanism.test_rank_disclosure_and_private_nibbles_do_not_invent_known_bombs) ... ok
-test_two_entry_forcing_sequence_against_all_legal_known_replies (test_mechanism.PairMechanism.test_two_entry_forcing_sequence_against_all_legal_known_replies) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.006s
-
-OK

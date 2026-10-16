@@ -1,9 +1,0 @@
-{
-  "epoch": 1792113026.837328,
-  "revision": 2,
-  "plan_sha256": "0177acc2d1825610d3d356f05a63bb68d3669d7a4a885572cae780f566081f18",
-  "supersedes_plan_sha256": "07d715db1dc0cddcccd861a699ea1f50aae3a2759975016b5ce4ba74677cc437",
-  "reason": "Correct a copied contrast reference from unrun/rejected version1 to the already-listed version2 arm. No policy, source, seed, sample or hypothesis changed; zero saved games.",
-  "policy_ids_and_sources_unchanged": true,
-  "saved_matches_before_revision": 0
-}

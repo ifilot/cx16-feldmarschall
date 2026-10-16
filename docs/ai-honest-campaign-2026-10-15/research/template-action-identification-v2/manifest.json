@@ -1,9 +1,0 @@
-{
-  "audit_prefixes.py": "7d084e6a2d109c3c61bd8e84b171c6c09a5d0e10f3c1b52f3da5cc961244684b",
-  "config.json": "062685e24ecaf95f4e432a570f3d02b369f79d5e4ce8bcdd0797bc60510acc6f",
-  "proposal-and-conclusion.json": "d82f8da7961b4f0807cbd179c09cdb2d513a05a0471e131f60f1518ff1d44f69",
-  "result.json": "4d097ed6d9c6ae38bd18ffd712795f586461a12ee472b902a7a2f7f0e86d3ec0",
-  "run.log": "a2ba58dd9c3b0a3d8dee5ed08e48bd539f6eb2d8a54b0289f5de7619f845bf6f",
-  "test_prefix_audit.py": "ce39248da010f4ab88d39d8fe870d7759722cd7e838464ef1bb6be510cb47309",
-  "tests.log": "855b873e8ee4d2caf05693df0f448cbb7800c2635586aea6e3152d99fe7a2678"
-}

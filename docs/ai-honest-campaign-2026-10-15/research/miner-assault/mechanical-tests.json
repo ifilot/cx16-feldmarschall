@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "quiet_preparations_tested": 18,
-  "quiet_support_fails_to_remove_adjacent_recapture_in_every_test": true,
-  "explicit_guard_capture_then_miner_breach_then_flag_capture": true,
-  "explanation": "Capture-the-guard-first is already the rejected AI_MISSION_ESCORT mechanism; quiet recapture threats cannot prevent legal captures.",
-  "test_source_sha256": "69d770a5d375c79aab6f5fea8caed6886e2b642db300747eee67b333afc29bbc"
-}

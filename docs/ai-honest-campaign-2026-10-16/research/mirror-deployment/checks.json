@@ -1,8 +1,0 @@
-{
-  "command": "python3 tools/test_new_campaign_mirror.py",
-  "source_sha256": {
-    "tools/new_campaign_mirror_deploy.c": "d663ab22e7f0f91090e615b31373ccc6f0bbbc2718b63aa27360ed11e95fee94",
-    "tools/test_new_campaign_mirror.py": "23b07b6a9a6d8c0d4fa8620e9e0c3cad0e6dbe4307c9905da424bd5376bb5513"
-  },
-  "checks_log_sha256": "e92d6c8abf6e9719e634eb910b8b5ab24dbc1404ee0d0042c4cf9e1cf8392172"
-}

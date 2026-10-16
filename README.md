@@ -269,12 +269,14 @@ occupied squares. Tactical evaluation checks the resulting occupancy for
 adjacent enemies and long scout rays, prioritizes immediate victory and
 confirmed threats to its own flag, and preserves specialist value while the
 opposing threat remains. Small random adjustments vary similar choices.
-Normal uses this evaluator. Easy skips route planning and varies choices
+Classic Normal combines the guarded compact scoring model with public Flag/Bomb
+setup inference and the defensive Fortress deployment. It never receives the
+enemy setup, private seed or hidden ranks. Easy skips route planning and varies choices
 more; Hard checks the best material reply to six shortlisted moves, weighting
 possible concealed combat outcomes. Every level receives the same information.
 Choose difficulty by clicking its button in New Game, or with the left/right
 arrow keys. Difficulty is retained in saved games; older saves use Normal. See
-[the AI comparison](docs/ai-comparison.md) for measured results and limits.
+[the AI release report](docs/ai-release.md) for measured results and limits.
 
 ## Layout
 
@@ -441,7 +443,6 @@ src/
     dialog      plates floating over the board
     button      raised buttons, made of plate tiles
   native/       the computer player as a PC program (docs/protocol.md)
-  bridge/       the computer player alone on the X16, for the parity test
   scenes/       the screens of the game
     menu        the select screen
     deploy      building a setup, with its button bar
@@ -488,145 +489,17 @@ most in a long game, measured by filling it with a marker byte in the
 emulator. `src/Makefile` therefore reserves 1 KB for it instead of cc65's
 default 2 KB; `src/FELDMARS.map` shows how much room is left below it.
 
-## Testing and rating the computer player
+## AI releases and research
 
-[AI milestones and reproducible benchmark records](docs/ai-milestones.md)
-and [strategy research, rejected alternatives, and final strength validation](docs/ai-strategy-research.md)
-([final handoff](docs/ai-write-off-2026-10-14-strategies.md))
-track the frozen evaluators, the current experiment, and complete game traces.
-The [next development cycle](docs/ai-development-plan-2026-10-14.md) records
-the expanded opponent/layout suite and diagnostic position collection.
-The [five-step cycle handoff](docs/ai-cycle-write-off-2026-10-14.md) covers the
-tracker, offline teacher, compact-model results and independently tested
-[deployment portfolio](docs/ai-deployments/portfolio.json).
+Classic Normal uses a pinned, qualified honest AI release. Its identity, model
+and source checksums are recorded in `ai-release/manifest.json`; `make
+verify-ai-release` checks the installed files. See [the release report](docs/ai-release.md)
+for validation, target limits and the explicit release import command.
 
-The [next cycle checkpoint](docs/ai-next-cycle-2026-10-14.md) records independently
-validated varied deployment selection, its runtime integration and remaining work.
-The [focused mission diagnostics](docs/ai-mission-cases/README.md) retain 18
-permitted-view cases, legal alternatives and rejected strategic experiments.
-The [teacher and student checkpoint](docs/ai-teacher/README.md) records the
-stronger public-input desktop teacher and the compact cooperation-guard model
-adopted for Classic Normal. It scores 54.0% against the frozen mission baseline
-in 1,400 independent games; the separate matched opponent league shows no overall
-gain. Other difficulties and variants retain mission scoring.
-The [optional-variant benchmarks](docs/ai-variants/README.md) add 15,400 audited
-games across individual and combined rules, with Normal and Hard measured
-separately. The [cycle completion audit](docs/ai-cycle-completion/README.md)
-maps the full requested cycle to its retained evidence and checkpoints.
-
-Normal and Hard coordinate a miner approach when revealed rear bombs suggest
-a fortified flag area. A shared route assigns a friendly blocker to move aside,
-a scout to investigate an unknown defender, or a suitable piece to clear a
-known defender. Tactical danger and flag defence still govern the chosen move.
-The planner scored 57.4% for Normal and 56.3% for Hard against their preceding
-frozen versions over 600 held-out games each. See the
-[mission handoff](docs/ai-write-off-2026-10-14-missions.md).
-
-The computer player in `src/core` also builds as a PC program,
-`build/feldmarschall-engine` (`make native`), which speaks a line-based
-protocol on standard input and output (see [docs/protocol.md](docs/protocol.md)).
-A referee holds the true position and tells each engine only what its army
-may know, so other programs can join in.
-
-* `tools/arena.py` plays matches between any engines. Each pairing plays
-  the same two deployments twice with the sides swapped (built-in presets,
-  random ones, or a mix), checks every move, and ends a game when a flag
-  falls, when the side to move is stuck, or as a draw after 1000 plies.
-* `tools/bots.py` provides two baseline opponents, `random` (any legal
-  move) and `greedy` (takes what it knows it beats, probes with cheap
-  pieces, otherwise advances), written in Python against the protocol.
-* `tools/rating.py` turns the results into Elo ratings with a
-  Bradley–Terry fit, anchored at the random bot.
-* `tools/parity.py` checks that the X16 and the PC choose the same moves:
-  it runs `BRIDGE.PRG` (`src/bridge`) in the emulator and the native
-  engine side by side on hundreds of positions, with the same random seed.
-
-The pre-upgrade v0.2.0 AI had these historical results over 600 games
-against the baseline bots (these are not human Elo ratings):
-
-| Engine | Elo | 95% | Score |
-| --- | ---: | ---: | ---: |
-| ai (the game's computer player) | 494 | ±50 | 86% |
-| greedy | 286 | ±43 | 54% |
-| random | 0 | ±55 | 11% |
-
-Ratings only compare engines within the pool that played; on this scale
-a 100-point gap means the stronger engine scores about 64%. The parity
-test found a cc65 quirk that made the X16 mis-score attacks on hidden
-pieces (cc65 divides a negative `long` by an `unsigned char` as unsigned);
-both builds now agree on every tested position. The initial three-level AI matched on
-500 fresh positions per difficulty. The maximum measured times were 14 frames
-(0.23 seconds) for Easy, 24 (0.40) for Normal and 45 (0.75) for Hard. Normal's
-optimizations preserved 17,417 decisions across 30 complete games against the
-previous planned evaluator, whose measured maximum was 43 frames (0.72 seconds).
-
-`make benchmark-ai` rebuilds the frozen v0.2.0 opponent and runs 1,800 games
-against the current AI, with independent seeds, side-swapped deployment
-pairs, and confidence intervals resampled by pair. The current AI scored
-69.8% (894 wins, 724 draws, 182 losses), counting draws as half a point;
-the paired 95% interval was 68.3–71.3%. Full results and deployments go to
-`build/ai-benchmark/`. See [the recorded report](docs/ai-benchmark.json).
-
-`make benchmark-ai-levels` plays 3,600 independent validation games across
-all level pairings and three deployment groups. Normal scored 80.7% against
-Easy; Hard scored 55.0% against Normal and 84.0% against Easy. Paired 95%
-intervals were 78.8–82.6%, 52.5–57.5%, and 82.0–85.9%, respectively.
-See [the difficulty report](docs/ai-level-benchmark.json). `make check` also
-verifies 15,242 decisions after permuting hidden ranks, including Spy,
-Marshal and Flag, plus 3,644 changes to undisclosed Silent Defense casualty
-inventories. Choices, random consumption and persistent history must match.
-
-
-## Classic AI tournament desk
-
-The [compiled C++ Qt6 tournament desk](docs/tournament-desk.md) selects two
-[named, source-preserved AI versions](ai/README.md), runs Classic tournaments
-and reviews both aggregate results and individual games using the game's artwork.
-Tournaments are portable `.fmtour` files with compressed moves and preserved
-participant sources/executables. Tournament matches run in a native OpenMP worker
-with a selectable worker count. Build with CMake, Qt6 development libraries,
-OpenMP and zlib; Python, Pillow and NumPy embed the game artwork at build time.
-The source builder and file writer use Python and GCC; viewing needs no PySide6.
-
-The [Classic generalization setup suite](tests/datasets/classic-generalization-v1/README.md)
-adds 3,840 distinct armies, separating development, fresh-layout validation and
-held-out generator families. Select it with the tournament runner's `--dataset`
-and `--dataset-split` options; saved matches retain the complete setup provenance.
-
-```sh
-make desktop       # compile and start the Qt6 app
-make desktop-build # compile without launching
-python3 tools/tournament.py run student-guard-v1-normal missions-v1-normal \
-  --backend openmp --jobs 4 --rounds 10 --seed 20261015 \
-  --out build/tournaments/comparison.fmtour
-build/desktop/feldmarschall-desk build/tournaments/comparison.fmtour
-```
-
-New AI research focuses on Classic and clear strategic experiments; see the
-[development direction](docs/ai-direction-2026-10-15.md). Further optional-rule
-tuning is deferred.
-
-The [15 October Classic development cycle](docs/ai-cycle-2026-10-15/README.md)
-records the comparison league, public match review, priority and mission
-experiments, context-preserving desktop teacher and one compact student fit.
-Production remains Guarded Student v1; rejected experiments retain their source
-and portable tournaments.
-The subsequent [linked-scouting experiment](docs/ai-linked-scouting-2026-10-15/README.md)
-tests whether information can guide a legal follow-up attack. Its development
-results reject promotion and retain production unchanged.
-The [reply-aware teacher trial](docs/ai-reply-teacher-2026-10-15/README.md) then
-tests several plausible opponent responses. It improves diagnostic reply
-coverage but establishes no strength gain over Context Teacher v1; its sources
-and 980 games are retained without a new student fit.
-The subsequent [teacher-transfer investigation](docs/ai-transfer-2026-10-15/README.md)
-checks teaching stability and two desktop ranking students. Both fail offline
-learning gates; their sources and diagnostics are retained without new strength
-tournaments or a production change.
-
-The [MS-DOS 1990 framework](docs/msdos-1990-framework-2026-10-15/README.md)
-runs the original Stratego AI headlessly in the same Qt6/OpenMP tournaments.
-Choose `msdos-1990-v2-normal` for the fast reference; its original hidden-rank
-knowledge and any unscored engine errors are visible in the desk.
+AI experiments, policy archives, setup datasets, the DOS adapter, tournaments
+and Qt6 match review have moved to the separate `feldmarschall-ai` repository.
+The research checkout consumes a pinned game-core snapshot. Improvements enter
+this game as versioned releases rather than changes from a live research branch.
 
 ## Building
 
@@ -648,13 +521,8 @@ make test-demo     # computer-vs-computer, pause/no-save/resume and rescues
 make test-controls # keyboard/pointer arbitration and simulated gamepad actions
 make check        # check the built-in deployments and the rules (tests/)
 make native       # build the computer player as a PC program (needs gcc)
-make rating       # rate it against the baseline bots
-make benchmark-ai # compare with the frozen pre-upgrade v0.2.0 AI
 make test-ai      # tactics, all levels, hidden permutations and 64 rule combinations
 make test-ai-levels # difficulty controls, saved games and banked execution
-make benchmark-ai-levels # paired Easy/Normal/Hard strength comparisons
-make compare-ai   # prove Normal optimizations preserve complete-game choices
-make parity       # check that the X16 and the PC choose the same moves
 make autoplay     # play 150 turns of random red moves against the computer
 ```
 
@@ -691,7 +559,7 @@ the game, `make screenshots` and `git status docs` show exactly which screens
 it affected. The emulator tests (`make test-flow` and friends) keep their
 captures in `build/test-shots/`.
 
-GitHub Actions builds the game, runs `make check` and a short `make rating`,
+GitHub Actions builds the game and runs `make check`, including release integrity, hidden-information and rule regressions,
 and packages it on every push and pull request (`.github/workflows/build.yml`);
 pushing a `v*` tag attaches the ZIP to a release. It also builds the
 AgentBridge emulator (`.github/actions/agent-emulator`), runs the emulator
@@ -719,12 +587,14 @@ make test-sound
 ZSMKit v1 runs music on PSG voices 0–11 and effects on 12–15. Playback is
 interrupt-driven from RAM, so AI searches and disk loads do not starve it.
 RAM bank 1 holds ZSMKit state, 2 the effects, and 3–21 the music; 22 and 23
-hold the play-scene and tactical AI code; bank 24 holds mission planning.
+hold the play-scene and tactical AI code; bank 24 holds mission planning and
+public history, and bank 25 holds cached integer setup inference.
 The play-scene data stays in main RAM;
 the AI's private goals, route scratch space, scores and static locals live
 with its code in bank 23 (`AIBSS`). The AI initializes that state explicitly,
-and assembly gateways restore the caller's bank. `PLAY.BIN`, `AI.BIN`, and `MISSION.BIN` are required
-runtime files. The native engine and `BRIDGE.PRG` keep their ordinary AI code.
+and assembly gateways restore the caller's bank. `PLAY.BIN`, `AI.BIN`, `MISSION.BIN` and `BELIEF.BIN` are required
+runtime files. The release builder checks bank capacities and relocates the
+integer arithmetic helpers without altering the installed cc65 library.
 `src/feldmarschall.cfg` checks bank sizes, and the sound build refuses music
 that would overlap the code banks. Music resumes its current track across
 in-session pauses; loading a saved game after restarting uses the first

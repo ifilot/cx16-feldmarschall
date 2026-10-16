@@ -1,5 +1,11 @@
 # Engine protocol
 
+The game maintains this public interface and builds its native engine with
+`make native`. Referee, bot, benchmark and bridge-parity tool references below
+belong to the separate `feldmarschall-ai` research repository. Its README lists
+the current Classic tournament and review workflow; historical helper commands
+are retained here to explain existing protocol consumers.
+
 The referee (`tools/arena.py`) plays games between programs that speak this
 protocol. A program reads one command per line on standard input and writes
 its replies on standard output, one per line, flushing after each. The

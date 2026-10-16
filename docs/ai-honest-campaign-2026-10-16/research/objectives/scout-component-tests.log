@@ -1,8 +1,0 @@
-test_only_public_ordinary_actor_to_disclosed_scout_accepted (__main__.ComponentFixtures.test_only_public_ordinary_actor_to_disclosed_scout_accepted) ... ok
-test_out_of_range_target_and_optional_rules_rejected (__main__.ComponentFixtures.test_out_of_range_target_and_optional_rules_rejected) ... ok
-test_snapshot_restore_choice_and_rng_parity (__main__.ComponentFixtures.test_snapshot_restore_choice_and_rng_parity) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 4.395s
-
-OK

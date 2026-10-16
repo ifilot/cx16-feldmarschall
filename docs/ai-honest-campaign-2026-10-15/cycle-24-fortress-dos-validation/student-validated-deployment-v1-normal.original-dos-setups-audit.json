@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "regenerated_records": 2000,
-  "matched_game_armies": 2000,
-  "runtime_files": 28,
-  "setup_mode": "policy-owned-rotated-v1",
-  "source": "Only frozen embedded generator/emulator/asset bytes executed; all private seeds and audits reproduced.",
-  "move_rng_boundary": "Existing move adapter reseeds independently; deployment post-RNG is preserved in records."
-}

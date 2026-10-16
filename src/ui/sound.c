@@ -66,9 +66,9 @@ uint8_t sound_init(void) {
     if(!load_banked("PLAY.BIN", PLAY_BANK) || !load_banked("AI.BIN", 23)) return 0;
     if(!load_banked("MISSION.BIN", 24)) return 0;
 #ifdef AI_TEMPLATE_PRIOR_Q24
-    /* Optional prototype packaging is explicit; the default resource scanner
-     * must not require a bank absent from the default build. */
-    if(!load_banked("BELIEF." "BIN", 25)) return 0;
+    /* The release build receipt makes this required code bank explicit to
+     * packaging, independently of whether music is enabled. */
+    if(!load_banked("BELIEF.BIN", 25)) return 0;
 #endif
     if(!load_banked("SFX.BIN", 2)) { sound_music_enabled = sound_effects_enabled = 0; return 1; }
     for(i=0; i<8; i++) if(!load_banked(files[i], banks[i])) { sound_music_enabled = sound_effects_enabled = 0; return 1; }

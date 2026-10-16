@@ -1,8 +1,0 @@
-Running student-guard-v1-normal
-Verified student-guard-v1-normal {'wins': 23, 'draws': 24, 'losses': 336, 'score': 0.09138381201044386}
-Running student-validated-deployment-v1-normal
-Verified student-validated-deployment-v1-normal {'wins': 58, 'draws': 39, 'losses': 265, 'score': 0.21408839779005526}
-Running teacher-context-v1-normal
-Verified teacher-context-v1-normal {'wins': 20, 'draws': 12, 'losses': 349, 'score': 0.06824146981627296}
-Running teacher-validated-deployment-v1-normal
-Verified teacher-validated-deployment-v1-normal {'wins': 43, 'draws': 15, 'losses': 298, 'score': 0.14185393258426968}

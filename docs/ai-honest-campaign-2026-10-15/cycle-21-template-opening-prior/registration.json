@@ -1,9 +1,0 @@
-{
-  "epoch": 1792104157.444425,
-  "revision": 2,
-  "plan_sha256": "d43a93044e6cca634515ce27cf9854577c6fba0e40b76a5c9841ddc37bb86a50",
-  "supersedes_plan_sha256": "0bf1400863560fe3fc0eb269703439435444ed3d490ee0bcbc44ff32c3e2f5bf",
-  "reason": "Before any saved matches: original procedural setup has asymmetric scans. Rotate both armies 180 degrees between sides to preserve the exact DOS-local formation; old row-only side swap horizontally reflected Red DOS. Policy IDs, recipes, models and source snapshots are unchanged. Superseded preregistration preserved in plan-revisions/v1.",
-  "policy_ids_and_sources_unchanged": true,
-  "saved_matches_before_revision": 0
-}

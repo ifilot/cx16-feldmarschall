@@ -1,8 +1,0 @@
-{
-  "observed_utc": "2026-10-16T04:28:02.959814+00:00",
-  "session_id": 85108,
-  "exit_code": 143,
-  "agent_requested_termination": false,
-  "reason": "Unexpected SIGTERM; cause not established. Saved artifacts retained; no completed cohort or strength conclusion.",
-  "resume_requires_coordination": true
-}

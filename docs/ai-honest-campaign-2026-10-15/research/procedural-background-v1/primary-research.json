@@ -1,8 +1,0 @@
-{
-  "title": "Statistical applications of the Poisson-Binomial and conditional Bernoulli distributions",
-  "authors": "Sean X.Chen and Jun S.Liu",
-  "journal": "Statistica Sinica7(1997):875\u2013892",
-  "url": "https://www3.stat.sinica.edu.tw/statistica/oldpdf/A7n44.pdf",
-  "verified": "Primary journal-hosted18-page PDF read with web tool2026-10-16.",
-  "application": "Conditional Bernoulli sampling fixes the chosen subset size and assigns mass proportional to a product of positive weights. Its elementary-symmetric normalization admits an O(Nk) dynamic program. We use this distribution to marginalize residual Bomb subsets; source geometry, row odds and mobile-rank assumptions are separate modeling choices. No exact-original-generator or Stratego strength result is implied."
-}

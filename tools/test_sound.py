@@ -250,7 +250,7 @@ def main():
                     drag(session, *move, wait=400)
                 else:
                     session.emu.advance(400)
-                assert value(session, 'sound_music_bank') == (0 if outcome == 'DRAW' else songs[outcome])
+                assert value(session, 'sound_music_bank') == (0 if outcome == 'DRAW' else songs[outcome]), (key, outcome, value(session, 'sound_music_bank'), text(session, 9), text(session, 42, 20, 40))
                 session.emu.advance(500)
                 assert not sounding(registers(session)), f'{outcome}: result did not fall silent'
                 choose(session, '2')

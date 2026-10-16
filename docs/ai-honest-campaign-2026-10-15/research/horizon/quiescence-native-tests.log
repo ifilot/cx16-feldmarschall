@@ -1,9 +1,0 @@
-test_deep_request_respects_fixed_public_trajectory_capacity (test_campaign_quiescence.PolicyQuiescence.test_deep_request_respects_fixed_public_trajectory_capacity) ... ok
-test_leaf_opponent_policy_is_invariant_to_hidden_enemy_rank_swap (test_campaign_quiescence.PolicyQuiescence.test_leaf_opponent_policy_is_invariant_to_hidden_enemy_rank_swap) ... ok
-test_quiet_leaf_does_not_apply_extra_quiet_move (test_campaign_quiescence.PolicyQuiescence.test_quiet_leaf_does_not_apply_extra_quiet_move) ... ok
-test_transient_capture_is_evaluated_after_masked_recapture (test_campaign_quiescence.PolicyQuiescence.test_transient_capture_is_evaluated_after_masked_recapture) ... ok
-
-----------------------------------------------------------------------
-Ran 4 tests in 5.122s
-
-OK

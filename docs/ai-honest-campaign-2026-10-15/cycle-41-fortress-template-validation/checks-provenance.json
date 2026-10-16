@@ -1,6 +1,0 @@
-{
-  "source": "cycle-27-fortress-template-combination/checks.log",
-  "same_frozen_policy_ids_and_archives": true,
-  "no_new_runtime_or_model": true,
-  "scope": "Reuse pre-screen mechanical checks for the exact unchanged combination; independent validation concerns new match seeds only."
-}

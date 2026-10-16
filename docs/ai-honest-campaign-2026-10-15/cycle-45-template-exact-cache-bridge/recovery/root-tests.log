@@ -1,8 +1,0 @@
-test_complete_ids_and_rotation (test_campaign_resume_missing.RecoveryScheduleTests.test_complete_ids_and_rotation) ... ok
-test_malformed_frozen_schedule_rejected (test_campaign_resume_missing.RecoveryScheduleTests.test_malformed_frozen_schedule_rejected) ... ok
-test_privileged_owner_and_changed_owner_rejected (test_campaign_resume_missing.RecoveryScheduleTests.test_privileged_owner_and_changed_owner_rejected) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.046s
-
-OK

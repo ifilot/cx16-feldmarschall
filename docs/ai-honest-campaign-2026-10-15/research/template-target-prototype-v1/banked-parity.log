@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/test_ai_student_banked.py", line 105, in <module>
-    if __name__=='__main__':main()
-                            ^^^^^^
-  File "/mnt/c/PROGRAMMING/CX16/cx16-feldmarschall/tools/test_ai_student_banked.py", line 65, in main
-    assert got==expected,(turn,army,got,expected)
-           ^^^^^^^^^^^^^
-AssertionError: (8, False, (68, 58), (61, 51))

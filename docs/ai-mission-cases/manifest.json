@@ -1,9 +1,0 @@
-{
-  "schema": 1,
-  "cases": 18,
-  "source_corpus": "/mnt/d/PROGRAMMING/CX16/cx16-feldmarschall/docs/ai-diagnostics/positions-20261014.zip",
-  "source_corpus_sha256": "dc3082d56618570aeeab09028c215f89200785b33e1e985b52f2d712143e3200",
-  "cases_sha256": "57595de6d9caee78f3e8adec6c1df99e8e9c4e211d27fc66037b5c41c4b90503",
-  "analysis_source_sha256": "8f500dbffb6a416fb1f4ac3ade534b196548f21c3cf91afdc2dab86828d8052d",
-  "scope": "Diagnostic development set. Excluded from strength claims; analysis contains no referee ranks, enemy initial deployment or oracle evidence."
-}
