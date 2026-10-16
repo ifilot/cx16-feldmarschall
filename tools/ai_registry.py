@@ -285,11 +285,21 @@ def build_native_beliefs(source, directory, executable, policy):
             entrypoint = 'new_campaign_objectives_bot.py'
             (directory/entrypoint).write_bytes((source/'tools'/entrypoint).read_bytes())
             runtime.append(entrypoint)
+        if '--belief-regime-reset' in policy.get('driver_args', []):
+            if len(policy.get('driver_args', [])) != 1 or policy.get('procedural_belief_model'):
+                raise ValueError('Isolate belief-regime reset from other template experiments')
+            entrypoint = 'new_campaign_regime_bot.py'
+            (directory/entrypoint).write_bytes((source/'tools'/entrypoint).read_bytes())
+            runtime.append(entrypoint)
         if '--missed-background-captures' in policy.get('driver_args', []):
             if len(policy.get('driver_args', [])) != 1 or policy.get('procedural_belief_model'):
                 raise ValueError('Isolate missed-capture inference from other template experiments')
-            entrypoint = 'new_campaign_information_background.py'
-            for name in (entrypoint, 'new_campaign_information.py'):
+            protection = policy.get('missed_capture_protection', 'before-source-vacates-v1')
+            if protection not in ('before-source-vacates-v1', 'after-source-vacates-v2'):
+                raise ValueError('Unknown missed-capture protection model')
+            entrypoint = ('new_campaign_information_background_v2.py'
+                          if protection == 'after-source-vacates-v2' else 'new_campaign_information_background.py')
+            for name in dict.fromkeys((entrypoint, 'new_campaign_information_background.py', 'new_campaign_information.py')):
                 (directory/name).write_bytes((source/'tools'/name).read_bytes())
                 runtime.append(name)
         if '--mobile-captures' in policy.get('driver_args', []):

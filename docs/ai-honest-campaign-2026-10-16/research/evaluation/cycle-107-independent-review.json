@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "cycle": 107,
+  "manifest_files_verified": 20,
+  "attempts": 192,
+  "unscored_errors": 0,
+  "all_initial_armies_seeds_game_ids_matched": true,
+  "immutable_policy_and_honest_capability_checks": true,
+  "frozen_v2_source_vacancy_correction_verified": true,
+  "all_games_independently_python_replayed": 192,
+  "native_all_state_evidence_verified": 192,
+  "identical_trajectories": 87,
+  "first_different_move_games": 9,
+  "same_outcome_despite_different_moves": 6,
+  "paired_score_directions": {
+    "positive": 2,
+    "negative": 1,
+    "tied": 45,
+    "unscored_error_pair": 0
+  },
+  "complete_case_effect": 0.010416666666666666,
+  "cohort": "frozen development partition only; validation splits not run by this study",
+  "conclusion": "No established honest-opponent gain, regression or equivalence. Single speculative missed-capture likelihood is a soft opponent model; hidden rank is not logically inferred. V2 corrects source-vacancy geometry, not the fundamental rationality assumption."
+}

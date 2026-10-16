@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "cycle": 109,
+  "manifest_files_verified": 20,
+  "attempts": 192,
+  "unscored_errors": 0,
+  "all_initial_armies_seeds_and_game_ids_matched": true,
+  "immutable_policy_and_honest_capability_checks": true,
+  "independent_frozen_archive_runtime_rebuild": true,
+  "first_different_move_games": 2,
+  "paired_score_directions": {
+    "positive": 0,
+    "negative": 1,
+    "tied": 47
+  },
+  "validation_partitions_played": false,
+  "cx16_fit_claim": false,
+  "source_manifest_sha256": "dec14fd19103130892d426a0abb66f11a27b9e2d28546d3cae113c477c8ec11d",
+  "conclusion": "No established gain or equivalence. Only one paired score worsened; sparse bootstrap endpoint at zero does not establish a stable generality regression."
+}

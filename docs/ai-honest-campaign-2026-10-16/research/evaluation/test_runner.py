@@ -61,5 +61,16 @@ class RunnerContracts(unittest.TestCase):
         self.assertIn('honest; development corpus',text)
         self.assertIn('1 / 2 / 1 | 50.0% | 3',text)
 
+    def test_overview_retains_rejected_research_without_inventing_scores(self):
+        research=self.base/'research';research.mkdir()
+        runner.write(research/'hypotheses.json',dict(hypotheses=[dict(
+            title='An inert mechanism',status='rejected preflight',
+            result='No eligible decisions; no strength games.',evidence=['research/check.json'])]))
+        runner.overview()
+        text=(self.base/'OVERVIEW.md').read_text()
+        self.assertIn('An inert mechanism',text)
+        self.assertIn('rejected preflight',text)
+        self.assertIn('supply no DOS score',text)
+
 
 if __name__=='__main__':unittest.main()

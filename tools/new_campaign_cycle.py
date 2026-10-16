@@ -54,6 +54,14 @@ def overview():
             details.append(f"- {name}: {metric['mean']*100:+.2f} points; 95% paired interval [{lo*100:+.2f}, {hi*100:+.2f}].")
         if (directory/'CONCLUSION.md').exists():
             details += ['[Interpretation]('+directory.name+'/CONCLUSION.md).']
+    hypotheses_path=BASE/'research/hypotheses.json'
+    if hypotheses_path.exists():
+        research=json.loads(hypotheses_path.read_text())
+        details += ['', '**Additional hypotheses evaluated before tournaments**', '',
+                    'These mechanism and incidence checks supply no DOS score. Rejected preflights remain visible.','']
+        for item in research['hypotheses']:
+            details += [f"- **{item['title']}** ({item['status']}): {item['result']} "
+                        +' '.join(f"[Evidence {i+1}]({source})." for i,source in enumerate(item['evidence']))]
     BASE.mkdir(parents=True,exist_ok=True)
     (BASE/'OVERVIEW.md').write_text('\n'.join(lines+details)+'\n')
 
