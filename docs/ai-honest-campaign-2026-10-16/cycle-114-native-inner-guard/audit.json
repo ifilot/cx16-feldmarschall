@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 119,
+  "attempts": 512,
+  "errors_preserved_unscored": 31,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 2,
+  "exact_rebuild_runtime_sha256": {
+    "student-fortress-inner-guard-v1-normal": {
+      "engine": "3c319225dcdab742484eb8f2101775655c7db7ff300aaf43514bf7a7cf7a25d7"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    6
+  ],
+  "test_skip_summaries": []
+}

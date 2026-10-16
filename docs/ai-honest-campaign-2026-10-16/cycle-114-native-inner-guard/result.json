@@ -1,0 +1,120 @@
+{
+  "cycle": 114,
+  "hypotheses": [
+    "Does retaining a Sergeant behind the Fortress inner Bomb entrances improve the ordinary native AI without source-informed enemy inference? This tests whether the deployment idea is useful independently of the stronger desktop prior."
+  ],
+  "opponent": "msdos-1990-v2-normal",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "standings": {
+    "student-fortress-deployment-v1-normal": {
+      "wins": 47,
+      "draws": 20,
+      "losses": 174,
+      "score": 0.23651452282157676,
+      "errors": 15
+    },
+    "student-fortress-inner-guard-v1-normal": {
+      "wins": 42,
+      "draws": 30,
+      "losses": 168,
+      "score": 0.2375,
+      "errors": 16
+    }
+  },
+  "execution_seconds": {
+    "student-fortress-deployment-v1-normal": 260.1305212429943,
+    "student-fortress-inner-guard-v1-normal": 176.78031478300545
+  },
+  "comparisons": {
+    "student-fortress-inner-guard-v1-normal minus student-fortress-deployment-v1-normal": {
+      "complete_pairs": 102,
+      "pairs_by_family": {
+        "original-dos": 102
+      },
+      "metrics": {
+        "score": {
+          "mean": -0.0024509803921568627,
+          "interval_95": [
+            -0.0661764705882353,
+            0.061274509803921566
+          ],
+          "interval_98_3333": [
+            -0.08088235294117647,
+            0.07352941176470588
+          ]
+        }
+      }
+    }
+  },
+  "attempts": 512,
+  "error_sensitivity": {
+    "student-fortress-inner-guard-v1-normal minus student-fortress-deployment-v1-normal": {
+      "complete_case_direction_diagnostic": {
+        "positive_pairs": 22,
+        "negative_pairs": 21,
+        "zero_pairs": 59,
+        "non_tied_pairs": 43,
+        "exact_two_sided_binomial_sign_p": 1.0,
+        "interpretation": "Sign symmetry diagnostic on complete-case pair directions; ties ignored. Not a test of the mean effect, not adjusted for campaign multiple comparisons or selection."
+      },
+      "planned_pairs": 128,
+      "error_games_a": 16,
+      "error_games_b": 15,
+      "pairs_with_any_error": 26,
+      "arms": {
+        "a": {
+          "attempted_games": 256,
+          "error_games": 16,
+          "scored_games": 240,
+          "wins": 42,
+          "draws": 30,
+          "losses": 168,
+          "official_scored_score": 0.2375,
+          "all_attempt_score_bounds": [
+            0.22265625,
+            0.28515625
+          ]
+        },
+        "b": {
+          "attempted_games": 256,
+          "error_games": 15,
+          "scored_games": 241,
+          "wins": 47,
+          "draws": 20,
+          "losses": 174,
+          "official_scored_score": 0.23651452282157676,
+          "all_attempt_score_bounds": [
+            0.22265625,
+            0.28125
+          ]
+        }
+      },
+      "paired_cohort_effect_bounds": [
+        -0.05859375,
+        0.0625
+      ],
+      "complete_case_pairs": 102,
+      "complete_case_paired_effect": -0.0024509803921568627
+    }
+  },
+  "errors": 31,
+  "production": "Unchanged. Campaign screening evidence, not a promotion decision.",
+  "verified_games": 512,
+  "family_standings": {
+    "student-fortress-deployment-v1-normal": {
+      "original-dos": {
+        "student-fortress-deployment-v1-normal": 0.23651452282157676,
+        "msdos-1990-v2-normal": 0.7634854771784232
+      }
+    },
+    "student-fortress-inner-guard-v1-normal": {
+      "original-dos": {
+        "student-fortress-inner-guard-v1-normal": 0.2375,
+        "msdos-1990-v2-normal": 0.7625
+      }
+    }
+  }
+}

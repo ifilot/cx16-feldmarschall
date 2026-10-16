@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "cycle": 114,
+  "attempts": 512,
+  "errors_preserved_unscored": 31,
+  "full_independent_python_replays": 512,
+  "native_all_state_report_hashes_checked": 512,
+  "own_deployment_streams_reproduced": 2,
+  "original_dos_armies_reproduced": 512,
+  "immutable_honest_policy_checks": true,
+  "same_root_trajectory_games": 0,
+  "placement_treatment_games_excluded_from_same_root_claims": 256,
+  "own_complete_pairs": 102,
+  "independent_integer_score_mean": -0.0024509803921568627,
+  "manifest_files_verified": 24,
+  "manifest_sha256": "a75f2331a34ad3587fe033bec88a23db366aa6f748cab8f05e55f9bacdbb2cb7"
+}
