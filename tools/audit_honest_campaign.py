@@ -7,9 +7,11 @@ claim the timed campaign is finished while cohorts remain running or queued.
 import argparse
 import hashlib
 import json
+from datetime import datetime
 from pathlib import Path
 
-from ai_registry import ROOT, get_policy
+from ai_registry import ROOT, get_policy, receives_opponent_setup
+from information_strategy_cycle import validate_metadata
 from tournament_store import Tournament
 
 BASE = ROOT / 'docs/ai-honest-campaign-2026-10-15'
@@ -78,6 +80,12 @@ def audit():
                 pending.append(dict(directory=directory.name, saved=saved))
             continue
         result = json.loads(result_path.read_text())
+        plan = json.loads((directory / 'plan.json').read_text())
+        registration_path = directory / ('freeze.json' if result.get('independent_honest_heads') else 'registration.json')
+        registration = json.loads(registration_path.read_text())
+        assert registration['plan_sha256'] == digest(directory / 'plan.json')
+        registered_epoch = (registration['epoch'] if 'epoch' in registration else
+                            datetime.fromisoformat(registration['prepared_utc']).timestamp())
         receipt = json.loads((directory / 'audit.json').read_text())
         assert receipt['passed']
         assert result['attempts'] == result['verified_games'] == receipt['attempts']
@@ -96,6 +104,10 @@ def audit():
         frozen = json.loads((directory / 'frozen-policies.json').read_text())
         for identity, spec in frozen.items():
             assert get_policy(identity) == spec, identity
+            if spec.get('driver') != 'msdos1990':
+                assert not receives_opponent_setup(spec), identity
+                assert 'AI_DIAGNOSTIC_TRUTH' not in spec.get('defines', []), identity
+                assert '--diagnostic-truth' not in spec.get('driver_args', []), identity
             if 'archive' in spec:
                 archives[spec['archive']] = spec['source_sha256']
         attempts = errors = reports = 0
@@ -113,8 +125,11 @@ def audit():
             verification = report['verification']
             assert verification['artifacts_verified']
             assert count == verification['python_replayed'] == verification['native_replayed_all_states']
+            validate_metadata(saved, report['match'], plan, frozen)
             with Tournament(saved) as tournament:
-                assert tournament.metadata()['status'] == 'complete'
+                metadata = tournament.metadata()
+                assert metadata['status'] == 'complete' and metadata['rules'] == 'classic'
+                assert datetime.fromisoformat(metadata['created_utc']).timestamp() >= registered_epoch
                 assert len(tournament.games()) == count
             capture = path.with_suffix('').with_suffix('.png')
             assert capture.read_bytes().startswith(b'\x89PNG\r\n\x1a\n'), str(capture)
