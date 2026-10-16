@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "previous_policies_unchanged": 94,
+  "attempts": 2400,
+  "errors_preserved_unscored": 168,
+  "all_games_python_native_replayed": true,
+  "qt6_captures": 6,
+  "exact_rebuild_runtime_sha256": {
+    "student-validated-counts-v1-normal": {
+      "engine": "42427d57c3209d7abd21ee71a9080a38a287dba39cb39ef4cdcf617927e0f8c7",
+      "observer": "d0a9d2ae59c6e86596a94c725edf398b23af06f1a98536ae27f0cece5c396860",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "joint-flag-bomb-beliefs-v1.json": "8320eeb736e7ce8bcd2084ab0617ed01081cbc38c4bca865f70e36decdf0a1e8"
+    },
+    "student-template-flag-bomb-v1-normal": {
+      "engine": "6ee4707280ad715d52b3a52c4256eed228a289fd2472e8bea0beb995126c0a89",
+      "observer": "3f54396fd851558fbe211117c946efb3ed332aa71588bb4ebdc26c63ec1ef6fb",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_native_template.py": "5e50ddcc182ef92345db60894bdac3fd2b67c68acc9eda7f8b6eebeb43662d98",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c"
+    },
+    "teacher-validated-uniform-v1-normal": {
+      "engine": "6c57d00d9c4e69aa7ada2fd493926351905b6fe7df7fa2f830db562202d8ee69",
+      "observer": "3689c1ca7eecb13e72695b92638fe3f0b146b4e4ae2ed2535138d2cd4bb0f1e1",
+      "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+      "teacher_bot.py": "45fdd261282bd20f428199fe84de02801de06d50873dbf9c9cf6db6c1136bfa3",
+      "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_sampling.py": "f2c5f6e376c7198a1062fd41e5d6a3e88e9f6470f54d90c86b4d6b990b9be47d"
+    },
+    "teacher-template-opening-v1-normal": {
+      "engine": "1ac9ea29389473a481b2e85bff153892a84cd6b1b88ed253251d9a81037a6a9b",
+      "observer": "f70fd5b62d9dc5723c986c13219819acbecca50b9e7931d3d7de401fd6374c25",
+      "teacher": "830b7fe4aef046d36c99a719833de4ce36a213567205406c5223b8c8ba4e50ad",
+      "teacher_bot.py": "45fdd261282bd20f428199fe84de02801de06d50873dbf9c9cf6db6c1136bfa3",
+      "train_ai_student.py": "776ab5a19ec28738c44170e1de687f697a3e44190636c7c6ce7148ecb82941ce",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388"
+    }
+  },
+  "production_unchanged": true,
+  "test_counts": [
+    3
+  ],
+  "test_skip_summaries": []
+}

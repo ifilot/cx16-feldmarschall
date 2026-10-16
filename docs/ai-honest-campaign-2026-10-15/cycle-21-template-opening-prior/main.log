@@ -1,0 +1,12 @@
+Running student-validated-deployment-v1-normal
+Verified student-validated-deployment-v1-normal {'wins': 40, 'draws': 24, 'losses': 306, 'score': 0.14054054054054055}
+Running student-validated-counts-v1-normal
+Verified student-validated-counts-v1-normal {'wins': 40, 'draws': 30, 'losses': 300, 'score': 0.14864864864864866}
+Running student-template-flag-bomb-v1-normal
+Verified student-template-flag-bomb-v1-normal {'wins': 110, 'draws': 74, 'losses': 203, 'score': 0.3798449612403101}
+Running teacher-validated-deployment-v1-normal
+Verified teacher-validated-deployment-v1-normal {'wins': 27, 'draws': 12, 'losses': 321, 'score': 0.09166666666666666}
+Running teacher-validated-uniform-v1-normal
+Verified teacher-validated-uniform-v1-normal {'wins': 22, 'draws': 13, 'losses': 327, 'score': 0.0787292817679558}
+Running teacher-template-opening-v1-normal
+Verified teacher-template-opening-v1-normal {'wins': 75, 'draws': 50, 'losses': 258, 'score': 0.26109660574412535}

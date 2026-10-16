@@ -49,6 +49,12 @@ Scores count wins plus half of draws; original DOS errors are excluded. Compare 
 | 19 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 58 / 39 / 265 | 21.4% | 38 |
 | 19 | Own setup, original DOS, rotated | teacher-context-v1-normal | 20 / 12 / 349 | 6.8% | 19 |
 | 19 | Own setup, original DOS, rotated | teacher-validated-deployment-v1-normal | 43 / 15 / 298 | 14.2% | 44 |
+| 21 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 40 / 24 / 306 | 14.1% | 30 |
+| 21 | Own setup, original DOS, rotated | student-validated-counts-v1-normal | 40 / 30 / 300 | 14.9% | 30 |
+| 21 | Own setup, original DOS, rotated | student-template-flag-bomb-v1-normal | 110 / 74 / 203 | 38.0% | 13 |
+| 21 | Own setup, original DOS, rotated | teacher-validated-deployment-v1-normal | 27 / 12 / 321 | 9.2% | 40 |
+| 21 | Own setup, original DOS, rotated | teacher-validated-uniform-v1-normal | 22 / 13 / 327 | 7.9% | 38 |
+| 21 | Own setup, original DOS, rotated | teacher-template-opening-v1-normal | 75 / 50 / 258 | 26.1% | 17 |
 | 22 | Own setup, original DOS, rotated | student-validated-deployment-v1-normal | 57 / 32 / 279 | 19.8% | 32 |
 | 22 | Own setup, original DOS, rotated | student-fortress-deployment-v1-normal | 78 / 28 / 271 | 24.4% | 23 |
 | 22 | Own setup, original DOS, rotated | student-double-bomb-shell-v1-normal | 60 / 22 / 310 | 18.1% | 8 |
@@ -171,6 +177,22 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - teacher-validated-deployment-v1-normal minus teacher-context-v1-normal: +6.1 percentage points; 95% paired interval [+1.7, +10.7].
 
 
+**Cycle 21 hypotheses:** Recognize possible enemy formations from public evidence using an honest source-informed opening prior.; Compare native Flag/Bomb objectives against a count-conditioning control, and correlated teacher worlds against an unweighted uniform control.
+
+Evidence: [cycle-21-template-opening-prior](cycle-21-template-opening-prior/result.json).
+
+Policy-owned setups: end-to-end deployment and play; own armies intentionally differ across policies.
+
+Both armies rotate 180 degrees across colors, preserving DOS local deployment. Original deployment machine code runs; the move adapter independently reseeds its RNG.
+
+- student-template-flag-bomb-v1-normal minus student-validated-counts-v1-normal: +23.9 percentage points; 95% paired interval [+17.7, +30.2].
+- student-validated-counts-v1-normal minus student-validated-deployment-v1-normal: +0.8 percentage points; 95% paired interval [-2.4, +3.9].
+- student-template-flag-bomb-v1-normal minus student-validated-deployment-v1-normal: +23.6 percentage points; 95% paired interval [+18.0, +29.2].
+- teacher-template-opening-v1-normal minus teacher-validated-uniform-v1-normal: +18.2 percentage points; 95% paired interval [+12.9, +23.6].
+- teacher-validated-uniform-v1-normal minus teacher-validated-deployment-v1-normal: -0.5 percentage points; 95% paired interval [-3.6, +2.6].
+- teacher-template-opening-v1-normal minus teacher-validated-deployment-v1-normal: +17.0 percentage points; 95% paired interval [+11.4, +22.4].
+
+
 **Cycle 22 hypotheses:** Requiring a surviving enemy Miner to clear two distinct unavoidable Bomb barriers can improve own Flag defence against an opponent that knows its location.; Separate the three-swap deployment package from fixing Fortress instead of the existing validated mixture.
 
 Evidence: [cycle-22-double-bomb-shell](cycle-22-double-bomb-shell/result.json).
@@ -219,6 +241,8 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Motion conditioned on our Spy location: Historical model selection chose zero Spy-factor strength; retained as a rejected prediction hypothesis, without a separate playing-strength claim. [Evidence](research/inverse-objectives/README.md).
 - Passive opening-action inference: A fixed first-move study added no information beyond public rank facts; controlled random own play later showed predictive information. Under actual frozen native play, the extra Flag log-score gain shrank to 0.010–0.043 bits over four opening decisions, with declining prefix coverage and procedural-army overconfidence. Runtime lookup deferred; no strength tournament. [Evidence](research/template-action-identification-v3/proposal-and-conclusion.json).
 - Converting early Flag inference: In completed native-template screening games, 324 early high-confidence Flag predictions were correct, yet 148 lost and 67 drew. Of 197 own-Flag losses, 191 final attackers were Miners; no missed final-turn public survival alternative was found. The existing two-turn interceptor could demote the saved quiet move at 11 earlier roots in ten losses; this is opportunity coverage, not saved games. No new policy or strength claim. [Evidence](research/template-conversion-screen/README.md).
+- Source-structured procedural background: An independently heldout prediction study reduced Flag log loss by 0.250 nats while preserving the fixed 80% template mass. One procedural army remains confidently wrong. Predictive gate passed; this does not establish playing strength. [Evidence](research/procedural-background-v1/CONCLUSION.json).
+- Cheap procedural back-row control: A post-hoc ablation recovered nearly the same Flag prediction gain using only the source back-row constraint: -0.246 versus -0.250 nats. The richer model improved secondary Bomb prediction. Both fixed alternatives need fresh strength tests; reused prediction data do not confirm the new control. [Evidence](research/procedural-backrow-ablation/README.md).
 
 
 **Target cost evidence:**
@@ -237,7 +261,6 @@ Both armies rotate 180 degrees across colors, preserving DOS local deployment. O
 - Cycle 17: The frozen learned Flag-row Teacher improves against the honest Context Teacher.; The frozen joint Flag/Bomb Teacher improves against the honest Context Teacher.; The frozen native exact-contact policy improves against the honest native guard. 4,200 planned attempts; no completed strength result. [Frozen plan](cycle-17-honest-head-validation/plan.json).
 - Cycle 18: Open an additional profitable front by reallocating one redundant attacker while preserving existing target primaries. 1,120 planned attempts; no completed strength result. [Frozen plan](cycle-18-target-assignment/plan.json).
 - Cycle 20: Improve honest hidden-mobile-rank prediction by conditioning public movements on our own known Flag location.; A mirrored own-Flag control distinguishes useful conditional geometry from evidence specific to the real target. 1,680 planned attempts; no completed strength result. [Frozen plan](cycle-20-own-objective-beliefs/plan.json).
-- Cycle 21: Recognize possible enemy formations from public evidence using an honest source-informed opening prior.; Compare native Flag/Bomb objectives against a count-conditioning control, and correlated teacher worlds against an unweighted uniform control. 2,400 planned attempts; no completed strength result. [Frozen plan](cycle-21-template-opening-prior/plan.json).
 - Cycle 24: Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-24-fortress-dos-validation/plan.json).
 - Cycle 25: Independently validate whether the unchanged Fortress-only formation improves over the validated formation mixture. 4,000 planned attempts; no completed strength result. [Frozen plan](cycle-25-fortress-honest-validation/plan.json).
 - Cycle 26: Independently validate the unchanged source-informed template Flag/Bomb prior against the same native move policy without external priors. 2,000 planned attempts; no completed strength result. [Frozen plan](cycle-26-template-native-validation/plan.json).
