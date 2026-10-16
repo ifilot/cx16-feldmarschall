@@ -1,0 +1,75 @@
+{
+  "cycle": 43,
+  "baseline": "student-template-flag-bomb-v1-normal",
+  "opponent": "msdos-1990-v2-normal",
+  "policies": [
+    "student-template-flag-bomb-v1-normal",
+    "student-template-public-forks-v1-normal"
+  ],
+  "new_policies": [
+    {
+      "id": "student-template-public-forks-v1-normal",
+      "name": "student-template-public-forks-v1-normal",
+      "description": "Bounded public quiet double threats with executable one-turn capture followthrough.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged honest opening-template Flag/Bomb posterior and native ranked search. Quiet moves only: a public double threat against disclosed mobile victims must have a positive short material-conversion certificate strictly exceeding the native common control. Universal count-feasible enemy public replies, one disclosed surviving friendly capture, universal second enemy replies. Fixed root material worth includes collateral losses and Flag/immobility counterwins. A transient exact-public-successor witness executes the certified fork-actor capture next turn; immediate Flag wins take priority. All candidate and control proofs share a20000enemy-outcome cap; incomplete proofs fall back. One native search per turn, no extra RNG; actual selection repairs native history. Python research prototype, no CX16 cost qualification.",
+      "information_model": "Own army, public revealed ranks/movement/captures/counts and source-informed population prior only. Proof branches use count-feasible hidden support without consulting actual enemy identities. No opponent setup, referee truth, deployment seed or private RNG.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-captures",
+        "--adjustment-scope",
+        "quiet-fork"
+      ]
+    }
+  ],
+  "seed": 2530001,
+  "rounds": 500,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "original-dos"
+  ],
+  "setup_mode": "policy-owned-rotated-v1",
+  "hypotheses": [
+    "A bounded public double threat with an executable capture response converts games better than the same native opening-inference policy without that tactical plan."
+  ],
+  "contrasts": [
+    [
+      "student-template-public-forks-v1-normal",
+      "student-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fresh fixed-sample exploratory single contrast with95%paired intervals and missing-error sensitivity. No tuning on these games and no promotion without fresh independent validation. Certifies bounded short material conversion, not game value or long-term Flag safety. Prototype has substantial eligible-root host overhead; not target ready. DOS and honest stress outcomes remain separate.",
+  "evidence": "research/quiet-fork-runtime-v1;38combined mechanical/integration tests,900frozen oldscope decisions and300public-history adapter decisions. Root frozen portable qualification required before games. Original preflight fixture metadata correction explicitly preserved."
+}

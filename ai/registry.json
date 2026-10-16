@@ -5591,6 +5591,52 @@
       "target_recipe_sha256": "749d6e63ccbc22212eb83830eb9a7727c78e0110d24fb4135618d535a53ffc4b",
       "archive": "ai/sources/6ff29ceca8ef8069b3de1198ff34aa8b4150d005edd36d658c979ce3444deea9.zip",
       "source_sha256": "6ff29ceca8ef8069b3de1198ff34aa8b4150d005edd36d658c979ce3444deea9"
+    },
+    {
+      "id": "student-template-public-forks-v1-normal",
+      "name": "student-template-public-forks-v1-normal",
+      "description": "Bounded public quiet double threats with executable one-turn capture followthrough.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE",
+        "AI_TRAINING"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged honest opening-template Flag/Bomb posterior and native ranked search. Quiet moves only: a public double threat against disclosed mobile victims must have a positive short material-conversion certificate strictly exceeding the native common control. Universal count-feasible enemy public replies, one disclosed surviving friendly capture, universal second enemy replies. Fixed root material worth includes collateral losses and Flag/immobility counterwins. A transient exact-public-successor witness executes the certified fork-actor capture next turn; immediate Flag wins take priority. All candidate and control proofs share a20000enemy-outcome cap; incomplete proofs fall back. One native search per turn, no extra RNG; actual selection repairs native history. Python research prototype, no CX16 cost qualification.",
+      "information_model": "Own army, public revealed ranks/movement/captures/counts and source-informed population prior only. Proof branches use count-feasible hidden support without consulting actual enemy identities. No opponent setup, referee truth, deployment seed or private RNG.",
+      "driver": "native-template",
+      "driver_args": [
+        "--mobile-captures",
+        "--adjustment-scope",
+        "quiet-fork"
+      ],
+      "archive": "ai/sources/abfdfbb559415e834108f9b942a752b0ade8090ead43b313e644167734bb89d3.zip",
+      "source_sha256": "abfdfbb559415e834108f9b942a752b0ade8090ead43b313e644167734bb89d3"
     }
   ]
 }

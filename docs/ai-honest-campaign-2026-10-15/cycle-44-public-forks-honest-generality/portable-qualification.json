@@ -1,0 +1,75 @@
+[
+  {
+    "policy": "student-template-public-forks-v1-normal",
+    "source_sha256": "abfdfbb559415e834108f9b942a752b0ade8090ead43b313e644167734bb89d3",
+    "receipt": {
+      "policy": {
+        "id": "student-template-public-forks-v1-normal",
+        "name": "student-template-public-forks-v1-normal",
+        "description": "Bounded public quiet double threats with executable one-turn capture followthrough.",
+        "sources": [
+          "src/native/engine.c",
+          "src/core/pieces.c",
+          "src/core/board.c",
+          "src/core/rules.c",
+          "src/core/setup.c",
+          "src/core/random.c",
+          "src/core/ai_deploy.c",
+          "src/core/ai.c",
+          "src/core/ai_level.c",
+          "src/core/ai_mission.c",
+          "src/core/ai_memory.c",
+          "src/core/ai_student.c"
+        ],
+        "defines": [
+          "AI_MISSIONS",
+          "AI_MEMORY",
+          "AI_STUDENT",
+          "AI_STUDENT_V2",
+          "AI_STUDENT_PRODUCTION",
+          "AI_STUDENT_COOP_GUARD",
+          "AI_POLICY_DEPLOYMENT",
+          "AI_BELIEF_PRIORS",
+          "AI_TEST",
+          "AI_DIAGNOSTICS",
+          "AI_TRACE",
+          "AI_TRAINING"
+        ],
+        "difficulty": "normal",
+        "status": "experimental",
+        "include_dirs": [],
+        "model": "Unchanged honest opening-template Flag/Bomb posterior and native ranked search. Quiet moves only: a public double threat against disclosed mobile victims must have a positive short material-conversion certificate strictly exceeding the native common control. Universal count-feasible enemy public replies, one disclosed surviving friendly capture, universal second enemy replies. Fixed root material worth includes collateral losses and Flag/immobility counterwins. A transient exact-public-successor witness executes the certified fork-actor capture next turn; immediate Flag wins take priority. All candidate and control proofs share a20000enemy-outcome cap; incomplete proofs fall back. One native search per turn, no extra RNG; actual selection repairs native history. Python research prototype, no CX16 cost qualification.",
+        "information_model": "Own army, public revealed ranks/movement/captures/counts and source-informed population prior only. Proof branches use count-feasible hidden support without consulting actual enemy identities. No opponent setup, referee truth, deployment seed or private RNG.",
+        "driver": "native-template",
+        "driver_args": [
+          "--mobile-captures",
+          "--adjustment-scope",
+          "quiet-fork"
+        ],
+        "archive": "ai/sources/abfdfbb559415e834108f9b942a752b0ade8090ead43b313e644167734bb89d3.zip",
+        "source_sha256": "abfdfbb559415e834108f9b942a752b0ade8090ead43b313e644167734bb89d3"
+      },
+      "recipe_sha256": "2e15f3b603c814fb0dbd9de7009ef0b79ff1f8672b8141ef54f1fc094a155db0",
+      "executable_sha256": "2c89000ffb45a28f1518bd54045db85dec08594abf402e47a339cf4b699411fd",
+      "runtime_sha256": {
+        "engine": "2c89000ffb45a28f1518bd54045db85dec08594abf402e47a339cf4b699411fd",
+        "observer": "cd493e42a0bc6d97277b83005b0dc36515a54d34cd3446bcf3a26618e1926594",
+        "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+        "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+        "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+        "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+        "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+        "campaign_native_template.py": "c7d7f448d1a7b9c840ed990caad8e0e2c02d6318da489351d1e12579c90810aa",
+        "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+        "campaign_native_mobile.py": "0b2d4cf7fe8c3899f0559c529be00eb9129862515d7885e402e4669351a5aec3",
+        "campaign_mobile_capture.py": "3222678e4e2ec8beef63e5cacf4df4a4f638db0687541e86fc83986be86a71cf"
+      },
+      "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    },
+    "public_history_decisions_both_sides": 300,
+    "reference_overrides": 1,
+    "portable_outside_checkout": true,
+    "setup_moves_public_state_and_actual_history_parity": true,
+    "scope": "Portable integration, no counterfactual strength claim."
+  }
+]

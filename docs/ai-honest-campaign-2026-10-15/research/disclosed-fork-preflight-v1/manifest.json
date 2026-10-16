@@ -32,5 +32,6 @@
   "test_certificate.py": "5d5fc2c6a89722af2fb7fffea922cb8bc0053163ec641234ff742a7a6aac9f32",
   "tests.log": "75939d1cf6cac50910bac0564d12e18bb239ac6b9f55a8ecaf399bace3244712",
   "unique-audit.log": "0fe6fd0a25479592d082d5ce590eb95c5aa92fc27a8f74547af3d0c2fe8a02da",
-  "unique-result.json": "4d390a5162667b009bce9ac47b1b09bb31236cd7b9057a806d95b188343af0a9"
+  "unique-result.json": "4d390a5162667b009bce9ac47b1b09bb31236cd7b9057a806d95b188343af0a9",
+  "FIXTURE-CORRECTION-NOTE.md": "dfd20b226129f22b8956e2a33a6c53596e57228cae2fd2ad7aa5775b9b6e5a23"
 }

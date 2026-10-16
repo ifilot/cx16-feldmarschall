@@ -1,0 +1,47 @@
+{
+  "kind": "saved-runtime-evidence-integrity",
+  "new_proof_queries": 0,
+  "all335_counts_reports_plans_identical_after_metadata_fix": true,
+  "all335_inputs_counts_reports_plans_identical_after_input_guard": true,
+  "corrected_metadata_fields": {
+    "lost": 25,
+    "shuttle": 182
+  },
+  "all335_inventory_and_recorded_public_shuttles_valid": true,
+  "witness_states_verified": 9429,
+  "all_selected_plans_cover_every_public_enemy_outcome": true,
+  "override_games": {
+    "35": 1,
+    "42": 1,
+    "85": 1,
+    "90": 1,
+    "109": 2,
+    "130": 1,
+    "149": 2,
+    "159": 1,
+    "165": 2,
+    "282": 1,
+    "290": 2,
+    "329": 83,
+    "358": 2,
+    "371": 1
+  },
+  "distinct_public_comparisons": 20,
+  "largest_repeated_comparison": 82,
+  "timing_ms": {
+    "mean": 396.27220261809,
+    "median": 413.1130959940492,
+    "maximum": 1712.2861449970515
+  },
+  "enemy_outcome_attempts": {
+    "mean": 10325.355223880597,
+    "maximum": 20001,
+    "cap_note": "A cap reports attempted20001; only20000successors are yielded."
+  },
+  "sources": {
+    "docs/ai-honest-campaign-2026-10-15/research/quiet-fork-runtime-v1/verify-runtime-evidence.py": "5044efe23f7f7be3f2f9456846ea145ab462e17818fd8ed04c0ff23bdb9450b8",
+    "docs/ai-honest-campaign-2026-10-15/research/quiet-fork-runtime-v1/runtime-audit.json": "7f6ac4441fc7704cc83f8da76bba69bab4eacad2e90e705484901a0a01a578a9",
+    "docs/ai-honest-campaign-2026-10-15/research/quiet-fork-runtime-v1/full-public-proofs.json.gz": "3bf4eef9fa50ced013ef9d0bf22929948829553e303d6b7ca93a46d58d08a6d4",
+    "docs/ai-honest-campaign-2026-10-15/research/quiet-fork-runtime-v1/initial-input-aliasing/runtime-audit.json": "ea383e25321f25fa45fa40038de9672c8153e0e25bd32d17bb320bd67ed39bd1"
+  }
+}
