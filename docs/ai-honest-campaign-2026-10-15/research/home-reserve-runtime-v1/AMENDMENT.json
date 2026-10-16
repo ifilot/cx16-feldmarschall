@@ -1,0 +1,10 @@
+{
+  "status": "frozen before scope revision; no policy registered or games run",
+  "reason": "Isolate scheduling rather than add independent tactical-risk correction. Actor safety validates repair candidates only.",
+  "change": "Any quiet candidate with disclosed-actor-loss gets zero adjustment and cannot be a repair. Only remaining candidates with deadline-missed or multiple-routed-miners may be demoted below a safe schedule-preserving alternative.",
+  "prior_module_sha256": "f5d0fdd1343029b2997049ac7a72753eb8ee224d06dd8418f0b45de946a870e2",
+  "prior_audit": "initial-tactical-confound/benchmark.json",
+  "prior_selected_opportunities": 321,
+  "prior_actor_only_interventions": 33,
+  "model_parameters": "No geometry, rank capability, timing inequality, priors or score weights changed."
+}

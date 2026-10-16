@@ -1,0 +1,36 @@
+{
+  "cycle": 34,
+  "baseline": "student-template-flag-bomb-v1-normal",
+  "opponent": "student-guard-v1-normal",
+  "policies": [
+    "student-template-flag-bomb-v1-normal",
+    "student-template-home-interceptor-v1-normal"
+  ],
+  "new_policies": [],
+  "seed": 2440001,
+  "rounds": 40,
+  "jobs": 4,
+  "max_plies": 1000,
+  "backend": "openmp",
+  "families": [
+    "fortified",
+    "uniform",
+    "unguarded",
+    "forward",
+    "decoy",
+    "presets",
+    "broad-mixed"
+  ],
+  "setup_mode": "referee",
+  "hypotheses": [
+    "Retaining time to deploy a capable home interceptor against an already disclosed Miner converts more games than the same opening-inference policy without that scheduling correction."
+  ],
+  "contrasts": [
+    [
+      "student-template-home-interceptor-v1-normal",
+      "student-template-flag-bomb-v1-normal"
+    ]
+  ],
+  "analysis": "Fresh fixed-sample exploratory one-contrast screen. Exact algorithm and qualification frozen before games; no tuning on this cohort. Primary paired score comparison,95% interval and missing-error sensitivity; no promotion without fresh independent final validation. The filter holds other pieces stationary and does not guarantee global safety: hidden threats, future enemy coordination and offensive Flag races remain unmodeled. It is a desktop strategic prototype with no CX16 fit claim. All score changes concern failed quiet response schedules; actor safety only certifies alternatives, so there is no independent generic tactical-risk intervention. Honest guard stress tests are separate from DOS results.",
+  "evidence": "research/home-miner-interceptor-v1/CONCLUSION.md; research/home-reserve-runtime-v1/CONCLUSION.md. Screening-only293selected-action scheduling opportunities in51games, not savedgames or exact native-score replays. Twelve mechanical tests, four adapter tests,160zero-correctionhistory decisions and300activehistory decisions including6overrides qualify integration; no playing-strength result."
+}

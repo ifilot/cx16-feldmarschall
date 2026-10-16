@@ -1,0 +1,17 @@
+test_absent_route_after_candidate_is_success_not_failure (tools.test_campaign_home_reserve.HomeReserveTests.test_absent_route_after_candidate_is_success_not_failure) ... ok
+test_candidate_opening_second_miner_route_cannot_certify_schedule (tools.test_campaign_home_reserve.HomeReserveTests.test_candidate_opening_second_miner_route_cannot_certify_schedule) ... ok
+test_capture_scores_and_immediate_wins_are_preserved (tools.test_campaign_home_reserve.HomeReserveTests.test_capture_scores_and_immediate_wins_are_preserved) ... ok
+test_confirmed_unknown_mobile_flag_attack_bails_out (tools.test_campaign_home_reserve.HomeReserveTests.test_confirmed_unknown_mobile_flag_attack_bails_out) ... ok
+test_disclosed_attackers_reject_actor_and_guard_route (tools.test_campaign_home_reserve.HomeReserveTests.test_disclosed_attackers_reject_actor_and_guard_route) ... ok
+test_full_bad_line_survives_all_friendly_rescue_replies (tools.test_campaign_home_reserve.HomeReserveTests.test_full_bad_line_survives_all_friendly_rescue_replies) ... ok
+test_invalid_legal_move_and_nonfinite_score_rejected (tools.test_campaign_home_reserve.HomeReserveTests.test_invalid_legal_move_and_nonfinite_score_rejected) ... ok
+test_multiple_routed_miners_and_broken_screen_defer (tools.test_campaign_home_reserve.HomeReserveTests.test_multiple_routed_miners_and_broken_screen_defer) ... ok
+test_no_alternative_preserves_baseline (tools.test_campaign_home_reserve.HomeReserveTests.test_no_alternative_preserves_baseline) ... ok
+test_public_shuttle_applies_to_actor_guard_and_enemy_routes (tools.test_campaign_home_reserve.HomeReserveTests.test_public_shuttle_applies_to_actor_guard_and_enemy_routes) ... ok
+test_rotation_private_nibbles_and_input_immutability (tools.test_campaign_home_reserve.HomeReserveTests.test_rotation_private_nibbles_and_input_immutability) ... ok
+test_timely_deployment_changes_quiet_order_without_changing_preferred_scores (tools.test_campaign_home_reserve.HomeReserveTests.test_timely_deployment_changes_quiet_order_without_changing_preferred_scores) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.034s
+
+OK

@@ -279,6 +279,12 @@ def build_native_beliefs(source, directory, executable, policy):
         for name in (entrypoint, 'campaign_template_beliefs.py'):
             (directory/name).write_bytes((source/'tools'/name).read_bytes())
             runtime.append(name)
+        if '--home-interceptor' in policy.get('driver_args', []):
+            if 'AI_TRACE' not in policy.get('defines', []):
+                raise ValueError('Home interceptor requires scored native candidate traces')
+            for name in ('campaign_home_reserve.py','campaign_flag_guard.py'):
+                (directory/name).write_bytes((source/'tools'/name).read_bytes())
+                runtime.append(name)
         model = policy.get('procedural_belief_model')
         if model:
             if digest((source/model).read_bytes()) != policy['procedural_belief_model_sha256']:

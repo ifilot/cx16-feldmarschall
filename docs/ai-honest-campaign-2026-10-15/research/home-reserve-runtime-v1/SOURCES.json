@@ -1,0 +1,26 @@
+{
+  "tools/campaign_home_reserve.py": {
+    "bytes": 8713,
+    "sha256": "86884118bf9b0747432f6178399b515f9d49bdc72594a7a3e0bd2690d75aa919"
+  },
+  "tools/test_campaign_home_reserve.py": {
+    "bytes": 8703,
+    "sha256": "9a2b7d4ce2be76c539c7785d9024fcc9781425711daf8a531201bc3e19c23791"
+  },
+  "tools/test_home_reserve_adapter.py": {
+    "bytes": 2636,
+    "sha256": "3e68c4b4475f8aced61f5070431ea9502d90277f259b173c80979405818b9d2b"
+  },
+  "tools/campaign_flag_guard.py": {
+    "bytes": 7943,
+    "sha256": "d9eddff94c0957acd6e899671fefbed72f789ccff904fd6e8ac2fc9e3dc10fee"
+  },
+  "tools/feldmarschall.py": {
+    "bytes": 9639,
+    "sha256": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4"
+  },
+  "docs/ai-honest-campaign-2026-10-15/research/home-miner-interceptor-v1/result.json.gz": {
+    "bytes": 692613,
+    "sha256": "44be94759f1f20bea7ab1fa6d2a392d8726dc30d6ed80cfa3c8e14b38bd5c430"
+  }
+}

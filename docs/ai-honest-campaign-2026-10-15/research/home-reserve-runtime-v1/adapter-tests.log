@@ -1,0 +1,9 @@
+test_adapter_rejects_nonclassic_or_other_difficulties (tools.test_home_reserve_adapter.HomeAdapterTests.test_adapter_rejects_nonclassic_or_other_difficulties) ... ok
+test_missing_trace_fails_instead_of_silently_disabling_strategy (tools.test_home_reserve_adapter.HomeAdapterTests.test_missing_trace_fails_instead_of_silently_disabling_strategy) ... ok
+test_override_commits_actual_choice_once_without_a_second_search (tools.test_home_reserve_adapter.HomeAdapterTests.test_override_commits_actual_choice_once_without_a_second_search) ... ok
+test_valid_native_choice_preserves_tie_and_native_history (tools.test_home_reserve_adapter.HomeAdapterTests.test_valid_native_choice_preserves_tie_and_native_history) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+OK

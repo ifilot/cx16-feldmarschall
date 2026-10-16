@@ -1,0 +1,71 @@
+{
+  "policy": "student-template-home-interceptor-v1-normal",
+  "source_sha256": "f750f63abfc55fb21692c08badac9e7414e5890c3d2afbcc95e35f181684e369",
+  "receipt": {
+    "policy": {
+      "id": "student-template-home-interceptor-v1-normal",
+      "name": "student-template-home-interceptor-v1-normal",
+      "description": "Preserve an earlier public response schedule against one disclosed Miner while retaining the frozen opening prior.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged source-template Flag/Bomb prior plus public stationary-piece home-interception schedule. Intact two-Bomb corner screen and exactly one routed disclosed Miner at least3actions away. After each quiet candidate require guarddistance+2<=MinerFlagdistance, or no invasion route. Certify alternatives against disclosed actor/guard threats; demote only failed schedules below the best certified quiet move. Captures, immediatewins, currenturgentFlagdefense and all rawschedule-feasible scores remain unchanged. No search/world additions or persistent garrison role.",
+      "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--home-interceptor"
+      ],
+      "archive": "ai/sources/f750f63abfc55fb21692c08badac9e7414e5890c3d2afbcc95e35f181684e369.zip",
+      "source_sha256": "f750f63abfc55fb21692c08badac9e7414e5890c3d2afbcc95e35f181684e369"
+    },
+    "recipe_sha256": "9a1a40cc9d3e9cadd04331907d53ab42166bf377161739432bccbada1b6ce165",
+    "executable_sha256": "316aab1af159c4ed31695bfc8cc13cce3506ee52acabd77f41a4f2232f4408f0",
+    "runtime_sha256": {
+      "engine": "316aab1af159c4ed31695bfc8cc13cce3506ee52acabd77f41a4f2232f4408f0",
+      "observer": "534de20e21937c6563e0e2621316c94cb98b17f32220a92cb8aa9411a0516859",
+      "campaign_native_beliefs.py": "de6dc10b1887da2f6b868844fff5a90c2902250c7e69204abc9a7fcdfc587cd1",
+      "campaign_belief_values.py": "845d60ef374df273a075ccd97b309481d7c6fa60164a9a142804bc408cc1afd6",
+      "campaign_joint_beliefs.py": "e2a0241f51cb12306a8948e821e05c0ae08e7252b6b1d2b72f39a58c2262a539",
+      "calibrated_beliefs.py": "5cb27810f173cc09b3b4b5643501fd008eefef7225dbe68c13595124ccb7e388",
+      "feldmarschall.py": "0bb6f42e1fc735d191bf0b5ffc9023ecd23d36816f298397acd9c524303743d4",
+      "campaign_native_template.py": "c7d7f448d1a7b9c840ed990caad8e0e2c02d6318da489351d1e12579c90810aa",
+      "campaign_template_beliefs.py": "8dd1037dd16cafbd4d673c514f2ba886c7b77f0d401073ea78b87d78fa310e1c",
+      "campaign_home_reserve.py": "86884118bf9b0747432f6178399b515f9d49bdc72594a7a3e0bd2690d75aa919",
+      "campaign_flag_guard.py": "d9eddff94c0957acd6e899671fefbed72f789ccff904fd6e8ac2fc9e3dc10fee"
+    },
+    "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+  },
+  "public_history_decisions_both_sides": 300,
+  "reference_overrides": 6,
+  "portable_outside_checkout": true,
+  "reference": "Direct current NativeTemplateBot with frozen observer and same public inputs",
+  "setup_moves_public_state_and_actual_history_parity": true,
+  "scope": "Integration qualification; no counterfactual strength claim."
+}

@@ -5231,6 +5231,49 @@
       "information_model": "Own army and public ranks/movement/counts only. No opponent setup, private rank, deployment seed or RNG inference.",
       "archive": "ai/sources/c6982cb338dce28a7a96703f0bda08792824be6dc6c7300720612bf87cc00a47.zip",
       "source_sha256": "c6982cb338dce28a7a96703f0bda08792824be6dc6c7300720612bf87cc00a47"
+    },
+    {
+      "id": "student-template-home-interceptor-v1-normal",
+      "name": "student-template-home-interceptor-v1-normal",
+      "description": "Preserve an earlier public response schedule against one disclosed Miner while retaining the frozen opening prior.",
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_BELIEF_PRIORS",
+        "AI_TEST",
+        "AI_DIAGNOSTICS",
+        "AI_TRACE"
+      ],
+      "difficulty": "normal",
+      "status": "experimental",
+      "include_dirs": [],
+      "model": "Unchanged source-template Flag/Bomb prior plus public stationary-piece home-interception schedule. Intact two-Bomb corner screen and exactly one routed disclosed Miner at least3actions away. After each quiet candidate require guarddistance+2<=MinerFlagdistance, or no invasion route. Certify alternatives against disclosed actor/guard threats; demote only failed schedules below the best certified quiet move. Captures, immediatewins, currenturgentFlagdefense and all rawschedule-feasible scores remain unchanged. No search/world additions or persistent garrison role.",
+      "information_model": "Own army, source-informed population prior and public events only. No enemy setup, referee position or private deployment seed.",
+      "driver": "native-template",
+      "driver_args": [
+        "--home-interceptor"
+      ],
+      "archive": "ai/sources/f750f63abfc55fb21692c08badac9e7414e5890c3d2afbcc95e35f181684e369.zip",
+      "source_sha256": "f750f63abfc55fb21692c08badac9e7414e5890c3d2afbcc95e35f181684e369"
     }
   ]
 }
