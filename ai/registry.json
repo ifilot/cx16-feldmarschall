@@ -6225,6 +6225,45 @@
       "driver_args": [],
       "archive": "ai/sources/347c48f51582793b43647fba3c06f8d6e2734630542bf3b02f11f121c216e5da.zip",
       "source_sha256": "347c48f51582793b43647fba3c06f8d6e2734630542bf3b02f11f121c216e5da"
+    },
+    {
+      "sources": [
+        "src/native/engine.c",
+        "src/core/pieces.c",
+        "src/core/board.c",
+        "src/core/rules.c",
+        "src/core/setup.c",
+        "src/core/random.c",
+        "src/core/ai_deploy.c",
+        "src/core/ai.c",
+        "src/core/ai_level.c",
+        "src/core/ai_mission.c",
+        "src/core/ai_memory.c",
+        "src/core/ai_student.c",
+        "src/core/ai_template.c"
+      ],
+      "defines": [
+        "AI_MISSIONS",
+        "AI_MEMORY",
+        "AI_STUDENT",
+        "AI_STUDENT_V2",
+        "AI_STUDENT_PRODUCTION",
+        "AI_STUDENT_COOP_GUARD",
+        "AI_POLICY_DEPLOYMENT",
+        "AI_TEMPLATE_PRIOR_Q24",
+        "AI_TEMPLATE_PRIOR_Q24_CACHE",
+        "AI_DEPLOY_FORTRESS_NORMAL"
+      ],
+      "difficulty": "normal",
+      "id": "production-fortress-template-q24-cache-v1-normal",
+      "name": "Fortress public-template Q24 release v1 / Normal",
+      "description": "Shipping candidate: native cached public Flag/Bomb inference with Fortress in Classic Normal; previous Easy/Hard/optional-rule deployments preserved.",
+      "status": "experimental",
+      "model": "Native Q24 public eight-template80%/uniform20% inference, constrained Q12 immobile allocation and signed gain truncation; exact evidence-key cache. Unchanged guarded Student scoring. Normal-only Fortress deployment preserves the accepted setup RNG draw. Numerical port of the frozen floating Fortress champion, requiring fresh noninferiority and whole-target qualification.",
+      "information_model": "Own army, declared setup-population prior and public observations only; no enemy setup, private deployment seed or hidden rank.",
+      "include_dirs": [],
+      "archive": "ai/sources/cb9d0e45ad8fe97d4b9d50ca169e271288369ce56b77e7816e394bd8a7455fac.zip",
+      "source_sha256": "cb9d0e45ad8fe97d4b9d50ca169e271288369ce56b77e7816e394bd8a7455fac"
     }
   ]
 }

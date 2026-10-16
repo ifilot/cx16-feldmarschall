@@ -1,0 +1,23 @@
+{
+  "README.md": "e44d6294d6f9766d2f1e315102ed20d932614a9eb1df4e62ee46a0ff590c1e68",
+  "ai-build.json": "bd28f594bcaaaf3dc3fab7c39cf10fca3e8c3fe73cc558f1f13c2f9ffed4a231",
+  "banked-initial.log": "906426f5659ae9e34dad65279e3c67c3223056647df4b232097f6bedb63b2902",
+  "banked-qualified.log": "22e0cb06f50ec32a0d08ee66104a2cbff4f470a4b5b9cbc8619532861697e58e",
+  "cache-checks.log": "2fbbec27cf1e600e2ed86ca269cf495cc894a2c2ff4e2cb9106b11d331795a9e",
+  "deployment-checks.log": "1013d502d8bc1a2926b8143df801b65aeee5d1251cbf577ea977d4b1cfc615c0",
+  "lifecycle-initial.log": "92ad3adfe30c8294ae304766916db09935b9aae46fe55b60c73586fcb2c99789",
+  "lifecycle-qualified.log": "faa86e4d94a3c4780a8c3879cf6f363b07ac3794f9e29baf13ebe9594c85ab55",
+  "lifecycle.json": "d266b9cf848714bbf5eade74b95d011b5faa94c94b776f28570d3b2f6b370676",
+  "observer.json": "a409b292e1fd7172be1740a9429da67e743360610f820eca6d7c5b9061b01777",
+  "reproducibility.json": "131320e174f9f08fc5301fc9e84578c97db9c510d727856a8bf54e6d02ddc4ca",
+  "retained-qualified.log": "22e0cb06f50ec32a0d08ee66104a2cbff4f470a4b5b9cbc8619532861697e58e",
+  "tools/build_ai_release.py": "fb5443b170631c2bb99cfb079555bb66a3077be0aff2488c9056d6c2e416c871",
+  "tools/qualify_ai_release_lifecycle.py": "f3165ba2ede2ebc6e3ace6a2a91f47201f20ec99fcfb11d7319f8e49c132e60f",
+  "tools/qualify_ai_release_observer.py": "04463d9defefb40e40ef48224780d4ab2d8fc4acee36f299eb08cd57cfd54b8e",
+  "tools/test_ai_levels.py": "58af8ebecb30958d1f015a36ea8c59e9c664e5367f467ce31441537678438f9f",
+  "tools/test_campaign_template_cache_banked.py": "3d4bdee118dc5c9ee7265af9471c77063850e5cd7401eb450a550f541acdf683",
+  "whole-turn-audio-probe-summary.json": "aa8648b41d5f25b5f4da66e4febb93329c0fe6c41e15e045be4e409492ca8e4e",
+  "whole-turn-audio-probe.json": "5d5dba712dd30d366fd62bd72619bced76a2357a092e39d9d637668fdf36be78",
+  "whole-turn-retained-cache-summary.json": "3f7c868f949bc89ec8ceef0a331607bcfc3da6737fb823a37d99237366448366",
+  "whole-turn-retained-cache.json": "8f44071ea25a61476b864316310b215cc175bb67cf7e4d1aab1c64f17cef8105"
+}

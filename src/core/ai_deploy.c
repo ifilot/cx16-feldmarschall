@@ -9,6 +9,9 @@
 #if defined(AI_DEPLOY_DOUBLE_SHELL) && !defined(AI_DEPLOY_FORTRESS_ONLY)
 #error AI_DEPLOY_DOUBLE_SHELL requires the matched AI_DEPLOY_FORTRESS_ONLY control
 #endif
+#if defined(AI_DEPLOY_FORTRESS_NORMAL) && defined(AI_DEPLOY_FORTRESS_ONLY)
+#error Select the Normal-only release deployment or the historical all-level policy
+#endif
 
 #ifdef BANKED_AI
 #pragma code-name ("MISSIONCODE")
@@ -43,6 +46,10 @@ void setup_ai(uint8_t blue) {
 #ifdef AI_DEPLOY_FORTRESS_ONLY
     /* Retain the same RNG draw as the validated mixture in both arms. */
     layout = 0;
+#endif
+#ifdef AI_DEPLOY_FORTRESS_NORMAL
+    /* Release integration: preserve the historical Easy/Hard setup policies. */
+    if(ai_difficulty == AI_NORMAL) layout = 0;
 #endif
     army = blue ? CELL_BLUE : 0;
     for(i=0; i<ARMY_SIZE; i++) {

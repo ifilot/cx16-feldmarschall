@@ -1,0 +1,9 @@
+{
+  "schema": "ai-release-consolidation-gates-v1",
+  "reference": "student-fortress-template-flag-bomb-v1-normal",
+  "candidate": "production-fortress-template-q24-cache-v1-normal",
+  "score_margin": -0.02,
+  "statistical_gate": "Each prespecified single-contrast paired95% interval lower endpoint must exceed -0.02. Report finite engine-error sensitivity separately; failures require a new version and new cohorts, never tuning on these validation games.",
+  "hardware_gate": "Actual full-turn native parity, audio and bank/stack integrity; reset/new/load/save behavior; all linked segments within capacity. Maximum full Normal AI turn20000000 cycles at8MHz (2.5seconds) in fixed qualification fixtures; record all measured times and fixture limits.",
+  "scope": "Classic Normal numerical port. Previous Easy/Hard and optional-rule policies preserved. Best DOS policy is not a universal human-play claim. Original frozen registry entries/evidence remain immutable."
+}

@@ -2,6 +2,7 @@
 import shutil
 import re
 import tempfile
+import json
 from pathlib import Path
 from distribute import runtime_files
 from test_colors import ROOT, start, choose, click, read_vram
@@ -20,6 +21,14 @@ def main():
     mapping=(ROOT/'src/FELDMARS.map').read_text()
     memory_base=int(re.search(r'^MISSIONBSS\s+([0-9A-F]+)',mapping,re.M).group(1),16)
     memory_base+=int(re.search(r'ai_memory\.o:\n\s+MISSIONBSS\s+Offs=([0-9A-F]+)',mapping).group(1),16)
+    build_record = ROOT/'src/ai-build.json'
+    release = json.loads(build_record.read_text()) if build_record.exists() else {}
+    q24 = 'AI_TEMPLATE_PRIOR_Q24' in release.get('defines', [])
+    if q24:
+        belief_base=int(re.search(r'^BELIEFBSS\s+([0-9A-F]+)',mapping,re.M).group(1),16)-0xa000
+        def cache_write(value):
+            for name in ('cache_valid','cache_hit'):
+                session.emu.write_memory(belief_base+release['belief_bss_symbols'][name]['offset'],bytes([value]),space='banked_ram',bank=25)
     with tempfile.TemporaryDirectory(prefix='feldmarschall-ai-levels-') as tmp:
         directory = Path(tmp)
         for name in runtime_files():
@@ -61,9 +70,34 @@ def main():
             # GAME.DAT omits observer history. Loading must clear a warm tracker
             # and safely use the cold-history model, rather than stale identities.
             session.emu.write_memory(memory_base-0xa000,bytes([0])*941,space='banked_ram',bank=24)
+            if q24: cache_write(165)
             choose(session, '3')
             history=bytes(session.emu.read_memory(memory_base-0xa000,941,space='banked_ram',bank=24))
-            assert history==bytes([255])*100+bytes(841), 'loading clears all public observer history'
+            if q24:
+                # The inference release immediately synchronizes a fresh public
+                # snapshot, then marks opening ancestry unavailable. It must not
+                # retain the poisoned pre-load token identities or infer origins.
+                layout = json.loads(build_record.read_text())['memory_bss_symbols']
+                def private(name):
+                    item = layout[name]
+                    return bytes(session.emu.read_memory(memory_base-0xa000+item['offset'], item['size'], space='banked_ram', bank=24))
+                cells = read(session, 'board', 100)
+                identities, pieces = private('identities'), private('pieces')
+                occupied = [sq for sq,cell in enumerate(cells) if cell < 254]
+                assert private('count') == bytes([len(occupied)])
+                assert private('template_history_valid') == b'\x02', 'loaded saves cannot reconstruct opening origins'
+                for name in ('cache_valid','cache_hit'):
+                    assert bytes(session.emu.read_memory(belief_base+release['belief_bss_symbols'][name]['offset'],1,space='banked_ram',bank=25)) == b'\0', 'loading invalidates a warm inference cache'
+                for square, cell in enumerate(cells):
+                    if cell >= 254:
+                        assert identities[square] == 255
+                    else:
+                        token = identities[square]
+                        assert token < len(occupied)
+                        piece = pieces[token*10:(token+1)*10]
+                        assert piece[:6] == bytes([square,square,cell&16,0,0,(cell&15) if cell&32 else 12])
+            else:
+                assert history==bytes([255])*100+bytes(841), 'loading clears all public observer history'
             assert read(session, 'ai_difficulty', 1) == b'\x02'
             assert text(session, 9) == 'YOUR TURN'
             choose(session, 'Escape'); choose(session, '3')

@@ -31,12 +31,19 @@ def main():
     data_base=int(re.search(r'^DATA\s+([0-9A-F]+)',mapping,re.M).group(1),16)
     rng_offset=int(re.search(r'random\.o:\n\s+CODE[^\n]*\n\s+DATA\s+Offs=([0-9A-F]+)',mapping).group(1),16)
     gateway,observe,mask=symbol('ai_move'),symbol('ai_memory_observe'),symbol('ai_mask')
-    import zipfile
-    with zipfile.ZipFile(ROOT/'docs/ai-honest-campaign-2026-10-15/research/template-target-cache-v2/relocated-link-evidence.zip') as z:
-        layout=z.read('core/ai_template.s').decode().split('.segment\t"BELIEFBSS"',1)[1].split('.segment\t"CODE"',1)[0]
-    offsets={};offset=0
-    for name,length in re.findall(r'_(\w+):\s+\.res\s+(\d+),',layout):
-        offsets[name]=offset;offset+=int(length)
+    if (runtime/'ai-build.json').exists():
+        record=json.loads((runtime/'ai-build.json').read_text())
+        assert all(hashlib.sha256((runtime/name).read_bytes()).hexdigest()==checksum
+                   for name,checksum in record['output_sha256'].items())
+        offsets={name:item['offset'] for name,item in record['belief_bss_symbols'].items()}
+        offset=max(item['offset']+item['size'] for item in record['belief_bss_symbols'].values())
+    else:
+        import zipfile
+        with zipfile.ZipFile(ROOT/'docs/ai-honest-campaign-2026-10-15/research/template-target-cache-v2/relocated-link-evidence.zip') as z:
+            layout=z.read('core/ai_template.s').decode().split('.segment\t"BELIEFBSS"',1)[1].split('.segment\t"CODE"',1)[0]
+        offsets={};offset=0
+        for name,length in re.findall(r'_(\w+):\s+\.res\s+(\d+),',layout):
+            offsets[name]=offset;offset+=int(length)
     belief_base=int(re.search(r'^BELIEFBSS\s+([0-9A-F]+)',mapping,re.M)[1],16)-0xa000
     engines=[];records=[];debug=[];owner_snapshots={}
     with tempfile.TemporaryDirectory(prefix='feldmarschall-student-') as tmp:
