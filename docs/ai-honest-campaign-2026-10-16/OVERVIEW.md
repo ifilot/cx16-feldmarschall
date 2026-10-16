@@ -36,6 +36,9 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 | 115 | msdos-1990-v2-normal; original-dos / policy-owned-rotated-v1 | student-fortress-open-reserve-template-v1-normal | 70 / 51 / 127 | 38.5% | 8 |
 | 116 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 174 / 2 / 48 | 78.1% | 0 |
 | 116 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-open-reserve-template-v1-normal | 165 / 1 / 58 | 73.9% | 0 |
+| 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-template-flag-bomb-v1-normal | 195 / 1 / 28 | 87.3% | 0 |
+| 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-mirror-template-v1-normal | 168 / 4 / 52 | 75.9% | 0 |
+| 118 | missions-v1-normal; fortified, uniform, unguarded, forward, decoy, presets, broad-mixed / policy-owned-rotated-v1 | student-fortress-mirror-mixture-template-v1-normal | 187 / 3 / 34 | 84.2% | 0 |
 
 **Cycle 101:** Reassign one redundant capable pursuer to an uncovered disclosed mobile target while retaining the original primary attacker. Previously registered but never benchmarked; this campaign tests its first full-policy outcomes.
 
@@ -133,10 +136,20 @@ Each row belongs to its own matched study. Score is wins plus half draws; errors
 - student-fortress-open-reserve-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -4.24 points; 95% paired interval [-10.71, +2.23].
 [Interpretation](cycle-116-open-reserve-honest/CONCLUSION.md).
 
+**Cycle 117:** Test whether the complete horizontal mirror of the accepted Fortress formation changes end-to-end strength against the specified opponent/setup population, holding movement, inference and random draws fixed.; Test whether a symmetric five-of-ten setup-ticket mixture of original and mirrored Fortress improves robustness over the immutable original formation, without adding search or new information.
+
+No completed strength result. [Frozen plan](cycle-117-mirror-deployment-dos/plan.json).
+
+**Cycle 118:** Test whether the complete horizontal mirror of the accepted Fortress formation changes end-to-end strength against the specified opponent/setup population, holding movement, inference and random draws fixed.; Test whether a symmetric five-of-ten setup-ticket mixture of original and mirrored Fortress improves robustness over the immutable original formation, without adding search or new information.
+
+[Results and family breakdown](cycle-118-mirror-deployment-honest/result.json).
+- student-fortress-mirror-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -11.38 points; 95% paired interval [-18.53, -4.02].
+- student-fortress-mirror-mixture-template-v1-normal minus student-fortress-template-flag-bomb-v1-normal: -3.12 points; 95% paired interval [-7.59, +1.12].
+
 **Additional hypotheses evaluated before tournaments**
 
 These mechanism and incidence checks supply no DOS score. Rejected preflights remain visible.
 
 - **Use declined public captures to reweight only source templates** (rejected preflight: inert consumer): Evidence appeared in 188 of 200 side histories from 100 old screening games, but no component posterior changed above 1e-12. Public facts had resolved or eliminated those components. Zero new tournament games; no strength claim. [Evidence 1](research/information/README.md). [Evidence 2](research/information/activation.json).
 - **Preserve an undisclosed Marshal or General when a disclosed actor has an equally good safe capture** (rejected preflight: no eligible actions): Zero eligible choices in 356 fixed sampled roots from 48 old screening games, both colors. All 6,520 intervening baseline decisions reproduced. Even the same-victim alternative gate failed, so relaxing only exact score equality would not establish incidence. Zero new tournament games; no strength claim. [Evidence 1](research/objectives/SECRECY-CONCLUSION.md). [Evidence 2](research/objectives/secrecy-result.json).
-- **Redirect slow pursuers when a disclosed Scout can undo every quiet approach** (deferred preflight: no immediate native choice changes): A fixed 356-root screening cohort found14 actor goals with a bounded public escape certificate. Native counterfactual veto changed all14 goals but no whole selected move;6520 prefix choices and12 baseline/RNG restorations matched. Longer-term changed-goal memory was not strength-tested. No permanent-evadability or policy-equivalence claim. [Evidence 1](research/objectives/SCOUT-COMPONENT-CONCLUSION.md). [Evidence 2](research/objectives/scout-component-result.json).
+- **Redirect slow pursuers when a disclosed Scout can undo every quiet approach** (deferred preflight: sparse later activation through persistent goal memory): In 356 sampled positions from 48 old screening games, the native veto changes all 14 certified Scout goals and zero immediate whole choices. A separate persistent forced-prefix test retains candidate goal memory: one later native choice changes among 6,520 decisions, eight own decisions after a veto. Goal memory differs for 47 decisions; all 6,520 public belief packets and RNG states match, and other strategy bytes do not differ. This is sparse activation on forced histories, without evidence of on-policy strength, permanent evadability or policy equivalence. No registered strength policy or new tournament follows. [Evidence 1](research/objectives/SCOUT-COMPONENT-CONCLUSION.md). [Evidence 2](research/objectives/SCOUT-PERSISTENT-CONCLUSION.md). [Evidence 3](research/objectives/scout-persistent-result.json).

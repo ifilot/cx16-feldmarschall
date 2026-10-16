@@ -1,0 +1,31 @@
+{"frozen_baseline_choice_parity": 1135, "identical_public_belief_packets": 1135, "sampled_roots": 62, "vetoed_actor_goals": 1, "gate_active_roots": 1, "immediate_veto_choice_changes": 0, "decisions_with_goal_memory_difference": 1, "decisions_with_other_memory_difference": 0, "rng_equal_after_forced_correction": 1135, "games": 8, "elapsed_seconds": 6.9133354910009075}
+{"frozen_baseline_choice_parity": 2081, "identical_public_belief_packets": 2081, "sampled_roots": 114, "vetoed_actor_goals": 5, "gate_active_roots": 5, "immediate_veto_choice_changes": 0, "decisions_with_goal_memory_difference": 12, "decisions_with_other_memory_difference": 0, "rng_equal_after_forced_correction": 2081, "games": 16, "elapsed_seconds": 12.81069054800173}
+{"frozen_baseline_choice_parity": 3195, "identical_public_belief_packets": 3195, "sampled_roots": 174, "vetoed_actor_goals": 6, "gate_active_roots": 6, "immediate_veto_choice_changes": 0, "decisions_with_goal_memory_difference": 28, "decisions_with_other_memory_difference": 0, "rng_equal_after_forced_correction": 3195, "games": 24, "elapsed_seconds": 19.2179071319988}
+{"frozen_baseline_choice_parity": 4283, "identical_public_belief_packets": 4283, "sampled_roots": 234, "vetoed_actor_goals": 14, "gate_active_roots": 12, "immediate_veto_choice_changes": 0, "decisions_with_goal_memory_difference": 47, "decisions_with_other_memory_difference": 0, "rng_equal_after_forced_correction": 4283, "games": 32, "different_actual_choices": 1, "games_with_choice_divergence": 1, "elapsed_seconds": 25.335647779000283}
+{"frozen_baseline_choice_parity": 5421, "identical_public_belief_packets": 5421, "sampled_roots": 296, "vetoed_actor_goals": 14, "gate_active_roots": 12, "immediate_veto_choice_changes": 0, "decisions_with_goal_memory_difference": 47, "decisions_with_other_memory_difference": 0, "rng_equal_after_forced_correction": 5421, "games": 40, "different_actual_choices": 1, "games_with_choice_divergence": 1, "elapsed_seconds": 32.288292539000395}
+{"frozen_baseline_choice_parity": 6520, "identical_public_belief_packets": 6520, "sampled_roots": 356, "vetoed_actor_goals": 14, "gate_active_roots": 12, "immediate_veto_choice_changes": 0, "decisions_with_goal_memory_difference": 47, "decisions_with_other_memory_difference": 0, "rng_equal_after_forced_correction": 6520, "games": 48, "different_actual_choices": 1, "games_with_choice_divergence": 1, "elapsed_seconds": 38.70816274900426}
+{
+  "kind": "persistent-own-memory-scout-refusal-forced-prefix",
+  "strength_evidence": false,
+  "on_policy_play": false,
+  "no_baseline_memory_restoration": true,
+  "counts": {
+    "frozen_baseline_choice_parity": 6520,
+    "identical_public_belief_packets": 6520,
+    "sampled_roots": 356,
+    "vetoed_actor_goals": 14,
+    "gate_active_roots": 12,
+    "immediate_veto_choice_changes": 0,
+    "decisions_with_goal_memory_difference": 47,
+    "decisions_with_other_memory_difference": 0,
+    "rng_equal_after_forced_correction": 6520,
+    "games": 48,
+    "different_actual_choices": 1,
+    "games_with_choice_divergence": 1
+  },
+  "cohort_sha256": "2fd37827ce3c254332e4b43d5724cb520aa8077224f19c0edd3d6de1f7207437",
+  "protocol_sha256": "ecfd6d27c9fc585c12f619915f4e074ab7d4d6da223cc3e2ce3ec7409f94bf20",
+  "gate_source_sha256": "2d357e485a68ec208c74949b8f25fe5de0b3b31bd0241ee9c9b292de4af09fcb",
+  "component_source_sha256": "7db2c2f3846eca03a235b828fe9a6f5330143ec4947c7e198588bd8a198dca3c",
+  "elapsed_seconds": 38.76260924000235
+}

@@ -26,12 +26,13 @@
     {
       "id": "public-scout-pursuit-refusal-v1",
       "title": "Redirect slow pursuers when a disclosed Scout can undo every quiet approach",
-      "status": "deferred preflight: no immediate native choice changes",
-      "result": "A fixed 356-root screening cohort found14 actor goals with a bounded public escape certificate. Native counterfactual veto changed all14 goals but no whole selected move;6520 prefix choices and12 baseline/RNG restorations matched. Longer-term changed-goal memory was not strength-tested. No permanent-evadability or policy-equivalence claim.",
+      "status": "deferred preflight: sparse later activation through persistent goal memory",
+      "result": "In 356 sampled positions from 48 old screening games, the native veto changes all 14 certified Scout goals and zero immediate whole choices. A separate persistent forced-prefix test retains candidate goal memory: one later native choice changes among 6,520 decisions, eight own decisions after a veto. Goal memory differs for 47 decisions; all 6,520 public belief packets and RNG states match, and other strategy bytes do not differ. This is sparse activation on forced histories, without evidence of on-policy strength, permanent evadability or policy equivalence. No registered strength policy or new tournament follows.",
       "strength_games": 0,
       "evidence": [
         "research/objectives/SCOUT-COMPONENT-CONCLUSION.md",
-        "research/objectives/scout-component-result.json"
+        "research/objectives/SCOUT-PERSISTENT-CONCLUSION.md",
+        "research/objectives/scout-persistent-result.json"
       ]
     }
   ]
