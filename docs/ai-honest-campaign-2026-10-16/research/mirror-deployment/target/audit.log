@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "real_banked_setup_calls": 270,
+  "first_draw_rejection_seeds": [
+    14457,
+    31996,
+    32510,
+    48509,
+    49023
+  ],
+  "builds": {
+    "fortress": {
+      "banks": {
+        "PLAY": {
+          "capacity_bytes": 8192,
+          "used_bytes": 8032,
+          "free_bytes": 160
+        },
+        "AI": {
+          "capacity_bytes": 8192,
+          "used_bytes": 8147,
+          "free_bytes": 45
+        },
+        "MISSION": {
+          "capacity_bytes": 8192,
+          "used_bytes": 7515,
+          "free_bytes": 677
+        }
+      },
+      "outputs": {
+        "FELDMARS.PRG": {
+          "bytes": 35096,
+          "sha256": "c973ae99519d3e67df41ad0e4af877c2e3c1318519d44553727d21deed1412aa"
+        },
+        "PLAY.BIN": {
+          "bytes": 8032,
+          "sha256": "6d2494330b8a9213f879c1ba51e0a0e1afa8fa9d93ee269e1b0e80133bce3e06"
+        },
+        "AI.BIN": {
+          "bytes": 6943,
+          "sha256": "85054be59e2ad359e57990da7a3aab2b8dca8489d96e875094fe49933d8e105f"
+        },
+        "MISSION.BIN": {
+          "bytes": 6134,
+          "sha256": "2a0ab921050304c93e0cd36242d869b1aab5afdf450d66ac9475d3af9c83800c"
+        },
+        "FELDMARS.map": {
+          "bytes": 157139,
+          "sha256": "4e25e0a987ac4da56c76ad99b932fb7001751f4e0b33fb0b762abaee38fa7a31"
+        },
+        "FELDMARS.sym": {
+          "bytes": 22200,
+          "sha256": "a71a5b3313872108c2fbfc03e057b8fbd3d71be8bcc0a71ccd3851a55f3f303e"
+        }
+      }
+    },
+    "fixed-mirror": {
+      "banks": {
+        "PLAY": {
+          "capacity_bytes": 8192,
+          "used_bytes": 8032,
+          "free_bytes": 160
+        },
+        "AI": {
+          "capacity_bytes": 8192,
+          "used_bytes": 8147,
+          "free_bytes": 45
+        },
+        "MISSION": {
+          "capacity_bytes": 8192,
+          "used_bytes": 7736,
+          "free_bytes": 456
+        }
+      },
+      "outputs": {
+        "FELDMARS.PRG": {
+          "bytes": 35096,
+          "sha256": "809f8d090622001c8c87c42c8ce7a0affa2d2f7be907fac867414bdc2306b8e8"
+        },
+        "PLAY.BIN": {
+          "bytes": 8032,
+          "sha256": "6d2494330b8a9213f879c1ba51e0a0e1afa8fa9d93ee269e1b0e80133bce3e06"
+        },
+        "AI.BIN": {
+          "bytes": 6943,
+          "sha256": "85054be59e2ad359e57990da7a3aab2b8dca8489d96e875094fe49933d8e105f"
+        },
+        "MISSION.BIN": {
+          "bytes": 6355,
+          "sha256": "4a703c227edf0c1af73d43a1ded5e9bbb7fac66b41288f1ff8ec820846ffcb15"
+        },
+        "FELDMARS.map": {
+          "bytes": 157139,
+          "sha256": "8a36606db8a0255368c9e67bcf812fb3256a1900ee0d0ca0e3900c31ee138f5b"
+        },
+        "FELDMARS.sym": {
+          "bytes": 22200,
+          "sha256": "96c3d0cbbbc3fec907eb11d816af16f2742bc2d3ea4e52064935bc13d8390e5b"
+        }
+      }
+    },
+    "ticket-mixture": {
+      "banks": {
+        "PLAY": {
+          "capacity_bytes": 8192,
+          "used_bytes": 8032,
+          "free_bytes": 160
+        },
+        "AI": {
+          "capacity_bytes": 8192,
+          "used_bytes": 8147,
+          "free_bytes": 45
+        },
+        "MISSION": {
+          "capacity_bytes": 8192,
+          "used_bytes": 7746,
+          "free_bytes": 446
+        }
+      },
+      "outputs": {
+        "FELDMARS.PRG": {
+          "bytes": 35096,
+          "sha256": "cda5b31c7726499e0b9d6479e56953494ba5ac9d6dee8a500718a7f17f309f56"
+        },
+        "PLAY.BIN": {
+          "bytes": 8032,
+          "sha256": "6d2494330b8a9213f879c1ba51e0a0e1afa8fa9d93ee269e1b0e80133bce3e06"
+        },
+        "AI.BIN": {
+          "bytes": 6943,
+          "sha256": "85054be59e2ad359e57990da7a3aab2b8dca8489d96e875094fe49933d8e105f"
+        },
+        "MISSION.BIN": {
+          "bytes": 6365,
+          "sha256": "94902f97ae69ee2755d884f0f63b63c003361333c3c9157d437facefcfd63354"
+        },
+        "FELDMARS.map": {
+          "bytes": 157139,
+          "sha256": "6d657c90f70ca905131b8445951b1ce0d7724b32d951208b0fb29f63a706808f"
+        },
+        "FELDMARS.sym": {
+          "bytes": 22200,
+          "sha256": "03be1a060844b906c2cd75d64a3ff3f73be1f43ae5143f19ff2628eb498b2543"
+        }
+      }
+    }
+  }
+}

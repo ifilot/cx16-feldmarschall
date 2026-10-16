@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "scope": "Independent retained-output/matrix/stack/bank/source-byte cross-check; no second emulator run.",
+  "banked_setup_calls_verified": 270,
+  "all_ten_ticket_classes_and_five_rejection_seeds": true,
+  "all_three_levels_both_colors": true,
+  "all_stack_and_bank_checks": true,
+  "source_archive_bytes_unchanged": true,
+  "only_segment_size_changes": {
+    "fixed-mirror": {
+      "MISSIONCODE": 221
+    },
+    "ticket-mixture": {
+      "MISSIONCODE": 231
+    }
+  },
+  "full_template_inference_fit_claim": false,
+  "production_files_changed": false,
+  "source_report_sha256": "15f559802110aa603dd2e5c9ca066a8174aadfe6d7841aebf5b307010c10285f",
+  "build_zip_sha256": "56a5d49f1f9401ded4d23100099513b005687258922bb2b7231bf97497e458a3",
+  "all_other_build_inputs_headers_identical_to_control": true,
+  "current_registered_archive_hashes_reverified": true
+}
